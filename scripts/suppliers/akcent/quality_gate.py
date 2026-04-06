@@ -1,4 +1,25 @@
 # -*- coding: utf-8 -*-
+"""
+Path: scripts/suppliers/akcent/quality_gate.py
+
+AkCent quality gate.
+
+Роль файла:
+- проверяет уже готовый финальный feed после supplier-layer и shared core;
+- считает critical/cosmetic хвосты в едином формате CS;
+- пишет унифицированный отчёт через shared cs.qg_report writer.
+
+Что файл делает:
+- ловит banned param keys, invalid price, oaicite leaks;
+- подсвечивает подозрительный vendor и служебные хвосты в description/compat;
+- поддерживает baseline accepted_cosmetic и freeze_current_as_baseline.
+
+Что файл НЕ делает:
+- не чинит supplier raw;
+- не содержит supplier-builder логики;
+- не должен превращаться в второй normalize/builder слой.
+"""
+
 from __future__ import annotations
 
 from collections import defaultdict
