@@ -2,7 +2,17 @@
 """
 Path: scripts/suppliers/alstyle/diagnostics.py
 
-Диагностика и watch-report для AlStyle.
+AlStyle supplier layer — build diagnostics / summary.
+
+Что делает:
+- печатает стабильный build summary для orchestrator;
+- форматирует filter/build report без лишнего шума;
+- держит watch-helpers вне build_alstyle.py;
+- не содержит supplier-business логики.
+
+Важно:
+- файл только показывает состояние supplier-layer;
+- не меняет offers и не участвует в final rendering.
 """
 
 from __future__ import annotations
