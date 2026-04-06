@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<yml_catalog date="2026-04-06 11:48:57">
+<yml_catalog date="2026-04-06 16:32:45">
 <shop><offers>
 <!--FEED_META
 Поставщик                                  | ComPortal
 URL поставщика                             | https://www.comportal.kz/auth/documents/prices/yml-catalog.php
-Время сборки (Алматы)                      | 2026-04-06 11:48:57
+Время сборки (Алматы)                      | 2026-04-06 16:32:45
 Ближайшая сборка (Алматы)                  | 2026-04-07 03:00:00
-Сколько товаров у поставщика до фильтра    | 1176
-Сколько товаров у поставщика после фильтра | 570
-Сколько товаров есть в наличии (true)      | 570
+Сколько товаров у поставщика до фильтра    | 1173
+Сколько товаров у поставщика после фильтра | 566
+Сколько товаров есть в наличии (true)      | 566
 Сколько товаров нет в наличии (false)      | 0
 -->
 
@@ -4036,23 +4036,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Для бренда">Dell</param>
 </offer>
 
-<offer id="CP13872828" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13872828</vendorCode>
-<name>Проектор Acer H6815BD (MR.JTA11.001)</name>
-<price>465950</price>
-<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
-<vendor>Acer</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Проектор. Гарантия: 12 мес. Для бренда: Acer. Модель: MR.JTA11.001. Коды: MR.JTA11.001.]]></description>
-<param name="Тип">Проектор</param>
-<param name="Гарантия">12 мес</param>
-<param name="Коды">MR.JTA11.001</param>
-<param name="Модель">MR.JTA11.001</param>
-<param name="Для бренда">Acer</param>
-</offer>
-
 <offer id="CP13760906" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13760906</vendorCode>
@@ -6556,35 +6539,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Объём">130</param>
 <param name="Коды">6267C001</param>
 <param name="Для бренда">Canon</param>
-</offer>
-
-<offer id="CP13871699" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13871699</vendorCode>
-<name>Монитор Acer Nitro VG270KLbmiipx (UM.HS2EE.E25)</name>
-<price>88939</price>
-<picture>http://www.comportal.kz/upload/iblock/bf3/zuwlxdd3c3jgjc3o8x1d3jkvdw2uaxpc.JPG</picture>
-<vendor>Acer</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Монитор. Диагональ: 27. Максимальное разрешение: 3840x2160. Тип матрицы: IPS. Частота обновления: 60. Время отклика: 4. Порты: 2xHDMI(2.0) + 1xDP(1.2) + Audio out. Гарантия: 24 мес.]]></description>
-<param name="Тип">Монитор</param>
-<param name="Модель">Nitro VG270KLbmiipx</param>
-<param name="Порты">2xHDMI(2.0) + 1xDP(1.2) + Audio out</param>
-<param name="Тип матрицы">IPS</param>
-<param name="Цвет">Чёрный</param>
-<param name="Гарантия">24 мес</param>
-<param name="Контрастность">1000:1</param>
-<param name="Яркость">350</param>
-<param name="Время отклика">4</param>
-<param name="Максимальное разрешение">3840x2160</param>
-<param name="Наличие динамиков">2Wx2</param>
-<param name="Углы обзора (вертикальный/горизонтальный)">178/178</param>
-<param name="Размер Pix">0,23</param>
-<param name="Диагональ">27</param>
-<param name="Частота обновления">60</param>
-<param name="Коды">UM.HS2EE.E25</param>
-<param name="Для бренда">Acer</param>
 </offer>
 
 <offer id="CP13850427" available="true">
@@ -9239,6 +9193,59 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Для бренда">Astergo</param>
 </offer>
 
+<offer id="CP13870395" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13870395</vendorCode>
+<name>Ноутбук Dell Latitude 5550 (210-BLMN_N013L555015EMEA_VP)</name>
+<price>813986</price>
+<picture>http://www.comportal.kz/upload/iblock/316/7yn5v0jrx5saybw8jyj4strcqb7e7h6n.jpg</picture>
+<vendor>Dell</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Ноутбук. Процессор: 165U Core Ultra 7. Оперативная память: 32 Gb. Накопитель: 512 PCIe NVMe SSD. ОС: Windows 11 Pro. Видеокарта: Graphics Intel® Graphics. Гарантия: 36 мес.]]></description>
+<param name="Тип">Ноутбук</param>
+<param name="Модель">Latitude 5550</param>
+<param name="Объем жесткого диска">512</param>
+<param name="Скорость вращения шпинделя">Read Intensive</param>
+<param name="Тип жесткого диска">PCIe NVMe SSD</param>
+<param name="Производитель процессора">Intel</param>
+<param name="Модель процессора">Core Ultra 7</param>
+<param name="Серия процессора">165U</param>
+<param name="Частота процессора">1,7</param>
+<param name="Сетевая карта (скорость передачи)">10/100/1000</param>
+<param name="Количество портов USB">4</param>
+<param name="Оперативная память">32 Gb</param>
+<param name="Частота оперативной памяти">5600</param>
+<param name="Количество слотов памяти">2</param>
+<param name="Занятые слоты памяти">2</param>
+<param name="Объем видеопамяти">256 Mb</param>
+<param name="Тип оперативной памяти">DDR5</param>
+<param name="Порты">1x HDMI; 2x USB-A 3.0; 2x USB-C; 1x SC Slot; 1x MicroSD; 1x RJ-45</param>
+<param name="Тип привода">No ODD</param>
+<param name="Количество дисков">1</param>
+<param name="Размер дисплея">15,6</param>
+<param name="Дополнительные характеристики">Backlit Keyboard; Fingerprint</param>
+<param name="Тип матрицы">FHD IPS</param>
+<param name="Производитель чипсета видеокарты">Intel</param>
+<param name="Марка чипсета видеокарты">Graphics</param>
+<param name="Модель чипсета видеокарты">Intel® Graphics</param>
+<param name="Производитель операционной системы">Microsoft</param>
+<param name="Операционная система">Windows 11</param>
+<param name="Версия операционной системы">Pro</param>
+<param name="Битность операционной системы">64</param>
+<param name="Языковая версия операционной системы">Русская</param>
+<param name="Цвет">Серый</param>
+<param name="Bluetooth">Bluetooth 5.3</param>
+<param name="Wi-Fi">802.11ax</param>
+<param name="Адаптер">65W AC Adapter</param>
+<param name="Аккумулятор">3 Cell 54WHr</param>
+<param name="Гарантия">36 мес</param>
+<param name="Камера">FHD HDR IR Camera</param>
+<param name="Разрешение дисплея">1920x1080</param>
+<param name="Для бренда">Dell</param>
+<param name="Коды">Latitude 5550</param>
+</offer>
+
 <offer id="CP13870396" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13870396</vendorCode>
@@ -9290,47 +9297,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Разрешение дисплея">1920x1080</param>
 <param name="Для бренда">Dell</param>
 <param name="Коды">Latitude 5550</param>
-</offer>
-
-<offer id="CP13869657" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13869657</vendorCode>
-<name>Рабочая станция Dell Precision 3680 CTO Base (210-BLLN_N008PT3680MTEMEA_VP)</name>
-<price>1224219</price>
-<picture>http://www.comportal.kz/upload/iblock/515/daeixsjrwe03mtc9d34zksnw0a93aqse.jpg</picture>
-<vendor>Dell</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Рабочая станция. Процессор: 14700 Core i7. Оперативная память: 32 Gb. Накопитель: 1024 PCIe NVMe SSD. ОС: Windows 11 Pro. Видеокарта: GeForce RTX 2000. Гарантия: 36 мес.]]></description>
-<param name="Тип">Рабочая станция</param>
-<param name="Модель">Precision 3680 CTO Base</param>
-<param name="Объем жесткого диска">1024</param>
-<param name="Тип жесткого диска">PCIe NVMe SSD</param>
-<param name="Производитель процессора">Intel</param>
-<param name="Модель процессора">Core i7</param>
-<param name="Серия процессора">14700</param>
-<param name="Частота процессора">2,1</param>
-<param name="Оперативная память">32 Gb</param>
-<param name="Частота оперативной памяти">4400</param>
-<param name="Объем видеопамяти">16 Gb</param>
-<param name="Тип оперативной памяти">DDR5</param>
-<param name="Блок питания">ATX 500W</param>
-<param name="Тип привода">No ODD</param>
-<param name="Количество дисков">1</param>
-<param name="Производитель чипсета видеокарты">nVidia</param>
-<param name="Марка чипсета видеокарты">GeForce</param>
-<param name="Модель чипсета видеокарты">RTX 2000</param>
-<param name="Производитель операционной системы">Microsoft</param>
-<param name="Операционная система">Windows 11</param>
-<param name="Версия операционной системы">Pro</param>
-<param name="Битность операционной системы">64</param>
-<param name="Языковая версия операционной системы">Многоязычная</param>
-<param name="Гарантия">36 мес</param>
-<param name="Тип кейса">Tower</param>
-<param name="Клавиатура">Dell Multimedia Keyboard-KB216 - Russian (QWERTY) - Black</param>
-<param name="Манипулятор">Dell Optical Mouse-MS116 - Black</param>
-<param name="Для бренда">Dell</param>
-<param name="Коды">Precision 3680 CTO Base</param>
 </offer>
 
 <offer id="CP13870235" available="true">
@@ -12254,51 +12220,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Коды">BTO107_PC16250_EMEA_210-BQHB</param>
 </offer>
 
-<offer id="CP13871911" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13871911</vendorCode>
-<name>Ноутбук Dell Pro 16 PC16250 (BTO105_PC16250_EMEA_210-BQHB)</name>
-<price>577423</price>
-<picture>http://www.comportal.kz/upload/iblock/47a/joymk2yn2rvx0k65m460s2tib3bsjt74.JPG</picture>
-<vendor>Dell</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Ноутбук. Процессор: 235U Core Ultra 5. Оперативная память: 16 Gb. Накопитель: 512 SSD. ОС: Windows 11 Pro. Видеокарта: Graphics integrated. Гарантия: 36 мес.]]></description>
-<param name="Тип">Ноутбук</param>
-<param name="Модель">Pro 16 PC16250</param>
-<param name="Объем жесткого диска">512</param>
-<param name="Тип жесткого диска">SSD</param>
-<param name="Производитель процессора">Intel</param>
-<param name="Модель процессора">Core Ultra 5</param>
-<param name="Серия процессора">235U</param>
-<param name="Частота процессора">2</param>
-<param name="Оперативная память">16 Gb</param>
-<param name="Частота оперативной памяти">5600</param>
-<param name="Количество слотов памяти">2</param>
-<param name="Занятые слоты памяти">1</param>
-<param name="Тип оперативной памяти">DDR5</param>
-<param name="Тип привода">No ODD</param>
-<param name="Количество дисков">1</param>
-<param name="Размер дисплея">16</param>
-<param name="Дополнительные характеристики">Backlit Kb Fingerprint Reader,</param>
-<param name="Тип матрицы">FHD+</param>
-<param name="Производитель чипсета видеокарты">Intel</param>
-<param name="Марка чипсета видеокарты">Graphics</param>
-<param name="Модель чипсета видеокарты">integrated</param>
-<param name="Производитель операционной системы">Microsoft</param>
-<param name="Операционная система">Windows 11</param>
-<param name="Версия операционной системы">Pro</param>
-<param name="Bluetooth">Bluetooth 5.3</param>
-<param name="Wi-Fi">AX211</param>
-<param name="Адаптер">65W Type-C Adapter</param>
-<param name="Аккумулятор">3 Cell 55WHr</param>
-<param name="Гарантия">36 мес</param>
-<param name="Камера">FHD HDR IR Camera</param>
-<param name="Разрешение дисплея">1920x1200</param>
-<param name="Для бренда">Dell</param>
-<param name="Коды">Pro 16 PC16250</param>
-</offer>
-
 <offer id="CP13871912" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13871912</vendorCode>
@@ -12359,51 +12280,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Для бренда">Dell</param>
 <param name="Модель">BTO602_PC16255_EMEA_210-BQPC</param>
 <param name="Коды">BTO602_PC16255_EMEA_210-BQPC</param>
-</offer>
-
-<offer id="CP13871914" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13871914</vendorCode>
-<name>Ноутбук Dell Pro 16 PC16255 (BTO604_PC16255_EMEA_210-BQPC)</name>
-<price>631544</price>
-<picture>http://www.comportal.kz/upload/iblock/fbf/accaavgmakfw6hbkxm99ib29wff1iogi.JPG</picture>
-<vendor>Dell</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Ноутбук. Процессор: PRO 350 Ryzen AI 7. Оперативная память: 32 Gb. Накопитель: 512 SSD. ОС: Windows 11 Pro. Видеокарта: Radeon 860M. Гарантия: 36 мес.]]></description>
-<param name="Тип">Ноутбук</param>
-<param name="Модель">Pro 16 PC16255</param>
-<param name="Объем жесткого диска">512</param>
-<param name="Тип жесткого диска">SSD</param>
-<param name="Производитель процессора">AMD</param>
-<param name="Модель процессора">Ryzen AI 7</param>
-<param name="Серия процессора">PRO 350</param>
-<param name="Частота процессора">2</param>
-<param name="Оперативная память">32 Gb</param>
-<param name="Частота оперативной памяти">5600</param>
-<param name="Количество слотов памяти">2</param>
-<param name="Занятые слоты памяти">1</param>
-<param name="Тип оперативной памяти">DDR5</param>
-<param name="Тип привода">No ODD</param>
-<param name="Количество дисков">1</param>
-<param name="Размер дисплея">16</param>
-<param name="Дополнительные характеристики">Backlit Kb Fingerprint Reader,</param>
-<param name="Тип матрицы">FHD+ Touch</param>
-<param name="Производитель чипсета видеокарты">AMD</param>
-<param name="Марка чипсета видеокарты">Radeon</param>
-<param name="Модель чипсета видеокарты">860M</param>
-<param name="Производитель операционной системы">Microsoft</param>
-<param name="Операционная система">Windows 11</param>
-<param name="Версия операционной системы">Pro</param>
-<param name="Bluetooth">Bluetooth</param>
-<param name="Wi-Fi">MT7922</param>
-<param name="Адаптер">65W AC rugged adapter</param>
-<param name="Аккумулятор">3 Cell 55WHr</param>
-<param name="Гарантия">36 мес</param>
-<param name="Камера">FHD HDR IR Camera</param>
-<param name="Разрешение дисплея">1920x1200</param>
-<param name="Для бренда">Dell</param>
-<param name="Коды">Pro 16 PC16255</param>
 </offer>
 
 <offer id="CP13872995" available="true">
