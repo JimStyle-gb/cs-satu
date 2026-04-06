@@ -9,13 +9,14 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: build_vtt
+  cancel-in-progress: true
+
 jobs:
   build_index:
     runs-on: ubuntu-latest
     timeout-minutes: 90
-    concurrency:
-      group: build_vtt
-      cancel-in-progress: true
 
     env:
       TZ: Asia/Almaty
@@ -60,7 +61,7 @@ jobs:
           import re
           from pathlib import Path
           text = Path("scripts/build_vtt.py").read_text(encoding="utf-8", errors="ignore")
-          m = re.search(r'BUILD_[A-Z_]+_VERSION\s*=\s*["\']([^"\']+)["\']', text)
+          m = re.search(r'BUILD_[A-Z_]+_VERSION\s*=\s*["']([^"']+)["']', text)
           print("build_version:", m.group(1) if m else "unknown")
           PY
 
@@ -210,7 +211,7 @@ jobs:
           wc -c docs/vtt.yml docs/raw/vtt.yml 2>/dev/null || true
           [ -f docs/raw/vtt_quality_gate.txt ] && sed -n '1,260p' docs/raw/vtt_quality_gate.txt || true
 
-      - name: Upload build artifacts
+      - name: Upload artifacts
         if: always()
         uses: actions/upload-artifact@v4
         with:
@@ -238,7 +239,6 @@ jobs:
           if [ -f docs/raw/vtt_quality_gate.txt ]; then
             git add docs/raw/vtt_quality_gate.txt
           fi
-          git add -A docs/debug/vtt_shards || true
 
           if git diff --cached --quiet; then
             echo "No changes to commit."
