@@ -18,11 +18,11 @@ ComPortal adapter (CP) — thin orchestrator under CS-template.
 - build_comportal.py не должен знать regex-логику ComPortal;
 - orchestrator остаётся тонким и шаблонным относительно других поставщиков.
 
-v4:
-- source of truth для quality_gate теперь policy.yml first, schema.yml fallback;
-- baseline path приведён к quality_gate_baseline.yml;
-- build пробрасывает в supplier quality gate полный канонический контракт;
-- fallback hour остаётся 03:00 по проектному порядку.
+v6:
+- baseline path приведён к каноническому quality_gate_baseline.yml;
+- quality_gate берётся по схеме policy first -> schema fallback;
+- build остаётся безопасным: вызов run_quality_gate не расширяется
+  сверх уже используемого контракта, чтобы не сломать текущий supplier qg.
 """
 
 from __future__ import annotations
@@ -50,7 +50,7 @@ from suppliers.comportal.quality_gate import run_quality_gate
 from suppliers.comportal.source import load_source_bundle
 
 
-BUILD_COMPORTAL_VERSION = "build_comportal_v4_qg_policy_first"
+BUILD_COMPORTAL_VERSION = "build_comportal_v6_safe_canonical_qg"
 COMPORTAL_URL_DEFAULT = "https://www.comportal.kz/auth/documents/prices/yml-catalog.php"
 COMPORTAL_OUT_DEFAULT = "docs/comportal.yml"
 COMPORTAL_RAW_OUT_DEFAULT = "docs/raw/comportal.yml"
@@ -75,10 +75,11 @@ def _read_yaml(path: Path) -> dict[str, Any]:
 
 
 def _load_supplier_config(cfg_dir: Path) -> tuple[dict[str, Any], dict[str, Any], dict[str, Any]]:
-    filter_cfg = _read_yaml(cfg_dir / FILTER_FILE_DEFAULT)
-    schema_cfg = _read_yaml(cfg_dir / SCHEMA_FILE_DEFAULT)
-    policy_cfg = _read_yaml(cfg_dir / POLICY_FILE_DEFAULT)
-    return filter_cfg, schema_cfg, policy_cfg
+    return (
+        _read_yaml(cfg_dir / FILTER_FILE_DEFAULT),
+        _read_yaml(cfg_dir / SCHEMA_FILE_DEFAULT),
+        _read_yaml(cfg_dir / POLICY_FILE_DEFAULT),
+    )
 
 
 def _safe_int(value: Any, default: int) -> int:
@@ -106,7 +107,10 @@ def _resolve_vendor_blacklist(schema_cfg: dict[str, Any]) -> set[str]:
 
 
 def _resolve_quality_gate(policy_cfg: dict[str, Any], schema_cfg: dict[str, Any]) -> dict[str, Any]:
-    qg = dict(policy_cfg.get("quality_gate") or schema_cfg.get("quality_gate") or {})
+    qg = dict(policy_cfg.get("quality_gate") or {})
+    if not qg:
+        qg = dict(schema_cfg.get("quality_gate") or {})
+
     if "enabled" not in qg:
         qg["enabled"] = True
     if "enforce" not in qg:
@@ -125,13 +129,10 @@ def _resolve_quality_gate(policy_cfg: dict[str, Any], schema_cfg: dict[str, Any]
         or QUALITY_REPORT_DEFAULT
     )
 
-    qg["baseline_file"] = baseline
-    qg["baseline_path"] = baseline
-    qg["report_file"] = report
-    qg["report_path"] = report
-    qg["max_new_cosmetic_offers"] = _safe_int(qg.get("max_new_cosmetic_offers"), 5)
-    qg["max_new_cosmetic_issues"] = _safe_int(qg.get("max_new_cosmetic_issues"), 5)
-    qg["freeze_current_as_baseline"] = bool(qg.get("freeze_current_as_baseline", False))
+    qg["baseline_file"] = str(baseline)
+    qg["baseline_path"] = str(baseline)
+    qg["report_file"] = str(report)
+    qg["report_path"] = str(report)
     return qg
 
 
@@ -149,8 +150,7 @@ def _resolve_watch_ids() -> set[str]:
     raw = os.getenv("COMPORTAL_WATCH_OIDS", "").strip()
     if not raw:
         return set(COMPORTAL_WATCH_OIDS)
-    parts = [x.strip() for x in raw.replace(";", ",").split(",")]
-    return {x for x in parts if x}
+    return {x for x in [s.strip() for s in raw.replace(";", ",").split(",")] if x}
 
 
 def _run_quality_gate(*, raw_out_file: str, cfg_dir: Path, qg: dict[str, Any]) -> dict[str, object]:
@@ -171,11 +171,8 @@ def _run_quality_gate(*, raw_out_file: str, cfg_dir: Path, qg: dict[str, Any]) -
         feed_path=raw_out_file,
         schema_path=schema_path,
         enforce=bool(qg.get("enforce", True)),
-        baseline_path=str(qg.get("baseline_file") or QUALITY_BASELINE_DEFAULT),
-        report_path=str(qg.get("report_file") or QUALITY_REPORT_DEFAULT),
-        max_new_cosmetic_offers=_safe_int(qg.get("max_new_cosmetic_offers"), 5),
-        max_new_cosmetic_issues=_safe_int(qg.get("max_new_cosmetic_issues"), 5),
-        freeze_current_as_baseline=bool(qg.get("freeze_current_as_baseline", False)),
+        baseline_path=str(qg.get("baseline_path") or qg.get("baseline_file") or QUALITY_BASELINE_DEFAULT),
+        report_path=str(qg.get("report_path") or qg.get("report_file") or QUALITY_REPORT_DEFAULT),
     )
 
 
@@ -238,12 +235,14 @@ def main() -> int:
     after = len(out_offers)
     watch_out = {offer.oid for offer in out_offers}
 
-    watch_messages = make_watch_messages(
-        watch_ids=watch_ids,
-        watch_source=watch_source,
-        watch_out=watch_out,
+    write_watch_report(
+        watch_report,
+        make_watch_messages(
+            watch_ids=watch_ids,
+            watch_source=watch_source,
+            watch_out=watch_out,
+        ),
     )
-    write_watch_report(watch_report, watch_messages)
 
     write_cs_feed_raw(
         out_offers,
@@ -306,9 +305,7 @@ def main() -> int:
         for line in qg_result.get("critical_preview", []):
             print(f"  - {line}")
 
-    if not qg_result.get("ok", True):
-        return 1
-    return 0
+    return 0 if qg_result.get("ok", True) else 1
 
 
 if __name__ == "__main__":
