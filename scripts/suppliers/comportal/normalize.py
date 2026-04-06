@@ -118,9 +118,12 @@ _VENDOR_HEAD_RE = re.compile(
     r"(?iu)^(?:AIWA|Dell|HP|Canon|Epson|Xerox|Brother|Kyocera|Pantum|Ricoh|APC|Lenovo|ASUS|Acer|MSI|LG|Samsung|Huawei|iiyama|Gigabyte|Hikvision|ViewSonic|BenQ|AOC|TP\-?Link|D\-?Link|Cisco|Zyxel|Eaton|Poly)\b\s*"
 )
 _DUPLICATE_HEAD_RE = re.compile(
-    r"(?iu)^(Плоттер|Монитор|Ноутбук|Моноблок|Компьютер|Принтер|МФУ)\s+"
+    r"(?iu)^(Плоттер|Монитор|Ноутбук|Моноблок|Компьютер|Принтер|МФУ|ИБП|Модуль\s+батарей)\s+"
     r"(Canon|Dell|HP|Epson|Xerox|Brother|Kyocera|Pantum|Ricoh|APC|Lenovo|ASUS|Acer|MSI|LG|Samsung|Huawei|iiyama|Gigabyte|Hikvision|ViewSonic|BenQ|AOC|TP\-?Link|D\-?Link|Cisco|Zyxel|Eaton|Poly)"
-    r"\s+\1\s+\2(?:\s*/\s*|\s+)"
+    r"\s+\2(?:\s*/\s*|\s+)"
+)
+_DUPLICATE_BRAND_TOKEN_RE = re.compile(
+    r"(?iu)\b(Canon|Dell|HP|Epson|Xerox|Brother|Kyocera|Pantum|Ricoh|APC|Lenovo|ASUS|Acer|MSI|LG|Samsung|Huawei|iiyama|Gigabyte|Hikvision|ViewSonic|BenQ|AOC|TP\-?Link|D\-?Link|Cisco|Zyxel|Eaton|Poly)\s+\1\b"
 )
 _CODE_PAREN_RE = re.compile(r"\(([^()]{2,})\)\s*$")
 _CODE_LIKE_MODEL_RE = re.compile(r"(?iu)^[A-Z0-9][A-Z0-9_#./\-]{4,}$")
@@ -201,9 +204,16 @@ def _canonicalize_brand_tokens_in_name(name: str) -> str:
         (r"\bHewlett[\- ]Packard\b", "HP"),
         (r"\bHP\s+Enterprise\b", "HPE"),
         (r"\bМФП\b", "МФУ"),
+        (r"\bIiyama\b", "iiyama"),
     ]
     for pattern, repl in replacements:
         s = re.sub(pattern, repl, s, flags=re.IGNORECASE)
+
+    while True:
+        new_s = _DUPLICATE_BRAND_TOKEN_RE.sub(r"\1", s)
+        if new_s == s:
+            break
+        s = new_s
 
     s = re.sub(r"\s+", " ", s).strip()
     return s
@@ -212,6 +222,11 @@ def _canonicalize_brand_tokens_in_name(name: str) -> str:
 def _clean_title_tail(name: str) -> str:
     s = normalize_name(name)
     s = _DUPLICATE_HEAD_RE.sub(lambda m: f"{m.group(1)} {m.group(2)} ", s)
+    while True:
+        new_s = _DUPLICATE_BRAND_TOKEN_RE.sub(r"\1", s)
+        if new_s == s:
+            break
+        s = new_s
     m = _CODE_PAREN_RE.search(s)
     if m:
         s = s[:m.start()].strip()
@@ -289,6 +304,11 @@ def normalize_name(name: str) -> str:
     s = norm_ws(name)
     s = _canonicalize_brand_tokens_in_name(s)
     s = _DUPLICATE_HEAD_RE.sub(lambda m: f"{m.group(1)} {m.group(2)} ", s)
+    while True:
+        new_s = _DUPLICATE_BRAND_TOKEN_RE.sub(r"\1", s)
+        if new_s == s:
+            break
+        s = new_s
     s = re.sub(r"\(\s+", "(", s)
     s = re.sub(r"\s+\)", ")", s)
     s = re.sub(r"\s*/\s*", " / ", s)
