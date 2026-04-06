@@ -40,6 +40,7 @@ _RE_MONTHS = re.compile(r"(мес|месяц|месяцев)", re.IGNORECASE)
 _RE_YEARS = re.compile(r"(год|года|лет|yr|year)", re.IGNORECASE)
 _RE_NO_WARRANTY = re.compile(r"^(нет|no|none|0|0\s*мес)\b", re.IGNORECASE)
 _RE_VENDOR_SUFFIX = re.compile(r"\b(?:proj|projector|display|mon|monitor)\b", re.IGNORECASE)
+_RE_SMART_SID = re.compile(r"\bSBID-[A-Z0-9\-]+\b", re.IGNORECASE)
 
 _ALLOWED_VENDOR_MAP = {
     "epson": "Epson",
@@ -50,6 +51,12 @@ _ALLOWED_VENDOR_MAP = {
     "philips": "Philips",
     "fellowes": "Fellowes",
     "zebra": "Zebra",
+    "hp": "HP",
+    "canon": "Canon",
+    "cyberpower": "CyberPower",
+    "smartboard": "SMART",
+    "smart board": "SMART",
+    "smart technologies": "SMART",
     "idprt": "iDPRT",
     "iDPRT": "iDPRT",
 }
@@ -89,6 +96,16 @@ def _clean_spaces(s: str) -> str:
     return s.strip(" -–—")
 
 
+def _collapse_duplicated_lead(s: str) -> str:
+    text = _clean_spaces(s)
+    if not text:
+        return ""
+    for prefix in sorted(_NAME_PREFIXES, key=len, reverse=True):
+        rx = re.compile(r"(?iu)^(" + re.escape(prefix) + r")\s+\1\b\s*")
+        text = rx.sub(r"\1 ", text)
+    return _clean_spaces(text)
+
+
 def _canon_vendor(v: str) -> str:
     s = _clean_spaces(v)
     if not s:
@@ -114,6 +131,8 @@ def _extract_vendor_from_text(*parts: str) -> str:
     text = " ".join(_clean_spaces(x) for x in parts if _clean_spaces(x))
     if not text:
         return ""
+    if _RE_SMART_SID.search(text):
+        return "SMART"
     low = text.casefold()
     # длинные ключи сначала
     for raw, canon in sorted(_ALLOWED_VENDOR_MAP.items(), key=lambda kv: -len(kv[0])):
@@ -235,7 +254,7 @@ def finalize_waste_tank_name(name: str, params: list[tuple[str, str]]) -> str:
 
 def normalize_name(name: str) -> str:
     """Чистит имя без смысловых перестроек."""
-    return _clean_spaces(name)
+    return _collapse_duplicated_lead(name)
 
 
 def _short_model_from_text(*parts: str) -> str:
