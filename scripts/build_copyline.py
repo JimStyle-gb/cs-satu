@@ -4,9 +4,9 @@ Path: scripts/build_copyline.py
 CopyLine adapter under CS-template.
 
 fix:
-- возвращает правильный next_run для CopyLine по дням месяца 1/10/20;
-- FEED_META больше не будет показывать ежедневный 04:00;
-- orchestrator остаётся тонким.
+- next_run для CopyLine считается по дням месяца 1/10/20;
+- build_time приводится к naive Almaty datetime перед next_run_dom_at_hour;
+- FEED_META больше не должен показывать ежедневный 04:00.
 """
 
 from __future__ import annotations
@@ -32,7 +32,7 @@ from suppliers.copyline.quality_gate import run_quality_gate
 from suppliers.copyline.source import fetch_product_index, parse_product_page
 
 
-BUILD_COPYLINE_VERSION = "build_copyline_v11_fix_next_run_dom"
+BUILD_COPYLINE_VERSION = "build_copyline_v12_fix_next_run_dom_naive"
 
 SUPPLIER_NAME_DEFAULT = "CopyLine"
 SUPPLIER_URL_DEFAULT = os.getenv("SUPPLIER_URL", "https://copyline.kz/goods.html")
@@ -170,7 +170,7 @@ def main() -> int:
     )
     dom = _resolve_dom_list(policy_cfg)
 
-    build_time = now_almaty()
+    build_time = now_almaty().replace(tzinfo=None)
     next_run = next_run_dom_at_hour(build_time, hour, dom)
 
     index = fetch_product_index()
