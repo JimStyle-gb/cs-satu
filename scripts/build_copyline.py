@@ -4,8 +4,8 @@ Path: scripts/build_copyline.py
 CopyLine adapter under CS-template.
 
 fix:
-- next_run для CopyLine считается по дням месяца 1/10/20;
-- build_time приводится к naive Almaty datetime перед next_run_dom_at_hour;
+- правильный next_run для CopyLine по дням месяца 1/10/20;
+- в run_quality_gate снова передаётся обязательный policy_path;
 - FEED_META больше не должен показывать ежедневный 04:00.
 """
 
@@ -32,7 +32,7 @@ from suppliers.copyline.quality_gate import run_quality_gate
 from suppliers.copyline.source import fetch_product_index, parse_product_page
 
 
-BUILD_COPYLINE_VERSION = "build_copyline_v12_fix_next_run_dom_naive"
+BUILD_COPYLINE_VERSION = "build_copyline_v13_fix_qg_policy_and_next_run_dom"
 
 SUPPLIER_NAME_DEFAULT = "CopyLine"
 SUPPLIER_URL_DEFAULT = os.getenv("SUPPLIER_URL", "https://copyline.kz/goods.html")
@@ -120,8 +120,9 @@ def _build_offers(filtered_index: list[dict[str, Any]]) -> list[Any]:
     return out_offers
 
 
-def _print_summary(
+def print_build_summary(
     *,
+    version: str,
     before: int,
     out_offers: list[Any],
     filter_report: dict[str, Any],
@@ -136,7 +137,7 @@ def _print_summary(
     print("=" * 72)
     print("[CopyLine] build summary")
     print("=" * 72)
-    print(f"version: {BUILD_COPYLINE_VERSION}")
+    print(f"version: {version}")
     print(f"before: {before}")
     print(f"after:  {after}")
     print(f"raw_out_file: {raw_out_file}")
@@ -192,7 +193,6 @@ def main() -> int:
         next_run=next_run,
         before=before,
         encoding=output_encoding,
-        currency_id="KZT",
     )
 
     public_vendor = get_public_vendor(supplier_name)
@@ -206,17 +206,29 @@ def main() -> int:
         before=before,
         encoding=output_encoding,
         public_vendor=public_vendor,
-        currency_id="KZT",
         param_priority=_load_param_priority(policy_cfg),
     )
 
+    qg_cfg = policy_cfg.get("quality_gate") or {}
     qg = run_quality_gate(
         feed_path=raw_out_file,
-        report_path=os.getenv("COPYLINE_QG_REPORT", COPYLINE_QG_REPORT_DEFAULT),
-        baseline_path=os.getenv("COPYLINE_QG_BASELINE", COPYLINE_QG_BASELINE_DEFAULT),
+        policy_path=str(cfg_dir / POLICY_FILE_DEFAULT),
+        baseline_path=(
+            os.getenv("COPYLINE_QG_BASELINE")
+            or qg_cfg.get("baseline_file")
+            or qg_cfg.get("baseline_path")
+            or COPYLINE_QG_BASELINE_DEFAULT
+        ),
+        report_path=(
+            os.getenv("COPYLINE_QG_REPORT")
+            or qg_cfg.get("report_file")
+            or qg_cfg.get("report_path")
+            or COPYLINE_QG_REPORT_DEFAULT
+        ),
     )
 
-    _print_summary(
+    print_build_summary(
+        version=BUILD_COPYLINE_VERSION,
         before=before,
         out_offers=out_offers,
         filter_report=filter_report,
@@ -225,7 +237,9 @@ def main() -> int:
         raw_out_file=raw_out_file,
     )
 
-    return 0 if qg.get("ok", True) else 1
+    if not qg.get("ok", True):
+        return 1
+    return 0
 
 
 if __name__ == "__main__":
