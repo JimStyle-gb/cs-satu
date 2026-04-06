@@ -918,9 +918,8 @@ def extract_desc_body_and_spec_pairs(desc_src: str, schema: dict[str, Any]) -> t
     body_text, _trimmed = _split_explicit_spec_block(desc_src)
     body_text, _inline_trimmed = _split_inline_prefixed_spec_block(body_text if body_text else desc_src)
 
-    # ВАЖНО:
-    # если helper специально обнулил body как чистый inline/spec-block,
-    # нельзя откатываться назад к полному desc_src, иначе техблок снова протечёт в raw/final.
+    # Если body был осознанно обнулён trim-helper'ом как чистый spec/inline-spec блок,
+    # нельзя откатываться к исходному desc_src, иначе техблок снова протечёт в raw/final.
     if not body_text and not (_trimmed or _inline_trimmed):
         body_text = _normalize_body_lines(desc_src)
 
