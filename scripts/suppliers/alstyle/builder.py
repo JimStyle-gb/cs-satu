@@ -673,7 +673,12 @@ def build_offer(
     oid = build_offer_oid(raw_id, prefix=id_prefix)
     available = normalize_available(src.available_attr, src.available_tag)
     pictures = collect_picture_urls(src.picture_urls, placeholder_picture=placeholder_picture)
-    vendor = normalize_vendor(src.vendor, vendor_blacklist=vendor_blacklist)
+    vendor = normalize_vendor(
+        src.vendor,
+        name=name,
+        description_text=src.description or "",
+        vendor_blacklist=vendor_blacklist,
+    )
 
     desc_src = sanitize_native_desc(src.description or "", name=name)
 
