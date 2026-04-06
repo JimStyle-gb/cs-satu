@@ -4,15 +4,19 @@ Path: scripts/build_vtt.py
 
 VTT adapter (VT) — thin orchestrator with shard-specific workflow.
 
-v14:
-- quality_gate берётся по схеме policy first -> schema fallback;
-- baseline path приведён к каноническому quality_gate_baseline.yml;
-- supplier name нормализуется к VTT;
-- пробрасывается полный supplier-side qg контракт:
-  baseline_path, report_path, enforce,
-  max_new_cosmetic_offers, max_new_cosmetic_issues,
-  freeze_current_as_baseline;
-- shard/index/merge/full логика сохранена без изменений по смыслу.
+Что делает:
+- грузит supplier config: filter / schema / policy;
+- поддерживает index / shard / merge / full режимы;
+- собирает raw offers из shard-specific pipeline;
+- пишет raw feed;
+- пишет final feed;
+- печатает build summary;
+- запускает supplier-side quality gate.
+
+Важно:
+- shard/index/merge логика остаётся допустимой особенностью VTT;
+- supplier-specific parsing/compat/normalize живут только в suppliers/vtt/*;
+- next_run для VTT считается через shared cs.meta по дням месяца 1/10/20.
 """
 
 from __future__ import annotations
@@ -27,13 +31,8 @@ from typing import Any
 
 import yaml
 
-from cs.core import (
-    OfferOut,
-    get_public_vendor,
-    write_cs_feed,
-    write_cs_feed_raw,
-)
-from cs.meta import now_almaty, next_run_dom_at_hour
+from cs.core import OfferOut, get_public_vendor, write_cs_feed, write_cs_feed_raw
+from cs.meta import next_run_dom_at_hour, now_almaty
 from suppliers.vtt.builder import build_offer_from_raw
 from suppliers.vtt.diagnostics import print_build_summary
 from suppliers.vtt.filtering import categories_from_cfg, prefixes_from_cfg
@@ -49,7 +48,7 @@ from suppliers.vtt.source import (
 )
 
 
-BUILD_VTT_VERSION = "build_vtt_v15_meta_only_next_run_dom"
+BUILD_VTT_VERSION = "build_vtt_v14_full_qg_contract"
 SUPPLIER_NAME_DEFAULT = "VTT"
 OUT_FILE_DEFAULT = "docs/vtt.yml"
 RAW_OUT_FILE_DEFAULT = "docs/raw/vtt.yml"
@@ -66,6 +65,9 @@ POLICY_FILE_DEFAULT = "policy.yml"
 ROOT = Path(__file__).resolve().parents[1]
 SHARDS_DIR = ROOT / "docs" / "debug" / "vtt_shards"
 INDEX_FILE = SHARDS_DIR / "index.json"
+
+
+# ----------------------------- config helpers -----------------------------
 
 
 def _read_yaml(path: Path) -> dict[str, Any]:
@@ -133,6 +135,10 @@ def _resolve_id_prefix(policy_cfg: dict[str, Any], schema_cfg: dict[str, Any]) -
 def _resolve_output_encoding(policy_cfg: dict[str, Any], schema_cfg: dict[str, Any]) -> str:
     return str(policy_cfg.get("output_encoding") or schema_cfg.get("encoding") or OUTPUT_ENCODING_DEFAULT).strip() or OUTPUT_ENCODING_DEFAULT
 
+
+
+
+# ------------------------------ qg helpers --------------------------------
 
 def _resolve_quality_gate(policy_cfg: dict[str, Any], schema_cfg: dict[str, Any]) -> dict[str, Any]:
     qg = dict(policy_cfg.get("quality_gate") or {})
@@ -595,6 +601,10 @@ def _run_full(cfg_dir: Path, filter_cfg: dict[str, Any], schema_cfg: dict[str, A
     )
     return 0 if qg.ok else 1
 
+
+
+
+# -------------------------------- entrypoint ------------------------------
 
 def main() -> int:
     cfg_dir = Path(os.getenv("VTT_CFG_DIR", CFG_DIR_DEFAULT))
