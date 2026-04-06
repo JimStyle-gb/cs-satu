@@ -4,25 +4,13 @@ Path: scripts/build_comportal.py
 
 ComPortal adapter (CP) — thin orchestrator under CS-template.
 
-Что делает:
-- грузит supplier config: filter / schema / policy;
-- читает исходный YML поставщика;
-- прогоняет source -> filtering -> builder;
-- пишет raw feed;
-- пишет final feed;
-- пишет watch-report;
-- запускает supplier-side quality gate.
-
-Важно:
-- supplier-specific логика остаётся только в suppliers/comportal/*;
-- build_comportal.py не должен знать regex-логику ComPortal;
-- orchestrator остаётся тонким и шаблонным относительно других поставщиков.
-
-v6:
-- baseline path приведён к каноническому quality_gate_baseline.yml;
+v7:
 - quality_gate берётся по схеме policy first -> schema fallback;
-- build остаётся безопасным: вызов run_quality_gate не расширяется
-  сверх уже используемого контракта, чтобы не сломать текущий supplier qg.
+- baseline path приведён к каноническому quality_gate_baseline.yml;
+- пробрасывается полный supplier-side qg контракт:
+  baseline_path, report_path, enforce,
+  max_new_cosmetic_offers, max_new_cosmetic_issues,
+  freeze_current_as_baseline.
 """
 
 from __future__ import annotations
@@ -35,7 +23,6 @@ import yaml
 
 from cs.core import write_cs_feed, write_cs_feed_raw
 from cs.meta import next_run_at_hour, now_almaty
-
 from suppliers.comportal.builder import build_offers
 from suppliers.comportal.diagnostics import (
     build_watch_source_map,
@@ -50,7 +37,7 @@ from suppliers.comportal.quality_gate import run_quality_gate
 from suppliers.comportal.source import load_source_bundle
 
 
-BUILD_COMPORTAL_VERSION = "build_comportal_v6_safe_canonical_qg"
+BUILD_COMPORTAL_VERSION = "build_comportal_v7_full_qg_contract"
 COMPORTAL_URL_DEFAULT = "https://www.comportal.kz/auth/documents/prices/yml-catalog.php"
 COMPORTAL_OUT_DEFAULT = "docs/comportal.yml"
 COMPORTAL_RAW_OUT_DEFAULT = "docs/raw/comportal.yml"
@@ -103,7 +90,11 @@ def _resolve_placeholder(schema_cfg: dict[str, Any]) -> str:
 
 
 def _resolve_vendor_blacklist(schema_cfg: dict[str, Any]) -> set[str]:
-    return {str(x).strip().casefold() for x in (schema_cfg.get("vendor_blacklist_casefold") or []) if str(x).strip()}
+    return {
+        str(x).strip().casefold()
+        for x in (schema_cfg.get("vendor_blacklist_casefold") or [])
+        if str(x).strip()
+    }
 
 
 def _resolve_quality_gate(policy_cfg: dict[str, Any], schema_cfg: dict[str, Any]) -> dict[str, Any]:
@@ -133,6 +124,10 @@ def _resolve_quality_gate(policy_cfg: dict[str, Any], schema_cfg: dict[str, Any]
     qg["baseline_path"] = str(baseline)
     qg["report_file"] = str(report)
     qg["report_path"] = str(report)
+
+    qg["max_new_cosmetic_offers"] = _safe_int(qg.get("max_new_cosmetic_offers"), 5)
+    qg["max_new_cosmetic_issues"] = _safe_int(qg.get("max_new_cosmetic_issues"), 5)
+    qg["freeze_current_as_baseline"] = bool(qg.get("freeze_current_as_baseline", False))
     return qg
 
 
@@ -169,10 +164,13 @@ def _run_quality_gate(*, raw_out_file: str, cfg_dir: Path, qg: dict[str, Any]) -
     schema_path = cfg_dir / SCHEMA_FILE_DEFAULT
     return run_quality_gate(
         feed_path=raw_out_file,
-        schema_path=schema_path,
+        schema_path=str(schema_path),
         enforce=bool(qg.get("enforce", True)),
         baseline_path=str(qg.get("baseline_path") or qg.get("baseline_file") or QUALITY_BASELINE_DEFAULT),
         report_path=str(qg.get("report_path") or qg.get("report_file") or QUALITY_REPORT_DEFAULT),
+        max_new_cosmetic_offers=_safe_int(qg.get("max_new_cosmetic_offers"), 5),
+        max_new_cosmetic_issues=_safe_int(qg.get("max_new_cosmetic_issues"), 5),
+        freeze_current_as_baseline=bool(qg.get("freeze_current_as_baseline", False)),
     )
 
 
@@ -207,7 +205,7 @@ def main() -> int:
     excluded_root_ids = _resolve_excluded_root_ids(filter_cfg)
     watch_ids = _resolve_watch_ids()
 
-    category_index, source_offers = load_source_bundle(
+    _category_index, source_offers = load_source_bundle(
         url=url,
         timeout=timeout,
         login=login,
@@ -215,23 +213,9 @@ def main() -> int:
     )
     before = len(source_offers)
 
-    filtered_offers = filter_source_offers(
-        source_offers,
-        allowed_category_ids,
-        excluded_root_ids,
-    )
-
-    watch_source = build_watch_source_map(
-        source_offers,
-        prefix=COMPORTAL_ID_PREFIX,
-        watch_ids=watch_ids,
-    )
-
-    out_offers, build_stats = build_offers(
-        filtered_offers,
-        schema=schema_cfg,
-        policy=policy_cfg,
-    )
+    filtered_offers = filter_source_offers(source_offers, allowed_category_ids, excluded_root_ids)
+    watch_source = build_watch_source_map(source_offers, prefix=COMPORTAL_ID_PREFIX, watch_ids=watch_ids)
+    out_offers, build_stats = build_offers(filtered_offers, schema=schema_cfg, policy=policy_cfg)
     after = len(out_offers)
     watch_out = {offer.oid for offer in out_offers}
 
