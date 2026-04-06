@@ -30,11 +30,10 @@ import yaml
 from cs.core import (
     OfferOut,
     get_public_vendor,
-    next_run_dom_at_hour,
-    now_almaty,
     write_cs_feed,
     write_cs_feed_raw,
 )
+from cs.meta import now_almaty, next_run_dom_at_hour
 from suppliers.vtt.builder import build_offer_from_raw
 from suppliers.vtt.diagnostics import print_build_summary
 from suppliers.vtt.filtering import categories_from_cfg, prefixes_from_cfg
@@ -50,7 +49,7 @@ from suppliers.vtt.source import (
 )
 
 
-BUILD_VTT_VERSION = "build_vtt_v14_full_qg_contract"
+BUILD_VTT_VERSION = "build_vtt_v15_meta_only_next_run_dom"
 SUPPLIER_NAME_DEFAULT = "VTT"
 OUT_FILE_DEFAULT = "docs/vtt.yml"
 RAW_OUT_FILE_DEFAULT = "docs/raw/vtt.yml"
