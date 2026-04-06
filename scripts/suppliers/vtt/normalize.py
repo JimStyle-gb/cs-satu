@@ -218,6 +218,8 @@ def canon_vendor(vendor: str) -> str:
         "hewlett packard": "HP",
         "hewlett packard enterprise": "HPE",
         "hp enterprise": "HPE",
+        "катюша": "Катюша",
+        "кaтюша": "Катюша",
     }
     return mapping.get(low, v)
 
@@ -283,9 +285,22 @@ def _localize_title_color_tokens(title: str) -> str:
     return s
 
 
+def _canonicalize_title_brand_tokens(title: str) -> str:
+    s = _norm_spaces(title)
+    if not s:
+        return ""
+    replacements = [
+        (r"\bКАТЮША\b", "Катюша"),
+    ]
+    for pattern, repl in replacements:
+        s = re.sub(pattern, repl, s, flags=re.IGNORECASE)
+    return s
+
+
 def normalize_title(title: str) -> str:
     """Нормализовать title без supplier-side смысловой правки."""
     s = _localize_title_color_tokens(title)
+    s = _canonicalize_title_brand_tokens(s)
     s = re.sub(r"\s{2,}", " ", s)
     return s[:240]
 
