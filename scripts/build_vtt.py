@@ -4,23 +4,15 @@ Path: scripts/build_vtt.py
 
 VTT adapter (VT) — thin orchestrator with shard-specific workflow.
 
-Что делает:
-- грузит supplier config: filter / schema / policy;
-- подготавливает source env;
-- поддерживает режимы index / shard_index / merge / full;
-- пишет raw/final feeds;
-- запускает supplier-side quality gate.
-
-Важно:
-- shard/index/merge — это нормальная специфика VTT и не считается нарушением шаблона;
-- supplier-specific parsing/building остаётся в suppliers/vtt/*;
-- build_vtt.py остаётся orchestrator-слоем, а не местом для regex-логики.
-
-v13:
-- baseline path приведён к каноническому quality_gate_baseline.yml;
+v14:
 - quality_gate берётся по схеме policy first -> schema fallback;
+- baseline path приведён к каноническому quality_gate_baseline.yml;
 - supplier name нормализуется к VTT;
-- текущий безопасный контракт run_quality_gate сохранён без спорных kwargs.
+- пробрасывается полный supplier-side qg контракт:
+  baseline_path, report_path, enforce,
+  max_new_cosmetic_offers, max_new_cosmetic_issues,
+  freeze_current_as_baseline;
+- shard/index/merge/full логика сохранена без изменений по смыслу.
 """
 
 from __future__ import annotations
@@ -58,7 +50,7 @@ from suppliers.vtt.source import (
 )
 
 
-BUILD_VTT_VERSION = "build_vtt_v13_safe_canonical_qg"
+BUILD_VTT_VERSION = "build_vtt_v14_full_qg_contract"
 SUPPLIER_NAME_DEFAULT = "VTT"
 OUT_FILE_DEFAULT = "docs/vtt.yml"
 RAW_OUT_FILE_DEFAULT = "docs/raw/vtt.yml"
@@ -170,6 +162,15 @@ def _resolve_quality_gate(policy_cfg: dict[str, Any], schema_cfg: dict[str, Any]
     qg["baseline_file"] = str(baseline)
     qg["report_path"] = str(report)
     qg["report_file"] = str(report)
+    qg["max_new_cosmetic_offers"] = _safe_int(
+        qg.get("max_new_cosmetic_offers", qg.get("max_cosmetic_offers")),
+        5,
+    )
+    qg["max_new_cosmetic_issues"] = _safe_int(
+        qg.get("max_new_cosmetic_issues", qg.get("max_cosmetic_issues")),
+        5,
+    )
+    qg["freeze_current_as_baseline"] = bool(qg.get("freeze_current_as_baseline", False))
     return qg
 
 
@@ -320,11 +321,14 @@ def _run_quality_gate(*, raw_out_file: str, qg_cfg: dict[str, Any]):
     report_path = str(qg_cfg.get("report_path") or qg_cfg.get("report_file") or VTT_QG_REPORT_DEFAULT)
     baseline_path = str(qg_cfg.get("baseline_path") or qg_cfg.get("baseline_file") or VTT_QG_BASELINE_DEFAULT)
 
-    # Сохраняем безопасный контракт supplier-side qg без неподтверждённых kwargs.
     return run_quality_gate(
         feed_path=raw_out_file,
         report_path=report_path,
         baseline_path=baseline_path,
+        max_new_cosmetic_offers=_safe_int(qg_cfg.get("max_new_cosmetic_offers"), 5),
+        max_new_cosmetic_issues=_safe_int(qg_cfg.get("max_new_cosmetic_issues"), 5),
+        enforce=bool(qg_cfg.get("enforce", True)),
+        freeze_current_as_baseline=bool(qg_cfg.get("freeze_current_as_baseline", False)),
     )
 
 
