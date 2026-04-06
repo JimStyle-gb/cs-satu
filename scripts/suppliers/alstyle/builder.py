@@ -527,7 +527,18 @@ def merge_params(
         seen_pair.add(sig)
 
     out = _final_reconcile_params(out, desc_params)
-    return out
+
+    # Убираем служебный мусор supplier-layer, который не должен попадать ни в raw, ни в final.
+    cleaned: list[tuple[str, str]] = []
+    for k, v in out:
+        k2 = norm_ws(k)
+        v2 = norm_ws(v)
+        if not k2 or not v2:
+            continue
+        if k2.casefold() == "файлы":
+            continue
+        cleaned.append((k2, v2))
+    return cleaned
 
 
 def _has_param(params: list[tuple[str, str]], key: str) -> bool:
@@ -687,13 +698,6 @@ def build_offer(
 
     price_in = normalize_price_in(src.purchase_price_text, src.price_text)
 
-    # Если narrative-body после extraction пустой, но params из description уже извлечены,
-    # не возвращаемся к полному desc_src, иначе в final снова протечёт техблок
-    # "Характеристики" из supplier-описания.
-    native_desc_src = desc_body
-    if not norm_ws(native_desc_src):
-        native_desc_src = "" if desc_params else desc_src
-
     offer = OfferOut(
         oid=oid,
         available=available,
@@ -702,7 +706,7 @@ def build_offer(
         pictures=pictures,
         vendor=vendor,
         params=params,
-        native_desc=_final_polish_native_desc(name, vendor, native_desc_src),
+        native_desc=_final_polish_native_desc(name, vendor, (desc_body or desc_src)),
     )
     return offer, available
 
