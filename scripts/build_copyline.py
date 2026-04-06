@@ -20,11 +20,7 @@ from typing import Any, List
 import yaml
 
 from cs.core import get_public_vendor, write_cs_feed, write_cs_feed_raw
-
-try:
-    from cs.meta import now_almaty, next_run_dom_at_hour
-except Exception:
-    from cs.core import now_almaty, next_run_dom_at_hour
+from cs.meta import now_almaty, next_run_dom_at_hour
 
 from suppliers.copyline.builder import build_offer_from_page
 from suppliers.copyline.filtering import filter_product_index
@@ -32,7 +28,7 @@ from suppliers.copyline.quality_gate import run_quality_gate
 from suppliers.copyline.source import fetch_product_index, parse_product_page
 
 
-BUILD_COPYLINE_VERSION = "build_copyline_v13_fix_qg_policy_and_next_run_dom"
+BUILD_COPYLINE_VERSION = "build_copyline_v14_meta_only_next_run_dom"
 
 SUPPLIER_NAME_DEFAULT = "CopyLine"
 SUPPLIER_URL_DEFAULT = os.getenv("SUPPLIER_URL", "https://copyline.kz/goods.html")
