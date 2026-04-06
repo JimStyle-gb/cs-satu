@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<yml_catalog date="2026-04-06 22:07:14">
+<yml_catalog date="2026-04-06 22:26:09">
 <shop><offers>
 <!--FEED_META
 Поставщик                                  | ComPortal
 URL поставщика                             | https://www.comportal.kz/auth/documents/prices/yml-catalog.php
-Время сборки (Алматы)                      | 2026-04-06 22:07:14
+Время сборки (Алматы)                      | 2026-04-06 22:26:09
 Ближайшая сборка (Алматы)                  | 2026-04-07 03:00:00
-Сколько товаров у поставщика до фильтра    | 1212
-Сколько товаров у поставщика после фильтра | 605
-Сколько товаров есть в наличии (true)      | 605
+Сколько товаров у поставщика до фильтра    | 1216
+Сколько товаров у поставщика после фильтра | 609
+Сколько товаров есть в наличии (true)      | 609
 Сколько товаров нет в наличии (false)      | 0
 -->
 
@@ -4149,9 +4149,9 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Моноблок. Модельная серия: Optiplex 5400 AIO. Процессор: Intel 12500 Core i5 3. Оперативная память: 8 Gb / DDR4 / 3200. Накопитель: 256 / M.2 PCIe SSD / 1 шт. Разрешение: 1920x1080. ОС: Ubuntu 20.04. Видеокарта: Intel UHD 770 256 Mb. Wi‑Fi: AX211. Bluetooth: Bluetooth. Гарантия: 12 мес.]]></description>
+Моноблок. Модельная серия: Optiplex 5400. Процессор: Intel 12500 Core i5 3. Оперативная память: 8 Gb / DDR4 / 3200. Накопитель: 256 / M.2 PCIe SSD / 1 шт. Разрешение: 1920x1080. ОС: Ubuntu 20.04. Видеокарта: Intel UHD 770 256 Mb. Wi‑Fi: AX211. Bluetooth: Bluetooth. Гарантия: 12 мес.]]></description>
 <param name="Тип">Моноблок</param>
-<param name="Модель">Optiplex 5400 AIO</param>
+<param name="Модель">Optiplex 5400</param>
 <param name="Объем жесткого диска">256</param>
 <param name="Тип жесткого диска">M.2 PCIe SSD</param>
 <param name="Производитель процессора">Intel</param>
@@ -4665,9 +4665,9 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Настольный ПК. Модельная серия: Компьютер Dell OptiPlex 5000. Процессор: Intel 12100 Core i3 3,3. Оперативная память: 8 Gb / DDR4 / 3200. Накопитель: 1000 / SATA 3.5&quot; / 1 шт. ОС: Microsoft Windows 10 Pro 64. Видеокарта: Intel UHD 730 256 Mb. Гарантия: 12 мес.]]></description>
+Настольный ПК. Модельная серия: OptiPlex 5000. Процессор: Intel 12100 Core i3 3,3. Оперативная память: 8 Gb / DDR4 / 3200. Накопитель: 1000 / SATA 3.5&quot; / 1 шт. ОС: Microsoft Windows 10 Pro 64. Видеокарта: Intel UHD 730 256 Mb. Гарантия: 12 мес.]]></description>
 <param name="Тип">Настольный ПК</param>
-<param name="Модель">Компьютер Dell OptiPlex 5000</param>
+<param name="Модель">OptiPlex 5000</param>
 <param name="Объем жесткого диска">1000</param>
 <param name="Скорость вращения шпинделя">7200</param>
 <param name="Тип жесткого диска">SATA 3.5&amp;quot;</param>
@@ -4906,6 +4906,51 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Номер">№305</param>
 <param name="Коды">3YM63AE#UUQ</param>
 <param name="Для бренда">HP</param>
+</offer>
+
+<offer id="CP13871076" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13871076</vendorCode>
+<name>Ноутбук Acer Aspire 3 A315-58-51UE (NX.AL0ER.008)</name>
+<price>247761</price>
+<picture>http://www.comportal.kz/upload/iblock/dbb/lfthkvggpjo6mt371d74liml9e74tfg5.JPG</picture>
+<vendor>Acer</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Ноутбук. Процессор: Intel 1135G7 Core i5 2,4. Оперативная память: 8 Gb / DDR4 / 3200. Накопитель: 256 / PCIe NVMe SSD / 1 шт. Диагональ: 15,6. Разрешение: 1920x1080. ОС: Без операционной системы. Видеокарта: Intel 256 Mb. Wi‑Fi: 802.11 a b/g n/ac. Bluetooth: Bluetooth 5.0. Камера: HD Camera. Гарантия: 12 мес.]]></description>
+<param name="Тип">Ноутбук</param>
+<param name="Модель">Aspire 3 A315-58-51UE</param>
+<param name="Объем жесткого диска">256</param>
+<param name="Тип жесткого диска">PCIe NVMe SSD</param>
+<param name="Производитель процессора">Intel</param>
+<param name="Модель процессора">Core i5</param>
+<param name="Серия процессора">1135G7</param>
+<param name="Частота процессора">2,4</param>
+<param name="Количество портов USB">2</param>
+<param name="Оперативная память">8 Gb</param>
+<param name="Частота оперативной памяти">3200</param>
+<param name="Количество слотов памяти">2</param>
+<param name="Занятые слоты памяти">2x4GB</param>
+<param name="Объем видеопамяти">256 Mb</param>
+<param name="Тип оперативной памяти">DDR4</param>
+<param name="Порты">USB 2.0 port HDMI® 2.0 port with HDCP support/3.5 mm headphone speaker jack,/Ethernet (RJ-45) port Two USB 3.2 Gen 1 ports</param>
+<param name="Тип привода">No ODD</param>
+<param name="Количество дисков">1</param>
+<param name="Размер дисплея">15,6</param>
+<param name="Тип матрицы">FHD</param>
+<param name="Производитель чипсета видеокарты">Intel</param>
+<param name="Марка чипсета видеокарты">Graphics</param>
+<param name="Операционная система">Без операционной системы</param>
+<param name="Цвет">Красный</param>
+<param name="Bluetooth">Bluetooth 5.0</param>
+<param name="Wi-Fi">802.11 a b/g n/ac</param>
+<param name="Адаптер">45W AC adapter</param>
+<param name="Аккумулятор">2 cell 36,7Whr</param>
+<param name="Гарантия">12 мес</param>
+<param name="Камера">HD Camera</param>
+<param name="Разрешение дисплея">1920x1080</param>
+<param name="Коды">NX.AL0ER.008</param>
+<param name="Для бренда">Acer</param>
 </offer>
 
 <offer id="CP13871689" available="true">
@@ -5332,9 +5377,9 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Монитор. Модельная серия: Alienware AW3423DWF. Диагональ: 34.18. Максимальное разрешение: 3440x1440. Тип матрицы: OLED. Частота обновления: 165. Время отклика: 0,1. Порты: HDMI/2xDP/4xUSB AudioOut Headphones. Гарантия: 36 мес.]]></description>
+Монитор. Диагональ: 34.18. Максимальное разрешение: 3440x1440. Тип матрицы: OLED. Частота обновления: 165. Время отклика: 0,1. Порты: HDMI/2xDP/4xUSB AudioOut Headphones. Гарантия: 36 мес.]]></description>
 <param name="Тип">Монитор</param>
-<param name="Модель">Alienware AW3423DWF</param>
+<param name="Модель">AW3423DWF</param>
 <param name="Порты">HDMI/2xDP/4xUSB AudioOut Headphones</param>
 <param name="Тип матрицы">OLED</param>
 <param name="Гарантия">36 мес</param>
@@ -6233,9 +6278,9 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Настольный ПК. Модельная серия: Компьютер Dell OptiPlex 7010 plus. Процессор: Intel 13600K Core i5 3,5. Оперативная память: 8 Gb / DDR5 / 4800. Накопитель: 256*500 / SSD+HDD / 2 шт. ОС: Microsoft Windows 11 Pro 64. Видеокарта: Intel UHD 770 256 Mb. Гарантия: 12 мес.]]></description>
+Настольный ПК. Модельная серия: OptiPlex 7010. Процессор: Intel 13600K Core i5 3,5. Оперативная память: 8 Gb / DDR5 / 4800. Накопитель: 256*500 / SSD+HDD / 2 шт. ОС: Microsoft Windows 11 Pro 64. Видеокарта: Intel UHD 770 256 Mb. Гарантия: 12 мес.]]></description>
 <param name="Тип">Настольный ПК</param>
-<param name="Модель">Компьютер Dell OptiPlex 7010 plus</param>
+<param name="Модель">OptiPlex 7010</param>
 <param name="Объем жесткого диска">256*500</param>
 <param name="Тип жесткого диска">SSD+HDD</param>
 <param name="Производитель процессора">Intel</param>
@@ -6550,7 +6595,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Стабилизатор (AVR)">есть</param>
 <param name="Гарантия">24 мес</param>
 <param name="Для бренда">APC</param>
-<param name="Коды">BVX1200LI-GR 230V, AVR, Schuko Sockets</param>
 </offer>
 
 <offer id="CP13835259" available="true">
@@ -6745,9 +6789,9 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Монитор. Модельная серия: P2424HT Touch. Диагональ: 23.8. Максимальное разрешение: 1920x1080. Тип матрицы: Full HD. Частота обновления: 60. Время отклика: 5. Порты: HDMI DisplayPort 1.2/USB-C 3.2/2 x USB 3.2/RJ-45/Audio line-out. Гарантия: 36 мес.]]></description>
+Монитор. Диагональ: 23.8. Максимальное разрешение: 1920x1080. Тип матрицы: Full HD. Частота обновления: 60. Время отклика: 5. Порты: HDMI DisplayPort 1.2/USB-C 3.2/2 x USB 3.2/RJ-45/Audio line-out. Гарантия: 36 мес.]]></description>
 <param name="Тип">Монитор</param>
-<param name="Модель">P2424HT Touch</param>
+<param name="Модель">P2424HT</param>
 <param name="Порты">HDMI DisplayPort 1.2/USB-C 3.2/2 x USB 3.2/RJ-45/Audio line-out</param>
 <param name="Тип матрицы">Full HD</param>
 <param name="Цвет">Чёрный</param>
@@ -6969,7 +7013,7 @@ URL поставщика                             | https://www.comportal.kz/
 <description><![CDATA[
 МФУ. Формат печати: A3. Разрешение: 1200x1200. Скорость печати ч/б: 26. Скорость печати цветной: 26. Порты: USB LAN. Технология печати: Лазерная. Гарантия: 12 мес.]]></description>
 <param name="Тип">МФУ</param>
-<param name="Модель">imageRUNNER ADVANCE DX C3926I (5963C005 / bundle)</param>
+<param name="Модель">imageRUNNER ADVANCE DX C3926I</param>
 <param name="Гарантия">12 мес</param>
 <param name="Разрешение">1200x1200</param>
 <param name="Формат печати">A3</param>
@@ -6982,7 +7026,7 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Нагрузка">5 000</param>
 <param name="Жесткий диск">256Gb</param>
 <param name="Для бренда">Canon</param>
-<param name="Коды">imageRUNNER ADVANCE DX C3926I</param>
+<param name="Коды">5963C005 / bundle</param>
 </offer>
 
 <offer id="CP13846857" available="true">
@@ -7032,9 +7076,9 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Монитор. Модельная серия: Alienware Gaming AW2524HF. Диагональ: 24.5. Максимальное разрешение: 1920x1080. Тип матрицы: Full HD. Частота обновления: 500. Время отклика: 1. Порты: 1xHDMI 2.1/2xDisplayPort 1.4/1xUSB 3.2 Gen 1 upstream/2xUSB 3.2 Gen 1 downstream/2xUSB 3.2 Gen 1 downstream with Battery Charging 1.2. Гарантия: 36 мес.]]></description>
+Монитор. Диагональ: 24.5. Максимальное разрешение: 1920x1080. Тип матрицы: Full HD. Частота обновления: 500. Время отклика: 1. Порты: 1xHDMI 2.1/2xDisplayPort 1.4/1xUSB 3.2 Gen 1 upstream/2xUSB 3.2 Gen 1 downstream/2xUSB 3.2 Gen 1 downstream with Battery Charging 1.2. Гарантия: 36 мес.]]></description>
 <param name="Тип">Монитор</param>
-<param name="Модель">Alienware Gaming AW2524HF</param>
+<param name="Модель">AW2524HF</param>
 <param name="Порты">1xHDMI 2.1/2xDisplayPort 1.4/1xUSB 3.2 Gen 1 upstream/2xUSB 3.2 Gen 1 downstream/2xUSB 3.2 Gen 1 downstream with Battery Charging 1.2</param>
 <param name="Тип матрицы">Full HD</param>
 <param name="Цвет">Чёрный</param>
@@ -7629,7 +7673,7 @@ URL поставщика                             | https://www.comportal.kz/
 <description><![CDATA[
 Монитор. Диагональ: 23.8. Максимальное разрешение: 1920x1080. Тип матрицы: Full HD. Частота обновления: 60. Время отклика: 5. Порты: 1x HDMI (HDCP 1.4)/1x DP 1.2 (HDCP 1.4)/1x DP-out with MST/1x RJ45/1x 3.5mm combo headphone with microphone jack/1x USB 3.2 Gen1 Type-C (Alt mode with DP 1.2 upstream, up to 90W power delivery)/1x USB 3.2 Gen1 Type-B upstream/2x USB 3.2 Gen1 Type-A downstream/1x USB 3.2 Gen1 Type-C downstream with up to 15W power delivery/1x USB 3.2 Gen1 Type-A downstream with BC1.2 (2A max). Гарантия: 36 мес.]]></description>
 <param name="Тип">Монитор</param>
-<param name="Модель">P2424HEB / 24 Video Conferencing Monitor</param>
+<param name="Модель">P2424HEB</param>
 <param name="Порты">1x HDMI (HDCP 1.4)/1x DP 1.2 (HDCP 1.4)/1x DP-out with MST/1x RJ45/1x 3.5mm combo headphone with microphone jack/1x USB 3.2 Gen1 Type-C (Alt mode with DP 1.2 upstream, up to 90W power delivery)/1x USB 3.2 Gen1 Type-B upstream/2x USB 3.2 Gen1 Type-A downstream/1x USB 3.2 Gen1 Type-C downstream with up to 15W power delivery/1x USB 3.2 Gen1 Type-A downstream with BC1.2 (2A max)</param>
 <param name="Тип матрицы">Full HD</param>
 <param name="Цвет">Чёрный</param>
@@ -7657,7 +7701,7 @@ URL поставщика                             | https://www.comportal.kz/
 <description><![CDATA[
 Монитор. Диагональ: 27. Максимальное разрешение: 2560x1440. Тип матрицы: QHD. Частота обновления: 60. Время отклика: 5. Порты: 1x HDMI (HDCP 1.4)/1x DP 1.4 (HDCP 1.4)/1x DP-out with MST/1x RJ45/1x 3.5mm combo headphone with microphone jack/1x USB 3.2 Gen1 Type-C (Alt mode with DP 1.4 upstream, up to 90W power delivery)/1x USB 3.2 Gen1 Type-B upstream/2x USB 3.2 Gen1 Type-A downstream/1xUSB 3.2 Gen1 Type-C downstream with up to 15W power delivery/1x USB 3.2 Gen1 Type-A downstream with BC1.2 (2A max). Гарантия: 36 мес.]]></description>
 <param name="Тип">Монитор</param>
-<param name="Модель">P2724DEB / 27 Video Conferencing Monitor</param>
+<param name="Модель">P2724DEB</param>
 <param name="Порты">1x HDMI (HDCP 1.4)/1x DP 1.4 (HDCP 1.4)/1x DP-out with MST/1x RJ45/1x 3.5mm combo headphone with microphone jack/1x USB 3.2 Gen1 Type-C (Alt mode with DP 1.4 upstream, up to 90W power delivery)/1x USB 3.2 Gen1 Type-B upstream/2x USB 3.2 Gen1 Type-A downstream/1xUSB 3.2 Gen1 Type-C downstream with up to 15W power delivery/1x USB 3.2 Gen1 Type-A downstream with BC1.2 (2A max)</param>
 <param name="Тип матрицы">QHD</param>
 <param name="Цвет">Чёрный</param>
@@ -7683,9 +7727,9 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Ноутбук. Процессор: Intel 1235U Core i5 1,3. Оперативная память: 8 Gb / DDR4 / 2666. Накопитель: 512 / M.2 PCIe SSD / 1 шт. Диагональ: 15,6. Разрешение: 1920x1080. ОС: Microsoft Windows 11 Pro 64. Видеокарта: Intel UHD 256 Mb. Wi‑Fi: 8821CE. Bluetooth: Bluetooth 5.0. Камера: HD Camera. Гарантия: 36 мес.]]></description>
+Ноутбук. Модельная серия: Vostro 3520. Процессор: Intel 1235U Core i5 1,3. Оперативная память: 8 Gb / DDR4 / 2666. Накопитель: 512 / M.2 PCIe SSD / 1 шт. Диагональ: 15,6. Разрешение: 1920x1080. ОС: Microsoft Windows 11 Pro 64. Видеокарта: Intel UHD 256 Mb. Wi‑Fi: 8821CE. Bluetooth: Bluetooth 5.0. Камера: HD Camera. Гарантия: 36 мес.]]></description>
 <param name="Тип">Ноутбук</param>
-<param name="Модель">Vostro 3520 (210-BECX_N3002PVNB3520EMEA01)</param>
+<param name="Модель">Vostro 3520</param>
 <param name="Объем жесткого диска">512</param>
 <param name="Тип жесткого диска">M.2 PCIe SSD</param>
 <param name="Производитель процессора">Intel</param>
@@ -7717,7 +7761,7 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Камера">HD Camera</param>
 <param name="Разрешение дисплея">1920x1080</param>
 <param name="Для бренда">Dell</param>
-<param name="Коды">Vostro 3520</param>
+<param name="Коды">210-BECX_N3002PVNB3520EMEA01</param>
 </offer>
 
 <offer id="CP13870382" available="true">
@@ -7729,9 +7773,9 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Ноутбук. Процессор: Intel 1355U Core i7 1,7. Оперативная память: 16 Gb / DDR4 / 2666. Накопитель: 512 / M.2 PCIe SSD / 1 шт. Диагональ: 15,6. Разрешение: 1920x1080. ОС: Ubuntu 22.04. Видеокарта: Intel Iris Xe 256 Mb. Wi‑Fi: 8821CE. Bluetooth: Bluetooth 5.0. Камера: HD Camera. Гарантия: 12 мес.]]></description>
+Ноутбук. Модельная серия: Vostro 3530. Процессор: Intel 1355U Core i7 1,7. Оперативная память: 16 Gb / DDR4 / 2666. Накопитель: 512 / M.2 PCIe SSD / 1 шт. Диагональ: 15,6. Разрешение: 1920x1080. ОС: Ubuntu 22.04. Видеокарта: Intel Iris Xe 256 Mb. Wi‑Fi: 8821CE. Bluetooth: Bluetooth 5.0. Камера: HD Camera. Гарантия: 12 мес.]]></description>
 <param name="Тип">Ноутбук</param>
-<param name="Модель">Vostro 3530 (210-BGLW-N1605PVNB3530EMEA01_UBU)</param>
+<param name="Модель">Vostro 3530</param>
 <param name="Объем жесткого диска">512</param>
 <param name="Тип жесткого диска">M.2 PCIe SSD</param>
 <param name="Производитель процессора">Intel</param>
@@ -7762,7 +7806,7 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Камера">HD Camera</param>
 <param name="Разрешение дисплея">1920x1080</param>
 <param name="Для бренда">Dell</param>
-<param name="Коды">Vostro 3530</param>
+<param name="Коды">210-BGLW-N1605PVNB3530EMEA01_UBU</param>
 </offer>
 
 <offer id="CP13861561" available="true">
@@ -7839,9 +7883,9 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Ноутбук. Процессор: Intel 155H Core Ultra 7 3,8. Оперативная память: 32 Gb / DDR5 / 5600. Накопитель: 512 / M.2 PCIe SSD / 1 шт. Диагональ: 15,6. Разрешение: 1920x1080. ОС: Microsoft Windows 11 Pro 64. Видеокарта: nVidia RTX 500 Ada 4 Gb. Wi‑Fi: AX211. Bluetooth: Bluetooth. Камера: FHD IR Camera. Гарантия: 36 мес.]]></description>
+Ноутбук. Модельная серия: Precision 3590. Процессор: Intel 155H Core Ultra 7 3,8. Оперативная память: 32 Gb / DDR5 / 5600. Накопитель: 512 / M.2 PCIe SSD / 1 шт. Диагональ: 15,6. Разрешение: 1920x1080. ОС: Microsoft Windows 11 Pro 64. Видеокарта: nVidia RTX 500 Ada 4 Gb. Wi‑Fi: AX211. Bluetooth: Bluetooth. Камера: FHD IR Camera. Гарантия: 36 мес.]]></description>
 <param name="Тип">Ноутбук</param>
-<param name="Модель">Мобильная рабочая станция Dell Precision 3590 (210-BLMX_N002P3590EMEA_VP)</param>
+<param name="Модель">Precision 3590</param>
 <param name="Объем жесткого диска">512</param>
 <param name="Тип жесткого диска">M.2 PCIe SSD</param>
 <param name="Производитель процессора">Intel</param>
@@ -7873,7 +7917,7 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Камера">FHD IR Camera</param>
 <param name="Разрешение дисплея">1920x1080</param>
 <param name="Для бренда">Dell</param>
-<param name="Коды">Precision 3590</param>
+<param name="Коды">210-BLMX_N002P3590EMEA_VP</param>
 </offer>
 
 <offer id="CP13866544" available="true">
@@ -7885,9 +7929,9 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Настольный ПК. Модельная серия: Компьютер Dell Vostro 3030. Процессор: Intel 14100 Core i3 3,5. Оперативная память: 8 Gb / DDR5 / 4800. Накопитель: 512 / M.2 PCIe SSD / 1 шт. ОС: Ubuntu 22.04 64. Видеокарта: Intel UHD 730 256 Mb. Гарантия: 12 мес.]]></description>
+Настольный ПК. Модельная серия: Vostro 3030. Процессор: Intel 14100 Core i3 3,5. Оперативная память: 8 Gb / DDR5 / 4800. Накопитель: 512 / M.2 PCIe SSD / 1 шт. ОС: Ubuntu 22.04 64. Видеокарта: Intel UHD 730 256 Mb. Гарантия: 12 мес.]]></description>
 <param name="Тип">Настольный ПК</param>
-<param name="Модель">Компьютер Dell Vostro 3030</param>
+<param name="Модель">Vostro 3030</param>
 <param name="Объем жесткого диска">512</param>
 <param name="Тип жесткого диска">M.2 PCIe SSD</param>
 <param name="Производитель процессора">Intel</param>
@@ -7925,9 +7969,9 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Настольный ПК. Процессор: Intel 14700 Core i7 2,1. Оперативная память: 8 Gb / DDR5 / 4800. Накопитель: 512 / M.2 PCIe SSD / 1 шт. ОС: Windows 11 Pro 64. Видеокарта: Intel UHD 770 256 Mb. Гарантия: 12 мес.]]></description>
+Настольный ПК. Модельная серия: Vostro 3030. Процессор: Intel 14700 Core i7 2,1. Оперативная память: 8 Gb / DDR5 / 4800. Накопитель: 512 / M.2 PCIe SSD / 1 шт. ОС: Windows 11 Pro 64. Видеокарта: Intel UHD 770 256 Mb. Гарантия: 12 мес.]]></description>
 <param name="Тип">Настольный ПК</param>
-<param name="Модель">Компьютер Dell Vostro 3030 (210-BKVT_N2016VDT3030MTEMEA01)</param>
+<param name="Модель">Vostro 3030</param>
 <param name="Объем жесткого диска">512</param>
 <param name="Тип жесткого диска">M.2 PCIe SSD</param>
 <param name="Производитель процессора">Intel</param>
@@ -7955,7 +7999,7 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Клавиатура">KB216</param>
 <param name="Манипулятор">MS116</param>
 <param name="Для бренда">Dell</param>
-<param name="Коды">Vostro 3030</param>
+<param name="Коды">210-BKVT_N2016VDT3030MTEMEA01</param>
 </offer>
 
 <offer id="CP13863651" available="true">
@@ -8022,9 +8066,9 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Монитор. Модельная серия: Pro 24 Plus P2425H. Диагональ: 23.8. Максимальное разрешение: 1920x1080. Тип матрицы: IPS. Частота обновления: 100. Время отклика: 5. Порты: 1x HDMI 1.4/1x DP 1.2/1x VGA/1x USB 3.2 Gen1 Type-B/3x USB 3.2 Gen1 Type-A/1x USB 3.2 Gen1 Type-C. Гарантия: 36 мес.]]></description>
+Монитор. Диагональ: 23.8. Максимальное разрешение: 1920x1080. Тип матрицы: IPS. Частота обновления: 100. Время отклика: 5. Порты: 1x HDMI 1.4/1x DP 1.2/1x VGA/1x USB 3.2 Gen1 Type-B/3x USB 3.2 Gen1 Type-A/1x USB 3.2 Gen1 Type-C. Гарантия: 36 мес.]]></description>
 <param name="Тип">Монитор</param>
-<param name="Модель">Pro 24 Plus P2425H</param>
+<param name="Модель">P2425H</param>
 <param name="Порты">1x HDMI 1.4/1x DP 1.2/1x VGA/1x USB 3.2 Gen1 Type-B/3x USB 3.2 Gen1 Type-A/1x USB 3.2 Gen1 Type-C</param>
 <param name="Тип матрицы">IPS</param>
 <param name="Гарантия">36 мес</param>
@@ -8297,12 +8341,12 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Ноутбук. Гарантия: 12 мес. Для бренда: Dell. Модель: Vostro 3530 (210-BGLW-N1601PVNB3530EMEA01_UBU). Коды: Vostro 3530.]]></description>
+Ноутбук. Модельная серия: Vostro 3530. Гарантия: 12 мес. Для бренда: Dell. Модель: Vostro 3530. Коды: 210-BGLW-N1601PVNB3530EMEA01_UBU.]]></description>
 <param name="Тип">Ноутбук</param>
 <param name="Гарантия">12 мес</param>
 <param name="Для бренда">Dell</param>
-<param name="Модель">Vostro 3530 (210-BGLW-N1601PVNB3530EMEA01_UBU)</param>
-<param name="Коды">Vostro 3530</param>
+<param name="Модель">Vostro 3530</param>
+<param name="Коды">210-BGLW-N1601PVNB3530EMEA01_UBU</param>
 </offer>
 
 <offer id="CP13864621" available="true">
@@ -8416,9 +8460,9 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Ноутбук. Процессор: Intel 1334U Core i5 1,3. Оперативная память: 16 Gb / DDR4 / 2666. Накопитель: 512 / M.2 PCIe SSD / 1 шт. Диагональ: 15,6. Разрешение: 1920x1080. ОС: Ubuntu 22.04. Видеокарта: Intel Iris Xe 256 Mb. Wi‑Fi: 802.11ac. Bluetooth: Bluetooth. Гарантия: 12 мес.]]></description>
+Ноутбук. Модельная серия: Vostro 3530. Процессор: Intel 1334U Core i5 1,3. Оперативная память: 16 Gb / DDR4 / 2666. Накопитель: 512 / M.2 PCIe SSD / 1 шт. Диагональ: 15,6. Разрешение: 1920x1080. ОС: Ubuntu 22.04. Видеокарта: Intel Iris Xe 256 Mb. Wi‑Fi: 802.11ac. Bluetooth: Bluetooth. Гарантия: 12 мес.]]></description>
 <param name="Тип">Ноутбук</param>
-<param name="Модель">Vostro 3530 (210-BGLW-N3404PVNB3530EMEA01_UBU)</param>
+<param name="Модель">Vostro 3530</param>
 <param name="Объем жесткого диска">512</param>
 <param name="Тип жесткого диска">M.2 PCIe SSD</param>
 <param name="Производитель процессора">Intel</param>
@@ -8448,7 +8492,7 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Гарантия">12 мес</param>
 <param name="Разрешение дисплея">1920x1080</param>
 <param name="Для бренда">Dell</param>
-<param name="Коды">Vostro 3530</param>
+<param name="Коды">210-BGLW-N3404PVNB3530EMEA01_UBU</param>
 </offer>
 
 <offer id="CP13866492" available="true">
@@ -8545,7 +8589,7 @@ URL поставщика                             | https://www.comportal.kz/
 <description><![CDATA[
 МФУ. Формат печати: A3. Разрешение: 1200x1200. Скорость печати ч/б: 26. Скорость печати цветной: 20. Порты: USB LAN WiFI. Технология печати: Лазерная. Гарантия: 12 мес.]]></description>
 <param name="Тип">МФУ</param>
-<param name="Модель">imageRUNNER C3326i (5965C005 / bundle)</param>
+<param name="Модель">imageRUNNER C3326i</param>
 <param name="Гарантия">12 мес</param>
 <param name="Разрешение">1200x1200</param>
 <param name="Формат печати">A3</param>
@@ -8557,7 +8601,7 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Наличие картриджа (тонера) в комплекте">Нет</param>
 <param name="Жесткий диск">256Gb</param>
 <param name="Для бренда">Canon</param>
-<param name="Коды">imageRUNNER C3326i</param>
+<param name="Коды">5965C005 / bundle</param>
 </offer>
 
 <offer id="CP13870391" available="true">
@@ -8720,7 +8764,7 @@ URL поставщика                             | https://www.comportal.kz/
 <description><![CDATA[
 Настольный ПК. Процессор: Intel 14700KF Core i7 3,4. Оперативная память: 16 Gb / DDR5 / 4800. Накопитель: 1000 / M.2 PCIe SSD / 1 шт. ОС: Без операционной системы. Видеокарта: nVidia RTX 4070 12 Gb. Гарантия: 12 мес.]]></description>
 <param name="Тип">Настольный ПК</param>
-<param name="Модель">Компьютер Asus G22CH-1470KF0020</param>
+<param name="Модель">G22CH-1470KF0020</param>
 <param name="Объем жесткого диска">1000</param>
 <param name="Тип жесткого диска">M.2 PCIe SSD</param>
 <param name="Производитель процессора">Intel</param>
@@ -8757,9 +8801,9 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Ноутбук. Процессор: Intel 1355U Core i7 1,7. Оперативная память: 16 Gb / DDR4 / 2666. Накопитель: 512 / PCIe NVMe SSD / 1 шт. Диагональ: 15,6. Разрешение: 1920x1080. ОС: Ubuntu 22.04 64. Видеокарта: Intel Intel Iris Xe 256 Mb. Wi‑Fi: 802.11ac. Bluetooth: Bluetooth 5.0. Камера: FHD Camera. Гарантия: 12 мес.]]></description>
+Ноутбук. Модельная серия: Vostro 3530. Процессор: Intel 1355U Core i7 1,7. Оперативная память: 16 Gb / DDR4 / 2666. Накопитель: 512 / PCIe NVMe SSD / 1 шт. Диагональ: 15,6. Разрешение: 1920x1080. ОС: Ubuntu 22.04 64. Видеокарта: Intel Intel Iris Xe 256 Mb. Wi‑Fi: 802.11ac. Bluetooth: Bluetooth 5.0. Камера: FHD Camera. Гарантия: 12 мес.]]></description>
 <param name="Тип">Ноутбук</param>
-<param name="Модель">Vostro 3530 (210-BGLW-N1605QVNB3530EMEA01_UBU)</param>
+<param name="Модель">Vostro 3530</param>
 <param name="Объем жесткого диска">512</param>
 <param name="Скорость вращения шпинделя">Read Intensive</param>
 <param name="Тип жесткого диска">PCIe NVMe SSD</param>
@@ -8796,7 +8840,7 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Камера">FHD Camera</param>
 <param name="Разрешение дисплея">1920x1080</param>
 <param name="Для бренда">Dell</param>
-<param name="Коды">Vostro 3530</param>
+<param name="Коды">210-BGLW-N1605QVNB3530EMEA01_UBU</param>
 </offer>
 
 <offer id="CP13869655" available="true">
@@ -8808,9 +8852,9 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Ноутбук. Процессор: Intel 1335U Core i5 1,3. Оперативная память: 8 Gb / DDR5 / 5600. Накопитель: 512 / PCIe NVMe SSD / 1 шт. Диагональ: 15,6. Разрешение: 1920x1080. ОС: Ubuntu 22.04 64. Видеокарта: Intel Intel UHD 256 Mb. Wi‑Fi: 802.11ax. Bluetooth: Bluetooth 5.3. Камера: FHD HDR IR Camera. Гарантия: 12 мес.]]></description>
+Ноутбук. Модельная серия: Latitude 3550. Процессор: Intel 1335U Core i5 1,3. Оперативная память: 8 Gb / DDR5 / 5600. Накопитель: 512 / PCIe NVMe SSD / 1 шт. Диагональ: 15,6. Разрешение: 1920x1080. ОС: Ubuntu 22.04 64. Видеокарта: Intel Intel UHD 256 Mb. Wi‑Fi: 802.11ax. Bluetooth: Bluetooth 5.3. Камера: FHD HDR IR Camera. Гарантия: 12 мес.]]></description>
 <param name="Тип">Ноутбук</param>
-<param name="Модель">Latitude 3550 (210-BLRD_N006L355015EMEA_VP_UBU)</param>
+<param name="Модель">Latitude 3550</param>
 <param name="Объем жесткого диска">512</param>
 <param name="Скорость вращения шпинделя">Read Intensive</param>
 <param name="Тип жесткого диска">PCIe NVMe SSD</param>
@@ -8847,7 +8891,7 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Камера">FHD HDR IR Camera</param>
 <param name="Разрешение дисплея">1920x1080</param>
 <param name="Для бренда">Dell</param>
-<param name="Коды">Latitude 3550</param>
+<param name="Коды">210-BLRD_N006L355015EMEA_VP_UBU</param>
 </offer>
 
 <offer id="CP13870493" available="true">
@@ -8859,9 +8903,9 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Ноутбук. Процессор: Intel 125U Core Ultra 5 1,3. Оперативная память: 16 Gb / DDR5 / 5600. Накопитель: 512 / PCIe NVMe SSD / 1 шт. Диагональ: 15,6. Разрешение: 1920x1080. ОС: Microsoft Windows 11 Pro 64. Видеокарта: Intel Intel® Graphics 256 Mb. Wi‑Fi: 802.11ax. Bluetooth: Bluetooth 5.3. Камера: FHD HDR IR Camera. Гарантия: 36 мес.]]></description>
+Ноутбук. Модельная серия: Latitude 5550. Процессор: Intel 125U Core Ultra 5 1,3. Оперативная память: 16 Gb / DDR5 / 5600. Накопитель: 512 / PCIe NVMe SSD / 1 шт. Диагональ: 15,6. Разрешение: 1920x1080. ОС: Microsoft Windows 11 Pro 64. Видеокарта: Intel Intel® Graphics 256 Mb. Wi‑Fi: 802.11ax. Bluetooth: Bluetooth 5.3. Камера: FHD HDR IR Camera. Гарантия: 36 мес.]]></description>
 <param name="Тип">Ноутбук</param>
-<param name="Модель">Latitude 5550 (210-BLMN_N007L555015EMEA_VP)</param>
+<param name="Модель">Latitude 5550</param>
 <param name="Объем жесткого диска">512</param>
 <param name="Скорость вращения шпинделя">Read Intensive</param>
 <param name="Тип жесткого диска">PCIe NVMe SSD</param>
@@ -8900,7 +8944,7 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Камера">FHD HDR IR Camera</param>
 <param name="Разрешение дисплея">1920x1080</param>
 <param name="Для бренда">Dell</param>
-<param name="Коды">Latitude 5550</param>
+<param name="Коды">210-BLMN_N007L555015EMEA_VP</param>
 </offer>
 
 <offer id="CP13870494" available="true">
@@ -8912,9 +8956,9 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Ноутбук. Процессор: Intel 165U Core Ultra 7 1,7. Оперативная память: 16 Gb / DDR5 / 5600. Накопитель: 1024 / PCIe NVMe SSD / 1 шт. Диагональ: 15,6. Разрешение: 1920x1080. ОС: Microsoft Windows 11 Pro 64. Видеокарта: Intel Intel® Graphics 256 Mb. Wi‑Fi: 802.11ax. Bluetooth: Bluetooth 5.3. Камера: FHD HDR IR Camera. Гарантия: 12 мес.]]></description>
+Ноутбук. Модельная серия: Latitude 5550. Процессор: Intel 165U Core Ultra 7 1,7. Оперативная память: 16 Gb / DDR5 / 5600. Накопитель: 1024 / PCIe NVMe SSD / 1 шт. Диагональ: 15,6. Разрешение: 1920x1080. ОС: Microsoft Windows 11 Pro 64. Видеокарта: Intel Intel® Graphics 256 Mb. Wi‑Fi: 802.11ax. Bluetooth: Bluetooth 5.3. Камера: FHD HDR IR Camera. Гарантия: 12 мес.]]></description>
 <param name="Тип">Ноутбук</param>
-<param name="Модель">Latitude 5550 (210-BLMN_N015L555015EMEA_VP)</param>
+<param name="Модель">Latitude 5550</param>
 <param name="Объем жесткого диска">1024</param>
 <param name="Скорость вращения шпинделя">Read Intensive</param>
 <param name="Тип жесткого диска">PCIe NVMe SSD</param>
@@ -8953,7 +8997,7 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Камера">FHD HDR IR Camera</param>
 <param name="Разрешение дисплея">1920x1080</param>
 <param name="Для бренда">Dell</param>
-<param name="Коды">Latitude 5550</param>
+<param name="Коды">210-BLMN_N015L555015EMEA_VP</param>
 </offer>
 
 <offer id="CP13869656" available="true">
@@ -8965,9 +9009,9 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Ноутбук. Процессор: Intel 1315U Core i3 1,2. Оперативная память: 8 Gb / DDR5 / 5600. Накопитель: 512 / PCIe NVMe SSD / 1 шт. Диагональ: 15,6. Разрешение: 1366x768. ОС: Microsoft Windows 11 Pro 64. Видеокарта: Intel Intel UHD 256 Mb. Wi‑Fi: 802.11ax. Bluetooth: Bluetooth 5.3. Камера: Camera & Mic. Гарантия: 12 мес.]]></description>
+Ноутбук. Модельная серия: Latitude 3550. Процессор: Intel 1315U Core i3 1,2. Оперативная память: 8 Gb / DDR5 / 5600. Накопитель: 512 / PCIe NVMe SSD / 1 шт. Диагональ: 15,6. Разрешение: 1366x768. ОС: Microsoft Windows 11 Pro 64. Видеокарта: Intel Intel UHD 256 Mb. Wi‑Fi: 802.11ax. Bluetooth: Bluetooth 5.3. Камера: Camera & Mic. Гарантия: 12 мес.]]></description>
 <param name="Тип">Ноутбук</param>
-<param name="Модель">Latitude 3550 (210-BLRD_N004L355015EMEA_VP)</param>
+<param name="Модель">Latitude 3550</param>
 <param name="Объем жесткого диска">512</param>
 <param name="Скорость вращения шпинделя">Read Intensive</param>
 <param name="Тип жесткого диска">PCIe NVMe SSD</param>
@@ -9006,7 +9050,7 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Камера">Camera &amp; Mic</param>
 <param name="Разрешение дисплея">1366x768</param>
 <param name="Для бренда">Dell</param>
-<param name="Коды">Latitude 3550</param>
+<param name="Коды">210-BLRD_N004L355015EMEA_VP</param>
 </offer>
 
 <offer id="CP13870470" available="true">
@@ -9170,9 +9214,9 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Ноутбук. Процессор: Intel 135H Core Ultra 5 1,7. Оперативная память: 16 Gb / DDR5 / 5600. Накопитель: 512 / M.2 PCIe SSD / 1 шт. Диагональ: 15,6. Разрешение: 1920x1080. ОС: Microsoft Windows 11 Pro 64. Видеокарта: nVidia RTX 2050 4 Gb. Wi‑Fi: 6E AX211 2x2 AC. Bluetooth: Bluetooth 5.3. Камера: FHD HDR IR Camera. Гарантия: 36 мес.]]></description>
+Ноутбук. Модельная серия: Latitude 5550. Процессор: Intel 135H Core Ultra 5 1,7. Оперативная память: 16 Gb / DDR5 / 5600. Накопитель: 512 / M.2 PCIe SSD / 1 шт. Диагональ: 15,6. Разрешение: 1920x1080. ОС: Microsoft Windows 11 Pro 64. Видеокарта: nVidia RTX 2050 4 Gb. Wi‑Fi: 6E AX211 2x2 AC. Bluetooth: Bluetooth 5.3. Камера: FHD HDR IR Camera. Гарантия: 36 мес.]]></description>
 <param name="Тип">Ноутбук</param>
-<param name="Модель">Latitude 5550 (210-BLYZ_12)</param>
+<param name="Модель">Latitude 5550</param>
 <param name="Объем жесткого диска">512</param>
 <param name="Тип жесткого диска">M.2 PCIe SSD</param>
 <param name="Производитель процессора">Intel</param>
@@ -9207,7 +9251,7 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Камера">FHD HDR IR Camera</param>
 <param name="Разрешение дисплея">1920x1080</param>
 <param name="Для бренда">Dell</param>
-<param name="Коды">Latitude 5550</param>
+<param name="Коды">210-BLYZ_12</param>
 </offer>
 
 <offer id="CP13869161" available="true">
@@ -9219,9 +9263,9 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Ноутбук. Процессор: Intel 135H Core Ultra 5 1,7. Оперативная память: 16 Gb / DDR5 / 6400. Накопитель: 512 / M.2 PCIe SSD / 1 шт. Диагональ: 16. Разрешение: 1920x1200. ОС: Microsoft Windows 11 Pro 64. Видеокарта: Intel Integrated Intel Arc. Wi‑Fi: BE200. Bluetooth: Bluetooth 5.4. Камера: FHD HDR IR Camera. Гарантия: 36 мес.]]></description>
+Ноутбук. Модельная серия: Latitude 7650. Процессор: Intel 135H Core Ultra 5 1,7. Оперативная память: 16 Gb / DDR5 / 6400. Накопитель: 512 / M.2 PCIe SSD / 1 шт. Диагональ: 16. Разрешение: 1920x1200. ОС: Microsoft Windows 11 Pro 64. Видеокарта: Intel Integrated Intel Arc. Wi‑Fi: BE200. Bluetooth: Bluetooth 5.4. Камера: FHD HDR IR Camera. Гарантия: 36 мес.]]></description>
 <param name="Тип">Ноутбук</param>
-<param name="Модель">Latitude 7650 (210-BLQN_2)</param>
+<param name="Модель">Latitude 7650</param>
 <param name="Объем жесткого диска">512</param>
 <param name="Тип жесткого диска">M.2 PCIe SSD</param>
 <param name="Производитель процессора">Intel</param>
@@ -9255,7 +9299,7 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Камера">FHD HDR IR Camera</param>
 <param name="Разрешение дисплея">1920x1200</param>
 <param name="Для бренда">Dell</param>
-<param name="Коды">Latitude 7650</param>
+<param name="Коды">210-BLQN_2</param>
 </offer>
 
 <offer id="CP13869162" available="true">
@@ -9267,9 +9311,9 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Ноутбук. Процессор: Intel 165H Core Ultra 7 1,4. Оперативная память: 32 Gb / LPDDR5X / 6400. Накопитель: 1000 / M.2 PCIe SSD / 1 шт. Диагональ: 16. Разрешение: 1920x1200. ОС: Microsoft Windows 11 Pro 64. Видеокарта: Intel Integrated Intel Arc. Wi‑Fi: BE200. Bluetooth: Bluetooth 5.4. Камера: FHD HDR IR Camera. Гарантия: 36 мес.]]></description>
+Ноутбук. Модельная серия: Latitude 7650. Процессор: Intel 165H Core Ultra 7 1,4. Оперативная память: 32 Gb / LPDDR5X / 6400. Накопитель: 1000 / M.2 PCIe SSD / 1 шт. Диагональ: 16. Разрешение: 1920x1200. ОС: Microsoft Windows 11 Pro 64. Видеокарта: Intel Integrated Intel Arc. Wi‑Fi: BE200. Bluetooth: Bluetooth 5.4. Камера: FHD HDR IR Camera. Гарантия: 36 мес.]]></description>
 <param name="Тип">Ноутбук</param>
-<param name="Модель">Latitude 7650 (210-BLQN_3)</param>
+<param name="Модель">Latitude 7650</param>
 <param name="Объем жесткого диска">1000</param>
 <param name="Тип жесткого диска">M.2 PCIe SSD</param>
 <param name="Производитель процессора">Intel</param>
@@ -9303,7 +9347,7 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Камера">FHD HDR IR Camera</param>
 <param name="Разрешение дисплея">1920x1200</param>
 <param name="Для бренда">Dell</param>
-<param name="Коды">Latitude 7650</param>
+<param name="Коды">210-BLQN_3</param>
 </offer>
 
 <offer id="CP13871826" available="true">
@@ -9876,9 +9920,9 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Ноутбук. Процессор: Intel 165U Core Ultra 7 1,7. Оперативная память: 32 Gb / DDR5 / 5600. Накопитель: 512 / PCIe NVMe SSD / 1 шт. Диагональ: 15,6. Разрешение: 1920x1080. ОС: Microsoft Windows 11 Pro 64. Видеокарта: Intel Intel® Graphics 256 Mb. Wi‑Fi: 802.11ax. Bluetooth: Bluetooth 5.3. Камера: FHD HDR IR Camera. Гарантия: 36 мес.]]></description>
+Ноутбук. Модельная серия: Latitude 5550. Процессор: Intel 165U Core Ultra 7 1,7. Оперативная память: 32 Gb / DDR5 / 5600. Накопитель: 512 / PCIe NVMe SSD / 1 шт. Диагональ: 15,6. Разрешение: 1920x1080. ОС: Microsoft Windows 11 Pro 64. Видеокарта: Intel Intel® Graphics 256 Mb. Wi‑Fi: 802.11ax. Bluetooth: Bluetooth 5.3. Камера: FHD HDR IR Camera. Гарантия: 36 мес.]]></description>
 <param name="Тип">Ноутбук</param>
-<param name="Модель">Latitude 5550 (210-BLMN_N013L555015EMEA_VP)</param>
+<param name="Модель">Latitude 5550</param>
 <param name="Объем жесткого диска">512</param>
 <param name="Скорость вращения шпинделя">Read Intensive</param>
 <param name="Тип жесткого диска">PCIe NVMe SSD</param>
@@ -9917,7 +9961,7 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Камера">FHD HDR IR Camera</param>
 <param name="Разрешение дисплея">1920x1080</param>
 <param name="Для бренда">Dell</param>
-<param name="Коды">Latitude 5550</param>
+<param name="Коды">210-BLMN_N013L555015EMEA_VP</param>
 </offer>
 
 <offer id="CP13870396" available="true">
@@ -9929,9 +9973,9 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Ноутбук. Процессор: Intel 155U Core Ultra 7 1,7. Оперативная память: 16 Gb / DDR5 / 5600. Накопитель: 512 / PCIe NVMe SSD / 1 шт. Диагональ: 15,6. Разрешение: 1920x1080. ОС: Microsoft Windows 11 Pro 64. Видеокарта: Intel Intel® Graphics 256 Mb. Wi‑Fi: 802.11ax. Bluetooth: Bluetooth 5.3. Камера: FHD HDR IR Camera. Гарантия: 36 мес.]]></description>
+Ноутбук. Модельная серия: Latitude 5550. Процессор: Intel 155U Core Ultra 7 1,7. Оперативная память: 16 Gb / DDR5 / 5600. Накопитель: 512 / PCIe NVMe SSD / 1 шт. Диагональ: 15,6. Разрешение: 1920x1080. ОС: Microsoft Windows 11 Pro 64. Видеокарта: Intel Intel® Graphics 256 Mb. Wi‑Fi: 802.11ax. Bluetooth: Bluetooth 5.3. Камера: FHD HDR IR Camera. Гарантия: 36 мес.]]></description>
 <param name="Тип">Ноутбук</param>
-<param name="Модель">Latitude 5550 (210-BLMN_N065L555015EMEA_VP)</param>
+<param name="Модель">Latitude 5550</param>
 <param name="Объем жесткого диска">512</param>
 <param name="Скорость вращения шпинделя">Read Intensive</param>
 <param name="Тип жесткого диска">PCIe NVMe SSD</param>
@@ -9970,7 +10014,7 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Камера">FHD HDR IR Camera</param>
 <param name="Разрешение дисплея">1920x1080</param>
 <param name="Для бренда">Dell</param>
-<param name="Коды">Latitude 5550</param>
+<param name="Коды">210-BLMN_N065L555015EMEA_VP</param>
 </offer>
 
 <offer id="CP13870235" available="true">
@@ -9982,9 +10026,9 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Ноутбук. Процессор: Intel 165U Core Ultra 7 1,7. Оперативная память: 16 Gb / DDR5 / 5600. Накопитель: 1024 / PCIe NVMe SSD / 1 шт. Диагональ: 15,6. Разрешение: 1920x1080. ОС: Microsoft Windows 11 Pro 64. Видеокарта: Intel Intel® Graphics 256 Mb. Wi‑Fi: 802.11ax. Bluetooth: Bluetooth 5.3. Камера: FHD HDR IR Camera. Гарантия: 36 мес.]]></description>
+Ноутбук. Модельная серия: Latitude 5550. Процессор: Intel 165U Core Ultra 7 1,7. Оперативная память: 16 Gb / DDR5 / 5600. Накопитель: 1024 / PCIe NVMe SSD / 1 шт. Диагональ: 15,6. Разрешение: 1920x1080. ОС: Microsoft Windows 11 Pro 64. Видеокарта: Intel Intel® Graphics 256 Mb. Wi‑Fi: 802.11ax. Bluetooth: Bluetooth 5.3. Камера: FHD HDR IR Camera. Гарантия: 36 мес.]]></description>
 <param name="Тип">Ноутбук</param>
-<param name="Модель">Latitude 5550 (210-BLMN_1_N015L555015EMEA_VP)</param>
+<param name="Модель">Latitude 5550</param>
 <param name="Объем жесткого диска">1024</param>
 <param name="Скорость вращения шпинделя">Read Intensive</param>
 <param name="Тип жесткого диска">PCIe NVMe SSD</param>
@@ -10022,7 +10066,7 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Камера">FHD HDR IR Camera</param>
 <param name="Разрешение дисплея">1920x1080</param>
 <param name="Для бренда">Dell</param>
-<param name="Коды">Latitude 5550</param>
+<param name="Коды">210-BLMN_1_N015L555015EMEA_VP</param>
 </offer>
 
 <offer id="CP13872771" available="true">
@@ -10221,7 +10265,7 @@ URL поставщика                             | https://www.comportal.kz/
 <description><![CDATA[
 Ноутбук. Процессор: Intel 275HX Core Ultra 9 2,7. Оперативная память: 32 Gb / DDR5 / 5600. Накопитель: 1000 / M.2 PCIe SSD. Диагональ: 18. Разрешение: 2560x1600. ОС: Без операционной системы. Видеокарта: nVidia RTX 5070 Ti 12 Gb. Wi‑Fi: 802.11be. Bluetooth: Bluetooth 5.4. Камера: FHD IR Camera. Гарантия: 12 мес.]]></description>
 <param name="Тип">Ноутбук</param>
-<param name="Модель">ROG Strix G18 / G815LR-S9085</param>
+<param name="Модель">S9085</param>
 <param name="Объем жесткого диска">1000</param>
 <param name="Тип жесткого диска">M.2 PCIe SSD</param>
 <param name="Производитель процессора">Intel</param>
@@ -10274,6 +10318,29 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Формат печати">A1+</param>
 <param name="Коды">6238C003</param>
 <param name="Для бренда">Canon</param>
+</offer>
+
+<offer id="CP13870348" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13870348</vendorCode>
+<name>Плоттер HP DesignJet T230 24 (5HB07D#B19)</name>
+<price>246246</price>
+<picture>http://www.comportal.kz/upload/iblock/43e/1uap8lkkgs2hcli5v0tkqssr3d5z1ejv.jpg</picture>
+<vendor>HP</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Широкоформатный принтер. Формат печати: A1. Разрешение: 2400x1200. Скорость печати ч/б: 35. Порты: Gigabit Ethernet (1000Base-T), высокоскоростной порт USB 2.0, Wi-Fi 802.11a b/g n, Wi-Fi Direct. Технология печати: Струйная. Гарантия: 12 мес.]]></description>
+<param name="Тип">Широкоформатный принтер</param>
+<param name="Модель">DesignJet T230 24</param>
+<param name="Порты">Gigabit Ethernet (1000Base-T), высокоскоростной порт USB 2.0, Wi-Fi 802.11a b/g n, Wi-Fi Direct</param>
+<param name="Гарантия">12 мес</param>
+<param name="Технология печати">Струйная</param>
+<param name="Разрешение">2400x1200</param>
+<param name="Формат печати">A1</param>
+<param name="Скорость печати ч/б">35</param>
+<param name="Функции">принтер</param>
+<param name="Коды">5HB07D#B19</param>
+<param name="Для бренда">HP</param>
 </offer>
 
 <offer id="CP13869884" available="true">
@@ -10402,9 +10469,9 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Ноутбук. Процессор: Intel 155H Core Ultra 7 1,4. Оперативная память: 16 Gb / DDR5 / 5600. Накопитель: 512 / M.2 PCIe SSD / 1 шт. Диагональ: 15,6. Разрешение: 1920x1080. ОС: Microsoft Windows 11 Pro 64. Видеокарта: nVidia RTX 500 Ada 4 Gb. Wi‑Fi: AX211. Bluetooth: Bluetooth. Камера: FHD HDR RGB Camera. Гарантия: 36 мес.]]></description>
+Ноутбук. Модельная серия: Precision 3590. Процессор: Intel 155H Core Ultra 7 1,4. Оперативная память: 16 Gb / DDR5 / 5600. Накопитель: 512 / M.2 PCIe SSD / 1 шт. Диагональ: 15,6. Разрешение: 1920x1080. ОС: Microsoft Windows 11 Pro 64. Видеокарта: nVidia RTX 500 Ada 4 Gb. Wi‑Fi: AX211. Bluetooth: Bluetooth. Камера: FHD HDR RGB Camera. Гарантия: 36 мес.]]></description>
 <param name="Тип">Ноутбук</param>
-<param name="Модель">Мобильная рабочая станция Dell Precision 3590 (210-BLMX_N001P3590EMEA_VP)</param>
+<param name="Модель">Precision 3590</param>
 <param name="Объем жесткого диска">512</param>
 <param name="Тип жесткого диска">M.2 PCIe SSD</param>
 <param name="Производитель процессора">Intel</param>
@@ -10437,7 +10504,7 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Камера">FHD HDR RGB Camera</param>
 <param name="Разрешение дисплея">1920x1080</param>
 <param name="Для бренда">Dell</param>
-<param name="Коды">Precision 3590</param>
+<param name="Коды">210-BLMX_N001P3590EMEA_VP</param>
 </offer>
 
 <offer id="CP13870496" available="true">
@@ -10449,9 +10516,9 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Ноутбук. Процессор: Intel 165H Core Ultra 7 1,4. Оперативная память: 16 Gb / DDR5 / 5600. Накопитель: 512 / M.2 PCIe SSD / 1 шт. Диагональ: 15,6. Разрешение: 1920x1080. ОС: Microsoft Windows 11 Pro 64. Видеокарта: nVidia RTX 500 Ada 4 Gb. Wi‑Fi: AX211. Bluetooth: Bluetooth. Камера: FHD HDR RGB Camera. Гарантия: 36 мес.]]></description>
+Ноутбук. Модельная серия: Precision 3590. Процессор: Intel 165H Core Ultra 7 1,4. Оперативная память: 16 Gb / DDR5 / 5600. Накопитель: 512 / M.2 PCIe SSD / 1 шт. Диагональ: 15,6. Разрешение: 1920x1080. ОС: Microsoft Windows 11 Pro 64. Видеокарта: nVidia RTX 500 Ada 4 Gb. Wi‑Fi: AX211. Bluetooth: Bluetooth. Камера: FHD HDR RGB Camera. Гарантия: 36 мес.]]></description>
 <param name="Тип">Ноутбук</param>
-<param name="Модель">Мобильная рабочая станция Dell Precision 3590 (210-BLMX_N004P3590EMEA_VP)</param>
+<param name="Модель">Precision 3590</param>
 <param name="Объем жесткого диска">512</param>
 <param name="Тип жесткого диска">M.2 PCIe SSD</param>
 <param name="Производитель процессора">Intel</param>
@@ -10484,7 +10551,7 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Камера">FHD HDR RGB Camera</param>
 <param name="Разрешение дисплея">1920x1080</param>
 <param name="Для бренда">Dell</param>
-<param name="Коды">Precision 3590</param>
+<param name="Коды">210-BLMX_N004P3590EMEA_VP</param>
 </offer>
 
 <offer id="CP13870690" available="true">
@@ -10496,9 +10563,9 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Ноутбук. Процессор: Intel 135H Core Ultra 5 1,7. Оперативная память: 16 Gb / DDR5 / 5600. Накопитель: 512 / M.2 PCIe SSD / 1 шт. Диагональ: 15,6. Разрешение: 1920x1080. ОС: Microsoft Windows 11 Pro 64. Видеокарта: Intel Integrated. Wi‑Fi: AX211. Bluetooth: Bluetooth. Камера: FHD HDR RGB Camera. Гарантия: 36 мес.]]></description>
+Ноутбук. Модельная серия: Precision 3590. Процессор: Intel 135H Core Ultra 5 1,7. Оперативная память: 16 Gb / DDR5 / 5600. Накопитель: 512 / M.2 PCIe SSD / 1 шт. Диагональ: 15,6. Разрешение: 1920x1080. ОС: Microsoft Windows 11 Pro 64. Видеокарта: Intel Integrated. Wi‑Fi: AX211. Bluetooth: Bluetooth. Камера: FHD HDR RGB Camera. Гарантия: 36 мес.]]></description>
 <param name="Тип">Ноутбук</param>
-<param name="Модель">Мобильная рабочая станция Dell Precision 3590 (210-BLMX_N006P3590EMEA_VP)</param>
+<param name="Модель">Precision 3590</param>
 <param name="Объем жесткого диска">512</param>
 <param name="Тип жесткого диска">M.2 PCIe SSD</param>
 <param name="Производитель процессора">Intel</param>
@@ -10531,7 +10598,7 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Камера">FHD HDR RGB Camera</param>
 <param name="Разрешение дисплея">1920x1080</param>
 <param name="Для бренда">Dell</param>
-<param name="Коды">Precision 3590</param>
+<param name="Коды">210-BLMX_N006P3590EMEA_VP</param>
 </offer>
 
 <offer id="CP13870692" available="true">
@@ -10543,9 +10610,9 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Ноутбук. Процессор: Intel 155H Core Ultra 7 1,4. Оперативная память: 16 Gb / DDR5 / 5600. Накопитель: 512 / M.2 PCIe SSD / 1 шт. Диагональ: 15,6. Разрешение: 1920x1080. ОС: Microsoft Windows 11 Pro 64. Видеокарта: nVidia RTX 500 Ada 4 Gb. Wi‑Fi: AX211. Bluetooth: Bluetooth. Камера: FHD HDR RGB Camera. Гарантия: 36 мес.]]></description>
+Ноутбук. Модельная серия: Precision 3591. Процессор: Intel 155H Core Ultra 7 1,4. Оперативная память: 16 Gb / DDR5 / 5600. Накопитель: 512 / M.2 PCIe SSD / 1 шт. Диагональ: 15,6. Разрешение: 1920x1080. ОС: Microsoft Windows 11 Pro 64. Видеокарта: nVidia RTX 500 Ada 4 Gb. Wi‑Fi: AX211. Bluetooth: Bluetooth. Камера: FHD HDR RGB Camera. Гарантия: 36 мес.]]></description>
 <param name="Тип">Ноутбук</param>
-<param name="Модель">Мобильная рабочая станция Dell Precision 3591 (210-BLND_N101P3591EMEA_VP)</param>
+<param name="Модель">Precision 3591</param>
 <param name="Объем жесткого диска">512</param>
 <param name="Тип жесткого диска">M.2 PCIe SSD</param>
 <param name="Производитель процессора">Intel</param>
@@ -10578,7 +10645,7 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Камера">FHD HDR RGB Camera</param>
 <param name="Разрешение дисплея">1920x1080</param>
 <param name="Для бренда">Dell</param>
-<param name="Коды">Precision 3591</param>
+<param name="Коды">210-BLND_N101P3591EMEA_VP</param>
 </offer>
 
 <offer id="CP13870693" available="true">
@@ -10590,9 +10657,9 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Ноутбук. Процессор: Intel 155H Core Ultra 7 1,4. Оперативная память: 16 Gb / DDR5 / 5600. Накопитель: 512 / M.2 PCIe SSD / 1 шт. Диагональ: 15,6. Разрешение: 1920x1080. ОС: Microsoft Windows 11 Pro 64. Видеокарта: nVidia RTX 1000 Ada 6 Gb. Wi‑Fi: AX211. Bluetooth: Bluetooth. Камера: FHD HDR RGB Camera. Гарантия: 36 мес.]]></description>
+Ноутбук. Модельная серия: Precision 3591. Процессор: Intel 155H Core Ultra 7 1,4. Оперативная память: 16 Gb / DDR5 / 5600. Накопитель: 512 / M.2 PCIe SSD / 1 шт. Диагональ: 15,6. Разрешение: 1920x1080. ОС: Microsoft Windows 11 Pro 64. Видеокарта: nVidia RTX 1000 Ada 6 Gb. Wi‑Fi: AX211. Bluetooth: Bluetooth. Камера: FHD HDR RGB Camera. Гарантия: 36 мес.]]></description>
 <param name="Тип">Ноутбук</param>
-<param name="Модель">Мобильная рабочая станция Dell Precision 3591 (210-BLND_NN102P3591EMEA_VP)</param>
+<param name="Модель">Precision 3591</param>
 <param name="Объем жесткого диска">512</param>
 <param name="Тип жесткого диска">M.2 PCIe SSD</param>
 <param name="Производитель процессора">Intel</param>
@@ -10625,7 +10692,7 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Камера">FHD HDR RGB Camera</param>
 <param name="Разрешение дисплея">1920x1080</param>
 <param name="Для бренда">Dell</param>
-<param name="Коды">Precision 3591</param>
+<param name="Коды">210-BLND_NN102P3591EMEA_VP</param>
 </offer>
 
 <offer id="CP13870309" available="true">
@@ -10663,7 +10730,7 @@ URL поставщика                             | https://www.comportal.kz/
 <description><![CDATA[
 Монитор. Диагональ: 14. Максимальное разрешение: 1920x1200. Тип матрицы: IPS. Частота обновления: 60. Время отклика: 7. Порты: 2 USB-C ports (DisplayPort 1.2 Alt Mode, Power pass-through of up to 65W) (HDCP 1.4) (Supports up to 1920 x 1200 60 Hz). Гарантия: 36 мес.]]></description>
 <param name="Тип">Монитор</param>
-<param name="Модель">Pro 14 Plus Portable Monitor - P1425</param>
+<param name="Модель">P1425</param>
 <param name="Порты">2 USB-C ports (DisplayPort 1.2 Alt Mode, Power pass-through of up to 65W) (HDCP 1.4) (Supports up to 1920 x 1200 60 Hz)</param>
 <param name="Тип матрицы">IPS</param>
 <param name="Гарантия">36 мес</param>
@@ -10689,7 +10756,7 @@ URL поставщика                             | https://www.comportal.kz/
 <description><![CDATA[
 Монитор. Диагональ: 55. Максимальное разрешение: 3840x2160. Тип матрицы: IPS. Частота обновления: 60. Время отклика: 8. Порты: 1 x DP 1.4 (supports 2 x Display 4k@60Hz with DSC) 1 x DP Out (support MST)1 x USB Type-C upstream (Alternate mode with DisplayPort 1.4, Power Delivery PD up to 90W) 1 x USB Type-C 3.2 Gen 1 (5 Gbps) downstream (15 W) 2 x HDMI 2.0 2 x USB-A 3.2 Gen 1 (5 Gbps) downstream 1 x USB-B 3.2 Gen 1 (5 Gbps) upstream1 x Analog 2.0 audio line out (3.5 mm jack) 1 x RJ45 1 x RS232. Гарантия: 36 мес.]]></description>
 <param name="Тип">Монитор</param>
-<param name="Модель">55 4K Conference Room Monitor - P5525QC</param>
+<param name="Модель">P5525QC</param>
 <param name="Порты">1 x DP 1.4 (supports 2 x Display 4k@60Hz with DSC) 1 x DP Out (support MST)1 x USB Type-C upstream (Alternate mode with DisplayPort 1.4, Power Delivery PD up to 90W) 1 x USB Type-C 3.2 Gen 1 (5 Gbps) downstream (15 W) 2 x HDMI 2.0 2 x USB-A 3.2 Gen 1 (5 Gbps) downstream 1 x USB-B 3.2 Gen 1 (5 Gbps) upstream1 x Analog 2.0 audio line out (3.5 mm jack) 1 x RJ45 1 x RS232</param>
 <param name="Тип матрицы">IPS</param>
 <param name="Гарантия">36 мес</param>
@@ -10838,7 +10905,7 @@ URL поставщика                             | https://www.comportal.kz/
 <description><![CDATA[
 Монитор. Диагональ: 27. Максимальное разрешение: 3840x2160. Тип матрицы: IPS. Частота обновления: 180. Время отклика: 1. Порты: 2 HDMI 2.1 ports/1 DisplayPort 1.4/2 USB-B 3.2 Gen1 /2USB-A 3.2 Gen1/1 USB-C 3.2 Gen1. Гарантия: 36 мес.]]></description>
 <param name="Тип">Монитор</param>
-<param name="Модель">Alienware 27 4K Dual-Resolution Gaming Monitor - AW2725QF</param>
+<param name="Модель">AW2725QF</param>
 <param name="Порты">2 HDMI 2.1 ports/1 DisplayPort 1.4/2 USB-B 3.2 Gen1 /2USB-A 3.2 Gen1/1 USB-C 3.2 Gen1</param>
 <param name="Тип матрицы">IPS</param>
 <param name="Цвет">Чёрный</param>
@@ -11058,11 +11125,11 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Монитор. Диагональ: 23.8. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro 24 Plus Monitor - P2425D. Коды: 210-BQMX.]]></description>
+Монитор. Диагональ: 23.8. Гарантия: 36 мес. Для бренда: Dell. Модель: P2425D. Коды: 210-BQMX.]]></description>
 <param name="Тип">Монитор</param>
 <param name="Гарантия">36 мес</param>
 <param name="Коды">210-BQMX</param>
-<param name="Модель">Pro 24 Plus Monitor - P2425D</param>
+<param name="Модель">P2425D</param>
 <param name="Для бренда">Dell</param>
 </offer>
 
@@ -11077,7 +11144,7 @@ URL поставщика                             | https://www.comportal.kz/
 <description><![CDATA[
 Монитор. Диагональ: 23.8. Максимальное разрешение: 2560x1440. Тип матрицы: IPS. Частота обновления: 100. Время отклика: 5. Порты: 1 HDMI port (HDCP 1.4) (Supports up to QHD 2560 x 1440 100Hz TMDS as per specified in HDMI 2.1)/1 Display Port 1.4 (HDCP1.4)(Support up to 2560 x 1440 100Hz)/1 DisplayPort (out) port with MST (HDCP 1.4)/1 USB-C 5Gbps upstream port (DisplayPort 1.4 Alternate mode, Power Delivery up to 90W)/1 USB-C 5Gbps downstream port/3 USB 5Gbps Type-A downstream ports/1 RJ45 Ethernet port, 1GbE. Гарантия: 36 мес.]]></description>
 <param name="Тип">Монитор</param>
-<param name="Модель">Pro 24 Plus QHD USB-C Hub Monitor - P2425DE</param>
+<param name="Модель">P2425DE</param>
 <param name="Порты">1 HDMI port (HDCP 1.4) (Supports up to QHD 2560 x 1440 100Hz TMDS as per specified in HDMI 2.1)/1 Display Port 1.4 (HDCP1.4)(Support up to 2560 x 1440 100Hz)/1 DisplayPort (out) port with MST (HDCP 1.4)/1 USB-C 5Gbps upstream port (DisplayPort 1.4 Alternate mode, Power Delivery up to 90W)/1 USB-C 5Gbps downstream port/3 USB 5Gbps Type-A downstream ports/1 RJ45 Ethernet port, 1GbE</param>
 <param name="Тип матрицы">IPS</param>
 <param name="Гарантия">36 мес</param>
@@ -11102,7 +11169,7 @@ URL поставщика                             | https://www.comportal.kz/
 <description><![CDATA[
 Монитор. Диагональ: 27. Максимальное разрешение: 2560x1440. Тип матрицы: IPS. Частота обновления: 100. Время отклика: 5. Порты: 1 HDMI port (HDCP 1.4) (Supports up to QHD 2560 x 1440 100Hz TMDS as per specified in HDMI 2.1)/1 Display Port 1.4 (HDCP1.4)(Support up to 2560 x 1440 100Hz)/1 DisplayPort (out) port with MST (HDCP 1.4)/1 USB-C 5Gbps upstream port (DisplayPort 1.4 Alternate mode, Power Delivery up to 90W)/1 USB-C 5Gbps downstream port/3 USB 5Gbps Type-A downstream ports/1 RJ45. Гарантия: 36 мес.]]></description>
 <param name="Тип">Монитор</param>
-<param name="Модель">Pro 27 Plus QHD USB-C Hub Monitor - P2725DE</param>
+<param name="Модель">P2725DE</param>
 <param name="Порты">1 HDMI port (HDCP 1.4) (Supports up to QHD 2560 x 1440 100Hz TMDS as per specified in HDMI 2.1)/1 Display Port 1.4 (HDCP1.4)(Support up to 2560 x 1440 100Hz)/1 DisplayPort (out) port with MST (HDCP 1.4)/1 USB-C 5Gbps upstream port (DisplayPort 1.4 Alternate mode, Power Delivery up to 90W)/1 USB-C 5Gbps downstream port/3 USB 5Gbps Type-A downstream ports/1 RJ45</param>
 <param name="Тип матрицы">IPS</param>
 <param name="Гарантия">36 мес</param>
@@ -11127,7 +11194,7 @@ URL поставщика                             | https://www.comportal.kz/
 <description><![CDATA[
 Монитор. Диагональ: 31.5. Максимальное разрешение: 3840x2160. Тип матрицы: IPS. Частота обновления: 100. Время отклика: 5. Порты: 1 HDMI port (HDCP2.3) (supports up to UHD 3840 x 2160 100 Hz FRL as per specified in HDMI 2.1)/1 Display Port 1.4 (HDCP2.3)(Support up to 3840 x 2160 100Hz)/1 USB-C 5Gbps upstream port (DisplayPort 1.4 Alternate mode, Power Delivery up to 90W)/1 USB-C 5Gbps downstream port/3 USB 5Gbps Type-A downstream ports/1 RJ45 Ethernet port, 1GbE. Гарантия: 36 мес.]]></description>
 <param name="Тип">Монитор</param>
-<param name="Модель">Pro 32 Plus 4K USB-C Hub Monitor - P3225QE</param>
+<param name="Модель">P3225QE</param>
 <param name="Порты">1 HDMI port (HDCP2.3) (supports up to UHD 3840 x 2160 100 Hz FRL as per specified in HDMI 2.1)/1 Display Port 1.4 (HDCP2.3)(Support up to 3840 x 2160 100Hz)/1 USB-C 5Gbps upstream port (DisplayPort 1.4 Alternate mode, Power Delivery up to 90W)/1 USB-C 5Gbps downstream port/3 USB 5Gbps Type-A downstream ports/1 RJ45 Ethernet port, 1GbE</param>
 <param name="Тип матрицы">IPS</param>
 <param name="Гарантия">36 мес</param>
@@ -11152,7 +11219,7 @@ URL поставщика                             | https://www.comportal.kz/
 <description><![CDATA[
 Монитор. Диагональ: 34.18. Максимальное разрешение: 3440x1440. Тип матрицы: IPS. Частота обновления: 100. Время отклика: 5. Порты: 1 HDMI port (HDCP 1.4) (Supports up to WQHD 3440 x 1440 100 Hz, TMDS, as per specified in HDMI 2.1)/1 DisplayPort 1.4 port (HDCP 1.4) (Supports up to WQHD 3440 x 1440 100 Hz)/3 USB Type-A 5Gbps downstream ports/1 USB Type-B 5Gbps upstream port/1 USB-C 5Gbps downstream port (Power Delivery up to 15 W)/1 USB-C 5Gbps upstream port (DisplayPort 1.4 Alternate Mode, Power Delivery up to 90 W)/1 RJ45. Гарантия: 36 мес.]]></description>
 <param name="Тип">Монитор</param>
-<param name="Модель">Pro 34 Plus USB-C Hub Monitor - P3425WE</param>
+<param name="Модель">P3425WE</param>
 <param name="Порты">1 HDMI port (HDCP 1.4) (Supports up to WQHD 3440 x 1440 100 Hz, TMDS, as per specified in HDMI 2.1)/1 DisplayPort 1.4 port (HDCP 1.4) (Supports up to WQHD 3440 x 1440 100 Hz)/3 USB Type-A 5Gbps downstream ports/1 USB Type-B 5Gbps upstream port/1 USB-C 5Gbps downstream port (Power Delivery up to 15 W)/1 USB-C 5Gbps upstream port (DisplayPort 1.4 Alternate Mode, Power Delivery up to 90 W)/1 RJ45</param>
 <param name="Тип матрицы">IPS</param>
 <param name="Гарантия">36 мес</param>
@@ -11175,9 +11242,9 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Моноблок. Процессор: Intel 14700 Core i7 2,1. Оперативная память: 16 Gb / DDR5 / 5600. Накопитель: 512 / M.2 PCIe SSD / 1 шт. Разрешение: 1920x1080. ОС: Microsoft Windows 11 Pro. Видеокарта: Intel Integrated. Wi‑Fi: AX211. Bluetooth: Bluetooth 5.3. Гарантия: 36 мес.]]></description>
+Моноблок. Модельная серия: OptiPlex All-in-One. Процессор: Intel 14700 Core i7 2,1. Оперативная память: 16 Gb / DDR5 / 5600. Накопитель: 512 / M.2 PCIe SSD / 1 шт. Разрешение: 1920x1080. ОС: Microsoft Windows 11 Pro. Видеокарта: Intel Integrated. Wi‑Fi: AX211. Bluetooth: Bluetooth 5.3. Гарантия: 36 мес.]]></description>
 <param name="Тип">Моноблок</param>
-<param name="Модель">OptiPlex All-in-One 7420 (210-BLDV_N004O7420AIO65WEMEA_VP_1)</param>
+<param name="Модель">OptiPlex All-in-One</param>
 <param name="Объем жесткого диска">512</param>
 <param name="Тип жесткого диска">M.2 PCIe SSD</param>
 <param name="Производитель процессора">Intel</param>
@@ -11204,7 +11271,7 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Тип дисплея">IPS</param>
 <param name="Монитор">23,8</param>
 <param name="Для бренда">Dell</param>
-<param name="Коды">OptiPlex All-in-One 7420</param>
+<param name="Коды">210-BLDV_N004O7420AIO65WEMEA_VP_1</param>
 </offer>
 
 <offer id="CP13870584" available="true">
@@ -11216,9 +11283,9 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Моноблок. Процессор: Intel 14500 Core i5 2,6. Оперативная память: 16 Gb / DDR5 / 5600. Накопитель: 512 / M.2 PCIe SSD / 1 шт. Разрешение: 1920x1080. ОС: Microsoft Windows 11 Pro. Видеокарта: Intel Integrated. Wi‑Fi: AX211. Bluetooth: Bluetooth 5.3. Гарантия: 36 мес.]]></description>
+Моноблок. Модельная серия: OptiPlex All-in-One. Процессор: Intel 14500 Core i5 2,6. Оперативная память: 16 Gb / DDR5 / 5600. Накопитель: 512 / M.2 PCIe SSD / 1 шт. Разрешение: 1920x1080. ОС: Microsoft Windows 11 Pro. Видеокарта: Intel Integrated. Wi‑Fi: AX211. Bluetooth: Bluetooth 5.3. Гарантия: 36 мес.]]></description>
 <param name="Тип">Моноблок</param>
-<param name="Модель">OptiPlex All-in-One Plus 7420 (210-BKVX_N002O7420AIOPEMEA_VP_1)</param>
+<param name="Модель">OptiPlex All-in-One</param>
 <param name="Объем жесткого диска">512</param>
 <param name="Тип жесткого диска">M.2 PCIe SSD</param>
 <param name="Производитель процессора">Intel</param>
@@ -11246,7 +11313,7 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Тип дисплея">IPS</param>
 <param name="Монитор">23,8</param>
 <param name="Для бренда">Dell</param>
-<param name="Коды">OptiPlex All-in-One Plus 7420</param>
+<param name="Коды">210-BKVX_N002O7420AIOPEMEA_VP_1</param>
 </offer>
 
 <offer id="CP13871813" available="true">
@@ -11258,9 +11325,9 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Настольный ПК. Процессор: Intel 14700 Core i7 2,1. Оперативная память: 16 Gb / DDR5. Накопитель: 512 / M.2 PCIe SSD / 1 шт. ОС: Microsoft Windows 11 Pro. Видеокарта: Intel Integrated. Гарантия: 36 мес.]]></description>
+Настольный ПК. Модельная серия: Optiplex 7020 Plus. Процессор: Intel 14700 Core i7 2,1. Оперативная память: 16 Gb / DDR5. Накопитель: 512 / M.2 PCIe SSD / 1 шт. ОС: Microsoft Windows 11 Pro. Видеокарта: Intel Integrated. Гарантия: 36 мес.]]></description>
 <param name="Тип">Настольный ПК</param>
-<param name="Модель">Компьютер Dell Optiplex 7020 Plus (210-BLDM_N013O7020MTPEMEA_VP_1)</param>
+<param name="Модель">Optiplex 7020 Plus</param>
 <param name="Объем жесткого диска">512</param>
 <param name="Тип жесткого диска">M.2 PCIe SSD</param>
 <param name="Производитель процессора">Intel</param>
@@ -11283,7 +11350,7 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Клавиатура">Dell KB216 Multimedia USB Keyboard</param>
 <param name="Манипулятор">Dell MS116 Optical Mouse</param>
 <param name="Для бренда">Dell</param>
-<param name="Коды">Optiplex 7020 Plus</param>
+<param name="Коды">210-BLDM_N013O7020MTPEMEA_VP_1</param>
 </offer>
 
 <offer id="CP13870816" available="true">
@@ -11434,7 +11501,7 @@ URL поставщика                             | https://www.comportal.kz/
 <description><![CDATA[
 Монитор. Диагональ: 27. Максимальное разрешение: 3840x2160. Тип матрицы: IPS. Частота обновления: 120. Время отклика: 8. Порты: 1 USB-C 5Gbps upstream port (DisplayPort 1.4 Alt Mode, Power Delivery up to 65 W)/2 HDMI ports (HDCP 1.4 & 2.3) (Supports up to UHD 3840 x 2160, 120 Hz, FRL, HDR, VRR as per specified in HDMI 2.1)/USB port/1 USB 5Gbps Type-A downstream port with Battery Charging 1.2/1 USB-C 5Gbps downstream port (Power Delivery up to 15 W)/1 USB 5Gbps Type-A downstream port. Гарантия: 36 мес.]]></description>
 <param name="Тип">Монитор</param>
-<param name="Модель">27 Plus 4K USB-C Monitor-S2725QC</param>
+<param name="Модель">S2725QC</param>
 <param name="Порты">1 USB-C 5Gbps upstream port (DisplayPort 1.4 Alt Mode, Power Delivery up to 65 W)/2 HDMI ports (HDCP 1.4 &amp; 2.3) (Supports up to UHD 3840 x 2160, 120 Hz, FRL, HDR, VRR as per specified in HDMI 2.1)/USB port/1 USB 5Gbps Type-A downstream port with Battery Charging 1.2/1 USB-C 5Gbps downstream port (Power Delivery up to 15 W)/1 USB 5Gbps Type-A downstream port</param>
 <param name="Тип матрицы">IPS</param>
 <param name="Гарантия">36 мес</param>
@@ -11458,11 +11525,11 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Монитор. Диагональ: 27. Гарантия: 36 мес. Для бренда: Dell. Модель: 27 Plus 4K Monitor-S2725QS. Коды: 210-BQWM.]]></description>
+Монитор. Диагональ: 27. Гарантия: 36 мес. Для бренда: Dell. Модель: S2725QS. Коды: 210-BQWM.]]></description>
 <param name="Тип">Монитор</param>
 <param name="Гарантия">36 мес</param>
 <param name="Коды">210-BQWM</param>
-<param name="Модель">27 Plus 4K Monitor-S2725QS</param>
+<param name="Модель">S2725QS</param>
 <param name="Для бренда">Dell</param>
 </offer>
 
@@ -11477,7 +11544,7 @@ URL поставщика                             | https://www.comportal.kz/
 <description><![CDATA[
 Монитор. Диагональ: 27. Максимальное разрешение: 3840x2160. Тип матрицы: IPS. Частота обновления: 120. Время отклика: 8. Порты: 2 HDMI ports (HDCP 1.4 & 2.3) (Supports up to UHD 3840 x 2160, 120 Hz, FRL, HDR, VRR as per specified in HDMI 2.1)/1 DisplayPort 1.4 (HDCP 1.4 & 2.3) port (Supports up to UHD 3840 x 2160, 120 Hz). Гарантия: 36 мес.]]></description>
 <param name="Тип">Монитор</param>
-<param name="Модель">27 Plus 4K Monitor-S2725QS</param>
+<param name="Модель">S2725QS</param>
 <param name="Порты">2 HDMI ports (HDCP 1.4 &amp; 2.3) (Supports up to UHD 3840 x 2160, 120 Hz, FRL, HDR, VRR as per specified in HDMI 2.1)/1 DisplayPort 1.4 (HDCP 1.4 &amp; 2.3) port (Supports up to UHD 3840 x 2160, 120 Hz)</param>
 <param name="Тип матрицы">IPS</param>
 <param name="Гарантия">36 мес</param>
@@ -11503,7 +11570,7 @@ URL поставщика                             | https://www.comportal.kz/
 <description><![CDATA[
 Монитор. Диагональ: 31.5. Максимальное разрешение: 3840x2160. Тип матрицы: IPS. Частота обновления: 120. Время отклика: 8. Порты: 2 HDMI ports (HDCP 1.4 and 2.2) (Supports up to UHD 3840 x 2160, 120 Hz, FRL, HDR, VRR as per specified in HDMI 2.1)/1 DisplayPort 1.4 (HDCP 1.4 and 2.2) (Supports up to UHD 3840 x 2160, 120 Hz, HDR, VRR). Гарантия: 36 мес.]]></description>
 <param name="Тип">Монитор</param>
-<param name="Модель">32 Plus 4K Monitor-S3225QS</param>
+<param name="Модель">S3225QS</param>
 <param name="Порты">2 HDMI ports (HDCP 1.4 and 2.2) (Supports up to UHD 3840 x 2160, 120 Hz, FRL, HDR, VRR as per specified in HDMI 2.1)/1 DisplayPort 1.4 (HDCP 1.4 and 2.2) (Supports up to UHD 3840 x 2160, 120 Hz, HDR, VRR)</param>
 <param name="Тип матрицы">IPS</param>
 <param name="Гарантия">36 мес</param>
@@ -11527,11 +11594,11 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Монитор. Диагональ: 27. Гарантия: 36 мес. Для бренда: Dell. Модель: 27 Monitor - SE2725HM. Коды: 210-BQZW.]]></description>
+Монитор. Диагональ: 27. Гарантия: 36 мес. Для бренда: Dell. Модель: SE2725HM. Коды: 210-BQZW.]]></description>
 <param name="Тип">Монитор</param>
 <param name="Гарантия">36 мес</param>
 <param name="Коды">210-BQZW</param>
-<param name="Модель">27 Monitor - SE2725HM</param>
+<param name="Модель">SE2725HM</param>
 <param name="Для бренда">Dell</param>
 </offer>
 
@@ -11561,9 +11628,9 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Ноутбук. Процессор: Intel 236V Core Ultra 5 2,1. Оперативная память: 16 Gb / LPDDR5X / 8533. Накопитель: 512 / M.2 PCIe SSD / 1 шт. Диагональ: 14. Разрешение: 1920x1200. ОС: Microsoft Windows 11 Pro 64. Видеокарта: Intel Arc. Wi‑Fi: AX211. Bluetooth: Bluetooth. Камера: FHD IR Camera. Гарантия: 12 мес.]]></description>
+Ноутбук. Модельная серия: Pro 14 Plus PB14250. Процессор: Intel 236V Core Ultra 5 2,1. Оперативная память: 16 Gb / LPDDR5X / 8533. Накопитель: 512 / M.2 PCIe SSD / 1 шт. Диагональ: 14. Разрешение: 1920x1200. ОС: Microsoft Windows 11 Pro 64. Видеокарта: Intel Arc. Wi‑Fi: AX211. Bluetooth: Bluetooth. Камера: FHD IR Camera. Гарантия: 12 мес.]]></description>
 <param name="Тип">Ноутбук</param>
-<param name="Модель">Pro 14 Plus PB14250 (210-BPDK_BTO211_PB14250_EMEA)</param>
+<param name="Модель">Pro 14 Plus PB14250</param>
 <param name="Объем жесткого диска">512</param>
 <param name="Тип жесткого диска">M.2 PCIe SSD</param>
 <param name="Производитель процессора">Intel</param>
@@ -11595,7 +11662,7 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Камера">FHD IR Camera</param>
 <param name="Разрешение дисплея">1920x1200</param>
 <param name="Для бренда">Dell</param>
-<param name="Коды">Pro 14 Plus PB14250</param>
+<param name="Коды">210-BPDK_BTO211_PB14250_EMEA</param>
 </offer>
 
 <offer id="CP13871802" available="true">
@@ -11607,9 +11674,9 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Ноутбук. Процессор: Intel 120U Core 5 1,4. Оперативная память: 16 Gb / DDR5 / 5600. Накопитель: 512 / M.2 PCIe SSD / 1 шт. Диагональ: 16. Разрешение: 1920x1200. ОС: Microsoft Windows 11 Pro 64. Видеокарта: Intel Integrated. Wi‑Fi: AX211. Bluetooth: Bluetooth. Камера: FHD IR Camera. Гарантия: 12 мес.]]></description>
+Ноутбук. Модельная серия: Pro 16 PC16250. Процессор: Intel 120U Core 5 1,4. Оперативная память: 16 Gb / DDR5 / 5600. Накопитель: 512 / M.2 PCIe SSD / 1 шт. Диагональ: 16. Разрешение: 1920x1200. ОС: Microsoft Windows 11 Pro 64. Видеокарта: Intel Integrated. Wi‑Fi: AX211. Bluetooth: Bluetooth. Камера: FHD IR Camera. Гарантия: 12 мес.]]></description>
 <param name="Тип">Ноутбук</param>
-<param name="Модель">Pro 16 PC16250 (210-BPBF_BTO010_PC16250_EMEA)</param>
+<param name="Модель">Pro 16 PC16250</param>
 <param name="Объем жесткого диска">512</param>
 <param name="Тип жесткого диска">M.2 PCIe SSD</param>
 <param name="Производитель процессора">Intel</param>
@@ -11642,7 +11709,7 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Камера">FHD IR Camera</param>
 <param name="Разрешение дисплея">1920x1200</param>
 <param name="Для бренда">Dell</param>
-<param name="Коды">Pro 16 PC16250</param>
+<param name="Коды">210-BPBF_BTO010_PC16250_EMEA</param>
 </offer>
 
 <offer id="CP13871803" available="true">
@@ -11654,9 +11721,9 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Ноутбук. Процессор: Intel 220U Core 5 1,5. Оперативная память: 16 Gb / DDR5 / 5600. Накопитель: 512 / M.2 PCIe SSD / 1 шт. Диагональ: 16. Разрешение: 1920x1200. ОС: Microsoft Windows 11 Pro 64. Видеокарта: Intel Integrated. Wi‑Fi: AX211. Bluetooth: Bluetooth. Камера: FHD IR Camera. Гарантия: 12 мес.]]></description>
+Ноутбук. Модельная серия: Pro 16 PC16250. Процессор: Intel 220U Core 5 1,5. Оперативная память: 16 Gb / DDR5 / 5600. Накопитель: 512 / M.2 PCIe SSD / 1 шт. Диагональ: 16. Разрешение: 1920x1200. ОС: Microsoft Windows 11 Pro 64. Видеокарта: Intel Integrated. Wi‑Fi: AX211. Bluetooth: Bluetooth. Камера: FHD IR Camera. Гарантия: 12 мес.]]></description>
 <param name="Тип">Ноутбук</param>
-<param name="Модель">Pro 16 PC16250 (210-BPBF_BTO015_PC16250_EMEA)</param>
+<param name="Модель">Pro 16 PC16250</param>
 <param name="Объем жесткого диска">512</param>
 <param name="Тип жесткого диска">M.2 PCIe SSD</param>
 <param name="Производитель процессора">Intel</param>
@@ -11689,7 +11756,7 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Камера">FHD IR Camera</param>
 <param name="Разрешение дисплея">1920x1200</param>
 <param name="Для бренда">Dell</param>
-<param name="Коды">Pro 16 PC16250</param>
+<param name="Коды">210-BPBF_BTO015_PC16250_EMEA</param>
 </offer>
 
 <offer id="CP13871806" available="true">
@@ -11701,9 +11768,9 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Ноутбук. Процессор: Intel 255U Core Ultra 7 2. Оперативная память: 16 Gb / DDR5 / 5600. Накопитель: 512 / M.2 PCIe SSD / 1 шт. Диагональ: 16. Разрешение: 1920x1200. ОС: Microsoft Windows 11 Pro 64. Видеокарта: Intel Integrated. Wi‑Fi: AX211. Bluetooth: Bluetooth. Камера: FHD IR Camera. Гарантия: 12 мес.]]></description>
+Ноутбук. Модельная серия: Pro 16 PC16250. Процессор: Intel 255U Core Ultra 7 2. Оперативная память: 16 Gb / DDR5 / 5600. Накопитель: 512 / M.2 PCIe SSD / 1 шт. Диагональ: 16. Разрешение: 1920x1200. ОС: Microsoft Windows 11 Pro 64. Видеокарта: Intel Integrated. Wi‑Fi: AX211. Bluetooth: Bluetooth. Камера: FHD IR Camera. Гарантия: 12 мес.]]></description>
 <param name="Тип">Ноутбук</param>
-<param name="Модель">Pro 16 PC16250 (210-BQHB_BTO107_PC16250_EMEA)</param>
+<param name="Модель">Pro 16 PC16250</param>
 <param name="Объем жесткого диска">512</param>
 <param name="Тип жесткого диска">M.2 PCIe SSD</param>
 <param name="Производитель процессора">Intel</param>
@@ -11736,7 +11803,7 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Камера">FHD IR Camera</param>
 <param name="Разрешение дисплея">1920x1200</param>
 <param name="Для бренда">Dell</param>
-<param name="Коды">Pro 16 PC16250</param>
+<param name="Коды">210-BQHB_BTO107_PC16250_EMEA</param>
 </offer>
 
 <offer id="CP13870786" available="true">
@@ -11748,9 +11815,9 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Ноутбук. Процессор: Intel 255U Core Ultra 7 2. Оперативная память: 32 Gb / DDR5 / 5600. Накопитель: 1000 / M.2 PCIe SSD / 1 шт. Диагональ: 16. Разрешение: 1920x1200. ОС: Microsoft Windows 11 Pro 64. Видеокарта: Intel Integrated 256 Mb. Wi‑Fi: AX211. Bluetooth: Bluetooth. Камера: FHD IR Camera. Гарантия: 36 мес.]]></description>
+Ноутбук. Модельная серия: Pro 16 PC16250. Процессор: Intel 255U Core Ultra 7 2. Оперативная память: 32 Gb / DDR5 / 5600. Накопитель: 1000 / M.2 PCIe SSD / 1 шт. Диагональ: 16. Разрешение: 1920x1200. ОС: Microsoft Windows 11 Pro 64. Видеокарта: Intel Integrated 256 Mb. Wi‑Fi: AX211. Bluetooth: Bluetooth. Камера: FHD IR Camera. Гарантия: 36 мес.]]></description>
 <param name="Тип">Ноутбук</param>
-<param name="Модель">Pro 16 PC16250 (210-BQHB_BTO108_PC16250_EMEA)</param>
+<param name="Модель">Pro 16 PC16250</param>
 <param name="Объем жесткого диска">1000</param>
 <param name="Тип жесткого диска">M.2 PCIe SSD</param>
 <param name="Производитель процессора">Intel</param>
@@ -11784,7 +11851,7 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Камера">FHD IR Camera</param>
 <param name="Разрешение дисплея">1920x1200</param>
 <param name="Для бренда">Dell</param>
-<param name="Коды">Pro 16 PC16250</param>
+<param name="Коды">210-BQHB_BTO108_PC16250_EMEA</param>
 </offer>
 
 <offer id="CP13871815" available="true">
@@ -11796,9 +11863,9 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Ноутбук. Процессор: Intel 265U Core Ultra 7 2. Оперативная память: 16 Gb / DDR5 / 5600. Накопитель: 512 / M.2 PCIe SSD / 1 шт. Диагональ: 16. Разрешение: 1920x1200. ОС: Microsoft Windows 11 Pro 64. Видеокарта: Intel Integrated. Wi‑Fi: AX211. Bluetooth: Bluetooth. Камера: FHD IR Camera. Гарантия: 12 мес.]]></description>
+Ноутбук. Модельная серия: Pro 16 PC16250. Процессор: Intel 265U Core Ultra 7 2. Оперативная память: 16 Gb / DDR5 / 5600. Накопитель: 512 / M.2 PCIe SSD / 1 шт. Диагональ: 16. Разрешение: 1920x1200. ОС: Microsoft Windows 11 Pro 64. Видеокарта: Intel Integrated. Wi‑Fi: AX211. Bluetooth: Bluetooth. Камера: FHD IR Camera. Гарантия: 12 мес.]]></description>
 <param name="Тип">Ноутбук</param>
-<param name="Модель">Pro 16 PC16250 (210-BQHB_BTO109_PC16250_EMEA)</param>
+<param name="Модель">Pro 16 PC16250</param>
 <param name="Объем жесткого диска">512</param>
 <param name="Тип жесткого диска">M.2 PCIe SSD</param>
 <param name="Производитель процессора">Intel</param>
@@ -11831,7 +11898,7 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Камера">FHD IR Camera</param>
 <param name="Разрешение дисплея">1920x1200</param>
 <param name="Для бренда">Dell</param>
-<param name="Коды">Pro 16 PC16250</param>
+<param name="Коды">210-BQHB_BTO109_PC16250_EMEA</param>
 </offer>
 
 <offer id="CP13871875" available="true">
@@ -11981,11 +12048,11 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>ASUS</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Ноутбук. Гарантия: 12 мес. Для бренда: ASUS. Модель: ROG Strix G16 / G615JHR-S5039. Коды: 90NR0LL1-M001B0.]]></description>
+Ноутбук. Гарантия: 12 мес. Для бренда: ASUS. Модель: S5039. Коды: 90NR0LL1-M001B0.]]></description>
 <param name="Тип">Ноутбук</param>
 <param name="Гарантия">12 мес</param>
 <param name="Коды">90NR0LL1-M001B0</param>
-<param name="Модель">ROG Strix G16 / G615JHR-S5039</param>
+<param name="Модель">S5039</param>
 <param name="Для бренда">ASUS</param>
 </offer>
 
@@ -11998,11 +12065,11 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Монитор. Диагональ: 32. Гарантия: 36 мес. Для бренда: Dell. Модель: 32 Plus 4K QD-OLED Monitor - S3225QC. Коды: 210-BRVT.]]></description>
+Монитор. Диагональ: 32. Гарантия: 36 мес. Для бренда: Dell. Модель: S3225QC. Коды: 210-BRVT.]]></description>
 <param name="Тип">Монитор</param>
 <param name="Гарантия">36 мес</param>
 <param name="Коды">210-BRVT</param>
-<param name="Модель">32 Plus 4K QD-OLED Monitor - S3225QC</param>
+<param name="Модель">S3225QC</param>
 <param name="Для бренда">Dell</param>
 </offer>
 
@@ -12015,9 +12082,9 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Рабочая станция. Процессор: Intel 265 Core Ultra 7 1,8. Оперативная память: 32 Gb / DDR5 / 5600. Накопитель: 1000 / SSD / 1 шт. ОС: Microsoft Windows 11 Pro 64. Видеокарта: nVidia RTX A1000 8 Gb. Гарантия: 36 мес.]]></description>
+Рабочая станция. Модельная серия: Pro Max Tower T2 FCT2250. Процессор: Intel 265 Core Ultra 7 1,8. Оперативная память: 32 Gb / DDR5 / 5600. Накопитель: 1000 / SSD / 1 шт. ОС: Microsoft Windows 11 Pro 64. Видеокарта: nVidia RTX A1000 8 Gb. Гарантия: 36 мес.]]></description>
 <param name="Тип">Рабочая станция</param>
-<param name="Модель">Pro Max Tower T2 FCT2250 (210-BPSN_BTO107_FCT2250_EMEA)</param>
+<param name="Модель">Pro Max Tower T2 FCT2250</param>
 <param name="Объем жесткого диска">1000</param>
 <param name="Тип жесткого диска">SSD</param>
 <param name="Производитель процессора">Intel</param>
@@ -12045,7 +12112,7 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Клавиатура">Dell KB216 Multimedia USB Keyboard</param>
 <param name="Манипулятор">Dell MS116 Optical Mouse</param>
 <param name="Для бренда">Dell</param>
-<param name="Коды">Pro Max Tower T2 FCT2250</param>
+<param name="Коды">210-BPSN_BTO107_FCT2250_EMEA</param>
 </offer>
 
 <offer id="CP13871818" available="true">
@@ -12057,9 +12124,9 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Рабочая станция. Процессор: Intel 265 Core Ultra 7 1,8. Оперативная память: 32 Gb / DDR5 / 5600. Накопитель: 1000 / SSD / 1 шт. ОС: Microsoft Windows 11 Pro 64. Видеокарта: nVidia RTX 2000 Ada 16 Gb. Гарантия: 36 мес.]]></description>
+Рабочая станция. Модельная серия: Pro Max Tower T2 FCT2250. Процессор: Intel 265 Core Ultra 7 1,8. Оперативная память: 32 Gb / DDR5 / 5600. Накопитель: 1000 / SSD / 1 шт. ОС: Microsoft Windows 11 Pro 64. Видеокарта: nVidia RTX 2000 Ada 16 Gb. Гарантия: 36 мес.]]></description>
 <param name="Тип">Рабочая станция</param>
-<param name="Модель">Pro Max Tower T2 FCT2250 (210-BPSN_BTO108_FCT2250_EMEA)</param>
+<param name="Модель">Pro Max Tower T2 FCT2250</param>
 <param name="Объем жесткого диска">1000</param>
 <param name="Тип жесткого диска">SSD</param>
 <param name="Производитель процессора">Intel</param>
@@ -12087,7 +12154,7 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Клавиатура">Dell KB216 Multimedia USB Keyboard</param>
 <param name="Манипулятор">Dell MS116 Optical Mouse</param>
 <param name="Для бренда">Dell</param>
-<param name="Коды">Pro Max Tower T2 FCT2250</param>
+<param name="Коды">210-BPSN_BTO108_FCT2250_EMEA</param>
 </offer>
 
 <offer id="CP13871123" available="true">
@@ -12152,7 +12219,7 @@ URL поставщика                             | https://www.comportal.kz/
 <description><![CDATA[
 Ноутбук. Процессор: Intel 225H Core Ultra 5 1,7. Оперативная память: 16 Gb / DDR5 / 4800. Накопитель: 512 / PCIe NVMe SSD / 1 шт. Диагональ: 14. Разрешение: 1920x1200. ОС: Microsoft Windows 11 Home 64. Видеокарта: Intel UHD 256 Mb. Wi‑Fi: 802.11ax. Bluetooth: Bluetooth 5.3. Камера: FHD Camera. Гарантия: 12 мес.]]></description>
 <param name="Тип">Ноутбук</param>
-<param name="Модель">Vivobook S14 / S3407CA-LY014W</param>
+<param name="Модель">S3407CA</param>
 <param name="Объем жесткого диска">512</param>
 <param name="Тип жесткого диска">PCIe NVMe SSD</param>
 <param name="Производитель процессора">Intel</param>
@@ -12830,12 +12897,12 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Ноутбук. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro 14 PC14250 (BTO109_PC14250_EMEA_210-BQHF). Коды: Pro 14 PC14250.]]></description>
+Ноутбук. Модельная серия: Pro 14 PC14250. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro 14 PC14250. Коды: BTO109_PC14250_EMEA_210-BQHF.]]></description>
 <param name="Тип">Ноутбук</param>
 <param name="Гарантия">36 мес</param>
 <param name="Для бренда">Dell</param>
-<param name="Модель">Pro 14 PC14250 (BTO109_PC14250_EMEA_210-BQHF)</param>
-<param name="Коды">Pro 14 PC14250</param>
+<param name="Модель">Pro 14 PC14250</param>
+<param name="Коды">BTO109_PC14250_EMEA_210-BQHF</param>
 </offer>
 
 <offer id="CP13871907" available="true">
@@ -12847,9 +12914,9 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Ноутбук. Процессор: Intel 235U Core Ultra 5 2. Оперативная память: 16 Gb / DDR5 / 5600. Накопитель: 512 / SSD / 1 шт. Диагональ: 14. Разрешение: 1920x1200. ОС: Microsoft Windows 11 Pro. Видеокарта: Intel integrated. Wi‑Fi: AX211. Bluetooth: Bluetooth 5.3. Камера: FHD HDR IR Camera. Гарантия: 36 мес.]]></description>
+Ноутбук. Модельная серия: Pro 14 Plus PB14250. Процессор: Intel 235U Core Ultra 5 2. Оперативная память: 16 Gb / DDR5 / 5600. Накопитель: 512 / SSD / 1 шт. Диагональ: 14. Разрешение: 1920x1200. ОС: Microsoft Windows 11 Pro. Видеокарта: Intel integrated. Wi‑Fi: AX211. Bluetooth: Bluetooth 5.3. Камера: FHD HDR IR Camera. Гарантия: 36 мес.]]></description>
 <param name="Тип">Ноутбук</param>
-<param name="Модель">Pro 14 Plus PB14250 (BTO105_PB14250_EMEA_210-BPDL)</param>
+<param name="Модель">Pro 14 Plus PB14250</param>
 <param name="Объем жесткого диска">512</param>
 <param name="Тип жесткого диска">SSD</param>
 <param name="Производитель процессора">Intel</param>
@@ -12880,7 +12947,7 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Камера">FHD HDR IR Camera</param>
 <param name="Разрешение дисплея">1920x1200</param>
 <param name="Для бренда">Dell</param>
-<param name="Коды">Pro 14 Plus PB14250</param>
+<param name="Коды">BTO105_PB14250_EMEA_210-BPDL</param>
 </offer>
 
 <offer id="CP13872990" available="true">
@@ -12892,12 +12959,12 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Ноутбук. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro 14 Plus PB14250 (BTO111_PB14250_EMEA_210-BPDL). Коды: Pro 14 Plus PB14250.]]></description>
+Ноутбук. Модельная серия: Pro 14 Plus PB14250. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro 14 Plus PB14250. Коды: BTO111_PB14250_EMEA_210-BPDL.]]></description>
 <param name="Тип">Ноутбук</param>
 <param name="Гарантия">36 мес</param>
 <param name="Для бренда">Dell</param>
-<param name="Модель">Pro 14 Plus PB14250 (BTO111_PB14250_EMEA_210-BPDL)</param>
-<param name="Коды">Pro 14 Plus PB14250</param>
+<param name="Модель">Pro 14 Plus PB14250</param>
+<param name="Коды">BTO111_PB14250_EMEA_210-BPDL</param>
 </offer>
 
 <offer id="CP13872991" available="true">
@@ -12909,12 +12976,12 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Ноутбук. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro 14 Plus PB14250 (210-BPDL_BTO110_PB14250_EMEA). Коды: Pro 14 Plus PB14250.]]></description>
+Ноутбук. Модельная серия: Pro 14 Plus PB14250. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro 14 Plus PB14250. Коды: 210-BPDL_BTO110_PB14250_EMEA.]]></description>
 <param name="Тип">Ноутбук</param>
 <param name="Гарантия">36 мес</param>
 <param name="Для бренда">Dell</param>
-<param name="Модель">Pro 14 Plus PB14250 (210-BPDL_BTO110_PB14250_EMEA)</param>
-<param name="Коды">Pro 14 Plus PB14250</param>
+<param name="Модель">Pro 14 Plus PB14250</param>
+<param name="Коды">210-BPDL_BTO110_PB14250_EMEA</param>
 </offer>
 
 <offer id="CP13872992" available="true">
@@ -12926,12 +12993,12 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Ноутбук. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro 16 PC16250 (BTO109_PC16250_EMEA_210-BQHB). Коды: Pro 16 PC16250.]]></description>
+Ноутбук. Модельная серия: Pro 16 PC16250. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro 16 PC16250. Коды: BTO109_PC16250_EMEA_210-BQHB.]]></description>
 <param name="Тип">Ноутбук</param>
 <param name="Гарантия">36 мес</param>
 <param name="Для бренда">Dell</param>
-<param name="Модель">Pro 16 PC16250 (BTO109_PC16250_EMEA_210-BQHB)</param>
-<param name="Коды">Pro 16 PC16250</param>
+<param name="Модель">Pro 16 PC16250</param>
+<param name="Коды">BTO109_PC16250_EMEA_210-BQHB</param>
 </offer>
 
 <offer id="CP13872993" available="true">
@@ -12943,12 +13010,12 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Ноутбук. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro 16 PC16250 (BTO107_PC16250_EMEA_210-BQHB). Коды: Pro 16 PC16250.]]></description>
+Ноутбук. Модельная серия: Pro 16 PC16250. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro 16 PC16250. Коды: BTO107_PC16250_EMEA_210-BQHB.]]></description>
 <param name="Тип">Ноутбук</param>
 <param name="Гарантия">36 мес</param>
 <param name="Для бренда">Dell</param>
-<param name="Модель">Pro 16 PC16250 (BTO107_PC16250_EMEA_210-BQHB)</param>
-<param name="Коды">Pro 16 PC16250</param>
+<param name="Модель">Pro 16 PC16250</param>
+<param name="Коды">BTO107_PC16250_EMEA_210-BQHB</param>
 </offer>
 
 <offer id="CP13871912" available="true">
@@ -12960,9 +13027,9 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Ноутбук. Процессор: Intel 235U Core Ultra 5 2. Оперативная память: 32 Gb / DDR5 / 5600. Накопитель: 512 / SSD / 1 шт. Диагональ: 16. Разрешение: 1920x1200. ОС: Microsoft Windows 11 Pro. Видеокарта: Intel integrated. Wi‑Fi: AX211. Bluetooth: Bluetooth 5.3. Камера: FHD HDR IR Camera. Гарантия: 36 мес.]]></description>
+Ноутбук. Модельная серия: Pro 16 PC16250. Процессор: Intel 235U Core Ultra 5 2. Оперативная память: 32 Gb / DDR5 / 5600. Накопитель: 512 / SSD / 1 шт. Диагональ: 16. Разрешение: 1920x1200. ОС: Microsoft Windows 11 Pro. Видеокарта: Intel integrated. Wi‑Fi: AX211. Bluetooth: Bluetooth 5.3. Камера: FHD HDR IR Camera. Гарантия: 36 мес.]]></description>
 <param name="Тип">Ноутбук</param>
-<param name="Модель">Pro 16 PC16250 (BTO106_PC16250_EMEA_210-BQHB)</param>
+<param name="Модель">Pro 16 PC16250</param>
 <param name="Объем жесткого диска">512</param>
 <param name="Тип жесткого диска">SSD</param>
 <param name="Производитель процессора">Intel</param>
@@ -12993,7 +13060,7 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Камера">FHD HDR IR Camera</param>
 <param name="Разрешение дисплея">1920x1200</param>
 <param name="Для бренда">Dell</param>
-<param name="Коды">Pro 16 PC16250</param>
+<param name="Коды">BTO106_PC16250_EMEA_210-BQHB</param>
 </offer>
 
 <offer id="CP13872994" available="true">
@@ -13005,12 +13072,12 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Ноутбук. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro 16 PC16255 (BTO602_PC16255_EMEA_210-BQPC). Коды: Pro 16 PC16255.]]></description>
+Ноутбук. Модельная серия: Pro 16 PC16255. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro 16 PC16255. Коды: BTO602_PC16255_EMEA_210-BQPC.]]></description>
 <param name="Тип">Ноутбук</param>
 <param name="Гарантия">36 мес</param>
 <param name="Для бренда">Dell</param>
-<param name="Модель">Pro 16 PC16255 (BTO602_PC16255_EMEA_210-BQPC)</param>
-<param name="Коды">Pro 16 PC16255</param>
+<param name="Модель">Pro 16 PC16255</param>
+<param name="Коды">BTO602_PC16255_EMEA_210-BQPC</param>
 </offer>
 
 <offer id="CP13872995" available="true">
@@ -13022,12 +13089,12 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Ноутбук. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro 16 Plus PB16250 (BTO105_PB16250_EMEA_UBU_210-BPCM). Коды: Pro 16 Plus PB16250.]]></description>
+Ноутбук. Модельная серия: Pro 16 Plus PB16250. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro 16 Plus PB16250. Коды: BTO105_PB16250_EMEA_UBU_210-BPCM.]]></description>
 <param name="Тип">Ноутбук</param>
 <param name="Гарантия">36 мес</param>
 <param name="Для бренда">Dell</param>
-<param name="Модель">Pro 16 Plus PB16250 (BTO105_PB16250_EMEA_UBU_210-BPCM)</param>
-<param name="Коды">Pro 16 Plus PB16250</param>
+<param name="Модель">Pro 16 Plus PB16250</param>
+<param name="Коды">BTO105_PB16250_EMEA_UBU_210-BPCM</param>
 </offer>
 
 <offer id="CP13872233" available="true">
@@ -13039,9 +13106,9 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Ноутбук. Процессор: Intel 265H Core Ultra 7 2,2. Оперативная память: 16 Gb / DDR5 / 7500. Накопитель: 512 / SSD / 1 шт. Диагональ: 14. Разрешение: 1920x1200. ОС: Microsoft Windows 11 Pro. Видеокарта: nVidia RTX PRO 500 6 Gb. Wi‑Fi: BE201. Bluetooth: Bluetooth 5.4. Камера: FHD HDR IR Camera. Гарантия: 36 мес.]]></description>
+Ноутбук. Модельная серия: Pro Max 14 MC14250. Процессор: Intel 265H Core Ultra 7 2,2. Оперативная память: 16 Gb / DDR5 / 7500. Накопитель: 512 / SSD / 1 шт. Диагональ: 14. Разрешение: 1920x1200. ОС: Microsoft Windows 11 Pro. Видеокарта: nVidia RTX PRO 500 6 Gb. Wi‑Fi: BE201. Bluetooth: Bluetooth 5.4. Камера: FHD HDR IR Camera. Гарантия: 36 мес.]]></description>
 <param name="Тип">Ноутбук</param>
-<param name="Модель">Мобильная рабочая станция Dell Pro Max 14 MC14250 (BTO120_MC14250_EMEA_210-BPVX)</param>
+<param name="Модель">Pro Max 14 MC14250</param>
 <param name="Объем жесткого диска">512</param>
 <param name="Тип жесткого диска">SSD</param>
 <param name="Производитель процессора">Intel</param>
@@ -13073,7 +13140,7 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Камера">FHD HDR IR Camera</param>
 <param name="Разрешение дисплея">1920x1200</param>
 <param name="Для бренда">Dell</param>
-<param name="Коды">Pro Max 14 MC14250</param>
+<param name="Коды">BTO120_MC14250_EMEA_210-BPVX</param>
 </offer>
 
 <offer id="CP13872130" available="true">
@@ -13085,9 +13152,9 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Ноутбук. Процессор: Intel 265H Core Ultra 7 2,2. Оперативная память: 32 Gb / DDR5 / 7500. Накопитель: 1000 / SSD / 1 шт. Диагональ: 14. Разрешение: 1920x1200. ОС: Microsoft Windows 11 Pro. Видеокарта: nVidia RTX PRO 500 6 Gb. Wi‑Fi: BE201. Bluetooth: Bluetooth 5.4. Камера: FHD HDR IR Camera. Гарантия: 36 мес.]]></description>
+Ноутбук. Модельная серия: Pro Max 14 MC14250. Процессор: Intel 265H Core Ultra 7 2,2. Оперативная память: 32 Gb / DDR5 / 7500. Накопитель: 1000 / SSD / 1 шт. Диагональ: 14. Разрешение: 1920x1200. ОС: Microsoft Windows 11 Pro. Видеокарта: nVidia RTX PRO 500 6 Gb. Wi‑Fi: BE201. Bluetooth: Bluetooth 5.4. Камера: FHD HDR IR Camera. Гарантия: 36 мес.]]></description>
 <param name="Тип">Ноутбук</param>
-<param name="Модель">Мобильная рабочая станция Dell Pro Max 14 MC14250 (BTO108_MC14250_EMEA_210-BPVX)</param>
+<param name="Модель">Pro Max 14 MC14250</param>
 <param name="Объем жесткого диска">1000</param>
 <param name="Тип жесткого диска">SSD</param>
 <param name="Производитель процессора">Intel</param>
@@ -13119,7 +13186,7 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Камера">FHD HDR IR Camera</param>
 <param name="Разрешение дисплея">1920x1200</param>
 <param name="Для бренда">Dell</param>
-<param name="Коды">Pro Max 14 MC14250</param>
+<param name="Коды">BTO108_MC14250_EMEA_210-BPVX</param>
 </offer>
 
 <offer id="CP13872131" available="true">
@@ -13131,9 +13198,9 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Ноутбук. Процессор: Intel 265H Core Ultra 7 2,2. Оперативная память: 32 Gb / DDR5 / 5600. Накопитель: 1000 / SSD / 1 шт. Диагональ: 16. Разрешение: 1920x1200. ОС: Microsoft Windows 11 Pro. Видеокарта: nVidia RTX PRO 2000 Blackwel 8 Gb. Wi‑Fi: BE201. Bluetooth: Bluetooth 5.4. Камера: FHD HDR IR Camera. Гарантия: 36 мес.]]></description>
+Ноутбук. Модельная серия: Pro Max 16. Процессор: Intel 265H Core Ultra 7 2,2. Оперативная память: 32 Gb / DDR5 / 5600. Накопитель: 1000 / SSD / 1 шт. Диагональ: 16. Разрешение: 1920x1200. ОС: Microsoft Windows 11 Pro. Видеокарта: nVidia RTX PRO 2000 Blackwel 8 Gb. Wi‑Fi: BE201. Bluetooth: Bluetooth 5.4. Камера: FHD HDR IR Camera. Гарантия: 36 мес.]]></description>
 <param name="Тип">Ноутбук</param>
-<param name="Модель">Мобильная рабочая станция Dell Pro Max 16 / 16XE MC16250 (BTO128_MC16250_EMEA_210-BPVR)</param>
+<param name="Модель">Pro Max 16</param>
 <param name="Объем жесткого диска">1000</param>
 <param name="Тип жесткого диска">SSD</param>
 <param name="Производитель процессора">Intel</param>
@@ -13165,7 +13232,7 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Камера">FHD HDR IR Camera</param>
 <param name="Разрешение дисплея">1920x1200</param>
 <param name="Для бренда">Dell</param>
-<param name="Коды">Pro Max 16 / 16XE MC16250</param>
+<param name="Коды">BTO128_MC16250_EMEA_210-BPVR</param>
 </offer>
 
 <offer id="CP13872132" available="true">
@@ -13177,9 +13244,9 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Ноутбук. Процессор: Intel 265H Core Ultra 7 2,2. Оперативная память: 64 Gb / DDR5 / 6400. Накопитель: 1000 / SSD / 1 шт. Диагональ: 16. Разрешение: 1920x1200. ОС: Microsoft Windows 11 Pro. Видеокарта: nVidia RTX PRO 1000 Blackwel 8 Gb. Wi‑Fi: BE201. Bluetooth: Bluetooth 5.4. Камера: FHD HDR IR Camera. Гарантия: 36 мес.]]></description>
+Ноутбук. Модельная серия: Pro Max 16. Процессор: Intel 265H Core Ultra 7 2,2. Оперативная память: 64 Gb / DDR5 / 6400. Накопитель: 1000 / SSD / 1 шт. Диагональ: 16. Разрешение: 1920x1200. ОС: Microsoft Windows 11 Pro. Видеокарта: nVidia RTX PRO 1000 Blackwel 8 Gb. Wi‑Fi: BE201. Bluetooth: Bluetooth 5.4. Камера: FHD HDR IR Camera. Гарантия: 36 мес.]]></description>
 <param name="Тип">Ноутбук</param>
-<param name="Модель">Мобильная рабочая станция Dell Pro Max 16 / 16XE MC16250 (BTO127_MC16250_EMEA_210-BPVR)</param>
+<param name="Модель">Pro Max 16</param>
 <param name="Объем жесткого диска">1000</param>
 <param name="Тип жесткого диска">SSD</param>
 <param name="Производитель процессора">Intel</param>
@@ -13211,7 +13278,7 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Камера">FHD HDR IR Camera</param>
 <param name="Разрешение дисплея">1920x1200</param>
 <param name="Для бренда">Dell</param>
-<param name="Коды">Pro Max 16 / 16XE MC16250</param>
+<param name="Коды">BTO127_MC16250_EMEA_210-BPVR</param>
 </offer>
 
 <offer id="CP13872133" available="true">
@@ -13223,9 +13290,9 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Ноутбук. Процессор: Intel 265H Core Ultra 7 2,2. Оперативная память: 16 Gb / DDR5 / 5600. Накопитель: 512 / SSD / 1 шт. Диагональ: 16. Разрешение: 1920x1200. ОС: Microsoft Windows 11 Pro. Видеокарта: Intel Arc. Wi‑Fi: BE201. Bluetooth: Bluetooth 5.4. Камера: FHD HDR IR Camera. Гарантия: 36 мес.]]></description>
+Ноутбук. Модельная серия: Pro Max 16. Процессор: Intel 265H Core Ultra 7 2,2. Оперативная память: 16 Gb / DDR5 / 5600. Накопитель: 512 / SSD / 1 шт. Диагональ: 16. Разрешение: 1920x1200. ОС: Microsoft Windows 11 Pro. Видеокарта: Intel Arc. Wi‑Fi: BE201. Bluetooth: Bluetooth 5.4. Камера: FHD HDR IR Camera. Гарантия: 36 мес.]]></description>
 <param name="Тип">Ноутбук</param>
-<param name="Модель">Мобильная рабочая станция Dell Pro Max 16 / 16XE MC16250 (BTO129_MC16250_EMEA_210-BPVR)</param>
+<param name="Модель">Pro Max 16</param>
 <param name="Объем жесткого диска">512</param>
 <param name="Тип жесткого диска">SSD</param>
 <param name="Производитель процессора">Intel</param>
@@ -13256,7 +13323,7 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Камера">FHD HDR IR Camera</param>
 <param name="Разрешение дисплея">1920x1200</param>
 <param name="Для бренда">Dell</param>
-<param name="Коды">Pro Max 16 / 16XE MC16250</param>
+<param name="Коды">BTO129_MC16250_EMEA_210-BPVR</param>
 </offer>
 
 <offer id="CP13872134" available="true">
@@ -13268,9 +13335,9 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Ноутбук. Процессор: Intel 265H Core Ultra 7 2,2. Оперативная память: 32 Gb / DDR5 / 5600. Накопитель: 1000 / SSD / 1 шт. Диагональ: 16. Разрешение: 1920x1200. ОС: Microsoft Windows 11 Pro. Видеокарта: nVidia RTX PRO 500 Blackwell 6 Gb. Wi‑Fi: BE201. Bluetooth: Bluetooth 5.4. Камера: FHD HDR IR Camera. Гарантия: 36 мес.]]></description>
+Ноутбук. Модельная серия: Pro Max 16. Процессор: Intel 265H Core Ultra 7 2,2. Оперативная память: 32 Gb / DDR5 / 5600. Накопитель: 1000 / SSD / 1 шт. Диагональ: 16. Разрешение: 1920x1200. ОС: Microsoft Windows 11 Pro. Видеокарта: nVidia RTX PRO 500 Blackwell 6 Gb. Wi‑Fi: BE201. Bluetooth: Bluetooth 5.4. Камера: FHD HDR IR Camera. Гарантия: 36 мес.]]></description>
 <param name="Тип">Ноутбук</param>
-<param name="Модель">Мобильная рабочая станция Dell Pro Max 16 / 16XE MC16250 (BTO122_MC16250_EMEA_210-BPVR)</param>
+<param name="Модель">Pro Max 16</param>
 <param name="Объем жесткого диска">1000</param>
 <param name="Тип жесткого диска">SSD</param>
 <param name="Производитель процессора">Intel</param>
@@ -13302,7 +13369,7 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Камера">FHD HDR IR Camera</param>
 <param name="Разрешение дисплея">1920x1200</param>
 <param name="Для бренда">Dell</param>
-<param name="Коды">Pro Max 16 / 16XE MC16250</param>
+<param name="Коды">BTO122_MC16250_EMEA_210-BPVR</param>
 </offer>
 
 <offer id="CP13872112" available="true">
@@ -13570,7 +13637,7 @@ URL поставщика                             | https://www.comportal.kz/
 <description><![CDATA[
 Широкоформатный принтер. Формат печати: A1. Разрешение: 2400x1200. Гарантия: 12 мес.]]></description>
 <param name="Тип">Широкоформатный принтер</param>
-<param name="Модель">imagePROGRAF TX-3200 incl. stand / A1 / 2400 x1200 dpi.</param>
+<param name="Модель">imagePROGRAF TX-3200</param>
 <param name="Гарантия">12 мес</param>
 <param name="Разрешение">2400x1200</param>
 <param name="Формат печати">A1</param>
@@ -13982,11 +14049,11 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Монитор. Модельная серия: 24 Plus Monitor – S2425HSM. Диагональ: 24. Гарантия: 36 мес.]]></description>
+Монитор. Диагональ: 24. Гарантия: 36 мес. Для бренда: Dell. Модель: S2425HSM. Коды: 210-BSZD.]]></description>
 <param name="Тип">Монитор</param>
 <param name="Гарантия">36 мес</param>
 <param name="Коды">210-BSZD</param>
-<param name="Модель">24 Plus Monitor – S2425HSM</param>
+<param name="Модель">S2425HSM</param>
 <param name="Для бренда">Dell</param>
 </offer>
 
@@ -13999,11 +14066,11 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Монитор. Модельная серия: 27 Plus Monitor – S2725HSM. Диагональ: 27. Гарантия: 36 мес.]]></description>
+Монитор. Диагональ: 27. Гарантия: 36 мес. Для бренда: Dell. Модель: S2725HSM. Коды: 210-BSZF.]]></description>
 <param name="Тип">Монитор</param>
 <param name="Гарантия">36 мес</param>
 <param name="Коды">210-BSZF</param>
-<param name="Модель">27 Plus Monitor – S2725HSM</param>
+<param name="Модель">S2725HSM</param>
 <param name="Для бренда">Dell</param>
 </offer>
 
@@ -14016,11 +14083,11 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Монитор. Модельная серия: 27 Plus Monitor – S2725HSM. Диагональ: 27. Гарантия: 36 мес.]]></description>
+Монитор. Диагональ: 27. Гарантия: 36 мес. Для бренда: Dell. Модель: S2725HSM. Коды: 210-BSZF.]]></description>
 <param name="Тип">Монитор</param>
 <param name="Гарантия">36 мес</param>
 <param name="Коды">210-BSZF</param>
-<param name="Модель">27 Plus Monitor – S2725HSM</param>
+<param name="Модель">S2725HSM</param>
 <param name="Для бренда">Dell</param>
 </offer>
 
@@ -14033,11 +14100,11 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Монитор. Диагональ: 27. Гарантия: 36 мес. Для бренда: Dell. Модель: 27 Plus QHD USB-C Monitor - S2725DC. Коды: 210-BSRL.]]></description>
+Монитор. Диагональ: 27. Гарантия: 36 мес. Для бренда: Dell. Модель: S2725DC. Коды: 210-BSRL.]]></description>
 <param name="Тип">Монитор</param>
 <param name="Гарантия">36 мес</param>
 <param name="Коды">210-BSRL</param>
-<param name="Модель">27 Plus QHD USB-C Monitor - S2725DC</param>
+<param name="Модель">S2725DC</param>
 <param name="Для бренда">Dell</param>
 </offer>
 
@@ -14099,11 +14166,28 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>ASUS</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Ноутбук. Гарантия: 12 мес. Для бренда: ASUS. Модель: TUF Gaming A18 / FA808UP-S8030. Коды: 90NR0NL1-M001L0.]]></description>
+Ноутбук. Гарантия: 12 мес. Для бренда: ASUS. Модель: S8030. Коды: 90NR0NL1-M001L0.]]></description>
 <param name="Тип">Ноутбук</param>
 <param name="Гарантия">12 мес</param>
 <param name="Коды">90NR0NL1-M001L0</param>
-<param name="Модель">TUF Gaming A18 / FA808UP-S8030</param>
+<param name="Модель">S8030</param>
+<param name="Для бренда">ASUS</param>
+</offer>
+
+<offer id="CP13872584" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13872584</vendorCode>
+<name>Ноутбук Asus Zenbook S 16 / UM5606GA-SS022W (90NB17H2-M006F0)</name>
+<price>816421</price>
+<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
+<vendor>ASUS</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Ноутбук. Гарантия: 12 мес. Для бренда: ASUS. Модель: Zenbook S 16 / UM5606GA-SS022W. Коды: 90NB17H2-M006F0.]]></description>
+<param name="Тип">Ноутбук</param>
+<param name="Гарантия">12 мес</param>
+<param name="Коды">90NB17H2-M006F0</param>
+<param name="Модель">Zenbook S 16 / UM5606GA-SS022W</param>
 <param name="Для бренда">ASUS</param>
 </offer>
 
@@ -14118,7 +14202,7 @@ URL поставщика                             | https://www.comportal.kz/
 <description><![CDATA[
 Ноутбук. Процессор: Intel 210H Core 5 2,2. Оперативная память: 16 Gb / DDR5 / 5200. Накопитель: 512 / PCIe NVMe SSD / 1 шт. Диагональ: 14. Разрешение: 1920x1080. ОС: Без операционной системы. Видеокарта: Intel 256 Mb. Wi‑Fi: 802.11ax. Bluetooth: Bluetooth 5.4. Камера: HD Camera. Гарантия: 12 мес.]]></description>
 <param name="Тип">Ноутбук</param>
-<param name="Модель">ExpertBook / P1403CVA-S61785</param>
+<param name="Модель">P1403CVA</param>
 <param name="Объем жесткого диска">512</param>
 <param name="Тип жесткого диска">PCIe NVMe SSD</param>
 <param name="Производитель процессора">Intel</param>
@@ -14161,11 +14245,11 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>ASUS</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Ноутбук. Гарантия: 12 мес. Для бренда: ASUS. Модель: ExpertBook / P1403CVA-S61790X. Коды: 90NX0871-M022V0.]]></description>
+Ноутбук. Гарантия: 12 мес. Для бренда: ASUS. Модель: P1403CVA. Коды: 90NX0871-M022V0.]]></description>
 <param name="Тип">Ноутбук</param>
 <param name="Гарантия">12 мес</param>
 <param name="Коды">90NX0871-M022V0</param>
-<param name="Модель">ExpertBook / P1403CVA-S61790X</param>
+<param name="Модель">P1403CVA</param>
 <param name="Для бренда">ASUS</param>
 </offer>
 
@@ -14178,11 +14262,11 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>ASUS</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Ноутбук. Гарантия: 12 мес. Для бренда: ASUS. Модель: ExpertBook / P1403CVA-S61793X. Коды: 90NX0871-M022X0.]]></description>
+Ноутбук. Гарантия: 12 мес. Для бренда: ASUS. Модель: P1403CVA. Коды: 90NX0871-M022X0.]]></description>
 <param name="Тип">Ноутбук</param>
 <param name="Гарантия">12 мес</param>
 <param name="Коды">90NX0871-M022X0</param>
-<param name="Модель">ExpertBook / P1403CVA-S61793X</param>
+<param name="Модель">P1403CVA</param>
 <param name="Для бренда">ASUS</param>
 </offer>
 
@@ -14195,11 +14279,11 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>ASUS</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Ноутбук. Гарантия: 12 мес. Для бренда: ASUS. Модель: ExpertBook / P1503CVA-S72533X. Коды: 90NX0881-M02Y70.]]></description>
+Ноутбук. Гарантия: 12 мес. Для бренда: ASUS. Модель: P1503CVA. Коды: 90NX0881-M02Y70.]]></description>
 <param name="Тип">Ноутбук</param>
 <param name="Гарантия">12 мес</param>
 <param name="Коды">90NX0881-M02Y70</param>
-<param name="Модель">ExpertBook / P1503CVA-S72533X</param>
+<param name="Модель">P1503CVA</param>
 <param name="Для бренда">ASUS</param>
 </offer>
 
@@ -14212,11 +14296,11 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>ASUS</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Ноутбук. Гарантия: 12 мес. Для бренда: ASUS. Модель: ExpertBook / P1503CVA-S72536X. Коды: 90NX0881-M02Y90.]]></description>
+Ноутбук. Гарантия: 12 мес. Для бренда: ASUS. Модель: P1503CVA. Коды: 90NX0881-M02Y90.]]></description>
 <param name="Тип">Ноутбук</param>
 <param name="Гарантия">12 мес</param>
 <param name="Коды">90NX0881-M02Y90</param>
-<param name="Модель">ExpertBook / P1503CVA-S72536X</param>
+<param name="Модель">P1503CVA</param>
 <param name="Для бренда">ASUS</param>
 </offer>
 
@@ -14279,12 +14363,12 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Ноутбук. Гарантия: 36 мес. Для бренда: HP. Модель: ProBook 4 G1i (AT7K4AV / 74051491). Коды: ProBook 4 G1i.]]></description>
+Ноутбук. Модельная серия: ProBook 4 G1i. Гарантия: 36 мес. Для бренда: HP. Модель: ProBook 4 G1i. Коды: AT7K4AV / 74051491.]]></description>
 <param name="Тип">Ноутбук</param>
 <param name="Гарантия">36 мес</param>
 <param name="Для бренда">HP</param>
-<param name="Модель">ProBook 4 G1i (AT7K4AV / 74051491)</param>
-<param name="Коды">ProBook 4 G1i</param>
+<param name="Модель">ProBook 4 G1i</param>
+<param name="Коды">AT7K4AV / 74051491</param>
 </offer>
 
 <offer id="CP13872617" available="true">
@@ -14296,12 +14380,12 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Ноутбук. Гарантия: 36 мес. Для бренда: HP. Модель: EliteBook 8 G1a (AZ3N2AV / 74051488). Коды: EliteBook 8 G1a.]]></description>
+Ноутбук. Модельная серия: EliteBook 8 G1a. Гарантия: 36 мес. Для бренда: HP. Модель: EliteBook 8 G1a. Коды: AZ3N2AV / 74051488.]]></description>
 <param name="Тип">Ноутбук</param>
 <param name="Гарантия">36 мес</param>
 <param name="Для бренда">HP</param>
-<param name="Модель">EliteBook 8 G1a (AZ3N2AV / 74051488)</param>
-<param name="Коды">EliteBook 8 G1a</param>
+<param name="Модель">EliteBook 8 G1a</param>
+<param name="Коды">AZ3N2AV / 74051488</param>
 </offer>
 
 <offer id="CP13872623" available="true">
@@ -14313,12 +14397,12 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Ноутбук. Гарантия: 36 мес. Для бренда: Dell. Модель: 14 Premium (DA14250) (210-BPBH_DA14250_ARLH_101). Коды: 14 Premium.]]></description>
+Ноутбук. Модельная серия: 14 Premium. Гарантия: 36 мес. Для бренда: Dell. Модель: 14 Premium. Коды: 210-BPBH_DA14250_ARLH_101.]]></description>
 <param name="Тип">Ноутбук</param>
 <param name="Гарантия">36 мес</param>
 <param name="Для бренда">Dell</param>
-<param name="Модель">14 Premium (DA14250) (210-BPBH_DA14250_ARLH_101)</param>
-<param name="Коды">14 Premium</param>
+<param name="Модель">14 Premium</param>
+<param name="Коды">210-BPBH_DA14250_ARLH_101</param>
 </offer>
 
 <offer id="CP13872996" available="true">
@@ -14330,12 +14414,12 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Ноутбук. Гарантия: 36 мес. Для бренда: Dell. Модель: 14 Premium (DA14250) (210-BPBH_DA14250_ARLH_102). Коды: 14 Premium.]]></description>
+Ноутбук. Модельная серия: 14 Premium. Гарантия: 36 мес. Для бренда: Dell. Модель: 14 Premium. Коды: 210-BPBH_DA14250_ARLH_102.]]></description>
 <param name="Тип">Ноутбук</param>
 <param name="Гарантия">36 мес</param>
 <param name="Для бренда">Dell</param>
-<param name="Модель">14 Premium (DA14250) (210-BPBH_DA14250_ARLH_102)</param>
-<param name="Коды">14 Premium</param>
+<param name="Модель">14 Premium</param>
+<param name="Коды">210-BPBH_DA14250_ARLH_102</param>
 </offer>
 
 <offer id="CP13872997" available="true">
@@ -14347,12 +14431,12 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Ноутбук. Гарантия: 36 мес. Для бренда: Dell. Модель: 14 Premium (DA14250) (210-BPBH_DA14250_ARLH_104). Коды: 14 Premium.]]></description>
+Ноутбук. Модельная серия: 14 Premium. Гарантия: 36 мес. Для бренда: Dell. Модель: 14 Premium. Коды: 210-BPBH_DA14250_ARLH_104.]]></description>
 <param name="Тип">Ноутбук</param>
 <param name="Гарантия">36 мес</param>
 <param name="Для бренда">Dell</param>
-<param name="Модель">14 Premium (DA14250) (210-BPBH_DA14250_ARLH_104)</param>
-<param name="Коды">14 Premium</param>
+<param name="Модель">14 Premium</param>
+<param name="Коды">210-BPBH_DA14250_ARLH_104</param>
 </offer>
 
 <offer id="CP13872998" available="true">
@@ -14364,12 +14448,12 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Ноутбук. Гарантия: 36 мес. Для бренда: Dell. Модель: 16 Premium (DA16250) (210-BRTS_DA16250_ARLH_003). Коды: 16 Premium.]]></description>
+Ноутбук. Модельная серия: 16 Premium. Гарантия: 36 мес. Для бренда: Dell. Модель: 16 Premium. Коды: 210-BRTS_DA16250_ARLH_003.]]></description>
 <param name="Тип">Ноутбук</param>
 <param name="Гарантия">36 мес</param>
 <param name="Для бренда">Dell</param>
-<param name="Модель">16 Premium (DA16250) (210-BRTS_DA16250_ARLH_003)</param>
-<param name="Коды">16 Premium</param>
+<param name="Модель">16 Premium</param>
+<param name="Коды">210-BRTS_DA16250_ARLH_003</param>
 </offer>
 
 <offer id="CP13872999" available="true">
@@ -14381,12 +14465,12 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Ноутбук. Гарантия: 36 мес. Для бренда: Dell. Модель: 16 Premium (DA16250) (210-BRTS_DA16250_ARLH_011). Коды: 16 Premium.]]></description>
+Ноутбук. Модельная серия: 16 Premium. Гарантия: 36 мес. Для бренда: Dell. Модель: 16 Premium. Коды: 210-BRTS_DA16250_ARLH_011.]]></description>
 <param name="Тип">Ноутбук</param>
 <param name="Гарантия">36 мес</param>
 <param name="Для бренда">Dell</param>
-<param name="Модель">16 Premium (DA16250) (210-BRTS_DA16250_ARLH_011)</param>
-<param name="Коды">16 Premium</param>
+<param name="Модель">16 Premium</param>
+<param name="Коды">210-BRTS_DA16250_ARLH_011</param>
 </offer>
 
 <offer id="CP13873000" available="true">
@@ -14398,12 +14482,12 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Ноутбук. Гарантия: 36 мес. Для бренда: Dell. Модель: 16 Premium (DA16250) (210-BRTS_DA16250_ARLH_006). Коды: 16 Premium.]]></description>
+Ноутбук. Модельная серия: 16 Premium. Гарантия: 36 мес. Для бренда: Dell. Модель: 16 Premium. Коды: 210-BRTS_DA16250_ARLH_006.]]></description>
 <param name="Тип">Ноутбук</param>
 <param name="Гарантия">36 мес</param>
 <param name="Для бренда">Dell</param>
-<param name="Модель">16 Premium (DA16250) (210-BRTS_DA16250_ARLH_006)</param>
-<param name="Коды">16 Premium</param>
+<param name="Модель">16 Premium</param>
+<param name="Коды">210-BRTS_DA16250_ARLH_006</param>
 </offer>
 
 <offer id="CP13873001" available="true">
@@ -14415,12 +14499,12 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Ноутбук. Гарантия: 36 мес. Для бренда: Dell. Модель: 16 Premium (DA16250) (210-BRTS_DA16250_ARLH_008). Коды: 16 Premium.]]></description>
+Ноутбук. Модельная серия: 16 Premium. Гарантия: 36 мес. Для бренда: Dell. Модель: 16 Premium. Коды: 210-BRTS_DA16250_ARLH_008.]]></description>
 <param name="Тип">Ноутбук</param>
 <param name="Гарантия">36 мес</param>
 <param name="Для бренда">Dell</param>
-<param name="Модель">16 Premium (DA16250) (210-BRTS_DA16250_ARLH_008)</param>
-<param name="Коды">16 Premium</param>
+<param name="Модель">16 Premium</param>
+<param name="Коды">210-BRTS_DA16250_ARLH_008</param>
 </offer>
 
 <offer id="CP13873002" available="true">
@@ -14432,12 +14516,12 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Ноутбук. Гарантия: 36 мес. Для бренда: Dell. Модель: 16 Premium (DA16250) (210-BRTS_DA16250_ARLH_010). Коды: 16 Premium.]]></description>
+Ноутбук. Модельная серия: 16 Premium. Гарантия: 36 мес. Для бренда: Dell. Модель: 16 Premium. Коды: 210-BRTS_DA16250_ARLH_010.]]></description>
 <param name="Тип">Ноутбук</param>
 <param name="Гарантия">36 мес</param>
 <param name="Для бренда">Dell</param>
-<param name="Модель">16 Premium (DA16250) (210-BRTS_DA16250_ARLH_010)</param>
-<param name="Коды">16 Premium</param>
+<param name="Модель">16 Premium</param>
+<param name="Коды">210-BRTS_DA16250_ARLH_010</param>
 </offer>
 
 <offer id="CP13873016" available="true">
@@ -14449,12 +14533,12 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Моноблок. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro 24 All-in-One QC24251 (210-BPPN_BTO103_QC24251_EMEA). Коды: Pro 24 All-in-One QC24251.]]></description>
+Моноблок. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro 24 All-in-One QC24251. Коды: 210-BPPN_BTO103_QC24251_EMEA.]]></description>
 <param name="Тип">Моноблок</param>
 <param name="Гарантия">36 мес</param>
 <param name="Для бренда">Dell</param>
-<param name="Модель">Pro 24 All-in-One QC24251 (210-BPPN_BTO103_QC24251_EMEA)</param>
-<param name="Коды">Pro 24 All-in-One QC24251</param>
+<param name="Модель">Pro 24 All-in-One QC24251</param>
+<param name="Коды">210-BPPN_BTO103_QC24251_EMEA</param>
 </offer>
 
 <offer id="CP13873017" available="true">
@@ -14466,12 +14550,12 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Моноблок. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro 24 All-in-One QC24250 (210-BPNS_BTO155_QC24250_EMEA). Коды: Pro 24 All-in-One QC24250.]]></description>
+Моноблок. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro 24 All-in-One QC24250. Коды: 210-BPNS_BTO155_QC24250_EMEA.]]></description>
 <param name="Тип">Моноблок</param>
 <param name="Гарантия">36 мес</param>
 <param name="Для бренда">Dell</param>
-<param name="Модель">Pro 24 All-in-One QC24250 (210-BPNS_BTO155_QC24250_EMEA)</param>
-<param name="Коды">Pro 24 All-in-One QC24250</param>
+<param name="Модель">Pro 24 All-in-One QC24250</param>
+<param name="Коды">210-BPNS_BTO155_QC24250_EMEA</param>
 </offer>
 
 <offer id="CP13872548" available="true">
@@ -14485,7 +14569,7 @@ URL поставщика                             | https://www.comportal.kz/
 <description><![CDATA[
 Моноблок. Процессор: Intel 265 Core Ultra 7 2,4. Оперативная память: 16 Gb / DDR5 / 5600. Накопитель: 512 / SSD / 1 шт. Разрешение: 1920x1080. ОС: Microsoft Windows 11 Pro 64. Видеокарта: Intel Arc Xe 256 Mb. Wi‑Fi: AX211. Bluetooth: Bluetooth. Гарантия: 36 мес.]]></description>
 <param name="Тип">Моноблок</param>
-<param name="Модель">Pro 24 All-in-One QC24250 (210-BPNS_BTO155_QC24250_EMEA)</param>
+<param name="Модель">Pro 24 All-in-One QC24250</param>
 <param name="Объем жесткого диска">512</param>
 <param name="Тип жесткого диска">SSD</param>
 <param name="Производитель процессора">Intel</param>
@@ -14519,7 +14603,7 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Тип дисплея">Full HD</param>
 <param name="Монитор">23.8&amp;quot;, Touch, FHD</param>
 <param name="Для бренда">Dell</param>
-<param name="Коды">Pro 24 All-in-One QC24250</param>
+<param name="Коды">210-BPNS_BTO155_QC24250_EMEA</param>
 </offer>
 
 <offer id="CP13873018" available="true">
@@ -14531,12 +14615,12 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Моноблок. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro 24 All-in-One QC24250 (210-BPNS_BTO154_QC24250_EMEA). Коды: Pro 24 All-in-One QC24250.]]></description>
+Моноблок. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro 24 All-in-One QC24250. Коды: 210-BPNS_BTO154_QC24250_EMEA.]]></description>
 <param name="Тип">Моноблок</param>
 <param name="Гарантия">36 мес</param>
 <param name="Для бренда">Dell</param>
-<param name="Модель">Pro 24 All-in-One QC24250 (210-BPNS_BTO154_QC24250_EMEA)</param>
-<param name="Коды">Pro 24 All-in-One QC24250</param>
+<param name="Модель">Pro 24 All-in-One QC24250</param>
+<param name="Коды">210-BPNS_BTO154_QC24250_EMEA</param>
 </offer>
 
 <offer id="CP13873019" available="true">
@@ -14548,12 +14632,12 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Моноблок. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro 24 All-in-One Plus QB24250 (210-BPPG_BTO103_QB24250_EMEA). Коды: Pro 24 All-in-One Plus QB24250.]]></description>
+Моноблок. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro 24 All-in-One Plus QB24250. Коды: 210-BPPG_BTO103_QB24250_EMEA.]]></description>
 <param name="Тип">Моноблок</param>
 <param name="Гарантия">36 мес</param>
 <param name="Для бренда">Dell</param>
-<param name="Модель">Pro 24 All-in-One Plus QB24250 (210-BPPG_BTO103_QB24250_EMEA)</param>
-<param name="Коды">Pro 24 All-in-One Plus QB24250</param>
+<param name="Модель">Pro 24 All-in-One Plus QB24250</param>
+<param name="Коды">210-BPPG_BTO103_QB24250_EMEA</param>
 </offer>
 
 <offer id="CP13873021" available="true">
@@ -14565,12 +14649,12 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Настольный ПК. Гарантия: 36 мес. Для бренда: Dell. Модель: Компьютер Dell Pro Micro QCM1250 (210-BPQB_BTO003_QCM1250_EMEA). Коды: Pro Micro QCM1250.]]></description>
+Настольный ПК. Модельная серия: Pro Micro QCM1250. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro Micro QCM1250. Коды: 210-BPQB_BTO003_QCM1250_EMEA.]]></description>
 <param name="Тип">Настольный ПК</param>
 <param name="Гарантия">36 мес</param>
 <param name="Для бренда">Dell</param>
-<param name="Модель">Компьютер Dell Pro Micro QCM1250 (210-BPQB_BTO003_QCM1250_EMEA)</param>
-<param name="Коды">Pro Micro QCM1250</param>
+<param name="Модель">Pro Micro QCM1250</param>
+<param name="Коды">210-BPQB_BTO003_QCM1250_EMEA</param>
 </offer>
 
 <offer id="CP13873023" available="true">
@@ -14582,12 +14666,12 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Настольный ПК. Гарантия: 36 мес. Для бренда: Dell. Модель: Компьютер Dell Pro Micro QCM1250 (210-BPPV_BTO106_QCM1250_EMEA). Коды: Pro Micro QCM1250.]]></description>
+Настольный ПК. Модельная серия: Pro Micro QCM1250. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro Micro QCM1250. Коды: 210-BPPV_BTO106_QCM1250_EMEA.]]></description>
 <param name="Тип">Настольный ПК</param>
 <param name="Гарантия">36 мес</param>
 <param name="Для бренда">Dell</param>
-<param name="Модель">Компьютер Dell Pro Micro QCM1250 (210-BPPV_BTO106_QCM1250_EMEA)</param>
-<param name="Коды">Pro Micro QCM1250</param>
+<param name="Модель">Pro Micro QCM1250</param>
+<param name="Коды">210-BPPV_BTO106_QCM1250_EMEA</param>
 </offer>
 
 <offer id="CP13873024" available="true">
@@ -14599,12 +14683,12 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Моноблок. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro 24 All-in-One Plus QB24250 (210-BPPG_BTO101_QB24250_EMEA). Коды: Pro 24 All-in-One Plus QB24250.]]></description>
+Моноблок. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro 24 All-in-One Plus QB24250. Коды: 210-BPPG_BTO101_QB24250_EMEA.]]></description>
 <param name="Тип">Моноблок</param>
 <param name="Гарантия">36 мес</param>
 <param name="Для бренда">Dell</param>
-<param name="Модель">Pro 24 All-in-One Plus QB24250 (210-BPPG_BTO101_QB24250_EMEA)</param>
-<param name="Коды">Pro 24 All-in-One Plus QB24250</param>
+<param name="Модель">Pro 24 All-in-One Plus QB24250</param>
+<param name="Коды">210-BPPG_BTO101_QB24250_EMEA</param>
 </offer>
 
 <offer id="CP13873025" available="true">
@@ -14616,12 +14700,12 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Настольный ПК. Гарантия: 36 мес. Для бренда: Dell. Модель: Компьютер Dell Pro Micro QCM1250 (210-BPPV_BTO107_QCM1250_EMEA). Коды: Pro Micro QCM1250.]]></description>
+Настольный ПК. Модельная серия: Pro Micro QCM1250. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro Micro QCM1250. Коды: 210-BPPV_BTO107_QCM1250_EMEA.]]></description>
 <param name="Тип">Настольный ПК</param>
 <param name="Гарантия">36 мес</param>
 <param name="Для бренда">Dell</param>
-<param name="Модель">Компьютер Dell Pro Micro QCM1250 (210-BPPV_BTO107_QCM1250_EMEA)</param>
-<param name="Коды">Pro Micro QCM1250</param>
+<param name="Модель">Pro Micro QCM1250</param>
+<param name="Коды">210-BPPV_BTO107_QCM1250_EMEA</param>
 </offer>
 
 <offer id="CP13873026" available="true">
@@ -14633,12 +14717,12 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Настольный ПК. Гарантия: 36 мес. Для бренда: Dell. Модель: Компьютер Dell Pro Tower QCT1250 (210-BPRW_BTO107_QCT1250_EMEA). Коды: Pro Tower QCT1250.]]></description>
+Настольный ПК. Модельная серия: Pro Tower QCT1250. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro Tower QCT1250. Коды: 210-BPRW_BTO107_QCT1250_EMEA.]]></description>
 <param name="Тип">Настольный ПК</param>
 <param name="Гарантия">36 мес</param>
 <param name="Для бренда">Dell</param>
-<param name="Модель">Компьютер Dell Pro Tower QCT1250 (210-BPRW_BTO107_QCT1250_EMEA)</param>
-<param name="Коды">Pro Tower QCT1250</param>
+<param name="Модель">Pro Tower QCT1250</param>
+<param name="Коды">210-BPRW_BTO107_QCT1250_EMEA</param>
 </offer>
 
 <offer id="CP13873027" available="true">
@@ -14650,12 +14734,12 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Настольный ПК. Гарантия: 36 мес. Для бренда: Dell. Модель: Компьютер Dell Pro Max Tower T2 FCT2250 (210-BPSN_BTO103_FCT2250_EMEA). Коды: Pro Max Tower.]]></description>
+Настольный ПК. Модельная серия: Pro Max Tower. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro Max Tower. Коды: 210-BPSN_BTO103_FCT2250_EMEA.]]></description>
 <param name="Тип">Настольный ПК</param>
 <param name="Гарантия">36 мес</param>
 <param name="Для бренда">Dell</param>
-<param name="Модель">Компьютер Dell Pro Max Tower T2 FCT2250 (210-BPSN_BTO103_FCT2250_EMEA)</param>
-<param name="Коды">Pro Max Tower</param>
+<param name="Модель">Pro Max Tower</param>
+<param name="Коды">210-BPSN_BTO103_FCT2250_EMEA</param>
 </offer>
 
 <offer id="CP13873028" available="true">
@@ -14667,12 +14751,12 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Настольный ПК. Гарантия: 36 мес. Для бренда: Dell. Модель: Компьютер Dell Pro Max Tower T2 FCT2250 (210-BPSN_BTO113_FCT2250_EMEA). Коды: Pro Max Tower.]]></description>
+Настольный ПК. Модельная серия: Pro Max Tower. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro Max Tower. Коды: 210-BPSN_BTO113_FCT2250_EMEA.]]></description>
 <param name="Тип">Настольный ПК</param>
 <param name="Гарантия">36 мес</param>
 <param name="Для бренда">Dell</param>
-<param name="Модель">Компьютер Dell Pro Max Tower T2 FCT2250 (210-BPSN_BTO113_FCT2250_EMEA)</param>
-<param name="Коды">Pro Max Tower</param>
+<param name="Модель">Pro Max Tower</param>
+<param name="Коды">210-BPSN_BTO113_FCT2250_EMEA</param>
 </offer>
 
 <offer id="CP13873029" available="true">
@@ -14684,12 +14768,12 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Настольный ПК. Гарантия: 36 мес. Для бренда: Dell. Модель: Компьютер Dell Pro Max Tower T2 FCT2250 (210-BPSN_BTO109_FCT2250_EMEA). Коды: Pro Max Tower.]]></description>
+Настольный ПК. Модельная серия: Pro Max Tower. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro Max Tower. Коды: 210-BPSN_BTO109_FCT2250_EMEA.]]></description>
 <param name="Тип">Настольный ПК</param>
 <param name="Гарантия">36 мес</param>
 <param name="Для бренда">Dell</param>
-<param name="Модель">Компьютер Dell Pro Max Tower T2 FCT2250 (210-BPSN_BTO109_FCT2250_EMEA)</param>
-<param name="Коды">Pro Max Tower</param>
+<param name="Модель">Pro Max Tower</param>
+<param name="Коды">210-BPSN_BTO109_FCT2250_EMEA</param>
 </offer>
 
 <offer id="CP13873030" available="true">
@@ -14701,12 +14785,12 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Настольный ПК. Гарантия: 36 мес. Для бренда: Dell. Модель: Компьютер Dell Pro Max Tower T2 FCT2250 (210-BPSN_BTO112_FCT2250_EMEA). Коды: Pro Max Tower.]]></description>
+Настольный ПК. Модельная серия: Pro Max Tower. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro Max Tower. Коды: 210-BPSN_BTO112_FCT2250_EMEA.]]></description>
 <param name="Тип">Настольный ПК</param>
 <param name="Гарантия">36 мес</param>
 <param name="Для бренда">Dell</param>
-<param name="Модель">Компьютер Dell Pro Max Tower T2 FCT2250 (210-BPSN_BTO112_FCT2250_EMEA)</param>
-<param name="Коды">Pro Max Tower</param>
+<param name="Модель">Pro Max Tower</param>
+<param name="Коды">210-BPSN_BTO112_FCT2250_EMEA</param>
 </offer>
 
 <offer id="CP13873031" available="true">
@@ -14718,12 +14802,12 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Настольный ПК. Гарантия: 36 мес. Для бренда: Dell. Модель: Компьютер Dell Pro Tower QCT1250 (210-BPRW_BTO110_QCT1250_EMEA). Коды: Pro Tower QCT1250.]]></description>
+Настольный ПК. Модельная серия: Pro Tower QCT1250. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro Tower QCT1250. Коды: 210-BPRW_BTO110_QCT1250_EMEA.]]></description>
 <param name="Тип">Настольный ПК</param>
 <param name="Гарантия">36 мес</param>
 <param name="Для бренда">Dell</param>
-<param name="Модель">Компьютер Dell Pro Tower QCT1250 (210-BPRW_BTO110_QCT1250_EMEA)</param>
-<param name="Коды">Pro Tower QCT1250</param>
+<param name="Модель">Pro Tower QCT1250</param>
+<param name="Коды">210-BPRW_BTO110_QCT1250_EMEA</param>
 </offer>
 
 <offer id="CP13872965" available="true">
@@ -14735,12 +14819,12 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Моноблок. Гарантия: 36 мес. Для бренда: Dell. Модель: All-in-One EC27250 (210-BPFS_EC27250_RPLU-R_010). Коды: All-in-One EC27250.]]></description>
+Моноблок. Гарантия: 36 мес. Для бренда: Dell. Модель: All-in-One EC27250. Коды: 210-BPFS_EC27250_RPLU-R_010.]]></description>
 <param name="Тип">Моноблок</param>
 <param name="Гарантия">36 мес</param>
 <param name="Для бренда">Dell</param>
-<param name="Модель">All-in-One EC27250 (210-BPFS_EC27250_RPLU-R_010)</param>
-<param name="Коды">All-in-One EC27250</param>
+<param name="Модель">All-in-One EC27250</param>
+<param name="Коды">210-BPFS_EC27250_RPLU-R_010</param>
 </offer>
 
 <offer id="CP13873003" available="true">
@@ -14752,12 +14836,12 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Настольный ПК. Гарантия: 36 мес. Для бренда: Dell. Модель: Компьютер Dell Tower Plus EBT2250 (210-BPDZ_EBT2250_ARL_127). Коды: Tower Plus EBT2250.]]></description>
+Настольный ПК. Модельная серия: Tower Plus EBT2250. Гарантия: 36 мес. Для бренда: Dell. Модель: Tower Plus EBT2250. Коды: 210-BPDZ_EBT2250_ARL_127.]]></description>
 <param name="Тип">Настольный ПК</param>
 <param name="Гарантия">36 мес</param>
 <param name="Для бренда">Dell</param>
-<param name="Модель">Компьютер Dell Tower Plus EBT2250 (210-BPDZ_EBT2250_ARL_127)</param>
-<param name="Коды">Tower Plus EBT2250</param>
+<param name="Модель">Tower Plus EBT2250</param>
+<param name="Коды">210-BPDZ_EBT2250_ARL_127</param>
 </offer>
 
 <offer id="CP13873004" available="true">
@@ -14769,12 +14853,12 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Настольный ПК. Гарантия: 36 мес. Для бренда: Dell. Модель: Компьютер Dell Tower Plus EBT2250 (210-BPDZ_EBT2250_ARL_128). Коды: Tower Plus EBT2250.]]></description>
+Настольный ПК. Модельная серия: Tower Plus EBT2250. Гарантия: 36 мес. Для бренда: Dell. Модель: Tower Plus EBT2250. Коды: 210-BPDZ_EBT2250_ARL_128.]]></description>
 <param name="Тип">Настольный ПК</param>
 <param name="Гарантия">36 мес</param>
 <param name="Для бренда">Dell</param>
-<param name="Модель">Компьютер Dell Tower Plus EBT2250 (210-BPDZ_EBT2250_ARL_128)</param>
-<param name="Коды">Tower Plus EBT2250</param>
+<param name="Модель">Tower Plus EBT2250</param>
+<param name="Коды">210-BPDZ_EBT2250_ARL_128</param>
 </offer>
 
 <offer id="CP13872444" available="true">
@@ -14818,7 +14902,7 @@ URL поставщика                             | https://www.comportal.kz/
 <description><![CDATA[
 Сканер. Разрешение: 600x600. Порты: USB. Гарантия: 12 мес.]]></description>
 <param name="Тип">Сканер</param>
-<param name="Модель">imageFORMULA DR-C240 + RIPDF 25 (0651C003 / bundle)</param>
+<param name="Модель">imageFORMULA DR-C240 + RIPDF 25</param>
 <param name="Дополнительная информация">+ Лицензия программного обеспечения Canon RIPDF 25</param>
 <param name="Порты">USB</param>
 <param name="Гарантия">12 мес</param>
@@ -14829,7 +14913,7 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Нагрузка">4000 листов в день</param>
 <param name="Разрядность">24</param>
 <param name="Для бренда">Canon</param>
-<param name="Коды">imageFORMULA DR-C240 + RIPDF 25</param>
+<param name="Коды">0651C003 / bundle</param>
 </offer>
 
 <offer id="CP13872381" available="true">
@@ -14843,7 +14927,7 @@ URL поставщика                             | https://www.comportal.kz/
 <description><![CDATA[
 Сканер. Разрешение: 600x600. Порты: USB. Гарантия: 12 мес.]]></description>
 <param name="Тип">Сканер</param>
-<param name="Модель">imageFORMULA DR-C230 (2646C003 / bundle)</param>
+<param name="Модель">imageFORMULA DR-C230</param>
 <param name="Порты">USB</param>
 <param name="Гарантия">12 мес</param>
 <param name="Разрешение">600x600</param>
@@ -14852,7 +14936,7 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Формат файлов">A4</param>
 <param name="Нагрузка">3500 листов в день</param>
 <param name="Для бренда">Canon</param>
-<param name="Коды">imageFORMULA DR-C230</param>
+<param name="Коды">2646C003 / bundle</param>
 </offer>
 
 <offer id="CP13872879" available="true">
@@ -14864,12 +14948,29 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Ноутбук. Гарантия: 12 мес. Для бренда: Dell. Модель: Pro 14 Plus (210-BPDN_1). Коды: Pro 14 Plus.]]></description>
+Ноутбук. Модельная серия: Pro 14 Plus. Гарантия: 12 мес. Для бренда: Dell. Модель: Pro 14 Plus. Коды: 210-BPDN_1.]]></description>
 <param name="Тип">Ноутбук</param>
 <param name="Гарантия">12 мес</param>
 <param name="Для бренда">Dell</param>
-<param name="Модель">Pro 14 Plus (210-BPDN_1)</param>
-<param name="Коды">Pro 14 Plus</param>
+<param name="Модель">Pro 14 Plus</param>
+<param name="Коды">210-BPDN_1</param>
+</offer>
+
+<offer id="CP13872682" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13872682</vendorCode>
+<name>Ноутбук Asus Vivobook 15 / X1504VA-BQ4489W (90NB13Y1-M02790)</name>
+<price>264153</price>
+<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
+<vendor>ASUS</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Ноутбук. Гарантия: 12 мес. Для бренда: ASUS. Модель: Vivobook 15 / X1504VA-BQ4489W. Коды: 90NB13Y1-M02790.]]></description>
+<param name="Тип">Ноутбук</param>
+<param name="Гарантия">12 мес</param>
+<param name="Коды">90NB13Y1-M02790</param>
+<param name="Модель">Vivobook 15 / X1504VA-BQ4489W</param>
+<param name="Для бренда">ASUS</param>
 </offer>
 
 <offer id="CP13872774" available="true">
@@ -14898,12 +14999,12 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Ноутбук. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro 16 PC16250 (BTO120_PC16250_EMEA_210-BQHB). Коды: Pro 16 PC16250.]]></description>
+Ноутбук. Модельная серия: Pro 16 PC16250. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro 16 PC16250. Коды: BTO120_PC16250_EMEA_210-BQHB.]]></description>
 <param name="Тип">Ноутбук</param>
 <param name="Гарантия">36 мес</param>
 <param name="Для бренда">Dell</param>
-<param name="Модель">Pro 16 PC16250 (BTO120_PC16250_EMEA_210-BQHB)</param>
-<param name="Коды">Pro 16 PC16250</param>
+<param name="Модель">Pro 16 PC16250</param>
+<param name="Коды">BTO120_PC16250_EMEA_210-BQHB</param>
 </offer>
 
 <offer id="CP13873005" available="true">
@@ -14915,12 +15016,12 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Ноутбук. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro 16 PC16250 (BTO118_PC16250_EMEA_210-BQHB). Коды: Pro 16 PC16250.]]></description>
+Ноутбук. Модельная серия: Pro 16 PC16250. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro 16 PC16250. Коды: BTO118_PC16250_EMEA_210-BQHB.]]></description>
 <param name="Тип">Ноутбук</param>
 <param name="Гарантия">36 мес</param>
 <param name="Для бренда">Dell</param>
-<param name="Модель">Pro 16 PC16250 (BTO118_PC16250_EMEA_210-BQHB)</param>
-<param name="Коды">Pro 16 PC16250</param>
+<param name="Модель">Pro 16 PC16250</param>
+<param name="Коды">BTO118_PC16250_EMEA_210-BQHB</param>
 </offer>
 
 <offer id="CP13873006" available="true">
@@ -14932,12 +15033,12 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Ноутбук. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro 16 PC16250 (BTO121_PC16250_EMEA_210-BQHB). Коды: Pro 16 PC16250.]]></description>
+Ноутбук. Модельная серия: Pro 16 PC16250. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro 16 PC16250. Коды: BTO121_PC16250_EMEA_210-BQHB.]]></description>
 <param name="Тип">Ноутбук</param>
 <param name="Гарантия">36 мес</param>
 <param name="Для бренда">Dell</param>
-<param name="Модель">Pro 16 PC16250 (BTO121_PC16250_EMEA_210-BQHB)</param>
-<param name="Коды">Pro 16 PC16250</param>
+<param name="Модель">Pro 16 PC16250</param>
+<param name="Коды">BTO121_PC16250_EMEA_210-BQHB</param>
 </offer>
 
 <offer id="CP13873137" available="true">
@@ -14949,12 +15050,12 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Ноутбук. Гарантия: 36 мес. Для бренда: Dell. Модель: Мобильная рабочая станция Dell Pro Max 18 Plus MB18250 (210-BRXL / BTO101_MB18250_EMEA). Коды: Pro Max 18.]]></description>
+Ноутбук. Модельная серия: Pro Max 18. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro Max 18. Коды: 210-BRXL / BTO101_MB18250_EMEA.]]></description>
 <param name="Тип">Ноутбук</param>
 <param name="Гарантия">36 мес</param>
 <param name="Для бренда">Dell</param>
-<param name="Модель">Мобильная рабочая станция Dell Pro Max 18 Plus MB18250 (210-BRXL / BTO101_MB18250_EMEA)</param>
-<param name="Коды">Pro Max 18</param>
+<param name="Модель">Pro Max 18</param>
+<param name="Коды">210-BRXL / BTO101_MB18250_EMEA</param>
 </offer>
 
 <offer id="CP13873058" available="true">
@@ -14966,12 +15067,12 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Ноутбук. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro 14 Plus PB14250 (210-BPDK / BTO217_PB14250_EMEA). Коды: Pro 14 Plus PB14250.]]></description>
+Ноутбук. Модельная серия: Pro 14 Plus PB14250. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro 14 Plus PB14250. Коды: 210-BPDK / BTO217_PB14250_EMEA.]]></description>
 <param name="Тип">Ноутбук</param>
 <param name="Гарантия">36 мес</param>
 <param name="Для бренда">Dell</param>
-<param name="Модель">Pro 14 Plus PB14250 (210-BPDK / BTO217_PB14250_EMEA)</param>
-<param name="Коды">Pro 14 Plus PB14250</param>
+<param name="Модель">Pro 14 Plus PB14250</param>
+<param name="Коды">210-BPDK / BTO217_PB14250_EMEA</param>
 </offer>
 
 <offer id="CP13873061" available="true">
@@ -14983,12 +15084,12 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Ноутбук. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro 14 Plus (PB14250) (210-BPDK_3 / BTO211_PB14250_EMEA). Коды: Pro 14 Plus.]]></description>
+Ноутбук. Модельная серия: Pro 14 Plus. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro 14 Plus. Коды: 210-BPDK_3 / BTO211_PB14250_EMEA.]]></description>
 <param name="Тип">Ноутбук</param>
 <param name="Гарантия">36 мес</param>
 <param name="Для бренда">Dell</param>
-<param name="Модель">Pro 14 Plus (PB14250) (210-BPDK_3 / BTO211_PB14250_EMEA)</param>
-<param name="Коды">Pro 14 Plus</param>
+<param name="Модель">Pro 14 Plus</param>
+<param name="Коды">210-BPDK_3 / BTO211_PB14250_EMEA</param>
 </offer>
 
 <offer id="CP10318173" available="true">
