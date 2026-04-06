@@ -58,7 +58,7 @@ jobs:
           import re
           from pathlib import Path
           text = Path("scripts/build_copyline.py").read_text(encoding="utf-8", errors="ignore")
-          m = re.search(r'BUILD_[A-Z_]+_VERSION\s*=\s*["']([^"']+)["']', text)
+          m = re.search(r"BUILD_[A-Z_]+_VERSION\s*=\s*[\'\"]([^\'\"]+)[\'\"]", text)
           print("build_version:", m.group(1) if m else "unknown")
           PY
 
