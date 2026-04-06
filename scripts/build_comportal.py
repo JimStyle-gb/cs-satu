@@ -4,13 +4,19 @@ Path: scripts/build_comportal.py
 
 ComPortal adapter (CP) — thin orchestrator under CS-template.
 
-v7:
-- quality_gate берётся по схеме policy first -> schema fallback;
-- baseline path приведён к каноническому quality_gate_baseline.yml;
-- пробрасывается полный supplier-side qg контракт:
-  baseline_path, report_path, enforce,
-  max_new_cosmetic_offers, max_new_cosmetic_issues,
-  freeze_current_as_baseline.
+Что делает:
+- грузит supplier config: filter / schema / policy;
+- читает bundle исходных XML-данных поставщика;
+- прогоняет source -> filtering -> builder;
+- пишет raw feed;
+- пишет final feed;
+- пишет watch-report;
+- запускает supplier-side quality gate.
+
+Важно:
+- supplier-specific логика остаётся только в suppliers/comportal/*;
+- build_comportal.py не должен знать regex-логику ComPortal;
+- orchestrator остаётся тонким и шаблонным относительно AlStyle и AkCent.
 """
 
 from __future__ import annotations
