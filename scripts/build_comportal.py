@@ -18,10 +18,11 @@ ComPortal adapter (CP) — thin orchestrator under CS-template.
 - build_comportal.py не должен знать regex-логику ComPortal;
 - orchestrator остаётся тонким и шаблонным относительно других поставщиков.
 
-v3:
-- fallback hour исправлен с 04:00 на 03:00 по проектному порядку;
-- next run в FEED_META теперь совпадает с правилом:
-  AkCent 01:00 -> AlStyle 02:00 -> ComPortal 03:00 -> CopyLine 04:00 -> VTT 05:00.
+v4:
+- source of truth для quality_gate теперь policy.yml first, schema.yml fallback;
+- baseline path приведён к quality_gate_baseline.yml;
+- build пробрасывает в supplier quality gate полный канонический контракт;
+- fallback hour остаётся 03:00 по проектному порядку.
 """
 
 from __future__ import annotations
@@ -49,7 +50,7 @@ from suppliers.comportal.quality_gate import run_quality_gate
 from suppliers.comportal.source import load_source_bundle
 
 
-BUILD_COMPORTAL_VERSION = "build_comportal_v3_hour_0300"
+BUILD_COMPORTAL_VERSION = "build_comportal_v4_qg_policy_first"
 COMPORTAL_URL_DEFAULT = "https://www.comportal.kz/auth/documents/prices/yml-catalog.php"
 COMPORTAL_OUT_DEFAULT = "docs/comportal.yml"
 COMPORTAL_RAW_OUT_DEFAULT = "docs/raw/comportal.yml"
@@ -62,7 +63,7 @@ SCHEMA_FILE_DEFAULT = "schema.yml"
 POLICY_FILE_DEFAULT = "policy.yml"
 
 WATCH_REPORT_DEFAULT = "docs/raw/comportal_watch.txt"
-QUALITY_BASELINE_DEFAULT = "scripts/suppliers/comportal/config/quality_baseline.yml"
+QUALITY_BASELINE_DEFAULT = "scripts/suppliers/comportal/config/quality_gate_baseline.yml"
 QUALITY_REPORT_DEFAULT = "docs/raw/comportal_quality_gate.txt"
 PLACEHOLDER_DEFAULT = "https://placehold.co/800x800/png?text=No+Photo"
 
@@ -104,16 +105,33 @@ def _resolve_vendor_blacklist(schema_cfg: dict[str, Any]) -> set[str]:
     return {str(x).strip().casefold() for x in (schema_cfg.get("vendor_blacklist_casefold") or []) if str(x).strip()}
 
 
-def _resolve_quality_gate(schema_cfg: dict[str, Any]) -> dict[str, Any]:
-    qg = dict(schema_cfg.get("quality_gate") or {})
+def _resolve_quality_gate(policy_cfg: dict[str, Any], schema_cfg: dict[str, Any]) -> dict[str, Any]:
+    qg = dict(policy_cfg.get("quality_gate") or schema_cfg.get("quality_gate") or {})
     if "enabled" not in qg:
         qg["enabled"] = True
     if "enforce" not in qg:
         qg["enforce"] = True
-    if not qg.get("baseline_file"):
-        qg["baseline_file"] = QUALITY_BASELINE_DEFAULT
-    if not qg.get("report_file"):
-        qg["report_file"] = QUALITY_REPORT_DEFAULT
+
+    baseline = (
+        os.getenv("COMPORTAL_QUALITY_BASELINE")
+        or qg.get("baseline_file")
+        or qg.get("baseline_path")
+        or QUALITY_BASELINE_DEFAULT
+    )
+    report = (
+        os.getenv("COMPORTAL_QUALITY_REPORT")
+        or qg.get("report_file")
+        or qg.get("report_path")
+        or QUALITY_REPORT_DEFAULT
+    )
+
+    qg["baseline_file"] = baseline
+    qg["baseline_path"] = baseline
+    qg["report_file"] = report
+    qg["report_path"] = report
+    qg["max_new_cosmetic_offers"] = _safe_int(qg.get("max_new_cosmetic_offers"), 5)
+    qg["max_new_cosmetic_issues"] = _safe_int(qg.get("max_new_cosmetic_issues"), 5)
+    qg["freeze_current_as_baseline"] = bool(qg.get("freeze_current_as_baseline", False))
     return qg
 
 
@@ -153,6 +171,11 @@ def _run_quality_gate(*, raw_out_file: str, cfg_dir: Path, qg: dict[str, Any]) -
         feed_path=raw_out_file,
         schema_path=schema_path,
         enforce=bool(qg.get("enforce", True)),
+        baseline_path=str(qg.get("baseline_file") or QUALITY_BASELINE_DEFAULT),
+        report_path=str(qg.get("report_file") or QUALITY_REPORT_DEFAULT),
+        max_new_cosmetic_offers=_safe_int(qg.get("max_new_cosmetic_offers"), 5),
+        max_new_cosmetic_issues=_safe_int(qg.get("max_new_cosmetic_issues"), 5),
+        freeze_current_as_baseline=bool(qg.get("freeze_current_as_baseline", False)),
     )
 
 
@@ -176,7 +199,7 @@ def main() -> int:
 
     placeholder_picture = _resolve_placeholder(schema_cfg)
     vendor_blacklist = _resolve_vendor_blacklist(schema_cfg)
-    qg = _resolve_quality_gate(schema_cfg)
+    qg = _resolve_quality_gate(policy_cfg, schema_cfg)
 
     if "placeholder_picture" not in schema_cfg:
         schema_cfg["placeholder_picture"] = placeholder_picture
