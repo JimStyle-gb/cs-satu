@@ -1,9 +1,16 @@
 schema_version: 2
 supplier: CopyLine
 timezone: Asia/Almaty
-# Новое единое расписание проекта: CopyLine запускается ежедневно в 04:00 по Алматы.
+
+# Единое расписание проекта:
+# CopyLine запускается 1 / 10 / 20 числа в 04:00 по Алматы.
 next_run_hour_local: 4
 schedule_hour_almaty: 4
+schedule_days_of_month:
+  - 1
+  - 10
+  - 20
+
 id_prefix: CL
 source_kind: html_site_parsing
 source_of_truth_for_params: page_params_first
@@ -13,6 +20,7 @@ mutate_params: false
 auto_codes_from_text: false
 auto_compat_from_text: false
 unknown_keys: drop
+
 param_priority:
   - Тип
   - Для бренда
@@ -23,6 +31,7 @@ param_priority:
   - Количество страниц (5% заполнение)
   - Ресурс
   - Модель
+
 quality_gate:
   enabled: true
   enforce: true
