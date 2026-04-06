@@ -11,17 +11,17 @@ freeze_current_as_baseline: no
 # yes = текущие cosmetic-хвосты сохранены как baseline-снимок
 critical_count: 0
 # Сколько найдено критичных проблем
-cosmetic_total_count: 90
+cosmetic_total_count: 89
 # Общее число некритичных проблем
-cosmetic_offer_count: 90
+cosmetic_offer_count: 89
 # В скольких товарах есть cosmetic-проблемы
 known_cosmetic_count: 0
 # Сколько cosmetic-проблем уже известны по baseline
 known_cosmetic_offer_count: 0
 # В скольких товарах есть уже известные cosmetic-проблемы
-new_cosmetic_count: 90
+new_cosmetic_count: 89
 # Сколько найдено новых cosmetic-проблем
-new_cosmetic_offer_count: 90
+new_cosmetic_offer_count: 89
 # В скольких товарах появились новые cosmetic-проблемы
 max_cosmetic_offers: 5
 # Допустимый максимум товаров с cosmetic-проблемами
@@ -49,7 +49,6 @@ COSMETIC TOTAL:
   - CP13872585 | placeholder_picture | https://placehold.co/800x800/png?text=No+Photo
   - CP13872587 | placeholder_picture | https://placehold.co/800x800/png?text=No+Photo
   - CP13872589 | placeholder_picture | https://placehold.co/800x800/png?text=No+Photo
-  - CP13872590 | placeholder_picture | https://placehold.co/800x800/png?text=No+Photo
   - CP13872591 | placeholder_picture | https://placehold.co/800x800/png?text=No+Photo
   - CP13872599 | placeholder_picture | https://placehold.co/800x800/png?text=No+Photo
   - CP13872613 | placeholder_picture | https://placehold.co/800x800/png?text=No+Photo
@@ -141,7 +140,6 @@ NEW COSMETIC:
   - CP13872585 | placeholder_picture | https://placehold.co/800x800/png?text=No+Photo
   - CP13872587 | placeholder_picture | https://placehold.co/800x800/png?text=No+Photo
   - CP13872589 | placeholder_picture | https://placehold.co/800x800/png?text=No+Photo
-  - CP13872590 | placeholder_picture | https://placehold.co/800x800/png?text=No+Photo
   - CP13872591 | placeholder_picture | https://placehold.co/800x800/png?text=No+Photo
   - CP13872599 | placeholder_picture | https://placehold.co/800x800/png?text=No+Photo
   - CP13872613 | placeholder_picture | https://placehold.co/800x800/png?text=No+Photo
