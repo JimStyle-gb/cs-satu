@@ -2,7 +2,15 @@
 """
 Path: scripts/suppliers/alstyle/models.py
 
-Внутренние модели supplier layer для AlStyle.
+AlStyle supplier layer — внутренние dataclass-модели.
+
+Роль файла:
+- держать типовой контракт между source / filtering / builder / diagnostics;
+- не хранить supplier-business логику;
+- не знать о final HTML и shared core rendering.
+
+Важно:
+- любые supplier-specific transforms живут не здесь, а в normalize / builder / compat.
 """
 
 from __future__ import annotations
