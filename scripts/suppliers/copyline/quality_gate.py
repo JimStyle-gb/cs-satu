@@ -2,18 +2,21 @@
 """
 Path: scripts/suppliers/copyline/quality_gate.py
 
-Final quality gate for CopyLine freeze-finalize stage.
-v25:
-- исправляет вызов общего cs.qg_report.write_quality_gate_report под новый интерфейс;
-- убирает legacy-аргументы baseline_path/accepted_cosmetic, из-за которых падал build_copyline.py.
+CopyLine quality gate.
 
-Проверяет raw-feed и ловит уже финальные остаточные классы:
-- неполный mixed-brand / multi-code tail;
-- код есть в title, но не поднялся в params;
-- сломанная нормализация compat;
-- пустой vendor при очевидном бренде;
-- неожиданные cable-поля у не-кабелей.
-- gate согласован с CS-правилом: param `Назначение` не используется.
+Роль файла:
+- проверяет финальный feed на уже остаточные raw/final хвосты;
+- пишет единый quality gate отчёт через shared cs.qg_report writer;
+- не подменяет builder/normalize/compat логику.
+
+Что файл делает:
+- ловит проблемы codes/compat/model/vendor/cable-полей;
+- проверяет final feed уже после supplier-layer и shared core;
+- сохраняет совместимость с текущим build_copyline.py.
+
+Что файл НЕ делает:
+- не чинит supplier raw;
+- не должен превращаться в ещё один extractor/normalizer.
 """
 
 from __future__ import annotations
