@@ -34,7 +34,7 @@ def next_run_at_hour(build_time: datetime, *, hour: int) -> datetime:
     return target
 
 # CS: вычисляет next_run для расписания "в дни месяца" (например 1/10/20) в заданный час (Алматы)
-def next_run_dom_at_hour(now: datetime, *, hour: int, doms: tuple[int, ...] | list[int]) -> datetime:
+def next_run_dom_at_hour(now: datetime, hour: int, doms: tuple[int, ...] | list[int]) -> datetime:
     hour = int(hour)
     doms_sorted = sorted({int(d) for d in doms if 1 <= int(d) <= 31})
     if not doms_sorted:
