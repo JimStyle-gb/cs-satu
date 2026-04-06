@@ -2,7 +2,17 @@
 """
 Path: scripts/suppliers/alstyle/filtering.py
 
-Только фильтрация ассортимента AlStyle.
+AlStyle supplier layer — ассортиментная фильтрация.
+
+Что делает:
+- применяет include-policy по categoryId из config/filter.yml;
+- отсекает товары вне разрешённых категорий;
+- возвращает filtered list и компактный filter report;
+- не содержит source/builder/final логики.
+
+Важно:
+- фильтрация для AlStyle живёт только здесь и в config;
+- shared core не должен знать supplier-specific assortment policy.
 """
 
 from __future__ import annotations
