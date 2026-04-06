@@ -497,7 +497,7 @@ def _run_merge(cfg_dir: Path, filter_cfg: dict[str, Any], schema_cfg: dict[str, 
     param_priority = _load_param_priority(policy_cfg, schema_cfg)
 
     build_time = now_almaty().replace(tzinfo=None)
-    next_run = next_run_dom_at_hour(build_time, hour, dom)
+    next_run = next_run_dom_at_hour(build_time, hour=hour, doms=dom)
 
     offers, before = _load_shards()
     if not offers:
@@ -558,7 +558,7 @@ def _run_full(cfg_dir: Path, filter_cfg: dict[str, Any], schema_cfg: dict[str, A
     param_priority = _load_param_priority(policy_cfg, schema_cfg)
 
     build_time = now_almaty().replace(tzinfo=None)
-    next_run = next_run_dom_at_hour(build_time, hour, dom)
+    next_run = next_run_dom_at_hour(build_time, hour=hour, doms=dom)
 
     full_index = _collect_index(cfg)
     before = len(full_index)
