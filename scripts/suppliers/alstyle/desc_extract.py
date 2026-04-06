@@ -4,7 +4,7 @@ Path: scripts/suppliers/alstyle/desc_extract.py
 
 AlStyle description -> params extraction.
 
-v126:
+v127:
 - сохраняет прошлые фиксы по Цвет / Технология / Совместимость / Ресурс;
 - режет грязные compatibility-candidates, если в value протекли label-блоки
   типа "Характеристики / Модель / Ресурс / Цвет / Технология";
@@ -44,6 +44,20 @@ _DESC_SPEC_LINE_RE = re.compile(
     r"\s*(?::|\t+|\s{2,}|[-–—])\s*(.+?)\s*$",
     re.IGNORECASE | re.MULTILINE,
 )
+
+_DESC_INLINE_SPEC_HEADER_RE = re.compile(
+    r"^\s*(Характеристики|Основные характеристики|Технические характеристики)\s*:?\s*",
+    re.IGNORECASE,
+)
+_DESC_INLINE_SPEC_FIELD_HINT_RE = re.compile(
+    r"(?iu)\b("
+    r"Модель|Аналог модели|Совместимость|Совместимые модели|Устройства|Для принтеров|"
+    r"Технология печати|Цвет|Цвет печати|Ресурс|Ресурс картриджа|Ресурс картриджа, cтр\.|Ресурс картриджа, стр\.|"
+    r"Количество страниц|Кол-во страниц при 5% заполнении А4|Емкость|Ёмкость|Емкость лотка|Ёмкость лотка|"
+    r"Степлирование|Дополнительные опции|Применение|Количество в упаковке|Колличество в упаковке|"
+    r"Производитель|Устройство|Объем картриджа, мл|Объём картриджа, мл"
+    r")\b"
+)
 _DESC_COMPAT_LINE_RE = re.compile(
     r"^\s*Совместим(?:а|о|ы)?\s+с\s+(.+?)\s*$",
     re.IGNORECASE | re.MULTILINE,
@@ -67,20 +81,6 @@ _DESC_COLOR_PRINT_LABEL_ONLY_RE = re.compile(
 _DESC_CAPACITY_SENTENCE_RE = re.compile(
     r"\b(?:Емкость|Ёмкость)\s+лотка\s*[-:]\s*(.{2,120}?)(?:(?:[.!?](?:\s|$))|\n|$)",
     re.IGNORECASE | re.DOTALL,
-)
-
-_INLINE_SPEC_PREFIX_RE = re.compile(
-    r"^\s*(Характеристики|Основные характеристики|Технические характеристики)\s*:?\s+",
-    re.IGNORECASE,
-)
-_INLINE_SPEC_BODY_START_LABEL_RE = re.compile(
-    r"(?iu)^\s*(?:"
-    r"Модель|Аналог модели|Совместимость|Совместимые модели|Устройства|Для принтеров|"
-    r"Технология печати|Цвет|Цвет печати|Ресурс|Ресурс картриджа|Ресурс картриджа, cтр\.|Ресурс картриджа, стр\.|"
-    r"Количество страниц|Кол-во страниц при 5% заполнении А4|Емкость|Ёмкость|Емкость лотка|Ёмкость лотка|"
-    r"Степлирование|Дополнительные опции|Применение|Количество в упаковке|Колличество в упаковке|"
-    r"Производитель|Устройство|Объем картриджа, мл|Объём картриджа, мл"
-    r")\b"
 )
 
 _RESOURCE_INLINE_RE = re.compile(
@@ -870,31 +870,33 @@ def _split_explicit_spec_block(desc_src: str) -> tuple[str, bool]:
     return _normalize_body_lines(body), True
 
 
-
-def _split_inline_spec_prefixed_body(desc_src: str) -> tuple[str, bool]:
+def _split_inline_prefixed_spec_block(desc_src: str) -> tuple[str, bool]:
     """
-    Safe helper для кейсов, где supplier пишет заголовок spec-блока inline,
-    в одной строке, например:
-      - "Характеристики Модель 059K50681 ..."
-      - "Основные характеристики Проектор Wanbo ..."
+    Ловит кейсы вида:
+    - "Характеристики Модель 059K..."
+    - "Характеристики Модель: 806E..."
+    - "Основные характеристики Проектор ..."
 
-    Правило:
-    - если после inline-заголовка сразу идёт label-like spec-блок, body гасим;
-    - если после заголовка идёт обычный narrative, просто срезаем мусорный префикс.
+    Если после заголовка сразу идёт label-like техблок, body обнуляем.
+    Если после заголовка идёт обычный narrative, просто срезаем мусорный префикс.
     """
     src = _normalize_body_lines(desc_src)
     if not src:
         return "", False
 
-    m = _INLINE_SPEC_PREFIX_RE.match(src)
+    m = _DESC_INLINE_SPEC_HEADER_RE.match(src)
     if not m:
         return src, False
 
-    tail = norm_ws(src[m.end():])
+    tail = _normalize_body_lines(src[m.end():])
     if not tail:
         return "", True
 
-    if _INLINE_SPEC_BODY_START_LABEL_RE.match(tail):
+    head_window = tail[:320]
+    field_hits = len(_DESC_INLINE_SPEC_FIELD_HINT_RE.findall(head_window))
+
+    # Явный inline-spec: несколько label-хинтов подряд или label + двоеточия.
+    if field_hits >= 2 or (field_hits >= 1 and ":" in head_window):
         return "", True
 
     return tail, True
@@ -913,13 +915,10 @@ def extract_desc_body_and_spec_pairs(desc_src: str, schema: dict[str, Any]) -> t
     if not cleaned_for_extract.strip():
         return "", []
 
-    body_text, trimmed = _split_explicit_spec_block(desc_src)
-    if trimmed:
-        body_text, _ = _split_inline_spec_prefixed_body(body_text)
-    else:
-        body_text, inline_trimmed = _split_inline_spec_prefixed_body(desc_src)
-        if not inline_trimmed and not body_text:
-            body_text = _normalize_body_lines(desc_src)
+    body_text, _trimmed = _split_explicit_spec_block(desc_src)
+    body_text, _inline_trimmed = _split_inline_prefixed_spec_block(body_text if body_text else desc_src)
+    if not body_text:
+        body_text = _normalize_body_lines(desc_src)
 
     candidates: list[tuple[str, str]] = []
     candidates.extend(extract_resource_pairs(cleaned_for_extract))
