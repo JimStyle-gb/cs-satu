@@ -4,22 +4,17 @@ Path: scripts/suppliers/comportal/builder.py
 
 ComPortal supplier layer — сборка raw offer.
 
-Финальная микро-полировка:
-- safe mutual enrichment сохранён;
-- guard для "Модель" сохранён;
-- type-aware prune слабых техпараметров сохранён;
-- добавлена канонизация кривых supplier-ключей перед prune.
-
-Что это чинит:
-- "Емкость 1- го лотка" -> "емкость 1-го лотка"
-- "Емкость 2- го лотка" -> "емкость 2-го лотка"
-- "Емкость 3- го лотка" -> "емкость 3-го лотка"
-
-После этого такие кривые вариации должны нормально отрезаться.
+v8:
+- сохраняет safe mutual enrichment и type-aware prune;
+- усиливает descriptions для слабых Dell / corporate-кейсов;
+- использует title-fallback для публичной модели и диагонали, если XML params бедные;
+- мягко подменяет слабое значение "Модель" на более витринную title-series;
+- сохраняет канонизацию кривых supplier-ключей перед prune.
 """
 
 from __future__ import annotations
 
+from html import unescape
 from typing import Any
 import re
 
@@ -164,6 +159,112 @@ def _model_reconcile_should_keep_old(old_value: str, new_value: str) -> bool:
     return False
 
 
+_CODE_LIKE_RE = re.compile(r"^[A-Z0-9][A-Z0-9_#./\-]{4,}$", re.IGNORECASE)
+_TITLE_TAIL_CODE_RE = re.compile(r"\(([^()]{2,})\)\s*$")
+_CM_INCH_RE = re.compile(r"\b\d{2,3}(?:[.,]\d+)?\s*cm\s*\((\d{1,2}(?:[.,]\d)?)\s*\"\)")
+_INCH_RE = re.compile(r"(\d{1,2}(?:[.,]\d)?)\s*\"")
+_MONITOR_DIGIT_RE = re.compile(r"(?iu)\b(\d{2})(?:\s|[-–—])")
+_NOISY_MODEL_RE = re.compile(r"(?iu)^(?:монитор|ноутбук|моноблок|компьютер|плоттер|принтер)\b")
+
+
+def _decode_text(value: str) -> str:
+    return norm_ws(unescape(value or "").replace("&quot;", '"').replace("quot;", '"'))
+
+
+def _is_code_like_value(value: str, *, codes: str = "") -> bool:
+    v = _decode_text(value)
+    c = _decode_text(codes)
+    if not v:
+        return True
+    if c and v.casefold() == c.casefold():
+        return True
+    if "_" in v:
+        return True
+    if _CODE_LIKE_RE.fullmatch(v):
+        return True
+    if len(v) >= 18 and sum(ch.isdigit() for ch in v) >= 4 and any(sep in v for sep in ("-", "_", "#", "/")):
+        return True
+    return False
+
+
+def _clean_public_series_text(text: str, *, vendor: str, ptype: str, code: str) -> str:
+    s = _decode_text(text)
+    if not s:
+        return ""
+
+    if code:
+        s = re.sub(rf"\(\s*{re.escape(_decode_text(code))}\s*\)\s*$", "", s, flags=re.IGNORECASE).strip()
+
+    ptype_s = _decode_text(ptype)
+    vendor_s = _decode_text(vendor)
+
+    changed = True
+    while changed:
+        changed = False
+        for pat in (
+            rf"^{re.escape(ptype_s)}\s+{re.escape(vendor_s)}\s+" if ptype_s and vendor_s else "",
+            rf"^{re.escape(vendor_s)}\s+{re.escape(ptype_s)}\s+" if ptype_s and vendor_s else "",
+            rf"^{re.escape(ptype_s)}\s+" if ptype_s else "",
+            rf"^{re.escape(vendor_s)}\s+" if vendor_s else "",
+            rf"^Плоттер\s+{re.escape(vendor_s)}\s+" if vendor_s else "",
+            rf"^{re.escape(vendor_s)}\s*/" if vendor_s else "",
+        ):
+            if not pat:
+                continue
+            nxt = re.sub(pat, "", s, flags=re.IGNORECASE).strip(" /-–—,;:")
+            if nxt != s:
+                s = nxt
+                changed = True
+
+    s = re.sub(r",\s*\d{2,3}(?:[.,]\d+)?\s*cm\s*\([^)]*\)\s*$", "", s, flags=re.IGNORECASE)
+    s = re.sub(r"\s{2,}", " ", s).strip(" /-–—,;:")
+    return s
+
+
+def _title_public_series(clean_name: str, *, vendor: str, ptype: str, codes: str) -> str:
+    return _clean_public_series_text(clean_name, vendor=vendor, ptype=ptype, code=codes)
+
+
+def _title_monitor_diagonal(clean_name: str) -> str:
+    s = _decode_text(clean_name)
+    m = _CM_INCH_RE.search(s)
+    if m:
+        return m.group(1).replace(",", ".")
+    m = _INCH_RE.search(s)
+    if m:
+        return m.group(1).replace(",", ".")
+    m = _MONITOR_DIGIT_RE.search(s)
+    if m:
+        return m.group(1)
+    return ""
+
+
+def _effective_public_model(pmap: dict[str, str], *, clean_name: str, vendor: str, ptype: str) -> str:
+    model = _decode_text(pmap.get("Модель", ""))
+    codes = _decode_text(pmap.get("Коды", ""))
+    title_series = _title_public_series(clean_name, vendor=vendor, ptype=ptype, codes=codes)
+
+    if title_series and (_is_code_like_value(model, codes=codes) or _NOISY_MODEL_RE.search(model)):
+        return title_series
+    return model or title_series
+
+
+def _polish_model_param(params: list[ParamItem], *, clean_name: str, vendor: str) -> list[ParamItem]:
+    pmap = _param_map(params)
+    ptype = norm_ws(pmap.get("Тип", ""))
+    better_model = _effective_public_model(pmap, clean_name=clean_name, vendor=vendor, ptype=ptype)
+    current_model = _decode_text(pmap.get("Модель", ""))
+    codes = _decode_text(pmap.get("Коды", ""))
+
+    if not better_model:
+        return params
+    if current_model and current_model.casefold() == better_model.casefold():
+        return params
+    if not current_model or _is_code_like_value(current_model, codes=codes) or _NOISY_MODEL_RE.search(current_model):
+        return _upsert_param(params, name="Модель", value=better_model, source="title")
+    return params
+
+
 def _merge_desc_enrichment(xml_params: list[ParamItem], desc_params: list[ParamItem]) -> list[ParamItem]:
     out = list(xml_params)
     index: dict[str, int] = {}
@@ -239,37 +340,110 @@ def _desc_for_printing_device(pmap: dict[str, str]) -> str:
     return _finalize_desc(_join_nonempty(bits))
 
 
-def _desc_for_monitor(pmap: dict[str, str]) -> str:
+def _desc_for_monitor(pmap: dict[str, str], *, clean_name: str, vendor: str) -> str:
     bits: list[str] = ["Монитор"]
-    _append_param_line(bits, "Диагональ", pmap.get("Диагональ", ""))
+
+    public_model = _effective_public_model(pmap, clean_name=clean_name, vendor=vendor, ptype="Монитор")
+    diagonal = norm_ws(pmap.get("Диагональ", "") or pmap.get("Монитор", "") or _title_monitor_diagonal(clean_name))
+    matrix = norm_ws(pmap.get("Тип матрицы", "") or pmap.get("Тип дисплея", ""))
+
+    if public_model and not _is_code_like_value(public_model, codes=pmap.get("Коды", "")):
+        _append_param_line(bits, "Модельная серия", public_model)
+
+    _append_param_line(bits, "Диагональ", diagonal)
     _append_param_line(bits, "Максимальное разрешение", pmap.get("Максимальное разрешение", ""))
-    _append_param_line(bits, "Тип матрицы", pmap.get("Тип матрицы", ""))
+    _append_param_line(bits, "Тип матрицы", matrix)
     _append_param_line(bits, "Частота обновления", pmap.get("Частота обновления", ""))
     _append_param_line(bits, "Время отклика", pmap.get("Время отклика", ""))
     _append_param_line(bits, "Порты", pmap.get("Порты", ""))
     _append_param_line(bits, "Гарантия", pmap.get("Гарантия", ""))
-    bits = _enrich_sparse_device_desc(bits, pmap)
+
+    enrich_map = dict(pmap)
+    if public_model and not _is_code_like_value(public_model, codes=pmap.get("Коды", "")):
+        enrich_map["Модель"] = public_model
+    if diagonal and not enrich_map.get("Диагональ"):
+        enrich_map["Диагональ"] = diagonal
+
+    bits = _enrich_sparse_device_desc(bits, enrich_map)
     return _finalize_desc(_join_nonempty(bits))
 
 
-def _desc_for_computer(pmap: dict[str, str]) -> str:
+def _desc_for_computer(pmap: dict[str, str], *, clean_name: str, vendor: str) -> str:
     bits: list[str] = []
     ptype = norm_ws(pmap.get("Тип", ""))
     if ptype:
         bits.append(ptype)
-    cpu = _join_nonempty([pmap.get("Серия процессора", ""), pmap.get("Модель процессора", "")], sep=" ")
+
+    public_model = _effective_public_model(pmap, clean_name=clean_name, vendor=vendor, ptype=ptype)
+    if public_model and not _is_code_like_value(public_model, codes=pmap.get("Коды", "")):
+        _append_param_line(bits, "Модельная серия", public_model)
+
+    cpu = _join_nonempty(
+        [
+            pmap.get("Производитель процессора", ""),
+            pmap.get("Серия процессора", ""),
+            pmap.get("Модель процессора", ""),
+            pmap.get("Частота процессора", ""),
+        ],
+        sep=" ",
+    )
     _append_param_line(bits, "Процессор", cpu)
-    _append_param_line(bits, "Оперативная память", pmap.get("Оперативная память", ""))
-    storage = _join_nonempty([pmap.get("Объем жесткого диска", ""), pmap.get("Тип жесткого диска", "")], sep=" ")
+
+    ram = _join_nonempty(
+        [
+            pmap.get("Оперативная память", ""),
+            pmap.get("Тип оперативной памяти", ""),
+            pmap.get("Частота оперативной памяти", ""),
+        ],
+        sep=" / ",
+    )
+    _append_param_line(bits, "Оперативная память", ram)
+
+    storage = _join_nonempty(
+        [
+            pmap.get("Объем жесткого диска", ""),
+            pmap.get("Тип жесткого диска", ""),
+            f"{norm_ws(pmap.get('Количество дисков', ''))} шт" if norm_ws(pmap.get("Количество дисков", "")) else "",
+        ],
+        sep=" / ",
+    )
     _append_param_line(bits, "Накопитель", storage)
-    _append_param_line(bits, "Диагональ", pmap.get("Диагональ", ""))
-    _append_param_line(bits, "Максимальное разрешение", pmap.get("Максимальное разрешение", ""))
-    os_name = _join_nonempty([pmap.get("Операционная система", ""), pmap.get("Версия операционной системы", "")], sep=" ")
+
+    display_size = _join_nonempty([pmap.get("Размер дисплея", ""), pmap.get("Диагональ", "")], sep=" / ")
+    _append_param_line(bits, "Диагональ", display_size)
+    _append_param_line(bits, "Разрешение", pmap.get("Разрешение дисплея", "") or pmap.get("Максимальное разрешение", ""))
+
+    os_name = _join_nonempty(
+        [
+            pmap.get("Производитель операционной системы", ""),
+            pmap.get("Операционная система", ""),
+            pmap.get("Версия операционной системы", ""),
+            pmap.get("Битность операционной системы", ""),
+        ],
+        sep=" ",
+    )
     _append_param_line(bits, "ОС", os_name)
-    gpu = _join_nonempty([pmap.get("Марка чипсета видеокарты", ""), pmap.get("Модель чипсета видеокарты", "")], sep=" ")
+
+    gpu = _join_nonempty(
+        [
+            pmap.get("Производитель чипсета видеокарты", "") or pmap.get("Марка чипсета видеокарты", ""),
+            pmap.get("Модель чипсета видеокарты", ""),
+            pmap.get("Объем видеопамяти", ""),
+        ],
+        sep=" ",
+    )
     _append_param_line(bits, "Видеокарта", gpu)
+
+    _append_param_line(bits, "Wi‑Fi", pmap.get("Wi-Fi", ""))
+    _append_param_line(bits, "Bluetooth", pmap.get("Bluetooth", ""))
+    _append_param_line(bits, "Камера", pmap.get("Камера", ""))
     _append_param_line(bits, "Гарантия", pmap.get("Гарантия", ""))
-    bits = _enrich_sparse_device_desc(bits, pmap)
+
+    enrich_map = dict(pmap)
+    if public_model and not _is_code_like_value(public_model, codes=pmap.get("Коды", "")):
+        enrich_map["Модель"] = public_model
+
+    bits = _enrich_sparse_device_desc(bits, enrich_map)
     return _finalize_desc(_join_nonempty(bits))
 
 
@@ -351,11 +525,11 @@ def _build_native_desc(*, clean_name: str, source_offer: SourceOffer, params: li
         if text:
             return text
     if ptype == "монитор":
-        text = _desc_for_monitor(pmap)
+        text = _desc_for_monitor(pmap, clean_name=clean_name, vendor=norm_ws(pmap.get("Для бренда", "")))
         if text:
             return text
     if ptype in {"ноутбук", "моноблок", "настольный пк", "рабочая станция"}:
-        text = _desc_for_computer(pmap)
+        text = _desc_for_computer(pmap, clean_name=clean_name, vendor=norm_ws(pmap.get("Для бренда", "")))
         if text:
             return text
     if ptype in {"ибп", "стабилизатор", "батарея"}:
@@ -484,6 +658,7 @@ def build_offer_out(source_offer: SourceOffer, *, schema: dict[str, Any], policy
     )
     params = _merge_desc_enrichment(xml_params, desc_hint_params)
     params = _ensure_base_params(source_offer=source_offer, params=params, vendor=clean_vendor, model=clean_model)
+    params = _polish_model_param(params, clean_name=clean_name, vendor=clean_vendor)
     params = apply_compat_cleanup(params)
     params = _prune_low_value_params(params)
 
