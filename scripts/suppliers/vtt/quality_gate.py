@@ -4,11 +4,12 @@ Path: scripts/suppliers/vtt/quality_gate.py
 
 VTT quality gate.
 
-v7:
-- отчёт теперь полностью такой же по структуре, как у остальных поставщиков;
-- убраны DEBUG VTT и COSMETIC TOTAL BY RULE из txt-отчёта;
-- placeholder_picture остаётся в отчёте, но исключён из enforce;
-- baseline_file всегда заполнен каноническим путём.
+v8:
+- placeholder_picture остаётся в отчёте, но больше не считается new cosmetic;
+- placeholder_picture трактуется как rule-level allowed cosmetic tail;
+- baseline остаётся каноническим пустым YAML-контейнером;
+- стиль отчёта сохраняется каноническим;
+- PASS/FAIL по-прежнему считается только по enforced new cosmetic.
 """
 
 from __future__ import annotations
@@ -32,6 +33,7 @@ QUALITY_REPORT_DEFAULT = "docs/raw/vtt_quality_gate.txt"
 _DECIMAL_K_RE = re.compile(r"^\d+(?:[.,]\d+)+K$", re.I)
 _WS_RE = re.compile(r"\s+")
 _RULES_EXCLUDED_FROM_ENFORCE = {"placeholder_picture"}
+_RULES_TREATED_AS_ALLOWED_KNOWN = {"placeholder_picture"}
 
 
 @dataclass(frozen=True)
@@ -148,6 +150,8 @@ def _load_cosmetic_baseline(baseline_path: str | None) -> dict[str, set[str]]:
 def _make_baseline_payload(cosmetic: list[QualityIssue]) -> dict:
     grouped: dict[str, list[str]] = defaultdict(list)
     for issue in cosmetic:
+        if issue.rule in _RULES_TREATED_AS_ALLOWED_KNOWN:
+            continue
         grouped[issue.rule].append(issue.oid)
     payload = {"schema_version": 1, "accepted_cosmetic": {}}
     for rule in sorted(grouped):
@@ -265,7 +269,9 @@ def run_quality_gate(
     known_cosmetic: list[QualityIssue] = []
     new_cosmetic: list[QualityIssue] = []
     for issue in cosmetic:
-        if issue.oid in baseline.get(issue.rule, set()):
+        if issue.rule in _RULES_TREATED_AS_ALLOWED_KNOWN:
+            known_cosmetic.append(issue)
+        elif issue.oid in baseline.get(issue.rule, set()):
             known_cosmetic.append(issue)
         else:
             new_cosmetic.append(issue)
