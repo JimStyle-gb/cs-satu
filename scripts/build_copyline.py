@@ -189,7 +189,7 @@ def main() -> int:
     dom = _resolve_dom_list(policy_cfg)
 
     build_time = now_almaty().replace(tzinfo=None)
-    next_run = next_run_dom_at_hour(build_time, hour, dom)
+    next_run = next_run_dom_at_hour(build_time, hour=hour, doms=dom)
 
     index = fetch_product_index()
     before = len(index)
