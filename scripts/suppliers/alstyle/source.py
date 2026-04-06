@@ -2,7 +2,16 @@
 """
 Path: scripts/suppliers/alstyle/source.py
 
-Только источник AlStyle: скачать XML, распарсить и собрать SourceOffer.
+AlStyle supplier layer — source reader.
+
+Роль файла:
+- скачать XML поставщика;
+- распарсить offers и собрать SourceOffer;
+- сохранить supplier-truth без витринной business-логики.
+
+Важно:
+- нормализация, фильтрация и final cleanup живут не здесь;
+- source.py не должен знать о shared core и SEO-рендере.
 """
 
 from __future__ import annotations
