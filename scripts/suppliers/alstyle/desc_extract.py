@@ -69,6 +69,20 @@ _DESC_CAPACITY_SENTENCE_RE = re.compile(
     re.IGNORECASE | re.DOTALL,
 )
 
+_INLINE_SPEC_PREFIX_RE = re.compile(
+    r"^\s*(Характеристики|Основные характеристики|Технические характеристики)\s*:?\s+",
+    re.IGNORECASE,
+)
+_INLINE_SPEC_BODY_START_LABEL_RE = re.compile(
+    r"(?iu)^\s*(?:"
+    r"Модель|Аналог модели|Совместимость|Совместимые модели|Устройства|Для принтеров|"
+    r"Технология печати|Цвет|Цвет печати|Ресурс|Ресурс картриджа|Ресурс картриджа, cтр\.|Ресурс картриджа, стр\.|"
+    r"Количество страниц|Кол-во страниц при 5% заполнении А4|Емкость|Ёмкость|Емкость лотка|Ёмкость лотка|"
+    r"Степлирование|Дополнительные опции|Применение|Количество в упаковке|Колличество в упаковке|"
+    r"Производитель|Устройство|Объем картриджа, мл|Объём картриджа, мл"
+    r")\b"
+)
+
 _RESOURCE_INLINE_RE = re.compile(
     r"(?iu)\b(?:Ресурс\s+картриджа(?:,\s*[cс]тр\.)?|Ресурс|Количество\s+страниц|Кол-во\s+страниц\s+при\s+5%\s+заполнении\s+А4)\b"
     r"\s*(?::|[-–—])?\s*"
@@ -856,6 +870,36 @@ def _split_explicit_spec_block(desc_src: str) -> tuple[str, bool]:
     return _normalize_body_lines(body), True
 
 
+
+def _split_inline_spec_prefixed_body(desc_src: str) -> tuple[str, bool]:
+    """
+    Safe helper для кейсов, где supplier пишет заголовок spec-блока inline,
+    в одной строке, например:
+      - "Характеристики Модель 059K50681 ..."
+      - "Основные характеристики Проектор Wanbo ..."
+
+    Правило:
+    - если после inline-заголовка сразу идёт label-like spec-блок, body гасим;
+    - если после заголовка идёт обычный narrative, просто срезаем мусорный префикс.
+    """
+    src = _normalize_body_lines(desc_src)
+    if not src:
+        return "", False
+
+    m = _INLINE_SPEC_PREFIX_RE.match(src)
+    if not m:
+        return src, False
+
+    tail = norm_ws(src[m.end():])
+    if not tail:
+        return "", True
+
+    if _INLINE_SPEC_BODY_START_LABEL_RE.match(tail):
+        return "", True
+
+    return tail, True
+
+
 def extract_desc_body_and_spec_pairs(desc_src: str, schema: dict[str, Any]) -> tuple[str, list[tuple[str, str]]]:
     """
     Возвращает:
@@ -869,9 +913,13 @@ def extract_desc_body_and_spec_pairs(desc_src: str, schema: dict[str, Any]) -> t
     if not cleaned_for_extract.strip():
         return "", []
 
-    body_text, _trimmed = _split_explicit_spec_block(desc_src)
-    if not body_text:
-        body_text = _normalize_body_lines(desc_src)
+    body_text, trimmed = _split_explicit_spec_block(desc_src)
+    if trimmed:
+        body_text, _ = _split_inline_spec_prefixed_body(body_text)
+    else:
+        body_text, inline_trimmed = _split_inline_spec_prefixed_body(desc_src)
+        if not inline_trimmed and not body_text:
+            body_text = _normalize_body_lines(desc_src)
 
     candidates: list[tuple[str, str]] = []
     candidates.extend(extract_resource_pairs(cleaned_for_extract))
