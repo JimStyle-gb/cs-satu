@@ -11,17 +11,17 @@ freeze_current_as_baseline: no
 # yes = текущие cosmetic-хвосты сохранены как baseline-снимок
 critical_count: 0
 # Сколько найдено критичных проблем
-cosmetic_total_count: 88
+cosmetic_total_count: 89
 # Общее число некритичных проблем
-cosmetic_offer_count: 88
+cosmetic_offer_count: 89
 # В скольких товарах есть cosmetic-проблемы
 known_cosmetic_count: 0
 # Сколько cosmetic-проблем уже известны по baseline
 known_cosmetic_offer_count: 0
 # В скольких товарах есть уже известные cosmetic-проблемы
-new_cosmetic_count: 88
+new_cosmetic_count: 89
 # Сколько найдено новых cosmetic-проблем
-new_cosmetic_offer_count: 88
+new_cosmetic_offer_count: 89
 # В скольких товарах появились новые cosmetic-проблемы
 max_cosmetic_offers: 5
 # Допустимый максимум товаров с cosmetic-проблемами
@@ -33,6 +33,8 @@ CRITICAL:
 
 COSMETIC TOTAL:
   - CP10420608 | placeholder_picture | https://placehold.co/800x800/png?text=No+Photo
+  - CP13837247 | placeholder_picture | https://placehold.co/800x800/png?text=No+Photo
+  - CP13850386 | placeholder_picture | https://placehold.co/800x800/png?text=No+Photo
   - CP13870174 | placeholder_picture | https://placehold.co/800x800/png?text=No+Photo
   - CP13870401 | placeholder_picture | https://placehold.co/800x800/png?text=No+Photo
   - CP13871789 | placeholder_picture | https://placehold.co/800x800/png?text=No+Photo
@@ -118,11 +120,12 @@ COSMETIC TOTAL:
   - CP13873126 | placeholder_picture | https://placehold.co/800x800/png?text=No+Photo
   - CP13873137 | placeholder_picture | https://placehold.co/800x800/png?text=No+Photo
   - CP13873144 | placeholder_picture | https://placehold.co/800x800/png?text=No+Photo
-  - CP13873145 | placeholder_picture | https://placehold.co/800x800/png?text=No+Photo
   - CP13873146 | placeholder_picture | https://placehold.co/800x800/png?text=No+Photo
 
 NEW COSMETIC:
   - CP10420608 | placeholder_picture | https://placehold.co/800x800/png?text=No+Photo
+  - CP13837247 | placeholder_picture | https://placehold.co/800x800/png?text=No+Photo
+  - CP13850386 | placeholder_picture | https://placehold.co/800x800/png?text=No+Photo
   - CP13870174 | placeholder_picture | https://placehold.co/800x800/png?text=No+Photo
   - CP13870401 | placeholder_picture | https://placehold.co/800x800/png?text=No+Photo
   - CP13871789 | placeholder_picture | https://placehold.co/800x800/png?text=No+Photo
@@ -208,7 +211,6 @@ NEW COSMETIC:
   - CP13873126 | placeholder_picture | https://placehold.co/800x800/png?text=No+Photo
   - CP13873137 | placeholder_picture | https://placehold.co/800x800/png?text=No+Photo
   - CP13873144 | placeholder_picture | https://placehold.co/800x800/png?text=No+Photo
-  - CP13873145 | placeholder_picture | https://placehold.co/800x800/png?text=No+Photo
   - CP13873146 | placeholder_picture | https://placehold.co/800x800/png?text=No+Photo
 
 KNOWN COSMETIC:
