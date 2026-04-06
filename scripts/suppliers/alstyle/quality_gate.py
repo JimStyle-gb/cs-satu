@@ -2,18 +2,22 @@
 """
 Path: scripts/suppliers/alstyle/quality_gate.py
 
-AlStyle quality gate:
-- critical issues всегда валят сборку;
-- cosmetic issues НЕ исключаются из подсчёта;
-- baseline используется только для отчёта:
-  какие cosmetic уже известны, а какие новые;
-- сборка проходит, пока ОБЩЕЕ количество cosmetic
-  не превышает порог.
+AlStyle quality gate.
 
-v4:
-- возвращена backward-safe совместимость с build_alstyle.py:
-  run_quality_gate(...) снова принимает enforce=...
-- сохранены новые проверки marketplace leak и tech-block leak.
+Роль файла:
+- проверяет final feed после supplier-layer и shared core;
+- считает critical/cosmetic хвосты в едином CS-формате;
+- пишет отчёт через shared cs.qg_report writer.
+
+Что файл делает:
+- ловит compat/description leaks, bad power keys, marketplace leaks;
+- поддерживает baseline accepted_cosmetic и freeze_current_as_baseline;
+- сохраняет backward-safe контракт для build_alstyle.py.
+
+Что файл НЕ делает:
+- не чинит supplier raw;
+- не дублирует normalize/builder;
+- не должен хранить supplier-specific post-fix логику.
 """
 
 from __future__ import annotations
