@@ -4,12 +4,19 @@ Path: scripts/suppliers/comportal/quality_gate.py
 
 ComPortal quality gate.
 
-v5:
-- placeholder_picture остаётся в отчёте, но больше не считается new cosmetic;
-- placeholder_picture трактуется как rule-level allowed cosmetic tail;
-- baseline остаётся каноническим пустым YAML-контейнером;
-- стиль отчёта полностью унифицирован через shared cs.qg_report writer;
-- PASS/FAIL по-прежнему считается только по enforced new cosmetic.
+Роль файла:
+- проверяет final feed после supplier-layer и shared core;
+- пишет единый quality gate отчёт через shared cs.qg_report writer;
+- разделяет blocking и report-only cosmetic tails.
+
+Что файл делает:
+- ловит critical классы вроде empty_vendor / empty_price / supplier_vendor_leak;
+- сохраняет placeholder_picture как допустимый known cosmetic tail;
+- отдельно подсвечивает name/picture хвосты, которые стоит добивать в supplier-layer.
+
+Что файл НЕ делает:
+- не чинит normalize/builder/pictures;
+- не тащит supplier-specific repair логику в quality gate.
 """
 
 from __future__ import annotations
@@ -33,11 +40,15 @@ QUALITY_BASELINE_DEFAULT = "scripts/suppliers/comportal/config/quality_gate_base
 QUALITY_REPORT_DEFAULT = "docs/raw/comportal_quality_gate.txt"
 PLACEHOLDER_URL = "https://placehold.co/800x800/png?text=No+Photo"
 _WS_RE = re.compile(r"\s+")
+_HTTP_URL_RE = re.compile(r"(?i)^http://")
+_DUPLICATE_BRAND_IN_NAME_RE = re.compile(
+    r"(?iu)\b(HP|Dell|Eaton|Canon|Xerox|Brother|Kyocera|Ricoh|Epson|Pantum|CyberPower|SMART|ASUS|Acer|Lenovo|Samsung|LG|iiyama|Катюша)\b(?:\s+\1\b)"
+)
 
 # Эти правила остаются в cosmetic-отчёте, но:
 # 1) не участвуют в enforce
 # 2) не считаются new cosmetic деградацией
-_RULES_EXCLUDED_FROM_ENFORCE = {"placeholder_picture"}
+_RULES_EXCLUDED_FROM_ENFORCE = {"placeholder_picture", "duplicate_brand_in_name", "insecure_http_picture"}
 _RULES_TREATED_AS_ALLOWED_KNOWN = {"placeholder_picture"}
 
 
@@ -113,10 +124,17 @@ def _detect_issues(feed_path: str, schema_path: str | None = None) -> list[Quali
         if not _norm_ws(offer.findtext("price") or ""):
             issues.append(_make_issue("critical", "empty_price", oid, name, ""))
 
+        if _DUPLICATE_BRAND_IN_NAME_RE.search(name):
+            issues.append(_make_issue("cosmetic", "duplicate_brand_in_name", oid, name, name))
+
         for pic in offer.findall("picture"):
             url = _norm_ws("".join(pic.itertext()))
+            if not url:
+                continue
             if url == placeholder:
                 issues.append(_make_issue("cosmetic", "placeholder_picture", oid, name, url))
+            elif _HTTP_URL_RE.search(url):
+                issues.append(_make_issue("cosmetic", "insecure_http_picture", oid, name, url))
 
         if "oaicite" in desc_html or "contentReference" in desc_html:
             issues.append(_make_issue("critical", "desc_oaicite_leak", oid, name, "oaicite/contentReference"))
