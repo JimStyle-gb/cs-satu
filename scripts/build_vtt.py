@@ -2,26 +2,25 @@
 """
 Path: scripts/build_vtt.py
 
-VTT adapter (VT) — thin orchestrator under CS-template.
+VTT adapter (VT) — thin orchestrator with shard-specific workflow.
 
 Что делает:
 - грузит supplier config: filter / schema / policy;
-- поддерживает mode=index / shard_index / merge / full;
-- использует source.py только как login/session/crawl/product parsing слой;
-- пишет raw feed;
-- пишет final feed;
-- запускает supplier-side quality gate;
-- печатает diagnostics summary.
+- подготавливает source env;
+- поддерживает режимы index / shard_index / merge / full;
+- пишет raw/final feeds;
+- запускает supplier-side quality gate.
 
 Важно:
-- supplier-specific логика остаётся только в suppliers/vtt/*;
-- orchestrator шаблонный по форме, но сохраняет VTT-specific sharding/index flow;
-- ассортиментные правила берутся из filter.yml / filtering.py, а не из hardcode build-файла.
+- shard/index/merge — это нормальная специфика VTT и не считается нарушением шаблона;
+- supplier-specific parsing/building остаётся в suppliers/vtt/*;
+- build_vtt.py остаётся orchestrator-слоем, а не местом для regex-логики.
 
-v11:
-- убран legacy fallback-импорт diagnostics;
-- orchestrator использует только канонический suppliers.vtt.diagnostics.print_build_summary;
-- остальная рабочая логика index / shard_index / merge / full сохранена без изменения.
+v13:
+- baseline path приведён к каноническому quality_gate_baseline.yml;
+- quality_gate берётся по схеме policy first -> schema fallback;
+- supplier name нормализуется к VTT;
+- текущий безопасный контракт run_quality_gate сохранён без спорных kwargs.
 """
 
 from __future__ import annotations
@@ -36,7 +35,14 @@ from typing import Any
 
 import yaml
 
-from cs.core import OfferOut, get_public_vendor, next_run_dom_at_hour, now_almaty, write_cs_feed, write_cs_feed_raw
+from cs.core import (
+    OfferOut,
+    get_public_vendor,
+    next_run_dom_at_hour,
+    now_almaty,
+    write_cs_feed,
+    write_cs_feed_raw,
+)
 from suppliers.vtt.builder import build_offer_from_raw
 from suppliers.vtt.diagnostics import print_build_summary
 from suppliers.vtt.filtering import categories_from_cfg, prefixes_from_cfg
@@ -51,14 +57,14 @@ from suppliers.vtt.source import (
     parse_product_page_from_index,
 )
 
-BUILD_VTT_VERSION = "build_vtt_v11_drop_diagnostics_fallback"
 
+BUILD_VTT_VERSION = "build_vtt_v13_safe_canonical_qg"
 SUPPLIER_NAME_DEFAULT = "VTT"
-VTT_URL_DEFAULT = "https://b2b.vtt.ru/catalog/"
 OUT_FILE_DEFAULT = "docs/vtt.yml"
 RAW_OUT_FILE_DEFAULT = "docs/raw/vtt.yml"
 OUTPUT_ENCODING_DEFAULT = "utf-8"
 VTT_QG_REPORT_DEFAULT = "docs/raw/vtt_quality_gate.txt"
+VTT_QG_BASELINE_DEFAULT = "scripts/suppliers/vtt/config/quality_gate_baseline.yml"
 VTT_ID_PREFIX_DEFAULT = "VT"
 
 CFG_DIR_DEFAULT = "scripts/suppliers/vtt/config"
@@ -71,9 +77,6 @@ SHARDS_DIR = ROOT / "docs" / "debug" / "vtt_shards"
 INDEX_FILE = SHARDS_DIR / "index.json"
 
 
-# ----------------------------- config helpers -----------------------------
-
-
 def _read_yaml(path: Path) -> dict[str, Any]:
     if not path.exists():
         return {}
@@ -84,10 +87,11 @@ def _read_yaml(path: Path) -> dict[str, Any]:
 
 
 def _load_supplier_config(cfg_dir: Path) -> tuple[dict[str, Any], dict[str, Any], dict[str, Any]]:
-    filter_cfg = _read_yaml(cfg_dir / FILTER_FILE_DEFAULT)
-    schema_cfg = _read_yaml(cfg_dir / SCHEMA_FILE_DEFAULT)
-    policy_cfg = _read_yaml(cfg_dir / POLICY_FILE_DEFAULT)
-    return filter_cfg, schema_cfg, policy_cfg
+    return (
+        _read_yaml(cfg_dir / FILTER_FILE_DEFAULT),
+        _read_yaml(cfg_dir / SCHEMA_FILE_DEFAULT),
+        _read_yaml(cfg_dir / POLICY_FILE_DEFAULT),
+    )
 
 
 def _safe_int(value: Any, default: int) -> int:
@@ -101,24 +105,9 @@ def _load_param_priority(policy_cfg: dict[str, Any], schema_cfg: dict[str, Any])
     raw = (
         policy_cfg.get("param_priority")
         or schema_cfg.get("param_priority")
-        or (
-            "Тип",
-            "Для бренда",
-            "Партномер",
-            "Коды расходников",
-            "Совместимость",
-            "Технология печати",
-            "Цвет",
-            "Ресурс",
-            "Объем",
-        )
+        or ("Тип", "Для бренда", "Партномер", "Коды расходников", "Совместимость", "Технология печати", "Цвет", "Ресурс", "Объем")
     )
-    out: list[str] = []
-    for item in raw:
-        s = str(item or "").strip()
-        if s:
-            out.append(s)
-    return tuple(out)
+    return tuple(str(x).strip() for x in raw if str(x).strip())
 
 
 def _resolve_hour(policy_cfg: dict[str, Any], schema_cfg: dict[str, Any]) -> int:
@@ -131,22 +120,19 @@ def _resolve_hour(policy_cfg: dict[str, Any], schema_cfg: dict[str, Any]) -> int
 
 
 def _resolve_dom_list(policy_cfg: dict[str, Any], schema_cfg: dict[str, Any]) -> tuple[int, ...]:
-    raw = (
-        policy_cfg.get("schedule_days_of_month")
-        or schema_cfg.get("schedule_days_of_month")
-        or [1, 10, 20]
-    )
+    raw = policy_cfg.get("schedule_days_of_month") or schema_cfg.get("schedule_days_of_month") or [1, 10, 20]
     out: list[int] = []
     for item in raw:
         try:
             out.append(int(item))
         except Exception:
-            continue
+            pass
     return tuple(out or [1, 10, 20])
 
 
 def _resolve_supplier_name(policy_cfg: dict[str, Any], schema_cfg: dict[str, Any]) -> str:
-    return str(policy_cfg.get("supplier") or schema_cfg.get("supplier") or SUPPLIER_NAME_DEFAULT).strip() or SUPPLIER_NAME_DEFAULT
+    raw = str(policy_cfg.get("supplier") or schema_cfg.get("supplier") or SUPPLIER_NAME_DEFAULT).strip() or SUPPLIER_NAME_DEFAULT
+    return "VTT" if raw.casefold() == "vtt" else raw
 
 
 def _resolve_id_prefix(policy_cfg: dict[str, Any], schema_cfg: dict[str, Any]) -> str:
@@ -154,43 +140,52 @@ def _resolve_id_prefix(policy_cfg: dict[str, Any], schema_cfg: dict[str, Any]) -
 
 
 def _resolve_output_encoding(policy_cfg: dict[str, Any], schema_cfg: dict[str, Any]) -> str:
-    return str(
-        policy_cfg.get("output_encoding")
-        or schema_cfg.get("encoding")
-        or OUTPUT_ENCODING_DEFAULT
-    ).strip() or OUTPUT_ENCODING_DEFAULT
+    return str(policy_cfg.get("output_encoding") or schema_cfg.get("encoding") or OUTPUT_ENCODING_DEFAULT).strip() or OUTPUT_ENCODING_DEFAULT
 
 
 def _resolve_quality_gate(policy_cfg: dict[str, Any], schema_cfg: dict[str, Any]) -> dict[str, Any]:
-    qg = dict(policy_cfg.get("quality_gate") or schema_cfg.get("quality_gate") or {})
+    qg = dict(policy_cfg.get("quality_gate") or {})
+    if not qg:
+        qg = dict(schema_cfg.get("quality_gate") or {})
+
     if "enabled" not in qg:
         qg["enabled"] = True
-    if not qg.get("report_path") and not qg.get("report_file"):
-        qg["report_path"] = VTT_QG_REPORT_DEFAULT
+    if "enforce" not in qg:
+        qg["enforce"] = True
+
+    baseline = (
+        os.getenv("VTT_QG_BASELINE")
+        or qg.get("baseline_path")
+        or qg.get("baseline_file")
+        or VTT_QG_BASELINE_DEFAULT
+    )
+    report = (
+        os.getenv("VTT_QG_REPORT")
+        or qg.get("report_path")
+        or qg.get("report_file")
+        or VTT_QG_REPORT_DEFAULT
+    )
+
+    qg["baseline_path"] = str(baseline)
+    qg["baseline_file"] = str(baseline)
+    qg["report_path"] = str(report)
+    qg["report_file"] = str(report)
     return qg
 
 
 def _resolve_paths() -> tuple[str, str]:
-    out_file = os.getenv("VTT_OUT_FILE", os.getenv("OUT_FILE", OUT_FILE_DEFAULT)).strip() or OUT_FILE_DEFAULT
-    raw_out_file = os.getenv("VTT_RAW_OUT_FILE", os.getenv("RAW_OUT_FILE", RAW_OUT_FILE_DEFAULT)).strip() or RAW_OUT_FILE_DEFAULT
-    return out_file, raw_out_file
+    return (
+        os.getenv("VTT_OUT_FILE", os.getenv("OUT_FILE", OUT_FILE_DEFAULT)).strip() or OUT_FILE_DEFAULT,
+        os.getenv("VTT_RAW_OUT_FILE", os.getenv("RAW_OUT_FILE", RAW_OUT_FILE_DEFAULT)).strip() or RAW_OUT_FILE_DEFAULT,
+    )
 
 
 def _prepare_source_env(cfg_dir: Path, filter_cfg: dict[str, Any]) -> None:
-    """
-    Источник правды по filter-входам — YAML config.
-    Source cfg_from_env() должен читать те же значения, даже если env извне пустой.
-    """
     os.environ.setdefault("VTT_FILTER_CFG", str(cfg_dir / FILTER_FILE_DEFAULT))
-
     if not (os.getenv("VTT_CATEGORY_CODES") or "").strip():
         os.environ["VTT_CATEGORY_CODES"] = ",".join(categories_from_cfg(filter_cfg))
-
     if not (os.getenv("VTT_ALLOWED_TITLE_PREFIXES") or "").strip():
         os.environ["VTT_ALLOWED_TITLE_PREFIXES"] = ",".join(prefixes_from_cfg(filter_cfg))
-
-
-# ----------------------------- diagnostics helpers -----------------------------
 
 
 def _print_summary(
@@ -214,9 +209,6 @@ def _print_summary(
         availability_true=availability_true,
         availability_false=availability_false,
     )
-
-
-# ----------------------------- shard helpers -----------------------------
 
 
 def _offer_to_dict(offer: OfferOut) -> dict[str, Any]:
@@ -250,9 +242,6 @@ def _safe_write_json(path: Path, payload: dict[str, Any] | list[Any]) -> None:
     path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
-# ----------------------------- source/build helpers -----------------------------
-
-
 def _login_or_raise(cfg):
     sess = make_session(cfg)
     if not login(sess, cfg):
@@ -267,9 +256,7 @@ def _login_or_raise(cfg):
 def _collect_index(cfg) -> list[dict[str, Any]]:
     deadline = datetime.utcnow() + timedelta(minutes=max(1.0, float(cfg.max_crawl_minutes)))
     sess = _login_or_raise(cfg)
-    if sess is None:
-        return []
-    return collect_product_index(sess, cfg, list(cfg.categories), deadline)
+    return [] if sess is None else collect_product_index(sess, cfg, list(cfg.categories), deadline)
 
 
 def _build_offers_for_index(cfg, index: list[dict[str, Any]], *, id_prefix: str) -> list[OfferOut]:
@@ -308,11 +295,11 @@ def _build_offers_for_index(cfg, index: list[dict[str, Any]], *, id_prefix: str)
                     continue
                 if not raw:
                     continue
+
                 offer = build_offer_from_raw(raw, id_prefix=id_prefix)
-                if not offer:
+                if not offer or offer.oid in seen_oids:
                     continue
-                if offer.oid in seen_oids:
-                    continue
+
                 seen_oids.add(offer.oid)
                 out_offers.append(offer)
 
@@ -324,13 +311,21 @@ def _run_quality_gate(*, raw_out_file: str, qg_cfg: dict[str, Any]):
     if not bool(qg_cfg.get("enabled", True)):
         class _QG:
             ok = True
-            report_path = str(qg_cfg.get("report_path") or qg_cfg.get("report_file") or VTT_QG_REPORT_DEFAULT)
+            report_path = str(qg_cfg.get("report_path") or VTT_QG_REPORT_DEFAULT)
             critical_count = 0
             cosmetic_count = 0
+
         return _QG()
 
     report_path = str(qg_cfg.get("report_path") or qg_cfg.get("report_file") or VTT_QG_REPORT_DEFAULT)
-    return run_quality_gate(feed_path=raw_out_file, report_path=report_path)
+    baseline_path = str(qg_cfg.get("baseline_path") or qg_cfg.get("baseline_file") or VTT_QG_BASELINE_DEFAULT)
+
+    # Сохраняем безопасный контракт supplier-side qg без неподтверждённых kwargs.
+    return run_quality_gate(
+        feed_path=raw_out_file,
+        report_path=report_path,
+        baseline_path=baseline_path,
+    )
 
 
 def _write_feeds(
@@ -357,7 +352,6 @@ def _write_feeds(
         encoding=encoding,
         currency_id="KZT",
     )
-
     write_cs_feed(
         offers,
         supplier=supplier_name,
@@ -373,24 +367,14 @@ def _write_feeds(
     )
 
 
-# ----------------------------- mode handlers -----------------------------
-
-
 def _run_index(cfg_dir: Path, filter_cfg: dict[str, Any], schema_cfg: dict[str, Any], policy_cfg: dict[str, Any]) -> int:
     _prepare_source_env(cfg_dir, filter_cfg)
     cfg = cfg_from_env()
     index = _collect_index(cfg)
-    payload = {
-        "categories": list(cfg.categories),
-        "total": len(index),
-        "index": index,
-    }
+
     SHARDS_DIR.mkdir(parents=True, exist_ok=True)
-    _safe_write_json(INDEX_FILE, payload)
-    _safe_write_json(
-        SHARDS_DIR / "index_summary.json",
-        {"total": len(index), "categories": list(cfg.categories)},
-    )
+    _safe_write_json(INDEX_FILE, {"categories": list(cfg.categories), "total": len(index), "index": index})
+    _safe_write_json(SHARDS_DIR / "index_summary.json", {"total": len(index), "categories": list(cfg.categories)})
 
     print("=" * 72)
     print("[VTT] index summary")
@@ -419,20 +403,21 @@ def _run_shard_index(cfg_dir: Path, filter_cfg: dict[str, Any], schema_cfg: dict
     full_index = list(payload.get("index") or [])
     before = len(full_index)
     shard_index = [item for i, item in enumerate(full_index) if i % shard_total == shard_no]
-
     offers = _build_offers_for_index(cfg, shard_index, id_prefix=id_prefix)
 
-    shard_payload = {
-        "shard_name": shard_name,
-        "shard_no": shard_no,
-        "shard_total": shard_total,
-        "before": before,
-        "shard_input": len(shard_index),
-        "after": len(offers),
-        "offers": [_offer_to_dict(x) for x in offers],
-    }
     SHARDS_DIR.mkdir(parents=True, exist_ok=True)
-    _safe_write_json(SHARDS_DIR / f"{shard_name}.json", shard_payload)
+    _safe_write_json(
+        SHARDS_DIR / f"{shard_name}.json",
+        {
+            "shard_name": shard_name,
+            "shard_no": shard_no,
+            "shard_total": shard_total,
+            "before": before,
+            "shard_input": len(shard_index),
+            "after": len(offers),
+            "offers": [_offer_to_dict(x) for x in offers],
+        },
+    )
     _safe_write_json(
         SHARDS_DIR / f"{shard_name}_summary.json",
         {
@@ -465,11 +450,7 @@ def _load_shards() -> tuple[list[OfferOut], int]:
     seen_oids: set[str] = set()
 
     shard_files = sorted(SHARDS_DIR.glob("*.json"))
-    shard_files = [
-        x for x in shard_files
-        if not x.name.endswith("_summary.json")
-        and x.name not in {"merge_summary.json", "index.json"}
-    ]
+    shard_files = [x for x in shard_files if not x.name.endswith("_summary.json") and x.name not in {"merge_summary.json", "index.json"}]
     if not shard_files:
         raise RuntimeError("No VTT shard JSON files found for merge.")
 
@@ -497,8 +478,8 @@ def _load_shards() -> tuple[list[OfferOut], int]:
 def _run_merge(cfg_dir: Path, filter_cfg: dict[str, Any], schema_cfg: dict[str, Any], policy_cfg: dict[str, Any]) -> int:
     _prepare_source_env(cfg_dir, filter_cfg)
     cfg = cfg_from_env()
-
     supplier_name = _resolve_supplier_name(policy_cfg, schema_cfg)
+
     out_file, raw_out_file = _resolve_paths()
     output_encoding = _resolve_output_encoding(policy_cfg, schema_cfg)
     hour = _resolve_hour(policy_cfg, schema_cfg)
@@ -557,9 +538,9 @@ def _run_merge(cfg_dir: Path, filter_cfg: dict[str, Any], schema_cfg: dict[str, 
 def _run_full(cfg_dir: Path, filter_cfg: dict[str, Any], schema_cfg: dict[str, Any], policy_cfg: dict[str, Any]) -> int:
     _prepare_source_env(cfg_dir, filter_cfg)
     cfg = cfg_from_env()
-
     supplier_name = _resolve_supplier_name(policy_cfg, schema_cfg)
     id_prefix = _resolve_id_prefix(policy_cfg, schema_cfg)
+
     out_file, raw_out_file = _resolve_paths()
     output_encoding = _resolve_output_encoding(policy_cfg, schema_cfg)
     hour = _resolve_hour(policy_cfg, schema_cfg)
@@ -610,9 +591,6 @@ def _run_full(cfg_dir: Path, filter_cfg: dict[str, Any], schema_cfg: dict[str, A
         availability_false=availability_false,
     )
     return 0 if qg.ok else 1
-
-
-# ----------------------------- main -----------------------------
 
 
 def main() -> int:
