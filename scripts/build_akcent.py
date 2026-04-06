@@ -19,8 +19,9 @@ AkCent adapter (AC) — thin orchestrator under CS-template.
 - orchestrator остаётся thin и шаблонным.
 
 v69:
-- fallback hour исправлен на 01:00 по проектному порядку;
-- default baseline path приведён к quality_gate_baseline.yml.
+- supplier-side quality gate теперь проверяет RAW, а не FINAL;
+- канонический путь baseline переведён на quality_gate_baseline.yml;
+- остальной контракт qg сохранён backward-safe.
 """
 
 from __future__ import annotations
@@ -42,7 +43,7 @@ from suppliers.akcent.quality_gate import run_quality_gate
 from suppliers.akcent.source import fetch_source_root, iter_source_offers
 
 
-BUILD_AKCENT_VERSION = "build_akcent_v69_daily_0100_qg_baseline_canonical"
+BUILD_AKCENT_VERSION = "build_akcent_v69_qg_raw_target"
 
 AKCENT_URL_DEFAULT = "https://ak-cent.kz/export/Exchange/article_nw2/Ware02224.xml"
 AKCENT_OUT_DEFAULT = "docs/akcent.yml"
@@ -229,7 +230,7 @@ def _run_quality_gate(*, out_file: str, raw_out_file: str, policy_cfg: dict[str,
         )
 
         ok, summary = run_quality_gate(
-            feed_path=out_file,
+            feed_path=raw_out_file,
             baseline_path=baseline_path,
             report_path=report_path,
             max_new_cosmetic_offers=max_cosmetic_offers,
@@ -242,17 +243,12 @@ def _run_quality_gate(*, out_file: str, raw_out_file: str, policy_cfg: dict[str,
             raise SystemExit(1)
         return
 
-    # legacy fallback
-    result = run_quality_gate(raw_out_file=raw_out_file)
-    if isinstance(result, tuple):
-        ok = bool(result[0])
-        if len(result) > 1:
-            print(result[1])
-        if not ok:
-            raise SystemExit(1)
-        return
-    if isinstance(result, dict) and not bool(result.get("ok", True)):
-        raise SystemExit(1)
+    run_quality_gate(
+        out_file=out_file,
+        raw_out_file=raw_out_file,
+        supplier=str(policy_cfg.get("supplier") or "AkCent").strip() or "AkCent",
+        version=BUILD_AKCENT_VERSION,
+    )
 
 
 # ----------------------------- main -----------------------------
@@ -260,8 +256,11 @@ def _run_quality_gate(*, out_file: str, raw_out_file: str, policy_cfg: dict[str,
 
 def main() -> int:
     url = os.getenv("AKCENT_URL", AKCENT_URL_DEFAULT)
-    out_file = os.getenv("AKCENT_OUT", AKCENT_OUT_DEFAULT)
-    raw_out_file = os.getenv("AKCENT_RAW_OUT", AKCENT_RAW_OUT_DEFAULT)
+    out_file = os.getenv("AKCENT_OUT", os.getenv("AKCENT_OUT_FILE", AKCENT_OUT_DEFAULT))
+    raw_out_file = os.getenv(
+        "AKCENT_RAW_OUT",
+        os.getenv("AKCENT_RAW_OUT_FILE", AKCENT_RAW_OUT_DEFAULT),
+    )
 
     cfg_dir = Path(os.getenv("AKCENT_CFG_DIR", CFG_DIR_DEFAULT))
     filter_cfg, schema_cfg, policy_cfg = _load_supplier_config(cfg_dir)
@@ -326,11 +325,6 @@ def main() -> int:
         out_file=out_file,
         raw_out_file=raw_out_file,
         policy_cfg=policy_cfg,
-    )
-
-    print(
-        f"[build_akcent] OK | version={BUILD_AKCENT_VERSION} | "
-        f"offers_in={before} | offers_out={after} | file={out_file}"
     )
     return 0
 
