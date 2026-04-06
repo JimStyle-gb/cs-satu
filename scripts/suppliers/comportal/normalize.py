@@ -5,6 +5,7 @@ Path: scripts/suppliers/comportal/normalize.py
 Базовая supplier-нормализация полей ComPortal.
 
 Что улучшено:
+- v43: чище public model/title для Dell corporate и Canon plotter кейсов;
 - public name чище:
   - HP Europe -> HP
   - Hewlett Packard / Hewlett-Packard -> HP
@@ -110,6 +111,33 @@ _NAME_VENDOR_PATTERNS: list[tuple[str, str]] = [
     (r"\bPoly\b", "Poly"),
 ]
 
+_DEVICE_WORDS_RE = re.compile(
+    r"(?iu)^(?:моноблок|ноутбук|принтер|мфу|сканер|проектор|монитор|плоттер|компьютер|настольный\s+пк|широкоформатный\s+принтер)\b\s*"
+)
+_VENDOR_HEAD_RE = re.compile(
+    r"(?iu)^(?:AIWA|Dell|HP|Canon|Epson|Xerox|Brother|Kyocera|Pantum|Ricoh|APC|Lenovo|ASUS|Acer|MSI|LG|Samsung|Huawei|iiyama|Gigabyte|Hikvision|ViewSonic|BenQ|AOC|TP\-?Link|D\-?Link|Cisco|Zyxel|Eaton|Poly)\b\s*"
+)
+_DUPLICATE_HEAD_RE = re.compile(
+    r"(?iu)^(Плоттер|Монитор|Ноутбук|Моноблок|Компьютер|Принтер|МФУ)\s+"
+    r"(Canon|Dell|HP|Epson|Xerox|Brother|Kyocera|Pantum|Ricoh|APC|Lenovo|ASUS|Acer|MSI|LG|Samsung|Huawei|iiyama|Gigabyte|Hikvision|ViewSonic|BenQ|AOC|TP\-?Link|D\-?Link|Cisco|Zyxel|Eaton|Poly)"
+    r"\s+\1\s+\2(?:\s*/\s*|\s+)"
+)
+_CODE_PAREN_RE = re.compile(r"\(([^()]{2,})\)\s*$")
+_CODE_LIKE_MODEL_RE = re.compile(r"(?iu)^[A-Z0-9][A-Z0-9_#./\-]{4,}$")
+_IMAGEPROGRAF_RE = re.compile(r"(?iu)\bimagePROGRAF\s+[A-Z]{1,4}\-?\d{3,5}\b")
+_DELL_SERIES_RE = re.compile(
+    r"(?iu)\b(?:Pro\s+(?:Micro|Slim|Tower|Max|Plus)\s+[A-Z0-9-]+|"
+    r"Pro\s+\d+\s+All\-in\-One(?:\s+Plus)?\s+[A-Z0-9-]+|"
+    r"OptiPlex\s+[A-Z0-9-]+|"
+    r"Latitude\s+[A-Z0-9-]+|"
+    r"Precision\s+[A-Z0-9-]+|"
+    r"AW\d{4,5}[A-Z]{0,4}|"
+    r"S\d{4}[A-Z]{0,4}|"
+    r"SE\d{4}[A-Z]{0,4}|"
+    r"P\d{4}[A-Z]{0,4})\b"
+)
+_CANON_SERIES_RE = re.compile(r"(?iu)\b(?:imagePROGRAF\s+[A-Z]{1,4}\-?\d{3,5}|i\-SENSYS\s+[A-Z0-9-]+)\b")
+
 _GENERIC_VENDOR_WORDS = {
     "МФП", "МФУ", "ПРИНТЕР", "НОУТБУК", "МОНИТОР", "ИБП", "СКАНЕР", "ПРОЕКТОР",
     "КАРТРИДЖ", "ТОНЕР", "БАТАРЕЯ", "АККУМУЛЯТОР", "СТАБИЛИЗАТОР", "МОНОБЛОК",
@@ -181,6 +209,61 @@ def _canonicalize_brand_tokens_in_name(name: str) -> str:
     return s
 
 
+def _clean_title_tail(name: str) -> str:
+    s = normalize_name(name)
+    s = _DUPLICATE_HEAD_RE.sub(lambda m: f"{m.group(1)} {m.group(2)} ", s)
+    m = _CODE_PAREN_RE.search(s)
+    if m:
+        s = s[:m.start()].strip()
+    s = re.sub(r"\s+", " ", s).strip(" /-–—,;:.")
+    return s
+
+
+def _strip_public_head(title_tail: str) -> str:
+    s = norm_ws(title_tail)
+    if not s:
+        return ""
+    changed = True
+    while changed:
+        changed = False
+        nxt = _DEVICE_WORDS_RE.sub("", s).strip(" /-–—,;:.")
+        if nxt != s:
+            s = nxt
+            changed = True
+        nxt = _VENDOR_HEAD_RE.sub("", s).strip(" /-–—,;:.")
+        if nxt != s:
+            s = nxt
+            changed = True
+    s = s.replace(" / ", " / ")
+    s = re.sub(r"\s{2,}", " ", s).strip(" /-–—,;:.")
+    return s
+
+
+def _extract_public_model_from_name(name: str) -> str:
+    s = _clean_title_tail(name)
+    if not s:
+        return ""
+
+    for rx in (_DELL_SERIES_RE, _CANON_SERIES_RE, _IMAGEPROGRAF_RE):
+        m = rx.search(s)
+        if m:
+            return norm_ws(m.group(0)).strip(" /-–—,;:.")
+
+    m = re.search(
+        r"(?iu)\b(?:моноблок|ноутбук|принтер|мфу|сканер|проектор|монитор|плоттер|компьютер|настольный\s+пк|широкоформатный\s+принтер)\s+"
+        r"(?:AIWA|Dell|HP|Canon|Epson|Xerox|Brother|Kyocera|Pantum|Ricoh|APC|Lenovo|ASUS|Acer|MSI|LG|Samsung|Huawei|iiyama|Gigabyte|Hikvision|ViewSonic|BenQ|AOC|TP\-?Link|D\-?Link|Cisco|Zyxel|Eaton|Poly)\s+"
+        r"([^()]{3,})",
+        s,
+    )
+    if m:
+        tail = _strip_public_head(m.group(1))
+        if tail:
+            return tail
+
+    tail = _strip_public_head(s)
+    return tail
+
+
 def _is_weak_model_value(value: str, *, name: str) -> bool:
     v = norm_ws(value)
     if not v:
@@ -196,14 +279,19 @@ def _is_weak_model_value(value: str, *, name: str) -> bool:
     if inferred_vendor and v.casefold() == inferred_vendor.casefold():
         return True
 
+    if _CODE_LIKE_MODEL_RE.fullmatch(v) or "_" in v:
+        return True
+
     return False
 
 
 def normalize_name(name: str) -> str:
     s = norm_ws(name)
     s = _canonicalize_brand_tokens_in_name(s)
+    s = _DUPLICATE_HEAD_RE.sub(lambda m: f"{m.group(1)} {m.group(2)} ", s)
     s = re.sub(r"\(\s+", "(", s)
     s = re.sub(r"\s+\)", ")", s)
+    s = re.sub(r"\s*/\s*", " / ", s)
     s = re.sub(r"\s+", " ", s)
     return s.strip()
 
@@ -296,31 +384,23 @@ def normalize_vendor(
 def normalize_model(name: str, params: list[ParamItem]) -> str:
     pmap = _param_map(params)
 
+    title_public_model = _extract_public_model_from_name(name)
+
     for key in ("Модель", "Партномер", "Артикул", "Номер"):
         val = norm_ws(pmap.get(key, ""))
         if val and not _is_weak_model_value(val, name=name):
             return val
 
+    if title_public_model and not _is_weak_model_value(title_public_model, name=name):
+        return title_public_model
+
     s = normalize_name(name)
 
-    m = re.search(r"\(([^()]{2,})\)\s*$", s)
+    m = _CODE_PAREN_RE.search(s)
     if m:
         val = norm_ws(m.group(1))
         if val and not _is_weak_model_value(val, name=name):
             return val
-
-    m = re.search(
-        r"(?iu)\b(?:моноблок|ноутбук|принтер|мфу|сканер|проектор|монитор)\s+"
-        r"(?:AIWA|Dell|HP|Canon|Epson|Xerox|Brother|Kyocera|Pantum|Ricoh|APC|Lenovo|ASUS|Acer|MSI|LG|Samsung|Huawei|iiyama|Gigabyte|Hikvision|ViewSonic|BenQ|AOC|TP\-?Link|D\-?Link|Cisco|Zyxel|Eaton|Poly)\s+"
-        r"([^()]{3,})",
-        s,
-    )
-    if m:
-        tail = norm_ws(m.group(1))
-        if "(" in tail:
-            tail = norm_ws(tail.split("(", 1)[0])
-        if tail and not _is_weak_model_value(tail, name=name):
-            return tail
 
     m = re.search(r"\b([A-Z]{1,6}[A-Z0-9/\-]{2,})\b", s)
     if m:
