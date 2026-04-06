@@ -18,8 +18,10 @@ AlStyle adapter (AS) — thin orchestrator under CS-template.
 - build_alstyle.py не должен знать regex-логику AlStyle;
 - orchestrator остаётся тонким и шаблонным относительно других поставщиков.
 
-v109:
-- default baseline path приведён к quality_gate_baseline.yml.
+v110:
+- supplier-side quality gate переведён на RAW feed;
+- baseline path остаётся каноническим quality_gate_baseline.yml;
+- остальной qg-контракт сохранён без ломки.
 """
 
 from __future__ import annotations
@@ -44,7 +46,7 @@ from suppliers.alstyle.quality_gate import run_quality_gate
 from suppliers.alstyle.source import load_source_offers
 
 
-BUILD_ALSTYLE_VERSION = "build_alstyle_v109_qg_baseline_canonical"
+BUILD_ALSTYLE_VERSION = "build_alstyle_v110_qg_raw_target"
 
 ALSTYLE_URL_DEFAULT = "https://al-style.kz/upload/catalog_export/al_style_catalog.php"
 ALSTYLE_OUT_DEFAULT = "docs/alstyle.yml"
@@ -153,12 +155,12 @@ def _resolve_quality_gate(policy_cfg: dict[str, Any]) -> dict[str, Any]:
     }
 
 
-def _run_quality_gate(*, out_file: str, qg: dict[str, Any]) -> None:
+def _run_quality_gate(*, raw_out_file: str, qg: dict[str, Any]) -> None:
     if not qg.get("enabled", True):
         return
 
     ok, summary = run_quality_gate(
-        feed_path=out_file,
+        feed_path=raw_out_file,
         baseline_path=str(qg.get("baseline_path") or QUALITY_BASELINE_DEFAULT),
         report_path=str(qg.get("report_path") or QUALITY_REPORT_DEFAULT),
         max_new_cosmetic_offers=_safe_int(qg.get("max_cosmetic_offers"), 5),
@@ -257,7 +259,7 @@ def main() -> int:
         currency_id="KZT",
     )
 
-    _run_quality_gate(out_file=out_file, qg=qg)
+    _run_quality_gate(raw_out_file=raw_out_file, qg=qg)
 
     print(
         f"[build_alstyle] OK | version={BUILD_ALSTYLE_VERSION} | "
