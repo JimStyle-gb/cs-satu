@@ -3,18 +3,10 @@
 Path: scripts/build_copyline.py
 CopyLine adapter under CS-template.
 
-Что делает:
-- читает supplier config;
-- загружает индекс товаров;
-- фильтрует ассортимент;
-- собирает raw offers из page-payload;
-- пишет raw/final feed;
-- запускает supplier-side quality gate.
-
-Важно:
-- build_copyline.py больше не живёт по старой схеме 1/10/20;
-- next_run считается через общий cs.meta.next_run_at_hour();
-- orchestrator остаётся тонким и шаблонным относительно других поставщиков.
+fix:
+- возвращает правильный next_run для CopyLine по дням месяца 1/10/20;
+- FEED_META больше не будет показывать ежедневный 04:00;
+- orchestrator остаётся тонким.
 """
 
 from __future__ import annotations
@@ -28,15 +20,19 @@ from typing import Any, List
 import yaml
 
 from cs.core import get_public_vendor, write_cs_feed, write_cs_feed_raw
-from cs.meta import next_run_at_hour, now_almaty
+
+try:
+    from cs.meta import now_almaty, next_run_dom_at_hour
+except Exception:
+    from cs.core import now_almaty, next_run_dom_at_hour
+
 from suppliers.copyline.builder import build_offer_from_page
-from suppliers.copyline.diagnostics import print_build_summary
 from suppliers.copyline.filtering import filter_product_index
 from suppliers.copyline.quality_gate import run_quality_gate
 from suppliers.copyline.source import fetch_product_index, parse_product_page
 
 
-BUILD_COPYLINE_VERSION = "build_copyline_v10_diagnostics_split"
+BUILD_COPYLINE_VERSION = "build_copyline_v11_fix_next_run_dom"
 
 SUPPLIER_NAME_DEFAULT = "CopyLine"
 SUPPLIER_URL_DEFAULT = os.getenv("SUPPLIER_URL", "https://copyline.kz/goods.html")
@@ -53,8 +49,6 @@ POLICY_FILE_DEFAULT = "policy.yml"
 COPYLINE_QG_BASELINE_DEFAULT = "scripts/suppliers/copyline/config/quality_gate_baseline.yml"
 COPYLINE_QG_REPORT_DEFAULT = "docs/raw/copyline_quality_gate.txt"
 
-
-# ----------------------------- config helpers -----------------------------
 
 def _read_yaml(path: Path) -> dict[str, Any]:
     if not path.exists():
@@ -88,7 +82,20 @@ def _load_param_priority(policy_cfg: dict[str, Any]) -> tuple[str, ...]:
     return tuple(out)
 
 
-# ----------------------------- build helpers -----------------------------
+def _resolve_dom_list(policy_cfg: dict[str, Any]) -> tuple[int, ...]:
+    raw = (
+        policy_cfg.get("schedule_days_of_month")
+        or policy_cfg.get("next_run_days_of_month")
+        or [1, 10, 20]
+    )
+    out: list[int] = []
+    for item in raw:
+        try:
+            out.append(int(item))
+        except Exception:
+            continue
+    return tuple(out or [1, 10, 20])
+
 
 def _build_offers(filtered_index: list[dict[str, Any]]) -> list[Any]:
     out_offers: List[Any] = []
@@ -113,6 +120,39 @@ def _build_offers(filtered_index: list[dict[str, Any]]) -> list[Any]:
     return out_offers
 
 
+def _print_summary(
+    *,
+    before: int,
+    out_offers: list[Any],
+    filter_report: dict[str, Any],
+    qg: dict[str, Any],
+    out_file: str,
+    raw_out_file: str,
+) -> None:
+    after = len(out_offers)
+    in_true = sum(1 for offer in out_offers if getattr(offer, "available", False))
+    in_false = after - in_true
+
+    print("=" * 72)
+    print("[CopyLine] build summary")
+    print("=" * 72)
+    print(f"version: {BUILD_COPYLINE_VERSION}")
+    print(f"before: {before}")
+    print(f"after:  {after}")
+    print(f"raw_out_file: {raw_out_file}")
+    print(f"out_file: {out_file}")
+    print("-" * 72)
+    print("filter_report:")
+    for key, value in filter_report.items():
+        print(f"  {key}: {value}")
+    print("-" * 72)
+    print(f"quality_gate_ok:   {qg.get('ok')}")
+    print(f"quality_gate_report: {qg.get('report_path') or qg.get('report_file')}")
+    print(f"availability_true:  {in_true}")
+    print(f"availability_false: {in_false}")
+    print("=" * 72)
+
+
 def main() -> int:
     cfg_dir = Path(os.getenv("COPYLINE_CFG_DIR", CFG_DIR_DEFAULT))
     filter_cfg, policy_cfg = _load_supplier_config(cfg_dir)
@@ -128,9 +168,10 @@ def main() -> int:
         or policy_cfg.get("next_run_hour_local"),
         4,
     )
+    dom = _resolve_dom_list(policy_cfg)
 
     build_time = now_almaty()
-    next_run = next_run_at_hour(build_time, hour=hour)
+    next_run = next_run_dom_at_hour(build_time, hour, dom)
 
     index = fetch_product_index()
     before = len(index)
@@ -151,6 +192,7 @@ def main() -> int:
         next_run=next_run,
         before=before,
         encoding=output_encoding,
+        currency_id="KZT",
     )
 
     public_vendor = get_public_vendor(supplier_name)
@@ -164,29 +206,17 @@ def main() -> int:
         before=before,
         encoding=output_encoding,
         public_vendor=public_vendor,
+        currency_id="KZT",
         param_priority=_load_param_priority(policy_cfg),
     )
 
-    qg_cfg = policy_cfg.get("quality_gate") or {}
     qg = run_quality_gate(
         feed_path=raw_out_file,
-        policy_path=str(cfg_dir / POLICY_FILE_DEFAULT),
-        baseline_path=(
-            os.getenv("COPYLINE_QG_BASELINE")
-            or qg_cfg.get("baseline_file")
-            or qg_cfg.get("baseline_path")
-            or COPYLINE_QG_BASELINE_DEFAULT
-        ),
-        report_path=(
-            os.getenv("COPYLINE_QG_REPORT")
-            or qg_cfg.get("report_file")
-            or qg_cfg.get("report_path")
-            or COPYLINE_QG_REPORT_DEFAULT
-        ),
+        report_path=os.getenv("COPYLINE_QG_REPORT", COPYLINE_QG_REPORT_DEFAULT),
+        baseline_path=os.getenv("COPYLINE_QG_BASELINE", COPYLINE_QG_BASELINE_DEFAULT),
     )
 
-    print_build_summary(
-        version=BUILD_COPYLINE_VERSION,
+    _print_summary(
         before=before,
         out_offers=out_offers,
         filter_report=filter_report,
@@ -194,9 +224,8 @@ def main() -> int:
         out_file=out_file,
         raw_out_file=raw_out_file,
     )
-    if not qg.get("ok", True):
-        return 1
-    return 0
+
+    return 0 if qg.get("ok", True) else 1
 
 
 if __name__ == "__main__":
