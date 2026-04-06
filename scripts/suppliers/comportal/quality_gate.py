@@ -4,12 +4,12 @@ Path: scripts/suppliers/comportal/quality_gate.py
 
 ComPortal quality gate.
 
-v4:
-- placeholder_picture остаётся в отчёте, но исключён из enforce;
-- baseline default path -> quality_gate_baseline.yml;
-- стиль отчёта канонический:
-  CRITICAL / COSMETIC TOTAL / NEW COSMETIC / KNOWN COSMETIC;
-- PASS/FAIL считается только по enforced new cosmetic.
+v5:
+- placeholder_picture остаётся в отчёте, но больше не считается new cosmetic;
+- placeholder_picture трактуется как rule-level allowed cosmetic tail;
+- baseline остаётся каноническим пустым YAML-контейнером;
+- стиль отчёта полностью унифицирован через shared cs.qg_report writer;
+- PASS/FAIL по-прежнему считается только по enforced new cosmetic.
 """
 
 from __future__ import annotations
@@ -26,12 +26,19 @@ try:
 except Exception:  # pragma: no cover
     yaml = None  # type: ignore
 
+from cs.qg_report import write_quality_gate_report
+
 
 QUALITY_BASELINE_DEFAULT = "scripts/suppliers/comportal/config/quality_gate_baseline.yml"
 QUALITY_REPORT_DEFAULT = "docs/raw/comportal_quality_gate.txt"
 PLACEHOLDER_URL = "https://placehold.co/800x800/png?text=No+Photo"
 _WS_RE = re.compile(r"\s+")
+
+# Эти правила остаются в cosmetic-отчёте, но:
+# 1) не участвуют в enforce
+# 2) не считаются new cosmetic деградацией
 _RULES_EXCLUDED_FROM_ENFORCE = {"placeholder_picture"}
+_RULES_TREATED_AS_ALLOWED_KNOWN = {"placeholder_picture"}
 
 
 @dataclass(frozen=True)
@@ -132,87 +139,17 @@ def _load_baseline(path: str | None) -> dict[str, set[str]]:
 def _make_baseline_payload(cosmetic: list[QualityIssue]) -> dict[str, Any]:
     grouped: dict[str, list[str]] = defaultdict(list)
     for issue in cosmetic:
+        if issue.rule in _RULES_TREATED_AS_ALLOWED_KNOWN:
+            # rule-level allowed tails не засоряют baseline снапшот
+            continue
         grouped[issue.rule].append(issue.oid)
+
     return {
         "schema_version": 1,
         "accepted_cosmetic": {
             rule: sorted(set(oids)) for rule, oids in sorted(grouped.items())
         },
     }
-
-
-def _section(lines: list[str], title: str, issues: list[QualityIssue]) -> None:
-    lines.append("")
-    lines.append(f"{title}:")
-    if not issues:
-        lines.append("# Ошибок в этой секции нет")
-        return
-    for issue in issues:
-        line = f"  - {issue.oid} | {issue.rule}"
-        if issue.details:
-            line += f" | {issue.details}"
-        lines.append(line)
-
-
-def _write_report(
-    path: str,
-    *,
-    passed: bool,
-    enforce: bool,
-    baseline_file: str,
-    freeze_current_as_baseline: bool,
-    critical: list[QualityIssue],
-    cosmetic: list[QualityIssue],
-    known_cosmetic: list[QualityIssue],
-    new_cosmetic: list[QualityIssue],
-    max_cosmetic_offers: int,
-    max_cosmetic_issues: int,
-) -> None:
-    p = Path(path)
-    p.parent.mkdir(parents=True, exist_ok=True)
-
-    cosmetic_offer_count = len({x.oid for x in cosmetic})
-    known_offer_count = len({x.oid for x in known_cosmetic})
-    new_offer_count = len({x.oid for x in new_cosmetic})
-
-    lines: list[str] = [
-        "# Итог проверки quality gate",
-        f"QUALITY_GATE: {'PASS' if passed else 'FAIL'}",
-        "# PASS = можно выпускать | FAIL = есть блокирующие проблемы",
-        f"enforce: {'true' if enforce else 'false'}",
-        "# true = quality gate реально валит сборку",
-        f"report_file: {path}",
-        "# Куда записан этот отчёт",
-        f"baseline_file: {baseline_file}",
-        "# Базовый файл для сравнения известных cosmetic-проблем",
-        f"freeze_current_as_baseline: {'yes' if freeze_current_as_baseline else 'no'}",
-        "# yes = текущие cosmetic-хвосты сохранены как baseline-снимок",
-        f"critical_count: {len(critical)}",
-        "# Сколько найдено критичных проблем",
-        f"cosmetic_total_count: {len(cosmetic)}",
-        "# Общее число некритичных проблем",
-        f"cosmetic_offer_count: {cosmetic_offer_count}",
-        "# В скольких товарах есть cosmetic-проблемы",
-        f"known_cosmetic_count: {len(known_cosmetic)}",
-        "# Сколько cosmetic-проблем уже известны по baseline",
-        f"known_cosmetic_offer_count: {known_offer_count}",
-        "# В скольких товарах есть уже известные cosmetic-проблемы",
-        f"new_cosmetic_count: {len(new_cosmetic)}",
-        "# Сколько найдено новых cosmetic-проблем",
-        f"new_cosmetic_offer_count: {new_offer_count}",
-        "# В скольких товарах появились новые cosmetic-проблемы",
-        f"max_cosmetic_offers: {int(max_cosmetic_offers)}",
-        "# Допустимый максимум товаров с cosmetic-проблемами",
-        f"max_cosmetic_issues: {int(max_cosmetic_issues)}",
-        "# Допустимый максимум cosmetic-проблем всего",
-    ]
-
-    _section(lines, "CRITICAL", critical)
-    _section(lines, "COSMETIC TOTAL", cosmetic)
-    _section(lines, "NEW COSMETIC", new_cosmetic)
-    _section(lines, "KNOWN COSMETIC", known_cosmetic)
-
-    p.write_text("\n".join(lines).strip() + "\n", encoding="utf-8")
 
 
 def run_quality_gate(
@@ -241,7 +178,9 @@ def run_quality_gate(
     known_cosmetic: list[QualityIssue] = []
     new_cosmetic: list[QualityIssue] = []
     for issue in cosmetic:
-        if issue.oid in baseline.get(issue.rule, set()):
+        if issue.rule in _RULES_TREATED_AS_ALLOWED_KNOWN:
+            known_cosmetic.append(issue)
+        elif issue.oid in baseline.get(issue.rule, set()):
             known_cosmetic.append(issue)
         else:
             new_cosmetic.append(issue)
@@ -255,8 +194,9 @@ def run_quality_gate(
     )
     ok = True if not enforce else passed
 
-    _write_report(
+    write_quality_gate_report(
         report_path,
+        supplier="comportal",
         passed=passed,
         enforce=enforce,
         baseline_file=baseline_path,
