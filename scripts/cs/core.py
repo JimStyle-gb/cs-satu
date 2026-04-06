@@ -10,7 +10,7 @@ CS Core — общее ядро для всех поставщиков.
 - стабилизация форматирования (переводы строк, футер)
 """
 
-# core v036_policy_ac_split_vendor_guard: AC отключаем split_params_for_chars по policy; гарантия не считается фразой; защита от vendor=тип/код
+# core v037_phase1_shared_cleanup: DOM next-run вынесен в cs.meta; supplier-specific param-hooks оставлены только как back-compat shim
 
 from __future__ import annotations
 
@@ -32,7 +32,7 @@ from decimal import Decimal, InvalidOperation, ROUND_HALF_UP
 from .keywords import build_keywords, CS_KEYWORDS_MAX_LEN
 from .description import build_description, build_chars_block
 from .pricing import compute_price, CS_PRICE_TIERS
-from .meta import now_almaty, next_run_at_hour
+from .meta import now_almaty, next_run_at_hour, next_run_dom_at_hour as meta_next_run_dom_at_hour
 from .validators import validate_cs_yml
 from .util import norm_ws, safe_int, _truncate_text
 from .writer import (
@@ -1697,7 +1697,7 @@ def clean_params(
             if not buckets[key_cf]:
                 buckets[key_cf].append(vv)
 
-    # Пост-правила: AkCent часто даёт "Вид" == "Тип" — убираем дубль
+    # Пост-правило: если "Вид" полностью дублирует "Тип" — убираем дубль.
     if "тип" in buckets and "вид" in buckets:
         tval = (buckets["тип"][0] if buckets["тип"] else "").casefold()
         vval = (buckets["вид"][0] if buckets["вид"] else "").casefold()
@@ -1738,123 +1738,33 @@ def clean_params(
 
     return out
 
-# --- AkCent: компактная "поддержка штрихкодов" (читаемо и полезно для SEO) ---
+# --- Back-compat shims: supplier-specific param hooks больше не живут в core. ---
 _AC_BARCODE_PARAM_1D_NAMES = {"1D", "1d"}
 _AC_BARCODE_PARAM_2D_NAMES = {"2D", "2d", "Распознование кода", "Распознавание кода"}
 _AC_BARCODE_PARAM_OUT = "Поддерживаемые штрихкоды"
 
 def _ac_compact_barcode_support(params: list[tuple[str, str]]) -> list[tuple[str, str]]:
-    # Склеиваем "1D" + "Распознование/Распознавание кода" в один человекочитаемый параметр,
-    # чтобы не было простыней в характеристиках.
-    p1d = ""
-    p2d = ""
-    out = []
-    for k, v in params:
-        if k in _AC_BARCODE_PARAM_1D_NAMES and v and not p1d:
-            p1d = v.strip()
-            continue
-        if k in _AC_BARCODE_PARAM_2D_NAMES and v and not p2d:
-            p2d = v.strip()
-            continue
-        out.append((k, v))
+    """Back-compat shim. Supplier-specific barcode compaction должен жить в AkCent adapter."""
+    return list(params or [])
 
-    if not (p1d or p2d):
-        return params
 
-    # Выдёргиваем самые "поисковые" и понятные токены, ограничиваем длину.
-    src = " ".join([p1d, p2d])
-    # Нормализуем разделители
-    src = re.sub(r"[;•]+", ",", src)
-    src = re.sub(r"\s+", " ", src).strip()
-
-    # Кандидаты (часто встречающиеся стандарты)
-    want = [
-        "EAN-13", "EAN-8", "UPC-A", "UPC-E", "UCC/EAN-128",
-        "Code128", "Code 128", "Code39", "Code 39", "Codabar",
-        "ITF", "Interleaved 2 из 5", "Matrix 2 из 5", "Standard 25",
-        "QR", "QR-код", "Data Matrix", "PDF417", "Maxicode", "HanXin",
-        "Aztec", "RSS-14", "RSS-Limited", "RSS-Expand", "RSS-Expanded",
-    ]
-
-    found = []
-    low = src.lower()
-    for t in want:
-        if t.lower() in low:
-            # Канонизируем написание
-            canon = t.replace("QR-код", "QR").replace("Code 128", "Code128").replace("Code 39", "Code39")
-            canon = canon.replace("RSS-Expand", "RSS-Expanded")
-            found.append(canon)
-
-    # Дедуп + ограничение
-    seen = set()
-    compact = []
-    for t in found:
-        if t not in seen:
-            seen.add(t)
-            compact.append(t)
-        if len(compact) >= 10:
-            break
-
-    # Если ничего не нашли (редко), оставим короткую фразу без простыни.
-    if not compact:
-        value = "1D/2D (основные форматы), QR, Data Matrix и др."
-    else:
-        value = "1D/2D: " + ", ".join(compact) + " и др."
-
-    # Не дублируем если уже есть подобный параметр
-    if not any(k == _AC_BARCODE_PARAM_OUT for k, _ in out):
-        out.append((_AC_BARCODE_PARAM_OUT, value))
-
-    return out
 def _ac_drop_barcode_params(params: list[tuple[str, str]]) -> list[tuple[str, str]]:
-    # Удаляем "1D/2D" и похожие параметры ТОЛЬКО по имени (ключу). Значения не анализируем.
-    drop_names = {
-        "1d", "2d",
-        "распознование кода", "распознавание кода",
-        "поддерживаемые штрихкоды",
-    }
-    out: list[tuple[str, str]] = []
-    for k, v in params:
-        k_cf = (k or "").strip().casefold()
-        v_cf = (v or "").strip().casefold()
-        if k_cf in drop_names:
-            continue
-        out.append((k, v))
-    return out
+    """Back-compat shim. Supplier-specific barcode cleanup должен жить в AkCent adapter."""
+    return list(params or [])
 
 
 def apply_supplier_param_rules(params: Sequence[tuple[str, str]], oid: str, name: str) -> list[tuple[str, str]]:
-    """Точечные правила по поставщикам/категориям для <param> и блока характеристик.
-    Shared core делает только truly-common post-rules.
+    """Back-compat shim с truly-common post-rules only.
 
-    Что допустимо здесь:
-    - глобально не выпускать служебный param 'Артикул';
-    - AkCent: человекочитаемо переименовать техничные 1D/2D-ключи;
-    - CopyLine: для 'Кабель сетевой' убрать шумный param 'Совместимость'.
-
-    Что НЕ должно жить здесь:
-    - supplier-specific очистка VTT;
-    - supplier-specific OEM/Каталожный номер -> Партномер;
-    - любые другие adapter-side правила.
+    Core больше не держит правила по конкретным поставщикам.
+    Здесь оставляем только общий и безопасный минимум:
+    - не выпускать служебный param 'Артикул';
+    - нормализовать пробелы/смешанный текст.
+    
+    Аргументы oid/name сохранены для совместимости сигнатуры.
     """
-    oid_u = (oid or "").upper()
-    name_cf = (name or "").strip().casefold()
-    is_copyline = oid_u.startswith("CL")
-
-    # AkCent: переименовываем техничные ключи 1D/2D/Распознавание кода в человекочитаемые названия.
-    # Значения (списки форматов) сохраняем как есть.
-    if oid_u.startswith("AC"):
-        renamed: list[tuple[str, str]] = []
-        for k0, v0 in (params or []):
-            kk0 = norm_ws(k0)
-            vv0 = norm_ws(v0)
-            k_cf0 = kk0.casefold()
-            if k_cf0 == "1d":
-                kk0 = "Поддерживаемые 1D-коды"
-            elif k_cf0 == "2d" or k_cf0 in {"распознование кода", "распознавание кода"}:
-                kk0 = "Поддерживаемые 2D-коды"
-            renamed.append((kk0, vv0))
-        params = renamed
+    _ = oid
+    _ = name
 
     out: list[tuple[str, str]] = []
     for k, v in params or []:
@@ -1862,19 +1772,11 @@ def apply_supplier_param_rules(params: Sequence[tuple[str, str]], oid: str, name
         vv = sanitize_mixed_text(norm_ws(v))
         if not kk or not vv:
             continue
-        k_cf = kk.casefold().replace("ё", "е")
-
-        # Глобально: не выводим служебный 'Артикул' как характеристику.
-        # Если supplier хочет использовать его для stable ID/vendorCode —
-        # это должно происходить в supplier-layer ДО входа в core.
-        if k_cf == "артикул":
+        if kk.casefold().replace("ё", "е") == "артикул":
             continue
-
-        if is_copyline and name_cf.startswith("кабель сетевой") and (k_cf == "совместимость"):
-            continue
-
         out.append((kk, vv))
     return out
+
 
 # Сортирует параметры: сначала приоритетные, затем по алфавиту
 def sort_params(params: Sequence[tuple[str, str]], priority: Sequence[str] | None = None) -> list[tuple[str, str]]:
@@ -2699,7 +2601,7 @@ def normalize_pictures(pictures: Sequence[str]) -> list[str]:
     seen: set[str] = set()
     for p in pictures or []:
         u = norm_ws(p)
-        # CS: NVPrint отдаёт заглушку nophoto.jpg — приводим к общему placeholder
+        # CS: legacy nophoto-заглушки приводим к общему project placeholder.
         if u.lower() in {"https://nvprint.ru/promo/photo/nophoto.jpg", "http://nvprint.ru/promo/photo/nophoto.jpg"}:
             u = CS_PICTURE_PLACEHOLDER_URL
         if not u:
@@ -2938,47 +2840,9 @@ def get_public_vendor(supplier: str | None = None) -> str:
     return raw
 
 
-# CS: вычисляет next_run для расписания "в дни месяца" (например 1/10/20) в заданный час (Алматы)
+# CS: back-compat wrapper. Реальная DOM-логика next-run вынесена в cs.meta.
 def next_run_dom_at_hour(now: datetime, hour: int, doms: Sequence[int]) -> datetime:
-    hour = int(hour)
-    doms_sorted = sorted({int(d) for d in doms if int(d) >= 1 and int(d) <= 31})
-    if not doms_sorted:
-        # fallback: завтра в тот же час
-        base = (now + timedelta(days=1)).replace(minute=0, second=0, microsecond=0)
-        return base.replace(hour=hour)
-
-    def _last_day_of_month(y: int, m: int) -> int:
-        # 28-е + 4 дня гарантированно перейдёт в следующий месяц
-        first_next = datetime(y, m, 28) + timedelta(days=4)
-        first_next = datetime(first_next.year, first_next.month, 1)
-        return (first_next - timedelta(days=1)).day
-
-    def _pick_in_month(y: int, m: int, after_dt: datetime | None) -> datetime | None:
-        last = _last_day_of_month(y, m)
-        for d in doms_sorted:
-            if d > last:
-                continue
-            cand = datetime(y, m, d, hour, 0, 0)
-            if after_dt is None or cand > after_dt:
-                return cand
-        return None
-
-    # 1) в текущем месяце — следующий подходящий день
-    cand = _pick_in_month(now.year, now.month, now)
-    if cand:
-        return cand
-
-    # 2) в следующем месяце — самый ранний подходящий день
-    y2, m2 = now.year, now.month + 1
-    if m2 == 13:
-        m2 = 1
-        y2 += 1
-    cand2 = _pick_in_month(y2, m2, None)
-    if cand2:
-        return cand2
-
-    # 3) fallback: 1-е число следующего месяца
-    return datetime(y2, m2, 1, hour, 0, 0)
+    return meta_next_run_dom_at_hour(now, hour=hour, doms=doms)
 
 
 # CS: собирает полный XML фида (header + FEED_META + offers + footer)
