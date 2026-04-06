@@ -1,4 +1,14 @@
-"""CopyLine diagnostics helpers."""
+# -*- coding: utf-8 -*-
+"""
+Path: scripts/suppliers/copyline/diagnostics.py
+
+CopyLine diagnostics helpers.
+
+Роль файла:
+- печатает человекочитаемый итог сборки;
+- не участвует в построении raw/final логики;
+- нужен только для summary/debug слоя build_copyline.py.
+"""
 
 from __future__ import annotations
 
@@ -6,6 +16,7 @@ from typing import Any
 
 
 def _print_filter_report(filter_report: dict[str, Any]) -> None:
+    """Печать блока filter_report в одном стиле."""
     print("filter_report:")
     for key, value in filter_report.items():
         print(f"  {key}: {value}")
@@ -21,7 +32,7 @@ def print_build_summary(
     out_file: str,
     raw_out_file: str,
 ) -> None:
-    """Печать итогового summary по сборке."""
+    """Печать итогового summary по сборке CopyLine."""
     after = len(out_offers)
     in_true = sum(1 for offer in out_offers if getattr(offer, "available", False))
     in_false = after - in_true
@@ -37,8 +48,8 @@ def print_build_summary(
     print("-" * 72)
     _print_filter_report(filter_report)
     print("-" * 72)
-    print(f"quality_gate_ok:   {qg.get('ok')}")
+    print(f"quality_gate_ok:     {qg.get('ok')}")
     print(f"quality_gate_report: {qg.get('report_path') or qg.get('report_file')}")
-    print(f"availability_true:  {in_true}")
-    print(f"availability_false: {in_false}")
+    print(f"availability_true:   {in_true}")
+    print(f"availability_false:  {in_false}")
     print("=" * 72)
