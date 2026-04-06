@@ -4,11 +4,11 @@ Path: scripts/suppliers/comportal/builder.py
 
 ComPortal supplier layer — сборка raw offer.
 
-v8:
+v9:
 - сохраняет safe mutual enrichment и type-aware prune;
-- усиливает descriptions для слабых Dell / corporate-кейсов;
-- использует title-fallback для публичной модели и диагонали, если XML params бедные;
-- мягко подменяет слабое значение "Модель" на более витринную title-series;
+- сохраняет усиленные descriptions для слабых Dell / corporate-кейсов;
+- добивает public model для Dell desktop / AIO и Canon plotter кейсов;
+- больше не подменяет param "Коды" публичной моделью;
 - сохраняет канонизацию кривых supplier-ключей перед prune.
 """
 
@@ -165,10 +165,49 @@ _CM_INCH_RE = re.compile(r"\b\d{2,3}(?:[.,]\d+)?\s*cm\s*\((\d{1,2}(?:[.,]\d)?)\s
 _INCH_RE = re.compile(r"(\d{1,2}(?:[.,]\d)?)\s*\"")
 _MONITOR_DIGIT_RE = re.compile(r"(?iu)\b(\d{2})(?:\s|[-–—])")
 _NOISY_MODEL_RE = re.compile(r"(?iu)^(?:монитор|ноутбук|моноблок|компьютер|плоттер|принтер)\b")
+_PUBLIC_HEAD_RE = re.compile(
+    r"(?iu)^(?:моноблок|ноутбук|принтер|мфу|сканер|проектор|монитор|плоттер|компьютер|настольный\s+пк|широкоформатный\s+принтер)\s+"
+    r"(?:AIWA|Dell|HP|Canon|Epson|Xerox|Brother|Kyocera|Pantum|Ricoh|APC|Lenovo|ASUS|Acer|MSI|LG|Samsung|Huawei|iiyama|Gigabyte|Hikvision|ViewSonic|BenQ|AOC|TP\-?Link|D\-?Link|Cisco|Zyxel|Eaton|Poly)\s+"
+)
 
 
 def _decode_text(value: str) -> str:
     return norm_ws(unescape(value or "").replace("&quot;", '"').replace("quot;", '"'))
+
+
+def _extract_title_tail_code(clean_name: str) -> str:
+    s = _decode_text(clean_name)
+    m = _TITLE_TAIL_CODE_RE.search(s)
+    return _decode_text(m.group(1)) if m else ""
+
+
+def _shorten_public_series(text: str) -> str:
+    s = _decode_text(text)
+    if not s:
+        return ""
+
+    m = re.search(r"(?iu)\bimagePROGRAF\s+[A-Z]{1,4}\-?\d{3,5}\b", s)
+    if m:
+        return _decode_text(m.group(0))
+
+    m = re.search(
+        r"(?iu)\b(?:"
+        r"Pro\s+(?:Micro|Slim|Tower|Max|Plus)\s+[A-Z0-9-]+|"
+        r"Pro\s+\d+\s+All\-in\-One(?:\s+Plus)?\s+[A-Z0-9-]+|"
+        r"OptiPlex\s+[A-Z0-9-]+|"
+        r"Latitude\s+[A-Z0-9-]+|"
+        r"Precision\s+[A-Z0-9-]+|"
+        r"AW\d{4,5}[A-Z]{0,4}|"
+        r"S\d{4}[A-Z]{0,4}|"
+        r"SE\d{4}[A-Z]{0,4}|"
+        r"P\d{4}[A-Z]{0,4}"
+        r")\b",
+        s,
+    )
+    if m:
+        return _decode_text(m.group(0))
+
+    return s
 
 
 def _is_code_like_value(value: str, *, codes: str = "") -> bool:
@@ -195,12 +234,21 @@ def _clean_public_series_text(text: str, *, vendor: str, ptype: str, code: str) 
     if code:
         s = re.sub(rf"\(\s*{re.escape(_decode_text(code))}\s*\)\s*$", "", s, flags=re.IGNORECASE).strip()
 
+    s = re.sub(r"(?iu)^Плоттер\s+Canon\s+Плоттер\s+Canon\s*/\s*", "imagePROGRAF ", s)
+    s = re.sub(r"(?iu)^Плоттер\s+Canon\s*/\s*", "", s)
+
     ptype_s = _decode_text(ptype)
     vendor_s = _decode_text(vendor)
 
     changed = True
     while changed:
         changed = False
+
+        nxt = _PUBLIC_HEAD_RE.sub("", s).strip(" /-–—,;:")
+        if nxt != s:
+            s = nxt
+            changed = True
+
         for pat in (
             rf"^{re.escape(ptype_s)}\s+{re.escape(vendor_s)}\s+" if ptype_s and vendor_s else "",
             rf"^{re.escape(vendor_s)}\s+{re.escape(ptype_s)}\s+" if ptype_s and vendor_s else "",
@@ -218,6 +266,7 @@ def _clean_public_series_text(text: str, *, vendor: str, ptype: str, code: str) 
 
     s = re.sub(r",\s*\d{2,3}(?:[.,]\d+)?\s*cm\s*\([^)]*\)\s*$", "", s, flags=re.IGNORECASE)
     s = re.sub(r"\s{2,}", " ", s).strip(" /-–—,;:")
+    s = _shorten_public_series(s)
     return s
 
 
@@ -260,7 +309,7 @@ def _polish_model_param(params: list[ParamItem], *, clean_name: str, vendor: str
         return params
     if current_model and current_model.casefold() == better_model.casefold():
         return params
-    if not current_model or _is_code_like_value(current_model, codes=codes) or _NOISY_MODEL_RE.search(current_model):
+    if not current_model or _is_code_like_value(current_model, codes=codes) or _NOISY_MODEL_RE.search(current_model) or (_extract_title_tail_code(clean_name) and _extract_title_tail_code(clean_name).casefold() in current_model.casefold()):
         return _upsert_param(params, name="Модель", value=better_model, source="title")
     return params
 
@@ -601,7 +650,7 @@ def _upsert_param(params: list[ParamItem], *, name: str, value: str, source: str
     return out
 
 
-def _ensure_base_params(*, source_offer: SourceOffer, params: list[ParamItem], vendor: str, model: str) -> list[ParamItem]:
+def _ensure_base_params(*, source_offer: SourceOffer, params: list[ParamItem], vendor: str, model: str, clean_name: str) -> list[ParamItem]:
     out = list(params)
     pmap = _param_map(out)
 
@@ -617,14 +666,13 @@ def _ensure_base_params(*, source_offer: SourceOffer, params: list[ParamItem], v
             out = _upsert_param(out, name="Модель", value=model, source="normalize")
 
     pmap = _param_map(out)
-    if model:
-        cur_codes = norm_ws(pmap.get("Коды", ""))
-        if not cur_codes or _is_weak_identity_value(cur_codes, vendor=vendor):
-            out = _upsert_param(out, name="Коды", value=model, source="normalize")
-    elif source_offer.vendor_code:
-        pmap = _param_map(out)
-        if "Коды" not in pmap:
-            out.append(ParamItem(name="Коды", value=norm_ws(source_offer.vendor_code), source="source"))
+    title_code = _extract_title_tail_code(clean_name)
+    cur_codes = norm_ws(pmap.get("Коды", ""))
+    if not cur_codes or _is_weak_identity_value(cur_codes, vendor=vendor):
+        if title_code:
+            out = _upsert_param(out, name="Коды", value=title_code, source="title")
+        elif source_offer.vendor_code and re.search(r"(?i)[A-Z]", norm_ws(source_offer.vendor_code)):
+            out = _upsert_param(out, name="Коды", value=norm_ws(source_offer.vendor_code), source="source")
 
     pmap = _param_map(out)
     if vendor and pmap.get("Для бренда") and pmap.get("Бренд"):
@@ -657,7 +705,7 @@ def build_offer_out(source_offer: SourceOffer, *, schema: dict[str, Any], policy
         existing_params=[],
     )
     params = _merge_desc_enrichment(xml_params, desc_hint_params)
-    params = _ensure_base_params(source_offer=source_offer, params=params, vendor=clean_vendor, model=clean_model)
+    params = _ensure_base_params(source_offer=source_offer, params=params, vendor=clean_vendor, model=clean_model, clean_name=clean_name)
     params = _polish_model_param(params, clean_name=clean_name, vendor=clean_vendor)
     params = apply_compat_cleanup(params)
     params = _prune_low_value_params(params)
