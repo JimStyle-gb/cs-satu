@@ -31,6 +31,7 @@ from typing import Any
 from urllib.parse import parse_qs, urljoin, urlparse
 
 import requests
+from requests import exceptions as req_exc
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
@@ -168,7 +169,7 @@ def cfg_from_env() -> VTTConfig:
         login_url=urljoin(base_url, "/validateLogin"),
         login=(os.getenv("VTT_LOGIN") or "").strip(),
         password=(os.getenv("VTT_PASSWORD") or "").strip(),
-        timeout_s=_safe_int(os.getenv("VTT_TIMEOUT_S") or "35", 35),
+        timeout_s=_safe_int(os.getenv("VTT_TIMEOUT_S") or "45", 45),
         listing_request_delay_ms=_safe_int(
             os.getenv("VTT_LISTING_REQUEST_DELAY_MS") or os.getenv("VTT_REQUEST_DELAY_MS") or "6",
             6,
@@ -183,18 +184,63 @@ def cfg_from_env() -> VTTConfig:
     )
 
 
+def _network_outer_retries() -> int:
+    return max(1, _safe_int(os.getenv("VTT_NETWORK_OUTER_RETRIES") or "3", 3))
+
+
+def _network_retry_sleep_s(attempt_no: int) -> float:
+    return min(20.0, 2.5 * max(1, attempt_no))
+
+
+def _request_with_outer_retry(
+    sess: requests.Session,
+    method: str,
+    cfg: VTTConfig,
+    url: str,
+    *,
+    delay_ms: int,
+    **kwargs,
+) -> requests.Response:
+    attempts = _network_outer_retries()
+    last_exc: Exception | None = None
+
+    for attempt_no in range(1, attempts + 1):
+        if attempt_no == 1:
+            _sleep_ms(delay_ms)
+        else:
+            time.sleep(_network_retry_sleep_s(attempt_no - 1))
+
+        try:
+            resp = sess.request(
+                method,
+                url,
+                timeout=cfg.timeout_s,
+                allow_redirects=True,
+                **kwargs,
+            )
+            resp.raise_for_status()
+            return resp
+        except (
+            req_exc.ConnectTimeout,
+            req_exc.ReadTimeout,
+            req_exc.ConnectionError,
+            req_exc.Timeout,
+        ) as exc:
+            last_exc = exc
+            if attempt_no >= attempts:
+                raise
+            log(f"[VTT] network retry {attempt_no}/{attempts - 1}: {method} {url} :: {exc}")
+
+    assert last_exc is not None
+    raise last_exc
+
+
 def _get(sess: requests.Session, cfg: VTTConfig, url: str, *, delay_ms: int) -> requests.Response:
-    _sleep_ms(delay_ms)
-    resp = sess.get(url, timeout=cfg.timeout_s, allow_redirects=True)
-    resp.raise_for_status()
-    return resp
+    return _request_with_outer_retry(sess, "GET", cfg, url, delay_ms=delay_ms)
 
 
 def _post(sess: requests.Session, cfg: VTTConfig, url: str, *, delay_ms: int, **kwargs) -> requests.Response:
-    _sleep_ms(delay_ms)
-    resp = sess.post(url, timeout=cfg.timeout_s, allow_redirects=True, **kwargs)
-    resp.raise_for_status()
-    return resp
+    return _request_with_outer_retry(sess, "POST", cfg, url, delay_ms=delay_ms, **kwargs)
 
 
 def login(sess: requests.Session, cfg: VTTConfig) -> bool:
