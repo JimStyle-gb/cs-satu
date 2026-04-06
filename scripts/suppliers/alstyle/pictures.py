@@ -2,7 +2,17 @@
 """
 Path: scripts/suppliers/alstyle/pictures.py
 
-Только картинки AlStyle.
+AlStyle supplier layer — сборка и cleanup картинок.
+
+Что делает:
+- собирает picture URLs из supplier-source;
+- чистит пробелы и битые ссылки;
+- убирает дубли;
+- возвращает placeholder, если реальных картинок не осталось.
+
+Важно:
+- файл отвечает только за supplier-picture policy;
+- не решает вопросы description / params / vendor.
 """
 
 from __future__ import annotations
