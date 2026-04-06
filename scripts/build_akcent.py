@@ -1,4 +1,24 @@
 # -*- coding: utf-8 -*-
+"""
+Path: scripts/build_akcent.py
+
+AkCent adapter (AC) — thin orchestrator under CS-template.
+
+Что делает:
+- грузит supplier config: filter / schema / policy;
+- читает исходный XML поставщика;
+- прогоняет source -> filtering -> builder;
+- пишет raw feed;
+- пишет final feed;
+- печатает build summary;
+- запускает supplier-side quality gate или пишет безопасный fallback report.
+
+Важно:
+- supplier-specific логика остаётся только в suppliers/akcent/*;
+- build_akcent.py не должен знать regex-логику AkCent;
+- orchestrator остаётся тонким и шаблонным относительно других поставщиков.
+"""
+
 from __future__ import annotations
 
 import importlib
@@ -27,6 +47,9 @@ POLICY_FILE_DEFAULT = "policy.yml"
 QUALITY_BASELINE_DEFAULT = "scripts/suppliers/akcent/config/quality_gate_baseline.yml"
 QUALITY_REPORT_DEFAULT = "docs/raw/akcent_quality_gate.txt"
 PLACEHOLDER_DEFAULT = "https://placehold.co/800x800/png?text=No+Photo"
+
+
+# ----------------------------- config helpers -----------------------------
 
 def _read_yaml(path: Path) -> dict[str, Any]:
     if not path.exists():
@@ -95,6 +118,10 @@ def _call_builder(filtered_offers: list[Any], *, schema_cfg: dict[str, Any], pol
         return list(result[0] or []), dict(result[1] or {})
     offers = list(result or [])
     return offers, {"before": len(filtered_offers), "after": len(offers)}
+
+
+
+# ------------------------------ qg helpers --------------------------------
 
 def _write_fallback_qg_report(report_path: str, baseline_path: str, *, reason: str) -> None:
     p = Path(report_path)
@@ -200,6 +227,10 @@ def _run_quality_gate(*, out_file: str, raw_out_file: str, policy_cfg: dict[str,
         if not ok: raise SystemExit(1)
     elif isinstance(result, bool) and not result:
         raise SystemExit(1)
+
+
+
+# -------------------------------- entrypoint ------------------------------
 
 def main() -> int:
     url = os.getenv("AKCENT_URL", AKCENT_URL_DEFAULT)
