@@ -4,7 +4,7 @@ Path: scripts/suppliers/alstyle/builder.py
 
 AlStyle supplier layer — сборка raw offer.
 
-v118:
+v119:
 - сохраняет логику v117;
 - расширяет косметический post-clean для ветки
   "Кабель сетевой самонесущий SHIP ...", если body стартует
@@ -698,6 +698,13 @@ def build_offer(
 
     price_in = normalize_price_in(src.purchase_price_text, src.price_text)
 
+    # ВАЖНО:
+    # если desc_extract осознанно обнулил body как чистый spec/inline-spec блок,
+    # нельзя откатываться к исходному desc_src, иначе техблок снова протечёт в raw/final.
+    native_desc_src = desc_body
+    if not norm_ws(native_desc_src):
+        native_desc_src = "" if desc_params else desc_src
+
     offer = OfferOut(
         oid=oid,
         available=available,
@@ -706,7 +713,7 @@ def build_offer(
         pictures=pictures,
         vendor=vendor,
         params=params,
-        native_desc=_final_polish_native_desc(name, vendor, (desc_body or desc_src)),
+        native_desc=_final_polish_native_desc(name, vendor, native_desc_src),
     )
     return offer, available
 
