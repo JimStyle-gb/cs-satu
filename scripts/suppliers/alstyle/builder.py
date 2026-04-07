@@ -4,13 +4,13 @@ Path: scripts/suppliers/alstyle/builder.py
 
 AlStyle supplier layer — сборка raw offer.
 
-v119:
-- сохраняет логику v117;
-- расширяет косметический post-clean для ветки
-  "Кабель сетевой самонесущий SHIP ...", если body стартует
-  с укороченного названия и хвоста "Это ...";
-- добавляет rollback-safe варианты префиксов для SHIP,
-  чтобы убрать остаточный хвост без риска для других карточек.
+v120:
+- сохраняет логику v119;
+- добавляет supplier-side originality rule для расходных материалов;
+- categoryId original-only / compatible-only живут прямо в builder.py,
+  без новых файлов и без вмешательства shared core;
+- применяет единый канон по расходке: suffix в name,
+  первая фраза в native_desc и param "Оригинальность".
 """
 
 from __future__ import annotations
@@ -94,6 +94,53 @@ _XEROX_HEAVY_COMPAT_RE = re.compile(
 _XG_PC_NAME_RE = re.compile(r"(?iu)^XG\s+PC\s+Game\b")
 _SHIP_CABLE_NAME_RE = re.compile(r"(?iu)^Кабель\s+сетевой(?:\s+самонесущий)?\s+SHIP\b")
 _SHORT_SHIP_TITLE_RE = re.compile(r"(?iu)^(Кабель\s+сетевой(?:\s+самонесущий)?\s+SHIP\s+[A-Z0-9-]+)")
+
+ALSTYLE_ORIGINAL_CATEGORY_IDS = {
+    "21175",
+    "21279",
+    "21367",
+    "21368",
+    "21369",
+    "21370",
+    "21371",
+    "21372",
+    "21665",
+    "21698",
+}
+ALSTYLE_COMPATIBLE_CATEGORY_IDS = {
+    "3567",
+    "3569",
+    "3570",
+    "3580",
+    "5017",
+    "5075",
+    "21274",
+    "21664",
+    "21666",
+    "21688",
+    "3566",
+}
+ALSTYLE_ORIGINALITY_CATEGORY_IDS = ALSTYLE_ORIGINAL_CATEGORY_IDS | ALSTYLE_COMPATIBLE_CATEGORY_IDS
+
+_ORIGINALITY_PARAM_NAME = "Оригинальность"
+_NAME_ORIGINALITY_SUFFIX_RE = re.compile(r"\s+\((?:оригинал|совместимый)\)\s*$", re.IGNORECASE)
+_DESC_ORIGINALITY_HEAD_RE = re.compile(r"(?iu)^\s*(?:Оригиналь\w+|Совместим\w+)\b")
+
+_CONSUMABLE_TYPE_HINTS = (
+    "тонер-картридж",
+    "картридж",
+    "контейнер с чернилами",
+    "чернила",
+    "драм-картридж",
+    "драм-юнит",
+    "фотобарабан",
+    "девелопер",
+    "печатающая головка",
+    "термопленка",
+    "экономичный набор",
+    "комплект чернил",
+    "тонер",
+)
 
 
 def _polish_ship_cable_desc(name: str, desc: str) -> str:
@@ -657,6 +704,124 @@ def _infer_compat_from_name(name: str) -> str:
     return " / ".join(out)
 
 
+
+
+def _has_param_ci(params: list[tuple[str, str]], key: str) -> bool:
+    want = norm_ws(key).casefold()
+    return any(norm_ws(k).casefold() == want for k, _ in params)
+
+
+def _upsert_param(params: list[tuple[str, str]], key: str, value: str) -> list[tuple[str, str]]:
+    want = norm_ws(key).casefold()
+    cleaned: list[tuple[str, str]] = []
+    replaced = False
+    for k, v in params:
+        if norm_ws(k).casefold() == want:
+            if not replaced:
+                cleaned.append((key, value))
+                replaced = True
+            continue
+        cleaned.append((k, v))
+    if not replaced:
+        cleaned.append((key, value))
+    return cleaned
+
+
+def _strip_originality_suffix(name: str) -> str:
+    return norm_ws(_NAME_ORIGINALITY_SUFFIX_RE.sub("", norm_ws(name)))
+
+
+def _detect_consumable_type_label(name: str, params: list[tuple[str, str]]) -> str:
+    type_from_param = ""
+    for k, v in params:
+        if norm_ws(k).casefold() == "тип":
+            type_from_param = norm_ws(v)
+            break
+    if type_from_param:
+        for hint in _CONSUMABLE_TYPE_HINTS:
+            if hint in type_from_param.casefold():
+                return type_from_param
+
+    title = norm_ws(name)
+    lower = title.casefold()
+    for hint in _CONSUMABLE_TYPE_HINTS:
+        if lower.startswith(hint):
+            return hint.capitalize() if hint == "картридж" else hint
+    return "Расходный материал"
+
+
+def _build_originality_sentence(status: str, type_label: str) -> str:
+    tl = norm_ws(type_label) or "Расходный материал"
+    tl_cf = tl.casefold()
+    if status == "original":
+        if tl_cf == "чернила":
+            return "Оригинальные чернила."
+        if tl_cf == "комплект чернил":
+            return "Оригинальный комплект чернил."
+        if tl_cf == "экономичный набор":
+            return "Оригинальный экономичный набор."
+        if tl_cf == "контейнер с чернилами":
+            return "Оригинальный контейнер с чернилами."
+        if tl == "Расходный материал":
+            return "Оригинальный расходный материал."
+        return f"Оригинальный {tl.lower()}."
+
+    if status == "compatible":
+        if tl_cf == "чернила":
+            return "Совместимые чернила."
+        if tl_cf == "комплект чернил":
+            return "Совместимый комплект чернил."
+        if tl_cf == "экономичный набор":
+            return "Совместимый экономичный набор."
+        if tl_cf == "контейнер с чернилами":
+            return "Совместимый контейнер с чернилами."
+        if tl == "Расходный материал":
+            return "Совместимый расходный материал."
+        return f"Совместимый {tl.lower()}."
+
+    return ""
+
+
+def _is_consumable_for_originality(src: SourceOffer, name: str, params: list[tuple[str, str]]) -> bool:
+    _ = name
+    _ = params
+    return norm_ws(src.category_id) in ALSTYLE_ORIGINALITY_CATEGORY_IDS
+
+
+def _detect_consumable_originality(src: SourceOffer, name: str, params: list[tuple[str, str]]) -> str:
+    if not _is_consumable_for_originality(src, name, params):
+        return ""
+
+    cid = norm_ws(src.category_id)
+    if cid in ALSTYLE_ORIGINAL_CATEGORY_IDS:
+        return "original"
+    if cid in ALSTYLE_COMPATIBLE_CATEGORY_IDS:
+        return "compatible"
+    return ""
+
+
+def _apply_consumable_originality(name: str, params: list[tuple[str, str]], native_desc: str, status: str) -> tuple[str, list[tuple[str, str]], str]:
+    if status not in {"original", "compatible"}:
+        return name, params, native_desc
+
+    base_name = _strip_originality_suffix(name)
+    suffix = "(оригинал)" if status == "original" else "(совместимый)"
+    value = "Оригинал" if status == "original" else "Совместимый"
+    name_out = f"{base_name} {suffix}"
+
+    params_out = _upsert_param(params, _ORIGINALITY_PARAM_NAME, value)
+
+    desc_out = norm_ws(native_desc)
+    sentence = _build_originality_sentence(status, _detect_consumable_type_label(base_name, params_out))
+    if sentence:
+        if not desc_out:
+            desc_out = sentence
+        elif not _DESC_ORIGINALITY_HEAD_RE.match(desc_out):
+            desc_out = f"{sentence}\n{desc_out}"
+
+    return name_out, params_out, desc_out
+
+
 def build_offer(
     src: SourceOffer,
     *,
@@ -673,12 +838,7 @@ def build_offer(
     oid = build_offer_oid(raw_id, prefix=id_prefix)
     available = normalize_available(src.available_attr, src.available_tag)
     pictures = collect_picture_urls(src.picture_urls, placeholder_picture=placeholder_picture)
-    vendor = normalize_vendor(
-        src.vendor,
-        name=name,
-        description_text=src.description or "",
-        vendor_blacklist=vendor_blacklist,
-    )
+    vendor = normalize_vendor(src.vendor, vendor_blacklist=vendor_blacklist)
 
     desc_src = sanitize_native_desc(src.description or "", name=name)
 
@@ -709,6 +869,9 @@ def build_offer(
     native_desc_src = desc_body
     if not norm_ws(native_desc_src):
         native_desc_src = "" if desc_params else desc_src
+
+    originality_status = _detect_consumable_originality(src, name, params)
+    name, params, native_desc_src = _apply_consumable_originality(name, params, native_desc_src, originality_status)
 
     offer = OfferOut(
         oid=oid,
