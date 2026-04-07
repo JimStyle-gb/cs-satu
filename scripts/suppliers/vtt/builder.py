@@ -243,6 +243,31 @@ def _resolve_vendor(
     return ""
 
 
+def _resolve_for_brand(*, vendor: str, title: str, compat: str) -> str:
+    """Определить target printer brand для param 'Для бренда'.
+
+    Важно:
+    - vendor у совместимок может быть брендом расходника (например Hi-Black);
+    - param 'Для бренда' должен отражать бренд устройства, а не бренд совместимого картриджа.
+    """
+    vendor_n = _canonical_vendor(vendor)
+    if not vendor_n:
+        return ""
+    if vendor_n.casefold() != "hi-black":
+        return vendor_n
+
+    target = _vendor_from_texts(compat, title)
+    if target and target.casefold() != "hi-black":
+        return target
+
+    m = re.search(r"\bдля\s+(.+)$", norm_ws(title), re.I)
+    if m:
+        target = _vendor_from_texts(m.group(1))
+        if target and target.casefold() != "hi-black":
+            return target
+    return ""
+
+
 def _prefer_title_type(current_type: str, title: str) -> str:
     t = norm_ws(title).lower()
     explicit = (
@@ -347,11 +372,12 @@ def _merge_params(
         add("Тип", type_name)
     if tech:
         add("Технология печати", tech)
-    if vendor and type_name and any(
+    target_brand = _resolve_for_brand(vendor=vendor, title=title, compat=compat)
+    if target_brand and type_name and any(
         x in type_name.casefold()
         for x in ("картридж", "драм", "девелопер", "чернила", "тонер", "головка", "блок", "барабан", "контейнер", "носитель")
     ):
-        add("Для бренда", vendor)
+        add("Для бренда", target_brand)
 
     for key, value in raw_params:
         if key in SKIP_PARAM_KEYS or key in CODE_SOURCE_KEYS:
