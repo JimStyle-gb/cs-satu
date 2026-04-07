@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<yml_catalog date="2026-04-07 14:22:09">
+<yml_catalog date="2026-04-07 14:51:18">
 <shop><offers>
 <!--FEED_META
 Поставщик                                  | VTT
 URL поставщика                             | https://b2b.vtt.ru/catalog/
-Время сборки (Алматы)                      | 2026-04-07 14:22:09
+Время сборки (Алматы)                      | 2026-04-07 14:51:18
 Ближайшая сборка (Алматы)                  | 2026-04-10 05:00:00
 Сколько товаров у поставщика до фильтра    | 3143
 Сколько товаров у поставщика после фильтра | 3138
@@ -23442,13 +23442,13 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Hi-Black</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Тип: Тонер-картридж; Партномер: HB-TN-217; Совместимость: Hi-Black Minolta Bizhub 223/283/7828; Ресурс: 18K; Цвет: Чёрный]]></description>
+Тип: Тонер-картридж; Партномер: HB-TN-217; Совместимость: Minolta Bizhub 223/283/7828; Ресурс: 18K; Цвет: Чёрный]]></description>
 <param name="Тип">Тонер-картридж</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Для бренда">Hi-Black</param>
+<param name="Для бренда">Konica Minolta</param>
 <param name="Цвет">Чёрный</param>
 <param name="Партномер">HB-TN-217</param>
-<param name="Совместимость">Hi-Black Minolta Bizhub 223/283/7828</param>
+<param name="Совместимость">Minolta Bizhub 223/283/7828</param>
 <param name="Ресурс">18K</param>
 </offer>
 
@@ -37325,13 +37325,13 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Hi-Black</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Тип: Картридж; Партномер: 9911309211; Совместимость: Hi-Black Olivetti PR II; Цвет: Чёрный]]></description>
+Тип: Картридж; Партномер: 9911309211; Совместимость: Olivetti PR II; Цвет: Чёрный]]></description>
 <param name="Тип">Картридж</param>
 <param name="Технология печати">Матричная</param>
-<param name="Для бренда">Hi-Black</param>
+<param name="Для бренда">Olivetti</param>
 <param name="Цвет">Чёрный</param>
 <param name="Партномер">9911309211</param>
-<param name="Совместимость">Hi-Black Olivetti PR II</param>
+<param name="Совместимость">Olivetti PR II</param>
 <param name="Коды расходников">RR-OL-PR2-BK</param>
 </offer>
 
@@ -55627,13 +55627,13 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Hi-Black</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Тип: Драм-юнит; Партномер: HB-40IU40R; Совместимость: Hi-Black F+ imaging P40dn/M40adn; Ресурс: 40K; Цвет: Чёрный]]></description>
+Тип: Драм-юнит; Партномер: HB-40IU40R; Совместимость: F+ imaging P40dn/M40adn; Ресурс: 40K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Для бренда">Hi-Black</param>
+<param name="Для бренда">F+ imaging</param>
 <param name="Цвет">Чёрный</param>
 <param name="Партномер">HB-40IU40R</param>
-<param name="Совместимость">Hi-Black F+ imaging P40dn/M40adn</param>
+<param name="Совместимость">F+ imaging P40dn/M40adn</param>
 <param name="Ресурс">40K</param>
 </offer>
 
@@ -55652,13 +55652,13 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Hi-Black</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Тип: Тонер-картридж; Партномер: HB-40STB20; Совместимость: Hi-Black F+ imaging P40dn/M40adn; Ресурс: 20K; Цвет: Чёрный]]></description>
+Тип: Тонер-картридж; Партномер: HB-40STB20; Совместимость: F+ imaging P40dn/M40adn; Ресурс: 20K; Цвет: Чёрный]]></description>
 <param name="Тип">Тонер-картридж</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Для бренда">Hi-Black</param>
+<param name="Для бренда">F+ imaging</param>
 <param name="Цвет">Чёрный</param>
 <param name="Партномер">HB-40STB20</param>
-<param name="Совместимость">Hi-Black F+ imaging P40dn/M40adn</param>
+<param name="Совместимость">F+ imaging P40dn/M40adn</param>
 <param name="Ресурс">20K</param>
 </offer>
 
@@ -55694,13 +55694,13 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Hi-Black</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Тип: Тонер-картридж; Партномер: HB-60STB15; Совместимость: Hi-Black F+ imaging M60ade; Ресурс: 15K; Цвет: Чёрный]]></description>
+Тип: Тонер-картридж; Партномер: HB-60STB15; Совместимость: F+ imaging M60ade; Ресурс: 15K; Цвет: Чёрный]]></description>
 <param name="Тип">Тонер-картридж</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Для бренда">Hi-Black</param>
+<param name="Для бренда">F+ imaging</param>
 <param name="Цвет">Чёрный</param>
 <param name="Партномер">HB-60STB15</param>
-<param name="Совместимость">Hi-Black F+ imaging M60ade</param>
+<param name="Совместимость">F+ imaging M60ade</param>
 <param name="Ресурс">15K</param>
 </offer>
 
@@ -56247,13 +56247,13 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Hi-Black</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Тип: Тонер-картридж; Партномер: HB-D320T24KBK; Совместимость: Hi-Black Катюша D330e/D332e; Ресурс: 24K; Цвет: Чёрный]]></description>
+Тип: Тонер-картридж; Партномер: HB-D320T24KBK; Совместимость: Катюша D330e/D332e; Ресурс: 24K; Цвет: Чёрный]]></description>
 <param name="Тип">Тонер-картридж</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Для бренда">Hi-Black</param>
+<param name="Для бренда">Катюша</param>
 <param name="Цвет">Чёрный</param>
 <param name="Партномер">HB-D320T24KBK</param>
-<param name="Совместимость">Hi-Black Катюша D330e/D332e</param>
+<param name="Совместимость">Катюша D330e/D332e</param>
 <param name="Ресурс">24K</param>
 </offer>
 
@@ -56266,13 +56266,13 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Hi-Black</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Тип: Тонер-картридж; Партномер: HB-D320T24KC; Совместимость: Hi-Black Катюша D330e/D332e; Ресурс: 24K; Цвет: Голубой]]></description>
+Тип: Тонер-картридж; Партномер: HB-D320T24KC; Совместимость: Катюша D330e/D332e; Ресурс: 24K; Цвет: Голубой]]></description>
 <param name="Тип">Тонер-картридж</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Для бренда">Hi-Black</param>
+<param name="Для бренда">Катюша</param>
 <param name="Цвет">Голубой</param>
 <param name="Партномер">HB-D320T24KC</param>
-<param name="Совместимость">Hi-Black Катюша D330e/D332e</param>
+<param name="Совместимость">Катюша D330e/D332e</param>
 <param name="Ресурс">24K</param>
 </offer>
 
@@ -56285,13 +56285,13 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Hi-Black</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Тип: Тонер-картридж; Партномер: HB-D320T24KM; Совместимость: Hi-Black Катюша D330e/D332e; Ресурс: 24K; Цвет: Пурпурный]]></description>
+Тип: Тонер-картридж; Партномер: HB-D320T24KM; Совместимость: Катюша D330e/D332e; Ресурс: 24K; Цвет: Пурпурный]]></description>
 <param name="Тип">Тонер-картридж</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Для бренда">Hi-Black</param>
+<param name="Для бренда">Катюша</param>
 <param name="Цвет">Пурпурный</param>
 <param name="Партномер">HB-D320T24KM</param>
-<param name="Совместимость">Hi-Black Катюша D330e/D332e</param>
+<param name="Совместимость">Катюша D330e/D332e</param>
 <param name="Ресурс">24K</param>
 </offer>
 
@@ -56304,13 +56304,13 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Hi-Black</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Тип: Тонер-картридж; Партномер: HB-D320T24KY; Совместимость: Hi-Black Катюша D330e/D332e; Ресурс: 24K; Цвет: Желтый]]></description>
+Тип: Тонер-картридж; Партномер: HB-D320T24KY; Совместимость: Катюша D330e/D332e; Ресурс: 24K; Цвет: Желтый]]></description>
 <param name="Тип">Тонер-картридж</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Для бренда">Hi-Black</param>
+<param name="Для бренда">Катюша</param>
 <param name="Цвет">Желтый</param>
 <param name="Партномер">HB-D320T24KY</param>
-<param name="Совместимость">Hi-Black Катюша D330e/D332e</param>
+<param name="Совместимость">Катюша D330e/D332e</param>
 <param name="Ресурс">24K</param>
 </offer>
 
@@ -56326,13 +56326,13 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Hi-Black</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Тип: Драм-юнит; Партномер: HB-DC-HW-X-15000; Совместимость: Hi-Black Huawei PixLab X1/B5/CV81-WD; Ресурс: 15K; Цвет: Чёрный]]></description>
+Тип: Драм-юнит; Партномер: HB-DC-HW-X-15000; Совместимость: Huawei PixLab X1/B5/CV81-WD; Ресурс: 15K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Для бренда">Hi-Black</param>
+<param name="Для бренда">Huawei</param>
 <param name="Цвет">Чёрный</param>
 <param name="Партномер">HB-DC-HW-X-15000</param>
-<param name="Совместимость">Hi-Black Huawei PixLab X1/B5/CV81-WD</param>
+<param name="Совместимость">Huawei PixLab X1/B5/CV81-WD</param>
 <param name="Ресурс">15K</param>
 </offer>
 
@@ -56388,13 +56388,13 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Hi-Black</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Тип: Драм-юнит; Партномер: HB-DR-1071H; Совместимость: Hi-Black Avision AP40/A; Ресурс: 35K; Цвет: Чёрный]]></description>
+Тип: Драм-юнит; Партномер: HB-DR-1071H; Совместимость: Avision AP40/A; Ресурс: 35K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Для бренда">Hi-Black</param>
+<param name="Для бренда">Avision</param>
 <param name="Цвет">Чёрный</param>
 <param name="Партномер">HB-DR-1071H</param>
-<param name="Совместимость">Hi-Black Avision AP40/A</param>
+<param name="Совместимость">Avision AP40/A</param>
 <param name="Ресурс">35K</param>
 </offer>
 
@@ -56426,13 +56426,13 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Hi-Black</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Тип: Драм-юнит; Партномер: HB-DR133; Совместимость: Hi-Black Катюша P133; Ресурс: 30K; Цвет: Чёрный]]></description>
+Тип: Драм-юнит; Партномер: HB-DR133; Совместимость: Катюша P133; Ресурс: 30K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Для бренда">Hi-Black</param>
+<param name="Для бренда">Катюша</param>
 <param name="Цвет">Чёрный</param>
 <param name="Партномер">HB-DR133</param>
-<param name="Совместимость">Hi-Black Катюша P133</param>
+<param name="Совместимость">Катюша P133</param>
 <param name="Ресурс">30K</param>
 </offer>
 
@@ -56445,13 +56445,13 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Hi-Black</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Тип: Драм-юнит; Партномер: HB-DR240; Совместимость: Hi-Black Катюша P140/M140; Ресурс: 30K; Цвет: Чёрный]]></description>
+Тип: Драм-юнит; Партномер: HB-DR240; Совместимость: Катюша P140/M140; Ресурс: 30K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Для бренда">Hi-Black</param>
+<param name="Для бренда">Катюша</param>
 <param name="Цвет">Чёрный</param>
 <param name="Партномер">HB-DR240</param>
-<param name="Совместимость">Hi-Black Катюша P140/M140</param>
+<param name="Совместимость">Катюша P140/M140</param>
 <param name="Ресурс">30K</param>
 </offer>
 
@@ -56464,13 +56464,13 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Hi-Black</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Тип: Тонер-картридж; Партномер: HB-F-1500BZ; Совместимость: Hi-Black Huawei PixLab X1/B5/CV81-WDM2; Ресурс: 2K; Цвет: Чёрный]]></description>
+Тип: Тонер-картридж; Партномер: HB-F-1500BZ; Совместимость: Huawei PixLab X1/B5/CV81-WDM2; Ресурс: 2K; Цвет: Чёрный]]></description>
 <param name="Тип">Тонер-картридж</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Для бренда">Hi-Black</param>
+<param name="Для бренда">Huawei</param>
 <param name="Цвет">Чёрный</param>
 <param name="Партномер">HB-F-1500BZ</param>
-<param name="Совместимость">Hi-Black Huawei PixLab X1/B5/CV81-WDM2</param>
+<param name="Совместимость">Huawei PixLab X1/B5/CV81-WDM2</param>
 <param name="Ресурс">2K</param>
 </offer>
 
@@ -56931,13 +56931,13 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Hi-Black</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Тип: Драм-юнит; Партномер: HB-PCM130; Совместимость: Hi-Black Катюша P130; Ресурс: 12K; Цвет: Чёрный]]></description>
+Тип: Драм-юнит; Партномер: HB-PCM130; Совместимость: Катюша P130; Ресурс: 12K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Для бренда">Hi-Black</param>
+<param name="Для бренда">Катюша</param>
 <param name="Цвет">Чёрный</param>
 <param name="Партномер">HB-PCM130</param>
-<param name="Совместимость">Hi-Black Катюша P130</param>
+<param name="Совместимость">Катюша P130</param>
 <param name="Ресурс">12K</param>
 </offer>
 
@@ -56950,13 +56950,13 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Hi-Black</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Тип: Драм-юнит; Партномер: HB-PCM247; Совместимость: Hi-Black Катюша P247; Ресурс: 45K; Цвет: Чёрный]]></description>
+Тип: Драм-юнит; Партномер: HB-PCM247; Совместимость: Катюша P247; Ресурс: 45K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Для бренда">Hi-Black</param>
+<param name="Для бренда">Катюша</param>
 <param name="Цвет">Чёрный</param>
 <param name="Партномер">HB-PCM247</param>
-<param name="Совместимость">Hi-Black Катюша P247</param>
+<param name="Совместимость">Катюша P247</param>
 <param name="Ресурс">45K</param>
 </offer>
 
@@ -57350,13 +57350,13 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Hi-Black</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Тип: Тонер-картридж; Партномер: HB-THM130; Совместимость: Hi-Black Катюша P130; Ресурс: 3K; Цвет: Чёрный]]></description>
+Тип: Тонер-картридж; Партномер: HB-THM130; Совместимость: Катюша P130; Ресурс: 3K; Цвет: Чёрный]]></description>
 <param name="Тип">Тонер-картридж</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Для бренда">Hi-Black</param>
+<param name="Для бренда">Катюша</param>
 <param name="Цвет">Чёрный</param>
 <param name="Партномер">HB-THM130</param>
-<param name="Совместимость">Hi-Black Катюша P130</param>
+<param name="Совместимость">Катюша P130</param>
 <param name="Ресурс">3K</param>
 </offer>
 
@@ -57369,13 +57369,13 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Hi-Black</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Тип: Тонер-картридж; Партномер: HB-THM247; Совместимость: Hi-Black Катюша P247; Ресурс: 13K; Цвет: Чёрный]]></description>
+Тип: Тонер-картридж; Партномер: HB-THM247; Совместимость: Катюша P247; Ресурс: 13K; Цвет: Чёрный]]></description>
 <param name="Тип">Тонер-картридж</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Для бренда">Hi-Black</param>
+<param name="Для бренда">Катюша</param>
 <param name="Цвет">Чёрный</param>
 <param name="Партномер">HB-THM247</param>
-<param name="Совместимость">Hi-Black Катюша P247</param>
+<param name="Совместимость">Катюша P247</param>
 <param name="Ресурс">13K</param>
 </offer>
 
@@ -57388,13 +57388,13 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Hi-Black</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Тип: Тонер-картридж; Партномер: HB-THM348; Совместимость: Hi-Black Катюша; Ресурс: 20K; Цвет: Чёрный]]></description>
+Тип: Тонер-картридж; Партномер: HB-THM348; Совместимость: Катюша; Ресурс: 20K; Цвет: Чёрный]]></description>
 <param name="Тип">Тонер-картридж</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Для бренда">Hi-Black</param>
+<param name="Для бренда">Катюша</param>
 <param name="Цвет">Чёрный</param>
 <param name="Партномер">HB-THM348</param>
-<param name="Совместимость">Hi-Black Катюша</param>
+<param name="Совместимость">Катюша</param>
 <param name="Ресурс">20K</param>
 </offer>
 
@@ -57407,13 +57407,13 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Hi-Black</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Тип: Тонер-картридж; Партномер: HB-TK-1060; Совместимость: Hi-Black Avision AM5630i/5640i/7630i/7640i; Ресурс: 20K; Цвет: Чёрный]]></description>
+Тип: Тонер-картридж; Партномер: HB-TK-1060; Совместимость: Avision AM5630i/5640i/7630i/7640i; Ресурс: 20K; Цвет: Чёрный]]></description>
 <param name="Тип">Тонер-картридж</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Для бренда">Hi-Black</param>
+<param name="Для бренда">Avision</param>
 <param name="Цвет">Чёрный</param>
 <param name="Партномер">HB-TK-1060</param>
-<param name="Совместимость">Hi-Black Avision AM5630i/5640i/7630i/7640i</param>
+<param name="Совместимость">Avision AM5630i/5640i/7630i/7640i</param>
 <param name="Ресурс">20K</param>
 </offer>
 
@@ -57980,13 +57980,13 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Hi-Black</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Тип: Тонер-картридж; Партномер: HB-TK133; Совместимость: Hi-Black Катюша P133; Ресурс: 3K; Цвет: Чёрный]]></description>
+Тип: Тонер-картридж; Партномер: HB-TK133; Совместимость: Катюша P133; Ресурс: 3K; Цвет: Чёрный]]></description>
 <param name="Тип">Тонер-картридж</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Для бренда">Hi-Black</param>
+<param name="Для бренда">Катюша</param>
 <param name="Цвет">Чёрный</param>
 <param name="Партномер">HB-TK133</param>
-<param name="Совместимость">Hi-Black Катюша P133</param>
+<param name="Совместимость">Катюша P133</param>
 <param name="Ресурс">3K</param>
 </offer>
 
@@ -57999,13 +57999,13 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Hi-Black</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Тип: Тонер-картридж; Партномер: HB-TK240X; Совместимость: Hi-Black Катюша P140/M140; Ресурс: 9K; Цвет: Чёрный]]></description>
+Тип: Тонер-картридж; Партномер: HB-TK240X; Совместимость: Катюша P140/M140; Ресурс: 9K; Цвет: Чёрный]]></description>
 <param name="Тип">Тонер-картридж</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Для бренда">Hi-Black</param>
+<param name="Для бренда">Катюша</param>
 <param name="Цвет">Чёрный</param>
 <param name="Партномер">HB-TK240X</param>
-<param name="Совместимость">Hi-Black Катюша P140/M140</param>
+<param name="Совместимость">Катюша P140/M140</param>
 <param name="Ресурс">9K</param>
 </offer>
 
@@ -58175,13 +58175,13 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Hi-Black</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Тип: Тонер-картридж; Партномер: HB-TN-1070; Совместимость: Hi-Black Avision AP30A/AM30A; Ресурс: 3K; Цвет: Чёрный]]></description>
+Тип: Тонер-картридж; Партномер: HB-TN-1070; Совместимость: Avision AP30A/AM30A; Ресурс: 3K; Цвет: Чёрный]]></description>
 <param name="Тип">Тонер-картридж</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Для бренда">Hi-Black</param>
+<param name="Для бренда">Avision</param>
 <param name="Цвет">Чёрный</param>
 <param name="Партномер">HB-TN-1070</param>
-<param name="Совместимость">Hi-Black Avision AP30A/AM30A</param>
+<param name="Совместимость">Avision AP30A/AM30A</param>
 <param name="Ресурс">3K</param>
 </offer>
 
@@ -58194,13 +58194,13 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Hi-Black</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Тип: Тонер-картридж; Партномер: HB-TN-1071H; Совместимость: Hi-Black Avision AP40/A; Ресурс: 6K; Цвет: Чёрный]]></description>
+Тип: Тонер-картридж; Партномер: HB-TN-1071H; Совместимость: Avision AP40/A; Ресурс: 6K; Цвет: Чёрный]]></description>
 <param name="Тип">Тонер-картридж</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Для бренда">Hi-Black</param>
+<param name="Для бренда">Avision</param>
 <param name="Цвет">Чёрный</param>
 <param name="Партномер">HB-TN-1071H</param>
-<param name="Совместимость">Hi-Black Avision AP40/A</param>
+<param name="Совместимость">Avision AP40/A</param>
 <param name="Ресурс">6K</param>
 </offer>
 
