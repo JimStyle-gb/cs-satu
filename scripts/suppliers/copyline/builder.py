@@ -268,6 +268,38 @@ def _upsert_param(params: Sequence[Tuple[str, str]], key: str, value: str) -> li
     return out
 
 
+_DESC_FIELD_START_RE = re.compile(
+    r"(?iu)^(?:цвет|ресурс|технология(?:\s+печати)?|тип|партномер|модель|код(?:ы)?|совместимость|"
+    r"для\s+бренда|гарантия|об[ъь]ем|объём|вес|номер|применение|количество)\s*:"
+)
+
+
+def _strip_leading_type_phrase(desc: str, type_label: str) -> str:
+    d = safe_str(desc)
+    tl = safe_str(type_label)
+    if not d or not tl:
+        return d
+    pat = re.compile(rf"(?iu)^\s*{re.escape(tl)}(?=$|[\s.,:;()\-–—])")
+    m = pat.match(d)
+    if not m:
+        return d
+    rest = d[m.end():].lstrip(" .,:;()-–—")
+    return safe_str(rest)
+
+
+def _merge_originality_sentence(sentence: str, desc: str, type_label: str) -> str:
+    s = safe_str(sentence)
+    d = _strip_leading_type_phrase(desc, type_label)
+    if not s:
+        return d
+    if not d:
+        return s
+    if _DESC_FIELD_START_RE.match(d):
+        return f"{s} {d}" if s.endswith('.') else f"{s}. {d}"
+    s_join = s[:-1] if s.endswith('.') else s
+    return f"{s_join} {d}"
+
+
 def _detect_consumable_type_label(name: str, params: Sequence[Tuple[str, str]]) -> str:
     type_from_param = ""
     for k, v in params:
@@ -400,12 +432,13 @@ def _apply_consumable_originality(name: str, params: Sequence[Tuple[str, str]], 
     name_out = f"{base_name} {suffix}"
     params_out = _upsert_param(params, _ORIGINALITY_PARAM_NAME, value)
     desc_out = safe_str(native_desc)
-    sentence = _build_originality_sentence(status, _detect_consumable_type_label(base_name, params_out))
+    type_label = _detect_consumable_type_label(base_name, params_out)
+    sentence = _build_originality_sentence(status, type_label)
     if sentence:
         if not desc_out:
             desc_out = sentence
         elif not _DESC_ORIGINALITY_HEAD_RE.match(desc_out):
-            desc_out = f"{sentence} {desc_out}"
+            desc_out = _merge_originality_sentence(sentence, desc_out, type_label)
     return name_out, params_out, desc_out
 
 
