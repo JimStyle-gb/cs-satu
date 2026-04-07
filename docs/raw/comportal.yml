@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<yml_catalog date="2026-04-07 15:08:56">
+<yml_catalog date="2026-04-07 16:41:12">
 <shop><offers>
 <!--FEED_META
 Поставщик                                  | ComPortal
 URL поставщика                             | https://www.comportal.kz/auth/documents/prices/yml-catalog.php
-Время сборки (Алматы)                      | 2026-04-07 15:08:56
+Время сборки (Алматы)                      | 2026-04-07 16:41:12
 Ближайшая сборка (Алматы)                  | 2026-04-08 03:00:00
-Сколько товаров у поставщика до фильтра    | 1213
-Сколько товаров у поставщика после фильтра | 607
-Сколько товаров есть в наличии (true)      | 607
+Сколько товаров у поставщика до фильтра    | 1212
+Сколько товаров у поставщика после фильтра | 606
+Сколько товаров есть в наличии (true)      | 606
 Сколько товаров нет в наличии (false)      | 0
 -->
 
@@ -9540,24 +9540,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Для бренда">Acer</param>
 </offer>
 
-<offer id="CP13869689" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13869689</vendorCode>
-<name>Печатающая головка Canon 0694C002 / CH-4 EMB (0694C002)</name>
-<price>9229</price>
-<picture>https://www.comportal.kz/upload/iblock/668/mqeuipu3pu89ovyc2daqqs7iddsqrvdq.jpg</picture>
-<vendor>Canon</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Картридж. Цвет: Цветной. Технология печати: Струйная.]]></description>
-<param name="Тип">Картридж</param>
-<param name="Модель">0694C002 / CH-4 EMB</param>
-<param name="Цвет">Цветной</param>
-<param name="Технология печати">Струйная</param>
-<param name="Коды">0694C002</param>
-<param name="Для бренда">Canon</param>
-</offer>
-
 <offer id="CP13870600" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13870600</vendorCode>
@@ -13585,7 +13567,7 @@ URL поставщика                             | https://www.comportal.kz/
 <offer id="CP13872296" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13872296</vendorCode>
-<name>Плоттер Canon imagePROGRAF TX-3200 incl. stand / A1 / 2400 x1200 dpi. (6854C003)</name>
+<name>Плоттер Canon Плоттер Canon / imagePROGRAF TX-3200 incl. stand / A1 / 2400 x1200 dpi. (6854C003)</name>
 <price>2322684</price>
 <picture>https://www.comportal.kz/upload/iblock/dbb/2d8ql9fb54f55m7wonx4dp5fhjtfbh0o.jpg</picture>
 <vendor>Canon</vendor>
