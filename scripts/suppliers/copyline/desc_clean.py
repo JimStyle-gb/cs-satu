@@ -21,6 +21,22 @@ import re
 from typing import Iterable
 
 
+_DISPLAY_BRAND_REPLACEMENTS: tuple[tuple[str, str], ...] = (
+    (r"\bEuro\s+Print\b", "Europrint"),
+    (r"\bKATYUSHA\b", "Катюша"),
+    (r"\bКАТЮША\b", "Катюша"),
+)
+
+
+def _canonical_display_brands(text: str) -> str:
+    s = _canonical_display_brands(safe_str(text))
+    if not s:
+        return ""
+    for pattern, repl in _DISPLAY_BRAND_REPLACEMENTS:
+        s = re.sub(pattern, repl, s, flags=re.I)
+    return s
+
+
 DISPLAY_CUT_HEADERS: tuple[str, ...] = (
     "Технические характеристики",
     "Основные характеристики",
