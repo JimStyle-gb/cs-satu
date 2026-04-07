@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<yml_catalog date="2026-04-07 13:00:25">
+<yml_catalog date="2026-04-07 16:27:43">
 <shop><offers>
 <!--FEED_META
 Поставщик                                  | CopyLine
 URL поставщика                             | https://copyline.kz/goods.html
-Время сборки (Алматы)                      | 2026-04-07 13:00:25
+Время сборки (Алматы)                      | 2026-04-07 16:27:43
 Ближайшая сборка (Алматы)                  | 2026-04-10 04:00:00
-Сколько товаров у поставщика до фильтра    | 2703
+Сколько товаров у поставщика до фильтра    | 2707
 Сколько товаров у поставщика после фильтра | 1220
 Сколько товаров есть в наличии (true)      | 1220
 Сколько товаров нет в наличии (false)      | 0
@@ -305,9 +305,8 @@ SL-C430, SL-C430W, SL-C480, SL-C480W, SL-C480FW.
 <param name="Совместимость">Samsung Xpress SL-C430, SL-C430W, SL-C480, SL-C480W, SL-C480FW</param>
 <param name="Коды расходников">CLT-K404S</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">1500</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">1500</param>
 <param name="Модель">CLT-K404S</param>
 <param name="Для бренда">Samsung</param>
 </offer>
@@ -374,9 +373,8 @@ CLP-360/365/365W, CLX-3300/3305/3305W/3305FW/3305FN, Xpress C410/C460.
 <param name="Совместимость">Samsung CLP-360/365/365W, CLX-3300/3305/3305W/3305FW/3305FN, Xpress C410/C460</param>
 <param name="Коды расходников">CLT-K406S</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">1500</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">1500</param>
 <param name="Модель">CLT-K406S</param>
 <param name="Для бренда">Samsung</param>
 </offer>
@@ -885,9 +883,8 @@ CLP-360/365/365W, CLX-3300/3305/3305W/3305FW/3305FN, Xpress C410/C460.
 <param name="Совместимость">Ricoh Aficio SP 311DN, SP 311, SP 311DNw, SP 311SFN</param>
 <param name="Коды расходников">SP311HE</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">3500</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">3500</param>
 <param name="Модель">SP311HE</param>
 <param name="Для бренда">Ricoh</param>
 </offer>
@@ -2222,7 +2219,7 @@ PE
 Производитель: Euro Print]]></description>
 <param name="Тип">Тонер-картридж</param>
 <param name="Технология печати">лазерная, монохромная</param>
-<param name="Цвет">черный</param>
+<param name="Цвет">Чёрный</param>
 <param name="Ресурс">30000 стр. А4 при 5% заполнении</param>
 <param name="Совместимость">Xerox WorkCentre Pro 5325, WorkCentre 5330, WorkCentre 5335</param>
 <param name="Коды расходников">006R01160</param>
@@ -2311,9 +2308,8 @@ PE
 <param name="Совместимость">HP Color LaserJet 2550, HP Color LaserJet 2820, HP Color LaserJet 2830, HP Color LaserJet 2840</param>
 <param name="Коды расходников">Q3960A</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">5000</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">5000</param>
 <param name="Модель">Q3960A</param>
 <param name="Для бренда">HP</param>
 </offer>
@@ -2440,9 +2436,8 @@ Canon i-SENSYS MF211, MF212w, MF216n, MF217w, MF226dn, MF229dw, MF231, MF232w, M
 <param name="Совместимость">Xerox Phaser 7100</param>
 <param name="Коды расходников">106R02612</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">9000</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">9000</param>
 <param name="Модель">106R02612</param>
 <param name="Для бренда">Xerox</param>
 </offer>
@@ -2728,9 +2723,8 @@ Canon i-SENSYS LBP7010C, LBP7018C.
 <param name="Совместимость">HP Color LaserJet 1600, HP Color LaserJet 2600, HP Color LaserJet 2605, CM1015, CM1017, Canon i-SENSYS LBP5000, LBP5100, Laser Shot LBP5000</param>
 <param name="Коды расходников">Q6000A, Canon 707</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">2500</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">2500</param>
 <param name="Модель">Q6000A</param>
 <param name="Для бренда">HP</param>
 </offer>
@@ -2876,9 +2870,8 @@ Canon i-SENSYS LBP7010C, LBP7018C.
 <param name="Совместимость">HP Color LaserJet 3600, HP Color LaserJet 3800, CP3505</param>
 <param name="Коды расходников">Q6470A</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">6000</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">6000</param>
 <param name="Модель">Q6470A</param>
 <param name="Для бренда">HP</param>
 </offer>
@@ -3072,9 +3065,8 @@ Canon i-SENSYS LBP7010C, LBP7018C.
 <param name="Совместимость">Ricoh Aficio SP 200N, SP 200NW, SP 200S, SP SP 203SFNW, SP 203SFN, SP 210, SP 210SF, SP 212SUw, SP 212SFNw, SP 212Nw, SP 212W</param>
 <param name="Коды расходников">SP200HS</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">2600</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">2600</param>
 <param name="Модель">SP200HS</param>
 <param name="Для бренда">Ricoh</param>
 </offer>
@@ -3096,9 +3088,8 @@ Canon i-SENSYS LBP7010C, LBP7018C.
 <param name="Совместимость">Ricoh Aficio SP 150, SP 150SU, SP 150SUW, SP 150W</param>
 <param name="Коды расходников">SP150HE</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">1500</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">1500</param>
 <param name="Модель">SP150HE</param>
 <param name="Для бренда">Ricoh</param>
 </offer>
@@ -3120,9 +3111,8 @@ Canon i-SENSYS LBP7010C, LBP7018C.
 <param name="Совместимость">Ricoh Aficio SP 111, SP 111SU, SP 111SF</param>
 <param name="Коды расходников">SP111E</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">2000</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">2000</param>
 <param name="Модель">SP111E</param>
 <param name="Для бренда">Ricoh</param>
 </offer>
@@ -3714,9 +3704,8 @@ LBP-3010 / LBP-3100 / LBP-3250 / LBP-6000 / LBP-6020.
 <param name="Совместимость">Ricoh Aficio SP100</param>
 <param name="Коды расходников">SP101E</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">2000</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">2000</param>
 <param name="Модель">SP101E</param>
 <param name="Для бренда">Ricoh</param>
 </offer>
@@ -4848,9 +4837,8 @@ WorkCentre M118, M118i, M123, M128, M133, CopyCentre C118, C123, C128, C133, WC 
 <param name="Совместимость">Lexmark MS310, MS410, MS510, MS610</param>
 <param name="Коды расходников">50F5H00</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">5000</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">5000</param>
 <param name="Модель">50F5H00</param>
 <param name="Для бренда">Lexmark</param>
 </offer>
@@ -4870,9 +4858,8 @@ WorkCentre M118, M118i, M123, M128, M133, CopyCentre C118, C123, C128, C133, WC 
 <param name="Совместимость">Xerox Phaser 7700</param>
 <param name="Коды расходников">016194700</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">10000</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">10000</param>
 <param name="Модель">016194700</param>
 <param name="Для бренда">Xerox</param>
 </offer>
@@ -5946,7 +5933,6 @@ LBP-3010 / LBP-3100 / LBP-3250 / LBP-6000 / LBP-6020.]]></description>
 <param name="Совместимость">Canon imageRUNNER C2020, Canon imageRUNNER C2025, Canon imageRUNNER C2030, Canon imageRUNNER C2220, Canon imageRUNNER C2225, Canon imageRUNNER C2230</param>
 <param name="Коды расходников">C-EXV34BK</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
 <param name="Цвет">Чёрный</param>
 <param name="Модель">C-EXV34BK</param>
 <param name="Для бренда">Canon</param>
@@ -6844,7 +6830,7 @@ LBP-3010 / LBP-3100 / LBP-3250 / LBP-6000 / LBP-6020.
 Производитель: Euro Print]]></description>
 <param name="Тип">Тонер-картридж</param>
 <param name="Технология печати">лазерная, монохромная</param>
-<param name="Цвет">черный</param>
+<param name="Цвет">Чёрный</param>
 <param name="Ресурс">2300 стр. А4 при 5% заполнении</param>
 <param name="Совместимость">Xerox Phaser 3010, Xerox Phaser 3040, WorkCentre 3045</param>
 <param name="Коды расходников">106R02183</param>
@@ -7247,7 +7233,7 @@ PVC
 Вес: 0. 15 кг]]></description>
 <param name="Тип">Тонер-картридж</param>
 <param name="Технология печати">лазерная, монохромная</param>
-<param name="Цвет">черный</param>
+<param name="Цвет">Чёрный</param>
 <param name="Ресурс">2300 стр. А4 при 5% заполнении</param>
 <param name="Совместимость">Xerox Phaser 3010, Xerox Phaser 3040, WorkCentre 3045</param>
 <param name="Коды расходников">106R02183</param>
@@ -7607,9 +7593,8 @@ WorkCentre 5325, 5330, 5335.
 <param name="Совместимость">Xerox Color Phaser 7500</param>
 <param name="Коды расходников">106R01446</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">17800</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">17800</param>
 <param name="Модель">106R01446</param>
 <param name="Для бренда">Xerox</param>
 </offer>
@@ -8136,9 +8121,8 @@ Canon i-SENSYS LBP7010C, LBP7018C.
 <param name="Совместимость">Xerox Phaser 6500, WorkCentre 6505</param>
 <param name="Коды расходников">106R01604</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">3000</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">3000</param>
 <param name="Модель">106R01604</param>
 <param name="Для бренда">Xerox</param>
 </offer>
@@ -8221,9 +8205,8 @@ Canon i-SENSYS LBP7010C, LBP7018C.
 <param name="Совместимость">Xerox Phaser 6600N, Xerox Phaser 6600DN, WorkCentre 6605N, Xerox Phaser 6605DN</param>
 <param name="Коды расходников">106R02236</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">8000</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">8000</param>
 <param name="Модель">106R02236</param>
 <param name="Для бренда">Xerox</param>
 </offer>
@@ -8329,9 +8312,8 @@ Canon i-SENSYS LBP7010C, LBP7018C.
 <param name="Совместимость">Xerox Phaser 6020, Xerox Phaser 6022, Xerox WorkCentre 6025, Xerox WorkCentre 6027</param>
 <param name="Коды расходников">106R02763</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">2000</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">2000</param>
 <param name="Модель">106R02763</param>
 <param name="Для бренда">Xerox</param>
 </offer>
@@ -8414,9 +8396,8 @@ Canon i-SENSYS LBP7010C, LBP7018C.
 <param name="Совместимость">Xerox Phaser 6700</param>
 <param name="Коды расходников">106R01526</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">18000</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">18000</param>
 <param name="Модель">106R01526</param>
 <param name="Для бренда">Xerox</param>
 </offer>
@@ -8499,9 +8480,8 @@ Canon i-SENSYS LBP7010C, LBP7018C.
 <param name="Совместимость">Xerox Phaser 7800</param>
 <param name="Коды расходников">106R01573</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">24000</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">24000</param>
 <param name="Модель">106R01573</param>
 <param name="Для бренда">Xerox</param>
 </offer>
@@ -9131,9 +9111,8 @@ AltaLink C8030, C8035, C8045, C8055, C8070.
 <param name="Совместимость">Xerox WC 7132, 7232, 7242</param>
 <param name="Коды расходников">006R01319</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">21000</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">21000</param>
 <param name="Модель">006R01319</param>
 <param name="Для бренда">Xerox</param>
 </offer>
@@ -9246,7 +9225,7 @@ C220, C280, C360.
 <categoryId></categoryId>
 <vendorCode>CL102802</vendorCode>
 <name>Drum Unit для Konica Minolta DR-311K Чёрный (70k)</name>
-<price>23250</price>
+<price>28910</price>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_dr-311k-.jpg</picture>
 <vendor>Konica Minolta</vendor>
 <currencyId>KZT</currencyId>
@@ -9721,9 +9700,8 @@ Canon iR C2020, C2025, C2030, C2220, C2225, C2230.
 <param name="Совместимость">HP Color LaserJet 4700, HP Color LaserJet 4700N, HP Color LaserJet 4700DN</param>
 <param name="Коды расходников">Q5950A</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">11000</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">11000</param>
 <param name="Модель">Q5950A</param>
 <param name="Для бренда">HP</param>
 </offer>
@@ -10733,9 +10711,8 @@ CLP-360/365/365W, CLX-3300/3305/3305W/3305FW/3305FN, Xpress C410/C460.
 <param name="Совместимость">Xerox Phaser 6000, Xerox Phaser 6010, WorkCentre 6015</param>
 <param name="Коды расходников">106R01634</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">2000</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">2000</param>
 <param name="Модель">106R01634</param>
 <param name="Для бренда">Xerox</param>
 </offer>
@@ -10930,7 +10907,7 @@ CLP-360/365/365W, CLX-3300/3305/3305W/3305FW/3305FN, Xpress C410/C460.
 Производитель: Euro Print]]></description>
 <param name="Тип">Тонер-картридж</param>
 <param name="Технология печати">лазерная, монохромная</param>
-<param name="Цвет">черный</param>
+<param name="Цвет">Чёрный</param>
 <param name="Ресурс">1000 стр. А4 при 5% заполнении</param>
 <param name="Совместимость">Xerox Phaser 3010, Xerox Phaser 3040, WorkCentre 3045</param>
 <param name="Коды расходников">106R02181</param>
@@ -11019,7 +10996,6 @@ CLP-360/365/365W, CLX-3300/3305/3305W/3305FW/3305FN, Xpress C410/C460.
 <param name="Совместимость">Canon imageRUNNER 525i, Canon imageRUNNER 525, Canon imageRUNNER 525iz, Canon imageRUNNER 615i 615, Canon imageRUNNER 615iz, Canon imageRUNNER 715i 715, Canon imageRUNNER 715iz III, Canon imageRUNNER C5045, Canon imageRUNNER C5051, Canon imageRUNNER C5250i C5250, Canon imageRUNNER C5255</param>
 <param name="Коды расходников">C-EXV28</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
 <param name="Цвет">Чёрный</param>
 <param name="Модель">C-EXV28</param>
 <param name="Для бренда">Canon</param>
@@ -11104,7 +11080,6 @@ CLP-360/365/365W, CLX-3300/3305/3305W/3305FW/3305FN, Xpress C410/C460.
 <param name="Совместимость">Canon imageRUNNER C2020, Canon imageRUNNER C2025, Canon imageRUNNER C2030, Canon imageRUNNER C2220, Canon imageRUNNER C2225, Canon imageRUNNER C2230</param>
 <param name="Коды расходников">C-EXV34</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
 <param name="Цвет">Чёрный</param>
 <param name="Модель">C-EXV34</param>
 <param name="Для бренда">Canon</param>
@@ -11685,9 +11660,8 @@ LBP-3010 / LBP-3100 / LBP-3250 / LBP-6000 / LBP-6020.
 <param name="Совместимость">Ricoh Aficio SP 300DN</param>
 <param name="Коды расходников">SP300</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">1500</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">1500</param>
 <param name="Модель">SP300</param>
 <param name="Для бренда">Ricoh</param>
 </offer>
@@ -11917,7 +11891,7 @@ LBP-3010 / LBP-3100 / LBP-3250 / LBP-6000 / LBP-6020.
 <categoryId></categoryId>
 <vendorCode>CL103730</vendorCode>
 <name>Drum Unit для Canon C-EXV42</name>
-<price>12385</price>
+<price>12495</price>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_c-exv42_dr.jpg</picture>
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
@@ -12049,7 +12023,6 @@ Canon iR 2202, 2204, 2206.
 <param name="Совместимость">Canon imageRUNNER ADVANCE C3320, Canon imageRUNNER C3330, Canon imageRUNNER C3325</param>
 <param name="Коды расходников">C-EXV49</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
 <param name="Цвет">Чёрный</param>
 <param name="Модель">C-EXV49</param>
 <param name="Для бренда">Canon</param>
@@ -12150,9 +12123,8 @@ Canon iR 2202, 2204, 2206.
 <param name="Совместимость">Samsung CLP-320, CLP-325, CLP-320N, CLP-325W, CLX-3185, CLX-3185N, CLX-3185FN, CLX-3185FW</param>
 <param name="Коды расходников">CLT-K407S</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">1500</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">1500</param>
 <param name="Модель">CLT-K407S</param>
 <param name="Для бренда">Samsung</param>
 </offer>
@@ -12896,9 +12868,8 @@ CLP-320, CLP-325, CLX-3185, CLX-3185N, CLX-3185FN, CLX-3185FW.
 <param name="Совместимость">Lexmark MS/MX 317, 417, 517, 617</param>
 <param name="Коды расходников">51B5H00</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">5000</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">5000</param>
 <param name="Модель">51B5H00</param>
 <param name="Для бренда">Lexmark</param>
 </offer>
@@ -13442,9 +13413,8 @@ M230sdn.
 <param name="Совместимость">Ricoh Aficio SP C220S, SP C221SF, SP C222SF, SP C220N, SP C221N, SP C222DN</param>
 <param name="Коды расходников">SPC220</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">2000</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">2000</param>
 <param name="Модель">SPC220</param>
 <param name="Для бренда">Ricoh</param>
 </offer>
@@ -13464,9 +13434,8 @@ M230sdn.
 <param name="Совместимость">Lexmark X264, X363, X364</param>
 <param name="Коды расходников">X264H11G</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">9000</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">9000</param>
 <param name="Модель">X264H11G</param>
 <param name="Для бренда">Lexmark</param>
 </offer>
@@ -13527,9 +13496,8 @@ M230sdn.
 <param name="Совместимость">Ricoh Aficio SP 211, SP 213, SP 220Nw, SP 220SNw, SP 220SFNw</param>
 <param name="Коды расходников">SP201HE</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">2600</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">2600</param>
 <param name="Модель">SP201HE</param>
 <param name="Для бренда">Ricoh</param>
 </offer>
@@ -13819,9 +13787,8 @@ Enterprise M651N, M651DN, M651XH.
 <param name="Совместимость">HP Color LaserJet Enterprise M651N, HP Color LaserJet M651DN, HP Color LaserJet M651XH</param>
 <param name="Коды расходников">CF330A</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">15000</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">15000</param>
 <param name="Модель">CF330A</param>
 <param name="Для бренда">HP</param>
 </offer>
@@ -13909,9 +13876,8 @@ M181fw.
 <param name="Совместимость">HP Color LaserJet Pro M180n, HP Color LaserJet M181fw</param>
 <param name="Коды расходников">CF530A</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">1100</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">1100</param>
 <param name="Модель">CF530A</param>
 <param name="Для бренда">HP</param>
 </offer>
@@ -14000,9 +13966,8 @@ M181fw.
 <param name="Совместимость">HP Color LaserJet Pro M254dn, HP Color LaserJet M254dw, HP Color LaserJet M254nw, HP Color LaserJet M280nw, HP Color LaserJet M281fdn и M281fdw</param>
 <param name="Коды расходников">CF540A</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">1400</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">1400</param>
 <param name="Модель">CF540A</param>
 <param name="Для бренда">HP</param>
 </offer>
@@ -14087,9 +14052,8 @@ M181fw.
 <param name="Совместимость">Ricoh Aficio SP 400, SP 450</param>
 <param name="Коды расходников">SP400LE</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">5000</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">5000</param>
 <param name="Модель">SP400LE</param>
 <param name="Для бренда">Ricoh</param>
 </offer>
@@ -14109,9 +14073,8 @@ M181fw.
 <param name="Совместимость">HP Color LaserJet Enterprise flow M880z, HP Color LaserJet M880z+</param>
 <param name="Коды расходников">CF300A</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">29500</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">29500</param>
 <param name="Модель">CF300A</param>
 <param name="Для бренда">HP</param>
 </offer>
@@ -14194,9 +14157,8 @@ M181fw.
 <param name="Совместимость">HP Color LaserJet Enterprise M855dn, HP Color LaserJet M855x+, HP Color LaserJet M855xh</param>
 <param name="Коды расходников">CF310A</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">29000</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">29000</param>
 <param name="Модель">CF310A</param>
 <param name="Для бренда">HP</param>
 </offer>
@@ -14371,9 +14333,8 @@ M181fw.
 <param name="Совместимость">Lexmark MS310, MS410, MS510, MS610</param>
 <param name="Коды расходников">50F5H00</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">5000</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">5000</param>
 <param name="Модель">50F5H00</param>
 <param name="Для бренда">Lexmark</param>
 </offer>
@@ -14393,9 +14354,8 @@ M181fw.
 <param name="Совместимость">Lexmark MX310, MX410, MX510, MX610</param>
 <param name="Коды расходников">60F5H00</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">10000</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">10000</param>
 <param name="Модель">60F5H00</param>
 <param name="Для бренда">Lexmark</param>
 </offer>
@@ -14852,9 +14812,8 @@ LBP-3010 / LBP-3100 / LBP-3250 / LBP-6000 / LBP-6020.
 <param name="Тип">Тонер-картридж</param>
 <param name="Коды расходников">SP3500XE, SP3510XE</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">6400</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">6400</param>
 <param name="Модель">SP3500XE</param>
 <param name="Для бренда">Ricoh</param>
 </offer>
@@ -15105,9 +15064,8 @@ LBP-3010 / LBP-3100 / LBP-3250 / LBP-6000 / LBP-6020.
 <param name="Совместимость">Ricoh Aficio SP C231SF, RICOH Aficio C232S, SP C231N, RICOH Aficio C232DN, RICOH Aficio C311N, RICOH Aficio C312DN, RICOH Aficio C242DN, RICOH Aficio C242SF</param>
 <param name="Коды расходников">SPC310E</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">2800</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">2800</param>
 <param name="Модель">SPC310E</param>
 <param name="Для бренда">Ricoh</param>
 </offer>
@@ -15193,9 +15151,8 @@ LBP-3010 / LBP-3100 / LBP-3250 / LBP-6000 / LBP-6020.
 <param name="Совместимость">Lexmark MS/MX 317, 417, 517, 617</param>
 <param name="Коды расходников">51B5000</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">2500</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">2500</param>
 <param name="Модель">51B5000</param>
 <param name="Для бренда">Lexmark</param>
 </offer>
@@ -15431,9 +15388,8 @@ Canon iR 1435, 1435i, 1435iF, 1435P.
 <param name="Совместимость">Xerox VersaLink C400, C405</param>
 <param name="Коды расходников">106R03532</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">10500</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">10500</param>
 <param name="Модель">106R03532</param>
 <param name="Для бренда">Xerox</param>
 </offer>
@@ -15560,9 +15516,8 @@ Canon iR 1435, 1435i, 1435iF, 1435P.
 <param name="Совместимость">Lexmark MX 310, 410, 510, 610</param>
 <param name="Коды расходников">60F1000</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">2500</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">2500</param>
 <param name="Модель">60F1000</param>
 <param name="Для бренда">Lexmark</param>
 </offer>
@@ -15827,9 +15782,8 @@ Drum Unit SP400 используется в принтерах серий Ricoh 
 <param name="Совместимость">Ricoh Aficio SP 400, SP 450</param>
 <param name="Коды расходников">SP400, 408059</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">20000</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">20000</param>
 <param name="Модель">SP400</param>
 <param name="Для бренда">Ricoh</param>
 </offer>
@@ -16094,9 +16048,8 @@ Drum Unit SP400 используется в принтерах серий Ricoh 
 <param name="Совместимость">Ricoh Aficio SP 200N, SP 200NW, SP 200S, SP SP 203SFNW, SP 203SFN, SP 210, SP 210SF, SP 212SUw, SP 212SFNw, SP 212Nw, SP 212W</param>
 <param name="Коды расходников">SP200HS</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">2600</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">2600</param>
 <param name="Модель">SP200HS</param>
 <param name="Для бренда">Ricoh</param>
 </offer>
@@ -16491,9 +16444,8 @@ Drum Unit SP400 используется в принтерах серий Ricoh 
 <param name="Совместимость">Ricoh Aficio SP230DNw, SP230SFNw</param>
 <param name="Коды расходников">SP230H</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">3000</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">3000</param>
 <param name="Модель">SP230H</param>
 <param name="Для бренда">Ricoh</param>
 </offer>
@@ -16863,9 +16815,8 @@ Drum Unit SP400 используется в принтерах серий Ricoh 
 <param name="Совместимость">и МФУ серий Canon i-SENSYS LBP620C, MF640C</param>
 <param name="Коды расходников">Canon 054H</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">3100</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">3100</param>
 <param name="Модель">Canon 054H</param>
 <param name="Для бренда">Canon</param>
 </offer>
@@ -17367,9 +17318,8 @@ Drum Unit SP400 используется в принтерах серий Ricoh 
 <param name="Совместимость">и МФУ серий Canon i-SENSYS LBP663Cdw, LBP664Cx, MF742Cdw, MF744Cdw, MF746</param>
 <param name="Коды расходников">Canon 055H</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">7600</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">7600</param>
 <param name="Модель">Canon 055H</param>
 <param name="Для бренда">Canon</param>
 </offer>
@@ -17852,9 +17802,8 @@ i-SENSYS LBP162dw, MF269dw, MF267dw, MF264dw.
 <param name="Совместимость">Lexmark MS310, MS410, MS510, MS610</param>
 <param name="Коды расходников">50F2H00</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">5000</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">5000</param>
 <param name="Модель">50F2H00</param>
 <param name="Для бренда">Lexmark</param>
 </offer>
@@ -17875,9 +17824,8 @@ i-SENSYS LBP162dw, MF269dw, MF267dw, MF264dw.
 <param name="Совместимость">Lexmark MS/MX 317, 417, 517, 617</param>
 <param name="Коды расходников">51B5000</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">2500</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">2500</param>
 <param name="Модель">51B5000</param>
 <param name="Для бренда">Lexmark</param>
 </offer>
@@ -18173,7 +18121,6 @@ i-SENSYS LBP162dw, MF269dw, MF267dw, MF264dw.
 <param name="Совместимость">Canon imageRUNNER C2020, Canon imageRUNNER C2025, Canon imageRUNNER C2030, Canon imageRUNNER C2220, Canon imageRUNNER C2225, Canon imageRUNNER C2230</param>
 <param name="Коды расходников">GPR-36, C-EXV34</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
 <param name="Цвет">Чёрный</param>
 <param name="Модель">C-EXV34</param>
 <param name="Для бренда">Canon</param>
@@ -18312,9 +18259,8 @@ i-SENSYS LBP162dw, MF269dw, MF267dw, MF264dw.
 <param name="Совместимость">Ricoh Aficio SP 400, SP 450</param>
 <param name="Коды расходников">SP400LE</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">5000</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">5000</param>
 <param name="Модель">SP400LE</param>
 <param name="Для бренда">Ricoh</param>
 </offer>
@@ -18335,9 +18281,8 @@ i-SENSYS LBP162dw, MF269dw, MF267dw, MF264dw.
 <param name="Совместимость">Lexmark MS/MX 317, 417, 517, 617</param>
 <param name="Коды расходников">51B5H00</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">8500</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">8500</param>
 <param name="Модель">51B5H00</param>
 <param name="Для бренда">Lexmark</param>
 </offer>
@@ -18673,9 +18618,8 @@ Canon i-Sensys LBP112, LBP113w, MF112, MF113w.
 <param name="Совместимость">HP Color LaserJet Pro M254dn, HP Color LaserJet M254dw, HP Color LaserJet M254nw, HP Color LaserJet M280nw, HP Color LaserJet M281fdn и M281fdw</param>
 <param name="Коды расходников">CF540A</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">1400</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">1400</param>
 <param name="Модель">CF540A</param>
 <param name="Для бренда">HP</param>
 </offer>
@@ -18761,7 +18705,7 @@ Canon i-Sensys LBP112, LBP113w, MF112, MF113w.
 Совместимость с устройствами: Xerox WorkCentre Pro 5325, WorkCentre 5330, WorkCentre 5335]]></description>
 <param name="Тип">Тонер-картридж</param>
 <param name="Технология печати">лазерная, монохромная</param>
-<param name="Цвет">черный</param>
+<param name="Цвет">Чёрный</param>
 <param name="Ресурс">30000 стр. А4 при 5% заполнении</param>
 <param name="Совместимость">Xerox WorkCentre Pro 5325, WorkCentre 5330, WorkCentre 5335</param>
 <param name="Коды расходников">006R01160</param>
@@ -18974,9 +18918,8 @@ Canon i-Sensys LBP112, LBP113w, MF112, MF113w.
 <param name="Совместимость">Ricoh Aficio SP330DNw, SP330SN, SP330SFN</param>
 <param name="Коды расходников">SP330H</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">7000</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">7000</param>
 <param name="Модель">SP330H</param>
 <param name="Для бренда">Ricoh</param>
 </offer>
@@ -19140,9 +19083,8 @@ Canon i-Sensys LBP112, LBP113w, MF112, MF113w.
 <param name="Тип">Тонер-картридж</param>
 <param name="Коды расходников">842311</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">27300</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">27300</param>
 <param name="Модель">842311</param>
 <param name="Для бренда">Ricoh</param>
 </offer>
@@ -20429,9 +20371,8 @@ SL-C430, SL-C430W, SL-C480, SL-C480W, SL-C480FW.
 <param name="Совместимость">Xerox Phaser 6000, Xerox Phaser 6010, WorkCentre 6015</param>
 <param name="Коды расходников">106R01634</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">2000</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">2000</param>
 <param name="Модель">106R01634</param>
 <param name="Для бренда">Xerox</param>
 </offer>
@@ -20989,9 +20930,8 @@ LBP-3010 / LBP-3100 / LBP-3250 / LBP-6000 / LBP-6020.
 <param name="Совместимость">PANTUM P2200, P2207, P2507, P2500W, M6500, M6550, M6607</param>
 <param name="Коды расходников">PC-211EV</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">1600</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">1600</param>
 <param name="Модель">PC-211EV</param>
 <param name="Для бренда">Pantum</param>
 </offer>
@@ -21283,9 +21223,8 @@ Cyan
 <param name="Совместимость">и МФУ серий Canon i-SENSYS MF752Cdw, MF754Cdw, LBP673Cdw</param>
 <param name="Коды расходников">Canon 069</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">2100</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">2100</param>
 <param name="Модель">Canon 069</param>
 <param name="Для бренда">Canon</param>
 </offer>
@@ -21370,9 +21309,8 @@ Cyan
 <param name="Тип">Картридж</param>
 <param name="Коды расходников">T06</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">20500</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">20500</param>
 <param name="Модель">T06</param>
 <param name="Для бренда">Canon</param>
 </offer>
@@ -22237,9 +22175,8 @@ Cyan
 <param name="Совместимость">и МФУ серий Canon i-SENSYS LBP631Cw, LBP633Cdw, MF651Cw, MF655Cw, MF655Cdw, MF657Cw, MF657Cdw</param>
 <param name="Коды расходников">Canon 067</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">1350</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">1350</param>
 <param name="Модель">Canon 067</param>
 <param name="Для бренда">Canon</param>
 </offer>
@@ -22704,9 +22641,8 @@ Cyan
 <param name="Совместимость">HP Color LaserJet Enterprise M653, HP Color LaserJet M652</param>
 <param name="Коды расходников">CF460X</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">27000</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">27000</param>
 <param name="Модель">CF460X</param>
 <param name="Для бренда">HP</param>
 </offer>
@@ -22778,7 +22714,7 @@ Cyan
 <categoryId></categoryId>
 <vendorCode>CL105655</vendorCode>
 <name>Тонер-картридж для Canon C-EXV65 Голубой (11K) Europrint</name>
-<price>17295</price>
+<price>17560</price>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_c-exv65-c.jpg</picture>
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
@@ -22798,7 +22734,7 @@ Cyan
 <categoryId></categoryId>
 <vendorCode>CL105656</vendorCode>
 <name>Тонер-картридж для Canon C-EXV65 Желтый (11K) Europrint</name>
-<price>17295</price>
+<price>17560</price>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_c-exv65-y.jpg</picture>
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
@@ -22818,7 +22754,7 @@ Cyan
 <categoryId></categoryId>
 <vendorCode>CL105657</vendorCode>
 <name>Тонер-картридж для Canon C-EXV65 Пурпурный (11K) Europrint</name>
-<price>17295</price>
+<price>17560</price>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_c-exv65-m.jpg</picture>
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
@@ -22849,7 +22785,6 @@ Cyan
 <param name="Совместимость">Canon imageRUNNER C3326</param>
 <param name="Коды расходников">C-EXV65</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
 <param name="Цвет">Чёрный</param>
 <param name="Модель">C-EXV65</param>
 <param name="Для бренда">Canon</param>
@@ -23743,9 +23678,8 @@ Cyan
 <param name="Совместимость">PANTUM BP5100, BM5100</param>
 <param name="Коды расходников">TL-5120H</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">6000</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">6000</param>
 <param name="Модель">TL-5120H</param>
 <param name="Для бренда">Pantum</param>
 </offer>
@@ -24038,9 +23972,8 @@ C258, C308.
 <param name="Совместимость">PANTUM P3010, P3300, M6700, M6800, M7100, M7200, M7300</param>
 <param name="Коды расходников">TL-420X</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">6000</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">6000</param>
 <param name="Модель">TL-420X</param>
 <param name="Для бренда">Pantum</param>
 </offer>
@@ -24061,9 +23994,8 @@ C258, C308.
 <param name="Совместимость">PANTUM P3010, P3300, M6700, M6800, M7100, M7200, M7300</param>
 <param name="Коды расходников">DL-420, DL-420X</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">12000</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">12000</param>
 <param name="Модель">DL-420</param>
 <param name="Для бренда">Pantum</param>
 </offer>
@@ -24455,9 +24387,8 @@ C258, C308.
 <param name="Совместимость">и МФУ серий Canon i-SENSYS MF752Cdw, MF754Cdw, LBP673Cdw</param>
 <param name="Коды расходников">Canon 069</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">2100</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">2100</param>
 <param name="Модель">Canon 069</param>
 <param name="Для бренда">Canon</param>
 </offer>
@@ -24558,20 +24489,19 @@ LBP362DW.
 <name>Drum Unit Катюша DR133 (30K) Europrint</name>
 <price>8720</price>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_DR133_ep.jpg</picture>
-<vendor>КАТЮША</vendor>
+<vendor>Катюша</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
 Драм-картридж Euro Print DR133 используется в принтерах КАТЮША P133, M133.
 Новый картридж фотобарабана по ресурсу и качеству печати не уступает аналогичному картриджу оригинального производителя.]]></description>
 <param name="Тип">Драм-картридж</param>
-<param name="Совместимость">КАТЮША P133, M133</param>
+<param name="Совместимость">Катюша P133, M133</param>
 <param name="Коды расходников">DR133</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">30000</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">30000</param>
 <param name="Модель">DR133</param>
-<param name="Для бренда">КАТЮША</param>
+<param name="Для бренда">Катюша</param>
 </offer>
 
 <offer id="CL105822" available="true">
@@ -24581,20 +24511,19 @@ LBP362DW.
 <price>7540</price>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_TK133_ep1.jpg</picture>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_____133_ep2.jpg</picture>
-<vendor>КАТЮША</vendor>
+<vendor>Катюша</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
 Тонер-картридж Euro Print TK133 используется в принтерах КАТЮША P133, M133.
 Новый картридж с тонером по ресурсу и качеству печати не уступает аналогичному картриджу оригинального производителя.]]></description>
 <param name="Тип">Тонер-картридж</param>
-<param name="Совместимость">КАТЮША P133, M133</param>
+<param name="Совместимость">Катюша P133, M133</param>
 <param name="Коды расходников">TK133</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">3000</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">3000</param>
 <param name="Модель">TK133</param>
-<param name="Для бренда">КАТЮША</param>
+<param name="Для бренда">Катюша</param>
 </offer>
 
 <offer id="CL105825" available="true">
@@ -24613,9 +24542,8 @@ LBP362DW.
 <param name="Совместимость">PANTUM BP5100, BM5100</param>
 <param name="Коды расходников">DL-5120</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">30000</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">30000</param>
 <param name="Модель">DL-5120</param>
 <param name="Для бренда">Pantum</param>
 </offer>
@@ -24798,9 +24726,8 @@ LBP362DW.
 <param name="Совместимость">и МФУ серий Canon i-SENSYS LBP720C, MF830C</param>
 <param name="Коды расходников">Canon 064H</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">13400</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">13400</param>
 <param name="Модель">Canon 064H</param>
 <param name="Для бренда">Canon</param>
 </offer>
@@ -25181,9 +25108,8 @@ LBP362DW.
 <param name="Совместимость">и МФУ серий Canon i-SENSYS LBP663Cdw, LBP664Cx, MF742Cdw, MF744Cdw, MF746</param>
 <param name="Коды расходников">Canon 055H</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Цвет">Черный</param>
-<param name="Количество страниц (5% заполнение)">7600</param>
 <param name="Цвет">Чёрный</param>
+<param name="Количество страниц (5% заполнение)">7600</param>
 <param name="Модель">Canon 055H</param>
 <param name="Для бренда">Canon</param>
 </offer>
