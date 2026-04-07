@@ -233,6 +233,12 @@ def run_quality_gate(
 
     enforced_new_cosmetic = [x for x in new_cosmetic if x.rule not in _RULES_EXCLUDED_FROM_ENFORCE]
 
+    passed = (
+        len(critical) == 0
+        and len({x.oid for x in enforced_new_cosmetic}) <= int(max_new_cosmetic_offers)
+        and len(enforced_new_cosmetic) <= int(max_new_cosmetic_issues)
+    )
+
     _write_report(
         report_path,
         critical=critical,
@@ -245,12 +251,6 @@ def run_quality_gate(
         max_cosmetic_offers=int(max_new_cosmetic_offers),
         max_cosmetic_issues=int(max_new_cosmetic_issues),
         passed=passed,
-    )
-
-    passed = (
-        len(critical) == 0
-        and len({x.oid for x in enforced_new_cosmetic}) <= int(max_new_cosmetic_offers)
-        and len(enforced_new_cosmetic) <= int(max_new_cosmetic_issues)
     )
     ok = True if not enforce else passed
     return QualityGateResult(
