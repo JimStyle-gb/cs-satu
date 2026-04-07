@@ -40,9 +40,8 @@ BRAND_HINTS: tuple[tuple[str, str], ...] = (
     (r"\bRicoh\b", "Ricoh"),
     (r"\bRICOH\b", "Ricoh"),
     (r"\bPanasonic\b", "Panasonic"),
-    (r"\bКАТЮША\b", "Катюша"),
-    (r"\bКатюша\b", "Катюша"),
-    (r"\bKATYUSHA\b", "Катюша"),
+    (r"\bКАТЮША\b", "КАТЮША"),
+    (r"\bKATYUSHA\b", "КАТЮША"),
     (r"\bXerox\b", "Xerox"),
     (r"\bCanon\b", "Canon"),
     (r"\bSamsung\b", "Samsung"),
@@ -62,6 +61,10 @@ CODE_SCORE_PATTERNS: tuple[tuple[re.Pattern[str], int], ...] = (
     (re.compile(r"^ML-D\d", re.I), 90),
     (re.compile(r"^ML-\d{4,5}[A-Z]\d?$", re.I), 85),
 )
+
+_ORIGINALITY_PARAM_NAME = "Оригинальность"
+_NAME_ORIGINALITY_SUFFIX_RE = re.compile(r"\s*\((?:оригинал|совместимый)\)\s*$", re.I)
+_DESC_ORIGINALITY_HEAD_RE = re.compile(r"(?iu)^\s*(?:Оригинальн(?:ый|ая|ое|ые)|Совместим(?:ый|ая|ое|ые))")
 
 
 # ----------------------------- basic helpers -----------------------------
@@ -226,8 +229,184 @@ def _drop_weak_params(params: Sequence[Tuple[str, str]]) -> list[Tuple[str, str]
 
 def _has_consumable_type(params: Sequence[Tuple[str, str]]) -> bool:
     """Понять, является ли товар расходником."""
-    consumable_types = {"Картридж", "Тонер-картридж", "Драм-картридж", "Девелопер", "Чернила"}
+    consumable_types = {
+        "Картридж",
+        "Тонер-картридж",
+        "Тонер",
+        "Драм-картридж",
+        "Драм-юнит",
+        "Фотобарабан",
+        "Девелопер",
+        "Чернила",
+        "Копи-картридж",
+        "Принт-картридж",
+        "Ремонтный комплект",
+        "Печатающая головка",
+        "Контейнер для отработанного тонера",
+        "Бункер для отработанного тонера",
+    }
     return any(safe_str(key) == "Тип" and safe_str(value) in consumable_types for key, value in params)
+
+
+def _strip_originality_suffix(name: str) -> str:
+    return safe_str(_NAME_ORIGINALITY_SUFFIX_RE.sub("", safe_str(name)))
+
+
+def _upsert_param(params: Sequence[Tuple[str, str]], key: str, value: str) -> list[Tuple[str, str]]:
+    want = safe_str(key).casefold()
+    out: list[Tuple[str, str]] = []
+    replaced = False
+    for k, v in params:
+        if safe_str(k).casefold() == want:
+            if not replaced:
+                out.append((key, value))
+                replaced = True
+            continue
+        out.append((safe_str(k), safe_str(v)))
+    if not replaced:
+        out.append((key, value))
+    return out
+
+
+def _detect_consumable_type_label(name: str, params: Sequence[Tuple[str, str]]) -> str:
+    type_from_param = ""
+    for k, v in params:
+        if safe_str(k) == "Тип":
+            type_from_param = safe_str(v)
+            break
+    if type_from_param:
+        low = type_from_param.casefold().replace("ё", "е")
+        mapping = (
+            ("контейнер для отработанного тонера", "Контейнер для отработанного тонера"),
+            ("бункер для отработанного тонера", "Бункер для отработанного тонера"),
+            ("печатающая головка", "Печатающая головка"),
+            ("ремонтный комплект", "Ремонтный комплект"),
+            ("драм-юнит", "Драм-юнит"),
+            ("драм-картридж", "Драм-картридж"),
+            ("фотобарабан", "Фотобарабан"),
+            ("копи-картридж", "Копи-картридж"),
+            ("принт-картридж", "Принт-картридж"),
+            ("тонер-картридж", "Тонер-картридж"),
+            ("девелопер", "Девелопер"),
+            ("чернила", "Чернила"),
+            ("картридж", "Картридж"),
+            ("тонер", "Тонер"),
+        )
+        for needle, label in mapping:
+            if needle in low:
+                return label
+        return type_from_param
+
+    title_low = safe_str(name).casefold().replace("ё", "е")
+    checks = (
+        ("контейнер для отработанного тонера", "Контейнер для отработанного тонера"),
+        ("бункер для отработанного тонера", "Бункер для отработанного тонера"),
+        ("печатающая головка", "Печатающая головка"),
+        ("ремонтный комплект", "Ремонтный комплект"),
+        ("драм-юнит", "Драм-юнит"),
+        ("драм-картридж", "Драм-картридж"),
+        ("фотобарабан", "Фотобарабан"),
+        ("копи-картридж", "Копи-картридж"),
+        ("принт-картридж", "Принт-картридж"),
+        ("тонер-картридж", "Тонер-картридж"),
+        ("девелопер", "Девелопер"),
+        ("чернила", "Чернила"),
+        ("картридж", "Картридж"),
+        ("тонер", "Тонер"),
+    )
+    for needle, label in checks:
+        if needle in title_low:
+            return label
+    return "Расходный материал"
+
+
+def _build_originality_sentence(status: str, type_label: str) -> str:
+    tl = safe_str(type_label) or "Расходный материал"
+    tl_cf = tl.casefold().replace("ё", "е")
+    original_map = {
+        "печатающая головка": "Оригинальная печатающая головка.",
+        "чернила": "Оригинальные чернила.",
+        "бункер для отработанного тонера": "Оригинальный бункер для отработанного тонера.",
+        "контейнер для отработанного тонера": "Оригинальный контейнер для отработанного тонера.",
+        "ремонтный комплект": "Оригинальный ремонтный комплект.",
+        "драм-юнит": "Оригинальный драм-юнит.",
+        "драм-картридж": "Оригинальный драм-картридж.",
+        "копи-картридж": "Оригинальный копи-картридж.",
+        "принт-картридж": "Оригинальный принт-картридж.",
+        "фотобарабан": "Оригинальный фотобарабан.",
+        "тонер-картридж": "Оригинальный тонер-картридж.",
+        "девелопер": "Оригинальный девелопер.",
+        "картридж": "Оригинальный картридж.",
+        "тонер": "Оригинальный тонер.",
+        "расходный материал": "Оригинальный расходный материал.",
+    }
+    compatible_map = {
+        "печатающая головка": "Совместимая печатающая головка.",
+        "чернила": "Совместимые чернила.",
+        "бункер для отработанного тонера": "Совместимый бункер для отработанного тонера.",
+        "контейнер для отработанного тонера": "Совместимый контейнер для отработанного тонера.",
+        "ремонтный комплект": "Совместимый ремонтный комплект.",
+        "драм-юнит": "Совместимый драм-юнит.",
+        "драм-картридж": "Совместимый драм-картридж.",
+        "копи-картридж": "Совместимый копи-картридж.",
+        "принт-картридж": "Совместимый принт-картридж.",
+        "фотобарабан": "Совместимый фотобарабан.",
+        "тонер-картридж": "Совместимый тонер-картридж.",
+        "девелопер": "Совместимый девелопер.",
+        "картридж": "Совместимый картридж.",
+        "тонер": "Совместимый тонер.",
+        "расходный материал": "Совместимый расходный материал.",
+    }
+    if status == "original":
+        return original_map.get(tl_cf, f"Оригинальный {tl.lower()}.")
+    if status == "compatible":
+        return compatible_map.get(tl_cf, f"Совместимый {tl.lower()}.")
+    return ""
+
+
+def _is_consumable_for_originality(page: dict, name: str, params: Sequence[Tuple[str, str]]) -> bool:
+    _ = page
+    if _has_consumable_type(params):
+        return True
+    title_low = safe_str(name).casefold().replace("ё", "е")
+    needles = (
+        "картридж",
+        "тонер-картридж",
+        "тонер",
+        "драм",
+        "фотобарабан",
+        "девелопер",
+        "чернила",
+        "печатающая головка",
+        "контейнер для отработанного тонера",
+        "бункер для отработанного тонера",
+        "ремонтный комплект",
+    )
+    return any(x in title_low for x in needles)
+
+
+def _detect_consumable_originality(page: dict, name: str, params: Sequence[Tuple[str, str]]) -> str:
+    if not _is_consumable_for_originality(page, name, params):
+        return ""
+    return "compatible"
+
+
+def _apply_consumable_originality(name: str, params: Sequence[Tuple[str, str]], native_desc: str, status: str) -> tuple[str, list[Tuple[str, str]], str]:
+    if status not in {"original", "compatible"}:
+        return safe_str(name), list(params), safe_str(native_desc)
+    base_name = _strip_originality_suffix(name)
+    suffix = "(оригинал)" if status == "original" else "(совместимый)"
+    value = "Оригинал" if status == "original" else "Совместимый"
+    name_out = f"{base_name} {suffix}"
+    params_out = _upsert_param(params, _ORIGINALITY_PARAM_NAME, value)
+    desc_out = safe_str(native_desc)
+    sentence = _build_originality_sentence(status, _detect_consumable_type_label(base_name, params_out))
+    if sentence:
+        if not desc_out:
+            desc_out = sentence
+        elif not _DESC_ORIGINALITY_HEAD_RE.match(desc_out):
+            desc_out = f"{sentence} {desc_out}"
+    return name_out, params_out, desc_out
 
 
 # ----------------------------- resolve helpers -----------------------------
@@ -381,6 +560,14 @@ def build_offer_from_page(page: dict, *, fallback_title: str = "") -> OfferOut |
     vendor = _resolve_vendor(title, vendor, params)
     params = _finalize_params(params, vendor)
 
+    originality_status = _detect_consumable_originality(page, title, params)
+    title, params, native_desc = _apply_consumable_originality(
+        title,
+        params,
+        display_desc or title,
+        originality_status,
+    )
+
     pictures = _build_pictures(page)
     raw_price = int(page.get("price_raw") or 0)
     available = _resolve_available(page)
@@ -393,5 +580,5 @@ def build_offer_from_page(page: dict, *, fallback_title: str = "") -> OfferOut |
         pictures=pictures,
         vendor=vendor,
         params=params,
-        native_desc=(display_desc or title),
+        native_desc=native_desc,
     )
