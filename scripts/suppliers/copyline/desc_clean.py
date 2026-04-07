@@ -29,7 +29,8 @@ _DISPLAY_BRAND_REPLACEMENTS: tuple[tuple[str, str], ...] = (
 
 
 def _canonical_display_brands(text: str) -> str:
-    s = _canonical_display_brands(safe_str(text))
+    """Привести брендовые токены в display-тексте к канону."""
+    s = safe_str(text)
     if not s:
         return ""
     for pattern, repl in _DISPLAY_BRAND_REPLACEMENTS:
@@ -152,4 +153,5 @@ def clean_description(text: str) -> str:
     lines = _drop_noise_lines(s.splitlines())
     s = "\n".join(lines)
     s = _cleanup_punctuation(s)
+    s = _canonical_display_brands(s)
     return s.strip()
