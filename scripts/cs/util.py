@@ -1,16 +1,13 @@
 # -*- coding: utf-8 -*-
 """
-CS Util — мелкие общие утилиты.
+Path: scripts/cs/util.py
 
-Этап 8: вынос из cs/core.py в отдельный модуль.
-Файл сделан САМОДОСТАТОЧНЫМ: содержит fix_mixed_cyr_lat(), чтобы не зависеть от cs/keywords.py
-и не ловить NameError при частичных заменах файлов.
+CS Util — общие мелкие утилиты shared core.
 
-Содержит:
-- fix_mixed_cyr_lat()
-- norm_ws()
-- safe_int()
-- _truncate_text()
+Роль файла:
+- текстовые helper-ы без supplier-specific логики;
+- единый источник norm_ws / safe_int / fix_mixed_cyr_lat / _truncate_text;
+- без зависимостей от cs.core, чтобы не плодить циклические импорты.
 """
 
 from __future__ import annotations
