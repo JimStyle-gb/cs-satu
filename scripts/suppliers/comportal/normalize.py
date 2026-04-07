@@ -119,9 +119,9 @@ _VENDOR_HEAD_RE = re.compile(
 )
 _DUPLICATE_HEAD_RE = re.compile(
     r"(?iu)^"
-    r"(Плоттер|Монитор|Ноутбук|Моноблок|Компьютер|Принтер|МФУ|ИБП|Модуль\s+батарей)\s+"
-    r"(Canon|Dell|HP|Epson|Xerox|Brother|Kyocera|Pantum|Ricoh|APC|Lenovo|ASUS|Acer|MSI|LG|Samsung|Huawei|iiyama|Gigabyte|Hikvision|ViewSonic|BenQ|AOC|TP\-?Link|D\-?Link|Cisco|Zyxel|Eaton|Poly)"
-    r"\s+(?=\s|/|\()"
+    r"(?P<device>Плоттер|Монитор|Ноутбук|Моноблок|Компьютер|Принтер|МФУ|ИБП|Модуль\s+батарей)\s+"
+    r"(?P<brand>Canon|Dell|HP|Epson|Xerox|Brother|Kyocera|Pantum|Ricoh|APC|Lenovo|ASUS|Acer|MSI|LG|Samsung|Huawei|iiyama|Gigabyte|Hikvision|ViewSonic|BenQ|AOC|TP\-?Link|D\-?Link|Cisco|Zyxel|Eaton|Poly)"
+    r"\s+(?P=brand)(?=\s|/|\()"
 )
 _CODE_PAREN_RE = re.compile(r"\(([^()]{2,})\)\s*$")
 _CODE_LIKE_MODEL_RE = re.compile(r"(?iu)^[A-Z0-9][A-Z0-9_#./\-]{4,}$")
@@ -227,7 +227,7 @@ def _dedupe_duplicate_brand_head(name: str) -> str:
 
 def _clean_title_tail(name: str) -> str:
     s = normalize_name(name)
-    s = _DUPLICATE_HEAD_RE.sub(lambda m: f"{m.group(1)} {m.group(2)} ", s)
+    s = _DUPLICATE_HEAD_RE.sub(lambda m: f"{m.group('device')} {m.group('brand')} ", s)
     m = _CODE_PAREN_RE.search(s)
     if m:
         s = s[:m.start()].strip()
