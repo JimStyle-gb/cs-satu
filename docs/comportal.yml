@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<yml_catalog date="2026-04-07 16:41:12">
+<yml_catalog date="2026-04-07 16:51:36">
 <shop><offers>
 <!--FEED_META
 Поставщик                                  | ComPortal
 URL поставщика                             | https://www.comportal.kz/auth/documents/prices/yml-catalog.php
-Время сборки (Алматы)                      | 2026-04-07 16:41:12
+Время сборки (Алматы)                      | 2026-04-07 16:51:36
 Ближайшая сборка (Алматы)                  | 2026-04-08 03:00:00
-Сколько товаров у поставщика до фильтра    | 1212
-Сколько товаров у поставщика после фильтра | 606
-Сколько товаров есть в наличии (true)      | 606
+Сколько товаров у поставщика до фильтра    | 1224
+Сколько товаров у поставщика после фильтра | 615
+Сколько товаров есть в наличии (true)      | 615
 Сколько товаров нет в наличии (false)      | 0
 -->
 
@@ -15731,14 +15731,14 @@ URL поставщика                             | https://www.comportal.kz/
 <offer id="CP13870922" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13870922</vendorCode>
-<name>ИБП Eaton Eaton 5P 1550i Rack 1U G2 (5P1550IRG2)</name>
+<name>ИБП Eaton 5P 1550i Rack 1U G2 (5P1550IRG2)</name>
 <price>694900</price>
 <picture>https://www.comportal.kz/upload/iblock/959/7kyogzgblb4rmz5lh4t4wb3wqo4s4i9c.jpg</picture>
 <vendor>Eaton</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
 <!-- Наименование товара -->
-<h3>ИБП Eaton Eaton 5P 1550i Rack 1U G2 (5P1550IRG2)</h3>
+<h3>ИБП Eaton 5P 1550i Rack 1U G2 (5P1550IRG2)</h3>
 <!-- WhatsApp -->
 <hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
 <div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
@@ -15759,7 +15759,7 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Мощность (W)">1 100</param>
 <param name="Тип">ИБП</param>
 <param name="Форм-фактор">Rackmount</param>
-<keywords>Eaton, ИБП Eaton Eaton 5P 1550i Rack 1U G2 (5P1550IRG2), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+<keywords>Eaton, ИБП Eaton 5P 1550i Rack 1U G2 (5P1550IRG2), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP13872311" available="true">
@@ -16355,14 +16355,14 @@ URL поставщика                             | https://www.comportal.kz/
 <offer id="CP13870534" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13870534</vendorCode>
-<name>Модуль батарей Eaton Eaton 9E EBM (9EEBM72)</name>
+<name>Модуль батарей Eaton 9E EBM (9EEBM72)</name>
 <price>318900</price>
 <picture>https://www.comportal.kz/upload/iblock/4a0/fu1h88s1pvm0jowd018fw1xzd5cil6av.jpg</picture>
 <vendor>Eaton</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
 <!-- Наименование товара -->
-<h3>Модуль батарей Eaton Eaton 9E EBM (9EEBM72)</h3>
+<h3>Модуль батарей Eaton 9E EBM (9EEBM72)</h3>
 <!-- WhatsApp -->
 <hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
 <div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
@@ -16378,7 +16378,7 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Коды">9EEBM72</param>
 <param name="Модель">Eaton 9E EBM</param>
 <param name="Тип">Батарея</param>
-<keywords>Eaton, Модуль батарей Eaton Eaton 9E EBM (9EEBM72), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+<keywords>Eaton, Модуль батарей Eaton 9E EBM (9EEBM72), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP13870713" available="true">
@@ -17252,14 +17252,14 @@ URL поставщика                             | https://www.comportal.kz/
 <offer id="CP13873048" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13873048</vendorCode>
-<name>Монитор Dell Dell 32 Plus 4K QD-OLED Monitor - S3225QC (210-BRVT)</name>
+<name>Монитор Dell 32 Plus 4K QD-OLED Monitor - S3225QC (210-BRVT)</name>
 <price>551900</price>
 <picture>https://placehold.co/800x800/png?text=No+Photo</picture>
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
 <!-- Наименование товара -->
-<h3>Монитор Dell Dell 32 Plus 4K QD-OLED Monitor - S3225QC (210-BRVT)</h3>
+<h3>Монитор Dell 32 Plus 4K QD-OLED Monitor - S3225QC (210-BRVT)</h3>
 <!-- WhatsApp -->
 <hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
 <div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
@@ -17274,7 +17274,7 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Коды">210-BRVT</param>
 <param name="Модель">S3225QC</param>
 <param name="Тип">Монитор</param>
-<keywords>Dell, Монитор Dell Dell 32 Plus 4K QD-OLED Monitor - S3225QC (210-BRVT), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+<keywords>Dell, Монитор Dell 32 Plus 4K QD-OLED Monitor - S3225QC (210-BRVT), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP13871817" available="true">
@@ -18702,6 +18702,62 @@ URL поставщика                             | https://www.comportal.kz/
 <keywords>Dell, Ноутбук Dell Pro 16 PC16255 (BTO602_PC16255_EMEA_210-BQPC), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
+<offer id="CP13871914" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13871914</vendorCode>
+<name>Ноутбук Dell Pro 16 PC16255 (BTO604_PC16255_EMEA_210-BQPC)</name>
+<price>970900</price>
+<picture>https://www.comportal.kz/upload/iblock/fbf/accaavgmakfw6hbkxm99ib29wff1iogi.JPG</picture>
+<vendor>Dell</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+<!-- Наименование товара -->
+<h3>Ноутбук Dell Pro 16 PC16255 (BTO604_PC16255_EMEA_210-BQPC)</h3>
+<!-- WhatsApp -->
+<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
+<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
+<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
+<!-- Описание -->
+<p>Ноутбук. Модельная серия: Pro 16 PC16255. Процессор: AMD PRO 350 Ryzen AI 7 2. Оперативная память: 32 Gb / DDR5 / 5600. Накопитель: 512 / SSD / 1 шт. Диагональ: 16. Разрешение: 1920x1200. ОС: Microsoft Windows 11 Pro. Видеокарта: AMD 860M. Wi‑Fi: MT7922. Bluetooth: Bluetooth. Камера: FHD HDR IR Camera. Гарантия: 36 мес.</p>
+<h3>Характеристики</h3><ul><li><strong>Bluetooth:</strong> Bluetooth</li><li><strong>Wi-Fi:</strong> MT7922</li><li><strong>Адаптер:</strong> 65W AC rugged adapter</li><li><strong>Аккумулятор:</strong> 3 Cell 55WHr</li><li><strong>Версия операционной системы:</strong> Pro</li><li><strong>Гарантия:</strong> 36 мес</li><li><strong>Для бренда:</strong> Dell</li><li><strong>Дополнительные характеристики:</strong> Backlit Kb Fingerprint Reader,</li><li><strong>Занятые слоты памяти:</strong> 1</li><li><strong>Камера:</strong> FHD HDR IR Camera</li><li><strong>Коды:</strong> BTO604_PC16255_EMEA_210-BQPC</li><li><strong>Количество дисков:</strong> 1</li><li><strong>Количество слотов памяти:</strong> 2</li><li><strong>Марка чипсета видеокарты:</strong> Radeon</li><li><strong>Модель:</strong> Pro 16 PC16255</li><li><strong>Модель процессора:</strong> Ryzen AI 7</li><li><strong>Модель чипсета видеокарты:</strong> 860M</li><li><strong>Объем жесткого диска:</strong> 512</li><li><strong>Оперативная память:</strong> 32 Gb</li><li><strong>Операционная система:</strong> Windows 11</li><li><strong>Производитель операционной системы:</strong> Microsoft</li><li><strong>Производитель процессора:</strong> AMD</li><li><strong>Производитель чипсета видеокарты:</strong> AMD</li><li><strong>Размер дисплея:</strong> 16</li><li><strong>Разрешение дисплея:</strong> 1920x1200</li><li><strong>Серия процессора:</strong> PRO 350</li><li><strong>Тип:</strong> Ноутбук</li><li><strong>Тип жесткого диска:</strong> SSD</li><li><strong>Тип матрицы:</strong> FHD+ Touch</li><li><strong>Тип оперативной памяти:</strong> DDR5</li><li><strong>Тип привода:</strong> No ODD</li><li><strong>Частота оперативной памяти:</strong> 5600</li><li><strong>Частота процессора:</strong> 2</li></ul>
+<!-- Оплата и доставка -->
+<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><div style="background:#FFF6E5; border:1px solid #F1E2C6; padding:12px 14px; border-radius:0; text-align:left;"><h3 style="margin:0 0 8px; font-size:17px;">Оплата</h3><ul style="margin:0; padding-left:18px;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000;"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul><hr style="border:none; border-top:1px solid #E7D6B7; margin:12px 0;" /><h3 style="margin:0 0 8px; font-size:17px;">Доставка по Алматы и Казахстану</h3><ul style="margin:0; padding-left:18px;"><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul></div></div>]]></description>
+<param name="Bluetooth">Bluetooth</param>
+<param name="Wi-Fi">MT7922</param>
+<param name="Адаптер">65W AC rugged adapter</param>
+<param name="Аккумулятор">3 Cell 55WHr</param>
+<param name="Версия операционной системы">Pro</param>
+<param name="Гарантия">36 мес</param>
+<param name="Для бренда">Dell</param>
+<param name="Дополнительные характеристики">Backlit Kb Fingerprint Reader,</param>
+<param name="Занятые слоты памяти">1</param>
+<param name="Камера">FHD HDR IR Camera</param>
+<param name="Коды">BTO604_PC16255_EMEA_210-BQPC</param>
+<param name="Количество дисков">1</param>
+<param name="Количество слотов памяти">2</param>
+<param name="Марка чипсета видеокарты">Radeon</param>
+<param name="Модель">Pro 16 PC16255</param>
+<param name="Модель процессора">Ryzen AI 7</param>
+<param name="Модель чипсета видеокарты">860M</param>
+<param name="Объем жесткого диска">512</param>
+<param name="Оперативная память">32 Gb</param>
+<param name="Операционная система">Windows 11</param>
+<param name="Производитель операционной системы">Microsoft</param>
+<param name="Производитель процессора">AMD</param>
+<param name="Производитель чипсета видеокарты">AMD</param>
+<param name="Размер дисплея">16</param>
+<param name="Разрешение дисплея">1920x1200</param>
+<param name="Серия процессора">PRO 350</param>
+<param name="Тип">Ноутбук</param>
+<param name="Тип жесткого диска">SSD</param>
+<param name="Тип матрицы">FHD+ Touch</param>
+<param name="Тип оперативной памяти">DDR5</param>
+<param name="Тип привода">No ODD</param>
+<param name="Частота оперативной памяти">5600</param>
+<param name="Частота процессора">2</param>
+<keywords>Dell, Ноутбук Dell Pro 16 PC16255 (BTO604_PC16255_EMEA_210-BQPC), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+</offer>
+
 <offer id="CP13872995" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13872995</vendorCode>
@@ -19541,14 +19597,14 @@ URL поставщика                             | https://www.comportal.kz/
 <offer id="CP13872116" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13872116</vendorCode>
-<name>Ноутбук HP HP EliteBook 8 G1i (AD4H8ET#BJA)</name>
+<name>Ноутбук HP EliteBook 8 G1i (AD4H8ET#BJA)</name>
 <price>726900</price>
 <picture>https://www.comportal.kz/upload/iblock/0cd/gg40l0lyh9agd69bc4kbqf59j25e3ygj.jpg</picture>
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
 <!-- Наименование товара -->
-<h3>Ноутбук HP HP EliteBook 8 G1i (AD4H8ET#BJA)</h3>
+<h3>Ноутбук HP EliteBook 8 G1i (AD4H8ET#BJA)</h3>
 <!-- WhatsApp -->
 <hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
 <div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
@@ -19591,7 +19647,7 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Цвет">Серый</param>
 <param name="Частота оперативной памяти">5600</param>
 <param name="Частота процессора">2</param>
-<keywords>HP, Ноутбук HP HP EliteBook 8 G1i (AD4H8ET#BJA), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+<keywords>HP, Ноутбук HP EliteBook 8 G1i (AD4H8ET#BJA), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP13872375" available="true">
@@ -20345,14 +20401,14 @@ URL поставщика                             | https://www.comportal.kz/
 <offer id="CP13872617" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13872617</vendorCode>
-<name>Ноутбук HP HP EliteBook 8 G1a (AZ3N2AV / 74051488)</name>
+<name>Ноутбук HP EliteBook 8 G1a (AZ3N2AV / 74051488)</name>
 <price>586900</price>
 <picture>https://placehold.co/800x800/png?text=No+Photo</picture>
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
 <!-- Наименование товара -->
-<h3>Ноутбук HP HP EliteBook 8 G1a (AZ3N2AV / 74051488)</h3>
+<h3>Ноутбук HP EliteBook 8 G1a (AZ3N2AV / 74051488)</h3>
 <!-- WhatsApp -->
 <hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
 <div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
@@ -20367,7 +20423,7 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Коды">AZ3N2AV / 74051488</param>
 <param name="Модель">EliteBook 8 G1a</param>
 <param name="Тип">Ноутбук</param>
-<keywords>HP, Ноутбук HP HP EliteBook 8 G1a (AZ3N2AV / 74051488), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+<keywords>HP, Ноутбук HP EliteBook 8 G1a (AZ3N2AV / 74051488), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP13872623" available="true">
@@ -21408,6 +21464,34 @@ URL поставщика                             | https://www.comportal.kz/
 <keywords>Dell, Ноутбук Dell Pro 16 PC16250 (BTO121_PC16250_EMEA_210-BQHB), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
+<offer id="CP13873166" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13873166</vendorCode>
+<name>Мобильная рабочая станция Dell Pro Max 16 Plus MB16250 (210-BRXR / BTO102_MB16250_EMEA)</name>
+<price>2032900</price>
+<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
+<vendor>Dell</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+<!-- Наименование товара -->
+<h3>Мобильная рабочая станция Dell Pro Max 16 Plus MB16250 (210-BRXR / BTO102_MB16250_EMEA)</h3>
+<!-- WhatsApp -->
+<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
+<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
+<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
+<!-- Описание -->
+<p>Ноутбук. Модельная серия: Pro Max 16. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro Max 16. Коды: 210-BRXR / BTO102_MB16250_EMEA.</p>
+<h3>Характеристики</h3><ul><li><strong>Гарантия:</strong> 36 мес</li><li><strong>Для бренда:</strong> Dell</li><li><strong>Коды:</strong> 210-BRXR / BTO102_MB16250_EMEA</li><li><strong>Модель:</strong> Pro Max 16</li><li><strong>Тип:</strong> Ноутбук</li></ul>
+<!-- Оплата и доставка -->
+<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><div style="background:#FFF6E5; border:1px solid #F1E2C6; padding:12px 14px; border-radius:0; text-align:left;"><h3 style="margin:0 0 8px; font-size:17px;">Оплата</h3><ul style="margin:0; padding-left:18px;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000;"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul><hr style="border:none; border-top:1px solid #E7D6B7; margin:12px 0;" /><h3 style="margin:0 0 8px; font-size:17px;">Доставка по Алматы и Казахстану</h3><ul style="margin:0; padding-left:18px;"><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul></div></div>]]></description>
+<param name="Гарантия">36 мес</param>
+<param name="Для бренда">Dell</param>
+<param name="Коды">210-BRXR / BTO102_MB16250_EMEA</param>
+<param name="Модель">Pro Max 16</param>
+<param name="Тип">Ноутбук</param>
+<keywords>Dell, Мобильная рабочая станция Dell Pro Max 16 Plus MB16250 (210-BRXR / BTO102_MB16250_EMEA), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+</offer>
+
 <offer id="CP13873137" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13873137</vendorCode>
@@ -21436,6 +21520,118 @@ URL поставщика                             | https://www.comportal.kz/
 <keywords>Dell, Мобильная рабочая станция Dell Pro Max 18 Plus MB18250 (210-BRXL / BTO101_MB18250_EMEA), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
+<offer id="CP13873167" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13873167</vendorCode>
+<name>Ноутбук Dell Pro 13 Plus PB13250 (210-BPKT / BTO210_PB13250_EMEA)</name>
+<price>785900</price>
+<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
+<vendor>Dell</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+<!-- Наименование товара -->
+<h3>Ноутбук Dell Pro 13 Plus PB13250 (210-BPKT / BTO210_PB13250_EMEA)</h3>
+<!-- WhatsApp -->
+<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
+<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
+<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
+<!-- Описание -->
+<p>Ноутбук. Модельная серия: Pro 13 Plus PB13250. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro 13 Plus PB13250. Коды: 210-BPKT / BTO210_PB13250_EMEA.</p>
+<h3>Характеристики</h3><ul><li><strong>Гарантия:</strong> 36 мес</li><li><strong>Для бренда:</strong> Dell</li><li><strong>Коды:</strong> 210-BPKT / BTO210_PB13250_EMEA</li><li><strong>Модель:</strong> Pro 13 Plus PB13250</li><li><strong>Тип:</strong> Ноутбук</li></ul>
+<!-- Оплата и доставка -->
+<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><div style="background:#FFF6E5; border:1px solid #F1E2C6; padding:12px 14px; border-radius:0; text-align:left;"><h3 style="margin:0 0 8px; font-size:17px;">Оплата</h3><ul style="margin:0; padding-left:18px;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000;"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul><hr style="border:none; border-top:1px solid #E7D6B7; margin:12px 0;" /><h3 style="margin:0 0 8px; font-size:17px;">Доставка по Алматы и Казахстану</h3><ul style="margin:0; padding-left:18px;"><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul></div></div>]]></description>
+<param name="Гарантия">36 мес</param>
+<param name="Для бренда">Dell</param>
+<param name="Коды">210-BPKT / BTO210_PB13250_EMEA</param>
+<param name="Модель">Pro 13 Plus PB13250</param>
+<param name="Тип">Ноутбук</param>
+<keywords>Dell, Ноутбук Dell Pro 13 Plus PB13250 (210-BPKT / BTO210_PB13250_EMEA), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+</offer>
+
+<offer id="CP13873168" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13873168</vendorCode>
+<name>Ноутбук Dell Pro 14 PC14250 (210-BQHF / BTO108_PC14250_EMEA)</name>
+<price>1019900</price>
+<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
+<vendor>Dell</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+<!-- Наименование товара -->
+<h3>Ноутбук Dell Pro 14 PC14250 (210-BQHF / BTO108_PC14250_EMEA)</h3>
+<!-- WhatsApp -->
+<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
+<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
+<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
+<!-- Описание -->
+<p>Ноутбук. Модельная серия: Pro 14 PC14250. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro 14 PC14250. Коды: 210-BQHF / BTO108_PC14250_EMEA.</p>
+<h3>Характеристики</h3><ul><li><strong>Гарантия:</strong> 36 мес</li><li><strong>Для бренда:</strong> Dell</li><li><strong>Коды:</strong> 210-BQHF / BTO108_PC14250_EMEA</li><li><strong>Модель:</strong> Pro 14 PC14250</li><li><strong>Тип:</strong> Ноутбук</li></ul>
+<!-- Оплата и доставка -->
+<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><div style="background:#FFF6E5; border:1px solid #F1E2C6; padding:12px 14px; border-radius:0; text-align:left;"><h3 style="margin:0 0 8px; font-size:17px;">Оплата</h3><ul style="margin:0; padding-left:18px;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000;"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul><hr style="border:none; border-top:1px solid #E7D6B7; margin:12px 0;" /><h3 style="margin:0 0 8px; font-size:17px;">Доставка по Алматы и Казахстану</h3><ul style="margin:0; padding-left:18px;"><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul></div></div>]]></description>
+<param name="Гарантия">36 мес</param>
+<param name="Для бренда">Dell</param>
+<param name="Коды">210-BQHF / BTO108_PC14250_EMEA</param>
+<param name="Модель">Pro 14 PC14250</param>
+<param name="Тип">Ноутбук</param>
+<keywords>Dell, Ноутбук Dell Pro 14 PC14250 (210-BQHF / BTO108_PC14250_EMEA), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+</offer>
+
+<offer id="CP13873169" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13873169</vendorCode>
+<name>Ноутбук Dell Pro 14 PC14250 (210-BQHF / BTO121_PC14250_EMEA)</name>
+<price>908900</price>
+<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
+<vendor>Dell</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+<!-- Наименование товара -->
+<h3>Ноутбук Dell Pro 14 PC14250 (210-BQHF / BTO121_PC14250_EMEA)</h3>
+<!-- WhatsApp -->
+<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
+<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
+<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
+<!-- Описание -->
+<p>Ноутбук. Модельная серия: Pro 14 PC14250. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro 14 PC14250. Коды: 210-BQHF / BTO121_PC14250_EMEA.</p>
+<h3>Характеристики</h3><ul><li><strong>Гарантия:</strong> 36 мес</li><li><strong>Для бренда:</strong> Dell</li><li><strong>Коды:</strong> 210-BQHF / BTO121_PC14250_EMEA</li><li><strong>Модель:</strong> Pro 14 PC14250</li><li><strong>Тип:</strong> Ноутбук</li></ul>
+<!-- Оплата и доставка -->
+<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><div style="background:#FFF6E5; border:1px solid #F1E2C6; padding:12px 14px; border-radius:0; text-align:left;"><h3 style="margin:0 0 8px; font-size:17px;">Оплата</h3><ul style="margin:0; padding-left:18px;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000;"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul><hr style="border:none; border-top:1px solid #E7D6B7; margin:12px 0;" /><h3 style="margin:0 0 8px; font-size:17px;">Доставка по Алматы и Казахстану</h3><ul style="margin:0; padding-left:18px;"><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul></div></div>]]></description>
+<param name="Гарантия">36 мес</param>
+<param name="Для бренда">Dell</param>
+<param name="Коды">210-BQHF / BTO121_PC14250_EMEA</param>
+<param name="Модель">Pro 14 PC14250</param>
+<param name="Тип">Ноутбук</param>
+<keywords>Dell, Ноутбук Dell Pro 14 PC14250 (210-BQHF / BTO121_PC14250_EMEA), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+</offer>
+
+<offer id="CP13873170" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13873170</vendorCode>
+<name>Ноутбук Dell Pro 14 PC14250 (210-BQHF / BTO120_PC14250_EMEA)</name>
+<price>743900</price>
+<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
+<vendor>Dell</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+<!-- Наименование товара -->
+<h3>Ноутбук Dell Pro 14 PC14250 (210-BQHF / BTO120_PC14250_EMEA)</h3>
+<!-- WhatsApp -->
+<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
+<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
+<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
+<!-- Описание -->
+<p>Ноутбук. Модельная серия: Pro 14 PC14250. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro 14 PC14250. Коды: 210-BQHF / BTO120_PC14250_EMEA.</p>
+<h3>Характеристики</h3><ul><li><strong>Гарантия:</strong> 36 мес</li><li><strong>Для бренда:</strong> Dell</li><li><strong>Коды:</strong> 210-BQHF / BTO120_PC14250_EMEA</li><li><strong>Модель:</strong> Pro 14 PC14250</li><li><strong>Тип:</strong> Ноутбук</li></ul>
+<!-- Оплата и доставка -->
+<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><div style="background:#FFF6E5; border:1px solid #F1E2C6; padding:12px 14px; border-radius:0; text-align:left;"><h3 style="margin:0 0 8px; font-size:17px;">Оплата</h3><ul style="margin:0; padding-left:18px;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000;"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul><hr style="border:none; border-top:1px solid #E7D6B7; margin:12px 0;" /><h3 style="margin:0 0 8px; font-size:17px;">Доставка по Алматы и Казахстану</h3><ul style="margin:0; padding-left:18px;"><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul></div></div>]]></description>
+<param name="Гарантия">36 мес</param>
+<param name="Для бренда">Dell</param>
+<param name="Коды">210-BQHF / BTO120_PC14250_EMEA</param>
+<param name="Модель">Pro 14 PC14250</param>
+<param name="Тип">Ноутбук</param>
+<keywords>Dell, Ноутбук Dell Pro 14 PC14250 (210-BQHF / BTO120_PC14250_EMEA), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+</offer>
+
 <offer id="CP13873058" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13873058</vendorCode>
@@ -21462,6 +21658,90 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Модель">Pro 14 Plus PB14250</param>
 <param name="Тип">Ноутбук</param>
 <keywords>Dell, Ноутбук Dell Pro 14 Plus PB14250 (210-BPDK / BTO217_PB14250_EMEA), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+</offer>
+
+<offer id="CP13873171" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13873171</vendorCode>
+<name>Моноблок Dell Pro 24 All-in-One QC24250 65W (210-BPNV_1)</name>
+<price>638900</price>
+<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
+<vendor>Dell</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+<!-- Наименование товара -->
+<h3>Моноблок Dell Pro 24 All-in-One QC24250 65W (210-BPNV_1)</h3>
+<!-- WhatsApp -->
+<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
+<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
+<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
+<!-- Описание -->
+<p>Моноблок. Гарантия: 60 мес. Для бренда: Dell. Модель: Pro 24 All-in-One QC24250. Коды: 210-BPNV_1.</p>
+<h3>Характеристики</h3><ul><li><strong>Гарантия:</strong> 60 мес</li><li><strong>Для бренда:</strong> Dell</li><li><strong>Коды:</strong> 210-BPNV_1</li><li><strong>Модель:</strong> Pro 24 All-in-One QC24250</li><li><strong>Тип:</strong> Моноблок</li></ul>
+<!-- Оплата и доставка -->
+<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><div style="background:#FFF6E5; border:1px solid #F1E2C6; padding:12px 14px; border-radius:0; text-align:left;"><h3 style="margin:0 0 8px; font-size:17px;">Оплата</h3><ul style="margin:0; padding-left:18px;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000;"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul><hr style="border:none; border-top:1px solid #E7D6B7; margin:12px 0;" /><h3 style="margin:0 0 8px; font-size:17px;">Доставка по Алматы и Казахстану</h3><ul style="margin:0; padding-left:18px;"><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul></div></div>]]></description>
+<param name="Гарантия">60 мес</param>
+<param name="Для бренда">Dell</param>
+<param name="Коды">210-BPNV_1</param>
+<param name="Модель">Pro 24 All-in-One QC24250</param>
+<param name="Тип">Моноблок</param>
+<keywords>Dell, Моноблок Dell Pro 24 All-in-One QC24250 65W (210-BPNV_1), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+</offer>
+
+<offer id="CP13873172" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13873172</vendorCode>
+<name>Ноутбук Dell Pro 14 Plus PB14250 (210-BPDR_23)</name>
+<price>944900</price>
+<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
+<vendor>Dell</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+<!-- Наименование товара -->
+<h3>Ноутбук Dell Pro 14 Plus PB14250 (210-BPDR_23)</h3>
+<!-- WhatsApp -->
+<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
+<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
+<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
+<!-- Описание -->
+<p>Ноутбук. Модельная серия: Pro 14 Plus PB14250. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro 14 Plus PB14250. Коды: 210-BPDR_23.</p>
+<h3>Характеристики</h3><ul><li><strong>Гарантия:</strong> 36 мес</li><li><strong>Для бренда:</strong> Dell</li><li><strong>Коды:</strong> 210-BPDR_23</li><li><strong>Модель:</strong> Pro 14 Plus PB14250</li><li><strong>Тип:</strong> Ноутбук</li></ul>
+<!-- Оплата и доставка -->
+<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><div style="background:#FFF6E5; border:1px solid #F1E2C6; padding:12px 14px; border-radius:0; text-align:left;"><h3 style="margin:0 0 8px; font-size:17px;">Оплата</h3><ul style="margin:0; padding-left:18px;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000;"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul><hr style="border:none; border-top:1px solid #E7D6B7; margin:12px 0;" /><h3 style="margin:0 0 8px; font-size:17px;">Доставка по Алматы и Казахстану</h3><ul style="margin:0; padding-left:18px;"><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul></div></div>]]></description>
+<param name="Гарантия">36 мес</param>
+<param name="Для бренда">Dell</param>
+<param name="Коды">210-BPDR_23</param>
+<param name="Модель">Pro 14 Plus PB14250</param>
+<param name="Тип">Ноутбук</param>
+<keywords>Dell, Ноутбук Dell Pro 14 Plus PB14250 (210-BPDR_23), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+</offer>
+
+<offer id="CP13873173" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13873173</vendorCode>
+<name>Ноутбук Dell Pro 14 Plus PB14250 (210-BPDR_22)</name>
+<price>777900</price>
+<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
+<vendor>Dell</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+<!-- Наименование товара -->
+<h3>Ноутбук Dell Pro 14 Plus PB14250 (210-BPDR_22)</h3>
+<!-- WhatsApp -->
+<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
+<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
+<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
+<!-- Описание -->
+<p>Ноутбук. Модельная серия: Pro 14 Plus PB14250. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro 14 Plus PB14250. Коды: 210-BPDR_22.</p>
+<h3>Характеристики</h3><ul><li><strong>Гарантия:</strong> 36 мес</li><li><strong>Для бренда:</strong> Dell</li><li><strong>Коды:</strong> 210-BPDR_22</li><li><strong>Модель:</strong> Pro 14 Plus PB14250</li><li><strong>Тип:</strong> Ноутбук</li></ul>
+<!-- Оплата и доставка -->
+<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><div style="background:#FFF6E5; border:1px solid #F1E2C6; padding:12px 14px; border-radius:0; text-align:left;"><h3 style="margin:0 0 8px; font-size:17px;">Оплата</h3><ul style="margin:0; padding-left:18px;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000;"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul><hr style="border:none; border-top:1px solid #E7D6B7; margin:12px 0;" /><h3 style="margin:0 0 8px; font-size:17px;">Доставка по Алматы и Казахстану</h3><ul style="margin:0; padding-left:18px;"><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul></div></div>]]></description>
+<param name="Гарантия">36 мес</param>
+<param name="Для бренда">Dell</param>
+<param name="Коды">210-BPDR_22</param>
+<param name="Модель">Pro 14 Plus PB14250</param>
+<param name="Тип">Ноутбук</param>
+<keywords>Dell, Ноутбук Dell Pro 14 Plus PB14250 (210-BPDR_22), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP13873061" available="true">
