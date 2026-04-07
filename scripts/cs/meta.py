@@ -1,14 +1,13 @@
 # -*- coding: utf-8 -*-
 """
-CS Meta — время сборки, next-run и вспомогательные функции для FEED_META.
+Path: scripts/cs/meta.py
 
-Этап 5: вынос части мета-логики из cs/core.py в отдельный модуль.
-Важно: модуль НЕ импортирует cs/core.py (чтобы не ловить циклические импорты).
+CS Meta — build time и next-run helper-ы для FEED_META.
 
-Сейчас переносим:
-- now_almaty()
-- next_run_at_hour()
-(подготовка к следующему шагу: вынести make_feed_meta/FEED_META полностью из writer)
+Роль файла:
+- держит всё, что связано со временем по Алматы;
+- считает следующую сборку для daily и DOM-расписаний;
+- не зависит от cs.core.
 """
 
 from __future__ import annotations
@@ -20,53 +19,59 @@ from zoneinfo import ZoneInfo
 ALMATY_TZ = ZoneInfo("Asia/Almaty")
 
 
+def _as_almaty(dt: datetime) -> datetime:
+    if dt.tzinfo is None:
+        return dt.replace(tzinfo=ALMATY_TZ)
+    return dt.astimezone(ALMATY_TZ)
+
+
 def now_almaty() -> datetime:
-    """Текущее время в Алматы (timezone-aware)."""
+    """Текущее timezone-aware время в Алматы."""
     return datetime.now(tz=ALMATY_TZ)
 
 
 def next_run_at_hour(build_time: datetime, *, hour: int) -> datetime:
-    """Следующая сборка в Алматы на заданный час (0..23)."""
-    bt = build_time.astimezone(ALMATY_TZ)
+    """Следующая daily-сборка в Алматы на заданный час (0..23)."""
+    bt = _as_almaty(build_time)
     target = bt.replace(hour=int(hour), minute=0, second=0, microsecond=0)
     if target <= bt:
         target = target + timedelta(days=1)
     return target
 
-# CS: вычисляет next_run для расписания "в дни месяца" (например 1/10/20) в заданный час (Алматы)
+
 def next_run_dom_at_hour(now: datetime, hour: int, doms: tuple[int, ...] | list[int]) -> datetime:
+    """Следующая сборка в Алматы для расписания по дням месяца (например 1/10/20)."""
+    current = _as_almaty(now)
     hour = int(hour)
     doms_sorted = sorted({int(d) for d in doms if 1 <= int(d) <= 31})
-    if not doms_sorted:
-        base = (now + timedelta(days=1)).replace(minute=0, second=0, microsecond=0)
-        return base.replace(hour=hour)
 
-    def _last_day_of_month(y: int, m: int) -> int:
-        first_next = datetime(y, m, 28) + timedelta(days=4)
-        first_next = datetime(first_next.year, first_next.month, 1)
+    if not doms_sorted:
+        return next_run_at_hour(current, hour=hour)
+
+    def _last_day_of_month(year: int, month: int) -> int:
+        first_next = datetime(year, month, 28, tzinfo=ALMATY_TZ) + timedelta(days=4)
+        first_next = datetime(first_next.year, first_next.month, 1, tzinfo=ALMATY_TZ)
         return (first_next - timedelta(days=1)).day
 
-    def _pick_in_month(y: int, m: int, after_dt: datetime | None) -> datetime | None:
-        last = _last_day_of_month(y, m)
-        for d in doms_sorted:
-            if d > last:
-                continue
-            cand = datetime(y, m, d, hour, 0, 0)
-            if after_dt is None or cand > after_dt:
-                return cand
-        return None
+    def _candidate(year: int, month: int, day: int) -> datetime | None:
+        if day < 1 or day > _last_day_of_month(year, month):
+            return None
+        return datetime(year, month, day, hour, 0, 0, tzinfo=ALMATY_TZ)
 
-    cand = _pick_in_month(now.year, now.month, now)
-    if cand:
-        return cand
+    for day in doms_sorted:
+        cand = _candidate(current.year, current.month, day)
+        if cand and cand > current:
+            return cand
 
-    y2, m2 = now.year, now.month + 1
-    if m2 == 13:
-        m2 = 1
-        y2 += 1
-    cand2 = _pick_in_month(y2, m2, None)
-    if cand2:
-        return cand2
+    year = current.year
+    month = current.month + 1
+    if month == 13:
+        month = 1
+        year += 1
 
-    return datetime(y2, m2, 1, hour, 0, 0)
+    for day in doms_sorted:
+        cand = _candidate(year, month, day)
+        if cand:
+            return cand
 
+    return datetime(year, month, 1, hour, 0, 0, tzinfo=ALMATY_TZ)
