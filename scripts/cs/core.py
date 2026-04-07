@@ -1,16 +1,15 @@
 # -*- coding: utf-8 -*-
 """
-CS Core — общее ядро для всех поставщиков.
+Path: scripts/cs/core.py
 
-В этом файле лежит "эталон CS":
-- правила цены (4% + надбавки + хвост 900, но если цена невалидна/<=100 → 100)
-- единый WhatsApp блок, HR, Оплата/Доставка
-- единая сборка description + Характеристики
-- единый keywords + хвост городов
-- стабилизация форматирования (переводы строк, футер)
+CS Core — shared common layer для финальной сборки CS-фида.
+
+Роль файла:
+- держит общий OfferOut и общий final/raw orchestration;
+- применяет только shared post-rules, одинаковые для всех поставщиков;
+- не должен хранить supplier-specific repairs.
 """
 
-# core v036_policy_ac_split_vendor_guard: AC отключаем split_params_for_chars по policy; гарантия не считается фразой; защита от vendor=тип/код
 
 from __future__ import annotations
 
@@ -1065,107 +1064,10 @@ def strip_service_kv_lines(text: str) -> str:
 
 
 
-# Нормализация "смешанная кириллица/латиница" внутри слов.
-# Правило:
-# - если в буквенной последовательности есть и кириллица, и латиница,
-#   то приводим её к ОДНОМУ алфавиту по большинству букв.
-# - последовательности с цифрами не трогаем (модели/коды).
-_CYR_TO_LAT = str.maketrans(
-    {
-        "А": "A",
-        "В": "B",
-        "Е": "E",
-        "К": "K",
-        "М": "M",
-        "Н": "H",
-        "О": "O",
-        "Р": "P",
-        "С": "C",
-        "Т": "T",
-        "Х": "X",
-        "У": "Y",
-        "а": "a",
-        "е": "e",
-        "о": "o",
-        "р": "p",
-        "с": "c",
-        "х": "x",
-        "у": "y",
-        "к": "k",
-        "м": "m",
-        "т": "t",
-        "в": "b",
-        "н": "h",
-        "И": "I",
-        "и": "i",
-}
-)
-
-_LAT_TO_CYR = str.maketrans(
-    {
-        "A": "А",
-        "B": "В",
-        "E": "Е",
-        "K": "К",
-        "M": "М",
-        "H": "Н",
-        "O": "О",
-        "P": "Р",
-        "C": "С",
-        "T": "Т",
-        "X": "Х",
-        "Y": "У",
-        "a": "а",
-        "b": "в",
-        "e": "е",
-        "k": "к",
-        "m": "м",
-        "h": "н",
-        "o": "о",
-        "p": "р",
-        "c": "с",
-        "t": "т",
-        "x": "х",
-        "y": "у",
-        "I": "И",
-        "i": "и",
-}
-)
-
-_RE_WORDLIKE = re.compile(r"[0-9A-Za-zА-Яа-яЁё][0-9A-Za-zА-Яа-яЁё._\-/+]*")
-_RE_LETTER_SEQ = re.compile(r"[A-Za-zА-Яа-яЁё]+")
-
-
+# Shared core не чинит смешанные кир/лат токены внутри кодов и названий.
+# Любая агрессивная правка таких токенов должна жить в supplier-layer.
 def fix_mixed_cyr_lat(s: str) -> str:
-    # Adapter-first: не меняем буквы кир/лат в core (это может портить корректные коды/модели).
     return s or ""
-
-
-    def _fix_letters(seq: str) -> str:
-        if not seq:
-            return seq
-        if re.search(r"[A-Za-z]", seq) and re.search(r"[А-Яа-яЁё]", seq):
-            cyr = len(re.findall(r"[А-Яа-яЁё]", seq))
-            lat = len(re.findall(r"[A-Za-z]", seq))
-            if cyr >= lat:
-                return seq.translate(_LAT_TO_CYR)
-            return seq.translate(_CYR_TO_LAT)
-        return seq
-
-    def _sub(m: re.Match[str]) -> str:
-        w = m.group(0)
-        # Для кодов/моделей (есть цифры) часто бывает 1-2 кириллических "двойника" в латинском коде: CB540А -> CB540A
-        if re.search(r"\d", w) and re.search(r"[A-Za-z]", w) and re.search(r"[А-Яа-яЁё]", w):
-            cyr = len(re.findall(r"[А-Яа-яЁё]", w))
-            lat = len(re.findall(r"[A-Za-z]", w))
-            # В кодах/моделях почти всегда доминирует латиница; чинить нужно даже если латинская буква одна (iВ4040 -> iB4040)
-            if lat >= cyr:
-                return w.translate(_CYR_TO_LAT)
-            return w.translate(_LAT_TO_CYR)
-        # Иначе — аккуратно чиним смешанные последовательности букв
-        return _RE_LETTER_SEQ.sub(lambda mm: _fix_letters(mm.group(0)), w)
-
-    return _RE_WORDLIKE.sub(_sub, t)
 
 # Безопасное int из любого значения
 # Нормализация смешанных LAT-CYR токенов с дефисом: "LED-индикаторы" -> "LED индикаторы"
