@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<yml_catalog date="2026-04-07 22:16:16">
+<yml_catalog date="2026-04-07 22:36:13">
 <shop><offers>
 <!--FEED_META
 Поставщик                                  | ComPortal
 URL поставщика                             | https://www.comportal.kz/auth/documents/prices/yml-catalog.php
-Время сборки (Алматы)                      | 2026-04-07 22:16:16
+Время сборки (Алматы)                      | 2026-04-07 22:36:13
 Ближайшая сборка (Алматы)                  | 2026-04-08 03:00:00
 Сколько товаров у поставщика до фильтра    | 1217
 Сколько товаров у поставщика после фильтра | 612
@@ -21,7 +21,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Чёрный. Технология печати: Лазерная. Ресурс: 5 500.]]></description>
+Оригинальный картридж. Цвет: Чёрный. Технология печати: Лазерная. Ресурс: 5 500.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">CE400A</param>
 <param name="Цвет">Чёрный</param>
@@ -41,7 +41,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Жёлтый. Технология печати: Лазерная. Ресурс: 6 000.]]></description>
+Оригинальный картридж. Цвет: Жёлтый. Технология печати: Лазерная. Ресурс: 6 000.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">CE402A</param>
 <param name="Цвет">Жёлтый</param>
@@ -61,7 +61,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Пурпурный. Технология печати: Лазерная. Ресурс: 6 000.]]></description>
+Оригинальный картридж. Цвет: Пурпурный. Технология печати: Лазерная. Ресурс: 6 000.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">CE403A</param>
 <param name="Цвет">Пурпурный</param>
@@ -81,7 +81,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Чёрный. Технология печати: Струйная. Ресурс: 550. Номер: №655.]]></description>
+Оригинальный картридж. Цвет: Чёрный. Технология печати: Струйная. Ресурс: 550. Номер: №655.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">CZ109AE</param>
 <param name="Цвет">Чёрный</param>
@@ -102,7 +102,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Голубой. Технология печати: Струйная. Ресурс: 600. Номер: №655.]]></description>
+Оригинальный картридж. Цвет: Голубой. Технология печати: Струйная. Ресурс: 600. Номер: №655.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">CZ110AE</param>
 <param name="Цвет">Голубой</param>
@@ -123,7 +123,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Жёлтый. Технология печати: Струйная. Ресурс: 600. Номер: №655.]]></description>
+Оригинальный картридж. Цвет: Жёлтый. Технология печати: Струйная. Ресурс: 600. Номер: №655.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">CZ112AE</param>
 <param name="Цвет">Жёлтый</param>
@@ -144,7 +144,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Трехцветный. Технология печати: Струйная. Ресурс: 200. Номер: №650.]]></description>
+Оригинальный картридж. Цвет: Трехцветный. Технология печати: Струйная. Ресурс: 200. Номер: №650.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">CZ102AE</param>
 <param name="Цвет">Трехцветный</param>
@@ -165,7 +165,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Голубой. Технология печати: Струйная. Ресурс: 825. Объём: 8,5. Номер: №933.]]></description>
+Оригинальный картридж. Цвет: Голубой. Технология печати: Струйная. Ресурс: 825. Объём: 8,5. Номер: №933.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">CN054AE</param>
 <param name="Цвет">Голубой</param>
@@ -187,7 +187,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Пурпурный. Технология печати: Струйная. Ресурс: 825. Объём: 8,5. Номер: №933.]]></description>
+Оригинальный картридж. Цвет: Пурпурный. Технология печати: Струйная. Ресурс: 825. Объём: 8,5. Номер: №933.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">CN055AE</param>
 <param name="Цвет">Пурпурный</param>
@@ -233,7 +233,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Чёрный. Технология печати: Струйная. Объём: 38. Номер: №711.]]></description>
+Оригинальный картридж. Цвет: Чёрный. Технология печати: Струйная. Объём: 38. Номер: №711.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">CZ129A</param>
 <param name="Цвет">Чёрный</param>
@@ -254,7 +254,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Голубой. Технология печати: Струйная. Объём: 29. Номер: №711.]]></description>
+Оригинальный картридж. Цвет: Голубой. Технология печати: Струйная. Объём: 29. Номер: №711.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">CZ130A</param>
 <param name="Цвет">Голубой</param>
@@ -275,7 +275,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Пурпурный. Технология печати: Струйная. Объём: 29. Номер: №711.]]></description>
+Оригинальный картридж. Цвет: Пурпурный. Технология печати: Струйная. Объём: 29. Номер: №711.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">CZ131A</param>
 <param name="Цвет">Пурпурный</param>
@@ -296,7 +296,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Жёлтый. Технология печати: Струйная. Объём: 29. Номер: №711.]]></description>
+Оригинальный картридж. Цвет: Жёлтый. Технология печати: Струйная. Объём: 29. Номер: №711.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">CZ132A</param>
 <param name="Цвет">Жёлтый</param>
@@ -317,7 +317,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Чёрный. Технология печати: Струйная. Объём: 80. Номер: №711.]]></description>
+Оригинальный картридж. Цвет: Чёрный. Технология печати: Струйная. Объём: 80. Номер: №711.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">CZ133A</param>
 <param name="Цвет">Чёрный</param>
@@ -338,7 +338,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Цветной. Технология печати: Струйная. Объём: 0,03. Номер: №727.]]></description>
+Оригинальный картридж. Цвет: Цветной. Технология печати: Струйная. Объём: 0,03. Номер: №727.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">Печатающая головка HP B3P06A</param>
 <param name="Цвет">Цветной</param>
@@ -359,7 +359,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Чёрный. Технология печати: Лазерная. Ресурс: 4 000.]]></description>
+Оригинальный картридж. Цвет: Чёрный. Технология печати: Лазерная. Ресурс: 4 000.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">Q2612AF</param>
 <param name="Цвет">Чёрный</param>
@@ -397,7 +397,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Чёрный. Технология печати: Лазерная. Ресурс: 1 500.]]></description>
+Оригинальный картридж. Цвет: Чёрный. Технология печати: Лазерная. Ресурс: 1 500.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">CF283A</param>
 <param name="Цвет">Чёрный</param>
@@ -521,7 +521,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Жёлтый. Технология печати: Лазерная. Ресурс: 12 000.]]></description>
+Оригинальный картридж. Цвет: Жёлтый. Технология печати: Лазерная. Ресурс: 12 000.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">C9732AC</param>
 <param name="Цвет">Жёлтый</param>
@@ -738,7 +738,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Чёрный. Технология печати: Струйная. Ресурс: 600. Номер: №651.]]></description>
+Оригинальный картридж. Цвет: Чёрный. Технология печати: Струйная. Ресурс: 600. Номер: №651.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">C2P10AE</param>
 <param name="Цвет">Чёрный</param>
@@ -759,7 +759,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Трехцветный. Технология печати: Струйная. Ресурс: 300. Номер: №651.]]></description>
+Оригинальный картридж. Цвет: Трехцветный. Технология печати: Струйная. Ресурс: 300. Номер: №651.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">C2P11AE</param>
 <param name="Цвет">Трехцветный</param>
@@ -780,7 +780,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Трехцветный. Технология печати: Струйная. Ресурс: 100. Объём: 2. Номер: №123.]]></description>
+Оригинальный картридж. Цвет: Трехцветный. Технология печати: Струйная. Ресурс: 100. Объём: 2. Номер: №123.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">F6V16AE</param>
 <param name="Цвет">Трехцветный</param>
@@ -802,7 +802,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Чёрный. Технология печати: Струйная. Ресурс: 120. Объём: 2. Номер: №123.]]></description>
+Оригинальный картридж. Цвет: Чёрный. Технология печати: Струйная. Ресурс: 120. Объём: 2. Номер: №123.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">F6V17AE</param>
 <param name="Цвет">Чёрный</param>
@@ -824,7 +824,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Трехцветный. Технология печати: Струйная. Ресурс: 200. Объём: 5. Номер: №652.]]></description>
+Оригинальный картридж. Цвет: Трехцветный. Технология печати: Струйная. Ресурс: 200. Объём: 5. Номер: №652.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">F6V24AE</param>
 <param name="Цвет">Трехцветный</param>
@@ -846,7 +846,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный тонер. Тонер. Ресурс: 10 200.]]></description>
+Оригинальный тонер. Ресурс: 10 200.]]></description>
 <param name="Тип">Тонер</param>
 <param name="Модель">C-EXV42</param>
 <param name="Дополнительная информация">Черный для iR 2202/2202N</param>
@@ -919,7 +919,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный тонер. Тонер. Ресурс: 36 000.]]></description>
+Оригинальный тонер. Ресурс: 36 000.]]></description>
 <param name="Тип">Тонер</param>
 <param name="Модель">C-EXV49</param>
 <param name="Дополнительная информация">для IR ADV C33xx black</param>
@@ -1092,7 +1092,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Чёрный. Технология печати: Лазерная. Ресурс: 1 600.]]></description>
+Оригинальный картридж. Цвет: Чёрный. Технология печати: Лазерная. Ресурс: 1 600.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">CF230A</param>
 <param name="Цвет">Чёрный</param>
@@ -1112,7 +1112,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Голубой. Технология печати: Струйная. Ресурс: 8 000. Объём: 70.]]></description>
+Оригинальный картридж. Цвет: Голубой. Технология печати: Струйная. Ресурс: 8 000. Объём: 70.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">Чернила HP M0H54AE</param>
 <param name="Цвет">Голубой</param>
@@ -1133,7 +1133,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Пурпурный. Технология печати: Струйная. Ресурс: 8 000. Объём: 70.]]></description>
+Оригинальный картридж. Цвет: Пурпурный. Технология печати: Струйная. Ресурс: 8 000. Объём: 70.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">Чернила HP M0H55AE</param>
 <param name="Цвет">Пурпурный</param>
@@ -1154,7 +1154,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Жёлтый. Технология печати: Струйная. Ресурс: 8 000. Объём: 70.]]></description>
+Оригинальный картридж. Цвет: Жёлтый. Технология печати: Струйная. Ресурс: 8 000. Объём: 70.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">Чернила HP M0H56AE</param>
 <param name="Цвет">Жёлтый</param>
@@ -1175,7 +1175,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Чёрный. Технология печати: Струйная. Ресурс: 2 000. Объём: 10,5. Номер: №953.]]></description>
+Оригинальный картридж. Цвет: Чёрный. Технология печати: Струйная. Ресурс: 2 000. Объём: 10,5. Номер: №953.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">L0S70AE</param>
 <param name="Цвет">Чёрный</param>
@@ -1197,7 +1197,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Пурпурный. Технология печати: Струйная. Ресурс: 1 600. Объём: 7. Номер: №953.]]></description>
+Оригинальный картридж. Цвет: Пурпурный. Технология печати: Струйная. Ресурс: 1 600. Объём: 7. Номер: №953.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">F6U17AE</param>
 <param name="Цвет">Пурпурный</param>
@@ -1219,7 +1219,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Жёлтый. Технология печати: Струйная. Ресурс: 1 600. Объём: 7. Номер: №953.]]></description>
+Оригинальный картридж. Цвет: Жёлтый. Технология печати: Струйная. Ресурс: 1 600. Объём: 7. Номер: №953.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">F6U18AE</param>
 <param name="Цвет">Жёлтый</param>
@@ -1241,7 +1241,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный тонер. Тонер. Ресурс: 7 300.]]></description>
+Оригинальный тонер. Ресурс: 7 300.]]></description>
 <param name="Тип">Тонер</param>
 <param name="Модель">034 MG</param>
 <param name="Дополнительная информация">Лазерный пурпурный</param>
@@ -1302,7 +1302,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Чёрный. Технология печати: Струйная. Ресурс: 6 000. Объём: 135. Номер: №490.]]></description>
+Оригинальный картридж. Цвет: Чёрный. Технология печати: Струйная. Ресурс: 6 000. Объём: 135. Номер: №490.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">INK GI-490 BK</param>
 <param name="Цвет">Чёрный</param>
@@ -1324,7 +1324,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Голубой. Технология печати: Струйная. Ресурс: 7 000. Объём: 70. Номер: №490.]]></description>
+Оригинальный картридж. Цвет: Голубой. Технология печати: Струйная. Ресурс: 7 000. Объём: 70. Номер: №490.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">INK GI-490 C</param>
 <param name="Цвет">Голубой</param>
@@ -1346,7 +1346,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Пурпурный. Технология печати: Струйная. Ресурс: 7 000. Объём: 70. Номер: №490.]]></description>
+Оригинальный картридж. Цвет: Пурпурный. Технология печати: Струйная. Ресурс: 7 000. Объём: 70. Номер: №490.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">INK GI-490 M</param>
 <param name="Цвет">Пурпурный</param>
@@ -1368,7 +1368,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Жёлтый. Технология печати: Струйная. Ресурс: 7 000. Объём: 70. Номер: №490.]]></description>
+Оригинальный картридж. Цвет: Жёлтый. Технология печати: Струйная. Ресурс: 7 000. Объём: 70. Номер: №490.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">INK GI-490 Y</param>
 <param name="Цвет">Жёлтый</param>
@@ -1390,7 +1390,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный тонер. Тонер. Ресурс: 15 500.]]></description>
+Оригинальный тонер. Ресурс: 15 500.]]></description>
 <param name="Тип">Тонер</param>
 <param name="Модель">C-EXV54 Bk</param>
 <param name="Дополнительная информация">Лазерный черный</param>
@@ -1409,7 +1409,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный тонер. Тонер. Ресурс: 8 500.]]></description>
+Оригинальный тонер. Ресурс: 8 500.]]></description>
 <param name="Тип">Тонер</param>
 <param name="Модель">C-EXV54 Y</param>
 <param name="Дополнительная информация">Лазерный желтый</param>
@@ -1428,7 +1428,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный тонер. Тонер. Ресурс: 8 500.]]></description>
+Оригинальный тонер. Ресурс: 8 500.]]></description>
 <param name="Тип">Тонер</param>
 <param name="Модель">C-EXV54 C</param>
 <param name="Дополнительная информация">Лазерный голубой</param>
@@ -1447,7 +1447,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный тонер. Тонер. Ресурс: 8 500.]]></description>
+Оригинальный тонер. Ресурс: 8 500.]]></description>
 <param name="Тип">Тонер</param>
 <param name="Модель">C-EXV54 M</param>
 <param name="Дополнительная информация">Laser Magenta</param>
@@ -1490,7 +1490,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Жёлтый. Технология печати: Лазерная. Ресурс: 1 300.]]></description>
+Оригинальный картридж. Цвет: Жёлтый. Технология печати: Лазерная. Ресурс: 1 300.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">CF542A</param>
 <param name="Цвет">Жёлтый</param>
@@ -1510,7 +1510,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Пурпурный. Технология печати: Лазерная. Ресурс: 1 300.]]></description>
+Оригинальный картридж. Цвет: Пурпурный. Технология печати: Лазерная. Ресурс: 1 300.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">CF543A</param>
 <param name="Цвет">Пурпурный</param>
@@ -1530,7 +1530,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Чёрный. Технология печати: Лазерная. Ресурс: 3 100.]]></description>
+Оригинальный картридж. Цвет: Чёрный. Технология печати: Лазерная. Ресурс: 3 100.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">052</param>
 <param name="Цвет">Чёрный</param>
@@ -1572,7 +1572,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Пурпурный. Технология печати: Лазерная. Ресурс: 23 000.]]></description>
+Оригинальный картридж. Цвет: Пурпурный. Технология печати: Лазерная. Ресурс: 23 000.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">CF473XC</param>
 <param name="Цвет">Пурпурный</param>
@@ -1620,7 +1620,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Пурпурный. Технология печати: Струйная. Объём: 300. Номер: №730.]]></description>
+Оригинальный картридж. Цвет: Пурпурный. Технология печати: Струйная. Объём: 300. Номер: №730.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">P2V69A</param>
 <param name="Цвет">Пурпурный</param>
@@ -1641,7 +1641,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж.]]></description>
+Оригинальный картридж.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Коды">P2V25A</param>
 <param name="Модель">Печатающая головка HP P2V25A</param>
@@ -1658,7 +1658,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж.]]></description>
+Оригинальный картридж.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Коды">P2V79A</param>
 <param name="Модель">P2V79A</param>
@@ -1675,7 +1675,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Матовый черный. Технология печати: Струйная. Объём: 300. Номер: №746.]]></description>
+Оригинальный картридж. Цвет: Матовый черный. Технология печати: Струйная. Объём: 300. Номер: №746.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">P2V83A</param>
 <param name="Цвет">Матовый черный</param>
@@ -1696,7 +1696,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Голубой. Технология печати: Струйная. Ресурс: 16 000. Номер: №991.]]></description>
+Оригинальный картридж. Цвет: Голубой. Технология печати: Струйная. Ресурс: 16 000. Номер: №991.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">M0J90AE</param>
 <param name="Цвет">Голубой</param>
@@ -1717,7 +1717,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Пурпурный. Технология печати: Струйная. Ресурс: 16 000. Номер: №991.]]></description>
+Оригинальный картридж. Цвет: Пурпурный. Технология печати: Струйная. Ресурс: 16 000. Номер: №991.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">M0J94AE</param>
 <param name="Цвет">Пурпурный</param>
@@ -1738,7 +1738,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Голубой. Технология печати: Струйная. Объём: 300. Номер: №730.]]></description>
+Оригинальный картридж. Цвет: Голубой. Технология печати: Струйная. Объём: 300. Номер: №730.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">P2V68A</param>
 <param name="Цвет">Голубой</param>
@@ -1759,7 +1759,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Жёлтый. Технология печати: Струйная. Объём: 300. Номер: №730.]]></description>
+Оригинальный картридж. Цвет: Жёлтый. Технология печати: Струйная. Объём: 300. Номер: №730.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">P2V70A</param>
 <param name="Цвет">Жёлтый</param>
@@ -1780,7 +1780,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Матовый черный. Технология печати: Струйная. Объём: 300. Номер: №730.]]></description>
+Оригинальный картридж. Цвет: Матовый черный. Технология печати: Струйная. Объём: 300. Номер: №730.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">P2V71A</param>
 <param name="Цвет">Матовый черный</param>
@@ -1801,7 +1801,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Серый. Технология печати: Струйная. Объём: 300. Номер: №730.]]></description>
+Оригинальный картридж. Цвет: Серый. Технология печати: Струйная. Объём: 300. Номер: №730.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">P2V72A</param>
 <param name="Цвет">Серый</param>
@@ -1822,7 +1822,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Фото черный. Технология печати: Струйная. Объём: 300. Номер: №730.]]></description>
+Оригинальный картридж. Цвет: Фото черный. Технология печати: Струйная. Объём: 300. Номер: №730.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">P2V73A</param>
 <param name="Цвет">Фото черный</param>
@@ -1843,7 +1843,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный расходный материал. Расходный материал.]]></description>
+Оригинальный расходный материал.]]></description>
 <param name="Тип">Расходный материал</param>
 <param name="Модель">Печатающая головка HP 3YP61AE</param>
 <param name="Дополнительная информация">2 печатающие головки: черная и трехцветная; вкладыш с инструкциями по замене печатающих головок</param>
@@ -1861,7 +1861,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Чёрный. Технология печати: Лазерная. Ресурс: 51 500.]]></description>
+Оригинальный картридж. Цвет: Чёрный. Технология печати: Лазерная. Ресурс: 51 500.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">Тонер Canon T03</param>
 <param name="Цвет">Чёрный</param>
@@ -2004,7 +2004,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Пурпурный. Технология печати: Лазерная. Ресурс: 20 000.]]></description>
+Оригинальный картридж. Цвет: Пурпурный. Технология печати: Лазерная. Ресурс: 20 000.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">W9103MC</param>
 <param name="Цвет">Пурпурный</param>
@@ -2051,7 +2051,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Чёрный. Технология печати: Струйная. Объём: 130.]]></description>
+Оригинальный картридж. Цвет: Чёрный. Технология печати: Струйная. Объём: 130.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">PFI-120 BLACK</param>
 <param name="Цвет">Чёрный</param>
@@ -2071,7 +2071,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Голубой. Технология печати: Струйная. Объём: 130.]]></description>
+Оригинальный картридж. Цвет: Голубой. Технология печати: Струйная. Объём: 130.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">PFI-120 Cyan</param>
 <param name="Цвет">Голубой</param>
@@ -2091,7 +2091,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Пурпурный. Технология печати: Струйная. Объём: 130.]]></description>
+Оригинальный картридж. Цвет: Пурпурный. Технология печати: Струйная. Объём: 130.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">PFI-120 Magenta</param>
 <param name="Цвет">Пурпурный</param>
@@ -2111,7 +2111,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Жёлтый. Технология печати: Струйная. Объём: 130.]]></description>
+Оригинальный картридж. Цвет: Жёлтый. Технология печати: Струйная. Объём: 130.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">PFI-120 Yellow</param>
 <param name="Цвет">Жёлтый</param>
@@ -2131,7 +2131,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Чёрный. Технология печати: Лазерная. Ресурс: 1 000.]]></description>
+Оригинальный картридж. Цвет: Чёрный. Технология печати: Лазерная. Ресурс: 1 000.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">W1106A / 106A</param>
 <param name="Цвет">Чёрный</param>
@@ -2200,7 +2200,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный расходный материал. Расходный материал.]]></description>
+Оригинальный расходный материал.]]></description>
 <param name="Тип">Расходный материал</param>
 <param name="Модель">Печатающая головка Canon PF-06</param>
 <param name="Дополнительная информация">для imagePROGRAF TX-2000/3000/4000/TM-200/205</param>
@@ -2218,7 +2218,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Чёрный. Технология печати: Лазерная. Ресурс: 3 000.]]></description>
+Оригинальный картридж. Цвет: Чёрный. Технология печати: Лазерная. Ресурс: 3 000.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">CF259A / 59A</param>
 <param name="Цвет">Чёрный</param>
@@ -2238,7 +2238,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный тонер. Тонер. Ресурс: 30 000.]]></description>
+Оригинальный тонер. Ресурс: 30 000.]]></description>
 <param name="Тип">Тонер</param>
 <param name="Модель">C-EXV 59</param>
 <param name="Дополнительная информация">для imageRUNNER 2625i/2630i/2645i</param>
@@ -2283,7 +2283,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Голубой. Технология печати: Струйная. Объём: 300. Номер: №320.]]></description>
+Оригинальный картридж. Цвет: Голубой. Технология печати: Струйная. Объём: 300. Номер: №320.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">PFI-320</param>
 <param name="Цвет">Голубой</param>
@@ -2304,7 +2304,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Чёрный. Технология печати: Струйная. Объём: 300. Номер: №320.]]></description>
+Оригинальный картридж. Цвет: Чёрный. Технология печати: Струйная. Объём: 300. Номер: №320.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">PFI-320</param>
 <param name="Цвет">Чёрный</param>
@@ -2325,7 +2325,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Чёрный. Технология печати: Струйная. Объём: 700. Номер: №710.]]></description>
+Оригинальный картридж. Цвет: Чёрный. Технология печати: Струйная. Объём: 700. Номер: №710.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">PFI-710BK</param>
 <param name="Цвет">Чёрный</param>
@@ -2346,7 +2346,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Пурпурный. Технология печати: Струйная. Объём: 300. Номер: №320.]]></description>
+Оригинальный картридж. Цвет: Пурпурный. Технология печати: Струйная. Объём: 300. Номер: №320.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">PFI-320</param>
 <param name="Цвет">Пурпурный</param>
@@ -2367,7 +2367,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Матовый черный. Технология печати: Струйная. Объём: 300. Номер: №320.]]></description>
+Оригинальный картридж. Цвет: Матовый черный. Технология печати: Струйная. Объём: 300. Номер: №320.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">PFI-320</param>
 <param name="Цвет">Матовый черный</param>
@@ -2388,7 +2388,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Жёлтый. Технология печати: Струйная. Объём: 300. Номер: №320.]]></description>
+Оригинальный картридж. Цвет: Жёлтый. Технология печати: Струйная. Объём: 300. Номер: №320.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">PFI-320</param>
 <param name="Цвет">Жёлтый</param>
@@ -2432,7 +2432,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Жёлтый. Технология печати: Струйная. Объём: 700. Номер: №710.]]></description>
+Оригинальный картридж. Цвет: Жёлтый. Технология печати: Струйная. Объём: 700. Номер: №710.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">PFI-710YL</param>
 <param name="Цвет">Жёлтый</param>
@@ -2453,7 +2453,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Пурпурный. Технология печати: Струйная. Объём: 700. Номер: №710.]]></description>
+Оригинальный картридж. Цвет: Пурпурный. Технология печати: Струйная. Объём: 700. Номер: №710.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">PFI-710M</param>
 <param name="Цвет">Пурпурный</param>
@@ -2474,7 +2474,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Голубой. Технология печати: Струйная. Объём: 700. Номер: №710.]]></description>
+Оригинальный картридж. Цвет: Голубой. Технология печати: Струйная. Объём: 700. Номер: №710.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">PFI-710C</param>
 <param name="Цвет">Голубой</param>
@@ -2495,7 +2495,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Голубой. Технология печати: Лазерная. Ресурс: 2 100.]]></description>
+Оригинальный картридж. Цвет: Голубой. Технология печати: Лазерная. Ресурс: 2 100.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">W2031A / 415A</param>
 <param name="Цвет">Голубой</param>
@@ -2515,7 +2515,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Жёлтый. Технология печати: Лазерная. Ресурс: 2 100.]]></description>
+Оригинальный картридж. Цвет: Жёлтый. Технология печати: Лазерная. Ресурс: 2 100.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">W2032A / 415A</param>
 <param name="Цвет">Жёлтый</param>
@@ -2559,7 +2559,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Чёрный. Технология печати: Струйная. Ресурс: 6 000. Объём: 135. Номер: №.]]></description>
+Оригинальный картридж. Цвет: Чёрный. Технология печати: Струйная. Ресурс: 6 000. Объём: 135. Номер: №.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">Чернила HP GT53XL</param>
 <param name="Объем памяти">64 Mb</param>
@@ -2590,7 +2590,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Голубой. Технология печати: Струйная. Объём: 130. Номер: №730.]]></description>
+Оригинальный картридж. Цвет: Голубой. Технология печати: Струйная. Объём: 130. Номер: №730.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">P2V62A</param>
 <param name="Цвет">Голубой</param>
@@ -2611,7 +2611,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Жёлтый. Технология печати: Струйная. Объём: 130. Номер: №730.]]></description>
+Оригинальный картридж. Цвет: Жёлтый. Технология печати: Струйная. Объём: 130. Номер: №730.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">P2V64A</param>
 <param name="Цвет">Жёлтый</param>
@@ -2632,7 +2632,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Матовый черный. Технология печати: Струйная. Объём: 130. Номер: №730.]]></description>
+Оригинальный картридж. Цвет: Матовый черный. Технология печати: Струйная. Объём: 130. Номер: №730.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">P2V65A</param>
 <param name="Цвет">Матовый черный</param>
@@ -2653,7 +2653,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Серый. Технология печати: Струйная. Объём: 130. Номер: №730.]]></description>
+Оригинальный картридж. Цвет: Серый. Технология печати: Струйная. Объём: 130. Номер: №730.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">P2V66A</param>
 <param name="Цвет">Серый</param>
@@ -2674,7 +2674,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Фото черный. Технология печати: Струйная. Объём: 130. Номер: №730.]]></description>
+Оригинальный картридж. Цвет: Фото черный. Технология печати: Струйная. Объём: 130. Номер: №730.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">P2V67A</param>
 <param name="Цвет">Фото черный</param>
@@ -2770,7 +2770,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный тонер. Тонер. Ресурс: 10 200.]]></description>
+Оригинальный тонер. Ресурс: 10 200.]]></description>
 <param name="Тип">Тонер</param>
 <param name="Модель">C-EXV60</param>
 <param name="Дополнительная информация">black</param>
@@ -2789,7 +2789,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Голубой. Технология печати: Лазерная. Ресурс: 2 450.]]></description>
+Оригинальный картридж. Цвет: Голубой. Технология печати: Лазерная. Ресурс: 2 450.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">207X</param>
 <param name="Цвет">Голубой</param>
@@ -2936,7 +2936,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Чёрный. Технология печати: Струйная. Объём: 400.]]></description>
+Оригинальный картридж. Цвет: Чёрный. Технология печати: Струйная. Объём: 400.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">843C PageWide XL</param>
 <param name="Цвет">Чёрный</param>
@@ -2956,7 +2956,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Голубой. Технология печати: Струйная. Объём: 400.]]></description>
+Оригинальный картридж. Цвет: Голубой. Технология печати: Струйная. Объём: 400.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">843C PageWide XL</param>
 <param name="Цвет">Голубой</param>
@@ -2976,7 +2976,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Пурпурный. Технология печати: Струйная. Объём: 400.]]></description>
+Оригинальный картридж. Цвет: Пурпурный. Технология печати: Струйная. Объём: 400.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">843C PageWide XL</param>
 <param name="Цвет">Пурпурный</param>
@@ -2996,7 +2996,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Жёлтый. Технология печати: Струйная. Объём: 400.]]></description>
+Оригинальный картридж. Цвет: Жёлтый. Технология печати: Струйная. Объём: 400.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">843C PageWide XL</param>
 <param name="Цвет">Жёлтый</param>
@@ -3130,7 +3130,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный мфу. МФУ. Гарантия: 12 мес. Для бренда: Canon. Модель: i-SENSYS MF237W BUND(2 картриджа). Коды: 1418C170.]]></description>
+Оригинальный мфу. Гарантия: 12 мес. Для бренда: Canon. Модель: i-SENSYS MF237W BUND(2 картриджа). Коды: 1418C170.]]></description>
 <param name="Тип">МФУ</param>
 <param name="Гарантия">12 мес</param>
 <param name="Коды">1418C170</param>
@@ -3148,7 +3148,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный мфу. МФУ. Формат печати: A4. Разрешение: 600x600. Скорость печати ч/б: 23. Порты: USB LAN WiFI. Технология печати: Лазерная. Гарантия: 12 мес.]]></description>
+Оригинальный мфу Формат печати: A4. Разрешение: 600x600. Скорость печати ч/б: 23. Порты: USB LAN WiFI. Технология печати: Лазерная. Гарантия: 12 мес.]]></description>
 <param name="Тип">МФУ</param>
 <param name="Модель">i-SENSYS MF237W BUND(2 картриджа)</param>
 <param name="Гарантия">12 мес</param>
@@ -3174,7 +3174,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж.]]></description>
+Оригинальный картридж.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Коды">CF214XH</param>
 <param name="Модель">CF214XH</param>
@@ -3191,7 +3191,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Голубой. Технология печати: Струйная. Объём: 29. Номер: №712.]]></description>
+Оригинальный картридж. Цвет: Голубой. Технология печати: Струйная. Объём: 29. Номер: №712.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">DesignJet</param>
 <param name="Цвет">Голубой</param>
@@ -3212,7 +3212,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Пурпурный. Технология печати: Струйная. Объём: 29. Номер: №712.]]></description>
+Оригинальный картридж. Цвет: Пурпурный. Технология печати: Струйная. Объём: 29. Номер: №712.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">DesignJet</param>
 <param name="Цвет">Пурпурный</param>
@@ -3233,7 +3233,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Жёлтый. Технология печати: Струйная. Объём: 29. Номер: №712.]]></description>
+Оригинальный картридж. Цвет: Жёлтый. Технология печати: Струйная. Объём: 29. Номер: №712.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">DesignJet</param>
 <param name="Цвет">Жёлтый</param>
@@ -3254,7 +3254,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Чёрный. Технология печати: Струйная. Объём: 38. Номер: №712.]]></description>
+Оригинальный картридж. Цвет: Чёрный. Технология печати: Струйная. Объём: 38. Номер: №712.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">DesignJet</param>
 <param name="Цвет">Чёрный</param>
@@ -3275,7 +3275,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Чёрный. Технология печати: Струйная. Объём: 80. Номер: №712.]]></description>
+Оригинальный картридж. Цвет: Чёрный. Технология печати: Струйная. Объём: 80. Номер: №712.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">DesignJet</param>
 <param name="Цвет">Чёрный</param>
@@ -3296,7 +3296,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Голубой. Технология печати: Струйная. Ресурс: 1 600. Объём: 23.]]></description>
+Оригинальный картридж. Цвет: Голубой. Технология печати: Струйная. Ресурс: 1 600. Объём: 23.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">963XL</param>
 <param name="Цвет">Голубой</param>
@@ -3317,7 +3317,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Пурпурный. Технология печати: Струйная. Ресурс: 1 600. Объём: 23.]]></description>
+Оригинальный картридж. Цвет: Пурпурный. Технология печати: Струйная. Ресурс: 1 600. Объём: 23.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">963XL</param>
 <param name="Цвет">Пурпурный</param>
@@ -3338,7 +3338,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Жёлтый. Технология печати: Струйная. Ресурс: 1 600. Объём: 23.]]></description>
+Оригинальный картридж. Цвет: Жёлтый. Технология печати: Струйная. Ресурс: 1 600. Объём: 23.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">963XL</param>
 <param name="Цвет">Жёлтый</param>
@@ -3359,7 +3359,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Чёрный. Технология печати: Струйная. Ресурс: 2 000. Объём: 48.]]></description>
+Оригинальный картридж. Цвет: Чёрный. Технология печати: Струйная. Ресурс: 2 000. Объём: 48.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">963XL</param>
 <param name="Цвет">Чёрный</param>
@@ -3523,7 +3523,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж.]]></description>
+Оригинальный картридж.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">729 DesignJet Printhead Replacement Kit</param>
 <param name="Коды">F9J81A</param>
@@ -3540,7 +3540,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный тонер. Тонер. Ресурс: 2 300.]]></description>
+Оригинальный тонер. Ресурс: 2 300.]]></description>
 <param name="Тип">Тонер</param>
 <param name="Модель">Тонер-картридж Canon CRG</param>
 <param name="Дополнительная информация">054 H Y</param>
@@ -3559,7 +3559,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный тонер. Тонер. Ресурс: 2 300.]]></description>
+Оригинальный тонер. Ресурс: 2 300.]]></description>
 <param name="Тип">Тонер</param>
 <param name="Модель">Тонер-картридж Canon CRG</param>
 <param name="Дополнительная информация">054 H M</param>
@@ -3578,7 +3578,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Трехцветный. Технология печати: Струйная. Ресурс: 100.]]></description>
+Оригинальный картридж. Цвет: Трехцветный. Технология печати: Струйная. Ресурс: 100.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">305</param>
 <param name="Цвет">Трехцветный</param>
@@ -3598,7 +3598,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Чёрный. Технология печати: Струйная. Ресурс: 120.]]></description>
+Оригинальный картридж. Цвет: Чёрный. Технология печати: Струйная. Ресурс: 120.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">305</param>
 <param name="Цвет">Чёрный</param>
@@ -3662,7 +3662,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный тонер. Тонер. Ресурс: 10 500.]]></description>
+Оригинальный тонер. Ресурс: 10 500.]]></description>
 <param name="Тип">Тонер</param>
 <param name="Модель">Black Original LaserJet</param>
 <param name="Дополнительная информация">147A</param>
@@ -3681,7 +3681,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Чёрный. Технология печати: Струйная. Объём: 170. Номер: № 40.]]></description>
+Оригинальный картридж. Цвет: Чёрный. Технология печати: Струйная. Объём: 170. Номер: № 40.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">GI-40 BK</param>
 <param name="Цвет">Чёрный</param>
@@ -3935,7 +3935,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Чёрный. Технология печати: Струйная. Объём: 775. Номер: №842.]]></description>
+Оригинальный картридж. Цвет: Чёрный. Технология печати: Струйная. Объём: 775. Номер: №842.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">PageWide XL</param>
 <param name="Цвет">Чёрный</param>
@@ -3956,7 +3956,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Чёрный. Технология печати: Струйная. Объём: 500. Номер: №864.]]></description>
+Оригинальный картридж. Цвет: Чёрный. Технология печати: Струйная. Объём: 500. Номер: №864.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">PageWide XL</param>
 <param name="Цвет">Чёрный</param>
@@ -3977,7 +3977,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Пурпурный. Технология печати: Лазерная. Ресурс: 5 000.]]></description>
+Оригинальный картридж. Цвет: Пурпурный. Технология печати: Лазерная. Ресурс: 5 000.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">CRG 064 M</param>
 <param name="Цвет">Пурпурный</param>
@@ -3997,7 +3997,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Чёрный. Технология печати: Лазерная. Ресурс: 6 000.]]></description>
+Оригинальный картридж. Цвет: Чёрный. Технология печати: Лазерная. Ресурс: 6 000.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">CRG 064 BK</param>
 <param name="Цвет">Чёрный</param>
@@ -4059,7 +4059,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Жёлтый. Технология печати: Струйная. Объём: 775. Номер: №842.]]></description>
+Оригинальный картридж. Цвет: Жёлтый. Технология печати: Струйная. Объём: 775. Номер: №842.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">842C PageWide XL</param>
 <param name="Цвет">Жёлтый</param>
@@ -4127,7 +4127,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный тонер. Тонер. Ресурс: 30 000.]]></description>
+Оригинальный тонер. Ресурс: 30 000.]]></description>
 <param name="Тип">Тонер</param>
 <param name="Модель">C-EXV 63</param>
 <param name="Дополнительная информация">для imageRUNNER 2725i/2730i/2745i</param>
@@ -4550,7 +4550,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный тонер. Тонер. Ресурс: 92 600.]]></description>
+Оригинальный тонер. Ресурс: 92 600.]]></description>
 <param name="Тип">Тонер</param>
 <param name="Модель">imagePRESS Toner T07</param>
 <param name="Дополнительная информация">Чёрный</param>
@@ -4569,7 +4569,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный тонер. Тонер. Ресурс: 63 700.]]></description>
+Оригинальный тонер. Ресурс: 63 700.]]></description>
 <param name="Тип">Тонер</param>
 <param name="Модель">imagePRESS Toner T07</param>
 <param name="Дополнительная информация">Голубой</param>
@@ -4588,7 +4588,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный тонер. Тонер. Ресурс: 63 700.]]></description>
+Оригинальный тонер. Ресурс: 63 700.]]></description>
 <param name="Тип">Тонер</param>
 <param name="Модель">imagePRESS Toner T07</param>
 <param name="Дополнительная информация">Пурпурный</param>
@@ -4607,7 +4607,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный тонер. Тонер. Ресурс: 63 700.]]></description>
+Оригинальный тонер. Ресурс: 63 700.]]></description>
 <param name="Тип">Тонер</param>
 <param name="Модель">imagePRESS Toner T07</param>
 <param name="Дополнительная информация">Жёлтый</param>
@@ -4626,7 +4626,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный тонер. Тонер. Ресурс: 56 000.]]></description>
+Оригинальный тонер. Ресурс: 56 000.]]></description>
 <param name="Тип">Тонер</param>
 <param name="Модель">Тонер-картридж Canon T01</param>
 <param name="Дополнительная информация">Чёрный</param>
@@ -4645,7 +4645,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный тонер. Тонер. Ресурс: 70 000.]]></description>
+Оригинальный тонер. Ресурс: 70 000.]]></description>
 <param name="Тип">Тонер</param>
 <param name="Модель">C-EXV 35</param>
 <param name="Дополнительная информация">Чёрный</param>
@@ -5062,7 +5062,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Трехцветный. Технология печати: Струйная. Номер: №305.]]></description>
+Оригинальный картридж. Цвет: Трехцветный. Технология печати: Струйная. Номер: №305.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">3YM63AE</param>
 <param name="Цвет">Трехцветный</param>
@@ -5346,7 +5346,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Чёрный. Технология печати: Лазерная.]]></description>
+Оригинальный картридж. Цвет: Чёрный. Технология печати: Лазерная.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">151X</param>
 <param name="Цвет">Чёрный</param>
@@ -5388,7 +5388,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Чёрный. Технология печати: Лазерная. Ресурс: 1 350.]]></description>
+Оригинальный картридж. Цвет: Чёрный. Технология печати: Лазерная. Ресурс: 1 350.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">067</param>
 <param name="Цвет">Чёрный</param>
@@ -5408,7 +5408,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Матовый черный. Технология печати: Струйная. Объём: 700.]]></description>
+Оригинальный картридж. Цвет: Матовый черный. Технология печати: Струйная. Объём: 700.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">PFI-740</param>
 <param name="Цвет">Матовый черный</param>
@@ -5428,7 +5428,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Чёрный. Технология печати: Струйная. Объём: 700.]]></description>
+Оригинальный картридж. Цвет: Чёрный. Технология печати: Струйная. Объём: 700.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">PFI-740</param>
 <param name="Цвет">Чёрный</param>
@@ -5448,7 +5448,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Голубой. Технология печати: Струйная. Объём: 700.]]></description>
+Оригинальный картридж. Цвет: Голубой. Технология печати: Струйная. Объём: 700.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">PFI-740</param>
 <param name="Цвет">Голубой</param>
@@ -5468,7 +5468,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Пурпурный. Технология печати: Струйная. Объём: 700.]]></description>
+Оригинальный картридж. Цвет: Пурпурный. Технология печати: Струйная. Объём: 700.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">PFI-740</param>
 <param name="Цвет">Пурпурный</param>
@@ -5488,7 +5488,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Жёлтый. Технология печати: Струйная. Объём: 700.]]></description>
+Оригинальный картридж. Цвет: Жёлтый. Технология печати: Струйная. Объём: 700.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">PFI-740</param>
 <param name="Цвет">Жёлтый</param>
@@ -5550,7 +5550,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Синий. Технология печати: Лазерная. Ресурс: 1 250.]]></description>
+Оригинальный картридж. Цвет: Синий. Технология печати: Лазерная. Ресурс: 1 250.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">067</param>
 <param name="Цвет">Синий</param>
@@ -5570,7 +5570,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Чёрный. Технология печати: Лазерная. Ресурс: 8 600.]]></description>
+Оригинальный картридж. Цвет: Чёрный. Технология печати: Лазерная. Ресурс: 8 600.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">Тонер-картридж HP W9090MC</param>
 <param name="Цвет">Чёрный</param>
@@ -5615,7 +5615,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Чёрный. Технология печати: Струйная. Ресурс: 240. Номер: №305.]]></description>
+Оригинальный картридж. Цвет: Чёрный. Технология печати: Струйная. Ресурс: 240. Номер: №305.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">3YM62AE</param>
 <param name="Цвет">Чёрный</param>
@@ -5662,7 +5662,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Пурпурный. Технология печати: Струйная. Объём: 500. Номер: №865.]]></description>
+Оригинальный картридж. Цвет: Пурпурный. Технология печати: Струйная. Объём: 500. Номер: №865.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">PageWide XL</param>
 <param name="Цвет">Пурпурный</param>
@@ -5683,7 +5683,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Голубой. Технология печати: Струйная. Объём: 500. Номер: №865.]]></description>
+Оригинальный картридж. Цвет: Голубой. Технология печати: Струйная. Объём: 500. Номер: №865.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">PageWide XL</param>
 <param name="Цвет">Голубой</param>
@@ -5730,7 +5730,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный тонер. Тонер.]]></description>
+Оригинальный тонер.]]></description>
 <param name="Тип">Тонер</param>
 <param name="Коды">5753C002</param>
 <param name="Модель">C-EXV 64</param>
@@ -5747,7 +5747,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный тонер. Тонер. Ресурс: 38 000.]]></description>
+Оригинальный тонер. Ресурс: 38 000.]]></description>
 <param name="Тип">Тонер</param>
 <param name="Модель">C-EXV 64</param>
 <param name="Дополнительная информация">чёрный</param>
@@ -5766,7 +5766,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный тонер. Тонер.]]></description>
+Оригинальный тонер.]]></description>
 <param name="Тип">Тонер</param>
 <param name="Коды">5754C002</param>
 <param name="Модель">C-EXV 64</param>
@@ -5783,7 +5783,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный тонер. Тонер. Ресурс: 25 500.]]></description>
+Оригинальный тонер. Ресурс: 25 500.]]></description>
 <param name="Тип">Тонер</param>
 <param name="Модель">C-EXV 64</param>
 <param name="Дополнительная информация">голубой</param>
@@ -5802,7 +5802,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный тонер. Тонер.]]></description>
+Оригинальный тонер.]]></description>
 <param name="Тип">Тонер</param>
 <param name="Коды">5756C002</param>
 <param name="Модель">C-EXV 64</param>
@@ -5819,7 +5819,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный тонер. Тонер. Ресурс: 25 500.]]></description>
+Оригинальный тонер. Ресурс: 25 500.]]></description>
 <param name="Тип">Тонер</param>
 <param name="Модель">C-EXV 64</param>
 <param name="Дополнительная информация">жёлтый</param>
@@ -5838,7 +5838,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный тонер. Тонер.]]></description>
+Оригинальный тонер.]]></description>
 <param name="Тип">Тонер</param>
 <param name="Коды">5755C002</param>
 <param name="Модель">C-EXV 64</param>
@@ -5855,7 +5855,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный тонер. Тонер. Ресурс: 25 500.]]></description>
+Оригинальный тонер. Ресурс: 25 500.]]></description>
 <param name="Тип">Тонер</param>
 <param name="Модель">C-EXV 64</param>
 <param name="Дополнительная информация">пурпурный</param>
@@ -5901,7 +5901,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный тонер. Тонер. Ресурс: 25 500.]]></description>
+Оригинальный тонер. Ресурс: 25 500.]]></description>
 <param name="Тип">Тонер</param>
 <param name="Модель">C-EXV 67</param>
 <param name="Дополнительная информация">черный</param>
@@ -6317,7 +6317,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж.]]></description>
+Оригинальный картридж.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Коды">5761C001</param>
 <param name="Модель">Тонер Canon C-EXV 65</param>
@@ -6334,7 +6334,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Чёрный. Технология печати: Лазерная. Ресурс: 17 500.]]></description>
+Оригинальный картридж. Цвет: Чёрный. Технология печати: Лазерная. Ресурс: 17 500.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">C-EXV 65</param>
 <param name="Цвет">Чёрный</param>
@@ -6354,7 +6354,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж.]]></description>
+Оригинальный картридж.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Коды">5762C001</param>
 <param name="Модель">Тонер Canon C-EXV 65</param>
@@ -6371,7 +6371,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Голубой. Технология печати: Лазерная. Ресурс: 11 000.]]></description>
+Оригинальный картридж. Цвет: Голубой. Технология печати: Лазерная. Ресурс: 11 000.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">C-EXV 65</param>
 <param name="Цвет">Голубой</param>
@@ -6391,7 +6391,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж.]]></description>
+Оригинальный картридж.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Коды">5764C001</param>
 <param name="Модель">Тонер Canon C-EXV 65</param>
@@ -6408,7 +6408,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Жёлтый. Технология печати: Лазерная. Ресурс: 11 000.]]></description>
+Оригинальный картридж. Цвет: Жёлтый. Технология печати: Лазерная. Ресурс: 11 000.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">C-EXV 65</param>
 <param name="Цвет">Жёлтый</param>
@@ -6428,7 +6428,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж.]]></description>
+Оригинальный картридж.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Коды">5763C001</param>
 <param name="Модель">Тонер Canon C-EXV 65</param>
@@ -6445,7 +6445,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Пурпурный. Технология печати: Лазерная. Ресурс: 11 000.]]></description>
+Оригинальный картридж. Цвет: Пурпурный. Технология печати: Лазерная. Ресурс: 11 000.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">C-EXV 65</param>
 <param name="Цвет">Пурпурный</param>
@@ -6790,7 +6790,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Трехцветный. Технология печати: Струйная. Ресурс: 200. Номер: №653.]]></description>
+Оригинальный картридж. Цвет: Трехцветный. Технология печати: Струйная. Ресурс: 200. Номер: №653.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">3YM74AE</param>
 <param name="Цвет">Трехцветный</param>
@@ -6811,7 +6811,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Чёрный. Технология печати: Струйная. Ресурс: 360. Номер: №653.]]></description>
+Оригинальный картридж. Цвет: Чёрный. Технология печати: Струйная. Ресурс: 360. Номер: №653.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">3YM75AE</param>
 <param name="Цвет">Чёрный</param>
@@ -7201,7 +7201,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Чёрный. Технология печати: Лазерная. Ресурс: 10 200.]]></description>
+Оригинальный картридж. Цвет: Чёрный. Технология печати: Лазерная. Ресурс: 10 200.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">070H</param>
 <param name="Цвет">Чёрный</param>
@@ -7221,7 +7221,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Чёрный. Технология печати: Лазерная. Ресурс: 3 000.]]></description>
+Оригинальный картридж. Цвет: Чёрный. Технология печати: Лазерная. Ресурс: 3 000.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">070</param>
 <param name="Цвет">Чёрный</param>
@@ -7357,7 +7357,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Чёрный. Технология печати: Струйная. Объём: 55.]]></description>
+Оригинальный картридж. Цвет: Чёрный. Технология печати: Струйная. Объём: 55.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">Ink PFI-030</param>
 <param name="Цвет">Чёрный</param>
@@ -7377,7 +7377,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Синий. Технология печати: Струйная. Объём: 55.]]></description>
+Оригинальный картридж. Цвет: Синий. Технология печати: Струйная. Объём: 55.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">Ink PFI-030</param>
 <param name="Цвет">Синий</param>
@@ -7397,7 +7397,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Жёлтый. Технология печати: Струйная. Объём: 55.]]></description>
+Оригинальный картридж. Цвет: Жёлтый. Технология печати: Струйная. Объём: 55.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">Ink PFI-030</param>
 <param name="Цвет">Жёлтый</param>
@@ -7417,7 +7417,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Пурпурный. Технология печати: Струйная. Объём: 130.]]></description>
+Оригинальный картридж. Цвет: Пурпурный. Технология печати: Струйная. Объём: 130.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">Чернила Canon PFI-121</param>
 <param name="Цвет">Пурпурный</param>
@@ -7548,7 +7548,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Матовый черный. Технология печати: Лазерная.]]></description>
+Оригинальный картридж. Цвет: Матовый черный. Технология печати: Лазерная.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">LBP CARTRIDGE 071</param>
 <param name="Цвет">Матовый черный</param>
@@ -7567,7 +7567,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Чёрный. Технология печати: Струйная. Объём: 70.]]></description>
+Оригинальный картридж. Цвет: Чёрный. Технология печати: Струйная. Объём: 70.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">Ink PFI-050</param>
 <param name="Цвет">Чёрный</param>
@@ -7587,7 +7587,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Синий. Технология печати: Струйная. Объём: 70.]]></description>
+Оригинальный картридж. Цвет: Синий. Технология печати: Струйная. Объём: 70.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">Ink PFI-050</param>
 <param name="Цвет">Синий</param>
@@ -7607,7 +7607,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Пурпурный. Технология печати: Струйная. Объём: 70.]]></description>
+Оригинальный картридж. Цвет: Пурпурный. Технология печати: Струйная. Объём: 70.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">Ink PFI-050</param>
 <param name="Цвет">Пурпурный</param>
@@ -7627,7 +7627,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Жёлтый. Технология печати: Струйная. Объём: 70.]]></description>
+Оригинальный картридж. Цвет: Жёлтый. Технология печати: Струйная. Объём: 70.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">Ink PFI-050</param>
 <param name="Цвет">Жёлтый</param>
@@ -8019,7 +8019,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Чёрный. Технология печати: Лазерная. Ресурс: 1 700.]]></description>
+Оригинальный картридж. Цвет: Чёрный. Технология печати: Лазерная. Ресурс: 1 700.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">Тонер-картридж HP 145A</param>
 <param name="Цвет">Чёрный</param>
@@ -8039,7 +8039,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Красный. Технология печати: Струйная. Объём: 330.]]></description>
+Оригинальный картридж. Цвет: Красный. Технология печати: Струйная. Объём: 330.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">PFI-340</param>
 <param name="Цвет">Красный</param>
@@ -8839,7 +8839,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Голубой. Технология печати: Струйная. Ресурс: 7 700. Объём: 70. Номер: №40.]]></description>
+Оригинальный картридж. Цвет: Голубой. Технология печати: Струйная. Ресурс: 7 700. Объём: 70. Номер: №40.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">INK GI-40 C</param>
 <param name="Цвет">Голубой</param>
@@ -8861,7 +8861,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж.]]></description>
+Оригинальный картридж.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Коды">3401C001</param>
 <param name="Модель">Чернила Canon INK GI-40 M</param>
@@ -8878,7 +8878,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж.]]></description>
+Оригинальный картридж.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Коды">3402C001</param>
 <param name="Модель">Чернила Canon INK GI-40 Y</param>
@@ -12536,7 +12536,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Чёрный. Технология печати: Лазерная. Ресурс: 2 500.]]></description>
+Оригинальный картридж. Цвет: Чёрный. Технология печати: Лазерная. Ресурс: 2 500.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">938e EvoMore Black Original Ink Cartridge</param>
 <param name="Цвет">Чёрный</param>
@@ -12556,7 +12556,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Пурпурный. Технология печати: Лазерная. Ресурс: 1 650.]]></description>
+Оригинальный картридж. Цвет: Пурпурный. Технология печати: Лазерная. Ресурс: 1 650.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">938e EvoMore Magenta Original Ink Cartridge</param>
 <param name="Цвет">Пурпурный</param>
@@ -12576,7 +12576,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Жёлтый. Технология печати: Лазерная. Ресурс: 1 650.]]></description>
+Оригинальный картридж. Цвет: Жёлтый. Технология печати: Лазерная. Ресурс: 1 650.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">938e EvoMore Yellow Original Ink Cartridge</param>
 <param name="Цвет">Жёлтый</param>
@@ -12596,7 +12596,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный расходный материал. Расходный материал.]]></description>
+Оригинальный расходный материал.]]></description>
 <param name="Тип">Расходный материал</param>
 <param name="Модель">Color LaserJet 8JM70A Black Developer Unit</param>
 <param name="Коды">8JM70A</param>
@@ -12861,7 +12861,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Чёрный. Технология печати: Лазерная. Ресурс: 4 100.]]></description>
+Оригинальный картридж. Цвет: Чёрный. Технология печати: Лазерная. Ресурс: 4 100.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">LBP CARTRIDGE 072</param>
 <param name="Цвет">Чёрный</param>
@@ -12881,7 +12881,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Чёрный. Технология печати: Лазерная. Ресурс: 1 400.]]></description>
+Оригинальный картридж. Цвет: Чёрный. Технология печати: Лазерная. Ресурс: 1 400.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">LBP CARTRIDGE 072H</param>
 <param name="Цвет">Чёрный</param>
@@ -15290,7 +15290,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Чёрный. Технология печати: Лазерная. Ресурс: 2 500.]]></description>
+Оригинальный картридж. Цвет: Чёрный. Технология печати: Лазерная. Ресурс: 2 500.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">Q2612A</param>
 <param name="Цвет">Чёрный</param>
@@ -15310,7 +15310,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Чёрный. Технология печати: Лазерная. Ресурс: 2 000.]]></description>
+Оригинальный картридж. Цвет: Чёрный. Технология печати: Лазерная. Ресурс: 2 000.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">CB436A</param>
 <param name="Цвет">Чёрный</param>
@@ -15330,7 +15330,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Пурпурный. Технология печати: Струйная. Ресурс: 600. Объём: 130. Номер: №72.]]></description>
+Оригинальный картридж. Цвет: Пурпурный. Технология печати: Струйная. Ресурс: 600. Объём: 130. Номер: №72.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">C9372A</param>
 <param name="Цвет">Пурпурный</param>
@@ -15352,7 +15352,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Чёрный. Технология печати: Струйная. Ресурс: 1 000. Номер: №72.]]></description>
+Оригинальный картридж. Цвет: Чёрный. Технология печати: Струйная. Ресурс: 1 000. Номер: №72.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">Печатающая головка HP C9380A</param>
 <param name="Цвет">Чёрный</param>
@@ -15373,7 +15373,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Пурпурный. Технология печати: Струйная. Ресурс: 600. Номер: №72.]]></description>
+Оригинальный картридж. Цвет: Пурпурный. Технология печати: Струйная. Ресурс: 600. Номер: №72.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">Печатающая головка HP C9383A</param>
 <param name="Цвет">Пурпурный</param>
@@ -15394,7 +15394,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Чёрный. Технология печати: Струйная. Ресурс: 200. Объём: 11. Номер: №121.]]></description>
+Оригинальный картридж. Цвет: Чёрный. Технология печати: Струйная. Ресурс: 200. Объём: 11. Номер: №121.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">CC640HE</param>
 <param name="Цвет">Чёрный</param>
@@ -15441,7 +15441,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Чёрный. Технология печати: Лазерная. Ресурс: 6 000.]]></description>
+Оригинальный картридж. Цвет: Чёрный. Технология печати: Лазерная. Ресурс: 6 000.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">CE255A</param>
 <param name="Цвет">Чёрный</param>
@@ -15511,7 +15511,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Чёрный. Технология печати: Лазерная. Ресурс: 1 600.]]></description>
+Оригинальный картридж. Цвет: Чёрный. Технология печати: Лазерная. Ресурс: 1 600.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">CE285A</param>
 <param name="Цвет">Чёрный</param>
@@ -15531,7 +15531,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Жёлтый. Технология печати: Лазерная. Ресурс: 7 300.]]></description>
+Оригинальный картридж. Цвет: Жёлтый. Технология печати: Лазерная. Ресурс: 7 300.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">CE742A</param>
 <param name="Цвет">Жёлтый</param>
@@ -15551,7 +15551,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Пурпурный. Технология печати: Лазерная. Ресурс: 7 300.]]></description>
+Оригинальный картридж. Цвет: Пурпурный. Технология печати: Лазерная. Ресурс: 7 300.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">CE743A</param>
 <param name="Цвет">Пурпурный</param>
@@ -15571,7 +15571,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный тонер. Тонер. Ресурс: 14 600.]]></description>
+Оригинальный тонер. Ресурс: 14 600.]]></description>
 <param name="Тип">Тонер</param>
 <param name="Модель">C-EXV33 IR2520 / 30</param>
 <param name="Дополнительная информация">Лазерный Черный</param>
@@ -15590,7 +15590,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Чёрный. Технология печати: Струйная. Ресурс: 120. Номер: №122.]]></description>
+Оригинальный картридж. Цвет: Чёрный. Технология печати: Струйная. Ресурс: 120. Номер: №122.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">CH561HE</param>
 <param name="Цвет">Чёрный</param>
@@ -15611,7 +15611,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Трехцветный. Технология печати: Струйная. Ресурс: 100. Номер: №122.]]></description>
+Оригинальный картридж. Цвет: Трехцветный. Технология печати: Струйная. Ресурс: 100. Номер: №122.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">CH562HE</param>
 <param name="Цвет">Трехцветный</param>
@@ -15632,7 +15632,7 @@ URL поставщика                             | https://www.comportal.kz/
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Картридж. Цвет: Жёлтый. Технология печати: Лазерная. Ресурс: 1 300.]]></description>
+Оригинальный картридж. Цвет: Жёлтый. Технология печати: Лазерная. Ресурс: 1 300.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Модель">CE322A</param>
 <param name="Цвет">Жёлтый</param>
