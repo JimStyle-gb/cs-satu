@@ -1,40 +1,16 @@
 # -*- coding: utf-8 -*-
 """
+Path: scripts/cs/pricing.py
+
 CS Pricing — общий расчёт цены.
 
-Этап 4: вынос из cs/core.py в отдельный модуль, без изменения логики.
-Важно: модуль НЕ импортирует cs/core.py (чтобы не ловить циклические импорты).
-
-Правила (как раньше):
-- если price_in отсутствует/<=100 → 100
-- если >= 9_000_000 → 100
-- наценка 4% + tier adder
-- хвост всегда "...900"
+Роль файла:
+- считает финальную цену по общему CS-правилу;
+- не зависит от cs.core;
+- не содержит supplier-specific логики.
 """
 
 from __future__ import annotations
-
-import os
-import re
-
-def safe_int(v) -> int | None:
-    if v is None:
-        return None
-    try:
-        if isinstance(v, (int, float)):
-            return int(v)
-        s = str(v).strip()
-        if not s:
-            return None
-        s = s.replace(" ", "").replace("\u00a0", "")
-        # иногда цена приходит как "12 345.00"
-        s = s.split(".")[0]
-        return int(s)
-    except Exception:
-        return None
-
-
-# Парсит множество id из env (например "1,10,20") или из fallback списка
 
 CS_PRICE_TIERS = [
     (101, 10_000, 3_000),
@@ -53,23 +29,36 @@ CS_PRICE_TIERS = [
 ]
 
 
+def _safe_price_int(v) -> int | None:
+    if v is None:
+        return None
+    try:
+        if isinstance(v, (int, float)):
+            return int(v)
+        s = str(v).strip()
+        if not s:
+            return None
+        s = s.replace(" ", "").replace(" ", "")
+        s = s.split(".")[0]
+        return int(s)
+    except Exception:
+        return None
+
+
 def compute_price(price_in: int | None) -> int:
-    p = safe_int(price_in)
+    p = _safe_price_int(price_in)
     if p is None or p <= 100:
         return 100
     if p >= 9_000_000:
         return 100
 
-    tiers = CS_PRICE_TIERS
     add = 60_000
-    for lo, hi, a in tiers:
+    for lo, hi, tier_add in CS_PRICE_TIERS:
         if lo <= p <= hi:
-            add = a
+            add = tier_add
             break
 
     raw = int(p * 1.04 + add)
-
-    # "хвост 900" (всегда заканчиваем на 900)
     out = (raw // 1000) * 1000 + 900
 
     if out >= 9_000_000:
@@ -77,15 +66,3 @@ def compute_price(price_in: int | None) -> int:
     if out <= 100:
         return 100
     return out
-
-
-# Убирает мусорные параметры, пустые значения и дубли (применять всегда!)
-
-# Параметры "вес/габариты/объем" полезны покупателю, но у некоторых поставщиков бывают мусорные значения.
-# Валидируем мягко: оставляем только "похожие на правду".
-_DIM_WORDS = ("габарит", "размер", "длина", "ширина", "высота")
-_VOL_WORDS = ("объем", "объём", "volume")
-_WGT_WORDS = ("вес", "масса", "weight")
-
-_RE_NUM = re.compile(r"(\d+(?:[\.,]\d+)?)")
-_RE_DIM_SEP = re.compile(r"[xх×\*]", re.I)
