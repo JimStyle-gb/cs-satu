@@ -1,9 +1,13 @@
 # -*- coding: utf-8 -*-
 """
+Path: scripts/cs/description.py
+
 CS Description — общий сборщик HTML для <description>.
 
-Этап 2: вынос из cs/core.py в отдельный модуль, без изменения логики.
-Важно: модуль НЕ импортирует cs/core.py (чтобы не ловить циклические импорты).
+Роль файла:
+- собирает единый CS description-шаблон для всех поставщиков;
+- формирует WhatsApp / Характеристики / Оплата / Доставка в одном каноне;
+- не зависит от cs.core и не содержит supplier-specific правок.
 """
 
 from __future__ import annotations
@@ -12,7 +16,7 @@ import os
 import re
 from typing import Sequence
 
-from .keywords import fix_mixed_cyr_lat  # общий хелпер без циклических импортов
+from .util import fix_mixed_cyr_lat
 
 # Константы (вынесены из core без изменения)
 CS_HR_2PX = "<hr style=\"border:none; border-top:2px solid #E7D6B7; margin:12px 0;\" />"
