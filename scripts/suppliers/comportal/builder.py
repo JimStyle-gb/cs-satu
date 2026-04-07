@@ -56,6 +56,10 @@ _PRINT_DEVICE_DROP_PARAM_NAMES = {
     "емкость 3-го лотка",
 }
 
+_ORIGINALITY_PARAM_NAME = "Оригинальность"
+_NAME_ORIGINALITY_SUFFIX_RE = re.compile(r"\s*\((?:оригинал|совместимый)\)\s*$", re.I)
+_DESC_ORIGINALITY_HEAD_RE = re.compile(r"(?iu)^\s*(?:Оригинальн(?:ый|ая|ое|ые)|Совместим(?:ый|ая|ое|ые))")
+
 
 def _param_map(params: list[ParamItem]) -> dict[str, str]:
     out: dict[str, str] = {}
@@ -681,6 +685,188 @@ def _ensure_base_params(*, source_offer: SourceOffer, params: list[ParamItem], v
     return out
 
 
+def _strip_originality_suffix(name: str) -> str:
+    return norm_ws(_NAME_ORIGINALITY_SUFFIX_RE.sub("", norm_ws(name)))
+
+
+def _upsert_param_tuple(params: list[tuple[str, str]], key: str, value: str) -> list[tuple[str, str]]:
+    want = norm_ws(key).casefold()
+    out: list[tuple[str, str]] = []
+    replaced = False
+    for k, v in params:
+        if norm_ws(k).casefold() == want:
+            if not replaced:
+                out.append((key, value))
+                replaced = True
+            continue
+        out.append((k, v))
+    if not replaced:
+        out.append((key, value))
+    return out
+
+
+def _detect_consumable_type_label(name: str, params: list[tuple[str, str]]) -> str:
+    type_from_param = ""
+    for k, v in params:
+        if norm_ws(k).casefold() == "тип":
+            type_from_param = norm_ws(v)
+            break
+    if type_from_param:
+        low = type_from_param.casefold().replace("ё", "е")
+        mapping = (
+            ("контейнер для отработанного тонера", "Контейнер для отработанного тонера"),
+            ("бункер для отработанного тонера", "Бункер для отработанного тонера"),
+            ("ролик переноса", "Ролик переноса"),
+            ("лента переноса", "Лента переноса"),
+            ("блок переноса", "Блок переноса"),
+            ("блок проявки", "Блок проявки"),
+            ("ремонтный комплект", "Ремонтный комплект"),
+            ("печатающая головка", "Печатающая головка"),
+            ("драм-юнит", "Драм-юнит"),
+            ("драм-картридж", "Драм-картридж"),
+            ("фотобарабан", "Фотобарабан"),
+            ("копи-картридж", "Копи-картридж"),
+            ("принт-картридж", "Принт-картридж"),
+            ("тонер-картридж", "Тонер-картридж"),
+            ("девелопер", "Девелопер"),
+            ("чернила", "Чернила"),
+            ("картридж", "Картридж"),
+            ("тонер", "Тонер"),
+        )
+        for needle, label in mapping:
+            if needle in low:
+                return label
+        return type_from_param
+
+    title_low = norm_ws(name).casefold().replace("ё", "е")
+    checks = (
+        ("контейнер для отработанного тонера", "Контейнер для отработанного тонера"),
+        ("бункер для отработанного тонера", "Бункер для отработанного тонера"),
+        ("ролик переноса", "Ролик переноса"),
+        ("лента переноса", "Лента переноса"),
+        ("блок переноса", "Блок переноса"),
+        ("блок проявки", "Блок проявки"),
+        ("ремонтный комплект", "Ремонтный комплект"),
+        ("печатающая головка", "Печатающая головка"),
+        ("драм-юнит", "Драм-юнит"),
+        ("драм-картридж", "Драм-картридж"),
+        ("фотобарабан", "Фотобарабан"),
+        ("копи-картридж", "Копи-картридж"),
+        ("принт-картридж", "Принт-картридж"),
+        ("тонер-картридж", "Тонер-картридж"),
+        ("девелопер", "Девелопер"),
+        ("чернила", "Чернила"),
+        ("картридж", "Картридж"),
+        ("тонер", "Тонер"),
+    )
+    for needle, label in checks:
+        if needle in title_low:
+            return label
+    return "Расходный материал"
+
+
+def _build_originality_sentence(status: str, type_label: str) -> str:
+    tl = norm_ws(type_label) or "Расходный материал"
+    tl_cf = tl.casefold().replace("ё", "е")
+    original_map = {
+        "лента переноса": "Оригинальная лента переноса.",
+        "печатающая головка": "Оригинальная печатающая головка.",
+        "чернила": "Оригинальные чернила.",
+        "бункер для отработанного тонера": "Оригинальный бункер для отработанного тонера.",
+        "контейнер для отработанного тонера": "Оригинальный контейнер для отработанного тонера.",
+        "блок проявки": "Оригинальный блок проявки.",
+        "ремонтный комплект": "Оригинальный ремонтный комплект.",
+        "ролик переноса": "Оригинальный ролик переноса.",
+        "блок переноса": "Оригинальный блок переноса.",
+        "драм-юнит": "Оригинальный драм-юнит.",
+        "драм-картридж": "Оригинальный драм-картридж.",
+        "копи-картридж": "Оригинальный копи-картридж.",
+        "принт-картридж": "Оригинальный принт-картридж.",
+        "фотобарабан": "Оригинальный фотобарабан.",
+        "тонер-картридж": "Оригинальный тонер-картридж.",
+        "девелопер": "Оригинальный девелопер.",
+        "картридж": "Оригинальный картридж.",
+        "тонер": "Оригинальный тонер.",
+        "расходный материал": "Оригинальный расходный материал.",
+    }
+    compatible_map = {
+        "лента переноса": "Совместимая лента переноса.",
+        "печатающая головка": "Совместимая печатающая головка.",
+        "чернила": "Совместимые чернила.",
+        "бункер для отработанного тонера": "Совместимый бункер для отработанного тонера.",
+        "контейнер для отработанного тонера": "Совместимый контейнер для отработанного тонера.",
+        "блок проявки": "Совместимый блок проявки.",
+        "ремонтный комплект": "Совместимый ремонтный комплект.",
+        "ролик переноса": "Совместимый ролик переноса.",
+        "блок переноса": "Совместимый блок переноса.",
+        "драм-юнит": "Совместимый драм-юнит.",
+        "драм-картридж": "Совместимый драм-картридж.",
+        "копи-картридж": "Совместимый копи-картридж.",
+        "принт-картридж": "Совместимый принт-картридж.",
+        "фотобарабан": "Совместимый фотобарабан.",
+        "тонер-картридж": "Совместимый тонер-картридж.",
+        "девелопер": "Совместимый девелопер.",
+        "картридж": "Совместимый картридж.",
+        "тонер": "Совместимый тонер.",
+        "расходный материал": "Совместимый расходный материал.",
+    }
+    if status == "original":
+        return original_map.get(tl_cf, f"Оригинальный {tl.lower()}.")
+    if status == "compatible":
+        return compatible_map.get(tl_cf, f"Совместимый {tl.lower()}.")
+    return ""
+
+
+def _is_consumable_for_originality(source_offer: SourceOffer, name: str, params: list[tuple[str, str]]) -> bool:
+    title_low = norm_ws(name).casefold().replace("ё", "е")
+    type_low = " ".join(norm_ws(v).casefold().replace("ё", "е") for k, v in params if norm_ws(k).casefold() == "тип")
+    hay = f"{title_low} {type_low}".strip()
+    needles = (
+        "картридж",
+        "тонер-картридж",
+        "тонер",
+        "драм",
+        "фотобарабан",
+        "девелопер",
+        "чернила",
+        "печатающая головка",
+        "ролик переноса",
+        "лента переноса",
+        "блок переноса",
+        "блок проявки",
+        "контейнер для отработанного тонера",
+        "бункер для отработанного тонера",
+        "ремонтный комплект",
+        "копи-картридж",
+        "принт-картридж",
+    )
+    return any(x in hay for x in needles)
+
+
+def _detect_consumable_originality(source_offer: SourceOffer, name: str, params: list[tuple[str, str]]) -> str:
+    if not _is_consumable_for_originality(source_offer, name, params):
+        return ""
+    return "original"
+
+
+def _apply_consumable_originality(name: str, params: list[tuple[str, str]], native_desc: str, status: str) -> tuple[str, list[tuple[str, str]], str]:
+    if status not in {"original", "compatible"}:
+        return name, params, native_desc
+    base_name = _strip_originality_suffix(name)
+    suffix = "(оригинал)" if status == "original" else "(совместимый)"
+    value = "Оригинал" if status == "original" else "Совместимый"
+    name_out = f"{base_name} {suffix}"
+    params_out = _upsert_param_tuple(params, _ORIGINALITY_PARAM_NAME, value)
+    desc_out = norm_ws(native_desc)
+    sentence = _build_originality_sentence(status, _detect_consumable_type_label(base_name, params_out))
+    if sentence:
+        if not desc_out:
+            desc_out = sentence
+        elif not _DESC_ORIGINALITY_HEAD_RE.match(desc_out):
+            desc_out = f"{sentence} {desc_out}"
+    return name_out, params_out, desc_out
+
+
 def build_offer_out(source_offer: SourceOffer, *, schema: dict[str, Any], policy: dict[str, Any]) -> OfferOut | None:
     prefix = norm_ws(schema.get("id_prefix") or schema.get("supplier_prefix") or "CP")
     placeholder_picture = norm_ws(schema.get("placeholder_picture") or "")
@@ -719,6 +905,15 @@ def build_offer_out(source_offer: SourceOffer, *, schema: dict[str, Any], policy
     price_in = normalize_price_in(source_offer.price_text)
     native_desc = _build_native_desc(clean_name=clean_name, source_offer=source_offer, params=params)
 
+    params_tuples = [(norm_ws(p.name), norm_ws(p.value)) for p in params if norm_ws(p.name) and norm_ws(p.value)]
+    originality_status = _detect_consumable_originality(source_offer, clean_name, params_tuples)
+    clean_name, params_tuples, native_desc = _apply_consumable_originality(
+        clean_name,
+        params_tuples,
+        native_desc,
+        originality_status,
+    )
+
     return OfferOut(
         oid=oid,
         available=available,
@@ -726,7 +921,7 @@ def build_offer_out(source_offer: SourceOffer, *, schema: dict[str, Any], policy
         price=price_in,
         pictures=pictures,
         vendor=clean_vendor,
-        params=[(norm_ws(p.name), norm_ws(p.value)) for p in params if norm_ws(p.name) and norm_ws(p.value)],
+        params=params_tuples,
         native_desc=native_desc,
     )
 
