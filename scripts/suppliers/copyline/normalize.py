@@ -25,8 +25,16 @@ from __future__ import annotations
 import re
 from typing import Sequence, Tuple
 
+_BRAND_TEXT_REPLACEMENTS: tuple[tuple[str, str], ...] = (
+    (r"\bEuro\s+Print\b", "Europrint"),
+    (r"\bKATYUSHA\b", "Катюша"),
+    (r"\bКАТЮША\b", "Катюша"),
+)
+
+
 VENDOR_PRIORITY: list[str] = [
     "HP",
+    "Катюша",
     "Canon",
     "Xerox",
     "Kyocera",
@@ -105,9 +113,20 @@ def safe_str(x: object) -> str:
 
 
 
+def _canonical_brand_text(text: str) -> str:
+    """Канонизировать брендовые токены в title/desc без semantic-cleaning."""
+    s = safe_str(text)
+    if not s:
+        return ""
+    for pattern, repl in _BRAND_TEXT_REPLACEMENTS:
+        s = re.sub(pattern, repl, s, flags=re.I)
+    return s
+
+
+
 def _norm_spaces(s: str) -> str:
     """Мягкая нормализация пробелов и переводов строк без narrative-cleaning."""
-    s = safe_str(s)
+    s = _canonical_brand_text(safe_str(s))
     if not s:
         return ""
     s = s.replace("\xa0", " ")
@@ -147,22 +166,9 @@ def _looks_consumable_title(title: str) -> bool:
 
 
 def _localize_title_color_tokens(title: str) -> str:
-    s = _norm_spaces(title)
+    s = _norm_spaces(_canonical_brand_text(title))
     for en, ru in _TITLE_COLOR_MAP.items():
         s = re.sub(rf"(?<![A-Za-zА-Яа-яЁё]){en}(?![A-Za-zА-Яа-яЁё])", ru, s, flags=re.I)
-    return s
-
-
-def _canonicalize_title_brand_tokens(title: str) -> str:
-    s = _norm_spaces(title)
-    if not s:
-        return ""
-    replacements = [
-        (r"\bEuro\s+Print\b", "Europrint"),
-        (r"\bКАТЮША\b", "Катюша"),
-    ]
-    for pattern, repl in replacements:
-        s = re.sub(pattern, repl, s, flags=re.IGNORECASE)
     return s
 
 
@@ -170,7 +176,6 @@ def _canonicalize_title_brand_tokens(title: str) -> str:
 def normalize_title(title: str) -> str:
     """Нормализовать title без supplier-side смысловой правки."""
     s = _localize_title_color_tokens(title)
-    s = _canonicalize_title_brand_tokens(s)
     s = re.sub(r"\s{2,}", " ", s)
     return s[:240]
 
@@ -211,7 +216,7 @@ def build_extract_description(*, title: str, description_text: str) -> str:
 
 
 def _first_vendor_from_text(texts: Sequence[str]) -> str:
-    hay = "\n".join([safe_str(x) for x in texts if safe_str(x)])
+    hay = "\n".join([_canonical_brand_text(safe_str(x)) for x in texts if safe_str(x)])
     if not hay:
         return ""
 
@@ -324,9 +329,10 @@ def normalize_source_basics(
     - дополнительно явно отдаём `extract_desc`.
     """
     norm_title = normalize_title(title)
-    extract_desc = build_extract_description(title=norm_title, description_text=description_text)
-    vendor = detect_vendor(title=norm_title, description=extract_desc or description_text, params=params)
-    model = detect_model(title=norm_title, description=extract_desc or description_text, sku=sku)
+    clean_desc_text = _canonical_brand_text(description_text)
+    extract_desc = build_extract_description(title=norm_title, description_text=clean_desc_text)
+    vendor = detect_vendor(title=norm_title, description=extract_desc or clean_desc_text, params=params)
+    model = detect_model(title=norm_title, description=extract_desc or clean_desc_text, sku=sku)
     return {
         "title": norm_title,
         "vendor": vendor,
