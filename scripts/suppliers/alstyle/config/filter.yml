@@ -32,6 +32,8 @@ include_rules:
   - '5711'
   - '5712'
   - '5713'
+  - '21175'
+  - '21274'
   - '21279'
   - '21281'
   - '21291'
@@ -56,6 +58,7 @@ include_rules:
   - '21664'
   - '21665'
   - '21666'
+  - '21688'
   - '21698'
 category_ids:
 - '3419'
@@ -87,6 +90,8 @@ category_ids:
 - '5711'
 - '5712'
 - '5713'
+- '21175'
+- '21274'
 - '21279'
 - '21281'
 - '21291'
@@ -111,6 +116,7 @@ category_ids:
 - '21664'
 - '21665'
 - '21666'
+- '21688'
 - '21698'
 notes: 'AlStyle: include only these categoryId. Override via ENV ALSTYLE_CATEGORY_IDS
   if needed.'
