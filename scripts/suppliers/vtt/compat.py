@@ -91,8 +91,11 @@ def cleanup_compat(value: str, vendor: str, part_number: str = "", sku: str = ""
         compat = re.sub(r"\s{2,}", " ", compat).strip(" ,.;/")
         changed = compat != before
 
-    if vendor and compat and not compat.upper().startswith(vendor.upper()):
-        compat = f"{vendor} {compat}"
+    vendor_n = norm_ws(vendor)
+    if vendor_n.casefold() == "hi-black":
+        vendor_n = ""
+    if vendor_n and compat and not compat.upper().startswith(vendor_n.upper()):
+        compat = f"{vendor_n} {compat}"
     return norm_ws(compat)
 
 def extract_part_number(raw: dict, params: Sequence[tuple[str, str]], title: str) -> str:
