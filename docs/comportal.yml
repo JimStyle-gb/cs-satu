@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<yml_catalog date="2026-04-07 13:08:00">
+<yml_catalog date="2026-04-07 15:08:56">
 <shop><offers>
 <!--FEED_META
 Поставщик                                  | ComPortal
 URL поставщика                             | https://www.comportal.kz/auth/documents/prices/yml-catalog.php
-Время сборки (Алматы)                      | 2026-04-07 13:08:00
+Время сборки (Алматы)                      | 2026-04-07 15:08:56
 Ближайшая сборка (Алматы)                  | 2026-04-08 03:00:00
-Сколько товаров у поставщика до фильтра    | 1215
-Сколько товаров у поставщика после фильтра | 609
-Сколько товаров есть в наличии (true)      | 609
+Сколько товаров у поставщика до фильтра    | 1213
+Сколько товаров у поставщика после фильтра | 607
+Сколько товаров есть в наличии (true)      | 607
 Сколько товаров нет в наличии (false)      | 0
 -->
 
@@ -1214,6 +1214,35 @@ URL поставщика                             | https://www.comportal.kz/
 <keywords>HP, Картридж HP F6V24AE (F6V24AE#BHK), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
+<offer id="CP10299294" available="true">
+<categoryId></categoryId>
+<vendorCode>CP10299294</vendorCode>
+<name>Тонер Canon C-EXV42 (6908B002)</name>
+<price>29900</price>
+<picture>https://www.comportal.kz/upload/iblock/41f/tiii296nfh4nlgbu6nsmx9mz1gllh8pg.jpg</picture>
+<vendor>Canon</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+<!-- Наименование товара -->
+<h3>Тонер Canon C-EXV42 (6908B002)</h3>
+<!-- WhatsApp -->
+<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
+<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
+<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
+<!-- Описание -->
+<p>Тонер. Ресурс: 10 200.</p>
+<h3>Характеристики</h3><ul><li><strong>Для бренда:</strong> Canon</li><li><strong>Дополнительная информация:</strong> Черный для iR 2202/2202N</li><li><strong>Коды:</strong> 6908B002</li><li><strong>Модель:</strong> C-EXV42</li><li><strong>Ресурс:</strong> 10 200</li><li><strong>Тип:</strong> Тонер</li></ul>
+<!-- Оплата и доставка -->
+<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><div style="background:#FFF6E5; border:1px solid #F1E2C6; padding:12px 14px; border-radius:0; text-align:left;"><h3 style="margin:0 0 8px; font-size:17px;">Оплата</h3><ul style="margin:0; padding-left:18px;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000;"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul><hr style="border:none; border-top:1px solid #E7D6B7; margin:12px 0;" /><h3 style="margin:0 0 8px; font-size:17px;">Доставка по Алматы и Казахстану</h3><ul style="margin:0; padding-left:18px;"><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul></div></div>]]></description>
+<param name="Для бренда">Canon</param>
+<param name="Дополнительная информация">Черный для iR 2202/2202N</param>
+<param name="Коды">6908B002</param>
+<param name="Модель">C-EXV42</param>
+<param name="Ресурс">10 200</param>
+<param name="Тип">Тонер</param>
+<keywords>Canon, Тонер Canon C-EXV42 (6908B002), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+</offer>
+
 <offer id="CP13827510" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13827510</vendorCode>
@@ -1317,35 +1346,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Ресурс">36 000</param>
 <param name="Тип">Тонер</param>
 <keywords>Canon, Тонер Canon C-EXV49 (8524B002), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
-</offer>
-
-<offer id="CP10298931" available="true">
-<categoryId></categoryId>
-<vendorCode>CP10298931</vendorCode>
-<name>Тонер Canon C-EXV49 (8526B002)</name>
-<price>75900</price>
-<picture>https://www.comportal.kz/upload/iblock/060/u9bo52rebt5xmfbl2rs3wqp2jmw5ueoe.jpg</picture>
-<vendor>Canon</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-<!-- Наименование товара -->
-<h3>Тонер Canon C-EXV49 (8526B002)</h3>
-<!-- WhatsApp -->
-<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
-<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
-<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
-<!-- Описание -->
-<p>Тонер. Ресурс: 19 000.</p>
-<h3>Характеристики</h3><ul><li><strong>Для бренда:</strong> Canon</li><li><strong>Дополнительная информация:</strong> для IR ADV C33xx magenta</li><li><strong>Коды:</strong> 8526B002</li><li><strong>Модель:</strong> C-EXV49</li><li><strong>Ресурс:</strong> 19 000</li><li><strong>Тип:</strong> Тонер</li></ul>
-<!-- Оплата и доставка -->
-<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><div style="background:#FFF6E5; border:1px solid #F1E2C6; padding:12px 14px; border-radius:0; text-align:left;"><h3 style="margin:0 0 8px; font-size:17px;">Оплата</h3><ul style="margin:0; padding-left:18px;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000;"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul><hr style="border:none; border-top:1px solid #E7D6B7; margin:12px 0;" /><h3 style="margin:0 0 8px; font-size:17px;">Доставка по Алматы и Казахстану</h3><ul style="margin:0; padding-left:18px;"><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul></div></div>]]></description>
-<param name="Для бренда">Canon</param>
-<param name="Дополнительная информация">для IR ADV C33xx magenta</param>
-<param name="Коды">8526B002</param>
-<param name="Модель">C-EXV49</param>
-<param name="Ресурс">19 000</param>
-<param name="Тип">Тонер</param>
-<keywords>Canon, Тонер Canon C-EXV49 (8526B002), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP10364644" available="true">
@@ -3935,6 +3935,42 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Тип">Картридж</param>
 <param name="Цвет">Фото черный</param>
 <keywords>HP, Картридж HP P2V67A (P2V67A), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+</offer>
+
+<offer id="CP10669578" available="true">
+<categoryId></categoryId>
+<vendorCode>CP10669578</vendorCode>
+<name>Принтер HP Color Laser 150nw (4ZB95A#B19)</name>
+<price>133900</price>
+<picture>https://www.comportal.kz/upload/iblock/3ee/m0oh4ieeo3l95xp19ai5oyqpbkv2f8y0.JPG</picture>
+<vendor>HP</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+<!-- Наименование товара -->
+<h3>Принтер HP Color Laser 150nw (4ZB95A#B19)</h3>
+<!-- WhatsApp -->
+<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
+<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
+<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
+<!-- Описание -->
+<p>Принтер. Формат печати: A4. Разрешение: 600x600. Скорость печати ч/б: 18. Скорость печати цветной: 4. Порты: USB LAN WiFI. Технология печати: Лазерная. Гарантия: 12 мес.</p>
+<h3>Характеристики</h3><ul><li><strong>Гарантия:</strong> 12 мес</li><li><strong>Для бренда:</strong> HP</li><li><strong>Коды:</strong> 4ZB95A#B19</li><li><strong>Модель:</strong> Color Laser 150nw</li><li><strong>Нагрузка:</strong> 20 000</li><li><strong>Наличие картриджа (тонера) в комплекте:</strong> Стартовый</li><li><strong>Порты:</strong> USB LAN WiFI</li><li><strong>Разрешение:</strong> 600x600</li><li><strong>Скорость печати цветной:</strong> 4</li><li><strong>Скорость печати ч/б:</strong> 18</li><li><strong>Технология печати:</strong> Лазерная</li><li><strong>Тип:</strong> Принтер</li><li><strong>Формат печати:</strong> A4</li></ul>
+<!-- Оплата и доставка -->
+<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><div style="background:#FFF6E5; border:1px solid #F1E2C6; padding:12px 14px; border-radius:0; text-align:left;"><h3 style="margin:0 0 8px; font-size:17px;">Оплата</h3><ul style="margin:0; padding-left:18px;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000;"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul><hr style="border:none; border-top:1px solid #E7D6B7; margin:12px 0;" /><h3 style="margin:0 0 8px; font-size:17px;">Доставка по Алматы и Казахстану</h3><ul style="margin:0; padding-left:18px;"><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul></div></div>]]></description>
+<param name="Гарантия">12 мес</param>
+<param name="Для бренда">HP</param>
+<param name="Коды">4ZB95A#B19</param>
+<param name="Модель">Color Laser 150nw</param>
+<param name="Нагрузка">20 000</param>
+<param name="Наличие картриджа (тонера) в комплекте">Стартовый</param>
+<param name="Порты">USB LAN WiFI</param>
+<param name="Разрешение">600x600</param>
+<param name="Скорость печати цветной">4</param>
+<param name="Скорость печати ч/б">18</param>
+<param name="Технология печати">Лазерная</param>
+<param name="Тип">Принтер</param>
+<param name="Формат печати">A4</param>
+<keywords>HP, Принтер HP Color Laser 150nw (4ZB95A#B19), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP10725204" available="true">
@@ -7663,41 +7699,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Тип">Картридж</param>
 <param name="Цвет">Чёрный</param>
 <keywords>HP, Картридж HP 151X (W1510X), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
-</offer>
-
-<offer id="CP13816464" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13816464</vendorCode>
-<name>МФУ HP LaserJet Enterprise M430f (3PZ55A#B19)</name>
-<price>278900</price>
-<picture>https://www.comportal.kz/upload/iblock/2a2/panykxnaffbczzk04kvtfyy00l6956w1.jpg</picture>
-<vendor>HP</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-<!-- Наименование товара -->
-<h3>МФУ HP LaserJet Enterprise M430f (3PZ55A#B19)</h3>
-<!-- WhatsApp -->
-<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
-<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
-<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
-<!-- Описание -->
-<p>МФУ. Формат печати: A4. Разрешение: 1200x1200. Скорость печати ч/б: 38. Технология печати: Лазерная. Гарантия: 12 мес.</p>
-<h3>Характеристики</h3><ul><li><strong>Гарантия:</strong> 12 мес</li><li><strong>Для бренда:</strong> HP</li><li><strong>Коды:</strong> 3PZ55A#B19</li><li><strong>Модель:</strong> LaserJet Enterprise M430f</li><li><strong>Нагрузка:</strong> 100 000</li><li><strong>Наличие картриджа (тонера) в комплекте:</strong> Стартовый</li><li><strong>Разрешение:</strong> 1200x1200</li><li><strong>Скорость печати ч/б:</strong> 38</li><li><strong>Технология печати:</strong> Лазерная</li><li><strong>Тип:</strong> МФУ</li><li><strong>Формат печати:</strong> A4</li><li><strong>Функция:</strong> Принтер-Сканер(АПД-50с.)-Копир-Факс</li></ul>
-<!-- Оплата и доставка -->
-<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><div style="background:#FFF6E5; border:1px solid #F1E2C6; padding:12px 14px; border-radius:0; text-align:left;"><h3 style="margin:0 0 8px; font-size:17px;">Оплата</h3><ul style="margin:0; padding-left:18px;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000;"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul><hr style="border:none; border-top:1px solid #E7D6B7; margin:12px 0;" /><h3 style="margin:0 0 8px; font-size:17px;">Доставка по Алматы и Казахстану</h3><ul style="margin:0; padding-left:18px;"><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul></div></div>]]></description>
-<param name="Гарантия">12 мес</param>
-<param name="Для бренда">HP</param>
-<param name="Коды">3PZ55A#B19</param>
-<param name="Модель">LaserJet Enterprise M430f</param>
-<param name="Нагрузка">100 000</param>
-<param name="Наличие картриджа (тонера) в комплекте">Стартовый</param>
-<param name="Разрешение">1200x1200</param>
-<param name="Скорость печати ч/б">38</param>
-<param name="Технология печати">Лазерная</param>
-<param name="Тип">МФУ</param>
-<param name="Формат печати">A4</param>
-<param name="Функция">Принтер-Сканер(АПД-50с.)-Копир-Факс</param>
-<keywords>HP, МФУ HP LaserJet Enterprise M430f (3PZ55A#B19), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP13771028" available="true">
@@ -12769,14 +12770,14 @@ URL поставщика                             | https://www.comportal.kz/
 <offer id="CP13867135" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13867135</vendorCode>
-<name>Ноутбук Asus B1502CVA-BQ0897X (90NX06X1-M01150)</name>
+<name>Ноутбук ASUS B1502CVA-BQ0897X (90NX06X1-M01150)</name>
 <price>349900</price>
 <picture>https://www.comportal.kz/upload/iblock/a8b/2hn7j84as6ngow2ml7jp8ujeu0giobxi.JPG</picture>
 <vendor>ASUS</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
 <!-- Наименование товара -->
-<h3>Ноутбук Asus B1502CVA-BQ0897X (90NX06X1-M01150)</h3>
+<h3>Ноутбук ASUS B1502CVA-BQ0897X (90NX06X1-M01150)</h3>
 <!-- WhatsApp -->
 <hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
 <div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
@@ -12820,20 +12821,20 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Цвет">Чёрный</param>
 <param name="Частота оперативной памяти">3200</param>
 <param name="Частота процессора">1,2</param>
-<keywords>ASUS, Ноутбук Asus B1502CVA-BQ0897X (90NX06X1-M01150), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+<keywords>ASUS, Ноутбук ASUS B1502CVA-BQ0897X (90NX06X1-M01150), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP13870591" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13870591</vendorCode>
-<name>Компьютер Asus G22CH-1470KF0020 (90PF03T2-M00TC0 / 1)</name>
+<name>Компьютер ASUS G22CH-1470KF0020 (90PF03T2-M00TC0 / 1)</name>
 <price>1063900</price>
 <picture>https://www.comportal.kz/upload/iblock/3c3/sfngjurx3k8gb5wysxozdanz8z2pz4a0.jpg</picture>
 <vendor>ASUS</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
 <!-- Наименование товара -->
-<h3>Компьютер Asus G22CH-1470KF0020 (90PF03T2-M00TC0 / 1)</h3>
+<h3>Компьютер ASUS G22CH-1470KF0020 (90PF03T2-M00TC0 / 1)</h3>
 <!-- WhatsApp -->
 <hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
 <div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
@@ -12870,7 +12871,7 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Тип привода">No ODD</param>
 <param name="Частота оперативной памяти">4800</param>
 <param name="Частота процессора">3,4</param>
-<keywords>ASUS, Компьютер Asus G22CH-1470KF0020 (90PF03T2-M00TC0 / 1), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+<keywords>ASUS, Компьютер ASUS G22CH-1470KF0020 (90PF03T2-M00TC0 / 1), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP13869291" available="true">
@@ -13840,6 +13841,35 @@ URL поставщика                             | https://www.comportal.kz/
 <keywords>Acer, Монитор Acer KA272UEbmiipx (UM.HX2EE.E25), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
+<offer id="CP13869689" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13869689</vendorCode>
+<name>Печатающая головка Canon 0694C002 / CH-4 EMB (0694C002)</name>
+<price>12900</price>
+<picture>https://www.comportal.kz/upload/iblock/668/mqeuipu3pu89ovyc2daqqs7iddsqrvdq.jpg</picture>
+<vendor>Canon</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+<!-- Наименование товара -->
+<h3>Печатающая головка Canon 0694C002 / CH-4 EMB (0694C002)</h3>
+<!-- WhatsApp -->
+<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
+<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
+<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
+<!-- Описание -->
+<p>Картридж. Цвет: Цветной. Технология печати: Струйная.</p>
+<h3>Характеристики</h3><ul><li><strong>Для бренда:</strong> Canon</li><li><strong>Коды:</strong> 0694C002</li><li><strong>Модель:</strong> 0694C002 / CH-4 EMB</li><li><strong>Технология печати:</strong> Струйная</li><li><strong>Тип:</strong> Картридж</li><li><strong>Цвет:</strong> Цветной</li></ul>
+<!-- Оплата и доставка -->
+<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><div style="background:#FFF6E5; border:1px solid #F1E2C6; padding:12px 14px; border-radius:0; text-align:left;"><h3 style="margin:0 0 8px; font-size:17px;">Оплата</h3><ul style="margin:0; padding-left:18px;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000;"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul><hr style="border:none; border-top:1px solid #E7D6B7; margin:12px 0;" /><h3 style="margin:0 0 8px; font-size:17px;">Доставка по Алматы и Казахстану</h3><ul style="margin:0; padding-left:18px;"><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul></div></div>]]></description>
+<param name="Для бренда">Canon</param>
+<param name="Коды">0694C002</param>
+<param name="Модель">0694C002 / CH-4 EMB</param>
+<param name="Технология печати">Струйная</param>
+<param name="Тип">Картридж</param>
+<param name="Цвет">Цветной</param>
+<keywords>Canon, Печатающая головка Canon 0694C002 / CH-4 EMB (0694C002), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+</offer>
+
 <offer id="CP13870600" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13870600</vendorCode>
@@ -14677,14 +14707,14 @@ URL поставщика                             | https://www.comportal.kz/
 <offer id="CP13869991" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13869991</vendorCode>
-<name>Ноутбук Asus TUF Gaming F16 / FX607VU-RL059 (90NR0N06-M002R0)</name>
+<name>Ноутбук ASUS TUF Gaming F16 / FX607VU-RL059 (90NR0N06-M002R0)</name>
 <price>507900</price>
 <picture>https://www.comportal.kz/upload/iblock/915/mefu2iczyj1yu6zd28zfoxb1bvrlks5l.jpg</picture>
 <vendor>ASUS</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
 <!-- Наименование товара -->
-<h3>Ноутбук Asus TUF Gaming F16 / FX607VU-RL059 (90NR0N06-M002R0)</h3>
+<h3>Ноутбук ASUS TUF Gaming F16 / FX607VU-RL059 (90NR0N06-M002R0)</h3>
 <!-- WhatsApp -->
 <hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
 <div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
@@ -14724,20 +14754,20 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Цвет">Серый</param>
 <param name="Частота оперативной памяти">5200</param>
 <param name="Частота процессора">2,2</param>
-<keywords>ASUS, Ноутбук Asus TUF Gaming F16 / FX607VU-RL059 (90NR0N06-M002R0), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+<keywords>ASUS, Ноутбук ASUS TUF Gaming F16 / FX607VU-RL059 (90NR0N06-M002R0), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP13869798" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13869798</vendorCode>
-<name>Ноутбук Asus Vivobook Pro 15 OLED / N6506CU-MA037W (90NB15E3-M00310)</name>
+<name>Ноутбук ASUS Vivobook Pro 15 OLED / N6506CU-MA037W (90NB15E3-M00310)</name>
 <price>824900</price>
 <picture>https://www.comportal.kz/upload/iblock/c61/pfjhob4nwucre73xbxtxz82hesm3ob7d.jpg</picture>
 <vendor>ASUS</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
 <!-- Наименование товара -->
-<h3>Ноутбук Asus Vivobook Pro 15 OLED / N6506CU-MA037W (90NB15E3-M00310)</h3>
+<h3>Ноутбук ASUS Vivobook Pro 15 OLED / N6506CU-MA037W (90NB15E3-M00310)</h3>
 <!-- WhatsApp -->
 <hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
 <div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
@@ -14782,20 +14812,20 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Цвет">Серый</param>
 <param name="Частота оперативной памяти">6400</param>
 <param name="Частота процессора">2</param>
-<keywords>ASUS, Ноутбук Asus Vivobook Pro 15 OLED / N6506CU-MA037W (90NB15E3-M00310), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+<keywords>ASUS, Ноутбук ASUS Vivobook Pro 15 OLED / N6506CU-MA037W (90NB15E3-M00310), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP13870328" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13870328</vendorCode>
-<name>Моноблок Asus E3402WVA-WPC004X (90PT03T1-M01090)</name>
+<name>Моноблок ASUS E3402WVA-WPC004X (90PT03T1-M01090)</name>
 <price>403900</price>
 <picture>https://www.comportal.kz/upload/iblock/7a9/5hcnh7dvzj2o6ub5bi02zey1r4a3ajzt.JPG</picture>
 <vendor>ASUS</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
 <!-- Наименование товара -->
-<h3>Моноблок Asus E3402WVA-WPC004X (90PT03T1-M01090)</h3>
+<h3>Моноблок ASUS E3402WVA-WPC004X (90PT03T1-M01090)</h3>
 <!-- WhatsApp -->
 <hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
 <div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
@@ -14838,20 +14868,20 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Частота оперативной памяти">4800</param>
 <param name="Частота процессора">1,3</param>
 <param name="Языковая версия операционной системы">Многоязычная</param>
-<keywords>ASUS, Моноблок Asus E3402WVA-WPC004X (90PT03T1-M01090), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+<keywords>ASUS, Моноблок ASUS E3402WVA-WPC004X (90PT03T1-M01090), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP13870517" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13870517</vendorCode>
-<name>Ноутбук Asus ROG Strix G18 / G815LR-S9085 (90NR0LT1-M00390)</name>
+<name>Ноутбук ASUS ROG Strix G18 / G815LR-S9085 (90NR0LT1-M00390)</name>
 <price>1430900</price>
 <picture>https://www.comportal.kz/upload/iblock/151/9i7js8a3l2t7g56ew62nafv1mpjbg1h4.JPG</picture>
 <vendor>ASUS</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
 <!-- Наименование товара -->
-<h3>Ноутбук Asus ROG Strix G18 / G815LR-S9085 (90NR0LT1-M00390)</h3>
+<h3>Ноутбук ASUS ROG Strix G18 / G815LR-S9085 (90NR0LT1-M00390)</h3>
 <!-- WhatsApp -->
 <hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
 <div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
@@ -14896,7 +14926,7 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Цвет">Серый</param>
 <param name="Частота оперативной памяти">5600</param>
 <param name="Частота процессора">2,7</param>
-<keywords>ASUS, Ноутбук Asus ROG Strix G18 / G815LR-S9085 (90NR0LT1-M00390), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+<keywords>ASUS, Ноутбук ASUS ROG Strix G18 / G815LR-S9085 (90NR0LT1-M00390), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP13870436" available="true">
@@ -15730,14 +15760,14 @@ URL поставщика                             | https://www.comportal.kz/
 <offer id="CP13870922" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13870922</vendorCode>
-<name>ИБП Eaton 5P 1550i Rack 1U G2 (5P1550IRG2)</name>
+<name>ИБП Eaton Eaton 5P 1550i Rack 1U G2 (5P1550IRG2)</name>
 <price>694900</price>
 <picture>https://www.comportal.kz/upload/iblock/959/7kyogzgblb4rmz5lh4t4wb3wqo4s4i9c.jpg</picture>
 <vendor>Eaton</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
 <!-- Наименование товара -->
-<h3>ИБП Eaton 5P 1550i Rack 1U G2 (5P1550IRG2)</h3>
+<h3>ИБП Eaton Eaton 5P 1550i Rack 1U G2 (5P1550IRG2)</h3>
 <!-- WhatsApp -->
 <hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
 <div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
@@ -15758,20 +15788,20 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Мощность (W)">1 100</param>
 <param name="Тип">ИБП</param>
 <param name="Форм-фактор">Rackmount</param>
-<keywords>Eaton, ИБП Eaton 5P 1550i Rack 1U G2 (5P1550IRG2), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+<keywords>Eaton, ИБП Eaton Eaton 5P 1550i Rack 1U G2 (5P1550IRG2), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP13872311" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13872311</vendorCode>
-<name>Ноутбук Asus ROG Strix SCAR 18 / G835LX-SA022W (90NR0LF1-M000V0)</name>
+<name>Ноутбук ASUS ROG Strix SCAR 18 / G835LX-SA022W (90NR0LF1-M000V0)</name>
 <price>2433900</price>
 <picture>https://www.comportal.kz/upload/iblock/0de/5bw00ks779z2lbzrwa0wrvft4s9q7h2t.JPG</picture>
 <vendor>ASUS</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
 <!-- Наименование товара -->
-<h3>Ноутбук Asus ROG Strix SCAR 18 / G835LX-SA022W (90NR0LF1-M000V0)</h3>
+<h3>Ноутбук ASUS ROG Strix SCAR 18 / G835LX-SA022W (90NR0LF1-M000V0)</h3>
 <!-- WhatsApp -->
 <hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
 <div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
@@ -15821,20 +15851,20 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Частота оперативной памяти">5600</param>
 <param name="Частота процессора">2,7</param>
 <param name="Языковая версия операционной системы">Многоязычная</param>
-<keywords>ASUS, Ноутбук Asus ROG Strix SCAR 18 / G835LX-SA022W (90NR0LF1-M000V0), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+<keywords>ASUS, Ноутбук ASUS ROG Strix SCAR 18 / G835LX-SA022W (90NR0LF1-M000V0), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP13872312" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13872312</vendorCode>
-<name>Ноутбук Asus ROG Strix SCAR 18 / G835LX-SA126W (90NR0LF1-M005S0)</name>
+<name>Ноутбук ASUS ROG Strix SCAR 18 / G835LX-SA126W (90NR0LF1-M005S0)</name>
 <price>2630900</price>
 <picture>https://www.comportal.kz/upload/iblock/5df/rzfrpp1571928uwlepqj7t7u4d2abf8d.JPG</picture>
 <vendor>ASUS</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
 <!-- Наименование товара -->
-<h3>Ноутбук Asus ROG Strix SCAR 18 / G835LX-SA126W (90NR0LF1-M005S0)</h3>
+<h3>Ноутбук ASUS ROG Strix SCAR 18 / G835LX-SA126W (90NR0LF1-M005S0)</h3>
 <!-- WhatsApp -->
 <hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
 <div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
@@ -15884,7 +15914,7 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Частота оперативной памяти">5600</param>
 <param name="Частота процессора">2,7</param>
 <param name="Языковая версия операционной системы">Многоязычная</param>
-<keywords>ASUS, Ноутбук Asus ROG Strix SCAR 18 / G835LX-SA126W (90NR0LF1-M005S0), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+<keywords>ASUS, Ноутбук ASUS ROG Strix SCAR 18 / G835LX-SA126W (90NR0LF1-M005S0), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP13870729" available="true">
@@ -16354,14 +16384,14 @@ URL поставщика                             | https://www.comportal.kz/
 <offer id="CP13870534" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13870534</vendorCode>
-<name>Модуль батарей Eaton 9E EBM (9EEBM72)</name>
+<name>Модуль батарей Eaton Eaton 9E EBM (9EEBM72)</name>
 <price>318900</price>
 <picture>https://www.comportal.kz/upload/iblock/4a0/fu1h88s1pvm0jowd018fw1xzd5cil6av.jpg</picture>
 <vendor>Eaton</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
 <!-- Наименование товара -->
-<h3>Модуль батарей Eaton 9E EBM (9EEBM72)</h3>
+<h3>Модуль батарей Eaton Eaton 9E EBM (9EEBM72)</h3>
 <!-- WhatsApp -->
 <hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
 <div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
@@ -16377,20 +16407,20 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Коды">9EEBM72</param>
 <param name="Модель">Eaton 9E EBM</param>
 <param name="Тип">Батарея</param>
-<keywords>Eaton, Модуль батарей Eaton 9E EBM (9EEBM72), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+<keywords>Eaton, Модуль батарей Eaton Eaton 9E EBM (9EEBM72), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP13870713" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13870713</vendorCode>
-<name>Моноблок Asus V440VAK-WPC0300 (90PT03X1-M00AC0)</name>
+<name>Моноблок ASUS V440VAK-WPC0300 (90PT03X1-M00AC0)</name>
 <price>270900</price>
 <picture>https://www.comportal.kz/upload/iblock/3d0/es6ua4daac1skus1pa2if361n3lmd04j.JPG</picture>
 <vendor>ASUS</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
 <!-- Наименование товара -->
-<h3>Моноблок Asus V440VAK-WPC0300 (90PT03X1-M00AC0)</h3>
+<h3>Моноблок ASUS V440VAK-WPC0300 (90PT03X1-M00AC0)</h3>
 <!-- WhatsApp -->
 <hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
 <div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
@@ -16432,7 +16462,7 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Цвет">Белый</param>
 <param name="Частота оперативной памяти">4266</param>
 <param name="Частота процессора">1,2</param>
-<keywords>ASUS, Моноблок Asus V440VAK-WPC0300 (90PT03X1-M00AC0), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+<keywords>ASUS, Моноблок ASUS V440VAK-WPC0300 (90PT03X1-M00AC0), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP13870846" available="true">
@@ -17166,14 +17196,14 @@ URL поставщика                             | https://www.comportal.kz/
 <offer id="CP13870900" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13870900</vendorCode>
-<name>Ноутбук Asus ExpertBook B5605CVA-MB0058 (90NX08H1-M001X0)</name>
+<name>Ноутбук ASUS ExpertBook B5605CVA-MB0058 (90NX08H1-M001X0)</name>
 <price>381900</price>
 <picture>https://www.comportal.kz/upload/iblock/384/4lwwawjmsn7xtxbh30ky2g828ylue6he.JPG</picture>
 <vendor>ASUS</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
 <!-- Наименование товара -->
-<h3>Ноутбук Asus ExpertBook B5605CVA-MB0058 (90NX08H1-M001X0)</h3>
+<h3>Ноутбук ASUS ExpertBook B5605CVA-MB0058 (90NX08H1-M001X0)</h3>
 <!-- WhatsApp -->
 <hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
 <div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
@@ -17217,20 +17247,20 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Цвет">Серый</param>
 <param name="Частота оперативной памяти">4266</param>
 <param name="Частота процессора">2,1</param>
-<keywords>ASUS, Ноутбук Asus ExpertBook B5605CVA-MB0058 (90NX08H1-M001X0), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+<keywords>ASUS, Ноутбук ASUS ExpertBook B5605CVA-MB0058 (90NX08H1-M001X0), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP13872581" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13872581</vendorCode>
-<name>Ноутбук Asus ROG Strix G16 / G615JHR-S5039 (90NR0LL1-M001B0)</name>
+<name>Ноутбук ASUS ROG Strix G16 / G615JHR-S5039 (90NR0LL1-M001B0)</name>
 <price>818900</price>
 <picture>https://placehold.co/800x800/png?text=No+Photo</picture>
 <vendor>ASUS</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
 <!-- Наименование товара -->
-<h3>Ноутбук Asus ROG Strix G16 / G615JHR-S5039 (90NR0LL1-M001B0)</h3>
+<h3>Ноутбук ASUS ROG Strix G16 / G615JHR-S5039 (90NR0LL1-M001B0)</h3>
 <!-- WhatsApp -->
 <hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
 <div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
@@ -17245,20 +17275,20 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Коды">90NR0LL1-M001B0</param>
 <param name="Модель">S5039</param>
 <param name="Тип">Ноутбук</param>
-<keywords>ASUS, Ноутбук Asus ROG Strix G16 / G615JHR-S5039 (90NR0LL1-M001B0), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+<keywords>ASUS, Ноутбук ASUS ROG Strix G16 / G615JHR-S5039 (90NR0LL1-M001B0), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP13873048" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13873048</vendorCode>
-<name>Монитор Dell 32 Plus 4K QD-OLED Monitor - S3225QC (210-BRVT)</name>
+<name>Монитор Dell Dell 32 Plus 4K QD-OLED Monitor - S3225QC (210-BRVT)</name>
 <price>551900</price>
 <picture>https://placehold.co/800x800/png?text=No+Photo</picture>
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
 <!-- Наименование товара -->
-<h3>Монитор Dell 32 Plus 4K QD-OLED Monitor - S3225QC (210-BRVT)</h3>
+<h3>Монитор Dell Dell 32 Plus 4K QD-OLED Monitor - S3225QC (210-BRVT)</h3>
 <!-- WhatsApp -->
 <hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
 <div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
@@ -17273,7 +17303,7 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Коды">210-BRVT</param>
 <param name="Модель">S3225QC</param>
 <param name="Тип">Монитор</param>
-<keywords>Dell, Монитор Dell 32 Plus 4K QD-OLED Monitor - S3225QC (210-BRVT), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+<keywords>Dell, Монитор Dell Dell 32 Plus 4K QD-OLED Monitor - S3225QC (210-BRVT), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP13871817" available="true">
@@ -17458,14 +17488,14 @@ URL поставщика                             | https://www.comportal.kz/
 <offer id="CP13870960" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13870960</vendorCode>
-<name>Ноутбук Asus Vivobook S14 / S3407CA-LY014W (90NB16J1-M00640)</name>
+<name>Ноутбук ASUS Vivobook S14 / S3407CA-LY014W (90NB16J1-M00640)</name>
 <price>442900</price>
 <picture>https://www.comportal.kz/upload/iblock/656/ej4juql1vvuwmqsjpoqm63gs93ia678m.JPG</picture>
 <vendor>ASUS</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
 <!-- Наименование товара -->
-<h3>Ноутбук Asus Vivobook S14 / S3407CA-LY014W (90NB16J1-M00640)</h3>
+<h3>Ноутбук ASUS Vivobook S14 / S3407CA-LY014W (90NB16J1-M00640)</h3>
 <!-- WhatsApp -->
 <hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
 <div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
@@ -17512,7 +17542,7 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Частота оперативной памяти">4800</param>
 <param name="Частота процессора">1,7</param>
 <param name="Языковая версия операционной системы">Многоязычная</param>
-<keywords>ASUS, Ноутбук Asus Vivobook S14 / S3407CA-LY014W (90NB16J1-M00640), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+<keywords>ASUS, Ноутбук ASUS Vivobook S14 / S3407CA-LY014W (90NB16J1-M00640), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP13871112" available="true">
@@ -18786,63 +18816,6 @@ URL поставщика                             | https://www.comportal.kz/
 <keywords>Dell, Мобильная рабочая станция Dell Pro Max 14 MC14250 (BTO120_MC14250_EMEA_210-BPVX), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
-<offer id="CP13872130" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13872130</vendorCode>
-<name>Мобильная рабочая станция Dell Pro Max 14 MC14250 (BTO108_MC14250_EMEA_210-BPVX)</name>
-<price>1133900</price>
-<picture>https://www.comportal.kz/upload/iblock/a8f/paeow27pl32nbskzqs0ugh2x7te5nmjr.JPG</picture>
-<vendor>Dell</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-<!-- Наименование товара -->
-<h3>Мобильная рабочая станция Dell Pro Max 14 MC14250 (BTO108_MC14250_EMEA_210-BPVX)</h3>
-<!-- WhatsApp -->
-<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
-<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
-<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
-<!-- Описание -->
-<p>Ноутбук. Модельная серия: Pro Max 14 MC14250. Процессор: Intel 265H Core Ultra 7 2,2. Оперативная память: 32 Gb / DDR5 / 7500. Накопитель: 1000 / SSD / 1 шт. Диагональ: 14. Разрешение: 1920x1200. ОС: Microsoft Windows 11 Pro. Видеокарта: nVidia RTX PRO 500 6 Gb. Wi‑Fi: BE201. Bluetooth: Bluetooth 5.4. Камера: FHD HDR IR Camera. Гарантия: 36 мес.</p>
-<h3>Характеристики</h3><ul><li><strong>Bluetooth:</strong> Bluetooth 5.4</li><li><strong>Wi-Fi:</strong> BE201</li><li><strong>Адаптер:</strong> 130W Type-C Adapter</li><li><strong>Аккумулятор:</strong> 4-Cell 72Wh</li><li><strong>Версия операционной системы:</strong> Pro</li><li><strong>Гарантия:</strong> 36 мес</li><li><strong>Для бренда:</strong> Dell</li><li><strong>Дополнительные характеристики:</strong> Palmrest with Finger Print Reader + Control Vaul 3+</li><li><strong>Занятые слоты памяти:</strong> 1</li><li><strong>Камера:</strong> FHD HDR IR Camera</li><li><strong>Коды:</strong> BTO108_MC14250_EMEA_210-BPVX</li><li><strong>Количество дисков:</strong> 1</li><li><strong>Количество слотов памяти:</strong> 2</li><li><strong>Марка чипсета видеокарты:</strong> GeForce</li><li><strong>Модель:</strong> Pro Max 14 MC14250</li><li><strong>Модель процессора:</strong> Core Ultra 7</li><li><strong>Модель чипсета видеокарты:</strong> RTX PRO 500</li><li><strong>Объем видеопамяти:</strong> 6 Gb</li><li><strong>Объем жесткого диска:</strong> 1000</li><li><strong>Оперативная память:</strong> 32 Gb</li><li><strong>Операционная система:</strong> Windows 11</li><li><strong>Производитель операционной системы:</strong> Microsoft</li><li><strong>Производитель процессора:</strong> Intel</li><li><strong>Производитель чипсета видеокарты:</strong> nVidia</li><li><strong>Размер дисплея:</strong> 14</li><li><strong>Разрешение дисплея:</strong> 1920x1200</li><li><strong>Серия процессора:</strong> 265H</li><li><strong>Тип:</strong> Ноутбук</li><li><strong>Тип жесткого диска:</strong> SSD</li><li><strong>Тип матрицы:</strong> FHD+</li><li><strong>Тип оперативной памяти:</strong> DDR5</li><li><strong>Тип привода:</strong> No ODD</li><li><strong>Частота оперативной памяти:</strong> 7500</li><li><strong>Частота процессора:</strong> 2,2</li></ul>
-<!-- Оплата и доставка -->
-<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><div style="background:#FFF6E5; border:1px solid #F1E2C6; padding:12px 14px; border-radius:0; text-align:left;"><h3 style="margin:0 0 8px; font-size:17px;">Оплата</h3><ul style="margin:0; padding-left:18px;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000;"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul><hr style="border:none; border-top:1px solid #E7D6B7; margin:12px 0;" /><h3 style="margin:0 0 8px; font-size:17px;">Доставка по Алматы и Казахстану</h3><ul style="margin:0; padding-left:18px;"><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul></div></div>]]></description>
-<param name="Bluetooth">Bluetooth 5.4</param>
-<param name="Wi-Fi">BE201</param>
-<param name="Адаптер">130W Type-C Adapter</param>
-<param name="Аккумулятор">4-Cell 72Wh</param>
-<param name="Версия операционной системы">Pro</param>
-<param name="Гарантия">36 мес</param>
-<param name="Для бренда">Dell</param>
-<param name="Дополнительные характеристики">Palmrest with Finger Print Reader + Control Vaul 3+</param>
-<param name="Занятые слоты памяти">1</param>
-<param name="Камера">FHD HDR IR Camera</param>
-<param name="Коды">BTO108_MC14250_EMEA_210-BPVX</param>
-<param name="Количество дисков">1</param>
-<param name="Количество слотов памяти">2</param>
-<param name="Марка чипсета видеокарты">GeForce</param>
-<param name="Модель">Pro Max 14 MC14250</param>
-<param name="Модель процессора">Core Ultra 7</param>
-<param name="Модель чипсета видеокарты">RTX PRO 500</param>
-<param name="Объем видеопамяти">6 Gb</param>
-<param name="Объем жесткого диска">1000</param>
-<param name="Оперативная память">32 Gb</param>
-<param name="Операционная система">Windows 11</param>
-<param name="Производитель операционной системы">Microsoft</param>
-<param name="Производитель процессора">Intel</param>
-<param name="Производитель чипсета видеокарты">nVidia</param>
-<param name="Размер дисплея">14</param>
-<param name="Разрешение дисплея">1920x1200</param>
-<param name="Серия процессора">265H</param>
-<param name="Тип">Ноутбук</param>
-<param name="Тип жесткого диска">SSD</param>
-<param name="Тип матрицы">FHD+</param>
-<param name="Тип оперативной памяти">DDR5</param>
-<param name="Тип привода">No ODD</param>
-<param name="Частота оперативной памяти">7500</param>
-<param name="Частота процессора">2,2</param>
-<keywords>Dell, Мобильная рабочая станция Dell Pro Max 14 MC14250 (BTO108_MC14250_EMEA_210-BPVX), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
-</offer>
-
 <offer id="CP13872131" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13872131</vendorCode>
@@ -19395,45 +19368,17 @@ URL поставщика                             | https://www.comportal.kz/
 <keywords>Dell, Монитор Dell AW2725DM (210-BQWQ), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
-<offer id="CP13872878" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13872878</vendorCode>
-<name>Монитор Dell AW2525HM (210-BRYJ)</name>
-<price>122900</price>
-<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
-<vendor>Dell</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-<!-- Наименование товара -->
-<h3>Монитор Dell AW2525HM (210-BRYJ)</h3>
-<!-- WhatsApp -->
-<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
-<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
-<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
-<!-- Описание -->
-<p>Монитор. Гарантия: 36 мес. Для бренда: Dell. Модель: AW2525HM. Коды: 210-BRYJ.</p>
-<h3>Характеристики</h3><ul><li><strong>Гарантия:</strong> 36 мес</li><li><strong>Для бренда:</strong> Dell</li><li><strong>Коды:</strong> 210-BRYJ</li><li><strong>Модель:</strong> AW2525HM</li><li><strong>Тип:</strong> Монитор</li></ul>
-<!-- Оплата и доставка -->
-<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><div style="background:#FFF6E5; border:1px solid #F1E2C6; padding:12px 14px; border-radius:0; text-align:left;"><h3 style="margin:0 0 8px; font-size:17px;">Оплата</h3><ul style="margin:0; padding-left:18px;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000;"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul><hr style="border:none; border-top:1px solid #E7D6B7; margin:12px 0;" /><h3 style="margin:0 0 8px; font-size:17px;">Доставка по Алматы и Казахстану</h3><ul style="margin:0; padding-left:18px;"><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul></div></div>]]></description>
-<param name="Гарантия">36 мес</param>
-<param name="Для бренда">Dell</param>
-<param name="Коды">210-BRYJ</param>
-<param name="Модель">AW2525HM</param>
-<param name="Тип">Монитор</param>
-<keywords>Dell, Монитор Dell AW2525HM (210-BRYJ), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
-</offer>
-
 <offer id="CP13872296" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13872296</vendorCode>
-<name>Плоттер Canon Плоттер Canon / imagePROGRAF TX-3200 incl. stand / A1 / 2400 x1200 dpi. (6854C003)</name>
+<name>Плоттер Canon imagePROGRAF TX-3200 incl. stand / A1 / 2400 x1200 dpi. (6854C003)</name>
 <price>2475900</price>
 <picture>https://www.comportal.kz/upload/iblock/dbb/2d8ql9fb54f55m7wonx4dp5fhjtfbh0o.jpg</picture>
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
 <!-- Наименование товара -->
-<h3>Плоттер Canon Плоттер Canon / imagePROGRAF TX-3200 incl. stand / A1 / 2400 x1200 dpi. (6854C003)</h3>
+<h3>Плоттер Canon imagePROGRAF TX-3200 incl. stand / A1 / 2400 x1200 dpi. (6854C003)</h3>
 <!-- WhatsApp -->
 <hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
 <div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
@@ -19450,7 +19395,7 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Разрешение">2400x1200</param>
 <param name="Тип">Широкоформатный принтер</param>
 <param name="Формат печати">A1</param>
-<keywords>Canon, Плоттер Canon Плоттер Canon / imagePROGRAF TX-3200 incl. stand / A1 / 2400 x1200 dpi. (6854C003), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+<keywords>Canon, Плоттер Canon imagePROGRAF TX-3200 incl. stand / A1 / 2400 x1200 dpi. (6854C003), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP13872100" available="true">
@@ -19625,14 +19570,14 @@ URL поставщика                             | https://www.comportal.kz/
 <offer id="CP13872116" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13872116</vendorCode>
-<name>Ноутбук HP EliteBook 8 G1i (AD4H8ET#BJA)</name>
+<name>Ноутбук HP HP EliteBook 8 G1i (AD4H8ET#BJA)</name>
 <price>726900</price>
 <picture>https://www.comportal.kz/upload/iblock/0cd/gg40l0lyh9agd69bc4kbqf59j25e3ygj.jpg</picture>
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
 <!-- Наименование товара -->
-<h3>Ноутбук HP EliteBook 8 G1i (AD4H8ET#BJA)</h3>
+<h3>Ноутбук HP HP EliteBook 8 G1i (AD4H8ET#BJA)</h3>
 <!-- WhatsApp -->
 <hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
 <div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
@@ -19675,7 +19620,7 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Цвет">Серый</param>
 <param name="Частота оперативной памяти">5600</param>
 <param name="Частота процессора">2</param>
-<keywords>HP, Ноутбук HP EliteBook 8 G1i (AD4H8ET#BJA), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+<keywords>HP, Ноутбук HP HP EliteBook 8 G1i (AD4H8ET#BJA), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP13872375" available="true">
@@ -20084,14 +20029,14 @@ URL поставщика                             | https://www.comportal.kz/
 <offer id="CP13872313" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13872313</vendorCode>
-<name>Ноутбук Asus ROG Flow Z13 / GZ302EA-RU045W (90NR0JY1-M002E0)</name>
+<name>Ноутбук ASUS ROG Flow Z13 / GZ302EA-RU045W (90NR0JY1-M002E0)</name>
 <price>1266900</price>
 <picture>https://www.comportal.kz/upload/iblock/3ae/1mv1ulxj3gkz4y8xtd2g1xzibn53229d.JPG</picture>
 <vendor>ASUS</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
 <!-- Наименование товара -->
-<h3>Ноутбук Asus ROG Flow Z13 / GZ302EA-RU045W (90NR0JY1-M002E0)</h3>
+<h3>Ноутбук ASUS ROG Flow Z13 / GZ302EA-RU045W (90NR0JY1-M002E0)</h3>
 <!-- WhatsApp -->
 <hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
 <div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
@@ -20138,20 +20083,20 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Частота оперативной памяти">8000</param>
 <param name="Частота процессора">3</param>
 <param name="Языковая версия операционной системы">Многоязычная</param>
-<keywords>ASUS, Ноутбук Asus ROG Flow Z13 / GZ302EA-RU045W (90NR0JY1-M002E0), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+<keywords>ASUS, Ноутбук ASUS ROG Flow Z13 / GZ302EA-RU045W (90NR0JY1-M002E0), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP13872583" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13872583</vendorCode>
-<name>Ноутбук Asus TUF Gaming A18 / FA808UP-S8030 (90NR0NL1-M001L0)</name>
+<name>Ноутбук ASUS TUF Gaming A18 / FA808UP-S8030 (90NR0NL1-M001L0)</name>
 <price>880900</price>
 <picture>https://placehold.co/800x800/png?text=No+Photo</picture>
 <vendor>ASUS</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
 <!-- Наименование товара -->
-<h3>Ноутбук Asus TUF Gaming A18 / FA808UP-S8030 (90NR0NL1-M001L0)</h3>
+<h3>Ноутбук ASUS TUF Gaming A18 / FA808UP-S8030 (90NR0NL1-M001L0)</h3>
 <!-- WhatsApp -->
 <hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
 <div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
@@ -20166,48 +20111,20 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Коды">90NR0NL1-M001L0</param>
 <param name="Модель">S8030</param>
 <param name="Тип">Ноутбук</param>
-<keywords>ASUS, Ноутбук Asus TUF Gaming A18 / FA808UP-S8030 (90NR0NL1-M001L0), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
-</offer>
-
-<offer id="CP13872584" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13872584</vendorCode>
-<name>Ноутбук Asus Zenbook S 16 / UM5606GA-SS022W (90NB17H2-M006F0)</name>
-<price>876900</price>
-<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
-<vendor>ASUS</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-<!-- Наименование товара -->
-<h3>Ноутбук Asus Zenbook S 16 / UM5606GA-SS022W (90NB17H2-M006F0)</h3>
-<!-- WhatsApp -->
-<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
-<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
-<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
-<!-- Описание -->
-<p>Ноутбук. Гарантия: 12 мес. Для бренда: ASUS. Модель: Zenbook S 16 / UM5606GA-SS022W. Коды: 90NB17H2-M006F0.</p>
-<h3>Характеристики</h3><ul><li><strong>Гарантия:</strong> 12 мес</li><li><strong>Для бренда:</strong> ASUS</li><li><strong>Коды:</strong> 90NB17H2-M006F0</li><li><strong>Модель:</strong> Zenbook S 16 / UM5606GA-SS022W</li><li><strong>Тип:</strong> Ноутбук</li></ul>
-<!-- Оплата и доставка -->
-<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><div style="background:#FFF6E5; border:1px solid #F1E2C6; padding:12px 14px; border-radius:0; text-align:left;"><h3 style="margin:0 0 8px; font-size:17px;">Оплата</h3><ul style="margin:0; padding-left:18px;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000;"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul><hr style="border:none; border-top:1px solid #E7D6B7; margin:12px 0;" /><h3 style="margin:0 0 8px; font-size:17px;">Доставка по Алматы и Казахстану</h3><ul style="margin:0; padding-left:18px;"><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul></div></div>]]></description>
-<param name="Гарантия">12 мес</param>
-<param name="Для бренда">ASUS</param>
-<param name="Коды">90NB17H2-M006F0</param>
-<param name="Модель">Zenbook S 16 / UM5606GA-SS022W</param>
-<param name="Тип">Ноутбук</param>
-<keywords>ASUS, Ноутбук Asus Zenbook S 16 / UM5606GA-SS022W (90NB17H2-M006F0), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+<keywords>ASUS, Ноутбук ASUS TUF Gaming A18 / FA808UP-S8030 (90NR0NL1-M001L0), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP13872384" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13872384</vendorCode>
-<name>Ноутбук Asus ExpertBook / P1403CVA-S61785 (90NX0871-M022T0)</name>
+<name>Ноутбук ASUS ExpertBook / P1403CVA-S61785 (90NX0871-M022T0)</name>
 <price>301900</price>
 <picture>https://www.comportal.kz/upload/iblock/9bc/kyoz2nwc5cfyh6bwmrcss0tlnp4zdv4c.JPG</picture>
 <vendor>ASUS</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
 <!-- Наименование товара -->
-<h3>Ноутбук Asus ExpertBook / P1403CVA-S61785 (90NX0871-M022T0)</h3>
+<h3>Ноутбук ASUS ExpertBook / P1403CVA-S61785 (90NX0871-M022T0)</h3>
 <!-- WhatsApp -->
 <hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
 <div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
@@ -20250,20 +20167,20 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Цвет">Серый</param>
 <param name="Частота оперативной памяти">5200</param>
 <param name="Частота процессора">2,2</param>
-<keywords>ASUS, Ноутбук Asus ExpertBook / P1403CVA-S61785 (90NX0871-M022T0), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+<keywords>ASUS, Ноутбук ASUS ExpertBook / P1403CVA-S61785 (90NX0871-M022T0), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP13872585" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13872585</vendorCode>
-<name>Ноутбук Asus ExpertBook / P1403CVA-S61790X (90NX0871-M022V0)</name>
+<name>Ноутбук ASUS ExpertBook / P1403CVA-S61790X (90NX0871-M022V0)</name>
 <price>462900</price>
 <picture>https://placehold.co/800x800/png?text=No+Photo</picture>
 <vendor>ASUS</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
 <!-- Наименование товара -->
-<h3>Ноутбук Asus ExpertBook / P1403CVA-S61790X (90NX0871-M022V0)</h3>
+<h3>Ноутбук ASUS ExpertBook / P1403CVA-S61790X (90NX0871-M022V0)</h3>
 <!-- WhatsApp -->
 <hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
 <div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
@@ -20278,20 +20195,20 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Коды">90NX0871-M022V0</param>
 <param name="Модель">P1403CVA</param>
 <param name="Тип">Ноутбук</param>
-<keywords>ASUS, Ноутбук Asus ExpertBook / P1403CVA-S61790X (90NX0871-M022V0), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+<keywords>ASUS, Ноутбук ASUS ExpertBook / P1403CVA-S61790X (90NX0871-M022V0), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP13872587" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13872587</vendorCode>
-<name>Ноутбук Asus ExpertBook / P1403CVA-S61793X (90NX0871-M022X0)</name>
+<name>Ноутбук ASUS ExpertBook / P1403CVA-S61793X (90NX0871-M022X0)</name>
 <price>507900</price>
 <picture>https://placehold.co/800x800/png?text=No+Photo</picture>
 <vendor>ASUS</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
 <!-- Наименование товара -->
-<h3>Ноутбук Asus ExpertBook / P1403CVA-S61793X (90NX0871-M022X0)</h3>
+<h3>Ноутбук ASUS ExpertBook / P1403CVA-S61793X (90NX0871-M022X0)</h3>
 <!-- WhatsApp -->
 <hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
 <div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
@@ -20306,20 +20223,20 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Коды">90NX0871-M022X0</param>
 <param name="Модель">P1403CVA</param>
 <param name="Тип">Ноутбук</param>
-<keywords>ASUS, Ноутбук Asus ExpertBook / P1403CVA-S61793X (90NX0871-M022X0), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+<keywords>ASUS, Ноутбук ASUS ExpertBook / P1403CVA-S61793X (90NX0871-M022X0), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP13872589" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13872589</vendorCode>
-<name>Ноутбук Asus ExpertBook / P1503CVA-S72533X (90NX0881-M02Y70)</name>
+<name>Ноутбук ASUS ExpertBook / P1503CVA-S72533X (90NX0881-M02Y70)</name>
 <price>464900</price>
 <picture>https://placehold.co/800x800/png?text=No+Photo</picture>
 <vendor>ASUS</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
 <!-- Наименование товара -->
-<h3>Ноутбук Asus ExpertBook / P1503CVA-S72533X (90NX0881-M02Y70)</h3>
+<h3>Ноутбук ASUS ExpertBook / P1503CVA-S72533X (90NX0881-M02Y70)</h3>
 <!-- WhatsApp -->
 <hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
 <div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
@@ -20334,20 +20251,20 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Коды">90NX0881-M02Y70</param>
 <param name="Модель">P1503CVA</param>
 <param name="Тип">Ноутбук</param>
-<keywords>ASUS, Ноутбук Asus ExpertBook / P1503CVA-S72533X (90NX0881-M02Y70), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+<keywords>ASUS, Ноутбук ASUS ExpertBook / P1503CVA-S72533X (90NX0881-M02Y70), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP13872591" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13872591</vendorCode>
-<name>Ноутбук Asus ExpertBook / P1503CVA-S72536X (90NX0881-M02Y90)</name>
+<name>Ноутбук ASUS ExpertBook / P1503CVA-S72536X (90NX0881-M02Y90)</name>
 <price>508900</price>
 <picture>https://placehold.co/800x800/png?text=No+Photo</picture>
 <vendor>ASUS</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
 <!-- Наименование товара -->
-<h3>Ноутбук Asus ExpertBook / P1503CVA-S72536X (90NX0881-M02Y90)</h3>
+<h3>Ноутбук ASUS ExpertBook / P1503CVA-S72536X (90NX0881-M02Y90)</h3>
 <!-- WhatsApp -->
 <hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
 <div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
@@ -20362,20 +20279,20 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Коды">90NX0881-M02Y90</param>
 <param name="Модель">P1503CVA</param>
 <param name="Тип">Ноутбук</param>
-<keywords>ASUS, Ноутбук Asus ExpertBook / P1503CVA-S72536X (90NX0881-M02Y90), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+<keywords>ASUS, Ноутбук ASUS ExpertBook / P1503CVA-S72536X (90NX0881-M02Y90), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP13872314" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13872314</vendorCode>
-<name>Ноутбук Asus ExpertBook / B1503CVA-S77885X (90NX0801-M08YY0)</name>
+<name>Ноутбук ASUS ExpertBook / B1503CVA-S77885X (90NX0801-M08YY0)</name>
 <price>452900</price>
 <picture>https://www.comportal.kz/upload/iblock/c85/7zsz2trtngus5i79vw4l542h3g4zs8ox.JPG</picture>
 <vendor>ASUS</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
 <!-- Наименование товара -->
-<h3>Ноутбук Asus ExpertBook / B1503CVA-S77885X (90NX0801-M08YY0)</h3>
+<h3>Ноутбук ASUS ExpertBook / B1503CVA-S77885X (90NX0801-M08YY0)</h3>
 <!-- WhatsApp -->
 <hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
 <div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
@@ -20423,7 +20340,7 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Частота оперативной памяти">5200</param>
 <param name="Частота процессора">1,8</param>
 <param name="Языковая версия операционной системы">Многоязычная</param>
-<keywords>ASUS, Ноутбук Asus ExpertBook / B1503CVA-S77885X (90NX0801-M08YY0), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+<keywords>ASUS, Ноутбук ASUS ExpertBook / B1503CVA-S77885X (90NX0801-M08YY0), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP13872613" available="true">
@@ -20457,14 +20374,14 @@ URL поставщика                             | https://www.comportal.kz/
 <offer id="CP13872617" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13872617</vendorCode>
-<name>Ноутбук HP EliteBook 8 G1a (AZ3N2AV / 74051488)</name>
+<name>Ноутбук HP HP EliteBook 8 G1a (AZ3N2AV / 74051488)</name>
 <price>586900</price>
 <picture>https://placehold.co/800x800/png?text=No+Photo</picture>
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
 <!-- Наименование товара -->
-<h3>Ноутбук HP EliteBook 8 G1a (AZ3N2AV / 74051488)</h3>
+<h3>Ноутбук HP HP EliteBook 8 G1a (AZ3N2AV / 74051488)</h3>
 <!-- WhatsApp -->
 <hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
 <div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
@@ -20479,7 +20396,7 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Коды">AZ3N2AV / 74051488</param>
 <param name="Модель">EliteBook 8 G1a</param>
 <param name="Тип">Ноутбук</param>
-<keywords>HP, Ноутбук HP EliteBook 8 G1a (AZ3N2AV / 74051488), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+<keywords>HP, Ноутбук HP HP EliteBook 8 G1a (AZ3N2AV / 74051488), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP13872623" available="true">
@@ -21383,14 +21300,14 @@ URL поставщика                             | https://www.comportal.kz/
 <offer id="CP13872682" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13872682</vendorCode>
-<name>Ноутбук Asus Vivobook 15 / X1504VA-BQ4489W (90NB13Y1-M02790)</name>
+<name>Ноутбук ASUS Vivobook 15 / X1504VA-BQ4489W (90NB13Y1-M02790)</name>
 <price>289900</price>
 <picture>https://placehold.co/800x800/png?text=No+Photo</picture>
 <vendor>ASUS</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
 <!-- Наименование товара -->
-<h3>Ноутбук Asus Vivobook 15 / X1504VA-BQ4489W (90NB13Y1-M02790)</h3>
+<h3>Ноутбук ASUS Vivobook 15 / X1504VA-BQ4489W (90NB13Y1-M02790)</h3>
 <!-- WhatsApp -->
 <hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
 <div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
@@ -21405,7 +21322,7 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Коды">90NB13Y1-M02790</param>
 <param name="Модель">Vivobook 15 / X1504VA-BQ4489W</param>
 <param name="Тип">Ноутбук</param>
-<keywords>ASUS, Ноутбук Asus Vivobook 15 / X1504VA-BQ4489W (90NB13Y1-M02790), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+<keywords>ASUS, Ноутбук ASUS Vivobook 15 / X1504VA-BQ4489W (90NB13Y1-M02790), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP13872774" available="true">

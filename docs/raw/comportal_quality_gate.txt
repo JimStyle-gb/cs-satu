@@ -11,17 +11,17 @@ freeze_current_as_baseline: no
 # yes = текущие cosmetic-хвосты сохранены как baseline-снимок
 critical_count: 0
 # Сколько найдено критичных проблем
-cosmetic_total_count: 91
+cosmetic_total_count: 94
 # Общее число некритичных проблем
-cosmetic_offer_count: 91
+cosmetic_offer_count: 92
 # В скольких товарах есть cosmetic-проблемы
-known_cosmetic_count: 91
+known_cosmetic_count: 89
 # Сколько cosmetic-проблем уже известны по baseline
-known_cosmetic_offer_count: 91
+known_cosmetic_offer_count: 89
 # В скольких товарах есть уже известные cosmetic-проблемы
-new_cosmetic_count: 0
+new_cosmetic_count: 5
 # Сколько найдено новых cosmetic-проблем
-new_cosmetic_offer_count: 0
+new_cosmetic_offer_count: 5
 # В скольких товарах появились новые cosmetic-проблемы
 max_cosmetic_offers: 5
 # Допустимый максимум товаров с cosmetic-проблемами
@@ -32,6 +32,11 @@ CRITICAL:
 # Ошибок в этой секции нет
 
 COSMETIC TOTAL:
+CP13870534 | duplicate_brand_in_name | Требует ручной проверки | Модуль батарей Eaton Eaton 9E EBM (9EEBM72)
+CP13870922 | duplicate_brand_in_name | Требует ручной проверки | ИБП Eaton Eaton 5P 1550i Rack 1U G2 (5P1550IRG2)
+CP13872116 | duplicate_brand_in_name | Требует ручной проверки | Ноутбук HP HP EliteBook 8 G1i (AD4H8ET#BJA)
+CP13872617 | duplicate_brand_in_name | Требует ручной проверки | Ноутбук HP HP EliteBook 8 G1a (AZ3N2AV / 74051488)
+CP13873048 | duplicate_brand_in_name | Требует ручной проверки | Монитор Dell Dell 32 Plus 4K QD-OLED Monitor - S3225QC (210-BRVT)
 CP10420608 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13837247 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13850386 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
@@ -48,7 +53,6 @@ CP13872566 | placeholder_picture | Требует ручной проверки 
 CP13872567 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13872581 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13872583 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
-CP13872584 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13872585 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13872587 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13872589 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
@@ -69,7 +73,6 @@ CP13872827 | placeholder_picture | Требует ручной проверки 
 CP13872829 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13872831 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13872877 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
-CP13872878 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13872879 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13872917 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13872947 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
@@ -125,7 +128,11 @@ CP13873144 | placeholder_picture | Требует ручной проверки 
 CP13873146 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 
 NEW COSMETIC:
-# Ошибок в этой секции нет
+CP13870534 | duplicate_brand_in_name | Требует ручной проверки | Модуль батарей Eaton Eaton 9E EBM (9EEBM72)
+CP13870922 | duplicate_brand_in_name | Требует ручной проверки | ИБП Eaton Eaton 5P 1550i Rack 1U G2 (5P1550IRG2)
+CP13872116 | duplicate_brand_in_name | Требует ручной проверки | Ноутбук HP HP EliteBook 8 G1i (AD4H8ET#BJA)
+CP13872617 | duplicate_brand_in_name | Требует ручной проверки | Ноутбук HP HP EliteBook 8 G1a (AZ3N2AV / 74051488)
+CP13873048 | duplicate_brand_in_name | Требует ручной проверки | Монитор Dell Dell 32 Plus 4K QD-OLED Monitor - S3225QC (210-BRVT)
 
 KNOWN COSMETIC:
 CP10420608 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
@@ -144,7 +151,6 @@ CP13872566 | placeholder_picture | Требует ручной проверки 
 CP13872567 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13872581 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13872583 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
-CP13872584 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13872585 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13872587 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13872589 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
@@ -165,7 +171,6 @@ CP13872827 | placeholder_picture | Требует ручной проверки 
 CP13872829 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13872831 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13872877 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
-CP13872878 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13872879 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13872917 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13872947 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo

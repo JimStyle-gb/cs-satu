@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<yml_catalog date="2026-04-07 13:08:00">
+<yml_catalog date="2026-04-07 15:08:56">
 <shop><offers>
 <!--FEED_META
 Поставщик                                  | ComPortal
 URL поставщика                             | https://www.comportal.kz/auth/documents/prices/yml-catalog.php
-Время сборки (Алматы)                      | 2026-04-07 13:08:00
+Время сборки (Алматы)                      | 2026-04-07 15:08:56
 Ближайшая сборка (Алматы)                  | 2026-04-08 03:00:00
-Сколько товаров у поставщика до фильтра    | 1215
-Сколько товаров у поставщика после фильтра | 609
-Сколько товаров есть в наличии (true)      | 609
+Сколько товаров у поставщика до фильтра    | 1213
+Сколько товаров у поставщика после фильтра | 607
+Сколько товаров есть в наличии (true)      | 607
 Сколько товаров нет в наличии (false)      | 0
 -->
 
@@ -796,6 +796,24 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Для бренда">HP</param>
 </offer>
 
+<offer id="CP10299294" available="true">
+<categoryId></categoryId>
+<vendorCode>CP10299294</vendorCode>
+<name>Тонер Canon C-EXV42 (6908B002)</name>
+<price>24706</price>
+<picture>https://www.comportal.kz/upload/iblock/41f/tiii296nfh4nlgbu6nsmx9mz1gllh8pg.jpg</picture>
+<vendor>Canon</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Тонер. Ресурс: 10 200.]]></description>
+<param name="Тип">Тонер</param>
+<param name="Модель">C-EXV42</param>
+<param name="Дополнительная информация">Черный для iR 2202/2202N</param>
+<param name="Ресурс">10 200</param>
+<param name="Коды">6908B002</param>
+<param name="Для бренда">Canon</param>
+</offer>
+
 <offer id="CP13827510" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13827510</vendorCode>
@@ -865,24 +883,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Дополнительная информация">для IR ADV C33xx black</param>
 <param name="Ресурс">36 000</param>
 <param name="Коды">8524B002</param>
-<param name="Для бренда">Canon</param>
-</offer>
-
-<offer id="CP10298931" available="true">
-<categoryId></categoryId>
-<vendorCode>CP10298931</vendorCode>
-<name>Тонер Canon C-EXV49 (8526B002)</name>
-<price>65988</price>
-<picture>https://www.comportal.kz/upload/iblock/060/u9bo52rebt5xmfbl2rs3wqp2jmw5ueoe.jpg</picture>
-<vendor>Canon</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Тонер. Ресурс: 19 000.]]></description>
-<param name="Тип">Тонер</param>
-<param name="Модель">C-EXV49</param>
-<param name="Дополнительная информация">для IR ADV C33xx magenta</param>
-<param name="Ресурс">19 000</param>
-<param name="Коды">8526B002</param>
 <param name="Для бренда">Canon</param>
 </offer>
 
@@ -2581,6 +2581,31 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Номер">№730</param>
 <param name="Объём">130</param>
 <param name="Коды">P2V67A</param>
+<param name="Для бренда">HP</param>
+</offer>
+
+<offer id="CP10669578" available="true">
+<categoryId></categoryId>
+<vendorCode>CP10669578</vendorCode>
+<name>Принтер HP Color Laser 150nw (4ZB95A#B19)</name>
+<price>117253</price>
+<picture>https://www.comportal.kz/upload/iblock/3ee/m0oh4ieeo3l95xp19ai5oyqpbkv2f8y0.JPG</picture>
+<vendor>HP</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Принтер. Формат печати: A4. Разрешение: 600x600. Скорость печати ч/б: 18. Скорость печати цветной: 4. Порты: USB LAN WiFI. Технология печати: Лазерная. Гарантия: 12 мес.]]></description>
+<param name="Тип">Принтер</param>
+<param name="Модель">Color Laser 150nw</param>
+<param name="Гарантия">12 мес</param>
+<param name="Разрешение">600x600</param>
+<param name="Формат печати">A4</param>
+<param name="Скорость печати ч/б">18</param>
+<param name="Технология печати">Лазерная</param>
+<param name="Порты">USB LAN WiFI</param>
+<param name="Скорость печати цветной">4</param>
+<param name="Наличие картриджа (тонера) в комплекте">Стартовый</param>
+<param name="Нагрузка">20 000</param>
+<param name="Коды">4ZB95A#B19</param>
 <param name="Для бренда">HP</param>
 </offer>
 
@@ -5187,30 +5212,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Цвет">Чёрный</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Коды">W1510X</param>
-<param name="Для бренда">HP</param>
-</offer>
-
-<offer id="CP13816464" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13816464</vendorCode>
-<name>МФУ HP LaserJet Enterprise M430f (3PZ55A#B19)</name>
-<price>249018</price>
-<picture>https://www.comportal.kz/upload/iblock/2a2/panykxnaffbczzk04kvtfyy00l6956w1.jpg</picture>
-<vendor>HP</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-МФУ. Формат печати: A4. Разрешение: 1200x1200. Скорость печати ч/б: 38. Технология печати: Лазерная. Гарантия: 12 мес.]]></description>
-<param name="Тип">МФУ</param>
-<param name="Модель">LaserJet Enterprise M430f</param>
-<param name="Гарантия">12 мес</param>
-<param name="Разрешение">1200x1200</param>
-<param name="Формат печати">A4</param>
-<param name="Скорость печати ч/б">38</param>
-<param name="Технология печати">Лазерная</param>
-<param name="Функция">Принтер-Сканер(АПД-50с.)-Копир-Факс</param>
-<param name="Наличие картриджа (тонера) в комплекте">Стартовый</param>
-<param name="Нагрузка">100 000</param>
-<param name="Коды">3PZ55A#B19</param>
 <param name="Для бренда">HP</param>
 </offer>
 
@@ -8710,7 +8711,7 @@ URL поставщика                             | https://www.comportal.kz/
 <offer id="CP13867135" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13867135</vendorCode>
-<name>Ноутбук Asus B1502CVA-BQ0897X (90NX06X1-M01150)</name>
+<name>Ноутбук ASUS B1502CVA-BQ0897X (90NX06X1-M01150)</name>
 <price>311927</price>
 <picture>https://www.comportal.kz/upload/iblock/a8b/2hn7j84as6ngow2ml7jp8ujeu0giobxi.JPG</picture>
 <vendor>ASUS</vendor>
@@ -8756,7 +8757,7 @@ URL поставщика                             | https://www.comportal.kz/
 <offer id="CP13870591" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13870591</vendorCode>
-<name>Компьютер Asus G22CH-1470KF0020 (90PF03T2-M00TC0 / 1)</name>
+<name>Компьютер ASUS G22CH-1470KF0020 (90PF03T2-M00TC0 / 1)</name>
 <price>988617</price>
 <picture>https://www.comportal.kz/upload/iblock/3c3/sfngjurx3k8gb5wysxozdanz8z2pz4a0.jpg</picture>
 <vendor>ASUS</vendor>
@@ -9539,6 +9540,24 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Для бренда">Acer</param>
 </offer>
 
+<offer id="CP13869689" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13869689</vendorCode>
+<name>Печатающая головка Canon 0694C002 / CH-4 EMB (0694C002)</name>
+<price>9229</price>
+<picture>https://www.comportal.kz/upload/iblock/668/mqeuipu3pu89ovyc2daqqs7iddsqrvdq.jpg</picture>
+<vendor>Canon</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Картридж. Цвет: Цветной. Технология печати: Струйная.]]></description>
+<param name="Тип">Картридж</param>
+<param name="Модель">0694C002 / CH-4 EMB</param>
+<param name="Цвет">Цветной</param>
+<param name="Технология печати">Струйная</param>
+<param name="Коды">0694C002</param>
+<param name="Для бренда">Canon</param>
+</offer>
+
 <offer id="CP13870600" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13870600</vendorCode>
@@ -10123,7 +10142,7 @@ URL поставщика                             | https://www.comportal.kz/
 <offer id="CP13869991" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13869991</vendorCode>
-<name>Ноутбук Asus TUF Gaming F16 / FX607VU-RL059 (90NR0N06-M002R0)</name>
+<name>Ноутбук ASUS TUF Gaming F16 / FX607VU-RL059 (90NR0N06-M002R0)</name>
 <price>464013</price>
 <picture>https://www.comportal.kz/upload/iblock/915/mefu2iczyj1yu6zd28zfoxb1bvrlks5l.jpg</picture>
 <vendor>ASUS</vendor>
@@ -10165,7 +10184,7 @@ URL поставщика                             | https://www.comportal.kz/
 <offer id="CP13869798" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13869798</vendorCode>
-<name>Ноутбук Asus Vivobook Pro 15 OLED / N6506CU-MA037W (90NB15E3-M00310)</name>
+<name>Ноутбук ASUS Vivobook Pro 15 OLED / N6506CU-MA037W (90NB15E3-M00310)</name>
 <price>758895</price>
 <picture>https://www.comportal.kz/upload/iblock/c61/pfjhob4nwucre73xbxtxz82hesm3ob7d.jpg</picture>
 <vendor>ASUS</vendor>
@@ -10212,7 +10231,7 @@ URL поставщика                             | https://www.comportal.kz/
 <offer id="CP13870328" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13870328</vendorCode>
-<name>Моноблок Asus E3402WVA-WPC004X (90PT03T1-M01090)</name>
+<name>Моноблок ASUS E3402WVA-WPC004X (90PT03T1-M01090)</name>
 <price>363814</price>
 <picture>https://www.comportal.kz/upload/iblock/7a9/5hcnh7dvzj2o6ub5bi02zey1r4a3ajzt.JPG</picture>
 <vendor>ASUS</vendor>
@@ -10257,7 +10276,7 @@ URL поставщика                             | https://www.comportal.kz/
 <offer id="CP13870517" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13870517</vendorCode>
-<name>Ноутбук Asus ROG Strix G18 / G815LR-S9085 (90NR0LT1-M00390)</name>
+<name>Ноутбук ASUS ROG Strix G18 / G815LR-S9085 (90NR0LT1-M00390)</name>
 <price>1336575</price>
 <picture>https://www.comportal.kz/upload/iblock/151/9i7js8a3l2t7g56ew62nafv1mpjbg1h4.JPG</picture>
 <vendor>ASUS</vendor>
@@ -10923,7 +10942,7 @@ URL поставщика                             | https://www.comportal.kz/
 <offer id="CP13870922" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13870922</vendorCode>
-<name>ИБП Eaton 5P 1550i Rack 1U G2 (5P1550IRG2)</name>
+<name>ИБП Eaton Eaton 5P 1550i Rack 1U G2 (5P1550IRG2)</name>
 <price>639227</price>
 <picture>https://www.comportal.kz/upload/iblock/959/7kyogzgblb4rmz5lh4t4wb3wqo4s4i9c.jpg</picture>
 <vendor>Eaton</vendor>
@@ -10946,7 +10965,7 @@ URL поставщика                             | https://www.comportal.kz/
 <offer id="CP13872311" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13872311</vendorCode>
-<name>Ноутбук Asus ROG Strix SCAR 18 / G835LX-SA022W (90NR0LF1-M000V0)</name>
+<name>Ноутбук ASUS ROG Strix SCAR 18 / G835LX-SA022W (90NR0LF1-M000V0)</name>
 <price>2281898</price>
 <picture>https://www.comportal.kz/upload/iblock/0de/5bw00ks779z2lbzrwa0wrvft4s9q7h2t.JPG</picture>
 <vendor>ASUS</vendor>
@@ -10998,7 +11017,7 @@ URL поставщика                             | https://www.comportal.kz/
 <offer id="CP13872312" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13872312</vendorCode>
-<name>Ноутбук Asus ROG Strix SCAR 18 / G835LX-SA126W (90NR0LF1-M005S0)</name>
+<name>Ноутбук ASUS ROG Strix SCAR 18 / G835LX-SA126W (90NR0LF1-M005S0)</name>
 <price>2471559</price>
 <picture>https://www.comportal.kz/upload/iblock/5df/rzfrpp1571928uwlepqj7t7u4d2abf8d.JPG</picture>
 <vendor>ASUS</vendor>
@@ -11382,7 +11401,7 @@ URL поставщика                             | https://www.comportal.kz/
 <offer id="CP13870534" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13870534</vendorCode>
-<name>Модуль батарей Eaton 9E EBM (9EEBM72)</name>
+<name>Модуль батарей Eaton Eaton 9E EBM (9EEBM72)</name>
 <price>287455</price>
 <picture>https://www.comportal.kz/upload/iblock/4a0/fu1h88s1pvm0jowd018fw1xzd5cil6av.jpg</picture>
 <vendor>Eaton</vendor>
@@ -11400,7 +11419,7 @@ URL поставщика                             | https://www.comportal.kz/
 <offer id="CP13870713" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13870713</vendorCode>
-<name>Моноблок Asus V440VAK-WPC0300 (90PT03X1-M00AC0)</name>
+<name>Моноблок ASUS V440VAK-WPC0300 (90PT03X1-M00AC0)</name>
 <price>240950</price>
 <picture>https://www.comportal.kz/upload/iblock/3d0/es6ua4daac1skus1pa2if361n3lmd04j.JPG</picture>
 <vendor>ASUS</vendor>
@@ -11996,7 +12015,7 @@ URL поставщика                             | https://www.comportal.kz/
 <offer id="CP13870900" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13870900</vendorCode>
-<name>Ноутбук Asus ExpertBook B5605CVA-MB0058 (90NX08H1-M001X0)</name>
+<name>Ноутбук ASUS ExpertBook B5605CVA-MB0058 (90NX08H1-M001X0)</name>
 <price>342941</price>
 <picture>https://www.comportal.kz/upload/iblock/384/4lwwawjmsn7xtxbh30ky2g828ylue6he.JPG</picture>
 <vendor>ASUS</vendor>
@@ -12042,7 +12061,7 @@ URL поставщика                             | https://www.comportal.kz/
 <offer id="CP13872581" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13872581</vendorCode>
-<name>Ноутбук Asus ROG Strix G16 / G615JHR-S5039 (90NR0LL1-M001B0)</name>
+<name>Ноутбук ASUS ROG Strix G16 / G615JHR-S5039 (90NR0LL1-M001B0)</name>
 <price>753279</price>
 <picture>https://placehold.co/800x800/png?text=No+Photo</picture>
 <vendor>ASUS</vendor>
@@ -12059,7 +12078,7 @@ URL поставщика                             | https://www.comportal.kz/
 <offer id="CP13873048" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13873048</vendorCode>
-<name>Монитор Dell 32 Plus 4K QD-OLED Monitor - S3225QC (210-BRVT)</name>
+<name>Монитор Dell Dell 32 Plus 4K QD-OLED Monitor - S3225QC (210-BRVT)</name>
 <price>501120</price>
 <picture>https://placehold.co/800x800/png?text=No+Photo</picture>
 <vendor>Dell</vendor>
@@ -12211,7 +12230,7 @@ URL поставщика                             | https://www.comportal.kz/
 <offer id="CP13870960" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13870960</vendorCode>
-<name>Ноутбук Asus Vivobook S14 / S3407CA-LY014W (90NB16J1-M00640)</name>
+<name>Ноутбук ASUS Vivobook S14 / S3407CA-LY014W (90NB16J1-M00640)</name>
 <price>401390</price>
 <picture>https://www.comportal.kz/upload/iblock/656/ej4juql1vvuwmqsjpoqm63gs93ia678m.JPG</picture>
 <vendor>ASUS</vendor>
@@ -13143,52 +13162,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Коды">BTO120_MC14250_EMEA_210-BPVX</param>
 </offer>
 
-<offer id="CP13872130" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13872130</vendorCode>
-<name>Мобильная рабочая станция Dell Pro Max 14 MC14250 (BTO108_MC14250_EMEA_210-BPVX)</name>
-<price>1051086</price>
-<picture>https://www.comportal.kz/upload/iblock/a8f/paeow27pl32nbskzqs0ugh2x7te5nmjr.JPG</picture>
-<vendor>Dell</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Ноутбук. Модельная серия: Pro Max 14 MC14250. Процессор: Intel 265H Core Ultra 7 2,2. Оперативная память: 32 Gb / DDR5 / 7500. Накопитель: 1000 / SSD / 1 шт. Диагональ: 14. Разрешение: 1920x1200. ОС: Microsoft Windows 11 Pro. Видеокарта: nVidia RTX PRO 500 6 Gb. Wi‑Fi: BE201. Bluetooth: Bluetooth 5.4. Камера: FHD HDR IR Camera. Гарантия: 36 мес.]]></description>
-<param name="Тип">Ноутбук</param>
-<param name="Модель">Pro Max 14 MC14250</param>
-<param name="Объем жесткого диска">1000</param>
-<param name="Тип жесткого диска">SSD</param>
-<param name="Производитель процессора">Intel</param>
-<param name="Модель процессора">Core Ultra 7</param>
-<param name="Серия процессора">265H</param>
-<param name="Частота процессора">2,2</param>
-<param name="Оперативная память">32 Gb</param>
-<param name="Частота оперативной памяти">7500</param>
-<param name="Количество слотов памяти">2</param>
-<param name="Занятые слоты памяти">1</param>
-<param name="Объем видеопамяти">6 Gb</param>
-<param name="Тип оперативной памяти">DDR5</param>
-<param name="Тип привода">No ODD</param>
-<param name="Количество дисков">1</param>
-<param name="Размер дисплея">14</param>
-<param name="Дополнительные характеристики">Palmrest with Finger Print Reader + Control Vaul 3+</param>
-<param name="Тип матрицы">FHD+</param>
-<param name="Производитель чипсета видеокарты">nVidia</param>
-<param name="Марка чипсета видеокарты">GeForce</param>
-<param name="Модель чипсета видеокарты">RTX PRO 500</param>
-<param name="Производитель операционной системы">Microsoft</param>
-<param name="Операционная система">Windows 11</param>
-<param name="Версия операционной системы">Pro</param>
-<param name="Bluetooth">Bluetooth 5.4</param>
-<param name="Wi-Fi">BE201</param>
-<param name="Адаптер">130W Type-C Adapter</param>
-<param name="Аккумулятор">4-Cell 72Wh</param>
-<param name="Гарантия">36 мес</param>
-<param name="Камера">FHD HDR IR Camera</param>
-<param name="Разрешение дисплея">1920x1200</param>
-<param name="Для бренда">Dell</param>
-<param name="Коды">BTO108_MC14250_EMEA_210-BPVX</param>
-</offer>
-
 <offer id="CP13872131" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13872131</vendorCode>
@@ -13609,27 +13582,10 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Для бренда">Dell</param>
 </offer>
 
-<offer id="CP13872878" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13872878</vendorCode>
-<name>Монитор Dell AW2525HM (210-BRYJ)</name>
-<price>106100</price>
-<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
-<vendor>Dell</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Монитор. Гарантия: 36 мес. Для бренда: Dell. Модель: AW2525HM. Коды: 210-BRYJ.]]></description>
-<param name="Тип">Монитор</param>
-<param name="Гарантия">36 мес</param>
-<param name="Коды">210-BRYJ</param>
-<param name="Модель">AW2525HM</param>
-<param name="Для бренда">Dell</param>
-</offer>
-
 <offer id="CP13872296" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13872296</vendorCode>
-<name>Плоттер Canon Плоттер Canon / imagePROGRAF TX-3200 incl. stand / A1 / 2400 x1200 dpi. (6854C003)</name>
+<name>Плоттер Canon imagePROGRAF TX-3200 incl. stand / A1 / 2400 x1200 dpi. (6854C003)</name>
 <price>2322684</price>
 <picture>https://www.comportal.kz/upload/iblock/dbb/2d8ql9fb54f55m7wonx4dp5fhjtfbh0o.jpg</picture>
 <vendor>Canon</vendor>
@@ -13784,7 +13740,7 @@ URL поставщика                             | https://www.comportal.kz/
 <offer id="CP13872116" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13872116</vendorCode>
-<name>Ноутбук HP EliteBook 8 G1i (AD4H8ET#BJA)</name>
+<name>Ноутбук HP HP EliteBook 8 G1i (AD4H8ET#BJA)</name>
 <price>669778</price>
 <picture>https://www.comportal.kz/upload/iblock/0cd/gg40l0lyh9agd69bc4kbqf59j25e3ygj.jpg</picture>
 <vendor>HP</vendor>
@@ -14111,7 +14067,7 @@ URL поставщика                             | https://www.comportal.kz/
 <offer id="CP13872313" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13872313</vendorCode>
-<name>Ноутбук Asus ROG Flow Z13 / GZ302EA-RU045W (90NR0JY1-M002E0)</name>
+<name>Ноутбук ASUS ROG Flow Z13 / GZ302EA-RU045W (90NR0JY1-M002E0)</name>
 <price>1179243</price>
 <picture>https://www.comportal.kz/upload/iblock/3ae/1mv1ulxj3gkz4y8xtd2g1xzibn53229d.JPG</picture>
 <vendor>ASUS</vendor>
@@ -14160,7 +14116,7 @@ URL поставщика                             | https://www.comportal.kz/
 <offer id="CP13872583" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13872583</vendorCode>
-<name>Ноутбук Asus TUF Gaming A18 / FA808UP-S8030 (90NR0NL1-M001L0)</name>
+<name>Ноутбук ASUS TUF Gaming A18 / FA808UP-S8030 (90NR0NL1-M001L0)</name>
 <price>812921</price>
 <picture>https://placehold.co/800x800/png?text=No+Photo</picture>
 <vendor>ASUS</vendor>
@@ -14174,27 +14130,10 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Для бренда">ASUS</param>
 </offer>
 
-<offer id="CP13872584" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13872584</vendorCode>
-<name>Ноутбук Asus Zenbook S 16 / UM5606GA-SS022W (90NB17H2-M006F0)</name>
-<price>808657</price>
-<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
-<vendor>ASUS</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Ноутбук. Гарантия: 12 мес. Для бренда: ASUS. Модель: Zenbook S 16 / UM5606GA-SS022W. Коды: 90NB17H2-M006F0.]]></description>
-<param name="Тип">Ноутбук</param>
-<param name="Гарантия">12 мес</param>
-<param name="Коды">90NB17H2-M006F0</param>
-<param name="Модель">Zenbook S 16 / UM5606GA-SS022W</param>
-<param name="Для бренда">ASUS</param>
-</offer>
-
 <offer id="CP13872384" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13872384</vendorCode>
-<name>Ноутбук Asus ExpertBook / P1403CVA-S61785 (90NX0871-M022T0)</name>
+<name>Ноутбук ASUS ExpertBook / P1403CVA-S61785 (90NX0871-M022T0)</name>
 <price>270771</price>
 <picture>https://www.comportal.kz/upload/iblock/9bc/kyoz2nwc5cfyh6bwmrcss0tlnp4zdv4c.JPG</picture>
 <vendor>ASUS</vendor>
@@ -14239,7 +14178,7 @@ URL поставщика                             | https://www.comportal.kz/
 <offer id="CP13872585" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13872585</vendorCode>
-<name>Ноутбук Asus ExpertBook / P1403CVA-S61790X (90NX0871-M022V0)</name>
+<name>Ноутбук ASUS ExpertBook / P1403CVA-S61790X (90NX0871-M022V0)</name>
 <price>420475</price>
 <picture>https://placehold.co/800x800/png?text=No+Photo</picture>
 <vendor>ASUS</vendor>
@@ -14256,7 +14195,7 @@ URL поставщика                             | https://www.comportal.kz/
 <offer id="CP13872587" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13872587</vendorCode>
-<name>Ноутбук Asus ExpertBook / P1403CVA-S61793X (90NX0871-M022X0)</name>
+<name>Ноутбук ASUS ExpertBook / P1403CVA-S61793X (90NX0871-M022X0)</name>
 <price>464013</price>
 <picture>https://placehold.co/800x800/png?text=No+Photo</picture>
 <vendor>ASUS</vendor>
@@ -14273,7 +14212,7 @@ URL поставщика                             | https://www.comportal.kz/
 <offer id="CP13872589" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13872589</vendorCode>
-<name>Ноутбук Asus ExpertBook / P1503CVA-S72533X (90NX0881-M02Y70)</name>
+<name>Ноутбук ASUS ExpertBook / P1503CVA-S72533X (90NX0881-M02Y70)</name>
 <price>422267</price>
 <picture>https://placehold.co/800x800/png?text=No+Photo</picture>
 <vendor>ASUS</vendor>
@@ -14290,7 +14229,7 @@ URL поставщика                             | https://www.comportal.kz/
 <offer id="CP13872591" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13872591</vendorCode>
-<name>Ноутбук Asus ExpertBook / P1503CVA-S72536X (90NX0881-M02Y90)</name>
+<name>Ноутбук ASUS ExpertBook / P1503CVA-S72536X (90NX0881-M02Y90)</name>
 <price>465206</price>
 <picture>https://placehold.co/800x800/png?text=No+Photo</picture>
 <vendor>ASUS</vendor>
@@ -14307,7 +14246,7 @@ URL поставщика                             | https://www.comportal.kz/
 <offer id="CP13872314" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13872314</vendorCode>
-<name>Ноутбук Asus ExpertBook / B1503CVA-S77885X (90NX0801-M08YY0)</name>
+<name>Ноутбук ASUS ExpertBook / B1503CVA-S77885X (90NX0801-M08YY0)</name>
 <price>411531</price>
 <picture>https://www.comportal.kz/upload/iblock/c85/7zsz2trtngus5i79vw4l542h3g4zs8ox.JPG</picture>
 <vendor>ASUS</vendor>
@@ -14374,7 +14313,7 @@ URL поставщика                             | https://www.comportal.kz/
 <offer id="CP13872617" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13872617</vendorCode>
-<name>Ноутбук HP EliteBook 8 G1a (AZ3N2AV / 74051488)</name>
+<name>Ноутбук HP HP EliteBook 8 G1a (AZ3N2AV / 74051488)</name>
 <price>534990</price>
 <picture>https://placehold.co/800x800/png?text=No+Photo</picture>
 <vendor>HP</vendor>
@@ -14959,7 +14898,7 @@ URL поставщика                             | https://www.comportal.kz/
 <offer id="CP13872682" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13872682</vendorCode>
-<name>Ноутбук Asus Vivobook 15 / X1504VA-BQ4489W (90NB13Y1-M02790)</name>
+<name>Ноутбук ASUS Vivobook 15 / X1504VA-BQ4489W (90NB13Y1-M02790)</name>
 <price>259440</price>
 <picture>https://placehold.co/800x800/png?text=No+Photo</picture>
 <vendor>ASUS</vendor>
