@@ -10,7 +10,7 @@ CS Core — общее ядро для всех поставщиков.
 - стабилизация форматирования (переводы строк, футер)
 """
 
-# core v037_phase1_shared_cleanup: DOM next-run вынесен в cs.meta; supplier-specific param-hooks оставлены только как back-compat shim
+# core v036_policy_ac_split_vendor_guard: AC отключаем split_params_for_chars по policy; гарантия не считается фразой; защита от vendor=тип/код
 
 from __future__ import annotations
 
@@ -32,7 +32,7 @@ from decimal import Decimal, InvalidOperation, ROUND_HALF_UP
 from .keywords import build_keywords, CS_KEYWORDS_MAX_LEN
 from .description import build_description, build_chars_block
 from .pricing import compute_price, CS_PRICE_TIERS
-from .meta import now_almaty, next_run_at_hour, next_run_dom_at_hour as meta_next_run_dom_at_hour
+from .meta import now_almaty, next_run_at_hour, next_run_dom_at_hour as _meta_next_run_dom_at_hour
 from .validators import validate_cs_yml
 from .util import norm_ws, safe_int, _truncate_text
 from .writer import (
@@ -1697,14 +1697,8 @@ def clean_params(
             if not buckets[key_cf]:
                 buckets[key_cf].append(vv)
 
-    # Пост-правило: если "Вид" полностью дублирует "Тип" — убираем дубль.
-    if "тип" in buckets and "вид" in buckets:
-        tval = (buckets["тип"][0] if buckets["тип"] else "").casefold()
-        vval = (buckets["вид"][0] if buckets["вид"] else "").casefold()
-        if tval and vval and (tval == vval or tval in vval or vval in tval):
-            buckets.pop("вид", None)
-            display.pop("вид", None)
-            order = [k for k in order if k != "вид"]
+    # Shared core не делает supplier-specific схлопывание "Вид" == "Тип".
+    # Если конкретный supplier даёт такой дубль, это должно чиститься в supplier-layer.
 
     # Если модели нет, но были заголовки 'Технические характеристики ...' с коротким кодом — используем как Модель
     if ('модель' not in buckets) and tech_model_candidates:
@@ -1738,30 +1732,37 @@ def clean_params(
 
     return out
 
-# --- Back-compat shims: supplier-specific param hooks больше не живут в core. ---
-_AC_BARCODE_PARAM_1D_NAMES = {"1D", "1d"}
-_AC_BARCODE_PARAM_2D_NAMES = {"2D", "2d", "Распознование кода", "Распознавание кода"}
-_AC_BARCODE_PARAM_OUT = "Поддерживаемые штрихкоды"
+
+# --- Backward-safe shims: supplier-specific param rules больше не живут в shared core. ---
 
 def _ac_compact_barcode_support(params: list[tuple[str, str]]) -> list[tuple[str, str]]:
-    """Back-compat shim. Supplier-specific barcode compaction должен жить в AkCent adapter."""
+    """
+    Back-compat shim.
+
+    Shared core больше не склеивает AkCent barcode-параметры.
+    Если поставщику нужна такая читабельная сборка, это обязанность supplier-layer.
+    """
     return list(params or [])
 
 
 def _ac_drop_barcode_params(params: list[tuple[str, str]]) -> list[tuple[str, str]]:
-    """Back-compat shim. Supplier-specific barcode cleanup должен жить в AkCent adapter."""
+    """
+    Back-compat shim.
+
+    Shared core больше не удаляет AkCent-specific barcode-ключи.
+    Любая такая очистка должна происходить в supplier raw.
+    """
     return list(params or [])
 
 
 def apply_supplier_param_rules(params: Sequence[tuple[str, str]], oid: str, name: str) -> list[tuple[str, str]]:
-    """Back-compat shim с truly-common post-rules only.
+    """
+    Shared-only post-rules для params.
 
-    Core больше не держит правила по конкретным поставщикам.
-    Здесь оставляем только общий и безопасный минимум:
-    - не выпускать служебный param 'Артикул';
-    - нормализовать пробелы/смешанный текст.
-    
-    Аргументы oid/name сохранены для совместимости сигнатуры.
+    Важно:
+    - shared core не ветвится по поставщику и не знает AC/CL/VT/AS;
+    - supplier-specific переименования, drop-правила и очистка живут только в supplier-layer;
+    - функция оставлена с прежней сигнатурой только для backward compatibility.
     """
     _ = oid
     _ = name
@@ -1772,13 +1773,15 @@ def apply_supplier_param_rules(params: Sequence[tuple[str, str]], oid: str, name
         vv = sanitize_mixed_text(norm_ws(v))
         if not kk or not vv:
             continue
+
+        # Глобально: не выводим служебный "Артикул" как характеристику.
         if kk.casefold().replace("ё", "е") == "артикул":
             continue
+
         out.append((kk, vv))
     return out
 
 
-# Сортирует параметры: сначала приоритетные, затем по алфавиту
 def sort_params(params: Sequence[tuple[str, str]], priority: Sequence[str] | None = None) -> list[tuple[str, str]]:
     pr = [norm_ws(x) for x in (priority or []) if norm_ws(x)]
     pr_map = {p.casefold(): i for i, p in enumerate(pr)}
@@ -2601,7 +2604,7 @@ def normalize_pictures(pictures: Sequence[str]) -> list[str]:
     seen: set[str] = set()
     for p in pictures or []:
         u = norm_ws(p)
-        # CS: legacy nophoto-заглушки приводим к общему project placeholder.
+        # CS: NVPrint отдаёт заглушку nophoto.jpg — приводим к общему placeholder
         if u.lower() in {"https://nvprint.ru/promo/photo/nophoto.jpg", "http://nvprint.ru/promo/photo/nophoto.jpg"}:
             u = CS_PICTURE_PLACEHOLDER_URL
         if not u:
@@ -2825,24 +2828,46 @@ def _cs_chars_block_html(params: list[tuple[str, str]]) -> str:
     return f'<h3>Характеристики</h3><ul>{items}</ul>'
 
 
+
 def get_public_vendor(supplier: str | None = None) -> str:
+    """
+    Публичный fallback-вендор для финального YML.
+
+    Shared core не хранит список конкретных поставщиков.
+    Защита здесь только от очевидных служебных значений и от имени текущего supplier,
+    если оно было передано вызывающей стороной.
+    """
     raw = (os.getenv("CS_PUBLIC_VENDOR", "") or os.getenv("PUBLIC_VENDOR", "") or "CS").strip()
     raw = norm_ws(raw) or "CS"
-    # страховка: не допускаем, чтобы public_vendor был названием поставщика
-    bad = {"alstyle", "akcent", "copyline", "nvprint", "vtt"}
+
+    reserved = {
+        "cs",
+        "supplier",
+        "vendor",
+        "поставщик",
+        "unknown",
+        "n/a",
+    }
     if supplier and supplier.strip():
-        bad.add(supplier.strip().casefold())
-    if raw.casefold() in bad:
+        reserved.add(supplier.strip().casefold())
+
+    raw_cf = raw.casefold()
+    if raw_cf in reserved:
         return "CS"
-    if any(b in raw.casefold() for b in bad):
-        # если кто-то случайно подсунул строку с названием поставщика
+    if any(token and token in raw_cf for token in reserved if token not in {"cs"}):
         return "CS"
     return raw
 
 
-# CS: back-compat wrapper. Реальная DOM-логика next-run вынесена в cs.meta.
 def next_run_dom_at_hour(now: datetime, hour: int, doms: Sequence[int]) -> datetime:
-    return meta_next_run_dom_at_hour(now, hour=hour, doms=doms)
+    """
+    Back-compat shim.
+
+    DOM-расписание живёт в cs.meta; shared core только проксирует старый импорт,
+    чтобы не ломать существующие вызовы.
+    """
+    return _meta_next_run_dom_at_hour(now, hour=hour, doms=tuple(doms or ()))
+
 
 
 # CS: собирает полный XML фида (header + FEED_META + offers + footer)
