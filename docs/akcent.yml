@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<yml_catalog date="2026-04-07 13:11:03">
+<yml_catalog date="2026-04-07 17:53:16">
 <shop><offers>
 <!--FEED_META
 Поставщик                                  | AkCent
 URL поставщика                             | https://ak-cent.kz/export/Exchange/article_nw2/Ware02224.xml
-Время сборки (Алматы)                      | 2026-04-07 13:11:03
+Время сборки (Алматы)                      | 2026-04-07 17:53:16
 Ближайшая сборка (Алматы)                  | 2026-04-08 01:00:00
-Сколько товаров у поставщика до фильтра    | 2036
-Сколько товаров у поставщика после фильтра | 176
-Сколько товаров есть в наличии (true)      | 176
+Сколько товаров у поставщика до фильтра    | 2026
+Сколько товаров у поставщика после фильтра | 173
+Сколько товаров есть в наличии (true)      | 173
 Сколько товаров нет в наличии (false)      | 0
 -->
 
@@ -481,126 +481,6 @@ URL поставщика                             | https://ak-cent.kz/export
 <param name="Тип печати">Струйная</param>
 <param name="Цвет">Чёрный</param>
 <keywords>Epson, Картридж Epson C13T27914022 чёрный Около 2200 стр, доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
-</offer>
-
-<offer id="ACC13T40D140" available="true">
-<categoryId></categoryId>
-<vendorCode>ACC13T40D140</vendorCode>
-<name>Картридж Epson C13T40D140, UltraChrome XD2, чёрный</name>
-<price>63900</price>
-<picture>https://b2b.ak-cent.kz/upload/iblock/1be/kbmgx69ifrh2v8f9bx486rkzp5tki8h7.jpg</picture>
-<vendor>Epson</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-<!-- Наименование товара -->
-<h3>Картридж Epson C13T40D140, UltraChrome XD2, чёрный</h3>
-<!-- WhatsApp -->
-<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
-<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
-<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
-<!-- Описание -->
-<p>Оригинальный картридж Epson C13T40D140 Чёрного цвета для Epson SureColor SC-T3100 / Epson SureColor SC-T3100N / Epson SureColor SC-T5100 / Epson SureColor SC-T5100N.</p>
-<h3>Характеристики</h3><ul><li><strong>Для бренда:</strong> Epson</li><li><strong>Для устройства:</strong> Epson SureColor SC-T3100 / Epson SureColor SC-T3100N / Epson SureColor SC-T5100 / Epson SureColor SC-T5100N</li><li><strong>Коды:</strong> C13T40D140</li><li><strong>Модель:</strong> C13T40D140</li><li><strong>Тип:</strong> Картридж</li><li><strong>Тип печати:</strong> Струйная</li><li><strong>Цвет:</strong> Чёрный</li></ul>
-<!-- Оплата и доставка -->
-<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><div style="background:#FFF6E5; border:1px solid #F1E2C6; padding:12px 14px; border-radius:0; text-align:left;"><h3 style="margin:0 0 8px; font-size:17px;">Оплата</h3><ul style="margin:0; padding-left:18px;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000;"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul><hr style="border:none; border-top:1px solid #E7D6B7; margin:12px 0;" /><h3 style="margin:0 0 8px; font-size:17px;">Доставка по Алматы и Казахстану</h3><ul style="margin:0; padding-left:18px;"><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul></div></div>]]></description>
-<param name="Для бренда">Epson</param>
-<param name="Для устройства">Epson SureColor SC-T3100 / Epson SureColor SC-T3100N / Epson SureColor SC-T5100 / Epson SureColor SC-T5100N</param>
-<param name="Коды">C13T40D140</param>
-<param name="Модель">C13T40D140</param>
-<param name="Тип">Картридж</param>
-<param name="Тип печати">Струйная</param>
-<param name="Цвет">Чёрный</param>
-<keywords>Epson, Картридж Epson C13T40D140 UltraChrome XD2 чёрный, доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
-</offer>
-
-<offer id="ACC13T40D240" available="true">
-<categoryId></categoryId>
-<vendorCode>ACC13T40D240</vendorCode>
-<name>Картридж Epson C13T40D240, UltraChrome XD2, голубой</name>
-<price>44900</price>
-<picture>https://b2b.ak-cent.kz/upload/iblock/0ce/w9qa3jwmjsck3c54ehu1ony9bsm8luz0.jpg</picture>
-<vendor>Epson</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-<!-- Наименование товара -->
-<h3>Картридж Epson C13T40D240, UltraChrome XD2, голубой</h3>
-<!-- WhatsApp -->
-<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
-<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
-<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
-<!-- Описание -->
-<p>Голубой картридж повышенной емкости (50 мл) (C13T40D240) Epson SureColor SC-T3100 C11CF11302A0 - Epson SureColor SC-T3100N (без стенда) C11CF11301A0 - Epson SureColor SC-T5100 C11CF12301A0 - Epson SureColor SC-T5100N (без стенда) C11CF12302A0</p>
-<h3>Характеристики</h3><ul><li><strong>Для бренда:</strong> Epson</li><li><strong>Для устройства:</strong> Epson SureColor SC-T3100 / Epson SureColor SC-T3100N / Epson SureColor SC-T5100 / Epson SureColor SC-T5100N</li><li><strong>Коды:</strong> C13T40D240</li><li><strong>Модель:</strong> C13T40D240</li><li><strong>Тип:</strong> Картридж</li><li><strong>Тип печати:</strong> Струйная</li><li><strong>Цвет:</strong> Голубой</li></ul>
-<!-- Оплата и доставка -->
-<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><div style="background:#FFF6E5; border:1px solid #F1E2C6; padding:12px 14px; border-radius:0; text-align:left;"><h3 style="margin:0 0 8px; font-size:17px;">Оплата</h3><ul style="margin:0; padding-left:18px;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000;"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul><hr style="border:none; border-top:1px solid #E7D6B7; margin:12px 0;" /><h3 style="margin:0 0 8px; font-size:17px;">Доставка по Алматы и Казахстану</h3><ul style="margin:0; padding-left:18px;"><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul></div></div>]]></description>
-<param name="Для бренда">Epson</param>
-<param name="Для устройства">Epson SureColor SC-T3100 / Epson SureColor SC-T3100N / Epson SureColor SC-T5100 / Epson SureColor SC-T5100N</param>
-<param name="Коды">C13T40D240</param>
-<param name="Модель">C13T40D240</param>
-<param name="Тип">Картридж</param>
-<param name="Тип печати">Струйная</param>
-<param name="Цвет">Голубой</param>
-<keywords>Epson, Картридж Epson C13T40D240 UltraChrome XD2 голубой, доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
-</offer>
-
-<offer id="ACC13T40D34N" available="true">
-<categoryId></categoryId>
-<vendorCode>ACC13T40D34N</vendorCode>
-<name>Картридж Epson C13T40D34N, UltraChrome XD2, пурпурный</name>
-<price>44900</price>
-<picture>https://b2b.ak-cent.kz/upload/iblock/3a0/6c7sl4blrwmypfoa1v0uglqixutj7xe8.jpg</picture>
-<vendor>Epson</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-<!-- Наименование товара -->
-<h3>Картридж Epson C13T40D34N, UltraChrome XD2, пурпурный</h3>
-<!-- WhatsApp -->
-<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
-<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
-<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
-<!-- Описание -->
-<p>Оригинальный картридж Epson C13T40D34N Пурпурного цвета для Epson SureColor SC-T3100 / Epson SureColor SC-T3100N / Epson SureColor SC-T5100 / Epson SureColor SC-T5100N.</p>
-<h3>Характеристики</h3><ul><li><strong>Для бренда:</strong> Epson</li><li><strong>Для устройства:</strong> Epson SureColor SC-T3100 / Epson SureColor SC-T3100N / Epson SureColor SC-T5100 / Epson SureColor SC-T5100N</li><li><strong>Коды:</strong> C13T40D34N</li><li><strong>Модель:</strong> C13T40D34N</li><li><strong>Тип:</strong> Картридж</li><li><strong>Тип печати:</strong> Струйная</li><li><strong>Цвет:</strong> Пурпурный</li></ul>
-<!-- Оплата и доставка -->
-<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><div style="background:#FFF6E5; border:1px solid #F1E2C6; padding:12px 14px; border-radius:0; text-align:left;"><h3 style="margin:0 0 8px; font-size:17px;">Оплата</h3><ul style="margin:0; padding-left:18px;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000;"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul><hr style="border:none; border-top:1px solid #E7D6B7; margin:12px 0;" /><h3 style="margin:0 0 8px; font-size:17px;">Доставка по Алматы и Казахстану</h3><ul style="margin:0; padding-left:18px;"><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul></div></div>]]></description>
-<param name="Для бренда">Epson</param>
-<param name="Для устройства">Epson SureColor SC-T3100 / Epson SureColor SC-T3100N / Epson SureColor SC-T5100 / Epson SureColor SC-T5100N</param>
-<param name="Коды">C13T40D34N</param>
-<param name="Модель">C13T40D34N</param>
-<param name="Тип">Картридж</param>
-<param name="Тип печати">Струйная</param>
-<param name="Цвет">Пурпурный</param>
-<keywords>Epson, Картридж Epson C13T40D34N UltraChrome XD2 пурпурный, доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
-</offer>
-
-<offer id="ACC13T40D440" available="true">
-<categoryId></categoryId>
-<vendorCode>ACC13T40D440</vendorCode>
-<name>Картридж Epson C13T40D440, UltraChrome XD2, жёлтый</name>
-<price>44900</price>
-<picture>https://b2b.ak-cent.kz/upload/iblock/134/gj92y6ngwgx4a2mk8vguo42xjl555jea.jpg</picture>
-<vendor>Epson</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-<!-- Наименование товара -->
-<h3>Картридж Epson C13T40D440, UltraChrome XD2, жёлтый</h3>
-<!-- WhatsApp -->
-<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
-<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
-<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
-<!-- Описание -->
-<p>Оригинальный картридж Epson C13T40D440 Жёлтого цвета для Epson SureColor SC-T3100 / Epson SureColor SC-T3100N / Epson SureColor SC-T5100 / Epson SureColor SC-T5100N.</p>
-<h3>Характеристики</h3><ul><li><strong>Для бренда:</strong> Epson</li><li><strong>Для устройства:</strong> Epson SureColor SC-T3100 / Epson SureColor SC-T3100N / Epson SureColor SC-T5100 / Epson SureColor SC-T5100N</li><li><strong>Коды:</strong> C13T40D440</li><li><strong>Модель:</strong> C13T40D440</li><li><strong>Тип:</strong> Картридж</li><li><strong>Тип печати:</strong> Струйная</li><li><strong>Цвет:</strong> Жёлтый</li></ul>
-<!-- Оплата и доставка -->
-<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><div style="background:#FFF6E5; border:1px solid #F1E2C6; padding:12px 14px; border-radius:0; text-align:left;"><h3 style="margin:0 0 8px; font-size:17px;">Оплата</h3><ul style="margin:0; padding-left:18px;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000;"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul><hr style="border:none; border-top:1px solid #E7D6B7; margin:12px 0;" /><h3 style="margin:0 0 8px; font-size:17px;">Доставка по Алматы и Казахстану</h3><ul style="margin:0; padding-left:18px;"><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul></div></div>]]></description>
-<param name="Для бренда">Epson</param>
-<param name="Для устройства">Epson SureColor SC-T3100 / Epson SureColor SC-T3100N / Epson SureColor SC-T5100 / Epson SureColor SC-T5100N</param>
-<param name="Коды">C13T40D440</param>
-<param name="Модель">C13T40D440</param>
-<param name="Тип">Картридж</param>
-<param name="Тип печати">Струйная</param>
-<param name="Цвет">Жёлтый</param>
-<keywords>Epson, Картридж Epson C13T40D440 UltraChrome XD2 жёлтый, доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="ACC13T41F34N" available="true">
@@ -2309,6 +2189,36 @@ URL поставщика                             | https://ak-cent.kz/export
 <keywords>Epson, Плоттер Epson SureColor SC-T3100M-MFP, доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
+<offer id="ACC11CK39403" available="true">
+<categoryId></categoryId>
+<vendorCode>ACC11CK39403</vendorCode>
+<name>Принтер Epson L11050 фабрика печати</name>
+<price>404900</price>
+<picture>https://b2b.ak-cent.kz/upload/iblock/40b/0kqkc0mhgn3q9c4w4qjzf7v3jyvufpcf.jpg</picture>
+<vendor>Epson</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+<!-- Наименование товара -->
+<h3>Принтер Epson L11050 фабрика печати</h3>
+<!-- WhatsApp -->
+<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
+<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
+<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
+<!-- Описание -->
+<p>Тип: Принтер для цветной печати; Модель: Принтер Epson L11050 фабрика печати</p>
+<h3>Характеристики</h3><ul><li><strong>Гарантия:</strong> 12 мес.</li><li><strong>Интерфейсы:</strong> USB</li><li><strong>Модель:</strong> Принтер Epson L11050 фабрика печати</li><li><strong>Разрешение печати, dpi:</strong> 5760 x 1440</li><li><strong>Скорость печати (A4):</strong> 30</li><li><strong>Технология:</strong> печати Струйн</li><li><strong>Тип:</strong> Принтер для цветной печати</li></ul>
+<!-- Оплата и доставка -->
+<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><div style="background:#FFF6E5; border:1px solid #F1E2C6; padding:12px 14px; border-radius:0; text-align:left;"><h3 style="margin:0 0 8px; font-size:17px;">Оплата</h3><ul style="margin:0; padding-left:18px;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000;"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul><hr style="border:none; border-top:1px solid #E7D6B7; margin:12px 0;" /><h3 style="margin:0 0 8px; font-size:17px;">Доставка по Алматы и Казахстану</h3><ul style="margin:0; padding-left:18px;"><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul></div></div>]]></description>
+<param name="Гарантия">12 мес.</param>
+<param name="Интерфейсы">USB</param>
+<param name="Модель">Принтер Epson L11050 фабрика печати</param>
+<param name="Разрешение печати, dpi">5760 x 1440</param>
+<param name="Скорость печати (A4)">30</param>
+<param name="Технология">печати Струйн</param>
+<param name="Тип">Принтер для цветной печати</param>
+<keywords>Epson, Принтер Epson L11050 фабрика печати, доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+</offer>
+
 <offer id="ACC11CD76414" available="true">
 <categoryId></categoryId>
 <vendorCode>ACC11CD76414</vendorCode>
@@ -3090,6 +3000,34 @@ URL поставщика                             | https://ak-cent.kz/export
 <param name="Яркость">4000 ANSI lm</param>
 <param name="Яркость (ANSI) лмн">4000</param>
 <keywords>Epson, Проектор универсальный Epson EB-W51, доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+</offer>
+
+<offer id="ACV11HB57042" available="true">
+<categoryId></categoryId>
+<vendorCode>ACV11HB57042</vendorCode>
+<name>Проектор универсальный Epson EB-W53 белый</name>
+<price>377900</price>
+<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
+<vendor>Epson</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+<!-- Наименование товара -->
+<h3>Проектор универсальный Epson EB-W53 белый</h3>
+<!-- WhatsApp -->
+<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
+<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
+<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
+<!-- Описание -->
+<p>Проектор Epson EB-W53 — надёжное решение для офиса, учебных классов и домашних презентаций. Благодаря технологии 3LCD изображение получается ярким и реалистичным. Разрешение WXGA (1280×800) и яркость 4000 люмен позволяют выводить чёткую картинку даже в хорошо освещённом помещении. Контрастность 16 000:1 обеспечивает глубокие тёмные и насыщенные светлые оттенки. Лампа рассчитана на долгий срок службы — до 12 000 часов в экономичном режиме. Размер изображения может достигать 375 дюймов, что делает проектор удобным для демонстрации на большой аудитории. В устройстве есть два HDMI-входа и USB-разъёмы для подключения различных источников. Встроенный динамик мощностью 2 Вт подойдёт для простого звукового сопровождения. Поддерживается коррекция трапецеидальных искажений и функция разделения экрана, что облегчает настройку и расширяет возможности использования. Компактные размеры и вес всего 2,5 кг позволяют легко переносить проектор и использовать его в разных помещениях.</p>
+<h3>Характеристики</h3><ul><li><strong>Вес:</strong> 2,5 кг</li><li><strong>Гарантия:</strong> 12 мес.</li><li><strong>Модель:</strong> Проектор универсальный Epson EB-W53 белый</li><li><strong>Разрешение:</strong> WXGA (1280×800)</li><li><strong>Яркость:</strong> 4000 люмен</li></ul>
+<!-- Оплата и доставка -->
+<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><div style="background:#FFF6E5; border:1px solid #F1E2C6; padding:12px 14px; border-radius:0; text-align:left;"><h3 style="margin:0 0 8px; font-size:17px;">Оплата</h3><ul style="margin:0; padding-left:18px;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000;"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul><hr style="border:none; border-top:1px solid #E7D6B7; margin:12px 0;" /><h3 style="margin:0 0 8px; font-size:17px;">Доставка по Алматы и Казахстану</h3><ul style="margin:0; padding-left:18px;"><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul></div></div>]]></description>
+<param name="Вес">2,5 кг</param>
+<param name="Гарантия">12 мес.</param>
+<param name="Модель">Проектор универсальный Epson EB-W53 белый</param>
+<param name="Разрешение">WXGA (1280×800)</param>
+<param name="Яркость">4000 люмен</param>
+<keywords>Epson, Проектор универсальный Epson EB-W53 белый, доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="ACV11HB35240" available="true">
@@ -5190,34 +5128,6 @@ URL поставщика                             | https://ak-cent.kz/export
 <param name="Соотношение сторон">1X1</param>
 <param name="Тип">Экран настенный</param>
 <keywords>Mr.Pixel, Экран настенный Mr.Pixel 120' X 120" (3 05 X 3 05), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
-</offer>
-
-<offer id="ACMSPSBC100V2" available="true">
-<categoryId></categoryId>
-<vendorCode>ACMSPSBC100V2</vendorCode>
-<name>Экран настенный Mr.Pixel 60" X 80" (1,52 X 2,03)</name>
-<price>28900</price>
-<picture>https://b2b.ak-cent.kz/upload/iblock/4bd/flilm1tnyshbhewxdf053tbe4l3s3bty.jpg</picture>
-<vendor>Mr.Pixel</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-<!-- Наименование товара -->
-<h3>Экран настенный Mr.Pixel 60" X 80" (1,52 X 2,03)</h3>
-<!-- WhatsApp -->
-<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
-<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
-<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
-<!-- Описание -->
-<p>Настенный экран Mr.Pixel 60" x 80" (MSPSBC100V2) Высота: 1,53 м Ширина: 2,03 м Соотношение сторон: 4:3 Основные преимущества: - Широко применяется в отелях, школах, бизнес центрах, комнатах переговоров, домашних кинотеатрах - Глянцевый стальной корпус белого цвета - При изготовлении полотна используются только ЭКО материалы. - Чёрные границы по краям экрана для лучшего отображения изображения - Уникальная самофиксирующаяся конструкция для удобства использования - Уникальная надежная конструкция подходит как для настенного, так и потолочного монтажа, проста в установке - Активная поверхность полотна 1980*1480</p>
-<h3>Характеристики</h3><ul><li><strong>Гарантия:</strong> 12 мес.</li><li><strong>Модель:</strong> Экран настенный Mr.Pixel 60" X 80" (1,52 X 2,03)</li><li><strong>Размер:</strong> 60" X 80" (1,53 X 2,03)</li><li><strong>Соотношение сторон:</strong> 4X3</li><li><strong>Тип:</strong> Экран настенный</li></ul>
-<!-- Оплата и доставка -->
-<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><div style="background:#FFF6E5; border:1px solid #F1E2C6; padding:12px 14px; border-radius:0; text-align:left;"><h3 style="margin:0 0 8px; font-size:17px;">Оплата</h3><ul style="margin:0; padding-left:18px;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000;"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul><hr style="border:none; border-top:1px solid #E7D6B7; margin:12px 0;" /><h3 style="margin:0 0 8px; font-size:17px;">Доставка по Алматы и Казахстану</h3><ul style="margin:0; padding-left:18px;"><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul></div></div>]]></description>
-<param name="Гарантия">12 мес.</param>
-<param name="Модель">Экран настенный Mr.Pixel 60" X 80" (1,52 X 2,03)</param>
-<param name="Размер">60" X 80" (1,53 X 2,03)</param>
-<param name="Соотношение сторон">4X3</param>
-<param name="Тип">Экран настенный</param>
-<keywords>Mr.Pixel, Экран настенный Mr.Pixel 60" X 80" (1 52 X 2 03), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="ACMSPSBB112V2" available="true">
