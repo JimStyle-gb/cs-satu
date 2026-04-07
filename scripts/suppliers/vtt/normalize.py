@@ -107,6 +107,10 @@ _TITLE_COLOR_MAP = {
     "matte black": "Чёрный",
 }
 
+_HIBLACK_BRAND_RE = re.compile(r"(?iu)\bhi(?:\s*[-–—]?\s*|\s+)black\b")
+_HI_RU_BLACK_BRAND_RE = re.compile(r"(?iu)\bhi(?:\s*[-–—]?\s*|\s+)ч(?:е|ё)рн(?:ый|ая|ое|ые)?\b")
+_HIBLACK_PLACEHOLDER = "__VTT_HIBLACK_BRAND__"
+
 _CODE_PATTERNS: list[re.Pattern[str]] = [
     re.compile(r"\bCF\d{3,4}[A-Z]?\b", re.I),
     re.compile(r"\bCE\d{3,4}[A-Z]?\b", re.I),
@@ -218,8 +222,6 @@ def canon_vendor(vendor: str) -> str:
         "hewlett packard": "HP",
         "hewlett packard enterprise": "HPE",
         "hp enterprise": "HPE",
-        "катюша": "Катюша",
-        "кaтюша": "Катюша",
     }
     return mapping.get(low, v)
 
@@ -278,29 +280,32 @@ def detect_vendor(*, title: str = "", description: str = "", params: Sequence[tu
     return _first_vendor_from_text([title, description, *param_texts])
 
 
-def _localize_title_color_tokens(title: str) -> str:
-    s = _norm_spaces(title)
-    for en, ru in _TITLE_COLOR_MAP.items():
-        s = re.sub(rf"(?<![A-Za-zА-Яа-яЁё]){en}(?![A-Za-zА-Яа-яЁё])", ru, s, flags=re.I)
-    return s
-
-
-def _canonicalize_title_brand_tokens(title: str) -> str:
-    s = _norm_spaces(title)
+def _protect_hiblack_brand(text: str) -> str:
+    """Временно защитить бренд Hi-Black от color-localization."""
+    s = _norm_spaces(text)
     if not s:
         return ""
-    replacements = [
-        (r"\bКАТЮША\b", "Катюша"),
-    ]
-    for pattern, repl in replacements:
-        s = re.sub(pattern, repl, s, flags=re.IGNORECASE)
+    s = _HI_RU_BLACK_BRAND_RE.sub(_HIBLACK_PLACEHOLDER, s)
+    s = _HIBLACK_BRAND_RE.sub(_HIBLACK_PLACEHOLDER, s)
     return s
 
 
+def _restore_hiblack_brand(text: str) -> str:
+    """Вернуть канонический бренд Hi-Black после локализации/чистки."""
+    s = _norm_spaces(text)
+    if not s:
+        return ""
+    return s.replace(_HIBLACK_PLACEHOLDER, "Hi-Black")
+
+
+def _localize_title_color_tokens(title: str) -> str:
+    s = _protect_hiblack_brand(title)
+    for en, ru in _TITLE_COLOR_MAP.items():
+        s = re.sub(rf"(?<![A-Za-zА-Яа-яЁё]){en}(?![A-Za-zА-Яа-яЁё])", ru, s, flags=re.I)
+    return _restore_hiblack_brand(s)
 def normalize_title(title: str) -> str:
     """Нормализовать title без supplier-side смысловой правки."""
     s = _localize_title_color_tokens(title)
-    s = _canonicalize_title_brand_tokens(s)
     s = re.sub(r"\s{2,}", " ", s)
     return s[:240]
 
@@ -440,8 +445,13 @@ def format_resource_value(value: str) -> str:
 
 def infer_color_from_title(title: str) -> str:
     t = safe_str(title).lower()
-    if re.search(r"\b(black|ч[её]рн\w*)\b", t):
-        return "Чёрный"
+    if not t:
+        return ""
+
+    # Бренд Hi-Black не должен определяться как цвет "чёрный".
+    t = _HI_RU_BLACK_BRAND_RE.sub(" ", t)
+    t = _HIBLACK_BRAND_RE.sub(" ", t)
+
     if re.search(r"\b(yellow|ж[её]лт\w*)\b", t):
         return "Желтый"
     if re.search(r"\b(magenta|пурпурн\w*|малинов\w*)\b", t):
@@ -452,9 +462,9 @@ def infer_color_from_title(title: str) -> str:
         return "Серый"
     if re.search(r"\b(red|красн\w*)\b", t):
         return "Красный"
+    if re.search(r"\b(black|ч[её]рн\w*)\b", t):
+        return "Чёрный"
     return ""
-
-
 def norm_color(value: str) -> str:
     """Нормализовать цвет supplier-layer без тяжёлой магии."""
     return infer_color_from_title(value) or norm_ws(value)
