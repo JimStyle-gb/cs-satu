@@ -65,6 +65,10 @@ CODE_SCORE_PATTERNS: tuple[tuple[re.Pattern[str], int], ...] = (
 _ORIGINALITY_PARAM_NAME = "Оригинальность"
 _NAME_ORIGINALITY_SUFFIX_RE = re.compile(r"\s*\((?:оригинал|совместимый)\)\s*$", re.I)
 _DESC_ORIGINALITY_HEAD_RE = re.compile(r"(?iu)^\s*(?:Оригинальн(?:ый|ая|ое|ые)|Совместим(?:ый|ая|ое|ые))")
+_RAW_ORIGINAL_RE = re.compile(r"(?iu)(?:^|[^а-яёa-z])(оригинал(?:ьн(?:ый|ая|ое|ые))?|original)(?:$|[^а-яёa-z])")
+_RAW_COMPATIBLE_RE = re.compile(r"(?iu)(?:^|[^а-яёa-z])(совместим(?:ый|ая|ое|ые)|аналог)(?:$|[^а-яёa-z])")
+_TITLE_INLINE_ORIGINAL_RE = re.compile(r"(?iu)(?:\s*[()\[\]{}-]*\s*)(?:оригинал(?:ьн(?:ый|ая|ое|ые))?|original)(?:\s*[()\[\]{}-]*\s*)")
+_TITLE_INLINE_COMPATIBLE_RE = re.compile(r"(?iu)(?:\s*[()\[\]{}-]*\s*)(?:совместим(?:ый|ая|ое|ые)|аналог)(?:\s*[()\[\]{}-]*\s*)")
 
 
 # ----------------------------- basic helpers -----------------------------
@@ -252,6 +256,38 @@ def _strip_originality_suffix(name: str) -> str:
     return safe_str(_NAME_ORIGINALITY_SUFFIX_RE.sub("", safe_str(name)))
 
 
+def _strip_originality_markers(text: str) -> str:
+    s = safe_str(text)
+    if not s:
+        return ""
+    s = _TITLE_INLINE_ORIGINAL_RE.sub(" ", s)
+    s = _TITLE_INLINE_COMPATIBLE_RE.sub(" ", s)
+    s = re.sub(r"\s{2,}", " ", s)
+    s = re.sub(r"\s+([,.;:])", r"\1", s)
+    s = re.sub(r"([,.;:]){2,}", r"\1", s)
+    s = re.sub(r"\(\s*\)", "", s)
+    return s.strip(" ,-–—")
+
+
+def _source_originality_haystack(page: dict, name: str, params: Sequence[Tuple[str, str]]) -> str:
+    chunks: list[str] = [safe_str(name)]
+    for key in (
+        "title",
+        "raw_desc",
+        "desc",
+        "vendor",
+        "model",
+        "sku",
+    ):
+        chunks.append(safe_str(page.get(key)))
+    for key, value in params:
+        chunks.append(f"{safe_str(key)}: {safe_str(value)}")
+    for seq_key in ("raw_desc_pairs", "raw_table_params", "params"):
+        for k, v in _coerce_pairs(page.get(seq_key) or []):
+            chunks.append(f"{k}: {v}")
+    return "\n".join(x for x in chunks if x)
+
+
 def _upsert_param(params: Sequence[Tuple[str, str]], key: str, value: str) -> list[Tuple[str, str]]:
     want = safe_str(key).casefold()
     out: list[Tuple[str, str]] = []
@@ -420,18 +456,24 @@ def _is_consumable_for_originality(page: dict, name: str, params: Sequence[Tuple
 def _detect_consumable_originality(page: dict, name: str, params: Sequence[Tuple[str, str]]) -> str:
     if not _is_consumable_for_originality(page, name, params):
         return ""
+
+    hay = _source_originality_haystack(page, name, params)
+    if _RAW_ORIGINAL_RE.search(hay):
+        return "original"
+    if _RAW_COMPATIBLE_RE.search(hay):
+        return "compatible"
     return "compatible"
 
 
 def _apply_consumable_originality(name: str, params: Sequence[Tuple[str, str]], native_desc: str, status: str) -> tuple[str, list[Tuple[str, str]], str]:
     if status not in {"original", "compatible"}:
         return safe_str(name), list(params), safe_str(native_desc)
-    base_name = _strip_originality_suffix(name)
+    base_name = _strip_originality_markers(_strip_originality_suffix(name))
     suffix = "(оригинал)" if status == "original" else "(совместимый)"
     value = "Оригинал" if status == "original" else "Совместимый"
     name_out = f"{base_name} {suffix}"
     params_out = _upsert_param(params, _ORIGINALITY_PARAM_NAME, value)
-    desc_out = safe_str(native_desc)
+    desc_out = _strip_originality_markers(native_desc)
     type_label = _detect_consumable_type_label(base_name, params_out)
     sentence = _build_originality_sentence(status, type_label)
     if sentence:
