@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<yml_catalog date="2026-04-07 21:20:35">
+<yml_catalog date="2026-04-07 21:50:55">
 <shop><offers>
 <!--FEED_META
 Поставщик                                  | VTT
 URL поставщика                             | https://b2b.vtt.ru/catalog/
-Время сборки (Алматы)                      | 2026-04-07 21:20:35
+Время сборки (Алматы)                      | 2026-04-07 21:50:55
 Ближайшая сборка (Алматы)                  | 2026-04-10 05:00:00
 Сколько товаров у поставщика до фильтра    | 3143
 Сколько товаров у поставщика после фильтра | 3138
@@ -284,7 +284,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный драм-картридж. Тип: Драм-юнит; Партномер: 013R00676; Ресурс: 35K; Оригинальность: Оригинал]]></description>
+Оригинальный драм-юнит. Тип: Драм-юнит; Партномер: 013R00676; Ресурс: 35K; Оригинальность: Оригинал]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Xerox</param>
@@ -302,7 +302,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный драм-картридж. Тип: Драм-юнит; Партномер: 013R00686; Ресурс: 200K; Оригинальность: Оригинал]]></description>
+Оригинальный драм-юнит. Тип: Драм-юнит; Партномер: 013R00686; Ресурс: 200K; Оригинальность: Оригинал]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Xerox</param>
@@ -511,7 +511,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный драм-картридж. Тип: Драм-юнит; Партномер: 9437B002AA; Ресурс: 36K; Оригинальность: Оригинал]]></description>
+Оригинальный драм-юнит. Тип: Драм-юнит; Партномер: 9437B002AA; Ресурс: 36K; Оригинальность: Оригинал]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Canon</param>
@@ -832,7 +832,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный драм-картридж. Тип: Драм-юнит; Партномер: 101R00582; Ресурс: 60K; Оригинальность: Оригинал]]></description>
+Оригинальный драм-юнит. Тип: Драм-юнит; Партномер: 101R00582; Ресурс: 60K; Оригинальность: Оригинал]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Xerox</param>
@@ -850,7 +850,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Тип: Принт-картридж; Партномер: 101R00664; Ресурс: 10K; Оригинальность: Оригинал]]></description>
+Оригинальный принт-картридж. Тип: Принт-картридж; Партномер: 101R00664; Ресурс: 10K; Оригинальность: Оригинал]]></description>
 <param name="Тип">Принт-картридж</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Xerox</param>
@@ -868,7 +868,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: HB-C-EXV18D; Совместимость: Canon iR 1018; Ресурс: 21K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: HB-C-EXV18D; Совместимость: Canon iR 1018; Ресурс: 21K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Canon</param>
@@ -888,7 +888,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Тип: Принт-картридж; Партномер: 106R02760; Ресурс: 1K; Цвет: Голубой; Оригинальность: Оригинал]]></description>
+Оригинальный принт-картридж. Тип: Принт-картридж; Партномер: 106R02760; Ресурс: 1K; Цвет: Голубой; Оригинальность: Оригинал]]></description>
 <param name="Тип">Принт-картридж</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Xerox</param>
@@ -907,7 +907,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Тип: Принт-картридж; Партномер: 106R02762; Ресурс: 1K; Цвет: Желтый; Оригинальность: Оригинал]]></description>
+Оригинальный принт-картридж. Тип: Принт-картридж; Партномер: 106R02762; Ресурс: 1K; Цвет: Желтый; Оригинальность: Оригинал]]></description>
 <param name="Тип">Принт-картридж</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Xerox</param>
@@ -926,7 +926,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Тип: Принт-картридж; Партномер: 106R02763; Ресурс: 2K; Цвет: Чёрный; Оригинальность: Оригинал]]></description>
+Оригинальный принт-картридж. Тип: Принт-картридж; Партномер: 106R02763; Ресурс: 2K; Цвет: Чёрный; Оригинальность: Оригинал]]></description>
 <param name="Тип">Принт-картридж</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Xerox</param>
@@ -1279,7 +1279,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный драм-картридж. Тип: Драм-юнит; Партномер: 108R01417; Ресурс: 48K; Цвет: Голубой; Оригинальность: Оригинал]]></description>
+Оригинальный драм-юнит. Тип: Драм-юнит; Партномер: 108R01417; Ресурс: 48K; Цвет: Голубой; Оригинальность: Оригинал]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Xerox</param>
@@ -1298,7 +1298,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный драм-картридж. Тип: Драм-юнит; Партномер: 108R01418; Ресурс: 48K; Цвет: Пурпурный; Оригинальность: Оригинал]]></description>
+Оригинальный драм-юнит. Тип: Драм-юнит; Партномер: 108R01418; Ресурс: 48K; Цвет: Пурпурный; Оригинальность: Оригинал]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Xerox</param>
@@ -1317,7 +1317,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный драм-картридж. Тип: Драм-юнит; Партномер: 108R01419; Ресурс: 48K; Цвет: Желтый; Оригинальность: Оригинал]]></description>
+Оригинальный драм-юнит. Тип: Драм-юнит; Партномер: 108R01419; Ресурс: 48K; Цвет: Желтый; Оригинальность: Оригинал]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Xerox</param>
@@ -1336,7 +1336,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный драм-картридж. Тип: Драм-юнит; Партномер: 108R01420; Ресурс: 48K; Цвет: Blue; Оригинальность: Оригинал]]></description>
+Оригинальный драм-юнит. Тип: Драм-юнит; Партномер: 108R01420; Ресурс: 48K; Цвет: Blue; Оригинальность: Оригинал]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Xerox</param>
@@ -1996,7 +1996,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Тип: Копи-картридж; Партномер: 113R00779; Ресурс: 80K; Оригинальность: Оригинал]]></description>
+Оригинальный копи-картридж. Тип: Копи-картридж; Партномер: 113R00779; Ресурс: 80K; Оригинальность: Оригинал]]></description>
 <param name="Тип">Копи-картридж</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Xerox</param>
@@ -2014,7 +2014,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный драм-картридж. Тип: Драм-юнит; Партномер: 113R00782; Ресурс: 82K; Оригинальность: Оригинал]]></description>
+Оригинальный драм-юнит. Тип: Драм-юнит; Партномер: 113R00782; Ресурс: 82K; Оригинальность: Оригинал]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Xerox</param>
@@ -2504,7 +2504,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Panasonic</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: N-KX-FAD473A; Совместимость: Panasonic KX-MB2110/2130; Ресурс: 10K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: N-KX-FAD473A; Совместимость: Panasonic KX-MB2110/2130; Ресурс: 10K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Panasonic</param>
@@ -12075,7 +12075,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный драм-картридж. Тип: Драм-юнит; Партномер: 1702Y80NL0; Оригинальность: Оригинал]]></description>
+Оригинальный драм-юнит. Тип: Драм-юнит; Партномер: 1702Y80NL0; Оригинальность: Оригинал]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -12093,7 +12093,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный тонер. Тип: Контейнер; Партномер: 1902K90UN0; Оригинальность: Оригинал]]></description>
+Оригинальный бункер для отработанного тонера. Тип: Контейнер; Партномер: 1902K90UN0; Оригинальность: Оригинал]]></description>
 <param name="Тип">Контейнер</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -13790,7 +13790,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>OKI</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: HB-44574302; Совместимость: OKI B411/412/431/512/MB461/471/472/491/492; Ресурс: 25K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: HB-44574302; Совместимость: OKI B411/412/431/512/MB461/471/472/491/492; Ресурс: 25K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">OKI</param>
@@ -13830,7 +13830,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>OKI</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: N-44574302; Совместимость: OKI B411/412/431/512/MB461/471/472/491/492; Ресурс: 25K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: N-44574302; Совместимость: OKI B411/412/431/512/MB461/471/472/491/492; Ресурс: 25K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">OKI</param>
@@ -13910,7 +13910,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: HB-№049; Совместимость: Canon i-SENSYS LBP112w/113w/MF112/113w; Ресурс: 12K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: HB-№049; Совместимость: Canon i-SENSYS LBP112w/113w/MF112/113w; Ресурс: 12K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Canon</param>
@@ -15935,7 +15935,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: HB-CF257A; Совместимость: HP LaserJet M436dn/M436n/M436nda; Ресурс: 80K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: HB-CF257A; Совместимость: HP LaserJet M436dn/M436n/M436nda; Ресурс: 80K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">HP</param>
@@ -16256,7 +16256,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный тонер. Тип: Контейнер; Партномер: 302K093110; Оригинальность: Оригинал]]></description>
+Оригинальный бункер для отработанного тонера. Тип: Контейнер; Партномер: 302K093110; Оригинальность: Оригинал]]></description>
 <param name="Тип">Контейнер</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -16274,7 +16274,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный тонер. Тип: Контейнер; Партномер: 2K393130; Оригинальность: Оригинал]]></description>
+Оригинальный бункер для отработанного тонера. Тип: Контейнер; Партномер: 2K393130; Оригинальность: Оригинал]]></description>
 <param name="Тип">Контейнер</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -16292,7 +16292,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный драм-картридж. Тип: Драм-юнит; Партномер: 2KT93018; Оригинальность: Оригинал]]></description>
+Оригинальный драм-юнит. Тип: Драм-юнит; Партномер: 2KT93018; Оригинальность: Оригинал]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -16310,7 +16310,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный тонер. Тип: Контейнер; Партномер: 302KV93110; Оригинальность: Оригинал]]></description>
+Оригинальный бункер для отработанного тонера. Тип: Контейнер; Партномер: 302KV93110; Оригинальность: Оригинал]]></description>
 <param name="Тип">Контейнер</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -16328,7 +16328,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный драм-картридж. Тип: Драм-юнит; Партномер: 2LC93014; Оригинальность: Оригинал]]></description>
+Оригинальный драм-юнит. Тип: Драм-юнит; Партномер: 2LC93014; Оригинальность: Оригинал]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -16364,7 +16364,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный драм-картридж. Тип: Драм-юнит; Партномер: 2MY93012; Оригинальность: Оригинал]]></description>
+Оригинальный драм-юнит. Тип: Драм-юнит; Партномер: 2MY93012; Оригинальность: Оригинал]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -16477,7 +16477,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный драм-картридж. Тип: Драм-юнит; Партномер: 2NL93020; Оригинальность: Оригинал]]></description>
+Оригинальный драм-юнит. Тип: Драм-юнит; Партномер: 2NL93020; Оригинальность: Оригинал]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -16513,7 +16513,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный драм-картридж. Тип: Драм-юнит; Партномер: 2NP93030; Оригинальность: Оригинал]]></description>
+Оригинальный драм-юнит. Тип: Драм-юнит; Партномер: 2NP93030; Оригинальность: Оригинал]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -16551,7 +16551,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный драм-картридж. Тип: Драм-юнит; Партномер: 2NX93010; Оригинальность: Оригинал]]></description>
+Оригинальный драм-юнит. Тип: Драм-юнит; Партномер: 2NX93010; Оригинальность: Оригинал]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -17149,7 +17149,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Ricoh</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: HB-SP230; Совместимость: Ricoh Aficio SP 230DNw/SP230SFNw; Ресурс: 12K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: HB-SP230; Совместимость: Ricoh Aficio SP 230DNw/SP230SFNw; Ресурс: 12K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Ricoh</param>
@@ -17249,7 +17249,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: HB-101R00555; Совместимость: Xerox Phaser 3330/WC 3335/3335DNI/3345/3345DNI; Ресурс: 30K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: HB-101R00555; Совместимость: Xerox Phaser 3330/WC 3335/3335DNI/3345/3345DNI; Ресурс: 30K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Xerox</param>
@@ -17329,7 +17329,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: N-101R00555; Совместимость: Xerox Phaser 3330/WC 3335/3335DNI/3345/3345DNI; Ресурс: 30K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: N-101R00555; Совместимость: Xerox Phaser 3330/WC 3335/3335DNI/3345/3345DNI; Ресурс: 30K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Xerox</param>
@@ -17531,7 +17531,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный драм-картридж. Тип: Драм-юнит; Партномер: 302L793050; Оригинальность: Оригинал]]></description>
+Оригинальный драм-юнит. Тип: Драм-юнит; Партномер: 302L793050; Оригинальность: Оригинал]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -17548,7 +17548,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный драм-картридж. Тип: Драм-юнит; Партномер: 302N993033; Оригинальность: Оригинал]]></description>
+Оригинальный драм-юнит. Тип: Драм-юнит; Партномер: 302N993033; Оригинальность: Оригинал]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -17565,7 +17565,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный драм-картридж. Тип: Драм-юнит; Партномер: 302ND93070; Оригинальность: Оригинал]]></description>
+Оригинальный драм-юнит. Тип: Драм-юнит; Партномер: 302ND93070; Оригинальность: Оригинал]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -17641,7 +17641,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный драм-картридж. Тип: Драм-юнит; Партномер: 302NR93010; Оригинальность: Оригинал]]></description>
+Оригинальный драм-юнит. Тип: Драм-юнит; Партномер: 302NR93010; Оригинальность: Оригинал]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -17732,7 +17732,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный тонер. Тип: Контейнер; Партномер: 302NR93150; Оригинальность: Оригинал]]></description>
+Оригинальный бункер для отработанного тонера. Тип: Контейнер; Партномер: 302NR93150; Оригинальность: Оригинал]]></description>
 <param name="Тип">Контейнер</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -17749,7 +17749,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный драм-картридж. Тип: Драм-юнит; Партномер: 302P193010; Оригинальность: Оригинал]]></description>
+Оригинальный драм-юнит. Тип: Драм-юнит; Партномер: 302P193010; Оригинальность: Оригинал]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -17856,7 +17856,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный драм-картридж. Тип: Драм-юнит; Партномер: 302P393060; Оригинальность: Оригинал]]></description>
+Оригинальный драм-юнит. Тип: Драм-юнит; Партномер: 302P393060; Оригинальность: Оригинал]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -17873,7 +17873,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный драм-картридж. Тип: Драм-юнит; Партномер: 302R493052; Оригинальность: Оригинал]]></description>
+Оригинальный драм-юнит. Тип: Драм-юнит; Партномер: 302R493052; Оригинальность: Оригинал]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -17890,7 +17890,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный драм-картридж. Тип: Драм-юнит; Партномер: 302R793010; Цвет: Чёрный; Оригинальность: Оригинал]]></description>
+Оригинальный драм-юнит. Тип: Драм-юнит; Партномер: 302R793010; Цвет: Чёрный; Оригинальность: Оригинал]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -17908,7 +17908,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный драм-картридж. Тип: Драм-юнит; Партномер: 302RV93010; Оригинальность: Оригинал]]></description>
+Оригинальный драм-юнит. Тип: Драм-юнит; Партномер: 302RV93010; Оригинальность: Оригинал]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -17944,7 +17944,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный драм-картридж. Тип: Драм-юнит; Партномер: 302T693030; Оригинальность: Оригинал]]></description>
+Оригинальный драм-юнит. Тип: Драм-юнит; Партномер: 302T693030; Оригинальность: Оригинал]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -17962,7 +17962,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный драм-картридж. Тип: Драм-юнит; Партномер: 302T993061; Оригинальность: Оригинал]]></description>
+Оригинальный драм-юнит. Тип: Драм-юнит; Партномер: 302T993061; Оригинальность: Оригинал]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -17997,7 +17997,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный драм-картридж. Тип: Драм-юнит; Партномер: 302V693020; Оригинальность: Оригинал]]></description>
+Оригинальный драм-юнит. Тип: Драм-юнит; Партномер: 302V693020; Оригинальность: Оригинал]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -18195,7 +18195,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный драм-картридж. Тип: Драм-юнит; Партномер: 30C0T93020; Ресурс: 500K; Оригинальность: Оригинал]]></description>
+Оригинальный драм-юнит. Тип: Драм-юнит; Партномер: 30C0T93020; Ресурс: 500K; Оригинальность: Оригинал]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -18214,7 +18214,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный драм-картридж. Тип: Драм-юнит; Партномер: 30C0Y93010; Оригинальность: Оригинал]]></description>
+Оригинальный драм-юнит. Тип: Драм-юнит; Партномер: 30C0Y93010; Оригинальность: Оригинал]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -18232,7 +18232,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный драм-картридж. Тип: Драм-юнит; Партномер: 30C1093020; Оригинальность: Оригинал]]></description>
+Оригинальный драм-юнит. Тип: Драм-юнит; Партномер: 30C1093020; Оригинальность: Оригинал]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -19005,7 +19005,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый картридж. Тип: Копи-картридж; Партномер: N-013R00591; Совместимость: Xerox WC 5325/5330; Ресурс: 90K; Цвет: Чёрный]]></description>
+Совместимый копи-картридж. Тип: Копи-картридж; Партномер: N-013R00591; Совместимость: Xerox WC 5325/5330; Ресурс: 90K; Цвет: Чёрный]]></description>
 <param name="Тип">Копи-картридж</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Xerox</param>
@@ -19420,7 +19420,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный драм-картридж. Тип: Драм-юнит; Партномер: 302KV93017; Оригинальность: Оригинал]]></description>
+Оригинальный драм-юнит. Тип: Драм-юнит; Партномер: 302KV93017; Оригинальность: Оригинал]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -19437,7 +19437,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Ricoh</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Тип: Принт-картридж; Партномер: 407246; Ресурс: 4K; Оригинальность: Оригинал]]></description>
+Оригинальный принт-картридж. Тип: Принт-картридж; Партномер: 407246; Ресурс: 4K; Оригинальность: Оригинал]]></description>
 <param name="Тип">Принт-картридж</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Ricoh</param>
@@ -19455,7 +19455,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Ricoh</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Тип: Принт-картридж; Партномер: 407249; Ресурс: 2K; Оригинальность: Оригинал]]></description>
+Оригинальный принт-картридж. Тип: Принт-картридж; Партномер: 407249; Ресурс: 2K; Оригинальность: Оригинал]]></description>
 <param name="Тип">Принт-картридж</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Ricoh</param>
@@ -19619,7 +19619,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Ricoh</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Тип: Принт-картридж; Партномер: 407999; Ресурс: 1K; Цвет: Чёрный; Оригинальность: Оригинал]]></description>
+Оригинальный принт-картридж. Тип: Принт-картридж; Партномер: 407999; Ресурс: 1K; Цвет: Чёрный; Оригинальность: Оригинал]]></description>
 <param name="Тип">Принт-картридж</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Ricoh</param>
@@ -19638,7 +19638,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Ricoh</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Тип: Принт-картридж; Партномер: 408010; Ресурс: 2K; Оригинальность: Оригинал]]></description>
+Оригинальный принт-картридж. Тип: Принт-картридж; Партномер: 408010; Ресурс: 2K; Оригинальность: Оригинал]]></description>
 <param name="Тип">Принт-картридж</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Ricoh</param>
@@ -21567,7 +21567,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный драм-картридж. Тип: Драм-юнит; Партномер: DK-3100; Оригинальность: Оригинал]]></description>
+Оригинальный драм-юнит. Тип: Драм-юнит; Партномер: DK-3100; Оригинальность: Оригинал]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -21604,7 +21604,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный тонер. Тип: Контейнер; Партномер: 302LV93020; Оригинальность: Оригинал]]></description>
+Оригинальный бункер для отработанного тонера. Тип: Контейнер; Партномер: 302LV93020; Оригинальность: Оригинал]]></description>
 <param name="Тип">Контейнер</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -21622,7 +21622,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый тонер. Тип: Контейнер; Партномер: CMP-Bunk-302LV93020; Совместимость: Kyocera FS2100/4100 (совм)]]></description>
+Совместимый бункер для отработанного тонера. Тип: Контейнер; Партномер: CMP-Bunk-302LV93020; Совместимость: Kyocera FS2100/4100 (совм)]]></description>
 <param name="Тип">Контейнер</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -21641,7 +21641,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный тонер. Тип: Контейнер; Партномер: WT-860/1902LC0UN0; Оригинальность: Оригинал]]></description>
+Оригинальный бункер для отработанного тонера. Тип: Контейнер; Партномер: WT-860/1902LC0UN0; Оригинальность: Оригинал]]></description>
 <param name="Тип">Контейнер</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -21660,7 +21660,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый тонер. Тип: Контейнер; Партномер: HB-KY-WT-860/1902LC0UN0; Совместимость: Kyocera TASKalfa 3050ci/3550ci/4550ci]]></description>
+Совместимый бункер для отработанного тонера. Тип: Контейнер; Партномер: HB-KY-WT-860/1902LC0UN0; Совместимость: Kyocera TASKalfa 3050ci/3550ci/4550ci]]></description>
 <param name="Тип">Контейнер</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -21697,7 +21697,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый тонер. Тип: Контейнер; Партномер: HB-KY-WT1110-302M293030; Совместимость: Kyocera FS-1020/1025/1120]]></description>
+Совместимый бункер для отработанного тонера. Тип: Контейнер; Партномер: HB-KY-WT1110-302M293030; Совместимость: Kyocera FS-1020/1025/1120]]></description>
 <param name="Тип">Контейнер</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -21716,7 +21716,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный тонер. Тип: Контейнер; Партномер: 302M293030; Оригинальность: Оригинал]]></description>
+Оригинальный бункер для отработанного тонера. Тип: Контейнер; Партномер: 302M293030; Оригинальность: Оригинал]]></description>
 <param name="Тип">Контейнер</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -22049,7 +22049,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Sharp</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный драм-картридж. Тип: Драм-юнит; Партномер: CFRM-0021RS71; Оригинальность: Оригинал]]></description>
+Оригинальный драм-юнит. Тип: Драм-юнит; Партномер: CFRM-0021RS71; Оригинальность: Оригинал]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Sharp</param>
@@ -22272,7 +22272,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый картридж. Тип: Копи-картридж; Партномер: 101R00432; Ресурс: 22K]]></description>
+Совместимый копи-картридж. Тип: Копи-картридж; Партномер: 101R00432; Ресурс: 22K]]></description>
 <param name="Тип">Копи-картридж</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Xerox</param>
@@ -22368,7 +22368,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Тип: Принт-картридж; Партномер: 106R02183; Ресурс: 2K; Оригинальность: Оригинал]]></description>
+Оригинальный принт-картридж. Тип: Принт-картридж; Партномер: 106R02183; Ресурс: 2K; Оригинальность: Оригинал]]></description>
 <param name="Тип">Принт-картридж</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Xerox</param>
@@ -22844,7 +22844,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый картридж. Тип: Копи-картридж; Партномер: HB-101R00474; Совместимость: Xerox Phaser 3052/3260/WC 3215; Ресурс: 10K; Цвет: Чёрный]]></description>
+Совместимый копи-картридж. Тип: Копи-картридж; Партномер: HB-101R00474; Совместимость: Xerox Phaser 3052/3260/WC 3215; Ресурс: 10K; Цвет: Чёрный]]></description>
 <param name="Тип">Копи-картридж</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Xerox</param>
@@ -22864,7 +22864,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый картридж. Тип: Копи-картридж; Партномер: N-101R00474; Совместимость: Xerox Phaser 3052/3260/WC 3215; Ресурс: 10K; Цвет: Чёрный]]></description>
+Совместимый копи-картридж. Тип: Копи-картридж; Партномер: N-101R00474; Совместимость: Xerox Phaser 3052/3260/WC 3215; Ресурс: 10K; Цвет: Чёрный]]></description>
 <param name="Тип">Копи-картридж</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Xerox</param>
@@ -22977,7 +22977,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: N-CF219A; Совместимость: HP LJ Pro M104/MFP; Ресурс: 12K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: N-CF219A; Совместимость: HP LJ Pro M104/MFP; Ресурс: 12K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">HP</param>
@@ -23057,7 +23057,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: HB-CF234A; Совместимость: HP LaserJet Ultra M106/MFP M134; Ресурс: 9K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: HB-CF234A; Совместимость: HP LaserJet Ultra M106/MFP M134; Ресурс: 9K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">HP</param>
@@ -23246,7 +23246,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: HB-CF219A; Совместимость: HP LJ Pro M104/MFP; Ресурс: 12K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: HB-CF219A; Совместимость: HP LJ Pro M104/MFP; Ресурс: 12K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">HP</param>
@@ -23488,7 +23488,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: N-W1332A; Совместимость: HP Laser 408; Ресурс: 30K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: N-W1332A; Совместимость: HP Laser 408; Ресурс: 30K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">HP</param>
@@ -23571,7 +23571,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: HB-W1332A; Совместимость: HP Laser 408; Ресурс: 30K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: HB-W1332A; Совместимость: HP Laser 408; Ресурс: 30K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">HP</param>
@@ -23993,7 +23993,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: HB-W1104A; Совместимость: HP Neverstop Laser 1000a/1000w/1200a/1200w; Ресурс: 20K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: HB-W1104A; Совместимость: HP Neverstop Laser 1000a/1000w/1200a/1200w; Ресурс: 20K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">HP</param>
@@ -24239,7 +24239,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный драм-картридж. Тип: Драм-юнит; Партномер: 8528B003AA; Оригинальность: Оригинал]]></description>
+Оригинальный драм-юнит. Тип: Драм-юнит; Партномер: 8528B003AA; Оригинальность: Оригинал]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Canon</param>
@@ -25198,7 +25198,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: N-№049; Совместимость: Canon i-SENSYS LBP112w/113w/MF112/113w; Ресурс: 12K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: N-№049; Совместимость: Canon i-SENSYS LBP112w/113w/MF112/113w; Ресурс: 12K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Canon</param>
@@ -25420,7 +25420,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Ricoh</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Тип: Принт-картридж; Партномер: 407262; Ресурс: 3K; Цвет: Серый; Оригинальность: Оригинал]]></description>
+Оригинальный принт-картридж. Тип: Принт-картридж; Партномер: 407262; Ресурс: 3K; Цвет: Серый; Оригинальность: Оригинал]]></description>
 <param name="Тип">Принт-картридж</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Ricoh</param>
@@ -26548,7 +26548,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Brother</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: N-DR-12; Совместимость: Brother HL-L2371DN/DCP-L2551DN/MFC-L2751DW, 12K НЕ ДЛЯ OE; Ресурс: 12K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: N-DR-12; Совместимость: Brother HL-L2371DN/DCP-L2551DN/MFC-L2751DW, 12K НЕ ДЛЯ OE; Ресурс: 12K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Brother</param>
@@ -26612,7 +26612,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: HB-DK-1248; Совместимость: Kyocera PA2001/PA2001W/MA2001/MA2001W; Ресурс: 10K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: HB-DK-1248; Совместимость: Kyocera PA2001/PA2001W/MA2001/MA2001W; Ресурс: 10K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -26807,7 +26807,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Panasonic</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: HB-KX-FAD412A; Совместимость: Panasonic KX-MB1900/2000/2020/2030/2051; Ресурс: 6K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: HB-KX-FAD412A; Совместимость: Panasonic KX-MB1900/2000/2020/2030/2051; Ресурс: 6K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Panasonic</param>
@@ -26827,7 +26827,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Panasonic</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: N-KX-FAD412A; Совместимость: Panasonic KX-MB1900/2000/2020/2030; Ресурс: 10K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: N-KX-FAD412A; Совместимость: Panasonic KX-MB1900/2000/2020/2030; Ресурс: 10K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Panasonic</param>
@@ -26847,7 +26847,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Panasonic</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: HB-KX-FA84A; Совместимость: Panasonic KX-FL511/512/540/541/FLM653, Восстан; Ресурс: 10K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: HB-KX-FA84A; Совместимость: Panasonic KX-FL511/512/540/541/FLM653, Восстан; Ресурс: 10K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Panasonic</param>
@@ -26927,7 +26927,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Panasonic</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: HB-KX-FAD93A; Совместимость: Panasonic KX-MB263/283/763/773; Ресурс: 6K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: HB-KX-FAD93A; Совместимость: Panasonic KX-MB263/283/763/773; Ресурс: 6K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Panasonic</param>
@@ -27983,7 +27983,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Brother</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: HB-DR-1095; Совместимость: Brother HL-1202/DCP; Ресурс: 10K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: HB-DR-1095; Совместимость: Brother HL-1202/DCP; Ресурс: 10K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Brother</param>
@@ -28023,7 +28023,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Brother</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: N-DR-1095; Совместимость: Brother HL-1202/DCP; Ресурс: 10K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: N-DR-1095; Совместимость: Brother HL-1202/DCP; Ресурс: 10K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Brother</param>
@@ -28481,7 +28481,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Brother</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: HB-DR-2335; Совместимость: Brother HL-L2300DR/DCP-L2500DR/MFC-L2700DWR; Ресурс: 12K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: HB-DR-2335; Совместимость: Brother HL-L2300DR/DCP-L2500DR/MFC-L2700DWR; Ресурс: 12K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Brother</param>
@@ -28501,7 +28501,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Brother</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: N-DR-2335; Совместимость: Brother HL-L2300DR/DCP-L2500DR/MFC-L2700DWR; Ресурс: 12K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: N-DR-2335; Совместимость: Brother HL-L2300DR/DCP-L2500DR/MFC-L2700DWR; Ресурс: 12K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Brother</param>
@@ -28521,7 +28521,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Brother</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: HB-DR-1075; Совместимость: Brother HL-1010R/1112R/DCP-1510R/1512R/MFC-1810R; Ресурс: 9K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: HB-DR-1075; Совместимость: Brother HL-1010R/1112R/DCP-1510R/1512R/MFC-1810R; Ресурс: 9K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Brother</param>
@@ -28541,7 +28541,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Brother</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: N-DR-1075; Совместимость: Brother HL-1010R/1112R/DCP-1510R/1512R/MFC-1810R; Ресурс: 10K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: N-DR-1075; Совместимость: Brother HL-1010R/1112R/DCP-1510R/1512R/MFC-1810R; Ресурс: 10K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Brother</param>
@@ -28561,7 +28561,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Brother</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: HB-DR-2080; Совместимость: Brother HL-2130R/DCP-7055WR; Ресурс: 12K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: HB-DR-2080; Совместимость: Brother HL-2130R/DCP-7055WR; Ресурс: 12K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Brother</param>
@@ -28581,7 +28581,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Brother</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: N-DR-2080; Совместимость: Brother HL-2130R/DCP-7055WR; Ресурс: 12K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: N-DR-2080; Совместимость: Brother HL-2130R/DCP-7055WR; Ресурс: 12K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Brother</param>
@@ -28601,7 +28601,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Brother</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: HB-DR-2075; Совместимость: Brother HL-2030/2040/2070/DCP-7010/7420; Ресурс: 12K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: HB-DR-2075; Совместимость: Brother HL-2030/2040/2070/DCP-7010/7420; Ресурс: 12K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Brother</param>
@@ -28621,7 +28621,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Brother</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: N-DR-2075; Совместимость: Brother HL-2030/2040/2070/DCP-7010/7420; Ресурс: 12K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: N-DR-2075; Совместимость: Brother HL-2030/2040/2070/DCP-7010/7420; Ресурс: 12K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Brother</param>
@@ -28641,7 +28641,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Brother</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: HB-DR-2175; Совместимость: Brother HL-2140/2150/2170/7030; Ресурс: 12K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: HB-DR-2175; Совместимость: Brother HL-2140/2150/2170/7030; Ресурс: 12K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Brother</param>
@@ -28661,7 +28661,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Brother</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: HB-DR-2275; Совместимость: Brother HL-2240/2250/7057; Ресурс: 12K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: HB-DR-2275; Совместимость: Brother HL-2240/2250/7057; Ресурс: 12K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Brother</param>
@@ -28681,7 +28681,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Brother</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: N-DR-2275; Совместимость: Brother HL-2240/2250/7057; Ресурс: 12K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: N-DR-2275; Совместимость: Brother HL-2240/2250/7057; Ресурс: 12K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Brother</param>
@@ -28701,7 +28701,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Brother</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: N-DR-2175; Совместимость: Brother HL-2140/2150/2170/7030; Ресурс: 12K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: N-DR-2175; Совместимость: Brother HL-2140/2150/2170/7030; Ресурс: 12K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Brother</param>
@@ -28799,7 +28799,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Lexmark</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: HB-E260X22G; Совместимость: Lexmark E260/E360/E; Ресурс: 30K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: HB-E260X22G; Совместимость: Lexmark E260/E360/E; Ресурс: 30K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Lexmark</param>
@@ -28819,7 +28819,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Lexmark</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: N-E260X22G; Совместимость: Lexmark E260/E360/E; Ресурс: 30K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: N-E260X22G; Совместимость: Lexmark E260/E360/E; Ресурс: 30K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Lexmark</param>
@@ -29114,7 +29114,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный тонер. Тип: Контейнер; Партномер: FM3-9276; Оригинальность: Оригинал]]></description>
+Оригинальный бункер для отработанного тонера. Тип: Контейнер; Партномер: FM3-9276; Оригинальность: Оригинал]]></description>
 <param name="Тип">Контейнер</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Canon</param>
@@ -29131,7 +29131,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Panasonic</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: HB-KX-FAD89A; Совместимость: Panasonic KX-FL401/402/403/413/FLC411/412; Ресурс: 10K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: HB-KX-FAD89A; Совместимость: Panasonic KX-FL401/402/403/413/FLC411/412; Ресурс: 10K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Panasonic</param>
@@ -29189,7 +29189,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый тонер. Тип: Контейнер; Партномер: HB-XER-008R13061; Совместимость: Xerox отработанного тонера Hi-Black для Xerox WC 7425/7428/7435/7525/7530/7535]]></description>
+Совместимый бункер для отработанного тонера. Тип: Контейнер; Партномер: HB-XER-008R13061; Совместимость: Xerox отработанного тонера Hi-Black для Xerox WC 7425/7428/7435/7525/7530/7535]]></description>
 <param name="Тип">Контейнер</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Xerox</param>
@@ -30711,7 +30711,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Brother</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: HB-DR-3100; Совместимость: Brother HL-5240/5250/5270DN/5340D/5350DN/8370DN; Ресурс: 25K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: HB-DR-3100; Совместимость: Brother HL-5240/5250/5270DN/5340D/5350DN/8370DN; Ресурс: 25K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Brother</param>
@@ -30731,7 +30731,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Brother</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: N-DR-3100; Совместимость: Brother HL-5240/5250/5270DN/5340D/5350DN/8370DN; Ресурс: 25K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: N-DR-3100; Совместимость: Brother HL-5240/5250/5270DN/5340D/5350DN/8370DN; Ресурс: 25K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Brother</param>
@@ -30751,7 +30751,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Тип: Принт-картридж; Партномер: 106R01634; Ресурс: 2K; Цвет: Чёрный; Оригинальность: Оригинал]]></description>
+Оригинальный принт-картридж. Тип: Принт-картридж; Партномер: 106R01634; Ресурс: 2K; Цвет: Чёрный; Оригинальность: Оригинал]]></description>
 <param name="Тип">Принт-картридж</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Xerox</param>
@@ -30770,7 +30770,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Тип: Принт-картридж; Партномер: 106R01632; Ресурс: 1K; Цвет: Пурпурный; Оригинальность: Оригинал]]></description>
+Оригинальный принт-картридж. Тип: Принт-картридж; Партномер: 106R01632; Ресурс: 1K; Цвет: Пурпурный; Оригинальность: Оригинал]]></description>
 <param name="Тип">Принт-картридж</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Xerox</param>
@@ -30789,7 +30789,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Тип: Принт-картридж; Партномер: 106R01633; Ресурс: 1K; Цвет: Желтый; Оригинальность: Оригинал]]></description>
+Оригинальный принт-картридж. Тип: Принт-картридж; Партномер: 106R01633; Ресурс: 1K; Цвет: Желтый; Оригинальность: Оригинал]]></description>
 <param name="Тип">Принт-картридж</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Xerox</param>
@@ -30808,7 +30808,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый картридж. Тип: Копи-картридж; Партномер: N-013R00589; Совместимость: Xerox WC M123/128/133/WC118, Восстанов; Ресурс: 60K; Цвет: Чёрный]]></description>
+Совместимый копи-картридж. Тип: Копи-картридж; Партномер: N-013R00589; Совместимость: Xerox WC M123/128/133/WC118, Восстанов; Ресурс: 60K; Цвет: Чёрный]]></description>
 <param name="Тип">Копи-картридж</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Xerox</param>
@@ -30828,7 +30828,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Brother</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: HB-DR-3300; Совместимость: Brother HL-5440D/5445D/5450DN/DCP-8110DN; Ресурс: 30K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: HB-DR-3300; Совместимость: Brother HL-5440D/5445D/5450DN/DCP-8110DN; Ресурс: 30K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Brother</param>
@@ -30848,7 +30848,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Brother</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: N-DR-3300; Совместимость: Brother HL-5440D/5445D/5450DN/6180DW/DCP-8110DN; Ресурс: 30K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: N-DR-3300; Совместимость: Brother HL-5440D/5445D/5450DN/6180DW/DCP-8110DN; Ресурс: 30K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Brother</param>
@@ -30868,7 +30868,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Brother</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: N-DR-3400; Совместимость: Brother HL-L5000/5100/5200/6250/6300; Ресурс: 30K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: N-DR-3400; Совместимость: Brother HL-L5000/5100/5200/6250/6300; Ресурс: 30K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Brother</param>
@@ -30888,7 +30888,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Brother</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: HB-DR-3400; Совместимость: Brother HL-L5000/5100/5200/6250/6300; Ресурс: 30K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: HB-DR-3400; Совместимость: Brother HL-L5000/5100/5200/6250/6300; Ресурс: 30K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Brother</param>
@@ -30968,7 +30968,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Тип: Принт-картридж; Партномер: 106R01374; Ресурс: 5K; Оригинальность: Оригинал]]></description>
+Оригинальный принт-картридж. Тип: Принт-картридж; Партномер: 106R01374; Ресурс: 5K; Оригинальность: Оригинал]]></description>
 <param name="Тип">Принт-картридж</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Xerox</param>
@@ -31146,7 +31146,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Тип: Копи-картридж; Партномер: 101R00434; Оригинальность: Оригинал]]></description>
+Оригинальный копи-картридж. Тип: Копи-картридж; Партномер: 101R00434; Оригинальность: Оригинал]]></description>
 <param name="Тип">Копи-картридж</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Xerox</param>
@@ -31203,7 +31203,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый картридж. Тип: Копи-картридж; Партномер: N-101R00434; Совместимость: Xerox WC 5222/5225/5230, Восстановленный; Ресурс: 50K; Цвет: Чёрный]]></description>
+Совместимый копи-картридж. Тип: Копи-картридж; Партномер: N-101R00434; Совместимость: Xerox WC 5222/5225/5230, Восстановленный; Ресурс: 50K; Цвет: Чёрный]]></description>
 <param name="Тип">Копи-картридж</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Xerox</param>
@@ -31398,7 +31398,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный драм-картридж. Тип: Драм-юнит; Партномер: DK-3130/2LV93040; Оригинальность: Оригинал]]></description>
+Оригинальный драм-юнит. Тип: Драм-юнит; Партномер: DK-3130/2LV93040; Оригинальность: Оригинал]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -31416,7 +31416,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный тонер. Тип: Контейнер; Партномер: 302NG93080; Оригинальность: Оригинал]]></description>
+Оригинальный бункер для отработанного тонера. Тип: Контейнер; Партномер: 302NG93080; Оригинальность: Оригинал]]></description>
 <param name="Тип">Контейнер</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -31434,7 +31434,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный драм-картридж. Тип: Драм-юнит; Партномер: 302G193035; Оригинальность: Оригинал]]></description>
+Оригинальный драм-юнит. Тип: Драм-юнит; Партномер: 302G193035; Оригинальность: Оригинал]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -31452,7 +31452,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный драм-картридж. Тип: Драм-юнит; Партномер: DK-170/302LZ93061/60; Оригинальность: Оригинал]]></description>
+Оригинальный драм-юнит. Тип: Драм-юнит; Партномер: DK-170/302LZ93061/60; Оригинальность: Оригинал]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -31470,7 +31470,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный драм-картридж. Тип: Драм-юнит; Партномер: DK-450; Оригинальность: Оригинал]]></description>
+Оригинальный драм-юнит. Тип: Драм-юнит; Партномер: DK-450; Оригинальность: Оригинал]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -31488,7 +31488,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный драм-картридж. Тип: Драм-юнит; Партномер: DK-150/302H493010; Оригинальность: Оригинал]]></description>
+Оригинальный драм-юнит. Тип: Драм-юнит; Партномер: DK-150/302H493010; Оригинальность: Оригинал]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -31524,7 +31524,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный драм-картридж. Тип: Драм-юнит; Партномер: DK-1110/302M293010; Оригинальность: Оригинал]]></description>
+Оригинальный драм-юнит. Тип: Драм-юнит; Партномер: DK-1110/302M293010; Оригинальность: Оригинал]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -32716,7 +32716,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный драм-картридж. Тип: Драм-юнит; Партномер: DK-320/302J393033; Оригинальность: Оригинал]]></description>
+Оригинальный драм-юнит. Тип: Драм-юнит; Партномер: DK-320/302J393033; Оригинальность: Оригинал]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -32734,7 +32734,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный драм-картридж. Тип: Драм-юнит; Партномер: DK-475/302K393031; Оригинальность: Оригинал]]></description>
+Оригинальный драм-юнит. Тип: Драм-юнит; Партномер: DK-475/302K393031; Оригинальность: Оригинал]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -32944,7 +32944,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Тип: Копи-картридж; Партномер: 013R00670; Ресурс: 80K; Оригинальность: Оригинал]]></description>
+Оригинальный копи-картридж. Тип: Копи-картридж; Партномер: 013R00670; Ресурс: 80K; Оригинальность: Оригинал]]></description>
 <param name="Тип">Копи-картридж</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Xerox</param>
@@ -34667,7 +34667,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: HB-101R00554; Совместимость: Xerox VersaLink B400; Ресурс: 65K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: HB-101R00554; Совместимость: Xerox VersaLink B400; Ресурс: 65K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Xerox</param>
@@ -34687,7 +34687,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: HB-101R00664; Совместимость: Xerox B205/B210/B; Ресурс: 10K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: HB-101R00664; Совместимость: Xerox B205/B210/B; Ресурс: 10K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Xerox</param>
@@ -34967,7 +34967,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: HB-DK-1110/302M293010; Совместимость: Kyocera FS-1020/1040/1120/1025/1060/1060DN; Ресурс: 100K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: HB-DK-1110/302M293010; Совместимость: Kyocera FS-1020/1040/1120/1025/1060/1060DN; Ресурс: 100K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -34987,7 +34987,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: N-101R00554; Совместимость: Xerox VersaLink B400/405, Восстановленный; Ресурс: 65K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: N-101R00554; Совместимость: Xerox VersaLink B400/405, Восстановленный; Ресурс: 65K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Xerox</param>
@@ -35010,7 +35010,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: N-113R00779; Совместимость: Xerox VersaLink B7020/7025/B7035, Восстановленный; Ресурс: 80K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: N-113R00779; Совместимость: Xerox VersaLink B7020/7025/B7035, Восстановленный; Ресурс: 80K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Xerox</param>
@@ -35147,7 +35147,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Pantum</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: HB-DL-5120; Совместимость: Pantum BP5100DN/BP5100DW; Ресурс: 30K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: HB-DL-5120; Совместимость: Pantum BP5100DN/BP5100DW; Ресурс: 30K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Pantum</param>
@@ -35231,7 +35231,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Pantum</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: HB-DL-425X; Совместимость: Pantum P3305DN/P3305DW; Ресурс: 25K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: HB-DL-425X; Совместимость: Pantum P3305DN/P3305DW; Ресурс: 25K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Pantum</param>
@@ -35303,7 +35303,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: N-101R00435; Совместимость: Xerox WorkCentre 5222/5225/5230/pro 5225, Восст; Ресурс: 80K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: N-101R00435; Совместимость: Xerox WorkCentre 5222/5225/5230/pro 5225, Восст; Ресурс: 80K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Xerox</param>
@@ -35323,7 +35323,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: N-013R00670; Совместимость: Xerox WorkCentre 5019/5021/5022; Ресурс: 80K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: N-013R00670; Совместимость: Xerox WorkCentre 5019/5021/5022; Ресурс: 80K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Xerox</param>
@@ -35346,7 +35346,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Lexmark</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: N-50F0Z00; Совместимость: Lexmark MS/MX310d/410/510de, Восстановленный; Ресурс: 60K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: N-50F0Z00; Совместимость: Lexmark MS/MX310d/410/510de, Восстановленный; Ресурс: 60K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Lexmark</param>
@@ -35366,7 +35366,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: N-DK-3130; Совместимость: Kyocera FS-4100DN/4200DN, Восстановленный; Ресурс: 500K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: N-DK-3130; Совместимость: Kyocera FS-4100DN/4200DN, Восстановленный; Ресурс: 500K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -35551,7 +35551,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: HB-DK-1150; Совместимость: Kyocera ECOSYS M2040dn/M2135dn, Универс; Ресурс: 100K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: HB-DK-1150; Совместимость: Kyocera ECOSYS M2040dn/M2135dn, Универс; Ресурс: 100K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -35573,7 +35573,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: HB-DK-3100; Совместимость: Kyocera ECOSYS M3040idn/M3540idn/FS-2100DN, Восстан; Ресурс: 300K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: HB-DK-3100; Совместимость: Kyocera ECOSYS M3040idn/M3540idn/FS-2100DN, Восстан; Ресурс: 300K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -35595,7 +35595,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: HB-DK-3190; Совместимость: Kyocera ECOSYS P3045dn/P3050dn, Восстановленный; Ресурс: 500K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: HB-DK-3190; Совместимость: Kyocera ECOSYS P3045dn/P3050dn, Восстановленный; Ресурс: 500K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -35615,7 +35615,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: HB-DK-170/302LZ93061/60; Совместимость: Kyocera FS-1035MFP/1120D, Универс; Ресурс: 100K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: HB-DK-170/302LZ93061/60; Совместимость: Kyocera FS-1035MFP/1120D, Универс; Ресурс: 100K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -35638,7 +35638,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: HB-DK-3170; Совместимость: Kyocera P3045dn/M3145dn/M3645dn, Восстановленный; Ресурс: 300K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: HB-DK-3170; Совместимость: Kyocera P3045dn/M3145dn/M3645dn, Восстановленный; Ресурс: 300K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -36089,7 +36089,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Pantum</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: N-DL-5120; Совместимость: Pantum BP5100DN/BP5100DW; Ресурс: 30K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: N-DL-5120; Совместимость: Pantum BP5100DN/BP5100DW; Ресурс: 30K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Pantum</param>
@@ -36350,7 +36350,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: HB-013R00662; Совместимость: Xerox WC 7525/7530/7535/7545/7556/7830/7835; Ресурс: 125K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: HB-013R00662; Совместимость: Xerox WC 7525/7530/7535/7545/7556/7830/7835; Ресурс: 125K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Xerox</param>
@@ -36790,7 +36790,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Тип: Принт-картридж; Партномер: 106R01159; Оригинальность: Оригинал]]></description>
+Оригинальный принт-картридж. Тип: Принт-картридж; Партномер: 106R01159; Оригинальность: Оригинал]]></description>
 <param name="Тип">Принт-картридж</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Xerox</param>
@@ -37625,7 +37625,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый картридж. Тип: Копи-картридж; Партномер: N-101R00432; Совместимость: Xerox WC 5016/5020/B, Восстановленный; Ресурс: 22K; Цвет: Чёрный]]></description>
+Совместимый копи-картридж. Тип: Копи-картридж; Партномер: N-101R00432; Совместимость: Xerox WC 5016/5020/B, Восстановленный; Ресурс: 22K; Цвет: Чёрный]]></description>
 <param name="Тип">Копи-картридж</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Xerox</param>
@@ -38864,7 +38864,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный драм-картридж. Тип: Драм-юнит; Партномер: 2772B003BA; Оригинальность: Оригинал]]></description>
+Оригинальный драм-юнит. Тип: Драм-юнит; Партномер: 2772B003BA; Оригинальность: Оригинал]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Canon</param>
@@ -38882,7 +38882,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Ricoh</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный драм-картридж. Тип: Драм-юнит; Партномер: 411844; Ресурс: 45K; Оригинальность: Оригинал]]></description>
+Оригинальный драм-юнит. Тип: Драм-юнит; Партномер: 411844; Ресурс: 45K; Оригинальность: Оригинал]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Ricoh</param>
@@ -39101,7 +39101,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый картридж. Тип: Копи-картридж; Партномер: HB-101R00432; Совместимость: Xerox WC 5016/5020/B, Восстановленный; Ресурс: 22K; Цвет: Чёрный]]></description>
+Совместимый копи-картридж. Тип: Копи-картридж; Партномер: HB-101R00432; Совместимость: Xerox WC 5016/5020/B, Восстановленный; Ресурс: 22K; Цвет: Чёрный]]></description>
 <param name="Тип">Копи-картридж</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Xerox</param>
@@ -41621,7 +41621,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Epson</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый контейнер. Тип: Контейнер; Партномер: HB-EPS-T6716; Совместимость: Epson отработанных чернил Hi-Black T6716 Epson WF-M5299, WF-M5799, WF-C5790DWF; Цвет: Чёрный]]></description>
+Совместимый контейнер для отработанного тонера. Тип: Контейнер; Партномер: HB-EPS-T6716; Совместимость: Epson отработанных чернил Hi-Black T6716 Epson WF-M5299, WF-M5799, WF-C5790DWF; Цвет: Чёрный]]></description>
 <param name="Тип">Контейнер</param>
 <param name="Технология печати">Струйная</param>
 <param name="Для бренда">Epson</param>
@@ -41646,7 +41646,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый контейнер. Тип: Контейнер; Партномер: 9963520545; Совместимость: Canon отработанных чернил Hi-Black MC-G04 для Canon PIXMA G1130/G2170/G3170; Цвет: Чёрный]]></description>
+Совместимый контейнер для отработанного тонера. Тип: Контейнер; Партномер: 9963520545; Совместимость: Canon отработанных чернил Hi-Black MC-G04 для Canon PIXMA G1130/G2170/G3170; Цвет: Чёрный]]></description>
 <param name="Тип">Контейнер</param>
 <param name="Технология печати">Струйная</param>
 <param name="Для бренда">Canon</param>
@@ -41665,7 +41665,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный тонер. Тип: Контейнер; Партномер: CC493-67913; Оригинальность: Оригинал]]></description>
+Оригинальный бункер для отработанного тонера. Тип: Контейнер; Партномер: CC493-67913; Оригинальность: Оригинал]]></description>
 <param name="Тип">Контейнер</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">HP</param>
@@ -41700,7 +41700,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: HB-C-EXV14D; Совместимость: Canon iR 2016/2020; Ресурс: 45K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: HB-C-EXV14D; Совместимость: Canon iR 2016/2020; Ресурс: 45K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Canon</param>
@@ -41721,7 +41721,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: N-C-EXV14D; Совместимость: Canon iR 2016/2020; Ресурс: 45K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: N-C-EXV14D; Совместимость: Canon iR 2016/2020; Ресурс: 45K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Canon</param>
@@ -41742,7 +41742,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: HB-C-EXV32/33D; Совместимость: Canon iR 2520/25/35; Ресурс: 70K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: HB-C-EXV32/33D; Совместимость: Canon iR 2520/25/35; Ресурс: 70K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Canon</param>
@@ -41997,7 +41997,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: HB-CE314A; Совместимость: HP CLJ CP1025/CP1025nw/M175/176/177; Ресурс: 14K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: HB-CE314A; Совместимость: HP CLJ CP1025/CP1025nw/M175/176/177; Ресурс: 14K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">HP</param>
@@ -42038,7 +42038,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: N-CE314A; Совместимость: HP CLJ CP1025/CP1025nw/M175/176/177; Ресурс: 14K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: N-CE314A; Совместимость: HP CLJ CP1025/CP1025nw/M175/176/177; Ресурс: 14K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">HP</param>
@@ -42359,7 +42359,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж. Тип: Копи-картридж; Партномер: 013R00591; Ресурс: 90K; Оригинальность: Оригинал]]></description>
+Оригинальный копи-картридж. Тип: Копи-картридж; Партномер: 013R00591; Ресурс: 90K; Оригинальность: Оригинал]]></description>
 <param name="Тип">Копи-картридж</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Xerox</param>
@@ -44566,7 +44566,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный тонер. Тип: Контейнер; Партномер: B5L37-67901; Оригинальность: Оригинал]]></description>
+Оригинальный бункер для отработанного тонера. Тип: Контейнер; Партномер: B5L37-67901; Оригинальность: Оригинал]]></description>
 <param name="Тип">Контейнер</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">HP</param>
@@ -45065,7 +45065,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Brother</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET0066; Совместимость: BROTHER HL-5240 (CET); Ресурс: 25000]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET0066; Совместимость: BROTHER HL-5240 (CET); Ресурс: 25000]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Brother</param>
@@ -45084,7 +45084,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Brother</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET0609; Совместимость: BROTHER HL-1112, DCP-1510 (CET), 10000 стр; Ресурс: 10000]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET0609; Совместимость: BROTHER HL-1112, DCP-1510 (CET), 10000 стр; Ресурс: 10000]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Brother</param>
@@ -45104,7 +45104,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Brother</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET0611; Совместимость: BROTHER HL-5440/5450/5470 (CET), 30000 стр; Ресурс: 30000]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET0611; Совместимость: BROTHER HL-5440/5450/5470 (CET), 30000 стр; Ресурс: 30000]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Brother</param>
@@ -51966,7 +51966,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый тонер. Тип: Контейнер; Партномер: CET3134; Совместимость: HP Color LaserJet Enterprise CM4540 MFP (CET)]]></description>
+Совместимый бункер для отработанного тонера. Тип: Контейнер; Партномер: CET3134; Совместимость: HP Color LaserJet Enterprise CM4540 MFP (CET)]]></description>
 <param name="Тип">Контейнер</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">HP</param>
@@ -52003,7 +52003,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET471010; Совместимость: XEROX Color C75/J75 (CET) Чёрный, 200000 стр; Ресурс: 200000; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET471010; Совместимость: XEROX Color C75/J75 (CET) Чёрный, 200000 стр; Ресурс: 200000; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Xerox</param>
@@ -52024,7 +52024,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET471011; Совместимость: XEROX Color J75 Press/C75 Press (CET) CMY, 150000 стр; Ресурс: 150000; Цвет: CMY]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET471011; Совместимость: XEROX Color J75 Press/C75 Press (CET) CMY, 150000 стр; Ресурс: 150000; Цвет: CMY]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Xerox</param>
@@ -52045,7 +52045,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Brother</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET471012; Совместимость: BROTHER DCP-L2500DR/L2520D, HL-L2300DR (CET), 12000 стр; Ресурс: 12000]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET471012; Совместимость: BROTHER DCP-L2500DR/L2520D, HL-L2300DR (CET), 12000 стр; Ресурс: 12000]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Brother</param>
@@ -52065,7 +52065,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Brother</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET471013; Ресурс: 30000]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET471013; Ресурс: 30000]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Brother</param>
@@ -52083,7 +52083,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Konica Minolta</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET471030P; Совместимость: KONICA MINOLTA Bizhub PRESS C1060 (CET) CMYK,/A5WH0Y0/A5WJ0Y0; Ресурс: 320000; Цвет: CMY+Bk]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET471030P; Совместимость: KONICA MINOLTA Bizhub PRESS C1060 (CET) CMYK,/A5WH0Y0/A5WJ0Y0; Ресурс: 320000; Цвет: CMY+Bk]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Konica Minolta</param>
@@ -52104,7 +52104,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>FUJIFILM</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET471034; Совместимость: FUJIFILM Apeos C3070/C3570/C4570/C5570/C7070 (CET), 240000 стр; Ресурс: 240000]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET471034; Совместимость: FUJIFILM Apeos C3070/C3570/C4570/C5570/C7070 (CET), 240000 стр; Ресурс: 240000]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">FUJIFILM</param>
@@ -52124,7 +52124,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET471035; Совместимость: XEROX DocuCentre SC2022 (CET) CMYK; Цвет: CMY+Bk]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET471035; Совместимость: XEROX DocuCentre SC2022 (CET) CMYK; Цвет: CMY+Bk]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Xerox</param>
@@ -52144,7 +52144,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>FUJIFILM</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET471036; Совместимость: FUJIFILM ApeosPort C2060/C2560/C3060 (CET), 87000 стр; Ресурс: 87000]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET471036; Совместимость: FUJIFILM ApeosPort C2060/C2560/C3060 (CET), 87000 стр; Ресурс: 87000]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">FUJIFILM</param>
@@ -52164,7 +52164,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET471037; Цвет: CMY+Bk]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET471037; Цвет: CMY+Bk]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Xerox</param>
@@ -52183,7 +52183,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET471038; Совместимость: XEROX VersaLink C7000 (CET) CMYK; Цвет: CMY+Bk]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET471038; Совместимость: XEROX VersaLink C7000 (CET) CMYK; Цвет: CMY+Bk]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Xerox</param>
@@ -52203,7 +52203,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Ricoh</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET471044; Совместимость: RICOH IM C2500/IMC2000/MC2000/MC2001 (CET) CMYK, 60000 стр; Ресурс: 60000; Цвет: CMY+Bk]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET471044; Совместимость: RICOH IM C2500/IMC2000/MC2000/MC2001 (CET) CMYK, 60000 стр; Ресурс: 60000; Цвет: CMY+Bk]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Ricoh</param>
@@ -52224,7 +52224,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Konica Minolta</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET471045P; Ресурс: 225000; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET471045P; Ресурс: 225000; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Konica Minolta</param>
@@ -52244,7 +52244,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Konica Minolta</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET471046P; Ресурс: 105000; Цвет: CMY]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET471046P; Ресурс: 105000; Цвет: CMY]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Konica Minolta</param>
@@ -52264,7 +52264,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET471047; Совместимость: XEROX VersaLink C8000/9000 (CET) CMYK; Цвет: CMY+Bk]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET471047; Совместимость: XEROX VersaLink C8000/9000 (CET) CMYK; Цвет: CMY+Bk]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Xerox</param>
@@ -52284,7 +52284,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Ricoh</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET471050; Совместимость: RICOH IMC3000 (CET); Ресурс: 300000; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET471050; Совместимость: RICOH IMC3000 (CET); Ресурс: 300000; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Ricoh</param>
@@ -52305,7 +52305,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Ricoh</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET471051; Совместимость: RICOH IMC3000/C3500 (CET) CMY, 170000 стр; Ресурс: 170000; Цвет: CMY]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET471051; Совместимость: RICOH IMC3000/C3500 (CET) CMY, 170000 стр; Ресурс: 170000; Цвет: CMY]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Ricoh</param>
@@ -52326,7 +52326,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Ricoh</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET471052; Совместимость: RICOH IMC4500 (CET); Ресурс: 230000; Цвет: CMY]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET471052; Совместимость: RICOH IMC4500 (CET); Ресурс: 230000; Цвет: CMY]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Ricoh</param>
@@ -52347,7 +52347,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Ricoh</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET471053; Совместимость: RICOH MPC3003/3503/4503/5503 (CET); Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET471053; Совместимость: RICOH MPC3003/3503/4503/5503 (CET); Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Ricoh</param>
@@ -52367,7 +52367,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Ricoh</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET471054; Совместимость: RICOH MPC3003/3503/4503/5503 (CET); Цвет: CMY]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET471054; Совместимость: RICOH MPC3003/3503/4503/5503 (CET); Цвет: CMY]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Ricoh</param>
@@ -52387,7 +52387,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Ricoh</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET471055; Совместимость: RICOH MPC3004/3504/4504/6004/501SP (CET); Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET471055; Совместимость: RICOH MPC3004/3504/4504/6004/501SP (CET); Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Ricoh</param>
@@ -52407,7 +52407,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Ricoh</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET471056; Совместимость: RICOH MPC3004/3504/4504/6004/501SP (CET); Цвет: CMY]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET471056; Совместимость: RICOH MPC3004/3504/4504/6004/501SP (CET); Цвет: CMY]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Ricoh</param>
@@ -52427,7 +52427,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET471059; Совместимость: CANON iR 2625 (CET); Ресурс: 171000]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET471059; Совместимость: CANON iR 2625 (CET); Ресурс: 171000]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Canon</param>
@@ -52446,7 +52446,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Konica Minolta</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET471060P; Совместимость: KONICA MINOLTA Bizhub C450i (CET); Ресурс: 240000; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET471060P; Совместимость: KONICA MINOLTA Bizhub C450i (CET); Ресурс: 240000; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Konica Minolta</param>
@@ -52466,7 +52466,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Konica Minolta</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET471061P; Совместимость: KONICA MINOLTA Bizhub C450i (CET); Ресурс: 165000; Цвет: CMY]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET471061P; Совместимость: KONICA MINOLTA Bizhub C450i (CET); Ресурс: 165000; Цвет: CMY]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Konica Minolta</param>
@@ -52486,7 +52486,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET471064; Ресурс: 100000]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET471064; Ресурс: 100000]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -52505,7 +52505,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET471064P; Ресурс: 100000]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET471064P; Ресурс: 100000]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -52523,7 +52523,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET471068; Совместимость: HP LaserJet Managed MFP E82540 (CET)]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET471068; Совместимость: HP LaserJet Managed MFP E82540 (CET)]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">HP</param>
@@ -52542,7 +52542,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET471069; Совместимость: HP Color LaserJet Managed MFP E87640 (CET); Ресурс: 144000; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET471069; Совместимость: HP Color LaserJet Managed MFP E87640 (CET); Ресурс: 144000; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">HP</param>
@@ -52563,7 +52563,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET471070; Совместимость: HP Color LaserJet Managed MFP E87640 (CET); Ресурс: 130000; Цвет: CMY]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET471070; Совместимость: HP Color LaserJet Managed MFP E87640 (CET); Ресурс: 130000; Цвет: CMY]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">HP</param>
@@ -52584,7 +52584,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET471071; Совместимость: HP Color LaserJet Managed MFP E77822/77825/77830 (CET) CMYK; Цвет: CMY+Bk]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET471071; Совместимость: HP Color LaserJet Managed MFP E77822/77825/77830 (CET) CMYK; Цвет: CMY+Bk]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">HP</param>
@@ -52604,7 +52604,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET471072; Совместимость: KYOCERA ECOSYS P5018cdn (CET); Ресурс: 100000; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET471072; Совместимость: KYOCERA ECOSYS P5018cdn (CET); Ресурс: 100000; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -52624,7 +52624,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET471073; Совместимость: KYOCERA ECOSYS P5018cdn (CET); Ресурс: 100000; Цвет: CMY]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET471073; Совместимость: KYOCERA ECOSYS P5018cdn (CET); Ресурс: 100000; Цвет: CMY]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -52644,7 +52644,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Konica Minolta</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET471074; Совместимость: KONICA MINOLTA Bizhub 308e/368e/458e/558e/658e (CET)]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET471074; Совместимость: KONICA MINOLTA Bizhub 308e/368e/458e/558e/658e (CET)]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Konica Minolta</param>
@@ -52663,7 +52663,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Konica Minolta</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET471075; Совместимость: KONICA MINOLTA Bizhub C226i/C266i/C286i (CET) Чёрный, 105000 стр; Ресурс: 105000; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET471075; Совместимость: KONICA MINOLTA Bizhub C226i/C266i/C286i (CET) Чёрный, 105000 стр; Ресурс: 105000; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Konica Minolta</param>
@@ -52684,7 +52684,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET471078; Совместимость: CANON iR ADVANCE DX C5840i/C5850i (CET) CMYK; Цвет: CMY+Bk]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET471078; Совместимость: CANON iR ADVANCE DX C5840i/C5850i (CET) CMYK; Цвет: CMY+Bk]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Canon</param>
@@ -52704,7 +52704,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET471079; Совместимость: CANON iR 1018/1019/1023/1024/1025 (CET), 25000 стр; Ресурс: 25000]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET471079; Совместимость: CANON iR 1018/1019/1023/1024/1025 (CET), 25000 стр; Ресурс: 25000]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Canon</param>
@@ -52724,7 +52724,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET471081; Совместимость: CANON iR ADVANCE DX 6860i/6870i (CET)]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET471081; Совместимость: CANON iR ADVANCE DX 6860i/6870i (CET)]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Canon</param>
@@ -52743,7 +52743,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET471082; Совместимость: XEROX AltaLink C8130 (CET) CMYK, (WW); Ресурс: 180000; Цвет: CMY+Bk]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET471082; Совместимость: XEROX AltaLink C8130 (CET) CMYK, (WW); Ресурс: 180000; Цвет: CMY+Bk]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Xerox</param>
@@ -52764,7 +52764,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET471083; Совместимость: KYOCERA PA2100CX/MA2100CX (CET) Чёрный, 100000 стр; Ресурс: 100000; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET471083; Совместимость: KYOCERA PA2100CX/MA2100CX (CET) Чёрный, 100000 стр; Ресурс: 100000; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -52785,7 +52785,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET471084; Совместимость: KYOCERA PA2100CX/MA2100CX (CET) CMY, 100000 стр; Ресурс: 100000; Цвет: CMY]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET471084; Совместимость: KYOCERA PA2100CX/MA2100CX (CET) CMY, 100000 стр; Ресурс: 100000; Цвет: CMY]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -52806,7 +52806,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Ricoh</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET471085; Совместимость: RICOH IM2500/3000/4000 (CET), (WW), 120000 стр; Ресурс: 120000]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET471085; Совместимость: RICOH IM2500/3000/4000 (CET), (WW), 120000 стр; Ресурс: 120000]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Ricoh</param>
@@ -52826,7 +52826,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Konica Minolta</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET471086; Совместимость: KONICA MINOLTA AccurioPrint C4065 (CET); Ресурс: 460000; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET471086; Совместимость: KONICA MINOLTA AccurioPrint C4065 (CET); Ресурс: 460000; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Konica Minolta</param>
@@ -52846,7 +52846,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Konica Minolta</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET471087; Совместимость: KONICA MINOLTA AccurioPrint C4065 (CET); Ресурс: 460000; Цвет: CMY]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET471087; Совместимость: KONICA MINOLTA AccurioPrint C4065 (CET); Ресурс: 460000; Цвет: CMY]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Konica Minolta</param>
@@ -52866,7 +52866,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Konica Minolta</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET471092; Совместимость: KONICA MINOLTA Bizhub C257i/C227i/C287i (CET) Чёрный, 102000 стр; Ресурс: 102000; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET471092; Совместимость: KONICA MINOLTA Bizhub C257i/C227i/C287i (CET) Чёрный, 102000 стр; Ресурс: 102000; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Konica Minolta</param>
@@ -52887,7 +52887,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET471093; Совместимость: XEROX DocuCentre SC2020 (CET) CMYK, (WW); Цвет: CMY+Bk]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET471093; Совместимость: XEROX DocuCentre SC2020 (CET) CMYK, (WW); Цвет: CMY+Bk]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Xerox</param>
@@ -52907,7 +52907,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET471094; Совместимость: CANON iR ADVANCE DX 4825 (CET); Ресурс: 98900]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET471094; Совместимость: CANON iR ADVANCE DX 4825 (CET); Ресурс: 98900]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Canon</param>
@@ -52926,7 +52926,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET471095; Совместимость: KYOCERA TASKalfa 2552ci (CET); Ресурс: 200000]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET471095; Совместимость: KYOCERA TASKalfa 2552ci (CET); Ресурс: 200000]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -52945,7 +52945,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET471101; Совместимость: CANON iR 2725 (CET); Ресурс: 120000]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET471101; Совместимость: CANON iR 2725 (CET); Ресурс: 120000]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Canon</param>
@@ -53040,7 +53040,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET471115; Совместимость: XEROX Phaser 7800dn (CET), 145000 стр; Ресурс: 145000]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET471115; Совместимость: XEROX Phaser 7800dn (CET), 145000 стр; Ресурс: 145000]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Xerox</param>
@@ -53060,7 +53060,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET471121; Совместимость: XEROX VersaLink C7120/C7125/C7130 (CET) CMYK; Цвет: CMY+Bk]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET471121; Совместимость: XEROX VersaLink C7120/C7125/C7130 (CET) CMYK; Цвет: CMY+Bk]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Xerox</param>
@@ -53098,7 +53098,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый тонер. Тип: Контейнер; Партномер: CET5197; Совместимость: CANON iR ADVANCE C5030 (CET)]]></description>
+Совместимый бункер для отработанного тонера. Тип: Контейнер; Партномер: CET5197; Совместимость: CANON iR ADVANCE C5030 (CET)]]></description>
 <param name="Тип">Контейнер</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Canon</param>
@@ -53116,7 +53116,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый тонер. Тип: Контейнер; Партномер: CET521001; Совместимость: Xerox Phaser 6600N, VersaLink C400/405 (CET)]]></description>
+Совместимый бункер для отработанного тонера. Тип: Контейнер; Партномер: CET521001; Совместимость: Xerox Phaser 6600N, VersaLink C400/405 (CET)]]></description>
 <param name="Тип">Контейнер</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Xerox</param>
@@ -53135,7 +53135,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый тонер. Тип: Контейнер; Партномер: CET521028; Совместимость: XEROX VersaLink C8000/9000 (CET), 83000 стр; Ресурс: 83000]]></description>
+Совместимый бункер для отработанного тонера. Тип: Контейнер; Партномер: CET521028; Совместимость: XEROX VersaLink C8000/9000 (CET), 83000 стр; Ресурс: 83000]]></description>
 <param name="Тип">Контейнер</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Xerox</param>
@@ -53154,7 +53154,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Konica Minolta</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый тонер. Тип: Контейнер; Партномер: CET521030; Совместимость: KONICA MINOLTA Bizhub C250i (CET)]]></description>
+Совместимый бункер для отработанного тонера. Тип: Контейнер; Партномер: CET521030; Совместимость: KONICA MINOLTA Bizhub C250i (CET)]]></description>
 <param name="Тип">Контейнер</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Konica Minolta</param>
@@ -53172,7 +53172,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Ricoh</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый тонер. Тип: Контейнер; Партномер: CET521031; Совместимость: RICOH MPC2011SP/2504/3004/4504 (CET)]]></description>
+Совместимый бункер для отработанного тонера. Тип: Контейнер; Партномер: CET521031; Совместимость: RICOH MPC2011SP/2504/3004/4504 (CET)]]></description>
 <param name="Тип">Контейнер</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Ricoh</param>
@@ -53191,7 +53191,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый тонер. Тип: Контейнер; Партномер: CET521033; Совместимость: KYOCERA TASKalfa 3050ci (CET)]]></description>
+Совместимый бункер для отработанного тонера. Тип: Контейнер; Партномер: CET521033; Совместимость: KYOCERA TASKalfa 3050ci (CET)]]></description>
 <param name="Тип">Контейнер</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -53209,7 +53209,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Konica Minolta</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый тонер. Тип: Контейнер; Партномер: CET521042; Совместимость: KONICA MINOLTA Bizhub C3300i (CET)]]></description>
+Совместимый бункер для отработанного тонера. Тип: Контейнер; Партномер: CET521042; Совместимость: KONICA MINOLTA Bizhub C3300i (CET)]]></description>
 <param name="Тип">Контейнер</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Konica Minolta</param>
@@ -53227,7 +53227,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Konica Minolta</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый тонер. Тип: Контейнер; Партномер: CET521044; Совместимость: KONICA MINOLTA AccurioPress C2060 (CET)]]></description>
+Совместимый бункер для отработанного тонера. Тип: Контейнер; Партномер: CET521044; Совместимость: KONICA MINOLTA AccurioPress C2060 (CET)]]></description>
 <param name="Тип">Контейнер</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Konica Minolta</param>
@@ -53246,7 +53246,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Konica Minolta</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый тонер. Тип: Контейнер; Партномер: CET521045; Совместимость: KONICA MINOLTA Bizhub 552 (CET)]]></description>
+Совместимый бункер для отработанного тонера. Тип: Контейнер; Партномер: CET521045; Совместимость: KONICA MINOLTA Bizhub 552 (CET)]]></description>
 <param name="Тип">Контейнер</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Konica Minolta</param>
@@ -53264,7 +53264,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Sharp</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый тонер. Тип: Контейнер; Партномер: CET521048; Совместимость: SHARP MX-2651/3571/2630N/3051/5051/3061 (CET)]]></description>
+Совместимый бункер для отработанного тонера. Тип: Контейнер; Партномер: CET521048; Совместимость: SHARP MX-2651/3571/2630N/3051/5051/3061 (CET)]]></description>
 <param name="Тип">Контейнер</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Sharp</param>
@@ -53283,7 +53283,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET5228P; Ресурс: 120000; Цвет: CMY+Bk]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET5228P; Ресурс: 120000; Цвет: CMY+Bk]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Canon</param>
@@ -53302,7 +53302,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый тонер. Тип: Контейнер; Партномер: CET5274; Ресурс: 3320 л]]></description>
+Совместимый бункер для отработанного тонера. Тип: Контейнер; Партномер: CET5274; Ресурс: 3320 л]]></description>
 <param name="Тип">Контейнер</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Canon</param>
@@ -53750,7 +53750,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET5659; Совместимость: CANON iR 1730 (CET); Ресурс: 100000]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET5659; Совместимость: CANON iR 1730 (CET); Ресурс: 100000]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Canon</param>
@@ -53769,7 +53769,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET5670P; Совместимость: CANON iR ADVANCE C5030 (CET) CMYK, (унив.); Ресурс: 150000; Цвет: CMY+Bk]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET5670P; Совместимость: CANON iR ADVANCE C5030 (CET) CMYK, (унив.); Ресурс: 150000; Цвет: CMY+Bk]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Canon</param>
@@ -53789,7 +53789,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET5674U; Ресурс: 30000]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET5674U; Ресурс: 30000]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Canon</param>
@@ -53808,7 +53808,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET5675; Совместимость: CANON iR ADVANCE C5535/C5540/C5550/C5560 (CET) CMYK, 200000 стр; Ресурс: 200000; Цвет: CMY+Bk]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET5675; Совместимость: CANON iR ADVANCE C5535/C5540/C5550/C5560 (CET) CMYK, 200000 стр; Ресурс: 200000; Цвет: CMY+Bk]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Canon</param>
@@ -53829,7 +53829,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET5821U; Совместимость: CANON iR 2270 (CET); Ресурс: 120000]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET5821U; Совместимость: CANON iR 2270 (CET); Ресурс: 120000]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Canon</param>
@@ -54083,7 +54083,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Ricoh</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET6546P; Совместимость: RICOH MPC2003/MPC2503 (CET) CMYK, 60000 стр; Ресурс: 60000; Цвет: CMY+Bk]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET6546P; Совместимость: RICOH MPC2003/MPC2503 (CET) CMYK, 60000 стр; Ресурс: 60000; Цвет: CMY+Bk]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Ricoh</param>
@@ -54933,7 +54933,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Konica Minolta</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый тонер. Тип: Контейнер; Партномер: CET7114]]></description>
+Совместимый бункер для отработанного тонера. Тип: Контейнер; Партномер: CET7114]]></description>
 <param name="Тип">Контейнер</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Konica Minolta</param>
@@ -55169,7 +55169,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Konica Minolta</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET7367; Ресурс: 230K]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET7367; Ресурс: 230K]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Konica Minolta</param>
@@ -55187,7 +55187,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Konica Minolta</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET7368P; Совместимость: KONICA MINOLTA Bizhub 224E (CET); Ресурс: 130000; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET7368P; Совместимость: KONICA MINOLTA Bizhub 224E (CET); Ресурс: 130000; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Konica Minolta</param>
@@ -55224,7 +55224,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Konica Minolta</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET7370P; Совместимость: KONICA MINOLTA Bizhub 308 (CET); Ресурс: 150000; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET7370P; Совместимость: KONICA MINOLTA Bizhub 308 (CET); Ресурс: 150000; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Konica Minolta</param>
@@ -55244,7 +55244,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Konica Minolta</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET7371P; Совместимость: KONICA MINOLTA Bizhub C258 (CET); Ресурс: 150000; Цвет: CMY]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET7371P; Совместимость: KONICA MINOLTA Bizhub C258 (CET); Ресурс: 150000; Цвет: CMY]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Konica Minolta</param>
@@ -55264,7 +55264,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Konica Minolta</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET7372U; Совместимость: KONICA MINOLTA Bizhub 227/287/367 (CET), (WW), 110000 стр; Ресурс: 110000]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET7372U; Совместимость: KONICA MINOLTA Bizhub 227/287/367 (CET), (WW), 110000 стр; Ресурс: 110000]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Konica Minolta</param>
@@ -55284,7 +55284,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Konica Minolta</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET7373U; Ресурс: 214K]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET7373U; Ресурс: 214K]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Konica Minolta</param>
@@ -55302,7 +55302,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый тонер. Тип: Контейнер; Партномер: CET7378; Совместимость: Kyocera Ecosys P3045dn/3050dn/3055dn/3060dn,/WT-3100]]></description>
+Совместимый бункер для отработанного тонера. Тип: Контейнер; Партномер: CET7378; Совместимость: Kyocera Ecosys P3045dn/3050dn/3055dn/3060dn,/WT-3100]]></description>
 <param name="Тип">Контейнер</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -55320,7 +55320,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Sharp</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET7483; Совместимость: SHARP MX-2651/3571/3061/3050V (CET) CMYK, 200000 стр; Ресурс: 200000; Цвет: CMY+Bk]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET7483; Совместимость: SHARP MX-2651/3571/3061/3050V (CET) CMYK, 200000 стр; Ресурс: 200000; Цвет: CMY+Bk]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Sharp</param>
@@ -55341,7 +55341,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET7490; Совместимость: CANON iR ADVANCE 4535i/4545i/4551i (CET), 200000 стр; Ресурс: 200000]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET7490; Совместимость: CANON iR ADVANCE 4535i/4545i/4551i (CET), 200000 стр; Ресурс: 200000]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Canon</param>
@@ -55361,7 +55361,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Sharp</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый тонер. Тип: Контейнер; Партномер: CET7697; Совместимость: SHARP MX-M364N (CET)]]></description>
+Совместимый бункер для отработанного тонера. Тип: Контейнер; Партномер: CET7697; Совместимость: SHARP MX-M364N (CET)]]></description>
 <param name="Тип">Контейнер</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Sharp</param>
@@ -55420,7 +55420,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый тонер. Тип: Контейнер; Партномер: CET7947; Совместимость: XEROX WorkCentre 7425 (CET)]]></description>
+Совместимый бункер для отработанного тонера. Тип: Контейнер; Партномер: CET7947; Совместимость: XEROX WorkCentre 7425 (CET)]]></description>
 <param name="Тип">Контейнер</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Xerox</param>
@@ -55438,7 +55438,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET7949N; Совместимость: XEROX WorkCentre 7525, AltaLink C8030/8035 (CET) CMYK, 150000 стр; Ресурс: 150000; Цвет: CMY+Bk]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET7949N; Совместимость: XEROX WorkCentre 7525, AltaLink C8030/8035 (CET) CMYK, 150000 стр; Ресурс: 150000; Цвет: CMY+Bk]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Xerox</param>
@@ -55458,7 +55458,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый тонер. Тип: Контейнер; Партномер: CET7972; Совместимость: XEROX WorkCentre 7120/7125/7225 (CET)]]></description>
+Совместимый бункер для отработанного тонера. Тип: Контейнер; Партномер: CET7972; Совместимость: XEROX WorkCentre 7120/7125/7225 (CET)]]></description>
 <param name="Тип">Контейнер</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Xerox</param>
@@ -55476,7 +55476,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый тонер. Тип: Контейнер; Партномер: CET7979; Совместимость: XEROX DocuCentre SC2020/2021 (CET)]]></description>
+Совместимый бункер для отработанного тонера. Тип: Контейнер; Партномер: CET7979; Совместимость: XEROX DocuCentre SC2020/2021 (CET)]]></description>
 <param name="Тип">Контейнер</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Xerox</param>
@@ -55495,7 +55495,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Konica Minolta</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET7983U; Ресурс: 100000; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET7983U; Ресурс: 100000; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Konica Minolta</param>
@@ -55515,7 +55515,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Konica Minolta</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET7984U; Ресурс: 80000; Цвет: CMY]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET7984U; Ресурс: 80000; Цвет: CMY]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Konica Minolta</param>
@@ -56577,7 +56577,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET8997; Совместимость: KYOCERA ECOSYS P2235dn (CET), , DK-1150]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET8997; Совместимость: KYOCERA ECOSYS P2235dn (CET), , DK-1150]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -56595,7 +56595,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: CET8997P]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: CET8997P]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -56754,7 +56754,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Sharp</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный драм-картридж. Тип: Драм-юнит; Партномер: CFRM-0021US74; Оригинальность: Оригинал]]></description>
+Оригинальный драм-юнит. Тип: Драм-юнит; Партномер: CFRM-0021US74; Оригинальность: Оригинал]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Sharp</param>
@@ -56808,7 +56808,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Ricoh</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный драм-картридж. Тип: Драм-юнит; Партномер: D1272212; Оригинальность: Оригинал]]></description>
+Оригинальный драм-юнит. Тип: Драм-юнит; Партномер: D1272212; Оригинальность: Оригинал]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Ricoh</param>
@@ -56825,7 +56825,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Ricoh</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный драм-картридж. Тип: Драм-юнит; Партномер: D1882235; Оригинальность: Оригинал]]></description>
+Оригинальный драм-юнит. Тип: Драм-юнит; Партномер: D1882235; Оригинальность: Оригинал]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Ricoh</param>
@@ -56842,7 +56842,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: DGP0575; Совместимость: HP Color Laser 150a/150nw/MFP 178nw/179fnw (CET)]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: DGP0575; Совместимость: HP Color Laser 150a/150nw/MFP 178nw/179fnw (CET)]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">HP</param>
@@ -56861,7 +56861,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: DGP0576; Совместимость: HP LaserJet MFP M433a/M436dn/M436n/M436nda (CET)]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: DGP0576; Совместимость: HP LaserJet MFP M433a/M436dn/M436n/M436nda (CET)]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">HP</param>
@@ -56880,7 +56880,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: DGP0591]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: DGP0591]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Xerox</param>
@@ -57056,7 +57056,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: DGP0674; Совместимость: XEROX WorkCentre 5325/5330/5335 (CET), (восстановленный)]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: DGP0674; Совместимость: XEROX WorkCentre 5325/5330/5335 (CET), (восстановленный)]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Xerox</param>
@@ -57075,7 +57075,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый тонер. Тип: Контейнер; Партномер: DGP0743; Совместимость: KYOCERA FS-1040/1060/1020MFP (CET)]]></description>
+Совместимый бункер для отработанного тонера. Тип: Контейнер; Партномер: DGP0743; Совместимость: KYOCERA FS-1040/1060/1020MFP (CET)]]></description>
 <param name="Тип">Контейнер</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -57093,7 +57093,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый тонер. Тип: Контейнер; Партномер: DGP0758; Совместимость: KYOCERA FS-6025MFP (CET)]]></description>
+Совместимый бункер для отработанного тонера. Тип: Контейнер; Партномер: DGP0758; Совместимость: KYOCERA FS-6025MFP (CET)]]></description>
 <param name="Тип">Контейнер</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -57111,7 +57111,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый тонер. Тип: Контейнер; Партномер: DGP0759; Совместимость: XEROX Phaser 6510, WorkCentre 6515 (CET)]]></description>
+Совместимый бункер для отработанного тонера. Тип: Контейнер; Партномер: DGP0759; Совместимость: XEROX Phaser 6510, WorkCentre 6515 (CET)]]></description>
 <param name="Тип">Контейнер</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Xerox</param>
@@ -57130,7 +57130,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: DGP2021; Совместимость: XEROX VersaLink B7025/B7030/B703 (CET)]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: DGP2021; Совместимость: XEROX VersaLink B7025/B7030/B703 (CET)]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Xerox</param>
@@ -57225,7 +57225,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: DGP2027; Совместимость: XEROX VersaLink B7025/B7030/B703 (CET)]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: DGP2027; Совместимость: XEROX VersaLink B7025/B7030/B703 (CET)]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Xerox</param>
@@ -57244,7 +57244,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: DK-1150]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: DK-1150]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -57261,7 +57261,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: DK-1270-OEM; Ресурс: 100000]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: DK-1270-OEM; Ресурс: 100000]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -57280,7 +57280,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: DK-170/302LZ93060/302LZ93061]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: DK-170/302LZ93060/302LZ93061]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -57298,7 +57298,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: 30C0T93020/DK-3210]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: 30C0T93020/DK-3210]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -57316,7 +57316,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: DK-5140]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: DK-5140]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -57334,7 +57334,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: DK-5230; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: DK-5230; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -57353,7 +57353,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: DK-5231]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: DK-5231]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -57371,7 +57371,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: DK-5231]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: DK-5231]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -57389,7 +57389,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: DK-5240/302YJ93010; Ресурс: 200000]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: DK-5240/302YJ93010; Ресурс: 200000]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -57408,7 +57408,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: 302P193011]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: 302P193011]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -57426,7 +57426,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: 2LH93014/DK-6305]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: 2LH93014/DK-6305]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -57444,7 +57444,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: 302P393060/DK-8115]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: 302P393060/DK-8115]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -57462,7 +57462,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: 2LC93014/DK-8505]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: 2LC93014/DK-8505]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -57499,7 +57499,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Pantum</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный драм-картридж. Тип: Драм-юнит; Партномер: DL-5120P; Ресурс: 30K; Оригинальность: Оригинал]]></description>
+Оригинальный драм-юнит. Тип: Драм-юнит; Партномер: DL-5120P; Ресурс: 30K; Оригинальность: Оригинал]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Pantum</param>
@@ -58217,7 +58217,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: HB-013R00679; Совместимость: Xerox B1022/B; Ресурс: 80K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: HB-013R00679; Совместимость: Xerox B1022/B; Ресурс: 80K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Xerox</param>
@@ -58480,7 +58480,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: HB-101R00582; Совместимость: Xerox VersaLink B600P/B605MP/B610P/B615MP; Ресурс: 60K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: HB-101R00582; Совместимость: Xerox VersaLink B600P/B605MP/B610P/B615MP; Ресурс: 60K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Xerox</param>
@@ -58505,7 +58505,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Hi-Black</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: HB-40IU40R; Совместимость: F+ imaging P40dn/M40adn; Ресурс: 40K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: HB-40IU40R; Совместимость: F+ imaging P40dn/M40adn; Ресурс: 40K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">F+ imaging</param>
@@ -58859,7 +58859,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: HB-CF234A; Совместимость: HP LaserJet Ultra M106/MFP M134, 9, 2K (без тубы); Ресурс: 9K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: HB-CF234A; Совместимость: HP LaserJet Ultra M106/MFP M134, 9, 2K (без тубы); Ресурс: 9K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">HP</param>
@@ -59238,7 +59238,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Hi-Black</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: HB-DC-HW-X-15000; Совместимость: Huawei PixLab X1/B5/CV81-WD; Ресурс: 15K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: HB-DC-HW-X-15000; Совместимость: Huawei PixLab X1/B5/CV81-WD; Ресурс: 15K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Huawei</param>
@@ -59258,7 +59258,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: HB-DK-1150-PRM; Совместимость: Kyocera ECOSYS M2040dn/M2135dn, 100K (Mitsubishi); Ресурс: 100K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: HB-DK-1150-PRM; Совместимость: Kyocera ECOSYS M2040dn/M2135dn, 100K (Mitsubishi); Ресурс: 100K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -59283,7 +59283,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: HB-DK-1270; Совместимость: Kyocera MA4000x/MA4000fx/MA4000wifx; Ресурс: 80K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: HB-DK-1270; Совместимость: Kyocera MA4000x/MA4000fx/MA4000wifx; Ресурс: 80K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -59303,7 +59303,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Hi-Black</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: HB-DR-1071H; Совместимость: Avision AP40/A; Ресурс: 35K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: HB-DR-1071H; Совместимость: Avision AP40/A; Ресурс: 35K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Avision</param>
@@ -59323,7 +59323,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Brother</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: HB-DR-2400; Совместимость: Brother HL-L2310D/L2350DW/2357/MFC-L2710DW/DCP-L2510D; Ресурс: 12K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: HB-DR-2400; Совместимость: Brother HL-L2310D/L2350DW/2357/MFC-L2710DW/DCP-L2510D; Ресурс: 12K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Brother</param>
@@ -59343,7 +59343,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Hi-Black</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: HB-DR133; Совместимость: Катюша P133; Ресурс: 30K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: HB-DR133; Совместимость: Катюша P133; Ресурс: 30K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Катюша</param>
@@ -59363,7 +59363,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Hi-Black</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: HB-DR240; Совместимость: Катюша P140/M140; Ресурс: 30K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: HB-DR240; Совместимость: Катюша P140/M140; Ресурс: 30K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Катюша</param>
@@ -59870,7 +59870,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Hi-Black</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: HB-PCM130; Совместимость: Катюша P130; Ресурс: 12K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: HB-PCM130; Совместимость: Катюша P130; Ресурс: 12K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Катюша</param>
@@ -59890,7 +59890,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Hi-Black</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: HB-PCM247; Совместимость: Катюша P247; Ресурс: 45K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: HB-PCM247; Совместимость: Катюша P247; Ресурс: 45K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Катюша</param>
@@ -61274,7 +61274,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: HB-W1120A; Совместимость: HP Color Laser 150a/150nw/MFP178nw/179fnw; Ресурс: 16K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: HB-W1120A; Совместимость: HP Color Laser 150a/150nw/MFP178nw/179fnw; Ресурс: 16K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">HP</param>
@@ -61524,7 +61524,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: HB-W1580D; Совместимость: HP Tank MFP 1005/1020/2506; Ресурс: 30K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: HB-W1580D; Совместимость: HP Tank MFP 1005/1020/2506; Ресурс: 30K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">HP</param>
@@ -62366,7 +62366,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Pantum</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: N-DO-428; Совместимость: Pantum P3308DN/P3308DW/M7108DN/M7108DW; Ресурс: 12K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: N-DO-428; Совместимость: Pantum P3308DN/P3308DW/M7108DN/M7108DW; Ресурс: 12K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Pantum</param>
@@ -62388,7 +62388,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Brother</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: N-DR-3600; Совместимость: Brother HL-L5210/6210/6410/MFC L5710/DCP L; Ресурс: 75K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: N-DR-3600; Совместимость: Brother HL-L5210/6210/6410/MFC L5710/DCP L; Ресурс: 75K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Brother</param>
@@ -62411,7 +62411,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Panasonic</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: N-KX-FAD93A; Совместимость: Panasonic KX-MB263/283/763/773; Ресурс: 6K; Цвет: Чёрный]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: N-KX-FAD93A; Совместимость: Panasonic KX-MB263/283/763/773; Ресурс: 6K; Цвет: Чёрный]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Panasonic</param>
@@ -62431,7 +62431,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: N-OPC-XR-VLINK-B600; Совместимость: Xerox VersaLink B600/B605/B610/B615, 60К, N-OPC-XRB600; Ресурс: 60K]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: N-OPC-XR-VLINK-B600; Совместимость: Xerox VersaLink B600/B605/B610/B615, 60К, N-OPC-XRB600; Ресурс: 60K]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Xerox</param>
@@ -62450,7 +62450,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый драм-картридж. Тип: Драм-юнит; Партномер: N-OPC-XR-VLINK-B600-PR; Совместимость: Xerox VersaLink B600/B605/B610/B615, 60К (для производства), N-OPC-XRB600-PR; Ресурс: 60K]]></description>
+Совместимый драм-юнит. Тип: Драм-юнит; Партномер: N-OPC-XR-VLINK-B600-PR; Совместимость: Xerox VersaLink B600/B605/B610/B615, 60К (для производства), N-OPC-XRB600-PR; Ресурс: 60K]]></description>
 <param name="Тип">Драм-юнит</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Xerox</param>
