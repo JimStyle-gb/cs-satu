@@ -1,14 +1,13 @@
 # -*- coding: utf-8 -*-
 """
+Path: scripts/cs/keywords.py
+
 CS Keywords — общий сборщик <keywords>.
 
-Файл вынесен из cs/core.py (Этап 1: утончение core).
-Важно: НЕ зависит от cs/core.py (чтобы не ловить циклические импорты).
-
-Правила:
-- дедуп токенов
-- если есть "доставка по Казахстану" — убираем отдельный "доставка"
-- лимит по длине CS_KEYWORDS_MAX_LEN (по умолчанию 380), сначала уходят города (они в хвосте)
+Роль файла:
+- собирает единый keywords-хвост для всех поставщиков;
+- делает мягкую нормализацию и дедуп токенов;
+- не зависит от cs.core и не содержит supplier-specific ветвления.
 """
 
 from __future__ import annotations
@@ -16,6 +15,7 @@ from __future__ import annotations
 import os
 import re
 
+from .util import fix_mixed_cyr_lat
 
 CS_KEYWORDS_MAX_LEN = int((os.getenv("CS_KEYWORDS_MAX_LEN", "380") or "380").strip() or "380")
 
@@ -45,59 +45,6 @@ CS_KEYWORDS_PHRASES = (
 
 # Базовые regex-хелперы
 _RE_WS = re.compile(r"\s+")
-
-# Визуально похожие латинские -> кириллические и обратно (только внутри смешанных токенов)
-_LAT_TO_CYR = {
-    "A": "А", "B": "В", "C": "С", "E": "Е", "H": "Н", "K": "К", "M": "М", "O": "О", "P": "Р", "T": "Т", "X": "Х", "Y": "У",
-    "a": "а", "c": "с", "e": "е", "h": "н", "k": "к", "m": "м", "o": "о", "p": "р", "t": "т", "x": "х", "y": "у",
-}
-_CYR_TO_LAT = {
-    "А": "A", "В": "B", "С": "C", "Е": "E", "Н": "H", "К": "K", "М": "M", "О": "O", "Р": "P", "Т": "T", "Х": "X", "У": "Y",
-    "а": "a", "с": "c", "е": "e", "н": "h", "к": "k", "м": "m", "о": "o", "р": "p", "т": "t", "х": "x", "у": "y",
-}
-_RE_CYR = re.compile(r"[А-Яа-яЁё]")
-_RE_LAT = re.compile(r"[A-Za-z]")
-_RE_MIXED_TOKEN = re.compile(r"[A-Za-zА-Яа-яЁё]{2,}")
-
-
-def fix_mixed_cyr_lat(s: str) -> str:
-    """Чинит смешение кириллицы/латиницы в одном токене.
-
-    Примеры:
-    - Pабота -> Работа
-    - LЕD -> LED
-    - LСD -> LCD
-    - SNМР -> SNMP
-    - рlеnuм -> plenum
-    """
-    if not s:
-        return s
-
-    def _fix_token(m: re.Match[str]) -> str:
-        tok = m.group(0)
-        has_cyr = bool(_RE_CYR.search(tok))
-        has_lat = bool(_RE_LAT.search(tok))
-        if not (has_cyr and has_lat):
-            return tok
-
-        lat_cnt = sum(("A" <= ch <= "Z") or ("a" <= ch <= "z") for ch in tok)
-        cyr_cnt = sum(bool(_RE_CYR.match(ch)) for ch in tok)
-
-        # Если токен больше похож на латинский техно-термин/аббревиатуру — приводим к LAT.
-        # Иначе считаем, что это кириллическое слово с латинскими вкраплениями.
-        to_lat = lat_cnt >= cyr_cnt
-        if to_lat:
-            return "".join(_CYR_TO_LAT.get(ch, ch) for ch in tok)
-        return "".join(_LAT_TO_CYR.get(ch, ch) for ch in tok)
-
-    return _RE_MIXED_TOKEN.sub(_fix_token, s)
-
-
-def norm_ws(s: str) -> str:
-    s2 = (s or "").replace("\u00a0", " ").strip()
-    s2 = _RE_WS.sub(" ", s2).strip()
-    return fix_mixed_cyr_lat(s2)
-
 
 def _dedup_keep_order(items: list[str]) -> list[str]:
     """Дедупликация со стабильным порядком (без сортировки)."""
