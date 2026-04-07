@@ -59,8 +59,31 @@ def _normalize_spaces(value: str) -> str:
     return re.sub(r"\s+", " ", safe_str(value)).strip()
 
 
+_COPYLINE_BRAND_VALUE_REPLACEMENTS: tuple[tuple[str, str], ...] = (
+    (r"\bEuro\s+Print\b", "Europrint"),
+    (r"\bKATYUSHA\b", "Катюша"),
+    (r"\bКАТЮША\b", "Катюша"),
+)
+
+_COLOR_VALUE_MAP = {
+    "черный": "Чёрный",
+    "чёрный": "Чёрный",
+    "желтый": "Желтый",
+    "жёлтый": "Желтый",
+}
+
+
+def _canonical_value_text(value: str) -> str:
+    s = _canonical_value_text(value)
+    if not s:
+        return ""
+    for pattern, repl in _COPYLINE_BRAND_VALUE_REPLACEMENTS:
+        s = re.sub(pattern, repl, s, flags=re.I)
+    return s
+
+
 def _normalize_list_separators(value: str) -> str:
-    s = _normalize_spaces(value)
+    s = _canonical_value_text(value)
     s = s.replace("|", ",")
     s = s.replace(";", ",")
     s = re.sub(r"\s*,\s*", ", ", s)
@@ -204,6 +227,7 @@ def _restore_family_prefix(parts: list[str]) -> list[str]:
 
 
 def normalize_codes(value: str) -> str:
+    value = _canonical_value_text(value)
     value = _normalize_list_separators(value)
     return _dedupe_list_text(value, sep=", ")
 
@@ -237,6 +261,14 @@ def reconcile_copyline_params(params: Sequence[Tuple[str, str]]) -> List[Tuple[s
             val = normalize_codes(val)
         elif key == "Совместимость":
             val = normalize_compatibility(val)
+        else:
+            val = _canonical_value_text(val)
+
+        if key == "Цвет":
+            val = _COLOR_VALUE_MAP.get(val.casefold(), val)
+        elif key == "Для бренда":
+            val = _canonical_value_text(val)
+
         sig = (key.casefold(), val.casefold())
         if sig in seen:
             continue
