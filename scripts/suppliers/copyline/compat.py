@@ -74,7 +74,7 @@ _COLOR_VALUE_MAP = {
 
 
 def _canonical_value_text(value: str) -> str:
-    s = _canonical_value_text(value)
+    s = _normalize_spaces(value)
     if not s:
         return ""
     for pattern, repl in _COPYLINE_BRAND_VALUE_REPLACEMENTS:
