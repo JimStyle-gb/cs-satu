@@ -11,13 +11,13 @@ freeze_current_as_baseline: no
 # yes = текущие cosmetic-хвосты сохранены как baseline-снимок
 critical_count: 0
 # Сколько найдено критичных проблем
-cosmetic_total_count: 97
+cosmetic_total_count: 94
 # Общее число некритичных проблем
-cosmetic_offer_count: 97
+cosmetic_offer_count: 94
 # В скольких товарах есть cosmetic-проблемы
-known_cosmetic_count: 97
+known_cosmetic_count: 94
 # Сколько cosmetic-проблем уже известны по baseline
-known_cosmetic_offer_count: 97
+known_cosmetic_offer_count: 94
 # В скольких товарах есть уже известные cosmetic-проблемы
 new_cosmetic_count: 0
 # Сколько найдено новых cosmetic-проблем
@@ -126,9 +126,6 @@ CP13873167 | placeholder_picture | Требует ручной проверки 
 CP13873168 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13873169 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13873170 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
-CP13873171 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
-CP13873172 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
-CP13873173 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 
 NEW COSMETIC:
 # Ошибок в этой секции нет
@@ -228,6 +225,3 @@ CP13873167 | placeholder_picture | Требует ручной проверки 
 CP13873168 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13873169 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13873170 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
-CP13873171 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
-CP13873172 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
-CP13873173 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo

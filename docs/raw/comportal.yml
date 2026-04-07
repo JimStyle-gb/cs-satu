@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<yml_catalog date="2026-04-07 16:51:36">
+<yml_catalog date="2026-04-07 17:57:52">
 <shop><offers>
 <!--FEED_META
 Поставщик                                  | ComPortal
 URL поставщика                             | https://www.comportal.kz/auth/documents/prices/yml-catalog.php
-Время сборки (Алматы)                      | 2026-04-07 16:51:36
+Время сборки (Алматы)                      | 2026-04-07 17:57:52
 Ближайшая сборка (Алматы)                  | 2026-04-08 03:00:00
-Сколько товаров у поставщика до фильтра    | 1224
-Сколько товаров у поставщика после фильтра | 615
-Сколько товаров есть в наличии (true)      | 615
+Сколько товаров у поставщика до фильтра    | 1214
+Сколько товаров у поставщика после фильтра | 610
+Сколько товаров есть в наличии (true)      | 610
 Сколько товаров нет в наличии (false)      | 0
 -->
 
@@ -6343,32 +6343,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Для бренда">Dell</param>
 </offer>
 
-<offer id="CP13834336" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13834336</vendorCode>
-<name>МФУ Canon i-SENSYS MF463dw (5951C008AA)</name>
-<price>198423</price>
-<picture>https://www.comportal.kz/upload/iblock/390/2nfu71ivarw81gnd8jp4rhlwlmr5c3gf.JPG</picture>
-<vendor>Canon</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-МФУ. Формат печати: A4. Разрешение: 1200x1200. Скорость печати ч/б: 40. Порты: USB LAN WiFI. Технология печати: Лазерная. Гарантия: 12 мес.]]></description>
-<param name="Тип">МФУ</param>
-<param name="Модель">i-SENSYS MF463dw</param>
-<param name="Гарантия">12 мес</param>
-<param name="Разрешение">1200x1200</param>
-<param name="Формат печати">A4</param>
-<param name="Скорость печати ч/б">40</param>
-<param name="Технология печати">Лазерная</param>
-<param name="Порты">USB LAN WiFI</param>
-<param name="Функция">Принтер-Сканер(АПД-50с.)-Копир</param>
-<param name="Наличие картриджа (тонера) в комплекте">Стартовый</param>
-<param name="Нагрузка">80 000</param>
-<param name="Емкость 4-го лотка">550</param>
-<param name="Коды">5951C008AA</param>
-<param name="Для бренда">Canon</param>
-</offer>
-
 <offer id="CP13834337" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13834337</vendorCode>
@@ -8221,33 +8195,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Диагональ">24</param>
 <param name="Частота обновления">100</param>
 <param name="Коды">210-BMJF</param>
-<param name="Для бренда">Dell</param>
-</offer>
-
-<offer id="CP13866848" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13866848</vendorCode>
-<name>Монитор Dell P2425HE USB-C (210-BMJB)</name>
-<price>124249</price>
-<picture>https://www.comportal.kz/upload/iblock/2c7/35obh4ew22hy119xhv0q4mptva8au5w9.JPG</picture>
-<vendor>Dell</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Монитор. Модельная серия: P2425HE USB-C. Диагональ: 23.8. Максимальное разрешение: 1920x1080. Тип матрицы: IPS. Частота обновления: 100. Время отклика: 5. Порты: 1x HDMI 1.4/1x DP 1.4/1x DP-out (1.4)/1x RJ45/1x USB 3.2 Gen1 Type-C/3x USB 3.2 Gen1 Type-A/1x USB 3.2 Gen1 Type-C. Гарантия: 36 мес.]]></description>
-<param name="Тип">Монитор</param>
-<param name="Модель">P2425HE USB-C</param>
-<param name="Порты">1x HDMI 1.4/1x DP 1.4/1x DP-out (1.4)/1x RJ45/1x USB 3.2 Gen1 Type-C/3x USB 3.2 Gen1 Type-A/1x USB 3.2 Gen1 Type-C</param>
-<param name="Тип матрицы">IPS</param>
-<param name="Гарантия">36 мес</param>
-<param name="Контрастность">1500:1</param>
-<param name="Яркость">250</param>
-<param name="Время отклика">5</param>
-<param name="Максимальное разрешение">1920x1080</param>
-<param name="Углы обзора (вертикальный/горизонтальный)">178/178</param>
-<param name="Размер Pix">92</param>
-<param name="Диагональ">23.8</param>
-<param name="Частота обновления">100</param>
-<param name="Коды">210-BMJB</param>
 <param name="Для бренда">Dell</param>
 </offer>
 
@@ -15124,57 +15071,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Для бренда">Dell</param>
 <param name="Модель">Pro 14 Plus PB14250</param>
 <param name="Коды">210-BPDK / BTO217_PB14250_EMEA</param>
-</offer>
-
-<offer id="CP13873171" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13873171</vendorCode>
-<name>Моноблок Dell Pro 24 All-in-One QC24250 65W (210-BPNV_1)</name>
-<price>584939</price>
-<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
-<vendor>Dell</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Моноблок. Гарантия: 60 мес. Для бренда: Dell. Модель: Pro 24 All-in-One QC24250. Коды: 210-BPNV_1.]]></description>
-<param name="Тип">Моноблок</param>
-<param name="Гарантия">60 мес</param>
-<param name="Для бренда">Dell</param>
-<param name="Модель">Pro 24 All-in-One QC24250</param>
-<param name="Коды">210-BPNV_1</param>
-</offer>
-
-<offer id="CP13873172" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13873172</vendorCode>
-<name>Ноутбук Dell Pro 14 Plus PB14250 (210-BPDR_23)</name>
-<price>874612</price>
-<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
-<vendor>Dell</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Ноутбук. Модельная серия: Pro 14 Plus PB14250. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro 14 Plus PB14250. Коды: 210-BPDR_23.]]></description>
-<param name="Тип">Ноутбук</param>
-<param name="Гарантия">36 мес</param>
-<param name="Для бренда">Dell</param>
-<param name="Модель">Pro 14 Plus PB14250</param>
-<param name="Коды">210-BPDR_23</param>
-</offer>
-
-<offer id="CP13873173" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13873173</vendorCode>
-<name>Ноутбук Dell Pro 14 Plus PB14250 (210-BPDR_22)</name>
-<price>719110</price>
-<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
-<vendor>Dell</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Ноутбук. Модельная серия: Pro 14 Plus PB14250. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro 14 Plus PB14250. Коды: 210-BPDR_22.]]></description>
-<param name="Тип">Ноутбук</param>
-<param name="Гарантия">36 мес</param>
-<param name="Для бренда">Dell</param>
-<param name="Модель">Pro 14 Plus PB14250</param>
-<param name="Коды">210-BPDR_22</param>
 </offer>
 
 <offer id="CP13873061" available="true">
