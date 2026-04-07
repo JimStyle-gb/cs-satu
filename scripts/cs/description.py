@@ -469,11 +469,6 @@ def build_description(
     parts.append("<!-- Наименование товара -->")
     parts.append(f"<h3>{n_esc}</h3>")
 
-    parts.append("<!-- WhatsApp -->")
-    parts.append(hr_2px)
-    parts.append(w)
-    parts.append(hr_2px)
-
     parts.append("<!-- Описание -->")
     parts.append(desc_body)
 
@@ -498,6 +493,11 @@ def build_description(
                 nn.append(t)
         if nn:
             parts.append(f"<p><strong>Примечание:</strong> " + "<br>".join(nn) + "</p>")
+
+    parts.append("<!-- WhatsApp -->")
+    parts.append(hr_2px)
+    parts.append(w)
+    parts.append(hr_2px)
 
     if chars:
         parts.append(chars)
