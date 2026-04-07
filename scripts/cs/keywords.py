@@ -1,21 +1,25 @@
 # -*- coding: utf-8 -*-
 """
-Path: scripts/cs/keywords.py
-
 CS Keywords — общий сборщик <keywords>.
 
-Роль файла:
-- собирает единый keywords-хвост для всех поставщиков;
-- делает мягкую нормализацию и дедуп токенов;
-- не зависит от cs.core и не содержит supplier-specific ветвления.
+Файл не зависит от cs.core.py и использует единые shared-хелперы из cs.util.
+Роли модуля:
+- сборка итоговой строки <keywords>
+- дедупликация токенов со стабильным порядком
+- ограничение длины keywords
+- общий гео-хвост по Казахстану
+
+Важно:
+- fix_mixed_cyr_lat и norm_ws импортируются из cs.util — это единый источник правды;
+- имена импортов сохранены на уровне модуля для backward compatibility.
 """
 
 from __future__ import annotations
 
 import os
-import re
 
-from .util import fix_mixed_cyr_lat
+from .util import fix_mixed_cyr_lat, norm_ws
+
 
 CS_KEYWORDS_MAX_LEN = int((os.getenv("CS_KEYWORDS_MAX_LEN", "380") or "380").strip() or "380")
 
@@ -43,21 +47,19 @@ CS_KEYWORDS_PHRASES = (
     "отправка в регионы",
 )
 
-# Базовые regex-хелперы
-_RE_WS = re.compile(r"\s+")
 
 def _dedup_keep_order(items: list[str]) -> list[str]:
-    """Дедупликация со стабильным порядком (без сортировки)."""
+    """Дедупликация со стабильным порядком без сортировки."""
     seen: set[str] = set()
     out: list[str] = []
-    for x in items:
-        if not x:
+    for item in items:
+        if not item:
             continue
-        k = x.casefold()
-        if k in seen:
+        key = item.casefold()
+        if key in seen:
             continue
-        seen.add(k)
-        out.append(x)
+        seen.add(key)
+        out.append(item)
     return out
 
 
@@ -67,32 +69,35 @@ def build_keywords(
     extra: list[str] | None = None,
     **_kwargs,
 ) -> str:
+    """Собрать итоговую строку <keywords> для CS-фида."""
     parts: list[str] = []
-    # В keywords запятая — это разделитель токенов, поэтому убираем запятые из vendor/name
-    vendor = (vendor or "").replace(",", " ") or None
-    offer_name = (offer_name or "").replace(",", " ")
-    if vendor:
-        parts.append(norm_ws(vendor))
-    if offer_name:
-        parts.append(norm_ws(offer_name))
+
+    # В keywords запятая — разделитель токенов, поэтому чистим её из vendor/name.
+    vendor_clean = (vendor or "").replace(",", " ") or None
+    offer_name_clean = (offer_name or "").replace(",", " ")
+
+    if vendor_clean:
+        parts.append(norm_ws(vendor_clean))
+    if offer_name_clean:
+        parts.append(norm_ws(offer_name_clean))
 
     if extra:
-        for x in extra:
-            x = norm_ws(x)
-            if x:
-                parts.append(x)
+        for value in extra:
+            value_norm = norm_ws(value)
+            if value_norm:
+                parts.append(value_norm)
 
     parts.extend(CS_KEYWORDS_PHRASES)
     parts.extend(CS_KEYWORDS_CITIES)
 
-    parts = _dedup_keep_order([norm_ws(p) for p in parts if norm_ws(p)])
+    parts = _dedup_keep_order([norm_ws(part) for part in parts if norm_ws(part)])
 
-    # анти-дубль: если есть "доставка по Казахстану" — убираем отдельный токен "доставка"
-    low = [p.casefold() for p in parts]
-    if "доставка по казахстану" in low and "доставка" in low:
-        parts = [p for p in parts if p.casefold() != "доставка"]
+    # Если есть "доставка по Казахстану" — отдельный токен "доставка" убираем.
+    lowered = [part.casefold() for part in parts]
+    if "доставка по казахстану" in lowered and "доставка" in lowered:
+        parts = [part for part in parts if part.casefold() != "доставка"]
 
-    # лимит длины: сначала уходят города (они добавлены в конец)
+    # Ограничение длины: сначала уходят города, потому что они добавлены в хвост.
     max_len = int(CS_KEYWORDS_MAX_LEN or 380)
     joined = ", ".join(parts)
     while len(joined) > max_len and len(parts) > 2:
@@ -100,3 +105,13 @@ def build_keywords(
         joined = ", ".join(parts)
 
     return joined
+
+
+__all__ = [
+    "CS_KEYWORDS_MAX_LEN",
+    "CS_KEYWORDS_CITIES",
+    "CS_KEYWORDS_PHRASES",
+    "build_keywords",
+    "fix_mixed_cyr_lat",
+    "norm_ws",
+]
