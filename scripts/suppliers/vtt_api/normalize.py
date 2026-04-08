@@ -2,6 +2,11 @@
 """
 Path: scripts/suppliers/vtt_api/normalize.py
 Нормализация SOAP payload -> raw dict, максимально похожий на текущий VTT raw.
+
+v2:
+- поддерживает больше английских и русских ключей;
+- даёт fallback по title/sku/vendor/price/qty;
+- пишет поля именно в том виде, который ждёт текущий VTT builder.
 """
 from __future__ import annotations
 
@@ -12,14 +17,30 @@ def norm_ws(value: object) -> str:
     return " ".join(str(value or "").replace("\xa0", " ").split()).strip()
 
 
+def _index(item: dict[str, Any]) -> dict[str, Any]:
+    out: dict[str, Any] = {}
+    for k, v in item.items():
+        key = norm_ws(k)
+        if not key:
+            continue
+        out[key.casefold()] = v
+    return out
+
+
 def _pick(d: dict[str, Any], *names: str) -> str:
+    idx = _index(d)
     for name in names:
-        if name in d and norm_ws(d.get(name)):
-            return norm_ws(d.get(name))
-    low = {str(k).casefold(): v for k, v in d.items()}
-    for name in names:
-        if name.casefold() in low and norm_ws(low[name.casefold()]):
-            return norm_ws(low[name.casefold()])
+        key = name.casefold()
+        if key in idx and norm_ws(idx[key]):
+            return norm_ws(idx[key])
+    return ""
+
+
+def _pick_contains(d: dict[str, Any], needles: tuple[str, ...]) -> str:
+    idx = _index(d)
+    for key, value in idx.items():
+        if any(n in key for n in needles) and norm_ws(value):
+            return norm_ws(value)
     return ""
 
 
@@ -30,54 +51,70 @@ def _bool_from_any(value: object) -> bool:
     if s in {"1", "true", "yes", "да", "есть"}:
         return True
     try:
-        return float(str(value)) > 0
+        return float(str(value).replace(",", ".")) > 0
     except Exception:
         return bool(value)
 
 
-def _extract_params(item: dict[str, Any]) -> list[tuple[str, str]]:
+def _extract_params(item: dict[str, Any], used_keys: set[str]) -> list[tuple[str, str]]:
     params: list[tuple[str, str]] = []
-    raw = item.get("params") or item.get("Params") or item.get("attributes") or item.get("Attributes") or []
+    raw = (
+        item.get("params")
+        or item.get("Params")
+        or item.get("attributes")
+        or item.get("Attributes")
+        or item.get("Характеристики")
+        or []
+    )
     if isinstance(raw, dict):
         raw = [raw]
     if isinstance(raw, list):
         for p in raw:
             if not isinstance(p, dict):
                 continue
-            key = _pick(p, "name", "Name", "key", "Key")
-            val = _pick(p, "value", "Value", "val", "Val")
+            key = _pick(p, "name", "Name", "key", "Key", "Наименование")
+            val = _pick(p, "value", "Value", "val", "Val", "Значение")
             if key and val:
                 params.append((key, val))
-    compat = _pick(item, "compat", "Compatibility", "compatibility")
-    if compat:
-        params.append(("Совместимость", compat))
-    part = _pick(item, "part_number", "PartNumber", "oem", "OEM")
-    if part:
-        params.append(("Партномер", part))
-    color = _pick(item, "color", "Color")
-    if color:
-        params.append(("Цвет", color))
-    tech = _pick(item, "technology", "Technology", "print_technology")
-    if tech:
-        params.append(("Технология печати", tech))
-    resource = _pick(item, "resource", "Resource", "yield")
-    if resource:
-        params.append(("Ресурс", resource))
+
+    # Если SOAP отдаёт плоскую структуру, тянем полезные scalar-поля в params.
+    skip_contains = (
+        "name", "title", "caption", "наименование", "description", "описание",
+        "price", "цена", "cost", "стоимость", "qty", "quantity", "остат",
+        "available", "налич", "image", "picture", "photo", "vendor", "brand",
+        "manufacturer", "sku", "article", "артикул", "code", "код", "id",
+    )
+    for k, v in item.items():
+        key = norm_ws(k)
+        if not key or key.casefold() in used_keys:
+            continue
+        if any(x in key.casefold() for x in skip_contains):
+            continue
+        if isinstance(v, (dict, list, tuple, set)):
+            continue
+        val = norm_ws(v)
+        if not val:
+            continue
+        params.append((key, val))
     return params
 
 
 def _extract_pictures(item: dict[str, Any]) -> list[str]:
     out: list[str] = []
-    for key in ("pictures", "Pictures", "images", "Images"):
+    for key in ("pictures", "Pictures", "images", "Images", "photos", "Photos", "Фото"):
         val = item.get(key)
         if isinstance(val, list):
             for x in val:
-                s = norm_ws(x if not isinstance(x, dict) else x.get("url") or x.get("Url"))
+                if isinstance(x, dict):
+                    s = _pick(x, "url", "Url", "href", "Href", "src", "Src")
+                else:
+                    s = norm_ws(x)
                 if s:
                     out.append(s)
-    single = _pick(item, "picture", "Picture", "image", "Image")
-    if single:
-        out.append(single)
+    for key in ("picture", "Picture", "image", "Image", "photo", "Photo", "Фото"):
+        s = _pick(item, key)
+        if s:
+            out.append(s)
     dedup: list[str] = []
     seen: set[str] = set()
     for x in out:
@@ -88,12 +125,52 @@ def _extract_pictures(item: dict[str, Any]) -> list[str]:
 
 
 def normalize_api_item(item: dict[str, Any]) -> dict[str, Any]:
-    title = _pick(item, "name", "Name", "title", "Title")
-    sku = _pick(item, "sku", "SKU", "article", "Article", "id", "ID", "code", "Code")
-    vendor = _pick(item, "vendor", "Vendor", "brand", "Brand", "manufacturer", "Manufacturer")
-    desc = _pick(item, "description", "Description", "desc", "Desc")
-    price = _pick(item, "price", "Price", "priceIn", "PriceIn")
-    qty = _pick(item, "qty", "Qty", "quantity", "Quantity", "stock", "Stock")
+    used_keys: set[str] = set()
+
+    title = _pick(
+        item,
+        "name", "Name", "title", "Title", "caption", "Caption",
+        "Наименование", "Название", "Товар", "Номенклатура",
+    ) or _pick_contains(item, ("name", "title", "caption", "наименование", "название", "товар", "номенклатур"))
+    if title:
+        used_keys.add("name")
+
+    sku = _pick(
+        item,
+        "sku", "SKU", "article", "Article", "Артикул", "Код товара",
+        "productCode", "ProductCode", "code", "Code", "PartNumber", "partNumber",
+        "id", "ID",
+    ) or _pick_contains(item, ("sku", "article", "артикул", "код", "partnumber", "productcode", "code"))
+
+    vendor = _pick(
+        item,
+        "vendor", "Vendor", "brand", "Brand", "manufacturer", "Manufacturer",
+        "Бренд", "Производитель", "Вендор", "Марка",
+    ) or _pick_contains(item, ("brand", "vendor", "manufacturer", "бренд", "производител", "вендор", "марка"))
+
+    desc = _pick(
+        item,
+        "description", "Description", "desc", "Desc", "body", "Body", "Описание",
+    ) or _pick_contains(item, ("description", "desc", "описан"))
+
+    price = _pick(
+        item,
+        "price", "Price", "priceIn", "PriceIn", "Цена", "Стоимость", "cost", "Cost",
+    ) or _pick_contains(item, ("price", "цена", "стоим", "cost"))
+
+    qty = _pick(
+        item,
+        "qty", "Qty", "quantity", "Quantity", "stock", "Stock", "Остаток", "Наличие", "Balance",
+    ) or _pick_contains(item, ("qty", "quantity", "stock", "остат", "налич", "balance"))
+
+    source_categories = []
+    for key in ("category", "Category", "Категория", "subcategory", "SubCategory", "Подкатегория"):
+        s = _pick(item, key)
+        if s:
+            source_categories.append(s)
+
+    params = _extract_params(item, used_keys)
+    pictures = _extract_pictures(item)
 
     return {
         "name": title,
@@ -101,10 +178,11 @@ def normalize_api_item(item: dict[str, Any]) -> dict[str, Any]:
         "vendor": vendor,
         "description_body": desc,
         "description_meta": "",
-        "price_in": price,
+        "price_rub_raw": price,
         "qty": qty,
         "available": _bool_from_any(item.get("available") if "available" in item else qty),
-        "params": _extract_params(item),
-        "pictures": _extract_pictures(item),
+        "params": params,
+        "pictures": pictures,
+        "source_categories": source_categories,
         "raw_item": item,
     }
