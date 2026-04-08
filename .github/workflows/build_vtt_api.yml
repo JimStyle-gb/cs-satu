@@ -30,7 +30,7 @@ jobs:
         env:
           VTT_LOGIN: ${{ secrets.VTT_LOGIN }}
           VTT_PASSWORD: ${{ secrets.VTT_PASSWORD }}
-          VTT_API_WSDL: ${{ secrets.VTT_API_WSDL }}
+          VTT_API_WSDL: http://api.vtt.ru:8048/Portal.svc?singleWsdl
         run: |
           python scripts/build_vtt_api.py
 
