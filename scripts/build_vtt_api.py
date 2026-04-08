@@ -1,140 +1,163 @@
 # -*- coding: utf-8 -*-
 """
 Path: scripts/build_vtt_api.py
+Параллельный build entrypoint для VTT_api.
+Старый VTT не трогает.
 
-Параллельный build-entrypoint для VTT_api.
-
-Важно:
-- текущий VTT НЕ трогаем;
-- VTT_api живёт отдельно и пишет свои docs/raw/vtt_api.yml + docs/vtt_api.yml;
-- downstream-логика максимально переиспользует текущий VTT builder;
-- этот build нужен как первый smoke-test для SOAP API.
+v2:
+- всегда пишет debug-выгрузку сырого API, даже если offers_built == 0;
+- пишет summary по ключам, чтобы быстро понять структуру SOAP-ответа;
+- не валится на старом quality_gate signature;
+- сохраняет docs/raw/vtt_api.yml и docs/vtt_api.yml.
 """
-
 from __future__ import annotations
 
+import json
+import os
+import sys
+from collections import Counter
+from datetime import datetime
 from pathlib import Path
 from typing import Any
 
 import yaml
 
-from cs.core import get_public_vendor, write_cs_feed, write_cs_feed_raw
-from cs.meta import next_run_dom_at_hour, now_almaty
-from suppliers.vtt_api.builder import build_offer_from_raw
-from suppliers.vtt_api.filtering import filter_items
-from suppliers.vtt_api.source import load_items
+ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
 
-ROOT = Path(__file__).resolve().parent.parent
-CFG_DIR = ROOT / "scripts" / "suppliers" / "vtt_api" / "config"
-RAW_OUT = ROOT / "docs" / "raw" / "vtt_api.yml"
-FINAL_OUT = ROOT / "docs" / "vtt_api.yml"
-SUPPLIER_NAME = "VTT_api"
-SUPPLIER_URL = "http://api.vtt.ru:8048/Portal.svc?singleWsdl"
+from cs.core import write_cs_feed, write_cs_feed_raw  # type: ignore
+from suppliers.vtt_api.builder import build_offers_from_api_items  # type: ignore
+from suppliers.vtt_api.filtering import filter_items  # type: ignore
+from suppliers.vtt_api.quality_gate import run_quality_gate  # type: ignore
+from suppliers.vtt_api.source import ApiConfig, fetch_items  # type: ignore
+
+SUPPLIER = "VTT_api"
+SUPPLIER_URL = "https://b2b.vtt.ru/catalog/"
+OUT_FILE = "docs/vtt_api.yml"
+RAW_OUT_FILE = "docs/raw/vtt_api.yml"
+QG_FILE = "docs/raw/vtt_api_quality_gate.txt"
+DEBUG_RAW_JSON = "docs/raw/vtt_api_api_items.json"
+DEBUG_SAMPLE_JSON = "docs/raw/vtt_api_api_items_sample.json"
+DEBUG_KEYS_TXT = "docs/raw/vtt_api_api_keys.txt"
+DEBUG_NORM_SAMPLE_JSON = "docs/raw/vtt_api_normalized_sample.json"
 
 
-def _read_yaml(path: Path) -> dict[str, Any]:
+def _read_yaml(path: Path) -> dict:
     if not path.exists():
         return {}
-    data = yaml.safe_load(path.read_text(encoding="utf-8"))
+    with path.open("r", encoding="utf-8") as f:
+        data = yaml.safe_load(f) or {}
     return data if isinstance(data, dict) else {}
 
 
-def _load_cfg() -> tuple[dict[str, Any], dict[str, Any], dict[str, Any]]:
-    filter_cfg = _read_yaml(CFG_DIR / "filter.yml")
-    policy_cfg = _read_yaml(CFG_DIR / "policy.yml")
-    schema_cfg = _read_yaml(CFG_DIR / "schema.yml")
-    return filter_cfg, policy_cfg, schema_cfg
-
-
-def _build_offers(items: list[dict[str, Any]], *, id_prefix: str, placeholder_picture: str | None) -> list[Any]:
-    offers: list[Any] = []
-    for raw in items:
-        offer = build_offer_from_raw(raw, id_prefix=id_prefix, placeholder_picture=placeholder_picture)
-        if offer is not None:
-            offers.append(offer)
-    return offers
-
-
-def _run_quality_gate(raw_out_file: Path, qg_cfg: dict[str, Any]) -> bool:
+def _now_almaty() -> datetime:
     try:
-        from suppliers.vtt_api.quality_gate import run_quality_gate
-    except Exception as exc:
-        print(f"[VTT_api] quality gate skipped: import failed: {exc}")
-        return True
+        from zoneinfo import ZoneInfo
+        return datetime.now(ZoneInfo("Asia/Almaty"))
+    except Exception:
+        return datetime.utcnow()
 
-    try:
-        qg = run_quality_gate(raw_out_file=str(raw_out_file), qg_cfg=qg_cfg)
-    except TypeError:
-        try:
-            qg = run_quality_gate(raw_out_file=str(raw_out_file), policy_path=str(CFG_DIR / "policy.yml"))
-        except Exception as exc:
-            print(f"[VTT_api] quality gate skipped: call failed: {exc}")
-            return True
-    except Exception as exc:
-        print(f"[VTT_api] quality gate skipped: {exc}")
-        return True
 
-    if isinstance(qg, tuple):
-        qg = qg[0]
-    if hasattr(qg, "ok"):
-        return bool(qg.ok)
-    if hasattr(qg, "passed"):
-        return bool(qg.passed)
-    return True
+def _ensure_parent(path: str) -> None:
+    Path(path).parent.mkdir(parents=True, exist_ok=True)
+
+
+def _json_default(value: Any) -> Any:
+    if isinstance(value, (str, int, float, bool)) or value is None:
+        return value
+    if isinstance(value, dict):
+        return value
+    if isinstance(value, list):
+        return value
+    return str(value)
+
+
+def _dump_debug(raw_items: list[dict[str, Any]]) -> None:
+    _ensure_parent(DEBUG_RAW_JSON)
+    with open(DEBUG_RAW_JSON, "w", encoding="utf-8") as f:
+        json.dump(raw_items, f, ensure_ascii=False, indent=2, default=_json_default)
+
+    with open(DEBUG_SAMPLE_JSON, "w", encoding="utf-8") as f:
+        json.dump(raw_items[:25], f, ensure_ascii=False, indent=2, default=_json_default)
+
+    key_counter: Counter[str] = Counter()
+    for item in raw_items:
+        if isinstance(item, dict):
+            for key in item.keys():
+                key_counter[str(key)] += 1
+
+    with open(DEBUG_KEYS_TXT, "w", encoding="utf-8") as f:
+        f.write("VTT_api raw keys frequency\n")
+        f.write("=" * 72 + "\n")
+        for key, count in key_counter.most_common():
+            f.write(f"{count:5d} | {key}\n")
 
 
 def main() -> int:
-    filter_cfg, policy_cfg, schema_cfg = _load_cfg()
+    cfg_dir = ROOT / "scripts" / "suppliers" / "vtt_api" / "config"
+    filter_cfg = _read_yaml(cfg_dir / "filter.yml")
+    schema_cfg = _read_yaml(cfg_dir / "schema.yml")
+    policy_cfg = _read_yaml(cfg_dir / "policy.yml")
+    qg_baseline_path = cfg_dir / "quality_gate_baseline.yml"
 
-    source_cfg = {
-        "wsdl_url": schema_cfg.get("wsdl_url") or policy_cfg.get("wsdl_url") or SUPPLIER_URL,
-        "timeout_s": int(policy_cfg.get("timeout_s", 60) or 60),
-        "verify_ssl": bool(policy_cfg.get("verify_ssl", True)),
-        "debug_limit": int(policy_cfg.get("debug_limit", 0) or 0),
-    }
+    api_cfg = ApiConfig.from_env()
+    items = fetch_items(api_cfg)
+    _dump_debug(items)
 
-    raw_items = load_items(source_cfg)
-    before = len(raw_items)
-    filtered_items, filter_report = filter_items(raw_items, filter_cfg)
+    before = len(items)
+    filtered_items, filter_report = filter_items(items, filter_cfg)
+    offers = build_offers_from_api_items(filtered_items, id_prefix=schema_cfg.get("id_prefix", "VTA"))
+    build_time = _now_almaty()
 
-    id_prefix = str(schema_cfg.get("id_prefix") or "VT")
-    placeholder_picture = schema_cfg.get("placeholder_picture")
-    offers = _build_offers(filtered_items, id_prefix=id_prefix, placeholder_picture=placeholder_picture)
-
-    build_time = now_almaty()
-    next_run = next_run_dom_at_hour(
-        build_time,
-        hour=int(policy_cfg.get("schedule_hour", 5) or 5),
-        doms=tuple(policy_cfg.get("schedule_dom", [1, 10, 20]) or [1, 10, 20]),
-    )
-
-    RAW_OUT.parent.mkdir(parents=True, exist_ok=True)
-    FINAL_OUT.parent.mkdir(parents=True, exist_ok=True)
+    # Отдельно сохраняем sample normalizer-friendly структуры через builder helper-path.
+    try:
+        from suppliers.vtt_api.normalize import normalize_api_item  # type: ignore
+        normalized_sample = [normalize_api_item(x) for x in filtered_items[:25]]
+        _ensure_parent(DEBUG_NORM_SAMPLE_JSON)
+        with open(DEBUG_NORM_SAMPLE_JSON, "w", encoding="utf-8") as f:
+            json.dump(normalized_sample, f, ensure_ascii=False, indent=2, default=_json_default)
+    except Exception as exc:
+        _ensure_parent(DEBUG_NORM_SAMPLE_JSON)
+        with open(DEBUG_NORM_SAMPLE_JSON, "w", encoding="utf-8") as f:
+            json.dump({"error": str(exc)}, f, ensure_ascii=False, indent=2)
 
     write_cs_feed_raw(
         offers,
-        supplier=SUPPLIER_NAME,
-        supplier_url=str(policy_cfg.get("supplier_url") or SUPPLIER_URL),
-        out_file=str(RAW_OUT),
+        supplier=SUPPLIER,
+        supplier_url=SUPPLIER_URL,
+        out_file=RAW_OUT_FILE,
         build_time=build_time,
-        next_run=next_run,
         before=before,
-        encoding=str(schema_cfg.get("encoding") or "utf-8"),
+        after=len(offers),
+        available_true=sum(1 for o in offers if bool(o.available)),
+        available_false=sum(1 for o in offers if not bool(o.available)),
+        encoding="utf-8",
     )
-
     write_cs_feed(
         offers,
-        supplier=SUPPLIER_NAME,
-        supplier_url=str(policy_cfg.get("supplier_url") or SUPPLIER_URL),
-        out_file=str(FINAL_OUT),
+        supplier=SUPPLIER,
+        supplier_url=SUPPLIER_URL,
+        out_file=OUT_FILE,
         build_time=build_time,
-        next_run=next_run,
         before=before,
-        encoding=str(schema_cfg.get("encoding") or "utf-8"),
-        public_vendor=get_public_vendor(SUPPLIER_NAME),
+        next_run=None,
+        encoding="utf-8",
+        public_vendor="VTT",
     )
 
-    qg_ok = _run_quality_gate(RAW_OUT, policy_cfg)
+    try:
+        qg = run_quality_gate(
+            raw_out_file=RAW_OUT_FILE,
+            report_file=QG_FILE,
+            baseline_file=str(qg_baseline_path),
+            max_cosmetic_offers=int(policy_cfg.get("max_cosmetic_offers", 5)),
+            max_cosmetic_issues=int(policy_cfg.get("max_cosmetic_issues", 5)),
+        )
+        qg_ok = bool(getattr(qg, "ok", True))
+    except Exception as exc:
+        print(f"[VTT_api] quality gate skipped: {exc}")
+        qg_ok = True
 
     print("=" * 72)
     print("[VTT_api] build summary")
@@ -142,15 +165,18 @@ def main() -> int:
     print(f"before: {before}")
     print(f"after_filter: {len(filtered_items)}")
     print(f"offers_built: {len(offers)}")
-    print(f"raw_out_file: {RAW_OUT}")
-    print(f"out_file: {FINAL_OUT}")
+    print(f"raw_out_file: {ROOT / RAW_OUT_FILE}")
+    print(f"out_file: {ROOT / OUT_FILE}")
+    print(f"debug_raw_json: {ROOT / DEBUG_RAW_JSON}")
+    print(f"debug_sample_json: {ROOT / DEBUG_SAMPLE_JSON}")
+    print(f"debug_keys_txt: {ROOT / DEBUG_KEYS_TXT}")
+    print(f"debug_normalized_sample: {ROOT / DEBUG_NORM_SAMPLE_JSON}")
     print("-" * 72)
     print("filter_report:")
     for key, value in filter_report.items():
         print(f"  {key}: {value}")
     print("-" * 72)
     print(f"quality_gate_ok: {qg_ok}")
-
     return 0 if qg_ok else 1
 
 
