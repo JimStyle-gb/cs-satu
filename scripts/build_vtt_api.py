@@ -4,16 +4,16 @@ Path: scripts/build_vtt_api.py
 Параллельный build entrypoint для VTT_api.
 Старый VTT не трогает.
 
-v2:
-- всегда пишет debug-выгрузку сырого API, даже если offers_built == 0;
-- пишет summary по ключам, чтобы быстро понять структуру SOAP-ответа;
-- не валится на старом quality_gate signature;
-- сохраняет docs/raw/vtt_api.yml и docs/vtt_api.yml.
+v3:
+- совместим с текущим cs.core.write_cs_feed_raw/write_cs_feed;
+- больше не передаёт unsupported kwargs after/available_true/available_false;
+- пишет debug-выгрузку сырого API и sample normalizer-output;
+- quality gate вызывает через совместимый wrapper;
+- даже при 0 offers пишет raw/final файлы, чтобы был артефакт для проверки.
 """
 from __future__ import annotations
 
 import json
-import os
 import sys
 from collections import Counter
 from datetime import datetime
@@ -43,7 +43,7 @@ DEBUG_KEYS_TXT = "docs/raw/vtt_api_api_keys.txt"
 DEBUG_NORM_SAMPLE_JSON = "docs/raw/vtt_api_normalized_sample.json"
 
 
-def _read_yaml(path: Path) -> dict:
+def _read_yaml(path: Path) -> dict[str, Any]:
     if not path.exists():
         return {}
     with path.open("r", encoding="utf-8") as f:
@@ -107,12 +107,16 @@ def main() -> int:
 
     before = len(items)
     filtered_items, filter_report = filter_items(items, filter_cfg)
-    offers = build_offers_from_api_items(filtered_items, id_prefix=schema_cfg.get("id_prefix", "VTA"))
+    offers = build_offers_from_api_items(
+        filtered_items,
+        id_prefix=str(schema_cfg.get("id_prefix", "VTA")),
+    )
     build_time = _now_almaty()
+    next_run = build_time
 
-    # Отдельно сохраняем sample normalizer-friendly структуры через builder helper-path.
     try:
         from suppliers.vtt_api.normalize import normalize_api_item  # type: ignore
+
         normalized_sample = [normalize_api_item(x) for x in filtered_items[:25]]
         _ensure_parent(DEBUG_NORM_SAMPLE_JSON)
         with open(DEBUG_NORM_SAMPLE_JSON, "w", encoding="utf-8") as f:
@@ -128,11 +132,10 @@ def main() -> int:
         supplier_url=SUPPLIER_URL,
         out_file=RAW_OUT_FILE,
         build_time=build_time,
+        next_run=next_run,
         before=before,
-        after=len(offers),
-        available_true=sum(1 for o in offers if bool(o.available)),
-        available_false=sum(1 for o in offers if not bool(o.available)),
         encoding="utf-8",
+        currency_id="KZT",
     )
     write_cs_feed(
         offers,
@@ -140,10 +143,11 @@ def main() -> int:
         supplier_url=SUPPLIER_URL,
         out_file=OUT_FILE,
         build_time=build_time,
+        next_run=next_run,
         before=before,
-        next_run=None,
         encoding="utf-8",
         public_vendor="VTT",
+        currency_id="KZT",
     )
 
     try:
