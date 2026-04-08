@@ -96,3 +96,8 @@ def fetch_items(cfg: ApiConfig) -> list[dict[str, Any]]:
     if not items:
         raise RuntimeError("VTT_api: API вернул пустой каталог или неизвестную структуру ответа")
     return items
+
+def load_items(cfg: ApiConfig) -> list[dict[str, Any]]:
+    """Backward-safe alias для build_vtt_api.py."""
+    return fetch_items(cfg)
+
