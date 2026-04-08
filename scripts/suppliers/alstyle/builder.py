@@ -129,6 +129,23 @@ _ORIGINALITY_PARAM_NAME = "Оригинальность"
 _NAME_ORIGINALITY_SUFFIX_RE = re.compile(r"\s+\((?:оригинал|совместимый)\)\s*$", re.IGNORECASE)
 _DESC_ORIGINALITY_HEAD_RE = re.compile(r"(?iu)^\s*(?:Оригиналь\w+|Совместим\w+)\b")
 
+
+_GENERIC_CONSUMABLE_DESC_RE = re.compile(
+    r"(?iu)(?:"
+    r"используем(?:ый|ая|ое|ые)\s+принтером\s+или\s+МФУ|"
+    r"содержит\s+тонер|"
+    r"ресурс\s+расходных\s+материалов|"
+    r"процентное\s+заполнение\s+страницы|"
+    r"формирования\s+изображения\s+в\s+процессе\s+ксерографии"
+    r")"
+)
+
+_SEO_MODEL_CODE_PARAM_NAMES = ("Модель", "Коды", "Аналог модели", "Номер")
+_SEO_COMPAT_PARAM_NAMES = ("Совместимость", "Для принтеров")
+_SEO_TECH_PARAM_NAMES = ("Технология", "Тип печати")
+_SEO_RESOURCE_PARAM_NAMES = ("Ресурс", "Кол-во страниц при 5% заполнении А4")
+
+
 _CONSUMABLE_TYPE_HINTS = (
     "тонер-картридж",
     "картридж скрепок для буклетирования",
@@ -869,6 +886,111 @@ def _detect_consumable_originality(src: SourceOffer, name: str, params: list[tup
     return ""
 
 
+
+
+def _get_param_ci(params: list[tuple[str, str]], *keys: str) -> str:
+    wants = {norm_ws(x).casefold() for x in keys if norm_ws(x)}
+    for k, v in params:
+        if norm_ws(k).casefold() in wants and norm_ws(v):
+            return norm_ws(v)
+    return ""
+
+
+def _is_consumable_seo_target(name: str, params: list[tuple[str, str]]) -> bool:
+    return _detect_consumable_type_label(name, params) != "Расходный материал"
+
+
+def _looks_generic_consumable_desc(desc: str) -> bool:
+    body = norm_ws(desc)
+    if not body:
+        return True
+    if _GENERIC_CONSUMABLE_DESC_RE.search(body):
+        return True
+    if _DESC_ORIGINALITY_HEAD_RE.fullmatch(body.rstrip('.')):
+        return True
+    return False
+
+
+def _strip_type_words_from_model(model: str, type_label: str) -> str:
+    m = norm_ws(model)
+    tl = norm_ws(type_label)
+    if not m or not tl:
+        return m
+    pat = re.compile(rf"(?iu)^\s*{re.escape(tl)}\s+")
+    return norm_ws(pat.sub("", m))
+
+
+def _build_consumable_seo_intro(name: str, vendor: str, params: list[tuple[str, str]], status: str) -> str:
+    if status not in {"original", "compatible"}:
+        return ""
+
+    type_label = _detect_consumable_type_label(name, params)
+    if type_label == "Расходный материал":
+        return ""
+
+    brand = norm_ws(vendor) or _get_param_ci(params, "Для бренда", "Бренд")
+    model = _get_param_ci(params, *_SEO_MODEL_CODE_PARAM_NAMES)
+    model = _strip_type_words_from_model(model, type_label)
+    compat = _get_param_ci(params, *_SEO_COMPAT_PARAM_NAMES)
+    color = _get_param_ci(params, "Цвет")
+    resource = _get_param_ci(params, *_SEO_RESOURCE_PARAM_NAMES)
+    tech = _get_param_ci(params, *_SEO_TECH_PARAM_NAMES)
+    analog = _get_param_ci(params, "Аналог модели")
+    number = _get_param_ci(params, "Номер")
+    codes = _get_param_ci(params, "Коды")
+
+    opener = _build_originality_sentence(status, type_label).rstrip('.')
+    bits: list[str] = []
+    if brand:
+        bits.append(brand)
+    if model and model.casefold() not in " ".join(bits).casefold():
+        bits.append(model)
+    first = " ".join(x for x in bits if x).strip()
+    if first:
+        first = f"{opener} {first}"
+    else:
+        first = opener
+
+    extras: list[str] = []
+    if compat:
+        extras.append(f"для {compat}")
+    if analog:
+        extras.append(f"аналог моделей {analog}")
+    elif codes and model and norm_ws(codes).casefold() != norm_ws(model).casefold():
+        extras.append(f"код — {codes}")
+    elif codes and not model:
+        extras.append(f"код — {codes}")
+    if number and number.casefold() not in (codes.casefold() if codes else ""):
+        extras.append(f"номер — {number}")
+    if color:
+        extras.append(f"цвет — {color}")
+    if resource:
+        extras.append(f"ресурс — {resource}")
+    if tech:
+        extras.append(f"тип печати — {tech}")
+
+    if not first:
+        return ""
+    if not extras:
+        return f"{first}."
+
+    tail = "; ".join(extras).strip()
+    return f"{first} {tail}."
+
+
+def _apply_consumable_seo_intro(name: str, vendor: str, params: list[tuple[str, str]], native_desc: str, status: str) -> str:
+    if not _is_consumable_seo_target(name, params):
+        return norm_ws(native_desc)
+
+    body = norm_ws(native_desc)
+    if body and not _looks_generic_consumable_desc(body):
+        return body
+
+    intro = _build_consumable_seo_intro(name, vendor, params, status)
+    if intro:
+        return intro
+    return body
+
 def _apply_consumable_originality(name: str, params: list[tuple[str, str]], native_desc: str, status: str) -> tuple[str, list[tuple[str, str]], str]:
     if status not in {"original", "compatible"}:
         return name, params, native_desc
@@ -941,6 +1063,7 @@ def build_offer(
 
     originality_status = _detect_consumable_originality(src, name, params)
     name, params, native_desc_src = _apply_consumable_originality(name, params, native_desc_src, originality_status)
+    native_desc_src = _apply_consumable_seo_intro(name, vendor, params, native_desc_src, originality_status)
 
     offer = OfferOut(
         oid=oid,
