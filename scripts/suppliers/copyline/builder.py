@@ -72,6 +72,23 @@ _STRIP_ORIGINAL_TOKEN_RE = re.compile(
     r"(?iu)(?:(?<=^)|(?<=[\s(\[\{,.;:!?\-–—/]))(?:оригинал|original)(?=$|(?=[\s)\]\},.;:!?\-–—/]))"
 )
 
+_COPYLINE_SEO_MODEL_CODE_PARAM_NAMES = ("Модель", "Коды расходников")
+_COPYLINE_SEO_COMPAT_PARAM_NAMES = ("Совместимость",)
+_COPYLINE_SEO_RESOURCE_PARAM_NAMES = ("Ресурс", "Количество страниц (5% заполнение)")
+_COPYLINE_SEO_TECH_PARAM_NAMES = ("Технология печати",)
+_COPYLINE_BAD_CONSUMABLE_DESC_RE = re.compile(
+    r"(?iu)(?:"
+    r"картридж\s+фотобарабана|"
+    r"drum\s*unit\s*-\s*блок\s+барабана|"
+    r"применяется\s+в\s+мфу|"
+    r"ресурс\s+печати\s*[-:]|"
+    r"об[ъь]ем\s*[-:]|"
+    r"оригинальн(?:ые|ый|ая|ое)\s+чернила\s+оригинальн"
+    r")"
+)
+_TITLE_AFTERMARKET_BRAND_RE = re.compile(r"(?iu)\b(Europrint(?:\s+Business)?|Hi-Black)\b")
+_TITLE_RESOURCE_RE = re.compile(r"(?iu)\b(\d+(?:[.,]\d+)?)\s*(мл|ml|k)\b")
+
 
 # ----------------------------- basic helpers -----------------------------
 
@@ -485,6 +502,103 @@ def _apply_consumable_originality(name: str, params: Sequence[Tuple[str, str]], 
     return name_out, params_out, desc_out
 
 
+def _get_param_ci(params: Sequence[Tuple[str, str]], *keys: str) -> str:
+    wants = {safe_str(x).casefold() for x in keys if safe_str(x)}
+    for k, v in params:
+        if safe_str(k).casefold() in wants and safe_str(v):
+            return safe_str(v)
+    return ""
+
+
+def _title_aftermarket_brand(title: str) -> str:
+    m = _TITLE_AFTERMARKET_BRAND_RE.search(safe_str(title))
+    return safe_str(m.group(1)) if m else ""
+
+
+def _resource_from_title(title: str) -> str:
+    m = _TITLE_RESOURCE_RE.search(safe_str(title))
+    if not m:
+        return ""
+    num = safe_str(m.group(1)).replace(',', '.')
+    unit = safe_str(m.group(2))
+    if unit.lower() == 'ml':
+        unit = 'мл'
+    elif unit.lower() == 'k':
+        unit = 'K'
+    return f"{num} {unit}".strip()
+
+
+def _is_consumable_seo_target(name: str, params: Sequence[Tuple[str, str]]) -> bool:
+    return _detect_consumable_type_label(name, params) != "Расходный материал"
+
+
+def _looks_generic_consumable_desc(desc: str) -> bool:
+    body = safe_str(desc)
+    if not body:
+        return True
+    if _DESC_ORIGINALITY_HEAD_RE.fullmatch(body.rstrip('.')):
+        return True
+    if _COPYLINE_BAD_CONSUMABLE_DESC_RE.search(body):
+        return True
+    return False
+
+
+def _build_consumable_seo_intro(name: str, vendor: str, params: Sequence[Tuple[str, str]], status: str) -> str:
+    if status not in {"original", "compatible"}:
+        return ""
+
+    type_label = _detect_consumable_type_label(name, params)
+    if type_label == "Расходный материал":
+        return ""
+
+    device_brand = safe_str(vendor) or _get_param_ci(params, "Для бренда", "Бренд")
+    aftermarket_brand = _title_aftermarket_brand(name)
+    model = _get_param_ci(params, *_COPYLINE_SEO_MODEL_CODE_PARAM_NAMES)
+    compat = _get_param_ci(params, *_COPYLINE_SEO_COMPAT_PARAM_NAMES)
+    color = _get_param_ci(params, "Цвет")
+    resource = _get_param_ci(params, *_COPYLINE_SEO_RESOURCE_PARAM_NAMES) or _resource_from_title(name)
+    tech = _get_param_ci(params, *_COPYLINE_SEO_TECH_PARAM_NAMES)
+
+    opener = _build_originality_sentence(status, type_label).rstrip('.')
+    head_bits: list[str] = []
+    if aftermarket_brand:
+        head_bits.append(aftermarket_brand)
+    if device_brand and device_brand.casefold() not in ' '.join(head_bits).casefold():
+        head_bits.append(device_brand)
+    if model and model.casefold() not in ' '.join(head_bits).casefold():
+        head_bits.append(model)
+
+    first = opener
+    if head_bits:
+        first = f"{first} {' '.join(x for x in head_bits if x).strip()}".strip()
+
+    extras: list[str] = []
+    if compat:
+        extras.append(f"для {compat}")
+    if color:
+        extras.append(f"цвет — {color}")
+    if resource:
+        extras.append(f"ресурс — {resource}")
+    if tech:
+        extras.append(f"технология печати — {tech}")
+
+    if not first:
+        return ""
+    if not extras:
+        return f"{first}."
+    return f"{first} {'; '.join(extras)}."
+
+
+def _apply_consumable_seo_intro(name: str, vendor: str, params: Sequence[Tuple[str, str]], native_desc: str, status: str) -> str:
+    body = safe_str(native_desc)
+    if not _is_consumable_seo_target(name, params):
+        return body
+    if body and not _looks_generic_consumable_desc(body):
+        return body
+    intro = _build_consumable_seo_intro(name, vendor, params, status)
+    return intro or body
+
+
 # ----------------------------- resolve helpers -----------------------------
 
 def _resolve_source_channels(page: dict) -> tuple[str, list[Tuple[str, str]], list[Tuple[str, str]], list[Tuple[str, str]]]:
@@ -643,6 +757,7 @@ def build_offer_from_page(page: dict, *, fallback_title: str = "") -> OfferOut |
         display_desc or title,
         originality_status,
     )
+    native_desc = _apply_consumable_seo_intro(title, vendor, params, native_desc, originality_status)
 
     pictures = _build_pictures(page)
     raw_price = int(page.get("price_raw") or 0)
