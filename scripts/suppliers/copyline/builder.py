@@ -65,8 +65,12 @@ CODE_SCORE_PATTERNS: tuple[tuple[re.Pattern[str], int], ...] = (
 _ORIGINALITY_PARAM_NAME = "Оригинальность"
 _NAME_ORIGINALITY_SUFFIX_RE = re.compile(r"\s*\((?:оригинал|совместимый)\)\s*$", re.I)
 _DESC_ORIGINALITY_HEAD_RE = re.compile(r"(?iu)^\s*(?:Оригинальн(?:ый|ая|ое|ые)|Совместим(?:ый|ая|ое|ые))")
-_RAW_ORIGINAL_RE = re.compile(r"(?iu)(?:^|[^а-яёa-z])(оригинал(?:ьн(?:ый|ая|ое|ые))?|original)(?:$|[^а-яёa-z])")
-_TITLE_INLINE_ORIGINAL_RE = re.compile(r"(?iu)(?:\s*[()\[\]{}-]*\s*)(?:оригинал(?:ьн(?:ый|ая|ое|ые))?|original)(?:\s*[()\[\]{}-]*\s*)")
+_RAW_ORIGINAL_RE = re.compile(
+    r"(?iu)(?<![A-Za-zА-Яа-яЁё])(?:оригинал|original)(?![A-Za-zА-Яа-яЁё])"
+)
+_STRIP_ORIGINAL_TOKEN_RE = re.compile(
+    r"(?iu)(?:(?<=^)|(?<=[\s(\[\{,.;:!?\-–—/]))(?:оригинал|original)(?=$|(?=[\s)\]\},.;:!?\-–—/]))"
+)
 
 
 # ----------------------------- basic helpers -----------------------------
@@ -258,14 +262,13 @@ def _strip_originality_markers(text: str) -> str:
     s = safe_str(text)
     if not s:
         return ""
-    # Удаляем только маркер original/оригинал как отдельный статусный токен.
-    # Совместимый/аналог здесь НЕ трогаем: они не нужны для определения статуса
-    # и могут ломать обычные слова вроде "аналогичному".
-    s = _TITLE_INLINE_ORIGINAL_RE.sub(" ", s)
+    s = _STRIP_ORIGINAL_TOKEN_RE.sub("", s)
+    s = re.sub(r"\(\s*\)", "", s)
+    s = re.sub(r"\[\s*\]", "", s)
+    s = re.sub(r"\{\s*\}", "", s)
     s = re.sub(r"\s{2,}", " ", s)
     s = re.sub(r"\s+([,.;:])", r"\1", s)
     s = re.sub(r"([,.;:]){2,}", r"\1", s)
-    s = re.sub(r"\(\s*\)", "", s)
     return s.strip(" ,-–—")
 
 
@@ -460,7 +463,6 @@ def _detect_consumable_originality(page: dict, name: str, params: Sequence[Tuple
     hay = _source_originality_haystack(page, name, params)
     if _RAW_ORIGINAL_RE.search(hay):
         return "original"
-    # Всё остальное по расходке считаем совместимым.
     return "compatible"
 
 
