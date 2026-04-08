@@ -4,12 +4,13 @@ Path: scripts/suppliers/comportal/builder.py
 
 ComPortal supplier layer — сборка raw offer.
 
-v9:
+v10:
 - сохраняет safe mutual enrichment и type-aware prune;
 - сохраняет усиленные descriptions для слабых Dell / corporate-кейсов;
 - добивает public model для Dell desktop / AIO и Canon plotter кейсов;
 - больше не подменяет param "Коды" публичной моделью;
-- сохраняет канонизацию кривых supplier-ключей перед prune.
+- сохраняет канонизацию кривых supplier-ключей перед prune;
+- усиливает supplier-side SEO-intro для расходных материалов без удлинения title.
 """
 
 from __future__ import annotations
@@ -522,17 +523,102 @@ def _desc_for_power(pmap: dict[str, str]) -> str:
     return _finalize_desc(_join_nonempty(bits))
 
 
+def _seo_head_word_from_originality(value: str) -> str:
+    v = norm_ws(value).casefold().replace("ё", "е")
+    if v == "оригинал":
+        return "Оригинальный"
+    if v == "совместимый":
+        return "Совместимый"
+    return ""
+
+
+def _shorten_compat_list(text: str, *, max_items: int = 5, max_len: int = 160) -> str:
+    s = norm_ws(text)
+    if not s:
+        return ""
+
+    items = [norm_ws(x) for x in re.split(r"\s*[;,]\s*", s) if norm_ws(x)]
+    if items:
+        items = items[:max_items]
+        out = ", ".join(items)
+    else:
+        out = s
+
+    if len(out) <= max_len:
+        return out
+
+    cut = out[:max_len].rstrip(" ,;/")
+    for sep in (",", " ", "/"):
+        j = cut.rfind(sep)
+        if j >= max_len - 35:
+            cut = cut[:j].rstrip(" ,;/")
+            break
+    cut = cut.rstrip(" ,;/")
+    return cut + "…"
+
+
 def _desc_for_consumable(pmap: dict[str, str]) -> str:
+    ptype = norm_ws(pmap.get("Тип", "")) or "Расходный материал"
+    vendor = norm_ws(pmap.get("Для бренда", ""))
+    model = norm_ws(pmap.get("Модель", ""))
+    codes = norm_ws(pmap.get("Коды", ""))
+    color = norm_ws(pmap.get("Цвет", ""))
+    tech = norm_ws(pmap.get("Технология печати", ""))
+    resource = norm_ws(pmap.get("Ресурс", ""))
+    volume = norm_ws(pmap.get("Объём", ""))
+    compat = _shorten_compat_list(pmap.get("Совместимость", ""))
+    number = norm_ws(pmap.get("Номер", ""))
+    use_case = norm_ws(pmap.get("Применение", ""))
+    originality = _seo_head_word_from_originality(pmap.get("Оригинальность", ""))
+
+    head_bits: list[str] = []
+    if originality:
+        head_bits.append(originality)
+    head_bits.append(ptype.lower())
+    if vendor:
+        head_bits.append(vendor)
+    if model and (not vendor or model.casefold() != vendor.casefold()):
+        head_bits.append(model)
+    intro = " ".join(x for x in head_bits if x).strip()
+
+    tail_parts: list[str] = []
+    if compat:
+        tail_parts.append(f"для {compat}")
+    elif use_case:
+        tail_parts.append(f"для {use_case}")
+
+    code_tokens = []
+    for raw in (codes, number):
+        token = norm_ws(raw)
+        if token and token.casefold() not in {norm_ws(x).casefold() for x in code_tokens}:
+            code_tokens.append(token)
+    if code_tokens:
+        label = "код" if len(code_tokens) == 1 else "коды"
+        tail_parts.append(f"{label} — {' / '.join(code_tokens)}")
+
+    if color:
+        tail_parts.append(f"цвет — {color}")
+    if resource:
+        tail_parts.append(f"ресурс — {resource}")
+    elif volume:
+        tail_parts.append(f"объём — {volume}")
+    if tech:
+        tail_parts.append(f"технология печати — {tech}")
+
+    if intro and tail_parts:
+        return _finalize_desc(f"{intro} {'; '.join(tail_parts)}")
+    if intro:
+        return _finalize_desc(intro)
+
     bits: list[str] = []
-    ptype = norm_ws(pmap.get("Тип", ""))
     if ptype:
         bits.append(ptype)
-    _append_param_line(bits, "Цвет", pmap.get("Цвет", ""))
-    _append_param_line(bits, "Технология печати", pmap.get("Технология печати", ""))
-    _append_param_line(bits, "Ресурс", pmap.get("Ресурс", ""))
-    _append_param_line(bits, "Объём", pmap.get("Объём", ""))
-    _append_param_line(bits, "Номер", pmap.get("Номер", ""))
-    _append_param_line(bits, "Применение", pmap.get("Применение", ""))
+    _append_param_line(bits, "Цвет", color)
+    _append_param_line(bits, "Технология печати", tech)
+    _append_param_line(bits, "Ресурс", resource)
+    _append_param_line(bits, "Объём", volume)
+    _append_param_line(bits, "Номер", number)
+    _append_param_line(bits, "Применение", use_case)
     return _finalize_desc(_join_nonempty(bits))
 
 
