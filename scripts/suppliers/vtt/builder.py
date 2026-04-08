@@ -487,7 +487,15 @@ def _repair_known_titles(title_no_suffix: str, compat: str) -> str:
 
 _ORIGINALITY_PARAM_NAME = "Оригинальность"
 _ORIGINALITY_MARK_RE = re.compile(r"(?iu)\(\s*[OО]\s*\)")
-_DESC_ORIGINALITY_HEAD_RE = re.compile(r"(?iu)^\s*(?:Оригинальн(?:ый|ая|ое)|Совместим(?:ый|ая|ое))")
+_DESC_ORIGINALITY_HEAD_RE = re.compile(r"(?iu)^\s*(?:Оригинальн(?:ый|ая|ое)|Совместим(?:ый|ая|ое))\b")
+_DESC_FIELD_START_RE = re.compile(
+    r"(?iu)^(?:тип|партномер|совместимость|ресурс|цвет|оригинальность|"
+    r"технология(?:\s+печати)?|коды\s+расходников|для\s+бренда)\s*:"
+)
+_DESC_FIELD_LABEL_RE = re.compile(
+    r"(?iu)\b(?:тип|партномер|совместимость|ресурс|цвет|оригинальность|"
+    r"технология(?:\s+печати)?|коды\s+расходников|для\s+бренда)\s*:"
+)
 
 
 def _strip_originality_suffix(name: str) -> str:
@@ -501,6 +509,85 @@ def _apply_originality_suffix(name: str, status: str) -> str:
     if status == "compatible":
         return f"{base_name} (совместимый)"
     return base_name
+
+
+def _strip_leading_type_phrase(text: str, type_label: str) -> str:
+    src = norm_ws(text)
+    tl = norm_ws(type_label)
+    if not src or not tl:
+        return src
+    pat = re.compile(rf"(?iu)^\s*{re.escape(tl)}(?=$|[\s.,:;()\-–—])")
+    m = pat.match(src)
+    if not m:
+        return src
+    return norm_ws(src[m.end():].lstrip(" .,:;()-–—"))
+
+
+def _contains_token(hay: str, needle: str) -> bool:
+    h = norm_ws(hay).casefold()
+    n = norm_ws(needle).casefold()
+    return bool(h and n and n in h)
+
+
+def _append_intro_field(parts: list[str], label: str, value: str, *, seen_text: str) -> None:
+    val = norm_ws(value)
+    if not val:
+        return
+    if _contains_token(seen_text, val):
+        return
+    parts.append(f"{label} — {val}")
+
+
+def _desc_needs_seo_intro(desc: str) -> bool:
+    d = norm_ws(desc)
+    if not d:
+        return True
+    if _DESC_FIELD_START_RE.match(d):
+        return True
+    field_hits = len(_DESC_FIELD_LABEL_RE.findall(d))
+    if field_hits >= 2 and d.count(";") >= 2 and len(d) <= 280:
+        return True
+    return False
+
+
+def _build_consumable_seo_intro(
+    *,
+    title_core: str,
+    status: str,
+    type_name: str,
+    params: list[tuple[str, str]],
+    part_number: str,
+    compat: str,
+    resource: str,
+    color: str,
+    tech: str,
+) -> str:
+    if status not in {"original", "compatible"}:
+        return ""
+
+    title_clean = _strip_originality_suffix(title_core)
+    type_label = _detect_consumable_type_label(title_clean, type_name, params)
+    sentence = _build_originality_sentence(status, type_label).rstrip(".")
+    title_rest = _strip_leading_type_phrase(title_clean, type_label)
+
+    if title_rest and title_rest.casefold() != title_clean.casefold():
+        first = f"{sentence} {title_rest}".strip()
+    else:
+        first = sentence
+
+    parts: list[str] = [first]
+    seen_text = f"{title_clean} {first}"
+
+    _append_intro_field(parts, "партномер", part_number, seen_text=seen_text)
+    _append_intro_field(parts, "совместимость", compat, seen_text=seen_text)
+    _append_intro_field(parts, "цвет", color, seen_text=seen_text)
+    _append_intro_field(parts, "ресурс", resource, seen_text=seen_text)
+    _append_intro_field(parts, "технология печати", tech, seen_text=seen_text)
+
+    intro = "; ".join([x for x in parts if norm_ws(x)]).strip()
+    if intro and not intro.endswith("."):
+        intro += "."
+    return intro
 
 
 def _upsert_param(params: list[tuple[str, str]], key: str, value: str) -> list[tuple[str, str]]:
@@ -805,6 +892,20 @@ def build_offer_from_raw(raw: dict, *, id_prefix: str = "VT", placeholder_pictur
         is_original=(originality_status == "original"),
         desc_body=safe_str(raw.get("description_body") or raw.get("description_meta")),
     )
+    if _is_consumable_for_originality(raw, clean_title_value, type_name, raw_params) and _desc_needs_seo_intro(desc):
+        seo_intro = _build_consumable_seo_intro(
+            title_core=norm_ws(title_no_suffix),
+            status=originality_status,
+            type_name=type_name,
+            params=params,
+            part_number=(display_part_number or part_number),
+            compat=compat,
+            resource=resource,
+            color=color,
+            tech=tech,
+        )
+        if seo_intro:
+            desc = seo_intro
     params = _upsert_param(params, _ORIGINALITY_PARAM_NAME, "Оригинал" if originality_status == "original" else ("Совместимый" if originality_status == "compatible" else ""))
     title, params, desc = _apply_consumable_originality(title, params, desc, originality_status, type_name)
 
