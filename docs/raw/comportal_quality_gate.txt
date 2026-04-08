@@ -37,7 +37,6 @@ CP13837247 | placeholder_picture | Требует ручной проверки 
 CP13850386 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13870174 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13870401 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
-CP13871789 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13872560 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13872561 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13872562 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
@@ -122,6 +121,7 @@ CP13873126 | placeholder_picture | Требует ручной проверки 
 CP13873137 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13873144 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13873146 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
+CP13873147 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13873166 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13873167 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13873168 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
@@ -137,7 +137,6 @@ CP13837247 | placeholder_picture | Требует ручной проверки 
 CP13850386 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13870174 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13870401 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
-CP13871789 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13872560 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13872561 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13872562 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
@@ -222,6 +221,7 @@ CP13873126 | placeholder_picture | Требует ручной проверки 
 CP13873137 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13873144 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13873146 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
+CP13873147 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13873166 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13873167 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13873168 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
