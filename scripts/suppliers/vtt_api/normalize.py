@@ -3,9 +3,10 @@
 Path: scripts/suppliers/vtt_api/normalize.py
 Нормализация SOAP payload -> raw dict, максимально похожий на текущий VTT raw.
 
-v2:
+v3:
 - поддерживает больше английских и русских ключей;
 - даёт fallback по title/sku/vendor/price/qty;
+- price_rub_raw приводит к int-совместимому виду для старого VTT builder;
 - пишет поля именно в том виде, который ждёт текущий VTT builder.
 """
 from __future__ import annotations
@@ -56,6 +57,32 @@ def _bool_from_any(value: object) -> bool:
         return bool(value)
 
 
+def _to_price_int(value: object) -> int:
+    s = norm_ws(value)
+    if not s:
+        return 0
+    s = s.replace(" ", "").replace("\u00a0", "")
+    # 1 234,56 / 1234.56 / 1234
+    try:
+        return int(round(float(s.replace(",", "."))))
+    except Exception:
+        digits = []
+        dot_seen = False
+        for ch in s:
+            if ch.isdigit():
+                digits.append(ch)
+            elif ch in {".", ","} and not dot_seen:
+                digits.append(".")
+                dot_seen = True
+        cleaned = "".join(digits).strip(".")
+        if not cleaned:
+            return 0
+        try:
+            return int(round(float(cleaned)))
+        except Exception:
+            return 0
+
+
 def _extract_params(item: dict[str, Any], used_keys: set[str]) -> list[tuple[str, str]]:
     params: list[tuple[str, str]] = []
     raw = (
@@ -77,7 +104,6 @@ def _extract_params(item: dict[str, Any], used_keys: set[str]) -> list[tuple[str
             if key and val:
                 params.append((key, val))
 
-    # Если SOAP отдаёт плоскую структуру, тянем полезные scalar-поля в params.
     skip_contains = (
         "name", "title", "caption", "наименование", "description", "описание",
         "price", "цена", "cost", "стоимость", "qty", "quantity", "остат",
@@ -178,7 +204,7 @@ def normalize_api_item(item: dict[str, Any]) -> dict[str, Any]:
         "vendor": vendor,
         "description_body": desc,
         "description_meta": "",
-        "price_rub_raw": price,
+        "price_rub_raw": _to_price_int(price),
         "qty": qty,
         "available": _bool_from_any(item.get("available") if "available" in item else qty),
         "params": params,
