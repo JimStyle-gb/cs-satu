@@ -16,7 +16,7 @@ from __future__ import annotations
 import re
 from typing import List, Sequence, Tuple
 
-from suppliers.copyline.params_page import (
+from suppliers.copyline.params import (
     CABLE_CATEGORY_RX,
     CABLE_DIM_RX,
     CABLE_MATERIAL_RX,
