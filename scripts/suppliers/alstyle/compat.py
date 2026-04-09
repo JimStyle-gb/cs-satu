@@ -2,19 +2,16 @@
 """
 Path: scripts/suppliers/alstyle/compat.py
 
-AlStyle supplier layer — cleanup совместимости и кодовых серий.
+AlStyle compat layer.
 
 Что делает:
-- чистит модели и совместимость;
-- нормализует кодовые серии;
-- убирает supplier-мусор в compat-тексте.
+- держит supplier-specific compat и part-number helpers;
+- не переносит compat repair в shared core;
 
 Что не делает:
-- не меняет shared-core логику;
-- не строит final description;
-- не выполняет final XML-рендер.
+- не строит final offers;
+- не переносит supplier-specific repair в shared core.
 """
-
 from __future__ import annotations
 
 import re
