@@ -2,17 +2,15 @@
 """
 Path: scripts/suppliers/vtt/params.py
 
-VTT Params — canonical params-слой supplier-layer.
+VTT params layer.
 
 Что делает:
-- держит главный extractor supplier-параметров;
-- сохраняет backward-safe public API старого params_page.py;
-- отдаёт source.py low-level helper-ы для title / meta / price / sku / images / params.
+- держит supplier params extractor и helpers;
+- отдаёт source/builder чистые supplier-данные;
 
 Что не делает:
 - не строит final offers;
-- не заменяет builder и normalize слой;
-- не переносит supplier-specific repair в shared core.
+- не переносит supplier cleanup в shared core.
 """
 from __future__ import annotations
 
