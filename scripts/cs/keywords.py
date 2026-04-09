@@ -2,19 +2,16 @@
 """
 Path: scripts/cs/keywords.py
 
-CS Keywords — общий сборщик строки keywords.
+CS Keywords — shared keywords builder layer.
 
 Что делает:
-- собирает итоговую строку <keywords>;
-- делает дедупликацию со стабильным порядком;
-- ограничивает длину и добавляет общий гео-хвост Казахстана.
+- собирает итоговую строку keywords;
+- держит общий dedupe и geo-tail logic;
 
 Что не делает:
-- не содержит supplier-specific логики;
-- не подменяет description и builder-слой;
-- не принимает решения по ассортименту.
+- не хранит supplier parsing logic;
+- не подменяет shared description/core.
 """
-
 from __future__ import annotations
 
 import os
