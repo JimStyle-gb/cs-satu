@@ -2,23 +2,16 @@
 """
 Path: scripts/build_vtt.py
 
-VTT adapter (VT) — thin orchestrator with shard-specific workflow.
+Build VTT — orchestrator сборки VTT-фида.
 
 Что делает:
-- грузит supplier config: filter / schema / policy;
-- поддерживает index / shard / merge / full режимы;
-- собирает raw offers из shard-specific pipeline;
-- пишет raw feed;
-- пишет final feed;
-- печатает build summary;
-- запускает supplier-side quality gate.
+- связывает source, filtering, builder, raw/final writer и quality gate;
+- собирает итоговый build summary и коды завершения.
 
-Важно:
-- shard/index/merge логика остаётся допустимой особенностью VTT;
-- supplier-specific parsing/compat/normalize живут только в suppliers/vtt/*;
-- next_run для VTT считается через shared cs.meta по дням месяца 1/10/20.
+Что не делает:
+- не хранит shared core-логику;
+- не должен дублировать supplier-specific обработку из внутренних модулей;
 """
-
 from __future__ import annotations
 
 import json
@@ -134,8 +127,6 @@ def _resolve_id_prefix(policy_cfg: dict[str, Any], schema_cfg: dict[str, Any]) -
 
 def _resolve_output_encoding(policy_cfg: dict[str, Any], schema_cfg: dict[str, Any]) -> str:
     return str(policy_cfg.get("output_encoding") or schema_cfg.get("encoding") or OUTPUT_ENCODING_DEFAULT).strip() or OUTPUT_ENCODING_DEFAULT
-
-
 
 
 # ------------------------------ qg helpers --------------------------------
@@ -600,8 +591,6 @@ def _run_full(cfg_dir: Path, filter_cfg: dict[str, Any], schema_cfg: dict[str, A
         availability_false=availability_false,
     )
     return 0 if qg.ok else 1
-
-
 
 
 # -------------------------------- entrypoint ------------------------------
