@@ -2,31 +2,26 @@
 """
 Path: scripts/suppliers/copyline/desc_clean.py
 
-CopyLine Desc Clean — supplier-layer очистка display-description.
+CopyLine narrative description cleaning layer.
 
 Что делает:
-- готовит только display-body для raw/native_desc и final;
-- убирает supplier-мусор и явные техшапки;
-- оставляет backward-safe public API для narrative-cleaning.
+- чистит supplier narrative/body от шумового текста;
+- готовит безопасный plain-text для extraction и native_desc;
 
 Что не делает:
-- не участвует в truth extraction;
-- не заменяет desc_extract-слой;
-- не строит финальный shared HTML description.
+- не строит final HTML description;
+- не подменяет compat и params layer.
 """
-
 from __future__ import annotations
 
 import re
 from typing import Iterable
-
 
 _DISPLAY_BRAND_REPLACEMENTS: tuple[tuple[str, str], ...] = (
     (r"\bEuro\s+Print\b", "Europrint"),
     (r"\bKATYUSHA\b", "Катюша"),
     (r"\bКАТЮША\b", "Катюша"),
 )
-
 
 def _canonical_display_brands(text: str) -> str:
     """Привести брендовые токены в display-тексте к канону."""
@@ -36,7 +31,6 @@ def _canonical_display_brands(text: str) -> str:
     for pattern, repl in _DISPLAY_BRAND_REPLACEMENTS:
         s = re.sub(pattern, repl, s, flags=re.I)
     return s
-
 
 DISPLAY_CUT_HEADERS: tuple[str, ...] = (
     "Технические характеристики",
@@ -52,11 +46,9 @@ DISPLAY_NOISE_LINES: tuple[re.Pattern[str], ...] = (
     re.compile(r"^технические\s+характеристики\s*$", re.I),
 )
 
-
 def safe_str(x: object) -> str:
     """Безопасно привести значение к строке."""
     return str(x).strip() if x is not None else ""
-
 
 def _norm_spaces(text: str) -> str:
     """Нормализовать пробелы/переводы строк без semantic-решений."""
@@ -69,7 +61,6 @@ def _norm_spaces(text: str) -> str:
     s = re.sub(r" *\n *", "\n", s)
     s = re.sub(r"\n{3,}", "\n\n", s)
     return s.strip()
-
 
 def _cut_display_tail(text: str) -> str:
     """Обрезать явный теххвост для витринного narrative."""
@@ -87,7 +78,6 @@ def _cut_display_tail(text: str) -> str:
         return s
     return s[:best].strip()
 
-
 def _drop_known_header_prefixes(text: str) -> str:
     """Убрать одиночные техшапки в начале текста."""
     s = _norm_spaces(text)
@@ -96,7 +86,6 @@ def _drop_known_header_prefixes(text: str) -> str:
     for header in DISPLAY_CUT_HEADERS:
         s = re.sub(rf"^\s*{re.escape(header)}\s*:?\s*", "", s, flags=re.I)
     return s.strip()
-
 
 def _drop_noise_lines(lines: Iterable[str]) -> list[str]:
     """Убрать пустые и служебные строки, сохраняя абзацы."""
@@ -117,7 +106,6 @@ def _drop_noise_lines(lines: Iterable[str]) -> list[str]:
         out.pop()
     return out
 
-
 def _cleanup_punctuation(text: str) -> str:
     """Мягкая косметика narrative без изменения смысла."""
     s = safe_str(text)
@@ -130,7 +118,6 @@ def _cleanup_punctuation(text: str) -> str:
     s = re.sub(r"\s{2,}", " ", s)
     s = re.sub(r" ?\n ?", "\n", s)
     return s.strip()
-
 
 def clean_description(text: str) -> str:
     """
