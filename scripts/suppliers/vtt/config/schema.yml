@@ -1,3 +1,14 @@
+# Path: scripts/suppliers/vtt/config/schema.yml
+#
+# VTT schema config.
+#
+# Что делает:
+# - хранит schema и allow/alias/key rules supplier-layer;
+# - не содержит build/business-кода.
+#
+# Что не делает:
+# - не строит final offers;
+# - не переносит supplier-specific repair в shared core.
 supplier: vtt
 schema_version: 2
 id_prefix: VT
