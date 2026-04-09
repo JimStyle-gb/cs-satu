@@ -1,3 +1,14 @@
+# Path: scripts/suppliers/vtt/config/policy.yml
+#
+# VTT policy config.
+#
+# Что делает:
+# - хранит supplier policy, schedule и quality gate defaults;
+# - не содержит parsing/normalization кода.
+#
+# Что не делает:
+# - не строит offers;
+# - не подменяет builder/source/quality_gate.
 supplier: vtt
 id_prefix: VT
 source_kind: html_site_parsing
