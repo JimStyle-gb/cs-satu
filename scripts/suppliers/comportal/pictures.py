@@ -2,19 +2,16 @@
 """
 Path: scripts/suppliers/comportal/pictures.py
 
-ComPortal Pictures — supplier-layer сборщик картинок.
+ComPortal pictures layer.
 
 Что делает:
-- чистит и нормализует picture urls;
-- переводит comportal-ссылки на https, где это безопасно;
-- удаляет дубли и возвращает placeholder, если список пустой.
+- собирает и нормализует picture URL;
+- возвращает готовый список картинок для builder.py;
 
 Что не делает:
-- не оценивает качество фото;
-- не фильтрует ассортимент;
-- не вмешивается в builder и quality gate.
+- не меняет business-логику товаров;
+- не управляет ассортиментной фильтрацией.
 """
-
 from __future__ import annotations
 
 from cs.util import norm_ws
