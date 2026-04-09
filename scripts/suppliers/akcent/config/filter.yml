@@ -1,6 +1,14 @@
-# AkCent narrow assortment filter for CS-template supplier-layer
-# v1: strict prefix-based include gate
-
+# Path: scripts/suppliers/akcent/config/filter.yml
+#
+# AkCent filter config.
+#
+# Что делает:
+# - хранит supplier assortment filtering rules;
+# - содержит только config-данные без business-кода.
+#
+# Что не делает:
+# - не строит offers;
+# - не переносит supplier rules в shared core.
 supplier: akcent
 mode: include
 
