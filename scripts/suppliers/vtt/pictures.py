@@ -2,17 +2,15 @@
 """
 Path: scripts/suppliers/vtt/pictures.py
 
-VTT Pictures — picture-слой supplier-layer.
+VTT pictures layer.
 
 Что делает:
-- чистит и дедуплицирует picture URL;
-- вырезает явный non-product image noise;
-- возвращает placeholder, если реальных картинок не осталось.
+- собирает и нормализует picture URL;
+- возвращает готовый список картинок для builder.py;
 
 Что не делает:
-- не меняет бизнес-логику товаров;
-- не управляет ассортиментной фильтрацией;
-- не заменяет builder и source слой.
+- не меняет business-логику товаров;
+- не управляет ассортиментной фильтрацией.
 """
 from __future__ import annotations
 
