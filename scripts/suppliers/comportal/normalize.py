@@ -2,26 +2,22 @@
 """
 Path: scripts/suppliers/comportal/normalize.py
 
-ComPortal Normalize — supplier-layer нормализация исходных полей.
+ComPortal normalize layer.
 
 Что делает:
-- нормализует name, vendor, availability и price-поля поставщика;
-- готовит clean basics для builder.py;
-- держит supplier-specific правила в adapter-layer.
+- держит базовую supplier-нормализацию;
+- даёт helper-ы для builder/compat/params слоя;
 
 Что не делает:
-- не переносит supplier-specific repairs в shared core;
-- не строит финальный shared description;
-- не подменяет source.py и builder.py.
+- не содержит source-crawl логики;
+- не делает final rendering.
 """
-
 from __future__ import annotations
 
 import re
 
 from cs.util import norm_ws, safe_int
 from suppliers.comportal.models import ParamItem
-
 
 _VENDOR_CANON_MAP = {
     "HP EUROPE": "HP",
@@ -140,7 +136,6 @@ _GENERIC_VENDOR_WORDS = {
     "СЕРВЕР", "КОММУТАТОР", "МАРШРУТИЗАТОР", "ДИСПЛЕЙ", "ПЛОТТЕР", "РАБОЧАЯ",
 }
 
-
 def _param_map(params: list[ParamItem]) -> dict[str, str]:
     out: dict[str, str] = {}
     for p in params or []:
@@ -149,7 +144,6 @@ def _param_map(params: list[ParamItem]) -> dict[str, str]:
         if name and value:
             out[name] = value
     return out
-
 
 def _canonical_vendor_token(vendor: str) -> str:
     s = norm_ws(vendor)
@@ -174,7 +168,6 @@ def _canonical_vendor_token(vendor: str) -> str:
 
     return s
 
-
 def _infer_vendor_from_text(text: str) -> str:
     s = norm_ws(text)
     if not s:
@@ -183,7 +176,6 @@ def _infer_vendor_from_text(text: str) -> str:
         if re.search(pattern, s, flags=re.IGNORECASE):
             return vendor
     return ""
-
 
 def _canonicalize_brand_tokens_in_name(name: str) -> str:
     s = norm_ws(name)
@@ -205,7 +197,6 @@ def _canonicalize_brand_tokens_in_name(name: str) -> str:
     s = re.sub(r"\s+", " ", s).strip()
     return s
 
-
 def _dedupe_duplicate_brand_head(name: str) -> str:
     """Схлопнуть head-дубли бренда в title вида 'Ноутбук HP HP ...'."""
     s = norm_ws(name)
@@ -219,7 +210,6 @@ def _dedupe_duplicate_brand_head(name: str) -> str:
         s = re.sub(r"\s+", " ", s).strip()
     return s
 
-
 def _clean_title_tail(name: str) -> str:
     s = normalize_name(name)
     s = _DUPLICATE_HEAD_RE.sub(lambda m: f"{m.group('device')} {m.group('brand')} ", s)
@@ -228,7 +218,6 @@ def _clean_title_tail(name: str) -> str:
         s = s[:m.start()].strip()
     s = re.sub(r"\s+", " ", s).strip(" /-–—,;:.")
     return s
-
 
 def _strip_public_head(title_tail: str) -> str:
     s = norm_ws(title_tail)
@@ -248,7 +237,6 @@ def _strip_public_head(title_tail: str) -> str:
     s = s.replace(" / ", " / ")
     s = re.sub(r"\s{2,}", " ", s).strip(" /-–—,;:.")
     return s
-
 
 def _extract_public_model_from_name(name: str) -> str:
     s = _clean_title_tail(name)
@@ -274,7 +262,6 @@ def _extract_public_model_from_name(name: str) -> str:
     tail = _strip_public_head(s)
     return tail
 
-
 def _is_weak_model_value(value: str, *, name: str) -> bool:
     v = norm_ws(value)
     if not v:
@@ -295,7 +282,6 @@ def _is_weak_model_value(value: str, *, name: str) -> bool:
 
     return False
 
-
 def normalize_name(name: str) -> str:
     s = norm_ws(name)
     s = _canonicalize_brand_tokens_in_name(s)
@@ -305,7 +291,6 @@ def normalize_name(name: str) -> str:
     s = re.sub(r"\s*/\s*", " / ", s)
     s = re.sub(r"\s+", " ", s)
     return s.strip()
-
 
 def build_offer_oid(raw_vendor_code: str, raw_id: str, *, prefix: str) -> str:
     base = norm_ws(raw_vendor_code) or norm_ws(raw_id)
@@ -317,7 +302,6 @@ def build_offer_oid(raw_vendor_code: str, raw_id: str, *, prefix: str) -> str:
     if base.upper().startswith(prefix.upper()):
         return base
     return f"{prefix}{base}"
-
 
 def normalize_available(available_attr: str, available_tag: str, active: str) -> bool:
     av_attr = (available_attr or "").strip().lower()
@@ -339,7 +323,6 @@ def normalize_available(available_attr: str, available_tag: str, active: str) ->
         return False
 
     return False
-
 
 def normalize_vendor(
     vendor: str,
@@ -391,7 +374,6 @@ def normalize_vendor(
 
     return norm_ws(fallback_vendor)
 
-
 def normalize_model(name: str, params: list[ParamItem]) -> str:
     pmap = _param_map(params)
 
@@ -420,7 +402,6 @@ def normalize_model(name: str, params: list[ParamItem]) -> str:
             return val
 
     return ""
-
 
 def normalize_price_in(price_text: str) -> int | None:
     return safe_int(price_text)
