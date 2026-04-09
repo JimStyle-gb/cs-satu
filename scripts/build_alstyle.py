@@ -2,26 +2,18 @@
 """
 Path: scripts/build_alstyle.py
 
-AlStyle adapter (AS) — thin orchestrator under CS-template.
+Build AlStyle — тонкий orchestrator поставщика в CS-шаблоне.
 
 Что делает:
-- грузит supplier config: filter / schema / policy;
-- читает исходный XML поставщика;
-- прогоняет source -> filtering -> builder;
-- пишет raw feed;
-- пишет final feed;
-- пишет watch-report;
-- запускает supplier-side quality gate.
+- грузит supplier config и исходный XML;
+- прогоняет pipeline source -> filtering -> builder;
+- пишет raw и final feed;
+- пишет watch-report и запускает supplier quality gate.
 
-Важно:
-- supplier-specific логика остаётся только в suppliers/alstyle/*;
-- build_alstyle.py не должен знать regex-логику AlStyle;
-- orchestrator остаётся тонким и шаблонным относительно других поставщиков.
-
-v110:
-- supplier-side quality gate переведён на RAW feed;
-- baseline path остаётся каноническим quality_gate_baseline.yml;
-- остальной qg-контракт сохранён без ломки.
+Что не делает:
+- не хранит supplier regex-логику;
+- не дублирует builder, source и filtering;
+- не подменяет shared core и shared validators.
 """
 
 from __future__ import annotations
@@ -45,7 +37,6 @@ from suppliers.alstyle.filtering import filter_source_offers, parse_id_set
 from suppliers.alstyle.quality_gate import run_quality_gate
 from suppliers.alstyle.source import load_source_offers
 
-
 BUILD_ALSTYLE_VERSION = "build_alstyle_v110_qg_raw_target"
 
 ALSTYLE_URL_DEFAULT = "https://al-style.kz/upload/catalog_export/al_style_catalog.php"
@@ -64,15 +55,12 @@ QUALITY_BASELINE_DEFAULT = "scripts/suppliers/alstyle/config/quality_gate_baseli
 QUALITY_REPORT_DEFAULT = "docs/raw/alstyle_quality_gate.txt"
 PLACEHOLDER_DEFAULT = "https://placehold.co/800x800/png?text=No+Photo"
 
-
 # ----------------------------- config helpers -----------------------------
-
 
 def _read_yaml(path: Path) -> dict[str, Any]:
     if not path.exists():
         return {}
     return yaml.safe_load(path.read_text(encoding="utf-8")) or {}
-
 
 def _load_supplier_config(cfg_dir: Path) -> tuple[dict[str, Any], dict[str, Any], dict[str, Any]]:
     filter_cfg = _read_yaml(cfg_dir / FILTER_FILE_DEFAULT)
@@ -80,18 +68,15 @@ def _load_supplier_config(cfg_dir: Path) -> tuple[dict[str, Any], dict[str, Any]
     policy_cfg = _read_yaml(cfg_dir / POLICY_FILE_DEFAULT)
     return filter_cfg, schema_cfg, policy_cfg
 
-
 def _env_truthy(name: str) -> bool:
     val = os.getenv(name, "").strip().casefold()
     return val in {"1", "true", "yes", "y", "on"}
-
 
 def _safe_int(value: Any, default: int) -> int:
     try:
         return int(value)
     except Exception:
         return default
-
 
 def _resolve_hour(policy_cfg: dict[str, Any]) -> int:
     return _safe_int(
@@ -100,7 +85,6 @@ def _resolve_hour(policy_cfg: dict[str, Any]) -> int:
         2,
     )
 
-
 def _resolve_placeholder(policy_cfg: dict[str, Any]) -> str:
     return (
         os.getenv("PLACEHOLDER_PICTURE")
@@ -108,11 +92,9 @@ def _resolve_placeholder(policy_cfg: dict[str, Any]) -> str:
         or PLACEHOLDER_DEFAULT
     )
 
-
 def _resolve_vendor_blacklist(policy_cfg: dict[str, Any]) -> set[str]:
     raw = policy_cfg.get("vendor_blacklist_casefold") or ["alstyle"]
     return {str(x).casefold() for x in raw if str(x).strip()}
-
 
 def _resolve_quality_gate(policy_cfg: dict[str, Any]) -> dict[str, Any]:
     qg_cfg = policy_cfg.get("quality_gate") or {}
@@ -154,7 +136,6 @@ def _resolve_quality_gate(policy_cfg: dict[str, Any]) -> dict[str, Any]:
         or _env_truthy("ALSTYLE_QUALITY_FREEZE_BASELINE"),
     }
 
-
 def _run_quality_gate(*, raw_out_file: str, qg: dict[str, Any]) -> None:
     if not qg.get("enabled", True):
         return
@@ -172,9 +153,7 @@ def _run_quality_gate(*, raw_out_file: str, qg: dict[str, Any]) -> None:
     if not ok:
         raise SystemExit(1)
 
-
 # ----------------------------- main -----------------------------
-
 
 def main() -> int:
     url = os.getenv("ALSTYLE_URL", ALSTYLE_URL_DEFAULT)
@@ -268,7 +247,6 @@ def main() -> int:
         f"changed={'yes' if changed else 'no'} | file={out_file}"
     )
     return 0
-
 
 if __name__ == "__main__":
     raise SystemExit(main())
