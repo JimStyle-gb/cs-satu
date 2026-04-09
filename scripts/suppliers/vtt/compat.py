@@ -2,17 +2,15 @@
 """
 Path: scripts/suppliers/vtt/compat.py
 
-VTT Compat — compat-слой supplier-layer.
+VTT compat layer.
 
 Что делает:
-- держит supplier-specific cleanup совместимости и part-number;
-- отделяет device/model compatibility от code-list логики;
-- помогает builder-слою собирать clean display part number и compat.
+- держит supplier-specific compat и part-number helpers;
+- не переносит compat repair в shared core;
 
 Что не делает:
-- не crawls source-страницы;
-- не строит final description;
-- не переносит supplier-specific compat repair в shared core.
+- не строит final offers;
+- не переносит supplier-specific repair в shared core.
 """
 from __future__ import annotations
 
