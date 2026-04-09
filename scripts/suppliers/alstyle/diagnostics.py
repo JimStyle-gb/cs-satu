@@ -2,19 +2,16 @@
 """
 Path: scripts/suppliers/alstyle/diagnostics.py
 
-AlStyle Diagnostics — служебный summary-слой поставщика.
+AlStyle diagnostics layer.
 
 Что делает:
-- печатает стабильные watch- и build-диагностики для orchestrator;
-- формирует сообщения по watched offers и пишет watch-report;
-- выносит diagnostics-логику из build_alstyle.py.
+- печатает стабильный build summary;
+- держит diagnostics вне build-оркестратора;
 
 Что не делает:
-- не фильтрует и не меняет offers;
-- не содержит supplier-specific business-логики;
-- не подменяет builder и quality gate.
+- не меняет supplier raw/final данные;
+- не подменяет builder/source слой.
 """
-
 from __future__ import annotations
 
 from pathlib import Path
