@@ -2,19 +2,18 @@
 """
 Path: scripts/suppliers/vtt/desc_clean.py
 
-VTT supplier layer — narrative description cleaning.
+VTT Desc Clean — narrative-clean слой supplier-layer.
 
 Что делает:
 - чистит supplier-body от служебного и шумового текста;
 - сохраняет полезный narrative для raw/native_desc;
-- не участвует в compat repair и final rendering;
-- не подменяет главный params extractor.
+- подготавливает безопасный plain-text для display/extract слоя.
 
-Важно:
-- модуль обслуживает только display/narrative слой;
-- truth extraction и supplier-params живут в params.py / desc_extract.py.
+Что не делает:
+- не участвует в compat repair;
+- не заменяет главный params extractor;
+- не строит final HTML description.
 """
-
 from __future__ import annotations
 
 import re
@@ -27,7 +26,6 @@ SERVICE_DESC_RE = re.compile(
     r"Москва, до новой поставки, дней)\s*[:\-][^.;\n]*",
     re.I,
 )
-
 
 def clean_native_description(desc_body: str) -> str:
     body = norm_ws(desc_body)
