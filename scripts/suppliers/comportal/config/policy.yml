@@ -1,3 +1,14 @@
+# Path: scripts/suppliers/comportal/config/policy.yml
+#
+# ComPortal policy config.
+#
+# Что делает:
+# - хранит supplier policy, schedule и quality gate defaults;
+# - не содержит parsing/normalization кода.
+#
+# Что не делает:
+# - не строит offers;
+# - не подменяет builder/source/quality_gate.
 schema_version: 2
 supplier: ComPortal
 timezone: Asia/Almaty
