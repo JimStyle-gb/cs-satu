@@ -2,21 +2,16 @@
 """
 Path: scripts/suppliers/akcent/desc_extract.py
 
-AkCent Desc Extract — extraction параметров из очищенного description.
+AkCent description extraction layer.
 
 Что делает:
-- консервативно добирает missing params из cleaned description;
-- лучше режет плотные projector / interactive техблоки по known labels;
-- обрезает значение по следующему label, чтобы хвосты не утекали в поле;
-- не режет значения по запятой там, где это ломает смысл;
-- остаётся description-first и не гадает compat/codes.
+- извлекает только допустимые supplier-поля из title/body;
+- не подменяет главный params extractor;
 
 Что не делает:
-- не строит финальное HTML-описание;
-- не подменяет params.py и compat.py;
-- не переносит supplier-specific extraction в shared core.
+- не придумывает данные из воздуха;
+- не заменяет supplier params layer.
 """
-
 from __future__ import annotations
 
 import re
