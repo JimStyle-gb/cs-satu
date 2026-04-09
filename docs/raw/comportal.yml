@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<yml_catalog date="2026-04-09 03:29:47">
+<yml_catalog date="2026-04-09 11:16:18">
 <shop><offers>
 <!--FEED_META
 Поставщик                                  | ComPortal
 URL поставщика                             | https://www.comportal.kz/auth/documents/prices/yml-catalog.php
-Время сборки (Алматы)                      | 2026-04-09 03:29:47
+Время сборки (Алматы)                      | 2026-04-09 11:16:18
 Ближайшая сборка (Алматы)                  | 2026-04-10 03:00:00
-Сколько товаров у поставщика до фильтра    | 1204
-Сколько товаров у поставщика после фильтра | 600
-Сколько товаров есть в наличии (true)      | 600
+Сколько товаров у поставщика до фильтра    | 1197
+Сколько товаров у поставщика после фильтра | 596
+Сколько товаров есть в наличии (true)      | 596
 Сколько товаров нет в наличии (false)      | 0
 -->
 
@@ -406,24 +406,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Коды">CF283A</param>
 <param name="Для бренда">HP</param>
 <param name="Оригинальность">Оригинал</param>
-</offer>
-
-<offer id="CP13870166" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13870166</vendorCode>
-<name>Трансферный комплект HP CE516A (CE516A)</name>
-<price>162392</price>
-<picture>https://www.comportal.kz/upload/iblock/503/hdizvzicxlp638enym2i6d0wltnq6623.jpg</picture>
-<vendor>HP</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-расходный материал HP Трансферный комплект HP CE516A код — CE516A.]]></description>
-<param name="Тип">Расходный материал</param>
-<param name="Модель">Трансферный комплект HP CE516A</param>
-<param name="Дополнительная информация">для LJ Enterprise 700 M775dn, M775f</param>
-<param name="Гарантия">3 мес</param>
-<param name="Коды">CE516A</param>
-<param name="Для бренда">HP</param>
 </offer>
 
 <offer id="CP13870159" available="true">
@@ -4189,53 +4171,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Для бренда">Dell</param>
 </offer>
 
-<offer id="CP13871075" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13871075</vendorCode>
-<name>Ноутбук Dell XPS 15 9520 (210-BDVF-4)</name>
-<price>1532901</price>
-<picture>https://www.comportal.kz/upload/iblock/4f2/4dgibap6ix6p6q75rsw3g6g2g8n74d4m.JPG</picture>
-<vendor>Dell</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Ноутбук. Модельная серия: XPS 15 9520. Процессор: Intel 12700H Core i7 3,5. Оперативная память: 16 Gb / DDR5 / 4800. Накопитель: 1000 / M.2 PCIe SSD / 1 шт. Диагональ: 15,6. Разрешение: 3456x2160. ОС: Microsoft Windows 11 Pro 64. Видеокарта: nVidia RTX 3050 Ti 4 Gb. Wi‑Fi: AX211. Bluetooth: Bluetooth. Гарантия: 36 мес.]]></description>
-<param name="Тип">Ноутбук</param>
-<param name="Модель">XPS 15 9520</param>
-<param name="Объем жесткого диска">1000</param>
-<param name="Тип жесткого диска">M.2 PCIe SSD</param>
-<param name="Производитель процессора">Intel</param>
-<param name="Модель процессора">Core i7</param>
-<param name="Серия процессора">12700H</param>
-<param name="Частота процессора">3,5</param>
-<param name="Оперативная память">16 Gb</param>
-<param name="Частота оперативной памяти">4800</param>
-<param name="Количество слотов памяти">2</param>
-<param name="Занятые слоты памяти">2x8GB</param>
-<param name="Объем видеопамяти">4 Gb</param>
-<param name="Тип оперативной памяти">DDR5</param>
-<param name="Тип привода">No ODD</param>
-<param name="Количество дисков">1</param>
-<param name="Размер дисплея">15,6</param>
-<param name="Дополнительные характеристики">Touch</param>
-<param name="Тип матрицы">OLED</param>
-<param name="Производитель чипсета видеокарты">nVidia</param>
-<param name="Марка чипсета видеокарты">GeForce</param>
-<param name="Модель чипсета видеокарты">RTX 3050 Ti</param>
-<param name="Производитель операционной системы">Microsoft</param>
-<param name="Операционная система">Windows 11</param>
-<param name="Версия операционной системы">Pro</param>
-<param name="Битность операционной системы">64</param>
-<param name="Цвет">Серый</param>
-<param name="Bluetooth">Bluetooth</param>
-<param name="Wi-Fi">AX211</param>
-<param name="Адаптер">130W AC Adapter</param>
-<param name="Аккумулятор">6 cell 86Whr</param>
-<param name="Гарантия">36 мес</param>
-<param name="Разрешение дисплея">3456x2160</param>
-<param name="Коды">210-BDVF-4</param>
-<param name="Для бренда">Dell</param>
-</offer>
-
 <offer id="CP13866016" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13866016</vendorCode>
@@ -6445,49 +6380,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Частота обновления">60</param>
 <param name="Коды">210-BHXB</param>
 <param name="Для бренда">Dell</param>
-</offer>
-
-<offer id="CP13873147" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13873147</vendorCode>
-<name>МФУ Canon i-SENSYS MF463dw (5951C008AA)</name>
-<price>205206</price>
-<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
-<vendor>Canon</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-МФУ. Гарантия: 12 мес. Для бренда: Canon. Модель: i-SENSYS MF463dw. Коды: 5951C008AA.]]></description>
-<param name="Тип">МФУ</param>
-<param name="Гарантия">12 мес</param>
-<param name="Коды">5951C008AA</param>
-<param name="Модель">i-SENSYS MF463dw</param>
-<param name="Для бренда">Canon</param>
-</offer>
-
-<offer id="CP13834336" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13834336</vendorCode>
-<name>МФУ Canon i-SENSYS MF463dw (5951C008AA)</name>
-<price>205206</price>
-<picture>https://www.comportal.kz/upload/iblock/390/2nfu71ivarw81gnd8jp4rhlwlmr5c3gf.JPG</picture>
-<vendor>Canon</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-МФУ. Формат печати: A4. Разрешение: 1200x1200. Скорость печати ч/б: 40. Порты: USB LAN WiFI. Технология печати: Лазерная. Гарантия: 12 мес.]]></description>
-<param name="Тип">МФУ</param>
-<param name="Модель">i-SENSYS MF463dw</param>
-<param name="Гарантия">12 мес</param>
-<param name="Разрешение">1200x1200</param>
-<param name="Формат печати">A4</param>
-<param name="Скорость печати ч/б">40</param>
-<param name="Технология печати">Лазерная</param>
-<param name="Порты">USB LAN WiFI</param>
-<param name="Функция">Принтер-Сканер(АПД-50с.)-Копир</param>
-<param name="Наличие картриджа (тонера) в комплекте">Стартовый</param>
-<param name="Нагрузка">80 000</param>
-<param name="Емкость 4-го лотка">550</param>
-<param name="Коды">5951C008AA</param>
-<param name="Для бренда">Canon</param>
 </offer>
 
 <offer id="CP13834337" available="true">
