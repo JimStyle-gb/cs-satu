@@ -2,12 +2,17 @@
 """
 Path: scripts/cs/writer.py
 
-CS Writer — сборка XML/YML и запись файлов.
+CS Writer — общий writer-слой CS-шаблона.
 
-Роль файла:
-- держит только writer-слой: escape, header/footer, FEED_META, build raw/final, запись файла;
+Что делает:
+- собирает XML/YML-оболочку и блок offers;
+- держит escape-хелперы, FEED_META и запись файла;
+- сохраняет стабильный spacing и формат финального вывода.
+
+Что не делает:
 - не содержит supplier-specific логики;
-- отвечает за стабильный spacing вокруг <offers> и перед </offers>.
+- не принимает business-решения по товарам;
+- не заменяет core и validator-слой.
 """
 
 from __future__ import annotations
@@ -17,10 +22,8 @@ from datetime import datetime
 from pathlib import Path
 from typing import Sequence
 
-
 OUTPUT_ENCODING_DEFAULT = "utf-8"
 CURRENCY_ID_DEFAULT = "KZT"
-
 
 # -----------------------------
 # XML / HTML escape helpers
@@ -34,17 +37,11 @@ def xml_escape_text(s: str) -> str:
         .replace(">", "&gt;")
     )
 
-
-
 def xml_escape_attr(s: str) -> str:
     return xml_escape_text(s).replace('"', "&quot;")
 
-
-
 def bool_to_xml(v: bool) -> str:
     return "true" if bool(v) else "false"
-
-
 
 def xml_escape(s: str) -> str:
     """Экранирует текст для безопасного HTML/XML вывода."""
@@ -59,7 +56,6 @@ def xml_escape(s: str) -> str:
         .replace("'", "&apos;")
     )
 
-
 # -----------------------------
 # Базовая оболочка YML
 # -----------------------------
@@ -71,12 +67,8 @@ def make_header(build_time: datetime, *, encoding: str = OUTPUT_ENCODING_DEFAULT
         "<shop><offers>"
     )
 
-
-
 def make_footer() -> str:
     return "</offers>\n</shop>\n</yml_catalog>"
-
-
 
 def ensure_footer_spacing(xml: str) -> str:
     """Стабилизирует пустые строки перед </offers>, не ломая остальной XML."""
@@ -85,7 +77,6 @@ def ensure_footer_spacing(xml: str) -> str:
     xml = re.sub(r"\n{3,}</offers>", "\n\n</offers>", xml)
     xml = re.sub(r"</offer>\n</offers>", "</offer>\n\n</offers>", xml)
     return xml
-
 
 # -----------------------------
 # FEED_META
@@ -116,7 +107,6 @@ def make_feed_meta(
     ]
     return "\n".join(lines)
 
-
 # -----------------------------
 # Внутренние helper'ы
 # -----------------------------
@@ -139,8 +129,6 @@ def _build_offers_xml_final(
         for o in offers
     )
 
-
-
 def _build_offers_xml_raw(
     offers: Sequence["OfferOut"],
     *,
@@ -149,8 +137,6 @@ def _build_offers_xml_raw(
     if not offers:
         return ""
     return "\n\n".join(o.to_xml_raw(currency_id=currency_id) for o in offers)
-
-
 
 def _build_feed_xml(
     offers_xml: str,
@@ -177,7 +163,6 @@ def _build_feed_xml(
     )
     xml = make_header(build_time, encoding=encoding) + "\n" + meta + "\n\n" + offers_xml + "\n\n" + make_footer()
     return ensure_footer_spacing(xml)
-
 
 # -----------------------------
 # Сборка final / raw XML
@@ -218,8 +203,6 @@ def build_cs_feed_xml(
         encoding=encoding,
     )
 
-
-
 def build_cs_feed_xml_raw(
     offers: Sequence["OfferOut"],
     *,
@@ -247,7 +230,6 @@ def build_cs_feed_xml_raw(
         in_false=in_false,
         encoding=encoding,
     )
-
 
 # -----------------------------
 # Запись файла
