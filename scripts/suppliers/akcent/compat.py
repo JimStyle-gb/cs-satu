@@ -1,14 +1,19 @@
 # -*- coding: utf-8 -*-
 """
 Path: scripts/suppliers/akcent/compat.py
-AkCent supplier layer — cleanup совместимости / кодов / device-target для узкого потока.
 
-v1:
-- чистит только supplier-side поля расходки;
-- не тащит supplier-specific логику в core;
-- не угадывает compat/codes для нерасходки;
-- умеет аккуратно дочищать Коды / Совместимость / Для устройства;
-- умеет очень консервативно добирать код из name/model только для consumable.
+AkCent Compat — supplier-side cleanup совместимости и кодов.
+
+Что делает:
+- чистит compat, codes и device-target для расходки;
+- не угадывает compat для нерасходки;
+- аккуратно дочищает поля «Коды», «Совместимость» и «Для устройства»;
+- умеет консервативно добирать код из name/model только для consumable.
+
+Что не делает:
+- не переносит supplier-aware логику в shared core;
+- не генерирует совместимость «из воздуха»;
+- не подменяет params и builder-слой.
 """
 
 from __future__ import annotations
