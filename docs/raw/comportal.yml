@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<yml_catalog date="2026-04-09 16:07:29">
+<yml_catalog date="2026-04-09 16:13:05">
 <shop><offers>
 <!--FEED_META
 Поставщик                                  | ComPortal
 URL поставщика                             | https://www.comportal.kz/auth/documents/prices/yml-catalog.php
-Время сборки (Алматы)                      | 2026-04-09 16:07:29
+Время сборки (Алматы)                      | 2026-04-09 16:13:05
 Ближайшая сборка (Алматы)                  | 2026-04-10 03:00:00
-Сколько товаров у поставщика до фильтра    | 1199
-Сколько товаров у поставщика после фильтра | 599
-Сколько товаров есть в наличии (true)      | 599
+Сколько товаров у поставщика до фильтра    | 1198
+Сколько товаров у поставщика после фильтра | 598
+Сколько товаров есть в наличии (true)      | 598
 Сколько товаров нет в наличии (false)      | 0
 -->
 
@@ -5195,6 +5195,25 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Для бренда">Acer</param>
 </offer>
 
+<offer id="CP13866223" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13866223</vendorCode>
+<name>Хранилище HPE MSA 1060 16Gb FC SFF Storage (R0Q85B)</name>
+<price>1052700</price>
+<picture>https://www.comportal.kz/upload/iblock/356/t8rsvud9o7i1wv8gx3gtrg5gt6ic73rt.JPG</picture>
+<vendor>HPE</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Монитор. Модельная серия: MSA 1060 16Gb FC SFF Storage. Гарантия: 12 мес. Для бренда: HPE. Модель: MSA 1060 16Gb FC SFF Storage. Коды: R0Q85B.]]></description>
+<param name="Тип">Монитор</param>
+<param name="Модель">MSA 1060 16Gb FC SFF Storage</param>
+<param name="Гарантия">12 мес</param>
+<param name="Интерфейс массива">iSCSI</param>
+<param name="Тип корпуса">Rack</param>
+<param name="Коды">R0Q85B</param>
+<param name="Для бренда">HPE</param>
+</offer>
+
 <offer id="CP13714886" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13714886</vendorCode>
@@ -9581,28 +9600,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Для бренда">Acer</param>
 </offer>
 
-<offer id="CP13869284" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13869284</vendorCode>
-<name>Плоттер HP DesignJet T630 (5HB09D#B19)</name>
-<price>296842</price>
-<picture>https://www.comportal.kz/upload/iblock/8ac/bdcbv4jymc5jfzz2nqlnm92nj2x18l1n.jpg</picture>
-<vendor>HP</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Широкоформатный принтер. Формат печати: 24”. Разрешение: 2400x1200. Порты: Gigabit Ethernet (1000Base-T)/USB 2.0/Wi-Fi 802.11a b/g n/Wi-Fi Direct. Технология печати: Струйная. Гарантия: 12 мес.]]></description>
-<param name="Тип">Широкоформатный принтер</param>
-<param name="Модель">DesignJet T630</param>
-<param name="Порты">Gigabit Ethernet (1000Base-T)/USB 2.0/Wi-Fi 802.11a b/g n/Wi-Fi Direct</param>
-<param name="Гарантия">12 мес</param>
-<param name="Технология печати">Струйная</param>
-<param name="Разрешение">2400x1200</param>
-<param name="Формат печати">24”</param>
-<param name="Функции">Принтер копир сканер</param>
-<param name="Коды">5HB09D#B19</param>
-<param name="Для бренда">HP</param>
-</offer>
-
 <offer id="CP13870600" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13870600</vendorCode>
@@ -10359,29 +10356,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Формат печати">A1+</param>
 <param name="Коды">6238C003</param>
 <param name="Для бренда">Canon</param>
-</offer>
-
-<offer id="CP13870349" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13870349</vendorCode>
-<name>Плоттер HP DesignJet T630 36 (5HB11D#B19)</name>
-<price>476793</price>
-<picture>https://www.comportal.kz/upload/iblock/29f/35eqzfn0y8g9ciy6uuwraswuv0rh19ad.jpg</picture>
-<vendor>HP</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Широкоформатный принтер. Формат печати: A1. Разрешение: 2400x1200. Скорость печати ч/б: 30. Порты: Gigabit Ethernet (1000Base-T), высокоскоростной порт USB 2.0, Wi-Fi 802.11a b/g n, Wi-Fi Direct. Технология печати: Струйная. Гарантия: 12 мес.]]></description>
-<param name="Тип">Широкоформатный принтер</param>
-<param name="Модель">DesignJet T630 36</param>
-<param name="Порты">Gigabit Ethernet (1000Base-T), высокоскоростной порт USB 2.0, Wi-Fi 802.11a b/g n, Wi-Fi Direct</param>
-<param name="Гарантия">12 мес</param>
-<param name="Технология печати">Струйная</param>
-<param name="Разрешение">2400x1200</param>
-<param name="Формат печати">A1</param>
-<param name="Скорость печати ч/б">30</param>
-<param name="Функции">принтер</param>
-<param name="Коды">5HB11D#B19</param>
-<param name="Для бренда">HP</param>
 </offer>
 
 <offer id="CP13869884" available="true">
@@ -11221,6 +11195,31 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Диагональ">27</param>
 <param name="Частота обновления">100</param>
 <param name="Коды">210-BQSZ</param>
+<param name="Для бренда">Dell</param>
+</offer>
+
+<offer id="CP13870733" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13870733</vendorCode>
+<name>Монитор Dell Pro 27 Plus 4K USB-C Hub Monitor - P2725QE, 68.6cm (27.0") (210-BRDS)</name>
+<price>174792</price>
+<picture>https://www.comportal.kz/upload/iblock/207/l3nzdtv3uohiqeeeg56byh15sd1nuqvu.JPG</picture>
+<vendor>Dell</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Монитор. Диагональ: 27. Максимальное разрешение: 3840x2160. Тип матрицы: IPS. Частота обновления: 100. Время отклика: 5. Порты: 1 HDMI port (HDCP2.3) (supports up to UHD 3840 x 2160 100 Hz FRL as per specified in HDMI 2.1)/1 Display Port 1.4 (HDCP2.3)(Support up to 3840 x 2160 100Hz)/1 USB-C 5Gbps upstream port (DisplayPort 1.4 Alternate mode, Power Delivery up to 90W)/1 USB-C 5Gbps downstream port/3 USB 5Gbps Type-A downstream ports/1 RJ45 Ethernet port, 1GbE. Гарантия: 36 мес.]]></description>
+<param name="Тип">Монитор</param>
+<param name="Модель">P2725QE</param>
+<param name="Порты">1 HDMI port (HDCP2.3) (supports up to UHD 3840 x 2160 100 Hz FRL as per specified in HDMI 2.1)/1 Display Port 1.4 (HDCP2.3)(Support up to 3840 x 2160 100Hz)/1 USB-C 5Gbps upstream port (DisplayPort 1.4 Alternate mode, Power Delivery up to 90W)/1 USB-C 5Gbps downstream port/3 USB 5Gbps Type-A downstream ports/1 RJ45 Ethernet port, 1GbE</param>
+<param name="Тип матрицы">IPS</param>
+<param name="Гарантия">36 мес</param>
+<param name="Контрастность">1500:1</param>
+<param name="Яркость">350</param>
+<param name="Время отклика">5</param>
+<param name="Максимальное разрешение">3840x2160</param>
+<param name="Диагональ">27</param>
+<param name="Частота обновления">100</param>
+<param name="Коды">210-BRDS</param>
 <param name="Для бренда">Dell</param>
 </offer>
 
@@ -14767,22 +14766,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Для бренда">Dell</param>
 <param name="Модель">Pro 16 PC16250</param>
 <param name="Коды">BTO121_PC16250_EMEA_210-BQHB</param>
-</offer>
-
-<offer id="CP13873127" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13873127</vendorCode>
-<name>Комплект переноса HP LaserJet Managed 220V Fuser Kit: 225k (3WT88MC)</name>
-<price>104113</price>
-<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
-<vendor>HP</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-расходный материал HP Комплект переноса HP LaserJet Managed 220V Fuser Kit: 225k код — 3WT88MC.]]></description>
-<param name="Тип">Расходный материал</param>
-<param name="Коды">3WT88MC</param>
-<param name="Модель">Комплект переноса HP LaserJet Managed 220V Fuser Kit: 225k</param>
-<param name="Для бренда">HP</param>
 </offer>
 
 <offer id="CP13873166" available="true">

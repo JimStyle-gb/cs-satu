@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<yml_catalog date="2026-04-09 16:07:29">
+<yml_catalog date="2026-04-09 16:13:05">
 <shop><offers>
 <!--FEED_META
 Поставщик                                  | ComPortal
 URL поставщика                             | https://www.comportal.kz/auth/documents/prices/yml-catalog.php
-Время сборки (Алматы)                      | 2026-04-09 16:07:29
+Время сборки (Алматы)                      | 2026-04-09 16:13:05
 Ближайшая сборка (Алматы)                  | 2026-04-10 03:00:00
-Сколько товаров у поставщика до фильтра    | 1199
-Сколько товаров у поставщика после фильтра | 599
-Сколько товаров есть в наличии (true)      | 599
+Сколько товаров у поставщика до фильтра    | 1198
+Сколько товаров у поставщика после фильтра | 598
+Сколько товаров есть в наличии (true)      | 598
 Сколько товаров нет в наличии (false)      | 0
 -->
 
@@ -7615,6 +7615,36 @@ URL поставщика                             | https://www.comportal.kz/
 <keywords>Acer, Монитор Acer Vero V227QBbiv (UM.WV7EE.B11), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
+<offer id="CP13866223" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13866223</vendorCode>
+<name>Хранилище HPE MSA 1060 16Gb FC SFF Storage (R0Q85B)</name>
+<price>1134900</price>
+<picture>https://www.comportal.kz/upload/iblock/356/t8rsvud9o7i1wv8gx3gtrg5gt6ic73rt.JPG</picture>
+<vendor>HPE</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+<!-- Наименование товара -->
+<h3>Хранилище HPE MSA 1060 16Gb FC SFF Storage (R0Q85B)</h3>
+<!-- Описание -->
+<p>Монитор. Модельная серия: MSA 1060 16Gb FC SFF Storage. Гарантия: 12 мес. Для бренда: HPE. Модель: MSA 1060 16Gb FC SFF Storage. Коды: R0Q85B.</p>
+<!-- WhatsApp -->
+<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
+<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
+<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
+<h3>Характеристики</h3><ul><li><strong>Гарантия:</strong> 12 мес</li><li><strong>Для бренда:</strong> HPE</li><li><strong>Интерфейс массива:</strong> iSCSI</li><li><strong>Коды:</strong> R0Q85B</li><li><strong>Модель:</strong> MSA 1060 16Gb FC SFF Storage</li><li><strong>Тип:</strong> Монитор</li><li><strong>Тип корпуса:</strong> Rack</li></ul>
+<!-- Оплата и доставка -->
+<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><div style="background:#FFF6E5; border:1px solid #F1E2C6; padding:12px 14px; border-radius:0; text-align:left;"><h3 style="margin:0 0 8px; font-size:17px;">Оплата</h3><ul style="margin:0; padding-left:18px;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000;"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul><hr style="border:none; border-top:1px solid #E7D6B7; margin:12px 0;" /><h3 style="margin:0 0 8px; font-size:17px;">Доставка по Алматы и Казахстану</h3><ul style="margin:0; padding-left:18px;"><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul></div></div>]]></description>
+<param name="Гарантия">12 мес</param>
+<param name="Для бренда">HPE</param>
+<param name="Интерфейс массива">iSCSI</param>
+<param name="Коды">R0Q85B</param>
+<param name="Модель">MSA 1060 16Gb FC SFF Storage</param>
+<param name="Тип">Монитор</param>
+<param name="Тип корпуса">Rack</param>
+<keywords>HPE, Хранилище HPE MSA 1060 16Gb FC SFF Storage (R0Q85B), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+</offer>
+
 <offer id="CP13714886" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13714886</vendorCode>
@@ -13838,39 +13868,6 @@ URL поставщика                             | https://www.comportal.kz/
 <keywords>Acer, Монитор Acer KA272UEbmiipx (UM.HX2EE.E25), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
-<offer id="CP13869284" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13869284</vendorCode>
-<name>Плоттер HP DesignJet T630 (5HB09D#B19)</name>
-<price>328900</price>
-<picture>https://www.comportal.kz/upload/iblock/8ac/bdcbv4jymc5jfzz2nqlnm92nj2x18l1n.jpg</picture>
-<vendor>HP</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-<!-- Наименование товара -->
-<h3>Плоттер HP DesignJet T630 (5HB09D#B19)</h3>
-<!-- Описание -->
-<p>Широкоформатный принтер. Формат печати: 24”. Разрешение: 2400x1200. Порты: Gigabit Ethernet (1000Base-T)/USB 2.0/Wi-Fi 802.11a b/g n/Wi-Fi Direct. Технология печати: Струйная. Гарантия: 12 мес.</p>
-<!-- WhatsApp -->
-<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
-<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
-<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
-<h3>Характеристики</h3><ul><li><strong>Гарантия:</strong> 12 мес</li><li><strong>Для бренда:</strong> HP</li><li><strong>Коды:</strong> 5HB09D#B19</li><li><strong>Модель:</strong> DesignJet T630</li><li><strong>Порты:</strong> Gigabit Ethernet (1000Base-T)/USB 2.0/Wi-Fi 802.11a b/g n/Wi-Fi Direct</li><li><strong>Разрешение:</strong> 2400x1200</li><li><strong>Технология печати:</strong> Струйная</li><li><strong>Тип:</strong> Широкоформатный принтер</li><li><strong>Формат печати:</strong> 24”</li><li><strong>Функции:</strong> Принтер копир сканер</li></ul>
-<!-- Оплата и доставка -->
-<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><div style="background:#FFF6E5; border:1px solid #F1E2C6; padding:12px 14px; border-radius:0; text-align:left;"><h3 style="margin:0 0 8px; font-size:17px;">Оплата</h3><ul style="margin:0; padding-left:18px;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000;"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul><hr style="border:none; border-top:1px solid #E7D6B7; margin:12px 0;" /><h3 style="margin:0 0 8px; font-size:17px;">Доставка по Алматы и Казахстану</h3><ul style="margin:0; padding-left:18px;"><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul></div></div>]]></description>
-<param name="Гарантия">12 мес</param>
-<param name="Для бренда">HP</param>
-<param name="Коды">5HB09D#B19</param>
-<param name="Модель">DesignJet T630</param>
-<param name="Порты">Gigabit Ethernet (1000Base-T)/USB 2.0/Wi-Fi 802.11a b/g n/Wi-Fi Direct</param>
-<param name="Разрешение">2400x1200</param>
-<param name="Технология печати">Струйная</param>
-<param name="Тип">Широкоформатный принтер</param>
-<param name="Формат печати">24”</param>
-<param name="Функции">Принтер копир сканер</param>
-<keywords>HP, Плоттер HP DesignJet T630 (5HB09D#B19), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
-</offer>
-
 <offer id="CP13870600" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13870600</vendorCode>
@@ -14935,40 +14932,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Тип">Широкоформатный принтер</param>
 <param name="Формат печати">A1+</param>
 <keywords>Canon, Плоттер Canon imagePROGRAF TM-255 (6238C003), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
-</offer>
-
-<offer id="CP13870349" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13870349</vendorCode>
-<name>Плоттер HP DesignJet T630 36 (5HB11D#B19)</name>
-<price>520900</price>
-<picture>https://www.comportal.kz/upload/iblock/29f/35eqzfn0y8g9ciy6uuwraswuv0rh19ad.jpg</picture>
-<vendor>HP</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-<!-- Наименование товара -->
-<h3>Плоттер HP DesignJet T630 36 (5HB11D#B19)</h3>
-<!-- Описание -->
-<p>Широкоформатный принтер. Формат печати: A1. Разрешение: 2400x1200. Скорость печати ч/б: 30. Порты: Gigabit Ethernet (1000Base-T), высокоскоростной порт USB 2.0, Wi-Fi 802.11a b/g n, Wi-Fi Direct. Технология печати: Струйная. Гарантия: 12 мес.</p>
-<!-- WhatsApp -->
-<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
-<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
-<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
-<h3>Характеристики</h3><ul><li><strong>Гарантия:</strong> 12 мес</li><li><strong>Для бренда:</strong> HP</li><li><strong>Коды:</strong> 5HB11D#B19</li><li><strong>Модель:</strong> DesignJet T630 36</li><li><strong>Порты:</strong> Gigabit Ethernet (1000Base-T), высокоскоростной порт USB 2.0, Wi-Fi 802.11a b/g n, Wi-Fi Direct</li><li><strong>Разрешение:</strong> 2400x1200</li><li><strong>Скорость печати ч/б:</strong> 30</li><li><strong>Технология печати:</strong> Струйная</li><li><strong>Тип:</strong> Широкоформатный принтер</li><li><strong>Формат печати:</strong> A1</li><li><strong>Функции:</strong> принтер</li></ul>
-<!-- Оплата и доставка -->
-<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><div style="background:#FFF6E5; border:1px solid #F1E2C6; padding:12px 14px; border-radius:0; text-align:left;"><h3 style="margin:0 0 8px; font-size:17px;">Оплата</h3><ul style="margin:0; padding-left:18px;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000;"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul><hr style="border:none; border-top:1px solid #E7D6B7; margin:12px 0;" /><h3 style="margin:0 0 8px; font-size:17px;">Доставка по Алматы и Казахстану</h3><ul style="margin:0; padding-left:18px;"><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul></div></div>]]></description>
-<param name="Гарантия">12 мес</param>
-<param name="Для бренда">HP</param>
-<param name="Коды">5HB11D#B19</param>
-<param name="Модель">DesignJet T630 36</param>
-<param name="Порты">Gigabit Ethernet (1000Base-T), высокоскоростной порт USB 2.0, Wi-Fi 802.11a b/g n, Wi-Fi Direct</param>
-<param name="Разрешение">2400x1200</param>
-<param name="Скорость печати ч/б">30</param>
-<param name="Технология печати">Струйная</param>
-<param name="Тип">Широкоформатный принтер</param>
-<param name="Формат печати">A1</param>
-<param name="Функции">принтер</param>
-<keywords>HP, Плоттер HP DesignJet T630 36 (5HB11D#B19), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP13869884" available="true">
@@ -16095,6 +16058,42 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Частота обновления">100</param>
 <param name="Яркость">350</param>
 <keywords>Dell, Монитор Dell Pro 27 Plus QHD USB-C Hub Monitor - P2725DE 68.6cm (27.0") (210-BQSZ), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+</offer>
+
+<offer id="CP13870733" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13870733</vendorCode>
+<name>Монитор Dell Pro 27 Plus 4K USB-C Hub Monitor - P2725QE, 68.6cm (27.0") (210-BRDS)</name>
+<price>196900</price>
+<picture>https://www.comportal.kz/upload/iblock/207/l3nzdtv3uohiqeeeg56byh15sd1nuqvu.JPG</picture>
+<vendor>Dell</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+<!-- Наименование товара -->
+<h3>Монитор Dell Pro 27 Plus 4K USB-C Hub Monitor - P2725QE, 68.6cm (27.0") (210-BRDS)</h3>
+<!-- Описание -->
+<p>Монитор. Диагональ: 27. Максимальное разрешение: 3840x2160. Тип матрицы: IPS. Частота обновления: 100. Время отклика: 5. Порты: 1 HDMI port (HDCP2.3) (supports up to UHD 3840 x 2160 100 Hz FRL as per specified in HDMI 2.1)/1 Display Port 1.4 (HDCP2.3)(Support up to 3840 x 2160 100Hz)/1 USB-C 5Gbps upstream port (DisplayPort 1.4 Alternate mode, Power Delivery up to 90W)/1 USB-C 5Gbps downstream port/3 USB 5Gbps Type-A downstream ports/1 RJ45 Ethernet port, 1GbE. Гарантия: 36 мес.</p>
+<!-- WhatsApp -->
+<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
+<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
+<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
+<h3>Характеристики</h3><ul><li><strong>Время отклика:</strong> 5</li><li><strong>Гарантия:</strong> 36 мес</li><li><strong>Диагональ:</strong> 27</li><li><strong>Для бренда:</strong> Dell</li><li><strong>Коды:</strong> 210-BRDS</li><li><strong>Контрастность:</strong> 1500:1</li><li><strong>Максимальное разрешение:</strong> 3840x2160</li><li><strong>Модель:</strong> P2725QE</li><li><strong>Порты:</strong> 1 HDMI port (HDCP2.3) (supports up to UHD 3840 x 2160 100 Hz FRL as per specified in HDMI 2.1)/1 Display Port 1.4 (HDCP2.3)(Support up to 3840 x 2160 100Hz)/1 USB-C 5Gbps upstream port (DisplayPort 1.4 Alternate mode, Power Delivery up to 90W)/1 USB-C 5Gbps downstream port/3 USB 5Gbps Type-A downstream ports/1 RJ45 Ethernet port, 1GbE</li><li><strong>Тип:</strong> Монитор</li><li><strong>Тип матрицы:</strong> IPS</li><li><strong>Частота обновления:</strong> 100</li><li><strong>Яркость:</strong> 350</li></ul>
+<!-- Оплата и доставка -->
+<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><div style="background:#FFF6E5; border:1px solid #F1E2C6; padding:12px 14px; border-radius:0; text-align:left;"><h3 style="margin:0 0 8px; font-size:17px;">Оплата</h3><ul style="margin:0; padding-left:18px;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000;"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul><hr style="border:none; border-top:1px solid #E7D6B7; margin:12px 0;" /><h3 style="margin:0 0 8px; font-size:17px;">Доставка по Алматы и Казахстану</h3><ul style="margin:0; padding-left:18px;"><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul></div></div>]]></description>
+<param name="Время отклика">5</param>
+<param name="Гарантия">36 мес</param>
+<param name="Диагональ">27</param>
+<param name="Для бренда">Dell</param>
+<param name="Коды">210-BRDS</param>
+<param name="Контрастность">1500:1</param>
+<param name="Максимальное разрешение">3840x2160</param>
+<param name="Модель">P2725QE</param>
+<param name="Порты">1 HDMI port (HDCP2.3) (supports up to UHD 3840 x 2160 100 Hz FRL as per specified in HDMI 2.1)/1 Display Port 1.4 (HDCP2.3)(Support up to 3840 x 2160 100Hz)/1 USB-C 5Gbps upstream port (DisplayPort 1.4 Alternate mode, Power Delivery up to 90W)/1 USB-C 5Gbps downstream port/3 USB 5Gbps Type-A downstream ports/1 RJ45 Ethernet port, 1GbE</param>
+<param name="Тип">Монитор</param>
+<param name="Тип матрицы">IPS</param>
+<param name="Частота обновления">100</param>
+<param name="Яркость">350</param>
+<keywords>Dell, Монитор Dell Pro 27 Plus 4K USB-C Hub Monitor - P2725QE 68.6cm (27.0") (210-BRDS), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP13870735" available="true">
@@ -21070,33 +21069,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Модель">Pro 16 PC16250</param>
 <param name="Тип">Ноутбук</param>
 <keywords>Dell, Ноутбук Dell Pro 16 PC16250 (BTO121_PC16250_EMEA_210-BQHB), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
-</offer>
-
-<offer id="CP13873127" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13873127</vendorCode>
-<name>Комплект переноса HP LaserJet Managed 220V Fuser Kit: 225k (3WT88MC)</name>
-<price>120900</price>
-<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
-<vendor>HP</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-<!-- Наименование товара -->
-<h3>Комплект переноса HP LaserJet Managed 220V Fuser Kit: 225k (3WT88MC)</h3>
-<!-- Описание -->
-<p>расходный материал HP Комплект переноса HP LaserJet Managed 220V Fuser Kit: 225k код — 3WT88MC.</p>
-<!-- WhatsApp -->
-<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
-<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
-<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
-<h3>Характеристики</h3><ul><li><strong>Для бренда:</strong> HP</li><li><strong>Коды:</strong> 3WT88MC</li><li><strong>Модель:</strong> Комплект переноса HP LaserJet Managed 220V Fuser Kit: 225k</li><li><strong>Тип:</strong> Расходный материал</li></ul>
-<!-- Оплата и доставка -->
-<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><div style="background:#FFF6E5; border:1px solid #F1E2C6; padding:12px 14px; border-radius:0; text-align:left;"><h3 style="margin:0 0 8px; font-size:17px;">Оплата</h3><ul style="margin:0; padding-left:18px;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000;"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul><hr style="border:none; border-top:1px solid #E7D6B7; margin:12px 0;" /><h3 style="margin:0 0 8px; font-size:17px;">Доставка по Алматы и Казахстану</h3><ul style="margin:0; padding-left:18px;"><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul></div></div>]]></description>
-<param name="Для бренда">HP</param>
-<param name="Коды">3WT88MC</param>
-<param name="Модель">Комплект переноса HP LaserJet Managed 220V Fuser Kit: 225k</param>
-<param name="Тип">Расходный материал</param>
-<keywords>HP, Комплект переноса HP LaserJet Managed 220V Fuser Kit: 225k (3WT88MC), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP13873166" available="true">
