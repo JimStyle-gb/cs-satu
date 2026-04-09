@@ -2,14 +2,17 @@
 """
 Path: scripts/suppliers/comportal/desc_extract.py
 
-ComPortal description -> params extraction.
+ComPortal Desc Extract — извлечение данных из cleaned description.
 
-Роль как у других поставщиков:
-- не главный extractor;
-- только fill-missing / safe extraction;
-- не дублирует params_xml.py.
+Что делает:
+- извлекает допустимые поля из очищенного supplier-text;
+- работает поверх plain-text после desc_clean.py;
+- готовит данные для params и builder слоя.
 
-У ComPortal основной сигнал идёт из XML params, а не из narrative body.
+Что не делает:
+- не фантазирует supplier-данные из воздуха;
+- не строит финальный shared description;
+- не заменяет params.py и builder.py.
 """
 
 from __future__ import annotations
