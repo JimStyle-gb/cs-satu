@@ -2,21 +2,20 @@
 """
 Path: scripts/suppliers/akcent/builder.py
 
-AkCent supplier layer — сборка raw OfferOut.
+AkCent Builder — сборка raw OfferOut.
 
 Что делает:
 - принимает уже отфильтрованные source-offers AkCent;
-- нормализует базовые поля (oid / vendor / model / available / price_in / warranty);
-- определяет kind строго по prefix-based схеме AkCent;
-- собирает родные XML params;
-- чистит description и аккуратно добирает недостающие desc params;
-- применяет supplier-side cleanup для расходки (codes / compat / device);
-- собирает чистый raw OfferOut для core.
+- нормализует базовые поля поставщика;
+- определяет kind по prefix-based схеме AkCent;
+- собирает XML params и desc-derived params;
+- применяет supplier-side cleanup для расходки;
+- собирает чистый raw OfferOut для shared core.
 
-Важно:
-- core остаётся общим и не получает AkCent-specific логики;
-- builder работает adapter-first;
-- логика построена backward-safe: умеет брать данные и из dataclass-объектов, и из dict, и из offer_el.
+Что не делает:
+- не переносит AkCent-specific логику в shared core;
+- не подменяет final description/keywords слой;
+- не ломает backward-safe поток builder -> core.
 """
 
 from __future__ import annotations
