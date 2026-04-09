@@ -2,17 +2,17 @@
 """
 Path: scripts/cs/keywords.py
 
-CS Keywords — общий сборщик <keywords>.
+CS Keywords — общий сборщик строки keywords.
 
-Роль файла:
+Что делает:
 - собирает итоговую строку <keywords>;
-- делает дедупликацию токенов со стабильным порядком;
-- ограничивает длину keywords;
-- добавляет общий гео-хвост по Казахстану.
+- делает дедупликацию со стабильным порядком;
+- ограничивает длину и добавляет общий гео-хвост Казахстана.
 
-Важно:
-- fix_mixed_cyr_lat и norm_ws импортируются из cs.util;
-- имена импортов сохранены на уровне модуля для backward compatibility.
+Что не делает:
+- не содержит supplier-specific логики;
+- не подменяет description и builder-слой;
+- не принимает решения по ассортименту.
 """
 
 from __future__ import annotations
@@ -20,7 +20,6 @@ from __future__ import annotations
 import os
 
 from .util import fix_mixed_cyr_lat, norm_ws
-
 
 CS_KEYWORDS_MAX_LEN = int((os.getenv("CS_KEYWORDS_MAX_LEN", "380") or "380").strip() or "380")
 
@@ -48,7 +47,6 @@ CS_KEYWORDS_PHRASES = (
     "отправка в регионы",
 )
 
-
 # -----------------------------
 # Внутренние helper'ы
 # -----------------------------
@@ -66,7 +64,6 @@ def _dedup_keep_order(items: list[str]) -> list[str]:
         seen.add(key)
         out.append(item)
     return out
-
 
 # -----------------------------
 # Public API
@@ -114,7 +111,6 @@ def build_keywords(
         joined = ", ".join(parts)
 
     return joined
-
 
 __all__ = [
     "CS_KEYWORDS_MAX_LEN",
