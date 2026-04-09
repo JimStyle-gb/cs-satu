@@ -2,18 +2,18 @@
 """
 Path: scripts/suppliers/vtt/compat.py
 
-VTT compat layer.
-v8:
-- preserves device/model rows;
-- explicitly restores Xerox WC 7525/.../7835 row when title contains it;
-- fixes Canon 041/041H and 052H compat tails;
-- fixes HP 651 compat tails, including orphan decimal remnants;
-- cleans Hi-Black 727 compat back to plain HP DJ T920/T1500;
-- canonicalizes Hi-Black 46 and 934/935 families to plain device compatibility;
-- adds helpers to derive display part number / color for Hi-Black cases;
-- keeps codes free from device-model pollution.
-"""
+VTT Compat — compat-слой supplier-layer.
 
+Что делает:
+- держит supplier-specific cleanup совместимости и part-number;
+- отделяет device/model compatibility от code-list логики;
+- помогает builder-слою собирать clean display part number и compat.
+
+Что не делает:
+- не crawls source-страницы;
+- не строит final description;
+- не переносит supplier-specific compat repair в shared core.
+"""
 from __future__ import annotations
 
 import re
@@ -151,8 +151,6 @@ def should_keep_code(code: str, resource: str = "") -> bool:
         if code_norm == res_norm:
             return False
     return True
-
-
 
 def _extract_oem_from_text(text: str) -> str:
     t = norm_ws(text)
