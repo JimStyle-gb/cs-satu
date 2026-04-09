@@ -2,17 +2,15 @@
 """
 Path: scripts/suppliers/vtt/source.py
 
-VTT Source — source-слой supplier-layer.
+VTT source layer.
 
 Что делает:
-- держит login/session/crawl/product-page parsing;
-- собирает canonical raw source-данные для builder.py;
-- использует filtering.py и params.py как source of truth для своих подпроцессов.
+- содержит только source/session/crawl/page parsing;
+- не хранит supplier-business логику final-layer;
 
 Что не делает:
-- не принимает business-решения по final витрине;
 - не строит final offers;
-- не заменяет builder и quality gate слой.
+- не подменяет builder/filtering/quality_gate.
 """
 from __future__ import annotations
 
