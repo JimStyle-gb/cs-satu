@@ -23,7 +23,7 @@ from typing import Any
 from cs.util import norm_ws
 from suppliers.alstyle.compat import clean_compatibility_text, dedupe_code_series_text
 from suppliers.alstyle.desc_clean import clean_desc_text_for_extraction
-from suppliers.alstyle.params_xml import apply_value_normalizers, key_quality_ok
+from suppliers.alstyle.params import apply_value_normalizers, key_quality_ok
 
 
 _DESC_SPEC_START_RE = re.compile(
