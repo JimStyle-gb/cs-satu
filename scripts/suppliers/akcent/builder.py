@@ -49,7 +49,7 @@ from suppliers.akcent.normalize import (
     normalize_consumable_name as norm_normalize_consumable_name,
     normalize_source_basics,
 )
-from suppliers.akcent.params_xml import collect_xml_params, detect_kind_by_name, resolve_allowed_keys
+from suppliers.akcent.params import collect_xml_params, detect_kind_by_name, resolve_allowed_keys
 from suppliers.akcent.pictures import collect_picture_urls
 
 
