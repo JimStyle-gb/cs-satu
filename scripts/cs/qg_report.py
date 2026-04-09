@@ -2,19 +2,23 @@
 """
 Path: scripts/cs/qg_report.py
 
-CS quality gate report writer.
+CS QG Report — единый writer quality gate отчётов.
 
-Роль файла:
-- пишет единый отчёт для docs/raw/<supplier>_quality_gate.txt;
-- держит канонические названия секций quality gate;
-- не содержит supplier-specific логики.
+Что делает:
+- формирует канонический текст quality gate отчёта;
+- держит единые названия секций и краткие rule-комментарии;
+- записывает итоговый report в docs/raw/*.txt.
+
+Что не делает:
+- не определяет бизнес-правила quality gate;
+- не содержит supplier-specific логики;
+- не подменяет сам quality gate анализ.
 """
 
 from __future__ import annotations
 
 from pathlib import Path
 from typing import Iterable
-
 
 # -----------------------------
 # Внутренние helper'ы
@@ -34,13 +38,11 @@ def _ru_rule_comment(rule: str) -> str:
     }
     return comments.get(rule, "Требует ручной проверки")
 
-
 def _issue_line(issue) -> str:
     details = (issue.details or "").replace("\n", " ").strip()
     if len(details) > 240:
         details = details[:237] + "..."
     return f"{issue.oid} | {issue.rule} | {_ru_rule_comment(issue.rule)} | {details}"
-
 
 def _section(lines: list[str], title: str, issues: Iterable) -> None:
     lines.append("")
@@ -51,7 +53,6 @@ def _section(lines: list[str], title: str, issues: Iterable) -> None:
         return
     for issue in items:
         lines.append(_issue_line(issue))
-
 
 # -----------------------------
 # Public API
