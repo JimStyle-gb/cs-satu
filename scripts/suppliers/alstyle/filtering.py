@@ -2,19 +2,16 @@
 """
 Path: scripts/suppliers/alstyle/filtering.py
 
-AlStyle Filtering — ассортиментная фильтрация supplier-layer.
+AlStyle filtering layer.
 
 Что делает:
-- применяет include-policy по categoryId из supplier config;
-- отсекает товары вне разрешённых категорий;
-- возвращает filtered list и компактный filter report.
+- держит supplier-layer правила фильтрации;
+- собирает стабильный filter_report для build summary;
 
 Что не делает:
-- не содержит source, builder и final logic;
-- не знает о shared core rules;
-- не принимает supplier-business решения вне filter policy.
+- не строит final offers;
+- не переносит supplier-правила в shared core.
 """
-
 from __future__ import annotations
 
 import re
