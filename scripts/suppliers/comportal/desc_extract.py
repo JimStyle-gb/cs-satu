@@ -2,19 +2,16 @@
 """
 Path: scripts/suppliers/comportal/desc_extract.py
 
-ComPortal Desc Extract — извлечение данных из cleaned description.
+ComPortal description extraction layer.
 
 Что делает:
-- извлекает допустимые поля из очищенного supplier-text;
-- работает поверх plain-text после desc_clean.py;
-- готовит данные для params и builder слоя.
+- извлекает только допустимые supplier-поля из title/body;
+- не подменяет главный params extractor;
 
 Что не делает:
-- не фантазирует supplier-данные из воздуха;
-- не строит финальный shared description;
-- не заменяет params.py и builder.py.
+- не придумывает данные из воздуха;
+- не заменяет supplier params layer.
 """
-
 from __future__ import annotations
 
 import re
@@ -23,7 +20,6 @@ from typing import Iterable
 from cs.util import norm_ws
 from suppliers.comportal.models import ParamItem
 
-
 _CODE_TAIL_RE = re.compile(r"\(([A-Za-z0-9#/\-\.]+)\)\s*$")
 _RESOURCE_RE = re.compile(r"(?iu)\bресурс\s*[:\-]?\s*([\d\s.,]+(?:стр(?:аниц|\.?)?)?)")
 _WARRANTY_RE = re.compile(r"(?iu)\bгарант(?:ия)?\s*[:\-]?\s*(\d{1,3})\s*(?:мес|месяц|месяцев|month|months)\b")
@@ -31,7 +27,6 @@ _COLOR_RE = re.compile(
     r"(?iu)\b(ч[её]рн(?:ый|ая)?|ж[её]лт(?:ый|ая)?|голуб(?:ой|ая)?|пурпурн(?:ый|ая)?|"
     r"бел(?:ый|ая)?|сер(?:ый|ая)?|красн(?:ый|ая)?|син(?:ий|яя)|зел[её]н(?:ый|ая)?)\b"
 )
-
 
 def _param_map(params: Iterable[ParamItem]) -> dict[str, str]:
     out: dict[str, str] = {}
@@ -42,7 +37,6 @@ def _param_map(params: Iterable[ParamItem]) -> dict[str, str]:
             out[name] = value
     return out
 
-
 def _append_if_missing(out: list[ParamItem], existing: dict[str, str], *, name: str, value: str, source: str) -> None:
     if not norm_ws(name) or not norm_ws(value):
         return
@@ -50,7 +44,6 @@ def _append_if_missing(out: list[ParamItem], existing: dict[str, str], *, name: 
         return
     out.append(ParamItem(name=norm_ws(name), value=norm_ws(value), source=source))
     existing[name] = value
-
 
 def extract_desc_fill_params(
     *,
@@ -126,7 +119,6 @@ def extract_desc_fill_params(
             )
 
     return out
-
 
 __all__ = [
     "extract_desc_fill_params",
