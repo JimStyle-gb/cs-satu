@@ -2,20 +2,16 @@
 """
 Path: scripts/build_comportal.py
 
-ComPortal Build — thin orchestrator поставщика в CS-template.
+ComPortal orchestrator layer.
 
 Что делает:
-- грузит supplier config: filter, schema и policy;
-- читает source bundle из исходного YML ComPortal;
-- прогоняет supplier pipeline: source -> filtering -> builder;
-- пишет raw и final feed, watch-report и quality gate report.
+- грузит supplier config и запускает supplier-layer;
+- пишет raw/final feed и запускает quality gate;
 
 Что не делает:
-- не содержит parsing-логики source bundle;
-- не держит supplier-specific regex и builder-эвристики;
-- не переносит supplier-aware правила в shared core.
+- не хранит supplier parsing/compat/normalize внутри себя;
+- не подменяет source.py / builder.py / quality_gate.py.
 """
-
 from __future__ import annotations
 
 import os
@@ -66,7 +62,6 @@ def _read_yaml(path: Path) -> dict[str, Any]:
         return {}
     return yaml.safe_load(path.read_text(encoding="utf-8")) or {}
 
-
 def _load_supplier_config(cfg_dir: Path) -> tuple[dict[str, Any], dict[str, Any], dict[str, Any]]:
     """Загрузить filter, schema и policy config поставщика."""
     return (
@@ -74,7 +69,6 @@ def _load_supplier_config(cfg_dir: Path) -> tuple[dict[str, Any], dict[str, Any]
         _read_yaml(cfg_dir / SCHEMA_FILE_DEFAULT),
         _read_yaml(cfg_dir / POLICY_FILE_DEFAULT),
     )
-
 
 def _safe_int(value: Any, default: int) -> int:
     """Безопасно привести значение к int."""
@@ -96,12 +90,10 @@ def _resolve_hour(policy_cfg: dict[str, Any], schema_cfg: dict[str, Any]) -> int
         3,
     )
 
-
 def _resolve_placeholder(schema_cfg: dict[str, Any]) -> str:
     """Определить placeholder picture из schema или default."""
     placeholder = str(schema_cfg.get("placeholder_picture") or PLACEHOLDER_DEFAULT).strip()
     return placeholder or PLACEHOLDER_DEFAULT
-
 
 def _resolve_vendor_blacklist(schema_cfg: dict[str, Any]) -> set[str]:
     """Определить blacklist vendor-значений из schema."""
@@ -110,7 +102,6 @@ def _resolve_vendor_blacklist(schema_cfg: dict[str, Any]) -> set[str]:
         for item in (schema_cfg.get("vendor_blacklist_casefold") or [])
         if str(item).strip()
     }
-
 
 def _resolve_quality_gate(policy_cfg: dict[str, Any], schema_cfg: dict[str, Any]) -> dict[str, Any]:
     """Собрать supplier quality gate config."""
@@ -143,18 +134,15 @@ def _resolve_quality_gate(policy_cfg: dict[str, Any], schema_cfg: dict[str, Any]
     qg["freeze_current_as_baseline"] = bool(qg.get("freeze_current_as_baseline", False))
     return qg
 
-
 def _resolve_allowed_category_ids(filter_cfg: dict[str, Any]) -> set[str]:
     """Определить include category ids из env или filter config."""
     fallback_ids = {str(item) for item in (filter_cfg.get("allowed_category_ids") or filter_cfg.get("category_ids") or [])}
     return parse_id_set(os.getenv("COMPORTAL_CATEGORY_IDS"), fallback_ids)
 
-
 def _resolve_excluded_root_ids(filter_cfg: dict[str, Any]) -> set[str]:
     """Определить excluded root ids из env или filter config."""
     fallback_ids = {str(item) for item in (filter_cfg.get("excluded_root_ids") or [])}
     return parse_id_set(os.getenv("COMPORTAL_EXCLUDED_ROOT_IDS"), fallback_ids)
-
 
 def _resolve_watch_ids() -> set[str]:
     """Определить OID-набор для watch-report."""
@@ -162,7 +150,6 @@ def _resolve_watch_ids() -> set[str]:
     if not raw:
         return set(COMPORTAL_WATCH_OIDS)
     return {item for item in (chunk.strip() for chunk in raw.replace(";", ",").split(",")) if item}
-
 
 def _run_quality_gate(*, raw_out_file: str, cfg_dir: Path, qg: dict[str, Any]) -> dict[str, object]:
     """Запустить supplier-side quality gate или вернуть пустой успешный результат."""
@@ -312,7 +299,6 @@ def main() -> int:
             print(f"  - {line}")
 
     return 0 if qg_result.get("ok", True) else 1
-
 
 if __name__ == "__main__":
     raise SystemExit(main())
