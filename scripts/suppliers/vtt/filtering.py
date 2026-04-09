@@ -2,17 +2,15 @@
 """
 Path: scripts/suppliers/vtt/filtering.py
 
-VTT Filtering — filtering-слой supplier-layer.
+VTT filtering layer.
 
 Что делает:
-- держит только ассортиментную политику VTT;
-- собирает category scope и allowed title prefixes;
-- возвращает стабильный filter_report для build summary.
+- держит supplier-layer правила фильтрации;
+- собирает стабильный filter_report для build summary;
 
 Что не делает:
-- не строит финальные offers;
-- не переносит supplier-правила в shared core;
-- не заменяет builder и source слой.
+- не строит final offers;
+- не переносит supplier-правила в shared core.
 """
 from __future__ import annotations
 
