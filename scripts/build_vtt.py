@@ -5,17 +5,13 @@ Path: scripts/build_vtt.py
 VTT orchestrator layer.
 
 Что делает:
-- грузит supplier config: filter / schema / policy;
-- поддерживает index / shard / merge / full режимы;
-- собирает raw offers через supplier-layer VTT;
-- пишет raw и final фиды;
-- печатает build summary и запускает supplier-side quality gate.
+- грузит supplier config и запускает supplier-layer;
+- пишет raw/final feed и запускает quality gate;
 
 Что не делает:
-- не хранит supplier-specific parsing/compat/normalize внутри себя;
+- не хранит supplier parsing/compat/normalize внутри себя;
 - не подменяет source.py / builder.py / quality_gate.py.
 """
-
 from __future__ import annotations
 
 import json
