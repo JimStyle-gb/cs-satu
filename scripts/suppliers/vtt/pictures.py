@@ -2,39 +2,18 @@
 """
 Path: scripts/suppliers/vtt/pictures.py
 
-VTT pictures layer under CS-template.
+VTT Pictures — сборку и нормализацию картинок supplier-layer.
 
-Роль файла:
-- чистить и дедуплицировать picture URLs;
-- вырезать явный non-product image noise;
-- возвращать placeholder, если реальных картинок не осталось.
+Что делает:
+- собирает picture URL из source-данных;
+- чистит ссылки, убирает дубли и служебный шум;
+- возвращает готовый список картинок для builder.py.
 
-Важно:
-- supplier-layer сам должен вернуть clean raw pictures;
-- placeholder не должен быть жёстко привязан к файлу, если его передали из config;
-- модуль оставляет backward-safe API clean_picture_urls(...).
+Что не делает:
+- не меняет бизнес-логику товаров;
+- не управляет ассортиментной фильтрацией;
 """
-
-from __future__ import annotations
-
-import re
-from typing import Sequence
-
-
-# Backward-safe дефолт, если builder/source не передали placeholder из config.
-PLACEHOLDER = "https://placehold.co/800x800/png?text=No+Photo"
-
-# Явный non-product image noise.
-BAD_IMAGE_RE = re.compile(
-    r"(?:favicon|yandex|counter|watch/|pixel|metrika|doubleclick|logo)",
-    re.I,
-)
-_HTTP_RE = re.compile(r"^https?://", re.I)
-_MULTI_SPACE_RE = re.compile(r"\s+")
-
-
-def safe_str(value: object) -> str:
-    """Безопасно привести значение к строке."""
+Безопасно привести значение к строке."""
     return str(value).strip() if value is not None else ""
 
 
