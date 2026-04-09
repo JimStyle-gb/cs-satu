@@ -2,24 +2,20 @@
 """
 Path: scripts/suppliers/copyline/compat.py
 
-CopyLine Compat — supplier-layer нормализация compat/codes.
+CopyLine compat layer.
 
 Что делает:
-- нормализует codes и compat-списки;
-- дочищает supplier-params до аккуратного raw-вида;
-- держит supplier-specific reconcile-логику внутри adapter-layer.
+- держит supplier-specific compat и part-number helpers;
+- не переносит compat repair в shared core;
 
 Что не делает:
-- не переносит compat-эвристики в shared core;
-- не заменяет params/source/builder-слой;
-- не принимает final business-решения по offer.
+- не строит final offers;
+- не переносит supplier-specific repair в shared core.
 """
-
 from __future__ import annotations
 
 import re
 from typing import List, Sequence, Tuple
-
 
 VENDOR_FAMILIES = (
     "HP Color LaserJet",
@@ -57,14 +53,11 @@ STOP_HEADERS_RX = re.compile(
     re.I,
 )
 
-
 def safe_str(x: object) -> str:
     return str(x).strip() if x is not None else ""
 
-
 def _normalize_spaces(value: str) -> str:
     return re.sub(r"\s+", " ", safe_str(value)).strip()
-
 
 _COPYLINE_BRAND_VALUE_REPLACEMENTS: tuple[tuple[str, str], ...] = (
     (r"\bEuro\s+Print\b", "Europrint"),
@@ -79,7 +72,6 @@ _COLOR_VALUE_MAP = {
     "жёлтый": "Желтый",
 }
 
-
 def _canonical_value_text(value: str) -> str:
     s = _normalize_spaces(value)
     if not s:
@@ -87,7 +79,6 @@ def _canonical_value_text(value: str) -> str:
     for pattern, repl in _COPYLINE_BRAND_VALUE_REPLACEMENTS:
         s = re.sub(pattern, repl, s, flags=re.I)
     return s
-
 
 def _normalize_list_separators(value: str) -> str:
     s = _canonical_value_text(value)
@@ -97,7 +88,6 @@ def _normalize_list_separators(value: str) -> str:
     s = re.sub(r",{2,}", ",", s)
     s = re.sub(r"\s{2,}", " ", s)
     return s.strip(" ,")
-
 
 def _strip_compat_leadins(value: str) -> str:
     s = _normalize_spaces(value)
@@ -117,7 +107,6 @@ def _strip_compat_leadins(value: str) -> str:
     s = s.strip(" ,.;:-")
     return s
 
-
 def _dedupe_list_text(value: str, sep: str = ", ") -> str:
     raw = [x for x in re.split(r"\s*,\s*", _normalize_list_separators(value)) if x]
     out: list[str] = []
@@ -133,11 +122,9 @@ def _dedupe_list_text(value: str, sep: str = ", ") -> str:
         out.append(val)
     return sep.join(out)
 
-
 def _looks_like_family(item: str) -> bool:
     low = item.casefold()
     return any(low.startswith(f.casefold() + " ") for f in VENDOR_FAMILIES)
-
 
 def _dedupe_family_word(item: str) -> str:
     item = _normalize_spaces(item)
@@ -145,13 +132,11 @@ def _dedupe_family_word(item: str) -> str:
     item = re.sub(r"\b(E-Studio)\s+\1\b", r"\1", item, flags=re.I)
     return item
 
-
 def _canon_expand(family: str, tail: str) -> str:
     parts = [x.strip() for x in re.split(r"\s*/\s*", tail) if x.strip()]
     if len(parts) <= 1:
         return f"{family} {tail}"
     return ", ".join(f"{family} {part}" for part in parts)
-
 
 def _expand_family_shorthand(value: str) -> str:
     s = _normalize_spaces(value)
@@ -193,7 +178,6 @@ def _expand_family_shorthand(value: str) -> str:
     s = canon_rx.sub(lambda m: _canon_expand(m.group(1), m.group(2)), s)
     return s
 
-
 def _expand_toshiba_estudio_shorthand(value: str) -> str:
     s = _normalize_spaces(value)
     rx = re.compile(r"\b(Toshiba\s+E-Studio)\s+(\d{4}(?:\s*,\s*\d{4})+)\b", re.I)
@@ -204,7 +188,6 @@ def _expand_toshiba_estudio_shorthand(value: str) -> str:
         return ", ".join(f"{family} {n}" for n in numbers)
 
     return rx.sub(repl, s)
-
 
 def _restore_family_prefix(parts: list[str]) -> list[str]:
     rebuilt: list[str] = []
@@ -232,12 +215,10 @@ def _restore_family_prefix(parts: list[str]) -> list[str]:
         rebuilt.append(item)
     return rebuilt
 
-
 def normalize_codes(value: str) -> str:
     value = _canonical_value_text(value)
     value = _normalize_list_separators(value)
     return _dedupe_list_text(value, sep=", ")
-
 
 def normalize_compatibility(value: str) -> str:
     s = _strip_compat_leadins(value)
@@ -254,7 +235,6 @@ def normalize_compatibility(value: str) -> str:
     rebuilt = _restore_family_prefix(parts)
     rebuilt = [_dedupe_family_word(x) for x in rebuilt if x]
     return _dedupe_list_text(", ".join(rebuilt), sep=", ")[:500]
-
 
 def reconcile_copyline_params(params: Sequence[Tuple[str, str]]) -> List[Tuple[str, str]]:
     out: list[Tuple[str, str]] = []
