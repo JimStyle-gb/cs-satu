@@ -2,35 +2,16 @@
 """
 Path: scripts/build_alstyle.py
 
-AlStyle Build — тонкий orchestrator поставщика.
+AlStyle orchestrator layer.
 
 Что делает:
-- загружает supplier config и запускает supplier-layer;
+- грузит supplier config и запускает supplier-layer;
 - пишет raw/final feed и запускает quality gate;
 
 Что не делает:
 - не хранит supplier parsing/compat/normalize внутри себя;
 - не подменяет source.py / builder.py / quality_gate.py.
 """
-
-# -*- coding: utf-8 -*-
-"""
-Path: scripts/build_alstyle.py
-
-Build AlStyle — тонкий orchestrator поставщика в CS-шаблоне.
-
-Что делает:
-- грузит supplier config и исходный XML;
-- прогоняет pipeline source -> filtering -> builder;
-- пишет raw и final feed;
-- пишет watch-report и запускает supplier quality gate.
-
-Что не делает:
-- не хранит supplier regex-логику;
-- не дублирует builder, source и filtering;
-- не подменяет shared core и shared validators.
-"""
-
 from __future__ import annotations
 
 import os
