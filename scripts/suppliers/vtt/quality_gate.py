@@ -2,17 +2,15 @@
 """
 Path: scripts/suppliers/vtt/quality_gate.py
 
-VTT Quality Gate — quality gate-слой supplier-layer.
+VTT quality gate layer.
 
 Что делает:
-- проверяет final feed после supplier-layer и shared core;
-- разделяет blocking и allowed cosmetic tails;
-- пишет единый отчёт через shared cs.qg_report writer.
+- проверяет final feed supplier-side rules;
+- пишет единый quality gate report;
 
 Что не делает:
 - не чинит raw feed;
-- не заменяет normalize/builder/pictures слой;
-- не подменяет build orchestration.
+- не заменяет normalize/builder/pictures слой.
 """
 from __future__ import annotations
 
