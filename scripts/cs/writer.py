@@ -2,19 +2,16 @@
 """
 Path: scripts/cs/writer.py
 
-CS Writer — общий writer-слой CS-шаблона.
+CS Writer — XML/YML assembly and file writing layer.
 
 Что делает:
-- собирает XML/YML-оболочку и блок offers;
-- держит escape-хелперы, FEED_META и запись файла;
-- сохраняет стабильный spacing и формат финального вывода.
+- собирает XML/YML и пишет файлы;
+- держит shared header/footer/meta/writer helpers;
 
 Что не делает:
-- не содержит supplier-specific логики;
-- не принимает business-решения по товарам;
-- не заменяет core и validator-слой.
+- не содержит supplier-business логики;
+- не подменяет builder/validator слой.
 """
-
 from __future__ import annotations
 
 import re
