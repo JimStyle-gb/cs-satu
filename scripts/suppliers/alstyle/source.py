@@ -2,19 +2,16 @@
 """
 Path: scripts/suppliers/alstyle/source.py
 
-AlStyle supplier layer — source reader.
+AlStyle source layer.
 
 Что делает:
-- скачивает XML поставщика;
-- парсит offers и собирает SourceOffer;
-- сохраняет supplier-truth без витринной логики.
+- содержит только source/session/crawl/page parsing;
+- не хранит supplier-business логику final-layer;
 
 Что не делает:
-- не делает final cleanup;
-- не строит final description;
-- не знает о shared SEO-рендере.
+- не строит final offers;
+- не подменяет builder/filtering/quality_gate.
 """
-
 from __future__ import annotations
 
 import xml.etree.ElementTree as ET
