@@ -2,19 +2,16 @@
 """
 Path: scripts/suppliers/alstyle/quality_gate.py
 
-AlStyle supplier layer — quality gate.
+AlStyle quality gate layer.
 
 Что делает:
-- проверяет final feed после supplier-layer и shared core;
-- считает critical и cosmetic хвосты;
-- пишет отчёт через shared cs.qg_report.
+- проверяет final feed supplier-side rules;
+- пишет единый quality gate report;
 
 Что не делает:
-- не чинит supplier raw;
-- не дублирует normalize и builder;
-- не хранит post-fix логику вместо pipeline.
+- не чинит raw feed;
+- не заменяет normalize/builder/pictures слой.
 """
-
 from __future__ import annotations
 
 from collections import defaultdict
