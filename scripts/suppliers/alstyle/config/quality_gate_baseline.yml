@@ -1,2 +1,13 @@
+# Path: scripts/suppliers/alstyle/config/quality_gate_baseline.yml
+#
+# AlStyle quality gate baseline.
+#
+# Что делает:
+# - хранит baseline supplier quality gate;
+# - не содержит parsing или repair-логики.
+#
+# Что не делает:
+# - не чинит feed;
+# - не заменяет quality_gate.py.
 schema_version: 1
 accepted_cosmetic: {}
