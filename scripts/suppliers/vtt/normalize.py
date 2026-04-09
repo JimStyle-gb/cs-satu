@@ -2,17 +2,15 @@
 """
 Path: scripts/suppliers/vtt/normalize.py
 
-VTT Normalize — normalization-слой supplier-layer.
+VTT normalize layer.
 
 Что делает:
-- держит базовую supplier-нормализацию title / vendor / type / tech / resource / color;
-- даёт backward-safe helper-ы для builder, compat и desc_extract;
-- оставляет VTT-specific part-number и compat cleanup за compat.py.
+- держит базовую supplier-нормализацию;
+- даёт helper-ы для builder/compat/params слоя;
 
 Что не делает:
-- не занимается source-crawl логикой;
-- не делает compat repair;
-- не строит final description и final XML.
+- не содержит source-crawl логики;
+- не делает final rendering.
 """
 from __future__ import annotations
 
