@@ -2,19 +2,16 @@
 """
 Path: scripts/suppliers/akcent/models.py
 
-AkCent Models — carrier-модели supplier-layer.
+AkCent models layer.
 
 Что делает:
-- держит компактные dataclass-модели поставщика;
-- задаёт типовой контракт между source, filtering, builder и diagnostics;
-- изолирует структуры данных от логики обработки.
+- держит carrier-структуры supplier-layer;
+- задаёт контракт между source, filtering, builder и diagnostics;
 
 Что не делает:
-- не содержит business-логики;
-- не знает supplier-specific regex и cleanup-правил;
-- не дублирует core-эвристики.
+- не содержит бизнес-логики;
+- не хранит regex или repair-эвристики.
 """
-
 from __future__ import annotations
 
 from dataclasses import dataclass, field
