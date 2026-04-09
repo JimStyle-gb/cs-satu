@@ -2,19 +2,16 @@
 """
 Path: scripts/suppliers/comportal/filtering.py
 
-ComPortal Filtering — supplier-layer фильтрация ассортимента.
+ComPortal filtering layer.
 
 Что делает:
-- читает id-наборы из env и fallback config;
-- применяет include по category ids;
-- применяет exclude по root ids для supplier-category дерева.
+- держит supplier-layer правила фильтрации;
+- собирает стабильный filter_report для build summary;
 
 Что не делает:
-- не парсит source;
-- не меняет offers;
-- не переносит supplier-aware правила в shared core.
+- не строит final offers;
+- не переносит supplier-правила в shared core.
 """
-
 from __future__ import annotations
 
 import re
@@ -55,7 +52,6 @@ def offer_passes_filter(
     if excluded_root_ids and source_offer.category_root_id in excluded_root_ids:
         return False
     return True
-
 
 def filter_source_offers(
     offers: list[SourceOffer],
