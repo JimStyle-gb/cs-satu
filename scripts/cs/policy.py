@@ -2,19 +2,16 @@
 """
 Path: scripts/cs/policy.py
 
-CS Policy — общий backward-safe policy-слой.
+CS Policy — shared policy defaults layer.
 
 Что делает:
-- хранит общий dataclass SupplierPolicy;
-- даёт backward-safe API для старых импортов;
-- фиксирует, что shared core не должен быть supplier-aware.
+- держит shared common defaults;
+- сохраняет backward-safe API для policy-layer;
 
 Что не делает:
-- не хранит supplier-specific policy;
-- не принимает решения по конкретным товарам;
-- не заменяет supplier-layer и builder-логику.
+- не содержит supplier-aware repair logic;
+- не подменяет supplier raw/policy config.
 """
-
 from __future__ import annotations
 
 from dataclasses import dataclass
