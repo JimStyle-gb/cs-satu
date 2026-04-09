@@ -2,19 +2,16 @@
 """
 Path: scripts/cs/description.py
 
-CS Description — общий сборщик HTML-описания.
+CS Description — shared final description layer.
 
 Что делает:
-- собирает единый CS description-шаблон для всех поставщиков;
-- формирует блоки WhatsApp, Характеристики, Оплата и Доставка;
-- нормализует финальный HTML перед выводом в feed.
+- собирает общий final HTML для description;
+- держит канонический CS description template;
 
 Что не делает:
-- не содержит supplier-specific repairs;
-- не заменяет desc_clean.py и desc_extract.py поставщика;
-- не принимает решения за builder и core.
+- не знает supplier parsing details;
+- не подменяет supplier desc_clean / desc_extract.
 """
-
 from __future__ import annotations
 
 import re
