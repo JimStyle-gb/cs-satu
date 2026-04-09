@@ -25,7 +25,6 @@ from typing import Iterable
 
 from cs.util import norm_ws, safe_int
 
-
 # ----------------------------- regex / const -----------------------------
 
 _RE_WS = re.compile(r"\s+")
@@ -83,9 +82,7 @@ _NAME_PREFIXES = (
     "Экран",
 )
 
-
 # ----------------------------- small helpers -----------------------------
-
 
 def _clean_spaces(s: str) -> str:
     s = norm_ws(s)
@@ -94,7 +91,6 @@ def _clean_spaces(s: str) -> str:
     s = re.sub(r"\(\s+", "(", s)
     s = re.sub(r"\s+\)", ")", s)
     return s.strip(" -–—")
-
 
 def _collapse_duplicated_lead(s: str) -> str:
     text = _clean_spaces(s)
@@ -105,7 +101,6 @@ def _collapse_duplicated_lead(s: str) -> str:
         text = rx.sub(r"\1 ", text)
     return _clean_spaces(text)
 
-
 def _canon_vendor(v: str) -> str:
     s = _clean_spaces(v)
     if not s:
@@ -114,7 +109,6 @@ def _canon_vendor(v: str) -> str:
     s = _clean_spaces(s)
     key = s.casefold()
     return _ALLOWED_VENDOR_MAP.get(key, s)
-
 
 def _extract_code_token(*parts: str) -> str:
     for part in parts:
@@ -125,7 +119,6 @@ def _extract_code_token(*parts: str) -> str:
         if m:
             return m.group(0).upper()
     return ""
-
 
 def _extract_vendor_from_text(*parts: str) -> str:
     text = " ".join(_clean_spaces(x) for x in parts if _clean_spaces(x))
@@ -140,7 +133,6 @@ def _extract_vendor_from_text(*parts: str) -> str:
             return canon
     return ""
 
-
 def _strip_prefix_from_name(name: str) -> str:
     s = _clean_spaces(name)
     for prefix in _NAME_PREFIXES:
@@ -149,9 +141,6 @@ def _strip_prefix_from_name(name: str) -> str:
             return tail or s
     return s
 
-
-
-
 def _param_value(params: list[tuple[str, str]], key: str) -> str:
     key_cf = _clean_spaces(key).casefold().replace("ё", "е")
     for k, v in params or []:
@@ -159,7 +148,6 @@ def _param_value(params: list[tuple[str, str]], key: str) -> str:
         if k_cf == key_cf:
             return _clean_spaces(v)
     return ""
-
 
 def _tail_after_model(name: str, model: str) -> str:
     s = _clean_spaces(name)
@@ -174,7 +162,6 @@ def _tail_after_model(name: str, model: str) -> str:
     tail = re.sub(r"(?u)\bТ(?=\d)", "T", tail)
     return tail
 
-
 def normalize_consumable_name(name: str, *, kind: str) -> str:
     s = _clean_spaces(name)
     if not s or kind != "consumable":
@@ -188,7 +175,6 @@ def normalize_consumable_name(name: str, *, kind: str) -> str:
     s = re.sub(r"(?iu)\bMAINTENANCE\s+BOX\b", "Maintenance Box", s)
     s = re.sub(r"(?iu)\bUltraChrome\b", "UltraChrome", s)
     return _clean_spaces(s)
-
 
 def finalize_consumable_name(name: str, params: list[tuple[str, str]]) -> str:
     s = _clean_spaces(name)
@@ -229,7 +215,6 @@ def finalize_consumable_name(name: str, params: list[tuple[str, str]]) -> str:
 
     return _clean_spaces(rebuilt) or s
 
-
 def finalize_waste_tank_name(name: str, params: list[tuple[str, str]]) -> str:
     s = _clean_spaces(name)
     if not s:
@@ -251,11 +236,9 @@ def finalize_waste_tank_name(name: str, params: list[tuple[str, str]]) -> str:
 
 # ----------------------------- public API -----------------------------
 
-
 def normalize_name(name: str) -> str:
     """Чистит имя без смысловых перестроек."""
     return _collapse_duplicated_lead(name)
-
 
 def _short_model_from_text(*parts: str) -> str:
     """Пытается достать короткую модель/код из текста."""
@@ -263,7 +246,6 @@ def _short_model_from_text(*parts: str) -> str:
     if code:
         return code.upper()
     return ""
-
 
 def normalize_model(model: str, *, name: str = "", description_text: str = "") -> str:
     """
@@ -283,7 +265,6 @@ def normalize_model(model: str, *, name: str = "", description_text: str = "") -
     if short:
         return short
     return normalize_name(name)
-
 
 def normalize_vendor(
     vendor: str,
@@ -312,7 +293,6 @@ def normalize_vendor(
 
     return ""
 
-
 def normalize_price_in(
     dealer_text: str = "",
     price_text: str = "",
@@ -324,7 +304,6 @@ def normalize_price_in(
         if num is not None and num > 0:
             return num
     return None
-
 
 def normalize_available(
     available_attr: str = "",
@@ -360,7 +339,6 @@ def normalize_available(
         return False
     return num > 0
 
-
 def normalize_warranty(*values: str) -> str:
     """
     Приводит гарантию к виду 'N мес.' или ''.
@@ -394,7 +372,6 @@ def normalize_warranty(*values: str) -> str:
         # AkCent часто отдаёт просто число; считаем, что это месяцы.
         return f"{num} мес."
     return ""
-
 
 def build_offer_oid(
     raw_id: str = "",
@@ -430,7 +407,6 @@ def build_offer_oid(
         return base
     return f"{prefix}{base}"
 
-
 def normalize_article(article: str = "", *, name: str = "", model: str = "") -> str:
     """Нормализует article; если article пуст — пытается достать код из name/model."""
     s = _clean_spaces(article)
@@ -438,11 +414,9 @@ def normalize_article(article: str = "", *, name: str = "", model: str = "") -> 
         return s
     return _extract_code_token(name, model)
 
-
 def normalize_stock_text(stock_text: str) -> str:
     """Оставляет stock в компактном виде для диагностики."""
     return _clean_spaces(stock_text)
-
 
 def normalize_source_basics(
     *,
