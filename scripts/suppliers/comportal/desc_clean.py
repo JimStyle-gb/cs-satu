@@ -2,25 +2,21 @@
 """
 Path: scripts/suppliers/comportal/desc_clean.py
 
-ComPortal Desc Clean — очистка supplier description.
+ComPortal narrative description cleaning layer.
 
 Что делает:
-- чистит HTML и служебный мусор;
-- сохраняет границы строк для desc_extract.py;
-- готовит безопасный plain-text для extraction.
+- чистит supplier narrative/body от шумового текста;
+- готовит безопасный plain-text для extraction и native_desc;
 
 Что не делает:
-- не строит финальное HTML-описание;
-- не вытаскивает params сам по себе;
-- не переносит supplier-specific repairs в shared core.
+- не строит final HTML description;
+- не подменяет compat и params layer.
 """
-
 from __future__ import annotations
 
 import re
 
 from cs.util import norm_ws
-
 
 _EMPTY_LINE_RE = re.compile(r"\n{3,}")
 _TRAILING_PUNCT_LINE_RE = re.compile(r"^[\s\.,;:!\-–—]+$")
@@ -29,7 +25,6 @@ _SPACE_BEFORE_PUNCT_RE = re.compile(r"\s+([,.;:!?])")
 _BRACKET_WS_OPEN_RE = re.compile(r"\(\s+")
 _BRACKET_WS_CLOSE_RE = re.compile(r"\s+\)")
 _HTML_TAG_RE = re.compile(r"<[^>]+>")
-
 
 def _clean_line(line: str) -> str:
     s = line.replace("\xa0", " ")
@@ -42,7 +37,6 @@ def _clean_line(line: str) -> str:
     if _TRAILING_PUNCT_LINE_RE.fullmatch(s or ""):
         return ""
     return s
-
 
 def sanitize_native_desc(text: str, *, title: str = "") -> str:
     """
@@ -63,7 +57,6 @@ def sanitize_native_desc(text: str, *, title: str = "") -> str:
     out = "\n".join(lines).strip()
     out = _EMPTY_LINE_RE.sub("\n\n", out)
     return out.strip()
-
 
 __all__ = [
     "sanitize_native_desc",
