@@ -2,21 +2,17 @@
 """
 Path: scripts/suppliers/copyline/quality_gate.py
 
-CopyLine quality gate.
+CopyLine Quality Gate — supplier-side контроль остаточных raw/final хвостов.
 
-Роль файла:
-- проверяет финальный feed на уже остаточные raw/final хвосты;
-- пишет единый quality gate отчёт через shared cs.qg_report writer;
-- не подменяет builder/normalize/compat логику.
-
-Что файл делает:
-- ловит проблемы codes/compat/model/vendor/cable-полей;
-- проверяет final feed уже после supplier-layer и shared core;
+Что делает:
+- проверяет final feed на остаточные supplier/raw/final хвосты;
+- пишет единый quality gate report через shared cs.qg_report;
 - сохраняет совместимость с текущим build_copyline.py.
 
-Что файл НЕ делает:
+Что не делает:
 - не чинит supplier raw;
-- не должен превращаться в ещё один extractor/normalizer.
+- не превращается в extractor/normalizer;
+- не заменяет builder/compat/policy-слой.
 """
 
 from __future__ import annotations
@@ -179,7 +175,6 @@ def _expected_code_is_covered(expected: str, code_list: list[str], vendor: str, 
         return True
 
     return False
-
 
 
 def _ink_can_skip_codes(name: str, typ: str, desc: str) -> bool:
