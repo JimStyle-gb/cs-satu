@@ -1,20 +1,18 @@
 # -*- coding: utf-8 -*-
 """
 Path: scripts/suppliers/copyline/params.py
-CopyLine page-params layer.
 
-Задача:
-- быть главным extractor-модулем для page/body parsing;
-- принимать раздельные сырьевые каналы (table params / desc pairs / text-body);
-- нормализовать page params из HTML-таблиц/описания;
-- поднять supplier-specific поля до raw;
-- не тянуть device-list в Коды расходников;
-- корректно поднимать single-tail и multi-tail вида Canon 725 / Canon 712/713/725.
+CopyLine Params — supplier-layer extractor page/body params.
 
-Важно:
-- модуль backward-safe: умеет работать и со старым page_params, и с новыми
-  raw_desc_pairs/raw_table_params;
-- семантическое слияние каналов выполняется здесь, а не в source.py.
+Что делает:
+- принимает раздельные сырьевые каналы page/body parsing;
+- нормализует page params из HTML-таблиц и описания;
+- поднимает supplier-specific поля до raw-уровня.
+
+Что не делает:
+- не переносит semantic merge в source.py;
+- не превращается в final validator;
+- не заменяет compat и builder-слой.
 """
 
 from __future__ import annotations
@@ -269,8 +267,6 @@ def _extract_title_canon_numeric_codes(title: str) -> list[str]:
     return out
 
 
-
-
 def _extract_title_canon_family_codes(title: str) -> list[str]:
     title = _norm_spaces(title)
     out: list[str] = []
@@ -465,8 +461,6 @@ def _extract_single_brand_numeric_tail(title: str) -> list[str]:
             seen.add(branded)
             out.append(branded)
     return out
-
-
 
 
 def _extract_title_brand_alpha_tail(title: str) -> list[str]:
@@ -714,7 +708,7 @@ def extract_page_params(
 ) -> List[Tuple[str, str]]:
     """Нормализовать page params и поднять supplier-полезные значения.
 
-    Поддерживает два режима: 
+    Поддерживает два режима:
     - legacy: title + description + page_params;
     - новый: title + extract_desc + raw_desc_pairs + raw_table_params.
     """
