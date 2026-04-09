@@ -1,3 +1,14 @@
+# Path: scripts/suppliers/akcent/config/policy.yml
+#
+# AkCent policy config.
+#
+# Что делает:
+# - хранит supplier policy, schedule и quality gate defaults;
+# - не содержит parsing/normalization кода.
+#
+# Что не делает:
+# - не строит offers;
+# - не подменяет builder/source/quality_gate.
 schema_version: 2
 supplier: AkCent
 timezone: Asia/Almaty
