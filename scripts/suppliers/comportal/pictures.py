@@ -2,48 +2,59 @@
 """
 Path: scripts/suppliers/comportal/pictures.py
 
-Только картинки ComPortal.
+ComPortal Pictures — supplier-layer сборщик картинок.
 
-Роль:
-- очистить urls;
-- нормализовать comportal-ссылки к https;
-- dedupe;
-- вернуть placeholder если ничего не осталось.
+Что делает:
+- чистит и нормализует picture urls;
+- переводит comportal-ссылки на https, где это безопасно;
+- удаляет дубли и возвращает placeholder, если список пустой.
+
+Что не делает:
+- не оценивает качество фото;
+- не фильтрует ассортимент;
+- не вмешивается в builder и quality gate.
 """
 
 from __future__ import annotations
 
 from cs.util import norm_ws
 
+# -----------------------------
+# Normalize helpers
+# -----------------------------
 
 def _normalize_picture_url(url: str) -> str:
-    u = norm_ws(url).replace(" ", "%20")
-    if not u:
+    """Нормализовать один picture url."""
+    picture_url = norm_ws(url).replace(" ", "%20")
+    if not picture_url:
         return ""
 
-    low = u.casefold()
-    if low.startswith("http://www.comportal.kz/"):
-        return "https://www.comportal.kz/" + u[len("http://www.comportal.kz/"):]
-    if low.startswith("http://comportal.kz/"):
-        return "https://comportal.kz/" + u[len("http://comportal.kz/"):]
-    return u
+    lower_url = picture_url.casefold()
+    if lower_url.startswith("http://www.comportal.kz/"):
+        return "https://www.comportal.kz/" + picture_url[len("http://www.comportal.kz/"):]
+    if lower_url.startswith("http://comportal.kz/"):
+        return "https://comportal.kz/" + picture_url[len("http://comportal.kz/"):]
+    return picture_url
 
+# -----------------------------
+# Public API
+# -----------------------------
 
 def collect_picture_urls(urls: list[str], *, placeholder_picture: str) -> list[str]:
+    """Собрать чистый список picture urls для builder."""
     out: list[str] = []
     seen: set[str] = set()
 
-    for raw in urls or []:
-        u = _normalize_picture_url(raw)
-        if not u:
+    for raw_url in urls or []:
+        picture_url = _normalize_picture_url(raw_url)
+        if not picture_url:
             continue
-        sig = u.casefold()
-        if sig in seen:
+        signature = picture_url.casefold()
+        if signature in seen:
             continue
-        seen.add(sig)
-        out.append(u)
+        seen.add(signature)
+        out.append(picture_url)
 
     if not out:
-        out = [placeholder_picture]
-
+        return [placeholder_picture]
     return out
