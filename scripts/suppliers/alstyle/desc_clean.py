@@ -2,19 +2,16 @@
 """
 Path: scripts/suppliers/alstyle/desc_clean.py
 
-AlStyle supplier layer — narrative-cleaning description.
+AlStyle narrative description cleaning layer.
 
 Что делает:
-- чистит native description;
-- сохраняет границы строк для extraction;
-- убирает supplier-мусор и конфликтные narrative-блоки.
+- чистит supplier narrative/body от шумового текста;
+- готовит безопасный plain-text для extraction и native_desc;
 
 Что не делает:
 - не строит final HTML description;
-- не извлекает params как final truth;
-- не содержит shared SEO-логику.
+- не подменяет compat и params layer.
 """
-
 from __future__ import annotations
 
 import re
