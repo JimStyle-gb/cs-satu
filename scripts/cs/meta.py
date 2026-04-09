@@ -2,19 +2,16 @@
 """
 Path: scripts/cs/meta.py
 
-CS Meta — общий слой времени и расписаний по Алматы.
+CS Meta — build time and schedule helper layer.
 
 Что делает:
-- возвращает текущее время Asia/Almaty;
-- считает следующий запуск для daily и DOM-расписаний;
-- даёт shared-хелперы для FEED_META и build-flow.
+- держит build-time и schedule helper-ы;
+- считает next run по Алматы;
 
 Что не делает:
-- не содержит supplier-specific логики;
-- не пишет XML/YML напрямую;
-- не подменяет orchestration build-скриптов.
+- не строит offers;
+- не хранит supplier parsing logic.
 """
-
 from __future__ import annotations
 
 from datetime import datetime, timedelta
