@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<yml_catalog date="2026-04-09 12:07:58">
+<yml_catalog date="2026-04-09 15:48:58">
 <shop><offers>
 <!--FEED_META
 Поставщик                                  | AkCent
 URL поставщика                             | https://ak-cent.kz/export/Exchange/article_nw2/Ware02224.xml
-Время сборки (Алматы)                      | 2026-04-09 12:07:58
+Время сборки (Алматы)                      | 2026-04-09 15:48:58
 Ближайшая сборка (Алматы)                  | 2026-04-10 01:00:00
-Сколько товаров у поставщика до фильтра    | 2047
-Сколько товаров у поставщика после фильтра | 174
-Сколько товаров есть в наличии (true)      | 174
+Сколько товаров у поставщика до фильтра    | 2042
+Сколько товаров у поставщика после фильтра | 173
+Сколько товаров есть в наличии (true)      | 173
 Сколько товаров нет в наличии (false)      | 0
 -->
 
@@ -2877,38 +2877,6 @@ URL поставщика                             | https://ak-cent.kz/export
 <param name="Модель">Проектор универсальный Epson CO-W01</param>
 <param name="Тип">Проектор универсальный</param>
 <keywords>Epson, Проектор универсальный Epson CO-W01, доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
-</offer>
-
-<offer id="ACV11HA86340" available="true">
-<categoryId></categoryId>
-<vendorCode>ACV11HA86340</vendorCode>
-<name>Проектор универсальный Epson CO-WX02</name>
-<price>244900</price>
-<picture>https://b2b.ak-cent.kz/upload/iblock/784/2zlzx4940r10d71q1trtp1doktrz3ohd.jpg</picture>
-<vendor>Epson</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-<!-- Наименование товара -->
-<h3>Проектор универсальный Epson CO-WX02</h3>
-<!-- Описание -->
-<p>Тип: Проектор универсальный; Модель: Проектор универсальный Epson CO-WX02</p>
-<!-- WhatsApp -->
-<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
-<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
-<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
-<h3>Характеристики</h3><ul><li><strong>USB:</strong> Display 3-в-1 – передача изображения, звука и сигналов управления по</li><li><strong>Wi-Fi:</strong> (опционально) Функция Quick Corner Возможность просмотра изображений напрямую с</li><li><strong>Вес:</strong> 2.2 кг</li><li><strong>Гарантия:</strong> 12 мес.</li><li><strong>Модель:</strong> Проектор универсальный Epson CO-WX02</li><li><strong>Разрешение:</strong> WXGA (1280х800)</li><li><strong>Технология:</strong> LCD</li><li><strong>Тип:</strong> Проектор универсальный</li><li><strong>Яркость:</strong> 3000 ANSI lm</li></ul>
-<!-- Оплата и доставка -->
-<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><div style="background:#FFF6E5; border:1px solid #F1E2C6; padding:12px 14px; border-radius:0; text-align:left;"><h3 style="margin:0 0 8px; font-size:17px;">Оплата</h3><ul style="margin:0; padding-left:18px;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000;"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul><hr style="border:none; border-top:1px solid #E7D6B7; margin:12px 0;" /><h3 style="margin:0 0 8px; font-size:17px;">Доставка по Алматы и Казахстану</h3><ul style="margin:0; padding-left:18px;"><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul></div></div>]]></description>
-<param name="USB">Display 3-в-1 – передача изображения, звука и сигналов управления по</param>
-<param name="Wi-Fi">(опционально) Функция Quick Corner Возможность просмотра изображений напрямую с</param>
-<param name="Вес">2.2 кг</param>
-<param name="Гарантия">12 мес.</param>
-<param name="Модель">Проектор универсальный Epson CO-WX02</param>
-<param name="Разрешение">WXGA (1280х800)</param>
-<param name="Технология">LCD</param>
-<param name="Тип">Проектор универсальный</param>
-<param name="Яркость">3000 ANSI lm</param>
-<keywords>Epson, Проектор универсальный Epson CO-WX02, доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="ACV11HB51042" available="true">
