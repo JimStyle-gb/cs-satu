@@ -2,17 +2,15 @@
 """
 Path: scripts/suppliers/vtt/diagnostics.py
 
-VTT Diagnostics — diagnostics-слой supplier-layer.
+VTT diagnostics layer.
 
 Что делает:
-- печатает стабильный build summary для orchestrator;
-- держит summary-логику вне build_vtt.py;
-- помогает разбирать прогоны без вмешательства в бизнес-логику.
+- печатает стабильный build summary;
+- держит diagnostics вне build-оркестратора;
 
 Что не делает:
-- не фильтрует offers;
 - не меняет supplier raw/final данные;
-- не заменяет builder и quality gate.
+- не подменяет builder/source слой.
 """
 from __future__ import annotations
 
