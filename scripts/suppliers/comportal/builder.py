@@ -2,15 +2,17 @@
 """
 Path: scripts/suppliers/comportal/builder.py
 
-ComPortal supplier layer — сборка raw offer.
+ComPortal Builder — supplier-layer сборка clean raw offers.
 
-v10:
-- сохраняет safe mutual enrichment и type-aware prune;
-- сохраняет усиленные descriptions для слабых Dell / corporate-кейсов;
-- добивает public model для Dell desktop / AIO и Canon plotter кейсов;
-- больше не подменяет param "Коды" публичной моделью;
-- сохраняет канонизацию кривых supplier-ключей перед prune;
-- усиливает supplier-side SEO-intro для расходных материалов без удлинения title.
+Что делает:
+- собирает raw offer из normalized basics, params, compat и pictures;
+- разводит text-for-data и text-for-display;
+- готовит clean raw OfferOut для shared core.
+
+Что не делает:
+- не переносит supplier-specific repairs в shared core;
+- не строит final shared HTML description;
+- не заменяет source.py, params.py и compat.py.
 """
 
 from __future__ import annotations
