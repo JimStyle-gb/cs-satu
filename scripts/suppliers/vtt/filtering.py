@@ -2,91 +2,17 @@
 """
 Path: scripts/suppliers/vtt/filtering.py
 
-VTT filtering layer under CS-template.
+VTT Filtering — supplier-layer фильтрацию ассортимента.
 
-Роль файла:
-- держать только ассортиментную политику VTT;
-- category scope + allowed title prefixes;
-- helper-ы для listing/url фильтра;
-- backward-safe API для текущих source.py / build_vtt.py.
+Что делает:
+- держит правила отбора и исключения позиций;
+- собирает стабильный filter_report для build summary.
 
-Важно:
-- source.py не должен дублировать ассортиментные defaults;
-- filter.yml остаётся source of truth;
-- сохранены старые функции:
-  mk_category_url, normalize_listing_url, product_path_re,
-  normalize_listing_title, title_matches_allowed,
-  categories_from_cfg, prefixes_from_cfg, resolve_filter_inputs.
-- resolve_filter_inputs(...) намеренно сделан очень терпимым к legacy kwargs,
-  чтобы мягко пережить переход VTT на канонический supplier-template.
+Что не делает:
+- не строит финальные offers;
+- не переносит supplier-правила в shared core;
 """
-
-from __future__ import annotations
-
-import re
-from pathlib import Path
-from typing import Any
-from urllib.parse import parse_qs, urlencode, urljoin, urlparse, urlunparse
-
-try:
-    import yaml
-except Exception:  # pragma: no cover
-    yaml = None  # type: ignore
-
-
-DEFAULT_CATEGORY_CODES: list[str] = [
-    "DRM_CRT",
-    "DRM_UNIT",
-    "CARTLAS_ORIG",
-    "CARTLAS_COPY",
-    "CARTLAS_PRINT",
-    "CARTLAS_TNR",
-    "CARTINJ_PRNTHD",
-    "CARTINJ_Refill",
-    "CARTINJ_ORIG",
-    "CARTMAT_CART",
-    "TNR_WASTETON",
-    "DEV_DEV",
-    "TNR_REFILL",
-    "INK_COMMON",
-    "PARTSPRINT_DEVUN",
-]
-
-DEFAULT_ALLOWED_TITLE_PREFIXES: list[str] = [
-    "Drum",
-    "Девелопер",
-    "Драм-картридж",
-    "Драм-юнит",
-    "Драм-юниты",
-    "Драм юнит",
-    "Кабель сетевой",
-    "Картридж",
-    "Картриджи",
-    "Термоблок",
-    "Тонер-картридж",
-    "Тонер-катридж",
-    "Чернила",
-    "Печатающая головка",
-    "Копи-картридж",
-    "Принт-картридж",
-    "Контейнер",
-    "Блок",
-    "Бункер",
-    "Носитель",
-    "Фотобарабан",
-    "Барабан",
-    "Тонер",
-    "Комплект",
-    "Набор",
-    "Заправочный комплект",
-    "Модуль фоторецептора",
-    "Фотопроводниковый блок",
-    "Бокс сбора тонера",
-    "Рефил",
-]
-
-TITLE_LEAD_CODE_RE = re.compile(
-    r"""^(?:[A-Z0-9][A-Z0-9\-./]{2,}(?:\s*,\s*[A-Z0-9][A-Z0-9\-./]{2,})*\s+)+""",
+^(?:[A-Z0-9][A-Z0-9\-./]{2,}(?:\s*,\s*[A-Z0-9][A-Z0-9\-./]{2,})*\s+)+""",
     re.I,
 )
 ORIGINAL_MARK_RE = re.compile(
