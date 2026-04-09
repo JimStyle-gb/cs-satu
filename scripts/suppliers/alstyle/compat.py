@@ -2,20 +2,17 @@
 """
 Path: scripts/suppliers/alstyle/compat.py
 
-AlStyle supplier layer — cleanup моделей / совместимости / кодовых серий.
+AlStyle supplier layer — cleanup совместимости и кодовых серий.
 
-v131:
-- фиксит регресс AS143070: больше не теряется Xerox Versant 80 / 180
-  в mixed family-lists вида:
-  Xerox Versant 80/180, WorkCentre 4110 / 4112 / 4127 / 4590 / 4595;
-- сохраняет текущие Canon/Xerox cleanup-фиксы;
-- усиливает cleanup Xerox family-lists даже без слов финишер/степлер;
-- разворачивает сокращённые Xerox модели:
-  B7125 / 30 / 35 -> B7125 / B7130 / B7135
-  C7120 / 25 / 30 -> C7120 / C7125 / C7130;
-- не ломает сложные Xerox family-цепочки глобальным slash-dedupe;
-- сохраняет Canon ImagePROGRAF / imageRUNNER / imagePRESS glue-fixes;
-- срезает мусорные хвосты типа &gt; и dangling '/ Canon' в конце совместимости.
+Что делает:
+- чистит модели и совместимость;
+- нормализует кодовые серии;
+- убирает supplier-мусор в compat-тексте.
+
+Что не делает:
+- не меняет shared-core логику;
+- не строит final description;
+- не выполняет final XML-рендер.
 """
 
 from __future__ import annotations
@@ -24,7 +21,6 @@ import re
 
 from cs.util import norm_ws
 from suppliers.alstyle.desc_clean import fix_common_broken_words
-
 
 _CODE_SERIES_RE = re.compile(
     r"(?<![\w/])(?:(?=[A-Z0-9._-]*\d)[A-Z0-9._-]{3,}(?:\s*/\s*(?=[A-Z0-9._-]*\d)[A-Z0-9._-]{3,})+)"
@@ -149,7 +145,6 @@ _XEROX_SPACE_RE = re.compile(r"\s{2,}")
 _XEROX_MODEL_FULL_RE = re.compile(r"(?iu)^([A-Z]+)?(\d{2,5})([A-Z]{0,4}(?:I|DNI|DN|DT)?)$")
 _XEROX_MODEL_SHORT_RE = re.compile(r"(?iu)^(\d{2,4})([A-Z]{0,4}(?:I|DNI|DN|DT)?)$")
 
-
 def dedupe_code_series_text(text: str) -> str:
     s = norm_ws(text)
     if not s:
@@ -170,7 +165,6 @@ def dedupe_code_series_text(text: str) -> str:
 
     return _CODE_SERIES_RE.sub(repl, s)
 
-
 def dedupe_slash_tail_models(v: str) -> str:
     s = norm_ws(v)
     if not s:
@@ -190,7 +184,6 @@ def dedupe_slash_tail_models(v: str) -> str:
         out.append(p)
     return " / ".join(out)
 
-
 def _strip_trailing_compat_garbage(v: str) -> str:
     s = norm_ws(v)
     if not s:
@@ -204,7 +197,6 @@ def _strip_trailing_compat_garbage(v: str) -> str:
         s = _DANGLING_CONNECTOR_RE.sub("", s).strip()
 
     return norm_ws(s.strip(" ;,.-"))
-
 
 def split_glued_brand_models(v: str) -> str:
     s = norm_ws(v)
@@ -232,7 +224,6 @@ def split_glued_brand_models(v: str) -> str:
 
     return norm_ws(s)
 
-
 def _canonize_brand_case(v: str) -> str:
     s = norm_ws(v)
     if not s:
@@ -248,7 +239,6 @@ def _canonize_brand_case(v: str) -> str:
     s = re.sub(r"(?iu)\bWorkCenter\b", "WorkCentre", s)
     return norm_ws(s)
 
-
 def _dedupe_repeated_brand_prefixes(v: str) -> str:
     s = norm_ws(v)
     if not s:
@@ -259,7 +249,6 @@ def _dedupe_repeated_brand_prefixes(v: str) -> str:
             break
         s = nxt
     return norm_ws(s)
-
 
 def _prefix_missing_canon_brand(v: str) -> str:
     s = norm_ws(v)
@@ -299,7 +288,6 @@ def _prefix_missing_canon_brand(v: str) -> str:
 
     s = re.sub(r"(?iu)\bCanon\s+Canon\b", "Canon", s)
     return norm_ws(s)
-
 
 def _fix_known_compat_typos(v: str) -> str:
     s = norm_ws(v)
@@ -367,13 +355,11 @@ def _fix_known_compat_typos(v: str) -> str:
 
     return norm_ws(s)
 
-
 def _normalize_xerox_family_name(family: str) -> str:
     fam = norm_ws(family)
     fam = re.sub(r"(?iu)^WorkCenter\b", "WorkCentre", fam)
     fam = re.sub(r"(?iu)\s+", " ", fam)
     return fam
-
 
 def _expand_xerox_short_model(prev_model: str, token: str) -> str:
     prev = norm_ws(prev_model).upper()
@@ -399,7 +385,6 @@ def _expand_xerox_short_model(prev_model: str, token: str) -> str:
     merged_digits = digits_prev[:-len(digits_cur)] + digits_cur
     merged_suffix = suffix_cur or suffix_prev
     return f"{pref_prev}{merged_digits}{merged_suffix}" if pref_prev else f"{merged_digits}{merged_suffix}"
-
 
 def _extract_xerox_models(body: str) -> list[str]:
     s = norm_ws(_XEROX_DIGITAL_COPIER_RE.sub("", body or ""))
@@ -438,7 +423,6 @@ def _extract_xerox_models(body: str) -> list[str]:
 
     return out
 
-
 def _looks_like_xerox_family_list(v: str) -> bool:
     s = norm_ws(v)
     if not s or not _XEROX_FAMILY_ANY_RE.search(s):
@@ -452,7 +436,6 @@ def _looks_like_xerox_family_list(v: str) -> bool:
     if len(re.findall(r"(?iu)\b(?:VersaLink|AltaLink|WorkCentre(?:\s+Pro)?|CopyCentre|ColorQube|Phaser)\b", s)) >= 2:
         return True
     return False
-
 
 def _cleanup_xerox_finisher_compat(v: str) -> str:
     s = norm_ws(v)
@@ -513,7 +496,6 @@ def _cleanup_xerox_finisher_compat(v: str) -> str:
 
     return ", ".join(out_chunks)
 
-
 def _trim_compat_noise_tail(v: str) -> str:
     s = norm_ws(v)
     if not s:
@@ -540,7 +522,6 @@ def _trim_compat_noise_tail(v: str) -> str:
 
     s = _strip_trailing_compat_garbage(s)
     return norm_ws(s.strip(" ;,.-"))
-
 
 def clean_compatibility_text(v: str) -> str:
     s = norm_ws(v)
@@ -586,7 +567,6 @@ def clean_compatibility_text(v: str) -> str:
     s = _trim_compat_noise_tail(s)
     s = _strip_trailing_compat_garbage(s)
     return norm_ws(s.strip(" ;,.-"))
-
 
 def sanitize_param_value(key: str, val: str) -> str:
     v = norm_ws(val)
