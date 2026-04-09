@@ -1,3 +1,15 @@
+# Path: .github/workflows/build_alstyle.yml
+#
+# Build_AlStyle — workflow сборки.
+#
+# Что делает:
+# - запускает pipeline сборки и публикации для поставщика;
+# - сохраняет артефакты и итоговые feed-файлы;
+#
+# Что не делает:
+# - не хранит supplier parsing-логику;
+# - не подменяет scripts/build_*.py.
+
 name: Build_AlStyle
 
 on:
