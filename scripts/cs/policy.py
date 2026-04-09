@@ -2,22 +2,22 @@
 """
 Path: scripts/cs/policy.py
 
-CS Policy — shared common defaults only.
+CS Policy — общий backward-safe policy-слой.
 
-Идея шаблона:
-- core делает только общие одинаковые действия для всех поставщиков;
-- supplier-specific policy не живет в core и не определяется по OID/коду поставщика;
-- если какому-то поставщику нужны особые правила, это обязанность RAW / supplier-layer.
+Что делает:
+- хранит общий dataclass SupplierPolicy;
+- даёт backward-safe API для старых импортов;
+- фиксирует, что shared core не должен быть supplier-aware.
 
-Важно:
-- backward-safe API сохранён;
-- shared core не должен ветвиться по поставщику.
+Что не делает:
+- не хранит supplier-specific policy;
+- не принимает решения по конкретным товарам;
+- не заменяет supplier-layer и builder-логику.
 """
 
 from __future__ import annotations
 
 from dataclasses import dataclass
-
 
 @dataclass(frozen=True)
 class SupplierPolicy:
@@ -33,7 +33,6 @@ class SupplierPolicy:
     enable_split_params_for_chars: bool = False
     enable_clean_params: bool = False
 
-
 # -----------------------------
 # Backward-safe API
 # -----------------------------
@@ -41,7 +40,6 @@ class SupplierPolicy:
 def _supplier_code_from_oid(oid: str) -> str:
     oid_u = (oid or "").upper()
     return oid_u[:2] if len(oid_u) >= 2 else oid_u
-
 
 def get_supplier_policy(oid: str) -> SupplierPolicy:
     _ = oid
