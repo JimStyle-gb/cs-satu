@@ -2,26 +2,24 @@
 """
 Path: scripts/suppliers/vtt/diagnostics.py
 
-VTT diagnostics layer.
+VTT Diagnostics — служебный summary-слой поставщика.
 
 Что делает:
 - печатает стабильный build summary для orchestrator;
 - держит summary-логику вне build_vtt.py;
-- не содержит supplier-business логики.
+- собирает только operational-вывод без business-логики.
 
-Важно:
-- это только operational tooling;
-- build_vtt.py должен вызывать print_build_summary(...),
-  а не держать свой локальный _print_summary().
+Что не делает:
+- не фильтрует и не меняет offers;
+- не содержит supplier-specific parsing-логики;
+- не подменяет builder, source и quality gate.
 """
 
 from __future__ import annotations
 
 from typing import Any
 
-
 _SUMMARY_WIDTH = 72
-
 
 def _safe_int(value: Any, default: int = 0) -> int:
     try:
@@ -29,17 +27,14 @@ def _safe_int(value: Any, default: int = 0) -> int:
     except Exception:
         return default
 
-
 def _safe_bool(value: Any) -> bool:
     if isinstance(value, bool):
         return value
     s = str(value or "").strip().casefold()
     return s in {"1", "true", "yes", "y", "on"}
 
-
 def _safe_text(value: Any) -> str:
     return str(value or "").strip()
-
 
 def _get_qg_attr(qg: Any, name: str, default: Any = None) -> Any:
     if qg is None:
@@ -47,7 +42,6 @@ def _get_qg_attr(qg: Any, name: str, default: Any = None) -> Any:
     if isinstance(qg, dict):
         return qg.get(name, default)
     return getattr(qg, name, default)
-
 
 def print_build_summary(
     *,
