@@ -1,3 +1,14 @@
+# Path: .github/workflows/build_vtt.yml
+#
+# Build_VTT — workflow сборки VTT.
+#
+# Что делает:
+# - запускает supplier build pipeline и публикует артефакты;
+# - держит только CI/CD orchestration без supplier parsing logic.
+#
+# Что не делает:
+# - не хранит supplier business-логику;
+# - не подменяет scripts/build_*.py.
 name: Build_VTT
 
 on:
