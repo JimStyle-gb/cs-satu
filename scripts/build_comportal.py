@@ -2,21 +2,18 @@
 """
 Path: scripts/build_comportal.py
 
-ComPortal adapter (CP) — thin orchestrator under CS-template.
+ComPortal Build — thin orchestrator поставщика в CS-template.
 
 Что делает:
-- грузит supplier config: filter / schema / policy;
-- читает bundle исходных XML-данных поставщика;
-- прогоняет source -> filtering -> builder;
-- пишет raw feed;
-- пишет final feed;
-- пишет watch-report;
-- запускает supplier-side quality gate.
+- грузит supplier config: filter, schema и policy;
+- читает source bundle из исходного YML ComPortal;
+- прогоняет supplier pipeline: source -> filtering -> builder;
+- пишет raw и final feed, watch-report и quality gate report.
 
-Важно:
-- supplier-specific логика остаётся только в suppliers/comportal/*;
-- build_comportal.py не должен знать regex-логику ComPortal;
-- orchestrator остаётся тонким и шаблонным относительно AlStyle и AkCent.
+Что не делает:
+- не содержит parsing-логики source bundle;
+- не держит supplier-specific regex и builder-эвристики;
+- не переносит supplier-aware правила в shared core.
 """
 
 from __future__ import annotations
@@ -42,7 +39,6 @@ from suppliers.comportal.filtering import filter_source_offers, parse_id_set
 from suppliers.comportal.quality_gate import run_quality_gate
 from suppliers.comportal.source import load_source_bundle
 
-
 BUILD_COMPORTAL_VERSION = "build_comportal_v7_full_qg_contract"
 COMPORTAL_URL_DEFAULT = "https://www.comportal.kz/auth/documents/prices/yml-catalog.php"
 COMPORTAL_OUT_DEFAULT = "docs/comportal.yml"
@@ -60,14 +56,19 @@ QUALITY_BASELINE_DEFAULT = "scripts/suppliers/comportal/config/quality_gate_base
 QUALITY_REPORT_DEFAULT = "docs/raw/comportal_quality_gate.txt"
 PLACEHOLDER_DEFAULT = "https://placehold.co/800x800/png?text=No+Photo"
 
+# -----------------------------
+# YAML / env helpers
+# -----------------------------
 
 def _read_yaml(path: Path) -> dict[str, Any]:
+    """Безопасно прочитать YAML-файл."""
     if not path.exists():
         return {}
     return yaml.safe_load(path.read_text(encoding="utf-8")) or {}
 
 
 def _load_supplier_config(cfg_dir: Path) -> tuple[dict[str, Any], dict[str, Any], dict[str, Any]]:
+    """Загрузить filter, schema и policy config поставщика."""
     return (
         _read_yaml(cfg_dir / FILTER_FILE_DEFAULT),
         _read_yaml(cfg_dir / SCHEMA_FILE_DEFAULT),
@@ -76,13 +77,18 @@ def _load_supplier_config(cfg_dir: Path) -> tuple[dict[str, Any], dict[str, Any]
 
 
 def _safe_int(value: Any, default: int) -> int:
+    """Безопасно привести значение к int."""
     try:
         return int(value)
     except Exception:
         return default
 
+# -----------------------------
+# Config resolve helpers
+# -----------------------------
 
 def _resolve_hour(policy_cfg: dict[str, Any], schema_cfg: dict[str, Any]) -> int:
+    """Определить час следующего запуска по Алматы."""
     return _safe_int(
         policy_cfg.get("schedule_hour_almaty")
         or policy_cfg.get("next_run_hour_local")
@@ -92,26 +98,28 @@ def _resolve_hour(policy_cfg: dict[str, Any], schema_cfg: dict[str, Any]) -> int
 
 
 def _resolve_placeholder(schema_cfg: dict[str, Any]) -> str:
-    return str(schema_cfg.get("placeholder_picture") or PLACEHOLDER_DEFAULT).strip() or PLACEHOLDER_DEFAULT
+    """Определить placeholder picture из schema или default."""
+    placeholder = str(schema_cfg.get("placeholder_picture") or PLACEHOLDER_DEFAULT).strip()
+    return placeholder or PLACEHOLDER_DEFAULT
 
 
 def _resolve_vendor_blacklist(schema_cfg: dict[str, Any]) -> set[str]:
+    """Определить blacklist vendor-значений из schema."""
     return {
-        str(x).strip().casefold()
-        for x in (schema_cfg.get("vendor_blacklist_casefold") or [])
-        if str(x).strip()
+        str(item).strip().casefold()
+        for item in (schema_cfg.get("vendor_blacklist_casefold") or [])
+        if str(item).strip()
     }
 
 
 def _resolve_quality_gate(policy_cfg: dict[str, Any], schema_cfg: dict[str, Any]) -> dict[str, Any]:
+    """Собрать supplier quality gate config."""
     qg = dict(policy_cfg.get("quality_gate") or {})
     if not qg:
         qg = dict(schema_cfg.get("quality_gate") or {})
 
-    if "enabled" not in qg:
-        qg["enabled"] = True
-    if "enforce" not in qg:
-        qg["enforce"] = True
+    qg.setdefault("enabled", True)
+    qg.setdefault("enforce", True)
 
     baseline = (
         os.getenv("COMPORTAL_QUALITY_BASELINE")
@@ -130,7 +138,6 @@ def _resolve_quality_gate(policy_cfg: dict[str, Any], schema_cfg: dict[str, Any]
     qg["baseline_path"] = str(baseline)
     qg["report_file"] = str(report)
     qg["report_path"] = str(report)
-
     qg["max_new_cosmetic_offers"] = _safe_int(qg.get("max_new_cosmetic_offers"), 5)
     qg["max_new_cosmetic_issues"] = _safe_int(qg.get("max_new_cosmetic_issues"), 5)
     qg["freeze_current_as_baseline"] = bool(qg.get("freeze_current_as_baseline", False))
@@ -138,23 +145,27 @@ def _resolve_quality_gate(policy_cfg: dict[str, Any], schema_cfg: dict[str, Any]
 
 
 def _resolve_allowed_category_ids(filter_cfg: dict[str, Any]) -> set[str]:
-    fallback_ids = {str(x) for x in (filter_cfg.get("allowed_category_ids") or filter_cfg.get("category_ids") or [])}
+    """Определить include category ids из env или filter config."""
+    fallback_ids = {str(item) for item in (filter_cfg.get("allowed_category_ids") or filter_cfg.get("category_ids") or [])}
     return parse_id_set(os.getenv("COMPORTAL_CATEGORY_IDS"), fallback_ids)
 
 
 def _resolve_excluded_root_ids(filter_cfg: dict[str, Any]) -> set[str]:
-    fallback_ids = {str(x) for x in (filter_cfg.get("excluded_root_ids") or [])}
+    """Определить excluded root ids из env или filter config."""
+    fallback_ids = {str(item) for item in (filter_cfg.get("excluded_root_ids") or [])}
     return parse_id_set(os.getenv("COMPORTAL_EXCLUDED_ROOT_IDS"), fallback_ids)
 
 
 def _resolve_watch_ids() -> set[str]:
+    """Определить OID-набор для watch-report."""
     raw = os.getenv("COMPORTAL_WATCH_OIDS", "").strip()
     if not raw:
         return set(COMPORTAL_WATCH_OIDS)
-    return {x for x in [s.strip() for s in raw.replace(";", ",").split(",")] if x}
+    return {item for item in (chunk.strip() for chunk in raw.replace(";", ",").split(",")) if item}
 
 
 def _run_quality_gate(*, raw_out_file: str, cfg_dir: Path, qg: dict[str, Any]) -> dict[str, object]:
+    """Запустить supplier-side quality gate или вернуть пустой успешный результат."""
     if not qg.get("enabled", True):
         return {
             "ok": True,
@@ -179,8 +190,12 @@ def _run_quality_gate(*, raw_out_file: str, cfg_dir: Path, qg: dict[str, Any]) -
         freeze_current_as_baseline=bool(qg.get("freeze_current_as_baseline", False)),
     )
 
+# -----------------------------
+# Main orchestration
+# -----------------------------
 
 def main() -> int:
+    """Запустить сборку поставщика ComPortal."""
     cfg_dir = Path(os.getenv("COMPORTAL_CFG_DIR", CFG_DIR_DEFAULT))
     filter_cfg, schema_cfg, policy_cfg = _load_supplier_config(cfg_dir)
 
@@ -202,10 +217,8 @@ def main() -> int:
     vendor_blacklist = _resolve_vendor_blacklist(schema_cfg)
     qg = _resolve_quality_gate(policy_cfg, schema_cfg)
 
-    if "placeholder_picture" not in schema_cfg:
-        schema_cfg["placeholder_picture"] = placeholder_picture
-    if "vendor_blacklist_casefold" not in schema_cfg:
-        schema_cfg["vendor_blacklist_casefold"] = sorted(vendor_blacklist)
+    schema_cfg.setdefault("placeholder_picture", placeholder_picture)
+    schema_cfg.setdefault("vendor_blacklist_casefold", sorted(vendor_blacklist))
 
     allowed_category_ids = _resolve_allowed_category_ids(filter_cfg)
     excluded_root_ids = _resolve_excluded_root_ids(filter_cfg)
@@ -234,6 +247,8 @@ def main() -> int:
         ),
     )
 
+    currency_id = str(schema_cfg.get("currency") or "KZT")
+
     write_cs_feed_raw(
         out_offers,
         supplier=supplier_name,
@@ -243,7 +258,7 @@ def main() -> int:
         next_run=next_run,
         before=before,
         encoding="utf-8",
-        currency_id=str(schema_cfg.get("currency") or "KZT"),
+        currency_id=currency_id,
     )
 
     changed = write_cs_feed(
@@ -256,7 +271,7 @@ def main() -> int:
         before=before,
         encoding="utf-8",
         public_vendor=os.getenv("PUBLIC_VENDOR", "CS").strip() or "CS",
-        currency_id=str(schema_cfg.get("currency") or "KZT"),
+        currency_id=currency_id,
     )
 
     qg_result = _run_quality_gate(raw_out_file=raw_out_file, cfg_dir=cfg_dir, qg=qg)
@@ -290,9 +305,10 @@ def main() -> int:
         f"report={qg_result.get('report_file', QUALITY_REPORT_DEFAULT)}"
     )
 
-    if qg_result.get("critical_preview"):
+    critical_preview = qg_result.get("critical_preview") or []
+    if critical_preview:
         print("[build_comportal] qg critical preview:")
-        for line in qg_result.get("critical_preview", []):
+        for line in critical_preview:
             print(f"  - {line}")
 
     return 0 if qg_result.get("ok", True) else 1
