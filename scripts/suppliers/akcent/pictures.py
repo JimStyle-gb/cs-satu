@@ -2,19 +2,16 @@
 """
 Path: scripts/suppliers/akcent/pictures.py
 
-AkCent Pictures — сборка и нормализация картинок.
+AkCent pictures layer.
 
 Что делает:
-- собирает картинки из source-offer и/или XML offer;
-- убирает дубли и чистит URL;
-- заменяет технические no-photo ссылки на placeholder при необходимости.
+- собирает и нормализует picture URL;
+- возвращает готовый список картинок для builder.py;
 
 Что не делает:
-- не принимает business-решения по товару;
-- не меняет supplier-flow;
-- не подменяет builder-логику.
+- не меняет business-логику товаров;
+- не управляет ассортиментной фильтрацией.
 """
-
 from __future__ import annotations
 
 from typing import Any, Iterable
