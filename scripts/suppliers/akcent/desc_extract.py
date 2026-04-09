@@ -27,7 +27,6 @@ from suppliers.akcent.params import (
 )
 from suppliers.akcent.compat import clean_device_value
 
-
 _RE_HTML_TAG = re.compile(r"<[^>]+>")
 _RE_COMMENT = re.compile(r"<!--.*?-->", re.DOTALL)
 _RE_MULTI_NL = re.compile(r"\n{2,}")
@@ -109,7 +108,6 @@ _DROP_LABELS_CF = {
     "электропитание", "дополнительно", "упаковка", "упаковка, габариты, вес", "комплектация",
 }
 
-
 def _clean_text(value: Any) -> str:
     s = str(value or "")
     if not s:
@@ -124,7 +122,6 @@ def _clean_text(value: Any) -> str:
     lines = [x for x in lines if x]
     return "\n".join(lines)
 
-
 def _schema_aliases(schema_cfg: dict[str, Any]) -> dict[str, str]:
     out: dict[str, str] = {}
     raw = schema_cfg.get("aliases") or {}
@@ -137,10 +134,8 @@ def _schema_aliases(schema_cfg: dict[str, Any]) -> dict[str, str]:
         out.setdefault(norm_ws(src), norm_ws(dst))
     return out
 
-
 def _allowed_keys(schema_cfg: dict[str, Any], kind: str) -> set[str]:
     return {norm_ws(x) for x in resolve_allowed_keys(schema_cfg, kind) if norm_ws(x)}
-
 
 def _candidate_labels(schema_cfg: dict[str, Any], kind: str) -> dict[str, str]:
     allowed = _allowed_keys(schema_cfg, kind)
@@ -153,13 +148,11 @@ def _candidate_labels(schema_cfg: dict[str, Any], kind: str) -> dict[str, str]:
             out[src] = dst
     return out
 
-
 def _all_known_labels(schema_cfg: dict[str, Any], kind: str) -> list[str]:
     labels = set(_candidate_labels(schema_cfg, kind).keys())
     labels.update(_STOP_LABELS)
     labels.update(_MANUAL_LABEL_ALIASES.keys())
     return sorted((norm_ws(x) for x in labels if norm_ws(x)), key=len, reverse=True)
-
 
 def _normalize_key(key: str, schema_cfg: dict[str, Any], kind: str) -> str:
     key = norm_ws(key)
@@ -173,7 +166,6 @@ def _normalize_key(key: str, schema_cfg: dict[str, Any], kind: str) -> str:
         if src.casefold() == low:
             return dst
     return key
-
 
 def _clip_to_first_tech_block(text: str, schema_cfg: dict[str, Any], kind: str) -> str:
     if kind not in {"interactive", "projector", "monitor", "lamination"}:
@@ -190,14 +182,12 @@ def _clip_to_first_tech_block(text: str, schema_cfg: dict[str, Any], kind: str) 
         return text[first_idx:]
     return text
 
-
 def _inject_breaks(text: str, schema_cfg: dict[str, Any], kind: str) -> str:
     s = _clip_to_first_tech_block(_clean_text(text), schema_cfg, kind)
     for lbl in _all_known_labels(schema_cfg, kind):
         pat = re.compile(rf"(?<!^)(?<!\n)(?=\b{re.escape(lbl)}\b(?:\s*[:：]|\s+))", re.IGNORECASE)
         s = pat.sub("\n", s)
     return _RE_MULTI_NL.sub("\n", s)
-
 
 def _prepare_lines(text: str, schema_cfg: dict[str, Any], kind: str) -> list[str]:
     s = _inject_breaks(text, schema_cfg, kind)
@@ -211,7 +201,6 @@ def _prepare_lines(text: str, schema_cfg: dict[str, Any], kind: str) -> list[str
                 continue
             lines.append(part)
     return lines
-
 
 def _cut_at_next_label(value: str, schema_cfg: dict[str, Any], kind: str, current_key: str) -> str:
     v = norm_ws(value)
@@ -231,7 +220,6 @@ def _cut_at_next_label(value: str, schema_cfg: dict[str, Any], kind: str, curren
     if cut_at is not None:
         v = norm_ws(v[:cut_at])
     return v
-
 
 def _extract_line_pair(line: str, schema_cfg: dict[str, Any], kind: str) -> tuple[str, str] | None:
     line = norm_ws(line)
@@ -255,7 +243,6 @@ def _extract_line_pair(line: str, schema_cfg: dict[str, Any], kind: str) -> tupl
             if val:
                 return key, val
     return None
-
 
 def _cleanup_value_by_key(key: str, value: str) -> str:
     v = norm_ws(value)
@@ -377,7 +364,6 @@ def _cleanup_value_by_key(key: str, value: str) -> str:
             return s
     return v
 
-
 def _prefer_duplicate_value(key: str, old: str, new: str) -> str:
     old = norm_ws(old)
     new = norm_ws(new)
@@ -420,7 +406,6 @@ def _prefer_duplicate_value(key: str, old: str, new: str) -> str:
             return old
     return old if len(old) >= len(new) else new
 
-
 def _extract_consumable_device_pair(lines: list[str], schema_cfg: dict[str, Any], kind: str) -> tuple[str, str] | None:
     if kind != "consumable":
         return None
@@ -456,7 +441,6 @@ def _extract_consumable_device_pair(lines: list[str], schema_cfg: dict[str, Any]
                 best_score = score
     return best
 
-
 def _dedupe_pairs(pairs: list[tuple[str, str]]) -> list[tuple[str, str]]:
     out: list[tuple[str, str]] = []
     by_key: dict[str, int] = {}
@@ -476,7 +460,6 @@ def _dedupe_pairs(pairs: list[tuple[str, str]]) -> list[tuple[str, str]]:
         by_key[key_cf] = len(out)
         out.append((k, v))
     return out
-
 
 def validate_desc_pair(key: str, val: str, schema_cfg: dict[str, Any], kind: str) -> tuple[str, str] | None:
     key = norm_ws(key)
@@ -500,7 +483,6 @@ def validate_desc_pair(key: str, val: str, schema_cfg: dict[str, Any], kind: str
     if not val2 or len(val2) > 300:
         return None
     return key, val2
-
 
 def extract_desc_params(
     desc_src: str,
