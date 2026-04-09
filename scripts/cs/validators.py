@@ -2,19 +2,16 @@
 """
 Path: scripts/cs/validators.py
 
-CS Validators — общие проверки готового CS-фида.
+CS Validators — final feed validation layer.
 
 Что делает:
-- валидирует уже собранный XML/YML;
-- проверяет общие запреты и обязательные поля;
-- ловит критичные ошибки финального feed-вывода.
+- проверяет готовый final feed;
+- ловит общие структурные ошибки CS-слоя;
 
 Что не делает:
-- не содержит supplier-specific repairs;
-- не собирает feed и не пишет файлы;
-- не заменяет quality gate и builder-слой.
+- не чинит feed;
+- не подменяет quality gate layer.
 """
-
 from __future__ import annotations
 
 import re
