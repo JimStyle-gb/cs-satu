@@ -1,3 +1,14 @@
+# Path: scripts/suppliers/comportal/config/filter.yml
+#
+# ComPortal filter config.
+#
+# Что делает:
+# - хранит supplier assortment filtering rules;
+# - содержит только config-данные без business-кода.
+#
+# Что не делает:
+# - не строит offers;
+# - не переносит supplier rules в shared core.
 mode: include
 
 # Whitelist, который пользователь утвердил для ComPortal.
