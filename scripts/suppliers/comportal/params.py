@@ -2,19 +2,16 @@
 """
 Path: scripts/suppliers/comportal/params.py
 
-ComPortal Params — сборка и очистка supplier parameters.
+ComPortal params layer.
 
 Что делает:
-- парсит сырой набор параметров поставщика;
-- чистит ключи и значения;
-- готовит итоговый набор params для builder.py.
+- держит supplier params extractor и helpers;
+- отдаёт source/builder чистые supplier-данные;
 
 Что не делает:
-- не переносит supplier-specific cleanup в shared core;
-- не строит финальный shared description;
-- не заменяет source.py и builder.py.
+- не строит final offers;
+- не переносит supplier cleanup в shared core.
 """
-
 from __future__ import annotations
 
 import re
@@ -22,7 +19,6 @@ from typing import Any
 
 from cs.util import norm_ws
 from suppliers.comportal.models import ParamItem, SourceOffer
-
 
 _RE_HAS_LETTER = re.compile(r"[A-Za-zА-Яа-яЁё]")
 _RE_LETTER_SLASH_LETTER = re.compile(r"([A-Za-zА-Яа-яЁё])\s*/\s*([A-Za-zА-Яа-яЁё])")
@@ -45,7 +41,6 @@ _GLOBAL_DROP_KEYS_CASEFOLD = {
 }
 _COMPORTAL_EXTRA_DROP_KEYS_CASEFOLD = {"акция"}
 
-
 def key_quality_ok(k: str, *, require_letter: bool, max_len: int, max_words: int) -> bool:
     kk = norm_ws(k)
     if not kk:
@@ -57,7 +52,6 @@ def key_quality_ok(k: str, *, require_letter: bool, max_len: int, max_words: int
     if max_words and len(kk.split()) > int(max_words):
         return False
     return True
-
 
 def normalize_warranty_to_months(v: str) -> str:
     vv = norm_ws(v)
@@ -76,7 +70,6 @@ def normalize_warranty_to_months(v: str) -> str:
         return f"{int(m.group(1))} мес"
     return vv
 
-
 def normalize_key_aliases(key: str, schema: dict[str, Any]) -> str:
     kk = norm_ws(key)
     hard_mapping = {
@@ -92,7 +85,6 @@ def normalize_key_aliases(key: str, schema: dict[str, Any]) -> str:
     repl = aliases.get(kk.casefold())
     return norm_ws(repl) if repl else kk
 
-
 def _post_clean_color_value(v: str) -> str:
     s = norm_ws(v).strip(" ;,.-")
     if not s:
@@ -106,7 +98,6 @@ def _post_clean_color_value(v: str) -> str:
         if low.startswith(pref):
             return clean
     return s
-
 
 def _post_clean_technology_value(v: str) -> str:
     s = norm_ws(v).strip(" ;,.-")
@@ -128,7 +119,6 @@ def _post_clean_technology_value(v: str) -> str:
         return "Струйная"
     return found
 
-
 def _post_clean_resource_value(v: str) -> str:
     s = norm_ws(v).strip(" ;,.-")
     if not s:
@@ -136,7 +126,6 @@ def _post_clean_resource_value(v: str) -> str:
     if _RESOURCE_NUMBER_ONLY_RE.fullmatch(s):
         return s
     return s
-
 
 def _post_clean_value(key: str, val: str) -> str:
     kcf = norm_ws(key).casefold()
@@ -149,7 +138,6 @@ def _post_clean_value(key: str, val: str) -> str:
     if kcf == "гарантия":
         return normalize_warranty_to_months(val)
     return norm_ws(val)
-
 
 def apply_value_normalizers(key: str, val: str, schema: dict[str, Any]) -> str:
     v = norm_ws(val)
@@ -167,10 +155,8 @@ def apply_value_normalizers(key: str, val: str, schema: dict[str, Any]) -> str:
     v = _post_clean_value(key, v)
     return norm_ws(v)
 
-
 def iter_source_params(source_offer: SourceOffer) -> list[ParamItem]:
     return list(source_offer.params or [])
-
 
 def category_type_hint(source_offer: SourceOffer) -> str:
     leaf = norm_ws(source_offer.category_name).casefold()
@@ -208,13 +194,11 @@ def category_type_hint(source_offer: SourceOffer) -> str:
         return "Стабилизатор"
     return ""
 
-
 def _effective_drop_keys_casefold(schema: dict[str, Any]) -> set[str]:
     drop_keys = {str(x).casefold() for x in (schema.get("drop_keys_casefold") or [])}
     drop_keys |= set(_GLOBAL_DROP_KEYS_CASEFOLD)
     drop_keys |= set(_COMPORTAL_EXTRA_DROP_KEYS_CASEFOLD)
     return drop_keys
-
 
 def build_params_from_xml(source_offer: SourceOffer, schema: dict[str, Any]) -> list[ParamItem]:
     out: list[ParamItem] = []
