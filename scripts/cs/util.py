@@ -2,19 +2,23 @@
 """
 Path: scripts/cs/util.py
 
-CS Util — общие мелкие утилиты shared core.
+CS Util — общие shared-хелперы CS-шаблона.
 
-Роль файла:
-- текстовые helper-ы без supplier-specific логики;
-- единый источник norm_ws / safe_int / fix_mixed_cyr_lat / _truncate_text;
-- без зависимостей от cs.core, чтобы не плодить циклические импорты.
+Что делает:
+- держит базовые текстовые и числовые helper-функции;
+- даёт единый источник norm_ws, safe_int и fix_mixed_cyr_lat;
+- помогает shared-модулям без циклических импортов.
+
+Что не делает:
+- не содержит supplier-specific логики;
+- не знает про конкретных поставщиков;
+- не подменяет core, builder и writer-слой.
 """
 
 from __future__ import annotations
 
 import re
 from typing import Any
-
 
 # -----------------------------
 # Regex и mapping-константы
@@ -80,7 +84,6 @@ _CYR_TO_LAT = {
     "у": "y",
 }
 
-
 # -----------------------------
 # Text helpers
 # -----------------------------
@@ -107,15 +110,11 @@ def fix_mixed_cyr_lat(s: str) -> str:
 
     return _RE_MIXED_TOKEN.sub(_fix_token, s)
 
-
-
 def norm_ws(s: str) -> str:
     """Нормализует пробелы и правит смешанную кир/лат."""
     text = (s or "").replace("\u00a0", " ").strip()
     text = _RE_WS.sub(" ", text).strip()
     return fix_mixed_cyr_lat(text)
-
-
 
 def safe_int(s: Any) -> int | None:
     """Безопасно парсит int из строки: берёт первое целое."""
@@ -129,8 +128,6 @@ def safe_int(s: Any) -> int | None:
         return int(m.group(0))
     except Exception:
         return None
-
-
 
 def _truncate_text(s: str, max_len: int, *, suffix: str = "") -> str:
     """Обрезает plain-text до max_len, опционально с suffix."""
