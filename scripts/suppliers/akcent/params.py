@@ -2,22 +2,16 @@
 """
 Path: scripts/suppliers/akcent/params.py
 
-AkCent Params — cleanup родных XML <Param>.
+AkCent params layer.
 
 Что делает:
-- читает только supplier XML params;
-- применяет aliases, discard, banned и key-rules из schema.yml;
-- определяет kind-aware набор разрешённых ключей;
-- нормализует значения по частым кейсам AkCent;
-- лишние, но полезные ключи уводит в extra_info;
-- возвращает params, extra_info и report.
+- держит supplier params extractor и helpers;
+- отдаёт source/builder чистые supplier-данные;
 
 Что не делает:
-- не гадает compat/codes из description;
-- не лезет в shared core;
-- не делает глобальную supplier-магию вне XML params.
+- не строит final offers;
+- не переносит supplier cleanup в shared core.
 """
-
 from __future__ import annotations
 
 import re
