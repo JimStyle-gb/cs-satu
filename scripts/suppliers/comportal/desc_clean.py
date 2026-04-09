@@ -2,14 +2,17 @@
 """
 Path: scripts/suppliers/comportal/desc_clean.py
 
-ComPortal description cleaning.
-Роль как у других поставщиков:
-- только narrative-cleaning;
-- без desc->params extraction;
-- без picture/vendor/builder логики.
+ComPortal Desc Clean — очистка supplier description.
 
-У ComPortal source-description почти всегда пустой или слабый,
-поэтому модуль лёгкий и нужен в основном для безопасной санитарной очистки.
+Что делает:
+- чистит HTML и служебный мусор;
+- сохраняет границы строк для desc_extract.py;
+- готовит безопасный plain-text для extraction.
+
+Что не делает:
+- не строит финальное HTML-описание;
+- не вытаскивает params сам по себе;
+- не переносит supplier-specific repairs в shared core.
 """
 
 from __future__ import annotations
