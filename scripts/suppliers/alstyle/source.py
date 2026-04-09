@@ -4,14 +4,15 @@ Path: scripts/suppliers/alstyle/source.py
 
 AlStyle supplier layer — source reader.
 
-Роль файла:
-- скачать XML поставщика;
-- распарсить offers и собрать SourceOffer;
-- сохранить supplier-truth без витринной business-логики.
+Что делает:
+- скачивает XML поставщика;
+- парсит offers и собирает SourceOffer;
+- сохраняет supplier-truth без витринной логики.
 
-Важно:
-- нормализация, фильтрация и final cleanup живут не здесь;
-- source.py не должен знать о shared core и SEO-рендере.
+Что не делает:
+- не делает final cleanup;
+- не строит final description;
+- не знает о shared SEO-рендере.
 """
 
 from __future__ import annotations
@@ -23,27 +24,22 @@ import requests
 from cs.util import norm_ws
 from suppliers.alstyle.models import SourceOffer
 
-
 def fetch_xml_text(url: str, *, timeout: int = 120, login: str | None = None, password: str | None = None) -> str:
     auth = (login, password) if (login and password) else None
     r = requests.get(url, timeout=timeout, auth=auth)
     r.raise_for_status()
     return r.text
 
-
 def get_text(el: ET.Element | None) -> str:
     if el is None:
         return ""
     return "".join(el.itertext()).strip()
 
-
 def parse_xml_root(xml_text: str) -> ET.Element:
     return ET.fromstring(xml_text)
 
-
 def iter_offer_elements(root: ET.Element):
     return root.findall(".//offer")
-
 
 def extract_source_offer(offer_el: ET.Element) -> SourceOffer:
     return SourceOffer(
@@ -59,7 +55,6 @@ def extract_source_offer(offer_el: ET.Element) -> SourceOffer:
         picture_urls=[norm_ws(get_text(p)) for p in offer_el.findall("picture") if norm_ws(get_text(p))],
         offer_el=offer_el,
     )
-
 
 def load_source_offers(*, url: str, timeout: int = 120, login: str | None = None, password: str | None = None) -> list[SourceOffer]:
     xml_text = fetch_xml_text(url, timeout=timeout, login=login, password=password)
