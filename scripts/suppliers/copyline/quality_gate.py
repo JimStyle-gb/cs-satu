@@ -2,19 +2,16 @@
 """
 Path: scripts/suppliers/copyline/quality_gate.py
 
-CopyLine Quality Gate — supplier-side контроль остаточных raw/final хвостов.
+CopyLine quality gate layer.
 
 Что делает:
-- проверяет final feed на остаточные supplier/raw/final хвосты;
-- пишет единый quality gate report через shared cs.qg_report;
-- сохраняет совместимость с текущим build_copyline.py.
+- проверяет final feed supplier-side rules;
+- пишет единый quality gate report;
 
 Что не делает:
-- не чинит supplier raw;
-- не превращается в extractor/normalizer;
-- не заменяет builder/compat/policy-слой.
+- не чинит raw feed;
+- не заменяет normalize/builder/pictures слой.
 """
-
 from __future__ import annotations
 
 from collections import defaultdict
@@ -53,7 +50,6 @@ _CANON_NUMERIC_TAIL_RX = re.compile(r"\bCanon\s+((?:\d{2,4}[A-Z]?)(?:\s*/\s*\d{2
 _CANON_ALPHA_TAIL_RX = re.compile(r"\bCanon\s+([A-Z]{1,8}-?[A-Z0-9]{1,12})\b", re.I)
 _COMPAT_BROKEN_RX = re.compile(r"(?iu)(?:WorkCentre\s+WorkCentre|Phaser\s+Phaser|LaserJet\s+LaserJet|imageRUNNER\s+imageRUNNER|E-Studio\s+E-Studio)")
 
-
 @dataclass(frozen=True)
 class QualityIssue:
     severity: str
@@ -62,13 +58,11 @@ class QualityIssue:
     name: str
     details: str
 
-
 def _norm_ws(s: str) -> str:
     s2 = unescape(s or "")
     s2 = s2.replace("\u00a0", " ").strip()
     s2 = _WS_RE.sub(" ", s2).strip()
     return s2
-
 
 def _norm_code(s: str) -> str:
     s = _norm_ws(s).upper()
@@ -76,17 +70,14 @@ def _norm_code(s: str) -> str:
     s = re.sub(r"\s+", " ", s).strip()
     return s
 
-
 def _brandless_code(s: str) -> str:
     return _norm_code(_BRAND_PREFIX_RE.sub("", _norm_ws(s)))
-
 
 def _read_yaml(path: str) -> dict:
     p = Path(path)
     if not p.exists():
         return {}
     return yaml.safe_load(p.read_text(encoding="utf-8")) or {}
-
 
 def _offer_params(offer_el: ET.Element) -> dict[str, list[str]]:
     out: dict[str, list[str]] = defaultdict(list)
@@ -97,15 +88,12 @@ def _offer_params(offer_el: ET.Element) -> dict[str, list[str]]:
             out[k].append(v)
     return out
 
-
 def _param_first(params: dict[str, list[str]], key: str) -> str:
     vals = params.get(key) or []
     return vals[0] if vals else ""
 
-
 def _offer_sig(issue: QualityIssue) -> str:
     return f"{issue.rule}|{issue.oid}|{issue.details}"
-
 
 def _split_codes(value: str) -> list[str]:
     out: list[str] = []
@@ -119,7 +107,6 @@ def _split_codes(value: str) -> list[str]:
         seen.add(norm)
         out.append(norm)
     return out
-
 
 def _extract_expected_title_codes(name: str) -> list[str]:
     text = _norm_ws(name)
@@ -149,7 +136,6 @@ def _extract_expected_title_codes(name: str) -> list[str]:
 
     return out
 
-
 def _obvious_brand(name: str, compat: str) -> str:
     hay = f"{_norm_ws(name)} | {_norm_ws(compat)}"
     brands = ["HP", "Canon", "Xerox", "Samsung", "Toshiba", "Ricoh", "Panasonic", "Konica-Minolta", "Brother", "Kyocera"]
@@ -157,7 +143,6 @@ def _obvious_brand(name: str, compat: str) -> str:
         if re.search(rf"(?iu)\b{re.escape(b)}\b", hay):
             return b
     return ""
-
 
 def _expected_code_is_covered(expected: str, code_list: list[str], vendor: str, name: str) -> bool:
     exp = _norm_code(expected)
@@ -176,7 +161,6 @@ def _expected_code_is_covered(expected: str, code_list: list[str], vendor: str, 
 
     return False
 
-
 def _ink_can_skip_codes(name: str, typ: str, desc: str) -> bool:
     """Разрешаем не требовать codes только для generic/universal ink без явного кода."""
     if _norm_ws(typ) != "Чернила":
@@ -191,7 +175,6 @@ def _ink_can_skip_codes(name: str, typ: str, desc: str) -> bool:
         r"(?iu)\b(?:universal|универсал(?:ьн(?:ые|ое|ый))?|комплект|set|набор|ink\s*kit|100\s*мл|1\s*л|500\s*мл|250\s*мл|чернила\s+для)\b"
     )
     return bool(generic_re.search(hay))
-
 
 def _ink_can_skip_compat(name: str, typ: str, desc: str) -> bool:
     """Разрешаем не требовать compat только для generic/universal ink без явного кода и списка устройств."""
@@ -286,7 +269,6 @@ def collect_quality_issues(feed_path: str) -> list[QualityIssue]:
                 issues.append(QualityIssue("cosmetic", "unexpected_cable_param_on_non_cable", oid, name, ", ".join(unexpected_cable)))
 
     return issues
-
 
 def run_quality_gate(*, feed_path: str, policy_path: str, baseline_path: str | None = None, report_path: str | None = None) -> dict:
     """
