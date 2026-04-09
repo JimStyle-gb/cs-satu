@@ -2,14 +2,18 @@
 """
 Path: scripts/suppliers/vtt/desc_extract.py
 
-Only-fill-missing extraction from title/description.
+VTT Desc Extract — extraction-слой supplier-layer.
 
-Patch focus:
-- убрать массовый cosmetic-класс decimal_k_resource;
-- не менять supplier-specific narrative logic;
-- сохранить backward-safe API extract_resource / build_native_description.
+Что делает:
+- только safe extraction недостающих полей из title/description;
+- нормализует ресурс без лишней supplier-фантазии;
+- сохраняет backward-safe API extract_resource / build_native_description.
+
+Что не делает:
+- не чинит compat-логику;
+- не строит final description;
+- не заменяет params.py как главный extractor supplier-параметров.
 """
-
 from __future__ import annotations
 
 from decimal import Decimal, InvalidOperation, ROUND_HALF_UP
@@ -17,7 +21,6 @@ from typing import Sequence
 
 from .desc_clean import clean_native_description
 from .normalize import RES_RE, format_resource_value, infer_color_from_title, norm_ws
-
 
 def _normalize_resource_value(value: str) -> str:
     """
@@ -58,7 +61,6 @@ def _normalize_resource_value(value: str) -> str:
 
     return normalized
 
-
 def extract_resource(title: str, params: Sequence[tuple[str, str]], desc: str) -> str:
     # 1) Предпочитаем supplier params, но всё равно канонизируем.
     for key, value in params:
@@ -84,7 +86,6 @@ def extract_resource(title: str, params: Sequence[tuple[str, str]], desc: str) -
         return _normalize_resource_value(f"{num} л")
     return ""
 
-
 def extract_missing_from_desc(*, title: str, desc: str) -> list[tuple[str, str]]:
     out: list[tuple[str, str]] = []
     color = infer_color_from_title(title)
@@ -94,7 +95,6 @@ def extract_missing_from_desc(*, title: str, desc: str) -> list[tuple[str, str]]
     if cleaned and cleaned.casefold() != norm_ws(title).casefold():
         pass
     return out
-
 
 def build_native_description(
     *,
@@ -125,7 +125,6 @@ def build_native_description(
     if body and body.casefold() != norm_ws(title).casefold():
         return f"{head}. {body}" if head else body
     return head or title
-
 
 __all__ = [
     "extract_resource",
