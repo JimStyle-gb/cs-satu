@@ -2,15 +2,19 @@
 """
 Path: scripts/suppliers/akcent/desc_extract.py
 
-AkCent description -> params extraction.
+AkCent Desc Extract — extraction параметров из очищенного description.
 
-v7:
-- больше не режет значения по запятой, из-за чего раньше ломались
-  `Покрытие экрана`, `Число касаний`, `Покрытие экрана (антитрение, антиблик)`;
+Что делает:
+- консервативно добирает missing params из cleaned description;
 - лучше режет плотные projector / interactive техблоки по known labels;
-- умеет обрезать значение по следующему label, чтобы хвосты не утекали в поле;
-- убирает длинный narrative-префикс перед первым техблоком у interactive / projector / monitor;
-- остаётся conservative: description только добирает missing params и не гадает compat/codes.
+- обрезает значение по следующему label, чтобы хвосты не утекали в поле;
+- не режет значения по запятой там, где это ломает смысл;
+- остаётся description-first и не гадает compat/codes.
+
+Что не делает:
+- не строит финальное HTML-описание;
+- не подменяет params.py и compat.py;
+- не переносит supplier-specific extraction в shared core.
 """
 
 from __future__ import annotations
