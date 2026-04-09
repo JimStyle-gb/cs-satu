@@ -2,12 +2,17 @@
 """
 Path: scripts/suppliers/comportal/source.py
 
-Только источник ComPortal:
-- скачать YML;
-- распарсить categories;
-- собрать SourceOffer.
+ComPortal Source — получение и парсинг сырого источника поставщика.
 
-Без normalize/filter/builder-логики.
+Что делает:
+- читает listing и page-данные поставщика;
+- собирает сырой supplier record;
+- готовит SourceOffer и raw payload для следующих слоёв.
+
+Что не делает:
+- не строит final shared offer;
+- не переносит supplier-specific repairs в shared core;
+- не заменяет builder.py.
 """
 
 from __future__ import annotations
