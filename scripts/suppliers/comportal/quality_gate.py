@@ -2,19 +2,16 @@
 """
 Path: scripts/suppliers/comportal/quality_gate.py
 
-ComPortal Quality Gate — проверка raw и final результата поставщика.
+ComPortal quality gate layer.
 
 Что делает:
-- считает critical и cosmetic issue-паттерны;
-- сравнивает результат с baseline;
-- готовит данные для общего quality gate report writer.
+- проверяет final feed supplier-side rules;
+- пишет единый quality gate report;
 
 Что не делает:
-- не меняет supplier offers;
-- не подменяет shared validators;
-- не строит финальный XML/YML.
+- не чинит raw feed;
+- не заменяет normalize/builder/pictures слой.
 """
-
 from __future__ import annotations
 
 from collections import defaultdict
@@ -31,7 +28,6 @@ except Exception:  # pragma: no cover
 
 from cs.qg_report import write_quality_gate_report
 
-
 QUALITY_BASELINE_DEFAULT = "scripts/suppliers/comportal/config/quality_gate_baseline.yml"
 QUALITY_REPORT_DEFAULT = "docs/raw/comportal_quality_gate.txt"
 PLACEHOLDER_URL = "https://placehold.co/800x800/png?text=No+Photo"
@@ -47,7 +43,6 @@ _DUPLICATE_BRAND_IN_NAME_RE = re.compile(
 _RULES_EXCLUDED_FROM_ENFORCE = {"placeholder_picture", "duplicate_brand_in_name", "insecure_http_picture"}
 _RULES_TREATED_AS_ALLOWED_KNOWN = {"placeholder_picture"}
 
-
 @dataclass(frozen=True)
 class QualityIssue:
     severity: str
@@ -56,10 +51,8 @@ class QualityIssue:
     name: str
     details: str
 
-
 def _norm_ws(s: str) -> str:
     return _WS_RE.sub(" ", (s or "").strip())
-
 
 def _read_yaml(path: str | None) -> dict[str, Any]:
     if not path or yaml is None:
@@ -72,14 +65,12 @@ def _read_yaml(path: str | None) -> dict[str, Any]:
     except Exception:
         return {}
 
-
 def _write_yaml(path: str | None, data: dict[str, Any]) -> None:
     if not path or yaml is None:
         return
     p = Path(path)
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(yaml.safe_dump(data, allow_unicode=True, sort_keys=False), encoding="utf-8")
-
 
 def _make_issue(severity: str, rule: str, oid: str, name: str, details: str) -> QualityIssue:
     return QualityIssue(
@@ -89,7 +80,6 @@ def _make_issue(severity: str, rule: str, oid: str, name: str, details: str) -> 
         name=_norm_ws(name),
         details=_norm_ws(details),
     )
-
 
 def _detect_issues(feed_path: str, schema_path: str | None = None) -> list[QualityIssue]:
     xml_text = Path(feed_path).read_text(encoding="utf-8", errors="ignore")
@@ -140,7 +130,6 @@ def _detect_issues(feed_path: str, schema_path: str | None = None) -> list[Quali
         deduped[(issue.severity, issue.rule, issue.oid, issue.details)] = issue
     return sorted(deduped.values(), key=lambda x: (x.severity, x.rule, x.oid, x.details))
 
-
 def _load_baseline(path: str | None) -> dict[str, set[str]]:
     data = _read_yaml(path)
     raw = data.get("accepted_cosmetic") or {}
@@ -148,7 +137,6 @@ def _load_baseline(path: str | None) -> dict[str, set[str]]:
     for rule, ids in raw.items():
         out[str(rule)] = {str(x).strip() for x in (ids or []) if str(x).strip()}
     return out
-
 
 def _make_baseline_payload(cosmetic: list[QualityIssue]) -> dict[str, Any]:
     grouped: dict[str, list[str]] = defaultdict(list)
@@ -164,7 +152,6 @@ def _make_baseline_payload(cosmetic: list[QualityIssue]) -> dict[str, Any]:
             rule: sorted(set(oids)) for rule, oids in sorted(grouped.items())
         },
     }
-
 
 def run_quality_gate(
     *,
