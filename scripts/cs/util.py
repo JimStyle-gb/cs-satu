@@ -2,19 +2,16 @@
 """
 Path: scripts/cs/util.py
 
-CS Util — общие shared-хелперы CS-шаблона.
+CS Util — shared helper layer.
 
 Что делает:
-- держит базовые текстовые и числовые helper-функции;
-- даёт единый источник norm_ws, safe_int и fix_mixed_cyr_lat;
-- помогает shared-модулям без циклических импортов.
+- держит shared helper-ы без supplier-specific логики;
+- служит общим источником мелких utility-функций;
 
 Что не делает:
-- не содержит supplier-specific логики;
-- не знает про конкретных поставщиков;
-- не подменяет core, builder и writer-слой.
+- не знает о supplier-layer;
+- не должен тянуть циклические зависимости.
 """
-
 from __future__ import annotations
 
 import re
