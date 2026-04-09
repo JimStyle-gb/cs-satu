@@ -2,17 +2,17 @@
 """
 Path: scripts/suppliers/alstyle/desc_extract.py
 
-AlStyle description -> params extraction.
+AlStyle supplier layer — extraction params из description.
 
-v128:
-- сохраняет прошлые фиксы по Цвет / Технология / Совместимость / Ресурс;
-- режет грязные compatibility-candidates, если в value протекли label-блоки
-  типа "Характеристики / Модель / Ресурс / Цвет / Технология";
-- больше не выбирает самую длинную Совместимость как "лучшую":
-  для compatibility теперь предпочитается более короткая и чистая версия;
-- сохраняет поддержку валидных кодовых моделей;
-- добавляет safe helper, который возвращает body без явного spec-блока,
-  не ломая уже рабочее извлечение params.
+Что делает:
+- извлекает безопасные поля из cleaned description;
+- готовит body и spec-pairs для builder;
+- чистит грязные compatibility-candidates.
+
+Что не делает:
+- не генерирует данные из воздуха;
+- не строит final HTML description;
+- не подменяет supplier params pipeline.
 """
 
 from __future__ import annotations
@@ -24,7 +24,6 @@ from cs.util import norm_ws
 from suppliers.alstyle.compat import clean_compatibility_text, dedupe_code_series_text
 from suppliers.alstyle.desc_clean import clean_desc_text_for_extraction
 from suppliers.alstyle.params import apply_value_normalizers, key_quality_ok
-
 
 _DESC_SPEC_START_RE = re.compile(
     r"^\s*(Характеристики|Основные характеристики|Технические характеристики)\s*:?\s*$",
@@ -301,15 +300,12 @@ _COLOR_PREFIX_RE = re.compile(
     r"(?iu)^(?:цвет\s+печати|печати|цвет\s+внешней\s+оболочки|внешней\s+оболочки|цвет\s+оболочки|оболочки|цвет\s+корпуса|корпуса)\s+"
 )
 
-
 def canon_desc_spec_key(k: str) -> str:
     kk = norm_ws(k).casefold()
     return _DESC_SPEC_KEY_MAP.get(kk, norm_ws(k))
 
-
 def _compat_model_token_count(v: str) -> int:
     return len(_COMPAT_MODEL_TOKEN_RE.findall(v or ""))
-
 
 def _normalize_compat_candidate(v: str) -> str:
     s = norm_ws(v)
@@ -338,7 +334,6 @@ def _normalize_compat_candidate(v: str) -> str:
     s = re.sub(r"\s{2,}", " ", s)
     return norm_ws(s.strip(" ;,.-"))
 
-
 def looks_like_compatibility_value(val: str) -> bool:
     v = _normalize_compat_candidate(val)
     if not v or len(v) < 6:
@@ -362,7 +357,6 @@ def looks_like_compatibility_value(val: str) -> bool:
 
     return False
 
-
 def looks_like_resource_value(val: str) -> bool:
     v = norm_ws(val)
     if not v:
@@ -382,7 +376,6 @@ def looks_like_resource_value(val: str) -> bool:
         return True
     return False
 
-
 def _looks_like_model_part(part: str) -> bool:
     p = norm_ws(part).strip(" ;,.-")
     if not p:
@@ -399,7 +392,6 @@ def _looks_like_model_part(part: str) -> bool:
     if _MODEL_CODE_PHRASE_RE.fullmatch(p) and re.search(r"\d", p):
         return True
     return False
-
 
 def _looks_like_model_value(val: str) -> bool:
     s = norm_ws(val).strip(" ;,.-")
@@ -426,7 +418,6 @@ def _looks_like_model_value(val: str) -> bool:
             return True
 
     return False
-
 
 def _canon_color_word(word: str) -> str:
     low = norm_ws(word).casefold().replace("ё", "е")
@@ -482,7 +473,6 @@ def _canon_color_word(word: str) -> str:
         return "Фотосерый"
     return word
 
-
 def _normalize_color_candidate(val: str) -> str:
     s = norm_ws(val).strip(" ;,.-")
     if not s:
@@ -512,7 +502,6 @@ def _normalize_color_candidate(val: str) -> str:
 
     return s
 
-
 def _normalize_technology_candidate(val: str) -> str:
     s = norm_ws(val).strip(" ;,.-")
     if not s:
@@ -525,7 +514,6 @@ def _normalize_technology_candidate(val: str) -> str:
         return norm_ws(m.group(1))
     return s
 
-
 def iter_desc_lines(block: str) -> list[str]:
     lines: list[str] = []
     for raw in (block or "").splitlines():
@@ -533,7 +521,6 @@ def iter_desc_lines(block: str) -> list[str]:
         if ln:
             lines.append(ln)
     return lines
-
 
 def parse_desc_spec_line(raw: str) -> tuple[str, str] | None:
     ln = norm_ws(raw)
@@ -590,11 +577,9 @@ def parse_desc_spec_line(raw: str) -> tuple[str, str] | None:
 
     return None
 
-
 def _inline_label_pattern() -> str:
     labels = sorted(_COMPACT_LABELS, key=len, reverse=True)
     return "|".join(re.escape(x) for x in labels)
-
 
 def split_inline_desc_pairs(line: str) -> list[str]:
     ln = norm_ws(line)
@@ -604,7 +589,6 @@ def split_inline_desc_pairs(line: str) -> list[str]:
     rx = re.compile(rf"(?iu)(?=\b(?:{key_pat})\b\s*(?::|[-–—]|\s+))")
     parts = [norm_ws(x) for x in rx.split(ln) if norm_ws(x)]
     return parts if len(parts) > 1 else [ln]
-
 
 def extract_compact_labeled_sequences(text: str) -> list[tuple[str, str]]:
     out: list[tuple[str, str]] = []
@@ -639,7 +623,6 @@ def extract_compact_labeled_sequences(text: str) -> list[tuple[str, str]]:
 
     return out
 
-
 def extract_multiline_label_value_pairs(text: str) -> list[tuple[str, str]]:
     out: list[tuple[str, str]] = []
     lines = [norm_ws(x) for x in text.splitlines() if norm_ws(x)]
@@ -670,7 +653,6 @@ def extract_multiline_label_value_pairs(text: str) -> list[tuple[str, str]]:
         i += 1
     return out
 
-
 def extract_strict_kv_block(text: str) -> list[tuple[str, str]]:
     out: list[tuple[str, str]] = []
     m = _DESC_SPEC_START_RE.search(text)
@@ -691,7 +673,6 @@ def extract_strict_kv_block(text: str) -> list[tuple[str, str]]:
     out.extend(extract_multiline_label_value_pairs(block))
     return out
 
-
 def extract_short_inline_pairs(text: str) -> list[tuple[str, str]]:
     out: list[tuple[str, str]] = []
     lines = [norm_ws(x) for x in text.splitlines() if norm_ws(x)]
@@ -710,7 +691,6 @@ def extract_short_inline_pairs(text: str) -> list[tuple[str, str]]:
     out.extend(extract_multiline_label_value_pairs(joined))
     return out
 
-
 def extract_sentence_compat_pairs(text: str) -> list[tuple[str, str]]:
     out: list[tuple[str, str]] = []
 
@@ -726,7 +706,6 @@ def extract_sentence_compat_pairs(text: str) -> list[tuple[str, str]]:
             out.append(("Совместимость", cand))
 
     return out
-
 
 def extract_sentence_capacity_pairs(text: str) -> list[tuple[str, str]]:
     out: list[tuple[str, str]] = []
@@ -756,7 +735,6 @@ def extract_sentence_capacity_pairs(text: str) -> list[tuple[str, str]]:
 
     return out
 
-
 def extract_resource_pairs(text: str) -> list[tuple[str, str]]:
     out: list[tuple[str, str]] = []
     for line in text.splitlines():
@@ -770,7 +748,6 @@ def extract_resource_pairs(text: str) -> list[tuple[str, str]]:
         if looks_like_resource_value(cand):
             out.append(("Ресурс", cand))
     return out
-
 
 def validate_desc_pair(key: str, val: str, schema: dict[str, Any]) -> tuple[str, str] | None:
     if not key or not val:
@@ -824,13 +801,10 @@ def validate_desc_pair(key: str, val: str, schema: dict[str, Any]) -> tuple[str,
         return None
     return (key, val2)
 
-
-
 def _normalize_body_lines(text: str) -> str:
     lines = [norm_ws(x) for x in str(text or "").replace("\r", "\n").split("\n")]
     out = [x for x in lines if x]
     return "\n".join(out).strip()
-
 
 def _split_explicit_spec_block(desc_src: str) -> tuple[str, bool]:
     """
@@ -869,7 +843,6 @@ def _split_explicit_spec_block(desc_src: str) -> tuple[str, bool]:
 
     return _normalize_body_lines(body), True
 
-
 def _split_inline_prefixed_spec_block(desc_src: str) -> tuple[str, bool]:
     """
     Ловит кейсы вида:
@@ -900,7 +873,6 @@ def _split_inline_prefixed_spec_block(desc_src: str) -> tuple[str, bool]:
         return "", True
 
     return tail, True
-
 
 def extract_desc_body_and_spec_pairs(desc_src: str, schema: dict[str, Any]) -> tuple[str, list[tuple[str, str]]]:
     """
