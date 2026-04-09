@@ -2,22 +2,18 @@
 """
 Path: scripts/suppliers/vtt/source.py
 
-VTT source layer.
+VTT Source — source-слой supplier-layer.
 
-Роль файла:
-- только login/session/crawl/product-page parsing;
-- без supplier-business логики по витрине;
-- без owner-логики по builder/final;
-- ассортиментная политика берётся из filtering.py / config, а не живёт здесь.
+Что делает:
+- держит login/session/crawl/product-page parsing;
+- собирает canonical raw source-данные для builder.py;
+- использует filtering.py и params.py как source of truth для своих подпроцессов.
 
-v19:
-- убран fallback на params_page.py;
-- source использует только канонический params.py;
-- сохранён public API для build_vtt.py:
-  cfg_from_env, make_session, clone_session_with_cookies, login,
-  collect_product_index, parse_product_page_from_index.
+Что не делает:
+- не принимает business-решения по final витрине;
+- не строит final offers;
+- не заменяет builder и quality gate слой.
 """
-
 from __future__ import annotations
 
 import os
@@ -82,7 +78,6 @@ except Exception:  # pragma: no cover - совместимость со стар
                 return True
         return False
 
-
 UA = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
     "AppleWebKit/537.36 (KHTML, like Gecko) "
@@ -94,15 +89,12 @@ _ANCHOR_RE = re.compile(r'''<a\b[^>]*href=["\']([^"\']+)["\'][^>]*>(.*?)</a>''',
 _META_CSRF_RE = re.compile(r'''<meta[^>]+name=["\']csrf-token["\'][^>]+content=["\']([^"\']+)["\']''', re.I)
 _VENDOR_TOKEN_RE = re.compile(r"\b(?:HP|CANON|XEROX|BROTHER|KYOCERA|SAMSUNG|EPSON|RICOH|KONICA\s+MINOLTA|PANTUM|LEXMARK|OKI|SHARP|PANASONIC|TOSHIBA|DEVELOP|GESTETNER|RISO)\b", re.I)
 
-
 def log(msg: str) -> None:
     print(msg, flush=True)
-
 
 def _sleep_ms(ms: int) -> None:
     if ms > 0:
         time.sleep(ms / 1000.0)
-
 
 def _safe_int(value: Any, default: int) -> int:
     try:
@@ -110,13 +102,11 @@ def _safe_int(value: Any, default: int) -> int:
     except Exception:
         return default
 
-
 def _safe_float(value: Any, default: float) -> float:
     try:
         return float(value)
     except Exception:
         return default
-
 
 def _configure_session(sess: requests.Session, cfg: VTTConfig) -> requests.Session:
     retry = Retry(
@@ -141,16 +131,13 @@ def _configure_session(sess: requests.Session, cfg: VTTConfig) -> requests.Sessi
     )
     return sess
 
-
 def make_session(cfg: VTTConfig) -> requests.Session:
     return _configure_session(requests.Session(), cfg)
-
 
 def clone_session_with_cookies(master: requests.Session, cfg: VTTConfig) -> requests.Session:
     sess = make_session(cfg)
     sess.cookies.update(master.cookies)
     return sess
-
 
 def cfg_from_env() -> VTTConfig:
     base_url = (os.getenv("VTT_BASE_URL") or "https://b2b.vtt.ru/").strip()
@@ -183,14 +170,11 @@ def cfg_from_env() -> VTTConfig:
         allowed_title_prefixes=list(allowed_prefixes),
     )
 
-
 def _network_outer_retries() -> int:
     return max(1, _safe_int(os.getenv("VTT_NETWORK_OUTER_RETRIES") or "3", 3))
 
-
 def _network_retry_sleep_s(attempt_no: int) -> float:
     return min(20.0, 2.5 * max(1, attempt_no))
-
 
 def _request_with_outer_retry(
     sess: requests.Session,
@@ -234,14 +218,11 @@ def _request_with_outer_retry(
     assert last_exc is not None
     raise last_exc
 
-
 def _get(sess: requests.Session, cfg: VTTConfig, url: str, *, delay_ms: int) -> requests.Response:
     return _request_with_outer_retry(sess, "GET", cfg, url, delay_ms=delay_ms)
 
-
 def _post(sess: requests.Session, cfg: VTTConfig, url: str, *, delay_ms: int, **kwargs) -> requests.Response:
     return _request_with_outer_retry(sess, "POST", cfg, url, delay_ms=delay_ms, **kwargs)
-
 
 def login(sess: requests.Session, cfg: VTTConfig) -> bool:
     if not cfg.login or not cfg.password:
@@ -268,13 +249,11 @@ def login(sess: requests.Session, cfg: VTTConfig) -> bool:
     probe = _get(sess, cfg, cfg.start_url, delay_ms=cfg.listing_request_delay_ms)
     return "/catalog" in (probe.url or "")
 
-
 def _extract_vendor_from_title(title: str) -> str:
     m = _VENDOR_TOKEN_RE.search(title or "")
     if not m:
         return ""
     return canon_vendor(norm_ws(m.group(0)))
-
 
 def collect_product_index(
     sess: requests.Session,
@@ -363,7 +342,6 @@ def collect_product_index(
     )
     return out
 
-
 def parse_product_page_from_index(
     sess: requests.Session,
     cfg: VTTConfig,
@@ -399,7 +377,6 @@ def parse_product_page_from_index(
         "category_code": ",".join(source_categories),
         "listing_titles": listing_titles,
     }
-
 
 __all__ = [
     "VTTConfig",
