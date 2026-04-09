@@ -2,19 +2,18 @@
 """
 Path: scripts/suppliers/akcent/source.py
 
-AkCent supplier layer — source reader.
+AkCent Source — reader исходного XML поставщика.
 
-Задача модуля:
-- скачать XML поставщика;
-- распарсить offer-элементы без business-логики;
-- вернуть чистые SourceOffer для supplier-layer.
+Что делает:
+- скачивает XML поставщика;
+- парсит offer-элементы без business-логики;
+- собирает чистые SourceOffer для supplier-layer.
 
-Важно:
-- тут нет фильтрации ассортимента;
-- тут нет нормализации vendor/model/price;
-- тут нет supplier-specific эвристик;
-- тут нет picture-normalization;
-- source.py только честно читает исходник.
+Что не делает:
+- не фильтрует ассортимент;
+- не нормализует vendor, model и price;
+- не содержит supplier-specific эвристик;
+- не подменяет picture-normalization и builder-слой.
 """
 
 from __future__ import annotations
