@@ -2,19 +2,16 @@
 """
 Path: scripts/suppliers/copyline/desc_extract.py
 
-CopyLine Desc Extract — supplier-layer only-fill-missing extractor.
+CopyLine description extraction layer.
 
 Что делает:
-- поднимает missing params из body-description;
-- использует публичные helper-ы page-params слоя;
-- не тянет device-list в Коды расходников.
+- извлекает только допустимые supplier-поля из title/body;
+- не подменяет главный params extractor;
 
 Что не делает:
-- не превращается во второй extractor-комбайн;
-- не дублирует narrative-cleaning;
-- не заменяет params/builder-слой.
+- не придумывает данные из воздуха;
+- не заменяет supplier params layer.
 """
-
 from __future__ import annotations
 
 import re
@@ -69,7 +66,6 @@ _COLOR_PATTERNS: tuple[tuple[re.Pattern[str], str], ...] = (
     (re.compile(r"(?iu)\bсин(?:ий|яя|ее|его|ему|им|ем)\b|\bblue\b"), "Синий"),
 )
 
-
 def _dedupe(items: Sequence[Tuple[str, str]]) -> list[Tuple[str, str]]:
     out: list[Tuple[str, str]] = []
     seen: set[tuple[str, str]] = set()
@@ -85,12 +81,10 @@ def _dedupe(items: Sequence[Tuple[str, str]]) -> list[Tuple[str, str]]:
         out.append((k2, v2))
     return out
 
-
 def _is_cable_context(title: str, text: str) -> bool:
     title = safe_str(title)
     text = safe_str(text)
     return bool(TITLE_CABLE_RX.search(title) or CABLE_CONTEXT_RX.search(text))
-
 
 def _extract_inline_pair(line: str, *, is_cable: bool) -> tuple[str, str] | None:
     for sep in (":", " - "):
@@ -105,7 +99,6 @@ def _extract_inline_pair(line: str, *, is_cable: bool) -> tuple[str, str] | None
             continue
         return key, value
     return None
-
 
 def _extract_cable_params_from_text(text: str, *, is_cable: bool) -> list[Tuple[str, str]]:
     if not is_cable:
@@ -136,7 +129,6 @@ def _extract_cable_params_from_text(text: str, *, is_cable: bool) -> list[Tuple[
 
     return out
 
-
 def _extract_line_pairs(description: str, *, title: str) -> list[Tuple[str, str]]:
     lines = [safe_str(x) for x in re.split(r"\n+", description) if safe_str(x)]
     out: list[Tuple[str, str]] = []
@@ -163,7 +155,6 @@ def _extract_line_pairs(description: str, *, title: str) -> list[Tuple[str, str]
     out.extend(_extract_cable_params_from_text(joined, is_cable=is_cable))
     return out
 
-
 def _extract_color_from_text(title: str, description: str) -> str:
     text = norm_spaces(f"{safe_str(title)} {safe_str(description)}")
     if not text:
@@ -172,7 +163,6 @@ def _extract_color_from_text(title: str, description: str) -> str:
         if rx.search(text):
             return value
     return ""
-
 
 def extract_desc_params(*, title: str, description: str, existing_params: Sequence[Tuple[str, str]] | None = None) -> List[Tuple[str, str]]:
     """Поднять только missing params из body-description."""
