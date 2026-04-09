@@ -1,14 +1,18 @@
 # -*- coding: utf-8 -*-
 """
 Path: scripts/suppliers/copyline/desc_extract.py
-CopyLine description-extract layer.
 
-Задача:
-- only-fill-missing слой поверх params_page extractor;
-- поднимать missing params из body-description;
-- не держать второй дублирующий regex/extractor-комбайн;
-- не тянуть device-list в Коды расходников;
-- использовать публичные helper-ы params_page, а не private-внутренности.
+CopyLine Desc Extract — supplier-layer only-fill-missing extractor.
+
+Что делает:
+- поднимает missing params из body-description;
+- использует публичные helper-ы page-params слоя;
+- не тянет device-list в Коды расходников.
+
+Что не делает:
+- не превращается во второй extractor-комбайн;
+- не дублирует narrative-cleaning;
+- не заменяет params/builder-слой.
 """
 
 from __future__ import annotations
