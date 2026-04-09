@@ -2,32 +2,27 @@
 """
 Path: scripts/suppliers/copyline/diagnostics.py
 
-CopyLine Diagnostics — служебный summary-слой поставщика.
+CopyLine diagnostics layer.
 
 Что делает:
-- печатает стабильный build summary для orchestrator;
-- выносит diagnostics-логику из build_copyline.py;
-- оставляет единый формат вывода для прогона поставщика.
+- печатает стабильный build summary;
+- держит diagnostics вне build-оркестратора;
 
 Что не делает:
-- не фильтрует и не меняет offers;
-- не содержит parsing-логики supplier-layer;
-- не подменяет builder и quality gate.
+- не меняет supplier raw/final данные;
+- не подменяет builder/source слой.
 """
-
 from __future__ import annotations
 
 from typing import Any
 
 _SUMMARY_WIDTH = 72
 
-
 def _print_filter_report(filter_report: dict[str, Any]) -> None:
     """Напечатать filter_report в стабильном виде."""
     print("filter_report:")
     for key, value in filter_report.items():
         print(f"  {key}: {value}")
-
 
 def print_build_summary(
     *,
