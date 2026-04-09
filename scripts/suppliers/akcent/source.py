@@ -27,9 +27,7 @@ import requests
 from cs.util import norm_ws
 from suppliers.akcent.models import SourceOffer
 
-
 DEFAULT_TIMEOUT = 90
-
 
 # Текст дочернего элемента
 
@@ -40,7 +38,6 @@ def child_text(parent: ET.Element | None, tag: str) -> str:
     if el is None:
         return ""
     return norm_ws(el.text or "")
-
 
 # Все непустые тексты дочерних элементов
 
@@ -54,9 +51,6 @@ def iter_child_texts(parent: ET.Element | None, tag: str) -> Iterable[str]:
             out.append(val)
     return out
 
-
-
-
 # Родные Param поставщика как есть
 
 def collect_raw_params(offer_el: ET.Element) -> list[tuple[str, str]]:
@@ -68,7 +62,6 @@ def collect_raw_params(offer_el: ET.Element) -> list[tuple[str, str]]:
             continue
         out.append((key, val))
     return out
-
 
 # Цены из блока prices
 
@@ -101,7 +94,6 @@ def collect_prices(offer_el: ET.Element) -> tuple[str, str, str]:
             continue
 
     return dealer, rrp, fallback
-
 
 # Один offer -> SourceOffer
 
@@ -148,7 +140,6 @@ def parse_offer(offer_el: ET.Element) -> SourceOffer:
         offer_el=offer_el,
     )
 
-
 # Скачать и распарсить XML
 
 def fetch_source_root(url: str, *, timeout: int = DEFAULT_TIMEOUT) -> ET.Element:
@@ -159,7 +150,6 @@ def fetch_source_root(url: str, *, timeout: int = DEFAULT_TIMEOUT) -> ET.Element
         raise ValueError("AkCent source XML is empty")
     return ET.fromstring(content)
 
-
 # Итератор по всем offer
 
 def iter_source_offers(root: ET.Element) -> Iterable[SourceOffer]:
@@ -169,7 +159,6 @@ def iter_source_offers(root: ET.Element) -> Iterable[SourceOffer]:
         except Exception:
             # supplier-layer не должен падать на одном кривом offer
             continue
-
 
 # Удобный helper для локальных проверок
 
