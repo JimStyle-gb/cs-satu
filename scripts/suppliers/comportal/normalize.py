@@ -2,22 +2,17 @@
 """
 Path: scripts/suppliers/comportal/normalize.py
 
-Базовая supplier-нормализация полей ComPortal.
+ComPortal Normalize — supplier-layer нормализация исходных полей.
 
-Что улучшено:
-- v43: чище public model/title для Dell corporate и Canon plotter кейсов;
-- public name чище:
-  - HP Europe -> HP
-  - Hewlett Packard / Hewlett-Packard -> HP
-  - HP Enterprise -> HPE
-  - МФП -> МФУ
-- vendor inference больше не узкий:
-  - ищем бренд в vendor
-  - в нескольких param-ключах
-  - в name
-  - в description
-- это добивает кейсы вроде AIWA, где бренд есть в name/params,
-  но раньше падал в fallback "CS".
+Что делает:
+- нормализует name, vendor, availability и price-поля поставщика;
+- готовит clean basics для builder.py;
+- держит supplier-specific правила в adapter-layer.
+
+Что не делает:
+- не переносит supplier-specific repairs в shared core;
+- не строит финальный shared description;
+- не подменяет source.py и builder.py.
 """
 
 from __future__ import annotations
