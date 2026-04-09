@@ -2,19 +2,16 @@
 """
 Path: scripts/suppliers/comportal/compat.py
 
-ComPortal Compat — supplier-layer нормализация совместимости и кодов.
+ComPortal compat layer.
 
 Что делает:
-- нормализует OEM, партномера и compat-токены;
-- очищает supplier-specific совместимость;
-- готовит compat-данные для params и builder слоя.
+- держит supplier-specific compat и part-number helpers;
+- не переносит compat repair в shared core;
 
 Что не делает:
-- не переносит compat-логику в shared core;
-- не строит финальный shared description;
-- не заменяет params.py и builder.py.
+- не строит final offers;
+- не переносит supplier-specific repair в shared core.
 """
-
 from __future__ import annotations
 
 import re
@@ -23,12 +20,10 @@ from typing import Iterable
 from cs.util import norm_ws
 from suppliers.comportal.models import ParamItem
 
-
 _MULTI_WS_RE = re.compile(r"\s{2,}")
 _COMMA_WS_RE = re.compile(r"\s*,\s*")
 _SLASH_WS_RE = re.compile(r"\s*/\s*")
 _SEMICOLON_WS_RE = re.compile(r"\s*;\s*")
-
 
 def _normalize_codes_value(value: str) -> str:
     s = norm_ws(value)
@@ -40,7 +35,6 @@ def _normalize_codes_value(value: str) -> str:
     s = _MULTI_WS_RE.sub(" ", s)
     return s.strip(" ,;/")
 
-
 def _normalize_compat_value(value: str) -> str:
     s = norm_ws(value)
     if not s:
@@ -50,7 +44,6 @@ def _normalize_compat_value(value: str) -> str:
     s = _SEMICOLON_WS_RE.sub("; ", s)
     s = _MULTI_WS_RE.sub(" ", s)
     return s.strip(" ,;/")
-
 
 def apply_compat_cleanup(params: Iterable[ParamItem]) -> list[ParamItem]:
     """
@@ -77,7 +70,6 @@ def apply_compat_cleanup(params: Iterable[ParamItem]) -> list[ParamItem]:
         out.append(ParamItem(name=name, value=value, source=p.source))
 
     return out
-
 
 __all__ = [
     "apply_compat_cleanup",
