@@ -28,7 +28,6 @@ from typing import Iterable
 
 from cs.util import fix_mixed_cyr_lat, norm_ws
 
-
 # ----------------------------- regex / const -----------------------------
 
 _RE_HTML_COMMENT = re.compile(r"(?is)<!--.*?-->")
@@ -71,9 +70,7 @@ _RE_INLINE_SUPPLIER_HEADER = re.compile(
     r"(?iu)^(?:основные\s+преимущества|общие\s+характеристики|общие\s+характерстики)\s*:\s*"
 )
 
-
 # ----------------------------- small helpers -----------------------------
-
 
 # Чистим plain-текст.
 def _clean_text(value: object) -> str:
@@ -83,7 +80,6 @@ def _clean_text(value: object) -> str:
     s = fix_mixed_cyr_lat(s)
     s = _RE_WS.sub(" ", s)
     return s.strip(" \t\n\r;|")
-
 
 # Достаём текст из HTML, сохраняя логические переносы.
 def _html_to_text(value: str) -> str:
@@ -105,13 +101,11 @@ def _html_to_text(value: str) -> str:
     s = _RE_MULTI_NL.sub("\n\n", s)
     return s.strip()
 
-
 # Нормализуем строку для сравнения с title.
 def _title_like(s: str) -> str:
     s = _clean_text(s)
     s = re.sub(r"[()\[\],;:!?.«»\"'`]+", " ", s)
     return norm_ws(s).casefold().replace("ё", "е")
-
 
 # Проверяем, что строка почти дублирует name.
 def _is_title_duplicate(name: str, line: str) -> bool:
@@ -127,7 +121,6 @@ def _is_title_duplicate(name: str, line: str) -> bool:
         if shorter >= max(12, int(longer * 0.7)):
             return True
     return SequenceMatcher(None, a, b).ratio() >= 0.90
-
 
 # Считаем строку явным служебным мусором.
 def _is_service_line(line: str) -> bool:
@@ -145,14 +138,12 @@ def _is_service_line(line: str) -> bool:
         return True
     return False
 
-
 # Разбиваем плотные тех-строки на блоки по типовым label.
 def _split_dense_labels(text: str) -> str:
     s = str(text or "")
     if not s:
         return ""
     return _RE_LABEL_BREAK.sub("\n", s)
-
 
 # Чистим отдельные строки.
 def _cleanup_lines(lines: Iterable[str], *, name: str, vendor: str = "", model: str = "") -> list[str]:
@@ -205,7 +196,6 @@ def _cleanup_lines(lines: Iterable[str], *, name: str, vendor: str = "", model: 
         out.append(line)
     return out
 
-
 # Мягко режем очень длинные строки без потери ':' блоков.
 def _soft_wrap_lines(lines: Iterable[str]) -> list[str]:
     out: list[str] = []
@@ -220,7 +210,6 @@ def _soft_wrap_lines(lines: Iterable[str]) -> list[str]:
                 continue
         out.append(s)
     return out
-
 
 # Главная очистка description в multiline plain-text.
 
@@ -277,7 +266,6 @@ def clean_description_text(
     result = _RE_MULTI_NL.sub("\n\n", result)
     return result
 
-
 # Alias: краткое имя для builder.
 def clean_description(
     description: str,
@@ -294,7 +282,6 @@ def clean_description(
         vendor=vendor,
         model=model,
     )
-
 
 # Возвращает готовые строки для desc_extract.py.
 def description_lines(
