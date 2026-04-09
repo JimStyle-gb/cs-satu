@@ -2,9 +2,16 @@
 """
 Path: scripts/suppliers/vtt/models.py
 
-VTT supplier layer — internal data models.
-"""
+VTT Models — внутренние carrier-модели supplier-layer.
 
+Что делает:
+- держит dataclass-структуры supplier-layer;
+- задаёт типовой контракт между source, filtering, builder и diagnostics.
+
+Что не делает:
+- не содержит бизнес-логику;
+- не хранит supplier-specific regex или repair-эвристики;
+"""
 from __future__ import annotations
 
 from dataclasses import dataclass, field
