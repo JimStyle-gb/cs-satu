@@ -2,19 +2,16 @@
 """
 Path: scripts/suppliers/alstyle/params.py
 
-AlStyle supplier layer — cleanup XML params.
+AlStyle params layer.
 
 Что делает:
-- чистит родные XML params;
-- нормализует ключи и значения;
-- готовит supplier params для raw offer.
+- держит supplier params extractor и helpers;
+- отдаёт source/builder чистые supplier-данные;
 
 Что не делает:
-- не выполняет final XML-рендер;
-- не содержит shared-core policy;
-- не строит final description.
+- не строит final offers;
+- не переносит supplier cleanup в shared core.
 """
-
 from __future__ import annotations
 
 import re
