@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<yml_catalog date="2026-04-09 12:14:28">
+<yml_catalog date="2026-04-09 16:07:29">
 <shop><offers>
 <!--FEED_META
 Поставщик                                  | ComPortal
 URL поставщика                             | https://www.comportal.kz/auth/documents/prices/yml-catalog.php
-Время сборки (Алматы)                      | 2026-04-09 12:14:28
+Время сборки (Алматы)                      | 2026-04-09 16:07:29
 Ближайшая сборка (Алматы)                  | 2026-04-10 03:00:00
-Сколько товаров у поставщика до фильтра    | 1194
-Сколько товаров у поставщика после фильтра | 594
-Сколько товаров есть в наличии (true)      | 594
+Сколько товаров у поставщика до фильтра    | 1199
+Сколько товаров у поставщика после фильтра | 599
+Сколько товаров есть в наличии (true)      | 599
 Сколько товаров нет в наличии (false)      | 0
 -->
 
@@ -4760,70 +4760,6 @@ URL поставщика                             | https://www.comportal.kz/
 <keywords>HP, Картридж HP DesignJet (3ED69A) (оригинал), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
-<offer id="CP11338591" available="true">
-<categoryId></categoryId>
-<vendorCode>CP11338591</vendorCode>
-<name>Картридж HP DesignJet (3ED70A) (оригинал)</name>
-<price>24900</price>
-<picture>https://www.comportal.kz/upload/iblock/927/v4ni2xzbm89tkuj0jjf125ooess03w5x.JPG</picture>
-<vendor>HP</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-<!-- Наименование товара -->
-<h3>Картридж HP DesignJet (3ED70A) (оригинал)</h3>
-<!-- Описание -->
-<p>Оригинальный картридж HP DesignJet коды — 3ED70A / №712; цвет — Чёрный; объём — 38; технология печати — Струйная.</p>
-<!-- WhatsApp -->
-<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
-<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
-<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
-<h3>Характеристики</h3><ul><li><strong>Для бренда:</strong> HP</li><li><strong>Коды:</strong> 3ED70A</li><li><strong>Модель:</strong> DesignJet</li><li><strong>Номер:</strong> №712</li><li><strong>Объём:</strong> 38</li><li><strong>Оригинальность:</strong> Оригинал</li><li><strong>Технология печати:</strong> Струйная</li><li><strong>Тип:</strong> Картридж</li><li><strong>Цвет:</strong> Чёрный</li></ul>
-<!-- Оплата и доставка -->
-<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><div style="background:#FFF6E5; border:1px solid #F1E2C6; padding:12px 14px; border-radius:0; text-align:left;"><h3 style="margin:0 0 8px; font-size:17px;">Оплата</h3><ul style="margin:0; padding-left:18px;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000;"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul><hr style="border:none; border-top:1px solid #E7D6B7; margin:12px 0;" /><h3 style="margin:0 0 8px; font-size:17px;">Доставка по Алматы и Казахстану</h3><ul style="margin:0; padding-left:18px;"><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul></div></div>]]></description>
-<param name="Для бренда">HP</param>
-<param name="Коды">3ED70A</param>
-<param name="Модель">DesignJet</param>
-<param name="Номер">№712</param>
-<param name="Объём">38</param>
-<param name="Оригинальность">Оригинал</param>
-<param name="Технология печати">Струйная</param>
-<param name="Тип">Картридж</param>
-<param name="Цвет">Чёрный</param>
-<keywords>HP, Картридж HP DesignJet (3ED70A) (оригинал), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
-</offer>
-
-<offer id="CP11307176" available="true">
-<categoryId></categoryId>
-<vendorCode>CP11307176</vendorCode>
-<name>Картридж HP DesignJet (3ED71A) (оригинал)</name>
-<price>38900</price>
-<picture>https://www.comportal.kz/upload/iblock/e3c/ri40wohvvmoaz2fvgew6snb88vl273am.JPG</picture>
-<vendor>HP</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-<!-- Наименование товара -->
-<h3>Картридж HP DesignJet (3ED71A) (оригинал)</h3>
-<!-- Описание -->
-<p>Оригинальный картридж HP DesignJet коды — 3ED71A / №712; цвет — Чёрный; объём — 80; технология печати — Струйная.</p>
-<!-- WhatsApp -->
-<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
-<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
-<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
-<h3>Характеристики</h3><ul><li><strong>Для бренда:</strong> HP</li><li><strong>Коды:</strong> 3ED71A</li><li><strong>Модель:</strong> DesignJet</li><li><strong>Номер:</strong> №712</li><li><strong>Объём:</strong> 80</li><li><strong>Оригинальность:</strong> Оригинал</li><li><strong>Технология печати:</strong> Струйная</li><li><strong>Тип:</strong> Картридж</li><li><strong>Цвет:</strong> Чёрный</li></ul>
-<!-- Оплата и доставка -->
-<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><div style="background:#FFF6E5; border:1px solid #F1E2C6; padding:12px 14px; border-radius:0; text-align:left;"><h3 style="margin:0 0 8px; font-size:17px;">Оплата</h3><ul style="margin:0; padding-left:18px;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000;"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul><hr style="border:none; border-top:1px solid #E7D6B7; margin:12px 0;" /><h3 style="margin:0 0 8px; font-size:17px;">Доставка по Алматы и Казахстану</h3><ul style="margin:0; padding-left:18px;"><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul></div></div>]]></description>
-<param name="Для бренда">HP</param>
-<param name="Коды">3ED71A</param>
-<param name="Модель">DesignJet</param>
-<param name="Номер">№712</param>
-<param name="Объём">80</param>
-<param name="Оригинальность">Оригинал</param>
-<param name="Технология печати">Струйная</param>
-<param name="Тип">Картридж</param>
-<param name="Цвет">Чёрный</param>
-<keywords>HP, Картридж HP DesignJet (3ED71A) (оригинал), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
-</offer>
-
 <offer id="CP11411676" available="true">
 <categoryId></categoryId>
 <vendorCode>CP11411676</vendorCode>
@@ -5465,6 +5401,37 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Частота обновления">60</param>
 <param name="Яркость">300</param>
 <keywords>Dell, Монитор Dell U4021QW (210-AYJF), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+</offer>
+
+<offer id="CP13858211" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13858211</vendorCode>
+<name>Картридж HP CF300AH (CF300AH) (оригинал)</name>
+<price>80900</price>
+<picture>https://www.comportal.kz/upload/iblock/5df/qlvev1ndpkvkon8hortt2cpdswd0geko.JPG</picture>
+<vendor>HP</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+<!-- Наименование товара -->
+<h3>Картридж HP CF300AH (CF300AH) (оригинал)</h3>
+<!-- Описание -->
+<p>Оригинальный картридж HP CF300AH код — CF300AH; цвет — Чёрный; ресурс — 29 500; технология печати — Лазерная.</p>
+<!-- WhatsApp -->
+<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
+<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
+<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
+<h3>Характеристики</h3><ul><li><strong>Для бренда:</strong> HP</li><li><strong>Коды:</strong> CF300AH</li><li><strong>Модель:</strong> CF300AH</li><li><strong>Оригинальность:</strong> Оригинал</li><li><strong>Ресурс:</strong> 29 500</li><li><strong>Технология печати:</strong> Лазерная</li><li><strong>Тип:</strong> Картридж</li><li><strong>Цвет:</strong> Чёрный</li></ul>
+<!-- Оплата и доставка -->
+<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><div style="background:#FFF6E5; border:1px solid #F1E2C6; padding:12px 14px; border-radius:0; text-align:left;"><h3 style="margin:0 0 8px; font-size:17px;">Оплата</h3><ul style="margin:0; padding-left:18px;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000;"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul><hr style="border:none; border-top:1px solid #E7D6B7; margin:12px 0;" /><h3 style="margin:0 0 8px; font-size:17px;">Доставка по Алматы и Казахстану</h3><ul style="margin:0; padding-left:18px;"><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul></div></div>]]></description>
+<param name="Для бренда">HP</param>
+<param name="Коды">CF300AH</param>
+<param name="Модель">CF300AH</param>
+<param name="Оригинальность">Оригинал</param>
+<param name="Ресурс">29 500</param>
+<param name="Технология печати">Лазерная</param>
+<param name="Тип">Картридж</param>
+<param name="Цвет">Чёрный</param>
+<keywords>HP, Картридж HP CF300AH (CF300AH) (оригинал), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP13846254" available="true">
@@ -7609,6 +7576,43 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Цвет">Чёрный</param>
 <param name="Яркость">400</param>
 <keywords>Acer, Монитор Acer Nitro XV272UZbmiipruzx (UM.HX2EE.Z01), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+</offer>
+
+<offer id="CP13816864" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13816864</vendorCode>
+<name>Монитор Acer Vero V227QBbiv (UM.WV7EE.B11)</name>
+<price>46900</price>
+<picture>https://www.comportal.kz/upload/iblock/263/26397a3d892539f4574132a8dd926fb9.JPG</picture>
+<vendor>Acer</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+<!-- Наименование товара -->
+<h3>Монитор Acer Vero V227QBbiv (UM.WV7EE.B11)</h3>
+<!-- Описание -->
+<p>Монитор. Модельная серия: Vero V227QBbiv. Диагональ: 21.45. Максимальное разрешение: 1920x1080. Тип матрицы: VA. Время отклика: 4. Порты: 1xVGA + 1xHDMI(1.4). Гарантия: 12 мес.</p>
+<!-- WhatsApp -->
+<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
+<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
+<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
+<h3>Характеристики</h3><ul><li><strong>Время отклика:</strong> 4</li><li><strong>Гарантия:</strong> 12 мес</li><li><strong>Диагональ:</strong> 21.45</li><li><strong>Для бренда:</strong> Acer</li><li><strong>Коды:</strong> UM.WV7EE.B11</li><li><strong>Контрастность:</strong> 3000:1</li><li><strong>Максимальное разрешение:</strong> 1920x1080</li><li><strong>Модель:</strong> Vero V227QBbiv</li><li><strong>Порты:</strong> 1xVGA + 1xHDMI(1.4)</li><li><strong>Тип:</strong> Монитор</li><li><strong>Тип матрицы:</strong> VA</li><li><strong>Углы обзора (вертикальный/горизонтальный):</strong> 178/178</li><li><strong>Цвет:</strong> Чёрный</li><li><strong>Яркость:</strong> 250</li></ul>
+<!-- Оплата и доставка -->
+<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><div style="background:#FFF6E5; border:1px solid #F1E2C6; padding:12px 14px; border-radius:0; text-align:left;"><h3 style="margin:0 0 8px; font-size:17px;">Оплата</h3><ul style="margin:0; padding-left:18px;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000;"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul><hr style="border:none; border-top:1px solid #E7D6B7; margin:12px 0;" /><h3 style="margin:0 0 8px; font-size:17px;">Доставка по Алматы и Казахстану</h3><ul style="margin:0; padding-left:18px;"><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul></div></div>]]></description>
+<param name="Время отклика">4</param>
+<param name="Гарантия">12 мес</param>
+<param name="Диагональ">21.45</param>
+<param name="Для бренда">Acer</param>
+<param name="Коды">UM.WV7EE.B11</param>
+<param name="Контрастность">3000:1</param>
+<param name="Максимальное разрешение">1920x1080</param>
+<param name="Модель">Vero V227QBbiv</param>
+<param name="Порты">1xVGA + 1xHDMI(1.4)</param>
+<param name="Тип">Монитор</param>
+<param name="Тип матрицы">VA</param>
+<param name="Углы обзора (вертикальный/горизонтальный)">178/178</param>
+<param name="Цвет">Чёрный</param>
+<param name="Яркость">250</param>
+<keywords>Acer, Монитор Acer Vero V227QBbiv (UM.WV7EE.B11), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP13714886" available="true">
@@ -10025,6 +10029,41 @@ URL поставщика                             | https://www.comportal.kz/
 <keywords>HP, Принтер HP LaserJet Pro 4203dn (4RA89A#B19), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
+<offer id="CP13843630" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13843630</vendorCode>
+<name>МФУ HP LaserJet M141cw</name>
+<price>75900</price>
+<picture>https://www.comportal.kz/upload/iblock/7bf/etowcudhkqkhoddozt1dxotyd586qoxh.JPG</picture>
+<vendor>HP</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+<!-- Наименование товара -->
+<h3>МФУ HP LaserJet M141cw</h3>
+<!-- Описание -->
+<p>МФУ. Формат печати: A4. Разрешение: 600x600. Скорость печати ч/б: 18. Порты: USB. Технология печати: Лазерная. Гарантия: 12 мес.</p>
+<!-- WhatsApp -->
+<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
+<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
+<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
+<h3>Характеристики</h3><ul><li><strong>Гарантия:</strong> 12 мес</li><li><strong>Для бренда:</strong> HP</li><li><strong>Модель:</strong> LaserJet M141cw</li><li><strong>Нагрузка:</strong> 8 000</li><li><strong>Наличие картриджа (тонера) в комплекте:</strong> Полный</li><li><strong>Порты:</strong> USB</li><li><strong>Разрешение:</strong> 600x600</li><li><strong>Скорость печати ч/б:</strong> 18</li><li><strong>Технология печати:</strong> Лазерная</li><li><strong>Тип:</strong> МФУ</li><li><strong>Формат печати:</strong> A4</li><li><strong>Функция:</strong> Принтер-Сканер(без АПД)-Копир</li></ul>
+<!-- Оплата и доставка -->
+<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><div style="background:#FFF6E5; border:1px solid #F1E2C6; padding:12px 14px; border-radius:0; text-align:left;"><h3 style="margin:0 0 8px; font-size:17px;">Оплата</h3><ul style="margin:0; padding-left:18px;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000;"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul><hr style="border:none; border-top:1px solid #E7D6B7; margin:12px 0;" /><h3 style="margin:0 0 8px; font-size:17px;">Доставка по Алматы и Казахстану</h3><ul style="margin:0; padding-left:18px;"><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul></div></div>]]></description>
+<param name="Гарантия">12 мес</param>
+<param name="Для бренда">HP</param>
+<param name="Модель">LaserJet M141cw</param>
+<param name="Нагрузка">8 000</param>
+<param name="Наличие картриджа (тонера) в комплекте">Полный</param>
+<param name="Порты">USB</param>
+<param name="Разрешение">600x600</param>
+<param name="Скорость печати ч/б">18</param>
+<param name="Технология печати">Лазерная</param>
+<param name="Тип">МФУ</param>
+<param name="Формат печати">A4</param>
+<param name="Функция">Принтер-Сканер(без АПД)-Копир</param>
+<keywords>HP, МФУ HP LaserJet M141cw, доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+</offer>
+
 <offer id="CP13843637" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13843637</vendorCode>
@@ -11226,6 +11265,68 @@ URL поставщика                             | https://www.comportal.kz/
 <keywords>Eaton, ИБП Eaton 9E (9E3000IR), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
+<offer id="CP13858841" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13858841</vendorCode>
+<name>Картридж HP CF301AH (CF301AH) (оригинал)</name>
+<price>350900</price>
+<picture>https://www.comportal.kz/upload/iblock/250/o2k26fv0037o28kcmlva7rinp2diblum.JPG</picture>
+<vendor>HP</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+<!-- Наименование товара -->
+<h3>Картридж HP CF301AH (CF301AH) (оригинал)</h3>
+<!-- Описание -->
+<p>Оригинальный картридж HP CF301AH код — CF301AH; цвет — Синий; ресурс — 32 000; технология печати — Лазерная.</p>
+<!-- WhatsApp -->
+<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
+<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
+<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
+<h3>Характеристики</h3><ul><li><strong>Для бренда:</strong> HP</li><li><strong>Коды:</strong> CF301AH</li><li><strong>Модель:</strong> CF301AH</li><li><strong>Оригинальность:</strong> Оригинал</li><li><strong>Ресурс:</strong> 32 000</li><li><strong>Технология печати:</strong> Лазерная</li><li><strong>Тип:</strong> Картридж</li><li><strong>Цвет:</strong> Синий</li></ul>
+<!-- Оплата и доставка -->
+<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><div style="background:#FFF6E5; border:1px solid #F1E2C6; padding:12px 14px; border-radius:0; text-align:left;"><h3 style="margin:0 0 8px; font-size:17px;">Оплата</h3><ul style="margin:0; padding-left:18px;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000;"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul><hr style="border:none; border-top:1px solid #E7D6B7; margin:12px 0;" /><h3 style="margin:0 0 8px; font-size:17px;">Доставка по Алматы и Казахстану</h3><ul style="margin:0; padding-left:18px;"><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul></div></div>]]></description>
+<param name="Для бренда">HP</param>
+<param name="Коды">CF301AH</param>
+<param name="Модель">CF301AH</param>
+<param name="Оригинальность">Оригинал</param>
+<param name="Ресурс">32 000</param>
+<param name="Технология печати">Лазерная</param>
+<param name="Тип">Картридж</param>
+<param name="Цвет">Синий</param>
+<keywords>HP, Картридж HP CF301AH (CF301AH) (оригинал), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+</offer>
+
+<offer id="CP13858842" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13858842</vendorCode>
+<name>Картридж HP CF302AH (CF302AH) (оригинал)</name>
+<price>350900</price>
+<picture>https://www.comportal.kz/upload/iblock/205/e9caqhzlrs93ksgy4cs0nbizg0squ2uv.JPG</picture>
+<vendor>HP</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+<!-- Наименование товара -->
+<h3>Картридж HP CF302AH (CF302AH) (оригинал)</h3>
+<!-- Описание -->
+<p>Оригинальный картридж HP CF302AH код — CF302AH; цвет — Жёлтый; ресурс — 32 000; технология печати — Лазерная.</p>
+<!-- WhatsApp -->
+<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
+<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
+<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
+<h3>Характеристики</h3><ul><li><strong>Для бренда:</strong> HP</li><li><strong>Коды:</strong> CF302AH</li><li><strong>Модель:</strong> CF302AH</li><li><strong>Оригинальность:</strong> Оригинал</li><li><strong>Ресурс:</strong> 32 000</li><li><strong>Технология печати:</strong> Лазерная</li><li><strong>Тип:</strong> Картридж</li><li><strong>Цвет:</strong> Жёлтый</li></ul>
+<!-- Оплата и доставка -->
+<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><div style="background:#FFF6E5; border:1px solid #F1E2C6; padding:12px 14px; border-radius:0; text-align:left;"><h3 style="margin:0 0 8px; font-size:17px;">Оплата</h3><ul style="margin:0; padding-left:18px;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000;"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul><hr style="border:none; border-top:1px solid #E7D6B7; margin:12px 0;" /><h3 style="margin:0 0 8px; font-size:17px;">Доставка по Алматы и Казахстану</h3><ul style="margin:0; padding-left:18px;"><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul></div></div>]]></description>
+<param name="Для бренда">HP</param>
+<param name="Коды">CF302AH</param>
+<param name="Модель">CF302AH</param>
+<param name="Оригинальность">Оригинал</param>
+<param name="Ресурс">32 000</param>
+<param name="Технология печати">Лазерная</param>
+<param name="Тип">Картридж</param>
+<param name="Цвет">Жёлтый</param>
+<keywords>HP, Картридж HP CF302AH (CF302AH) (оригинал), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+</offer>
+
 <offer id="CP13859894" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13859894</vendorCode>
@@ -12166,6 +12267,36 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Модель">Vostro 3530</param>
 <param name="Тип">Ноутбук</param>
 <keywords>Dell, Ноутбук Dell Vostro 3530 (210-BGLW-N1601PVNB3530EMEA01_UBU), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+</offer>
+
+<offer id="CP13864290" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13864290</vendorCode>
+<name>Картридж HP CF303AH / 827H Contract Original Toner Cartridge (CF303AH) (оригинал)</name>
+<price>350900</price>
+<picture>https://www.comportal.kz/upload/iblock/ec7/tcx99u4a3dj1tq8yvmmynf98hu6bkxle.JPG</picture>
+<vendor>HP</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+<!-- Наименование товара -->
+<h3>Картридж HP CF303AH / 827H Contract Original Toner Cartridge (CF303AH) (оригинал)</h3>
+<!-- Описание -->
+<p>Оригинальный картридж HP CF303AH / 827H Contract Original Toner Cartridge код — CF303AH; цвет — Пурпурный; технология печати — Лазерная.</p>
+<!-- WhatsApp -->
+<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
+<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
+<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
+<h3>Характеристики</h3><ul><li><strong>Для бренда:</strong> HP</li><li><strong>Коды:</strong> CF303AH</li><li><strong>Модель:</strong> CF303AH / 827H Contract Original Toner Cartridge</li><li><strong>Оригинальность:</strong> Оригинал</li><li><strong>Технология печати:</strong> Лазерная</li><li><strong>Тип:</strong> Картридж</li><li><strong>Цвет:</strong> Пурпурный</li></ul>
+<!-- Оплата и доставка -->
+<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><div style="background:#FFF6E5; border:1px solid #F1E2C6; padding:12px 14px; border-radius:0; text-align:left;"><h3 style="margin:0 0 8px; font-size:17px;">Оплата</h3><ul style="margin:0; padding-left:18px;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000;"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul><hr style="border:none; border-top:1px solid #E7D6B7; margin:12px 0;" /><h3 style="margin:0 0 8px; font-size:17px;">Доставка по Алматы и Казахстану</h3><ul style="margin:0; padding-left:18px;"><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul></div></div>]]></description>
+<param name="Для бренда">HP</param>
+<param name="Коды">CF303AH</param>
+<param name="Модель">CF303AH / 827H Contract Original Toner Cartridge</param>
+<param name="Оригинальность">Оригинал</param>
+<param name="Технология печати">Лазерная</param>
+<param name="Тип">Картридж</param>
+<param name="Цвет">Пурпурный</param>
+<keywords>HP, Картридж HP CF303AH / 827H Contract Original Toner Cartridge (CF303AH) (оригинал), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP13864621" available="true">
@@ -13707,6 +13838,39 @@ URL поставщика                             | https://www.comportal.kz/
 <keywords>Acer, Монитор Acer KA272UEbmiipx (UM.HX2EE.E25), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
+<offer id="CP13869284" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13869284</vendorCode>
+<name>Плоттер HP DesignJet T630 (5HB09D#B19)</name>
+<price>328900</price>
+<picture>https://www.comportal.kz/upload/iblock/8ac/bdcbv4jymc5jfzz2nqlnm92nj2x18l1n.jpg</picture>
+<vendor>HP</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+<!-- Наименование товара -->
+<h3>Плоттер HP DesignJet T630 (5HB09D#B19)</h3>
+<!-- Описание -->
+<p>Широкоформатный принтер. Формат печати: 24”. Разрешение: 2400x1200. Порты: Gigabit Ethernet (1000Base-T)/USB 2.0/Wi-Fi 802.11a b/g n/Wi-Fi Direct. Технология печати: Струйная. Гарантия: 12 мес.</p>
+<!-- WhatsApp -->
+<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
+<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
+<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
+<h3>Характеристики</h3><ul><li><strong>Гарантия:</strong> 12 мес</li><li><strong>Для бренда:</strong> HP</li><li><strong>Коды:</strong> 5HB09D#B19</li><li><strong>Модель:</strong> DesignJet T630</li><li><strong>Порты:</strong> Gigabit Ethernet (1000Base-T)/USB 2.0/Wi-Fi 802.11a b/g n/Wi-Fi Direct</li><li><strong>Разрешение:</strong> 2400x1200</li><li><strong>Технология печати:</strong> Струйная</li><li><strong>Тип:</strong> Широкоформатный принтер</li><li><strong>Формат печати:</strong> 24”</li><li><strong>Функции:</strong> Принтер копир сканер</li></ul>
+<!-- Оплата и доставка -->
+<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><div style="background:#FFF6E5; border:1px solid #F1E2C6; padding:12px 14px; border-radius:0; text-align:left;"><h3 style="margin:0 0 8px; font-size:17px;">Оплата</h3><ul style="margin:0; padding-left:18px;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000;"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul><hr style="border:none; border-top:1px solid #E7D6B7; margin:12px 0;" /><h3 style="margin:0 0 8px; font-size:17px;">Доставка по Алматы и Казахстану</h3><ul style="margin:0; padding-left:18px;"><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul></div></div>]]></description>
+<param name="Гарантия">12 мес</param>
+<param name="Для бренда">HP</param>
+<param name="Коды">5HB09D#B19</param>
+<param name="Модель">DesignJet T630</param>
+<param name="Порты">Gigabit Ethernet (1000Base-T)/USB 2.0/Wi-Fi 802.11a b/g n/Wi-Fi Direct</param>
+<param name="Разрешение">2400x1200</param>
+<param name="Технология печати">Струйная</param>
+<param name="Тип">Широкоформатный принтер</param>
+<param name="Формат печати">24”</param>
+<param name="Функции">Принтер копир сканер</param>
+<keywords>HP, Плоттер HP DesignJet T630 (5HB09D#B19), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+</offer>
+
 <offer id="CP13870600" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13870600</vendorCode>
@@ -14771,6 +14935,40 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Тип">Широкоформатный принтер</param>
 <param name="Формат печати">A1+</param>
 <keywords>Canon, Плоттер Canon imagePROGRAF TM-255 (6238C003), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+</offer>
+
+<offer id="CP13870349" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13870349</vendorCode>
+<name>Плоттер HP DesignJet T630 36 (5HB11D#B19)</name>
+<price>520900</price>
+<picture>https://www.comportal.kz/upload/iblock/29f/35eqzfn0y8g9ciy6uuwraswuv0rh19ad.jpg</picture>
+<vendor>HP</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+<!-- Наименование товара -->
+<h3>Плоттер HP DesignJet T630 36 (5HB11D#B19)</h3>
+<!-- Описание -->
+<p>Широкоформатный принтер. Формат печати: A1. Разрешение: 2400x1200. Скорость печати ч/б: 30. Порты: Gigabit Ethernet (1000Base-T), высокоскоростной порт USB 2.0, Wi-Fi 802.11a b/g n, Wi-Fi Direct. Технология печати: Струйная. Гарантия: 12 мес.</p>
+<!-- WhatsApp -->
+<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
+<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
+<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
+<h3>Характеристики</h3><ul><li><strong>Гарантия:</strong> 12 мес</li><li><strong>Для бренда:</strong> HP</li><li><strong>Коды:</strong> 5HB11D#B19</li><li><strong>Модель:</strong> DesignJet T630 36</li><li><strong>Порты:</strong> Gigabit Ethernet (1000Base-T), высокоскоростной порт USB 2.0, Wi-Fi 802.11a b/g n, Wi-Fi Direct</li><li><strong>Разрешение:</strong> 2400x1200</li><li><strong>Скорость печати ч/б:</strong> 30</li><li><strong>Технология печати:</strong> Струйная</li><li><strong>Тип:</strong> Широкоформатный принтер</li><li><strong>Формат печати:</strong> A1</li><li><strong>Функции:</strong> принтер</li></ul>
+<!-- Оплата и доставка -->
+<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><div style="background:#FFF6E5; border:1px solid #F1E2C6; padding:12px 14px; border-radius:0; text-align:left;"><h3 style="margin:0 0 8px; font-size:17px;">Оплата</h3><ul style="margin:0; padding-left:18px;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000;"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul><hr style="border:none; border-top:1px solid #E7D6B7; margin:12px 0;" /><h3 style="margin:0 0 8px; font-size:17px;">Доставка по Алматы и Казахстану</h3><ul style="margin:0; padding-left:18px;"><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul></div></div>]]></description>
+<param name="Гарантия">12 мес</param>
+<param name="Для бренда">HP</param>
+<param name="Коды">5HB11D#B19</param>
+<param name="Модель">DesignJet T630 36</param>
+<param name="Порты">Gigabit Ethernet (1000Base-T), высокоскоростной порт USB 2.0, Wi-Fi 802.11a b/g n, Wi-Fi Direct</param>
+<param name="Разрешение">2400x1200</param>
+<param name="Скорость печати ч/б">30</param>
+<param name="Технология печати">Струйная</param>
+<param name="Тип">Широкоформатный принтер</param>
+<param name="Формат печати">A1</param>
+<param name="Функции">принтер</param>
+<keywords>HP, Плоттер HP DesignJet T630 36 (5HB11D#B19), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP13869884" available="true">
@@ -16353,6 +16551,43 @@ URL поставщика                             | https://www.comportal.kz/
 <keywords>Dell, Монитор Dell 27 Plus 4K USB-C Monitor-S2725QC (210-BQWS), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
+<offer id="CP13871380" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13871380</vendorCode>
+<name>Монитор Dell 27 Plus 4K Monitor-S2725QS (210-BQWM)</name>
+<price>179900</price>
+<picture>https://www.comportal.kz/upload/iblock/86a/69jcnclz7uoi22v6lfvliwlx07nk8ba8.JPG</picture>
+<vendor>Dell</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+<!-- Наименование товара -->
+<h3>Монитор Dell 27 Plus 4K Monitor-S2725QS (210-BQWM)</h3>
+<!-- Описание -->
+<p>Монитор. Диагональ: 27. Максимальное разрешение: 3840x2160. Тип матрицы: IPS. Частота обновления: 120. Время отклика: 8. Порты: 2 HDMI ports (HDCP 1.4 &amp; 2.3) (Supports up to UHD 3840 x 2160, 120 Hz, FRL, HDR, VRR as per specified in HDMI 2.1)/1 DisplayPort 1.4 (HDCP 1.4 &amp; 2.3) port (Supports up to UHD 3840 x 2160, 120 Hz). Гарантия: 36 мес.</p>
+<!-- WhatsApp -->
+<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
+<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
+<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
+<h3>Характеристики</h3><ul><li><strong>Время отклика:</strong> 8</li><li><strong>Гарантия:</strong> 36 мес</li><li><strong>Диагональ:</strong> 27</li><li><strong>Для бренда:</strong> Dell</li><li><strong>Коды:</strong> 210-BQWM</li><li><strong>Контрастность:</strong> 1500:1</li><li><strong>Максимальное разрешение:</strong> 3840x2160</li><li><strong>Модель:</strong> S2725QS</li><li><strong>Наличие динамиков:</strong> Speakers</li><li><strong>Порты:</strong> 2 HDMI ports (HDCP 1.4 &amp; 2.3) (Supports up to UHD 3840 x 2160, 120 Hz, FRL, HDR, VRR as per specified in HDMI 2.1)/1 DisplayPort 1.4 (HDCP 1.4 &amp; 2.3) port (Supports up to UHD 3840 x 2160, 120 Hz)</li><li><strong>Тип:</strong> Монитор</li><li><strong>Тип матрицы:</strong> IPS</li><li><strong>Частота обновления:</strong> 120</li><li><strong>Яркость:</strong> 350</li></ul>
+<!-- Оплата и доставка -->
+<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><div style="background:#FFF6E5; border:1px solid #F1E2C6; padding:12px 14px; border-radius:0; text-align:left;"><h3 style="margin:0 0 8px; font-size:17px;">Оплата</h3><ul style="margin:0; padding-left:18px;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000;"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul><hr style="border:none; border-top:1px solid #E7D6B7; margin:12px 0;" /><h3 style="margin:0 0 8px; font-size:17px;">Доставка по Алматы и Казахстану</h3><ul style="margin:0; padding-left:18px;"><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul></div></div>]]></description>
+<param name="Время отклика">8</param>
+<param name="Гарантия">36 мес</param>
+<param name="Диагональ">27</param>
+<param name="Для бренда">Dell</param>
+<param name="Коды">210-BQWM</param>
+<param name="Контрастность">1500:1</param>
+<param name="Максимальное разрешение">3840x2160</param>
+<param name="Модель">S2725QS</param>
+<param name="Наличие динамиков">Speakers</param>
+<param name="Порты">2 HDMI ports (HDCP 1.4 &amp; 2.3) (Supports up to UHD 3840 x 2160, 120 Hz, FRL, HDR, VRR as per specified in HDMI 2.1)/1 DisplayPort 1.4 (HDCP 1.4 &amp; 2.3) port (Supports up to UHD 3840 x 2160, 120 Hz)</param>
+<param name="Тип">Монитор</param>
+<param name="Тип матрицы">IPS</param>
+<param name="Частота обновления">120</param>
+<param name="Яркость">350</param>
+<keywords>Dell, Монитор Dell 27 Plus 4K Monitor-S2725QS (210-BQWM), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+</offer>
+
 <offer id="CP13870899" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13870899</vendorCode>
@@ -17335,99 +17570,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Тип">ИБП</param>
 <param name="Форм-фактор">Tower</param>
 <keywords>APC, ИБП APC BVX900LI 230V AVR IEC Sockets (BVX900LI), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
-</offer>
-
-<offer id="CP13871259" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13871259</vendorCode>
-<name>Картридж HP 938e EvoMore Black Original Ink Cartridge (4S6Y2PE) (оригинал)</name>
-<price>42900</price>
-<picture>https://www.comportal.kz/upload/iblock/bd0/70uqcp1zbb7rfyvwnujp92sv9yj2yqe4.jpg</picture>
-<vendor>HP</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-<!-- Наименование товара -->
-<h3>Картридж HP 938e EvoMore Black Original Ink Cartridge (4S6Y2PE) (оригинал)</h3>
-<!-- Описание -->
-<p>Оригинальный картридж HP 938e EvoMore Black Original Ink Cartridge код — 4S6Y2PE; цвет — Чёрный; ресурс — 2 500; технология печати — Лазерная.</p>
-<!-- WhatsApp -->
-<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
-<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
-<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
-<h3>Характеристики</h3><ul><li><strong>Для бренда:</strong> HP</li><li><strong>Коды:</strong> 4S6Y2PE</li><li><strong>Модель:</strong> 938e EvoMore Black Original Ink Cartridge</li><li><strong>Оригинальность:</strong> Оригинал</li><li><strong>Ресурс:</strong> 2 500</li><li><strong>Технология печати:</strong> Лазерная</li><li><strong>Тип:</strong> Картридж</li><li><strong>Цвет:</strong> Чёрный</li></ul>
-<!-- Оплата и доставка -->
-<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><div style="background:#FFF6E5; border:1px solid #F1E2C6; padding:12px 14px; border-radius:0; text-align:left;"><h3 style="margin:0 0 8px; font-size:17px;">Оплата</h3><ul style="margin:0; padding-left:18px;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000;"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul><hr style="border:none; border-top:1px solid #E7D6B7; margin:12px 0;" /><h3 style="margin:0 0 8px; font-size:17px;">Доставка по Алматы и Казахстану</h3><ul style="margin:0; padding-left:18px;"><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul></div></div>]]></description>
-<param name="Для бренда">HP</param>
-<param name="Коды">4S6Y2PE</param>
-<param name="Модель">938e EvoMore Black Original Ink Cartridge</param>
-<param name="Оригинальность">Оригинал</param>
-<param name="Ресурс">2 500</param>
-<param name="Технология печати">Лазерная</param>
-<param name="Тип">Картридж</param>
-<param name="Цвет">Чёрный</param>
-<keywords>HP, Картридж HP 938e EvoMore Black Original Ink Cartridge (4S6Y2PE) (оригинал), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
-</offer>
-
-<offer id="CP13871260" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13871260</vendorCode>
-<name>Картридж HP 938e EvoMore Magenta Original Ink Cartridge (4S6Y0PE) (оригинал)</name>
-<price>28900</price>
-<picture>https://www.comportal.kz/upload/iblock/c9b/64gjm69zcvzksp39msiycv85ihrlstsl.jpg</picture>
-<vendor>HP</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-<!-- Наименование товара -->
-<h3>Картридж HP 938e EvoMore Magenta Original Ink Cartridge (4S6Y0PE) (оригинал)</h3>
-<!-- Описание -->
-<p>Оригинальный картридж HP 938e EvoMore Magenta Original Ink Cartridge код — 4S6Y0PE; цвет — Пурпурный; ресурс — 1 650; технология печати — Лазерная.</p>
-<!-- WhatsApp -->
-<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
-<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
-<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
-<h3>Характеристики</h3><ul><li><strong>Для бренда:</strong> HP</li><li><strong>Коды:</strong> 4S6Y0PE</li><li><strong>Модель:</strong> 938e EvoMore Magenta Original Ink Cartridge</li><li><strong>Оригинальность:</strong> Оригинал</li><li><strong>Ресурс:</strong> 1 650</li><li><strong>Технология печати:</strong> Лазерная</li><li><strong>Тип:</strong> Картридж</li><li><strong>Цвет:</strong> Пурпурный</li></ul>
-<!-- Оплата и доставка -->
-<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><div style="background:#FFF6E5; border:1px solid #F1E2C6; padding:12px 14px; border-radius:0; text-align:left;"><h3 style="margin:0 0 8px; font-size:17px;">Оплата</h3><ul style="margin:0; padding-left:18px;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000;"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul><hr style="border:none; border-top:1px solid #E7D6B7; margin:12px 0;" /><h3 style="margin:0 0 8px; font-size:17px;">Доставка по Алматы и Казахстану</h3><ul style="margin:0; padding-left:18px;"><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul></div></div>]]></description>
-<param name="Для бренда">HP</param>
-<param name="Коды">4S6Y0PE</param>
-<param name="Модель">938e EvoMore Magenta Original Ink Cartridge</param>
-<param name="Оригинальность">Оригинал</param>
-<param name="Ресурс">1 650</param>
-<param name="Технология печати">Лазерная</param>
-<param name="Тип">Картридж</param>
-<param name="Цвет">Пурпурный</param>
-<keywords>HP, Картридж HP 938e EvoMore Magenta Original Ink Cartridge (4S6Y0PE) (оригинал), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
-</offer>
-
-<offer id="CP13871262" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13871262</vendorCode>
-<name>Картридж HP 938e EvoMore Yellow Original Ink Cartridge (4S6Y1PE) (оригинал)</name>
-<price>28900</price>
-<picture>https://www.comportal.kz/upload/iblock/814/kcsc60o0ny45bsr5l25730cnyrsffgjy.jpg</picture>
-<vendor>HP</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-<!-- Наименование товара -->
-<h3>Картридж HP 938e EvoMore Yellow Original Ink Cartridge (4S6Y1PE) (оригинал)</h3>
-<!-- Описание -->
-<p>Оригинальный картридж HP 938e EvoMore Yellow Original Ink Cartridge код — 4S6Y1PE; цвет — Жёлтый; ресурс — 1 650; технология печати — Лазерная.</p>
-<!-- WhatsApp -->
-<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
-<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
-<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
-<h3>Характеристики</h3><ul><li><strong>Для бренда:</strong> HP</li><li><strong>Коды:</strong> 4S6Y1PE</li><li><strong>Модель:</strong> 938e EvoMore Yellow Original Ink Cartridge</li><li><strong>Оригинальность:</strong> Оригинал</li><li><strong>Ресурс:</strong> 1 650</li><li><strong>Технология печати:</strong> Лазерная</li><li><strong>Тип:</strong> Картридж</li><li><strong>Цвет:</strong> Жёлтый</li></ul>
-<!-- Оплата и доставка -->
-<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><div style="background:#FFF6E5; border:1px solid #F1E2C6; padding:12px 14px; border-radius:0; text-align:left;"><h3 style="margin:0 0 8px; font-size:17px;">Оплата</h3><ul style="margin:0; padding-left:18px;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000;"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul><hr style="border:none; border-top:1px solid #E7D6B7; margin:12px 0;" /><h3 style="margin:0 0 8px; font-size:17px;">Доставка по Алматы и Казахстану</h3><ul style="margin:0; padding-left:18px;"><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul></div></div>]]></description>
-<param name="Для бренда">HP</param>
-<param name="Коды">4S6Y1PE</param>
-<param name="Модель">938e EvoMore Yellow Original Ink Cartridge</param>
-<param name="Оригинальность">Оригинал</param>
-<param name="Ресурс">1 650</param>
-<param name="Технология печати">Лазерная</param>
-<param name="Тип">Картридж</param>
-<param name="Цвет">Жёлтый</param>
-<keywords>HP, Картридж HP 938e EvoMore Yellow Original Ink Cartridge (4S6Y1PE) (оригинал), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP13871452" available="true">
@@ -20928,6 +21070,33 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Модель">Pro 16 PC16250</param>
 <param name="Тип">Ноутбук</param>
 <keywords>Dell, Ноутбук Dell Pro 16 PC16250 (BTO121_PC16250_EMEA_210-BQHB), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+</offer>
+
+<offer id="CP13873127" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13873127</vendorCode>
+<name>Комплект переноса HP LaserJet Managed 220V Fuser Kit: 225k (3WT88MC)</name>
+<price>120900</price>
+<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
+<vendor>HP</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+<!-- Наименование товара -->
+<h3>Комплект переноса HP LaserJet Managed 220V Fuser Kit: 225k (3WT88MC)</h3>
+<!-- Описание -->
+<p>расходный материал HP Комплект переноса HP LaserJet Managed 220V Fuser Kit: 225k код — 3WT88MC.</p>
+<!-- WhatsApp -->
+<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
+<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
+<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
+<h3>Характеристики</h3><ul><li><strong>Для бренда:</strong> HP</li><li><strong>Коды:</strong> 3WT88MC</li><li><strong>Модель:</strong> Комплект переноса HP LaserJet Managed 220V Fuser Kit: 225k</li><li><strong>Тип:</strong> Расходный материал</li></ul>
+<!-- Оплата и доставка -->
+<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><div style="background:#FFF6E5; border:1px solid #F1E2C6; padding:12px 14px; border-radius:0; text-align:left;"><h3 style="margin:0 0 8px; font-size:17px;">Оплата</h3><ul style="margin:0; padding-left:18px;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000;"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul><hr style="border:none; border-top:1px solid #E7D6B7; margin:12px 0;" /><h3 style="margin:0 0 8px; font-size:17px;">Доставка по Алматы и Казахстану</h3><ul style="margin:0; padding-left:18px;"><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul></div></div>]]></description>
+<param name="Для бренда">HP</param>
+<param name="Коды">3WT88MC</param>
+<param name="Модель">Комплект переноса HP LaserJet Managed 220V Fuser Kit: 225k</param>
+<param name="Тип">Расходный материал</param>
+<keywords>HP, Комплект переноса HP LaserJet Managed 220V Fuser Kit: 225k (3WT88MC), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP13873166" available="true">

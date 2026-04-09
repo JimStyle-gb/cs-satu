@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<yml_catalog date="2026-04-09 12:14:28">
+<yml_catalog date="2026-04-09 16:07:29">
 <shop><offers>
 <!--FEED_META
 Поставщик                                  | ComPortal
 URL поставщика                             | https://www.comportal.kz/auth/documents/prices/yml-catalog.php
-Время сборки (Алматы)                      | 2026-04-09 12:14:28
+Время сборки (Алматы)                      | 2026-04-09 16:07:29
 Ближайшая сборка (Алматы)                  | 2026-04-10 03:00:00
-Сколько товаров у поставщика до фильтра    | 1194
-Сколько товаров у поставщика после фильтра | 594
-Сколько товаров есть в наличии (true)      | 594
+Сколько товаров у поставщика до фильтра    | 1199
+Сколько товаров у поставщика после фильтра | 599
+Сколько товаров есть в наличии (true)      | 599
 Сколько товаров нет в наличии (false)      | 0
 -->
 
@@ -3165,48 +3165,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Оригинальность">Оригинал</param>
 </offer>
 
-<offer id="CP11338591" available="true">
-<categoryId></categoryId>
-<vendorCode>CP11338591</vendorCode>
-<name>Картридж HP DesignJet (3ED70A) (оригинал)</name>
-<price>19917</price>
-<picture>https://www.comportal.kz/upload/iblock/927/v4ni2xzbm89tkuj0jjf125ooess03w5x.JPG</picture>
-<vendor>HP</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Оригинальный картридж HP DesignJet коды — 3ED70A / №712; цвет — Чёрный; объём — 38; технология печати — Струйная.]]></description>
-<param name="Тип">Картридж</param>
-<param name="Модель">DesignJet</param>
-<param name="Цвет">Чёрный</param>
-<param name="Технология печати">Струйная</param>
-<param name="Номер">№712</param>
-<param name="Объём">38</param>
-<param name="Коды">3ED70A</param>
-<param name="Для бренда">HP</param>
-<param name="Оригинальность">Оригинал</param>
-</offer>
-
-<offer id="CP11307176" available="true">
-<categoryId></categoryId>
-<vendorCode>CP11307176</vendorCode>
-<name>Картридж HP DesignJet (3ED71A) (оригинал)</name>
-<price>32297</price>
-<picture>https://www.comportal.kz/upload/iblock/e3c/ri40wohvvmoaz2fvgew6snb88vl273am.JPG</picture>
-<vendor>HP</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Оригинальный картридж HP DesignJet коды — 3ED71A / №712; цвет — Чёрный; объём — 80; технология печати — Струйная.]]></description>
-<param name="Тип">Картридж</param>
-<param name="Модель">DesignJet</param>
-<param name="Цвет">Чёрный</param>
-<param name="Технология печати">Струйная</param>
-<param name="Номер">№712</param>
-<param name="Объём">80</param>
-<param name="Коды">3ED71A</param>
-<param name="Для бренда">HP</param>
-<param name="Оригинальность">Оригинал</param>
-</offer>
-
 <offer id="CP11411676" available="true">
 <categoryId></categoryId>
 <vendorCode>CP11411676</vendorCode>
@@ -3639,6 +3597,26 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Частота обновления">60</param>
 <param name="Коды">210-AYJF</param>
 <param name="Для бренда">Dell</param>
+</offer>
+
+<offer id="CP13858211" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13858211</vendorCode>
+<name>Картридж HP CF300AH (CF300AH) (оригинал)</name>
+<price>70306</price>
+<picture>https://www.comportal.kz/upload/iblock/5df/qlvev1ndpkvkon8hortt2cpdswd0geko.JPG</picture>
+<vendor>HP</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Оригинальный картридж HP CF300AH код — CF300AH; цвет — Чёрный; ресурс — 29 500; технология печати — Лазерная.]]></description>
+<param name="Тип">Картридж</param>
+<param name="Модель">CF300AH</param>
+<param name="Цвет">Чёрный</param>
+<param name="Технология печати">Лазерная</param>
+<param name="Ресурс">29 500</param>
+<param name="Коды">CF300AH</param>
+<param name="Для бренда">HP</param>
+<param name="Оригинальность">Оригинал</param>
 </offer>
 
 <offer id="CP13846254" available="true">
@@ -5188,6 +5166,32 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Максимальное разрешение">2560x1440</param>
 <param name="Диагональ">27</param>
 <param name="Коды">UM.HX2EE.Z01</param>
+<param name="Для бренда">Acer</param>
+</offer>
+
+<offer id="CP13816864" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13816864</vendorCode>
+<name>Монитор Acer Vero V227QBbiv (UM.WV7EE.B11)</name>
+<price>40095</price>
+<picture>https://www.comportal.kz/upload/iblock/263/26397a3d892539f4574132a8dd926fb9.JPG</picture>
+<vendor>Acer</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Монитор. Модельная серия: Vero V227QBbiv. Диагональ: 21.45. Максимальное разрешение: 1920x1080. Тип матрицы: VA. Время отклика: 4. Порты: 1xVGA + 1xHDMI(1.4). Гарантия: 12 мес.]]></description>
+<param name="Тип">Монитор</param>
+<param name="Модель">Vero V227QBbiv</param>
+<param name="Порты">1xVGA + 1xHDMI(1.4)</param>
+<param name="Тип матрицы">VA</param>
+<param name="Цвет">Чёрный</param>
+<param name="Гарантия">12 мес</param>
+<param name="Контрастность">3000:1</param>
+<param name="Яркость">250</param>
+<param name="Время отклика">4</param>
+<param name="Максимальное разрешение">1920x1080</param>
+<param name="Углы обзора (вертикальный/горизонтальный)">178/178</param>
+<param name="Диагональ">21.45</param>
+<param name="Коды">UM.WV7EE.B11</param>
 <param name="Для бренда">Acer</param>
 </offer>
 
@@ -6835,6 +6839,30 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Для бренда">HP</param>
 </offer>
 
+<offer id="CP13843630" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13843630</vendorCode>
+<name>МФУ HP LaserJet M141cw</name>
+<price>65906</price>
+<picture>https://www.comportal.kz/upload/iblock/7bf/etowcudhkqkhoddozt1dxotyd586qoxh.JPG</picture>
+<vendor>HP</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+МФУ. Формат печати: A4. Разрешение: 600x600. Скорость печати ч/б: 18. Порты: USB. Технология печати: Лазерная. Гарантия: 12 мес.]]></description>
+<param name="Тип">МФУ</param>
+<param name="Модель">LaserJet M141cw</param>
+<param name="Гарантия">12 мес</param>
+<param name="Разрешение">600x600</param>
+<param name="Формат печати">A4</param>
+<param name="Скорость печати ч/б">18</param>
+<param name="Технология печати">Лазерная</param>
+<param name="Порты">USB</param>
+<param name="Функция">Принтер-Сканер(без АПД)-Копир</param>
+<param name="Наличие картриджа (тонера) в комплекте">Полный</param>
+<param name="Нагрузка">8 000</param>
+<param name="Для бренда">HP</param>
+</offer>
+
 <offer id="CP13843637" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13843637</vendorCode>
@@ -7651,6 +7679,46 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Для бренда">Eaton</param>
 </offer>
 
+<offer id="CP13858841" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13858841</vendorCode>
+<name>Картридж HP CF301AH (CF301AH) (оригинал)</name>
+<price>313308</price>
+<picture>https://www.comportal.kz/upload/iblock/250/o2k26fv0037o28kcmlva7rinp2diblum.JPG</picture>
+<vendor>HP</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Оригинальный картридж HP CF301AH код — CF301AH; цвет — Синий; ресурс — 32 000; технология печати — Лазерная.]]></description>
+<param name="Тип">Картридж</param>
+<param name="Модель">CF301AH</param>
+<param name="Цвет">Синий</param>
+<param name="Технология печати">Лазерная</param>
+<param name="Ресурс">32 000</param>
+<param name="Коды">CF301AH</param>
+<param name="Для бренда">HP</param>
+<param name="Оригинальность">Оригинал</param>
+</offer>
+
+<offer id="CP13858842" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13858842</vendorCode>
+<name>Картридж HP CF302AH (CF302AH) (оригинал)</name>
+<price>313308</price>
+<picture>https://www.comportal.kz/upload/iblock/205/e9caqhzlrs93ksgy4cs0nbizg0squ2uv.JPG</picture>
+<vendor>HP</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Оригинальный картридж HP CF302AH код — CF302AH; цвет — Жёлтый; ресурс — 32 000; технология печати — Лазерная.]]></description>
+<param name="Тип">Картридж</param>
+<param name="Модель">CF302AH</param>
+<param name="Цвет">Жёлтый</param>
+<param name="Технология печати">Лазерная</param>
+<param name="Ресурс">32 000</param>
+<param name="Коды">CF302AH</param>
+<param name="Для бренда">HP</param>
+<param name="Оригинальность">Оригинал</param>
+</offer>
+
 <offer id="CP13859894" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13859894</vendorCode>
@@ -8338,6 +8406,25 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Для бренда">Dell</param>
 <param name="Модель">Vostro 3530</param>
 <param name="Коды">210-BGLW-N1601PVNB3530EMEA01_UBU</param>
+</offer>
+
+<offer id="CP13864290" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13864290</vendorCode>
+<name>Картридж HP CF303AH / 827H Contract Original Toner Cartridge (CF303AH) (оригинал)</name>
+<price>313303</price>
+<picture>https://www.comportal.kz/upload/iblock/ec7/tcx99u4a3dj1tq8yvmmynf98hu6bkxle.JPG</picture>
+<vendor>HP</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Оригинальный картридж HP CF303AH / 827H Contract Original Toner Cartridge код — CF303AH; цвет — Пурпурный; технология печати — Лазерная.]]></description>
+<param name="Тип">Картридж</param>
+<param name="Модель">CF303AH / 827H Contract Original Toner Cartridge</param>
+<param name="Цвет">Пурпурный</param>
+<param name="Технология печати">Лазерная</param>
+<param name="Коды">CF303AH</param>
+<param name="Для бренда">HP</param>
+<param name="Оригинальность">Оригинал</param>
 </offer>
 
 <offer id="CP13864621" available="true">
@@ -9494,6 +9581,28 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Для бренда">Acer</param>
 </offer>
 
+<offer id="CP13869284" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13869284</vendorCode>
+<name>Плоттер HP DesignJet T630 (5HB09D#B19)</name>
+<price>296842</price>
+<picture>https://www.comportal.kz/upload/iblock/8ac/bdcbv4jymc5jfzz2nqlnm92nj2x18l1n.jpg</picture>
+<vendor>HP</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Широкоформатный принтер. Формат печати: 24”. Разрешение: 2400x1200. Порты: Gigabit Ethernet (1000Base-T)/USB 2.0/Wi-Fi 802.11a b/g n/Wi-Fi Direct. Технология печати: Струйная. Гарантия: 12 мес.]]></description>
+<param name="Тип">Широкоформатный принтер</param>
+<param name="Модель">DesignJet T630</param>
+<param name="Порты">Gigabit Ethernet (1000Base-T)/USB 2.0/Wi-Fi 802.11a b/g n/Wi-Fi Direct</param>
+<param name="Гарантия">12 мес</param>
+<param name="Технология печати">Струйная</param>
+<param name="Разрешение">2400x1200</param>
+<param name="Формат печати">24”</param>
+<param name="Функции">Принтер копир сканер</param>
+<param name="Коды">5HB09D#B19</param>
+<param name="Для бренда">HP</param>
+</offer>
+
 <offer id="CP13870600" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13870600</vendorCode>
@@ -9976,7 +10085,7 @@ URL поставщика                             | https://www.comportal.kz/
 <categoryId></categoryId>
 <vendorCode>CP13869690</vendorCode>
 <name>Печатающая головка Canon CH-41R (4653C001) (оригинал)</name>
-<price>9544</price>
+<price>9588</price>
 <picture>https://www.comportal.kz/upload/iblock/42f/ea6s4skuxsfjul0t0bxlian6y3aqkb63.jpg</picture>
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
@@ -10250,6 +10359,29 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Формат печати">A1+</param>
 <param name="Коды">6238C003</param>
 <param name="Для бренда">Canon</param>
+</offer>
+
+<offer id="CP13870349" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13870349</vendorCode>
+<name>Плоттер HP DesignJet T630 36 (5HB11D#B19)</name>
+<price>476793</price>
+<picture>https://www.comportal.kz/upload/iblock/29f/35eqzfn0y8g9ciy6uuwraswuv0rh19ad.jpg</picture>
+<vendor>HP</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Широкоформатный принтер. Формат печати: A1. Разрешение: 2400x1200. Скорость печати ч/б: 30. Порты: Gigabit Ethernet (1000Base-T), высокоскоростной порт USB 2.0, Wi-Fi 802.11a b/g n, Wi-Fi Direct. Технология печати: Струйная. Гарантия: 12 мес.]]></description>
+<param name="Тип">Широкоформатный принтер</param>
+<param name="Модель">DesignJet T630 36</param>
+<param name="Порты">Gigabit Ethernet (1000Base-T), высокоскоростной порт USB 2.0, Wi-Fi 802.11a b/g n, Wi-Fi Direct</param>
+<param name="Гарантия">12 мес</param>
+<param name="Технология печати">Струйная</param>
+<param name="Разрешение">2400x1200</param>
+<param name="Формат печати">A1</param>
+<param name="Скорость печати ч/б">30</param>
+<param name="Функции">принтер</param>
+<param name="Коды">5HB11D#B19</param>
+<param name="Для бренда">HP</param>
 </offer>
 
 <offer id="CP13869884" available="true">
@@ -11425,6 +11557,32 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Для бренда">Dell</param>
 </offer>
 
+<offer id="CP13871380" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13871380</vendorCode>
+<name>Монитор Dell 27 Plus 4K Monitor-S2725QS (210-BQWM)</name>
+<price>158495</price>
+<picture>https://www.comportal.kz/upload/iblock/86a/69jcnclz7uoi22v6lfvliwlx07nk8ba8.JPG</picture>
+<vendor>Dell</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Монитор. Диагональ: 27. Максимальное разрешение: 3840x2160. Тип матрицы: IPS. Частота обновления: 120. Время отклика: 8. Порты: 2 HDMI ports (HDCP 1.4 & 2.3) (Supports up to UHD 3840 x 2160, 120 Hz, FRL, HDR, VRR as per specified in HDMI 2.1)/1 DisplayPort 1.4 (HDCP 1.4 & 2.3) port (Supports up to UHD 3840 x 2160, 120 Hz). Гарантия: 36 мес.]]></description>
+<param name="Тип">Монитор</param>
+<param name="Модель">S2725QS</param>
+<param name="Порты">2 HDMI ports (HDCP 1.4 &amp; 2.3) (Supports up to UHD 3840 x 2160, 120 Hz, FRL, HDR, VRR as per specified in HDMI 2.1)/1 DisplayPort 1.4 (HDCP 1.4 &amp; 2.3) port (Supports up to UHD 3840 x 2160, 120 Hz)</param>
+<param name="Тип матрицы">IPS</param>
+<param name="Гарантия">36 мес</param>
+<param name="Контрастность">1500:1</param>
+<param name="Яркость">350</param>
+<param name="Время отклика">8</param>
+<param name="Максимальное разрешение">3840x2160</param>
+<param name="Наличие динамиков">Speakers</param>
+<param name="Диагональ">27</param>
+<param name="Частота обновления">120</param>
+<param name="Коды">210-BQWM</param>
+<param name="Для бренда">Dell</param>
+</offer>
+
 <offer id="CP13870899" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13870899</vendorCode>
@@ -12165,66 +12323,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Гарантия">24 мес</param>
 <param name="Коды">BVX900LI</param>
 <param name="Для бренда">APC</param>
-</offer>
-
-<offer id="CP13871259" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13871259</vendorCode>
-<name>Картридж HP 938e EvoMore Black Original Ink Cartridge (4S6Y2PE) (оригинал)</name>
-<price>35695</price>
-<picture>https://www.comportal.kz/upload/iblock/bd0/70uqcp1zbb7rfyvwnujp92sv9yj2yqe4.jpg</picture>
-<vendor>HP</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Оригинальный картридж HP 938e EvoMore Black Original Ink Cartridge код — 4S6Y2PE; цвет — Чёрный; ресурс — 2 500; технология печати — Лазерная.]]></description>
-<param name="Тип">Картридж</param>
-<param name="Модель">938e EvoMore Black Original Ink Cartridge</param>
-<param name="Цвет">Чёрный</param>
-<param name="Технология печати">Лазерная</param>
-<param name="Ресурс">2 500</param>
-<param name="Коды">4S6Y2PE</param>
-<param name="Для бренда">HP</param>
-<param name="Оригинальность">Оригинал</param>
-</offer>
-
-<offer id="CP13871260" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13871260</vendorCode>
-<name>Картридж HP 938e EvoMore Magenta Original Ink Cartridge (4S6Y0PE) (оригинал)</name>
-<price>23687</price>
-<picture>https://www.comportal.kz/upload/iblock/c9b/64gjm69zcvzksp39msiycv85ihrlstsl.jpg</picture>
-<vendor>HP</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Оригинальный картридж HP 938e EvoMore Magenta Original Ink Cartridge код — 4S6Y0PE; цвет — Пурпурный; ресурс — 1 650; технология печати — Лазерная.]]></description>
-<param name="Тип">Картридж</param>
-<param name="Модель">938e EvoMore Magenta Original Ink Cartridge</param>
-<param name="Цвет">Пурпурный</param>
-<param name="Технология печати">Лазерная</param>
-<param name="Ресурс">1 650</param>
-<param name="Коды">4S6Y0PE</param>
-<param name="Для бренда">HP</param>
-<param name="Оригинальность">Оригинал</param>
-</offer>
-
-<offer id="CP13871262" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13871262</vendorCode>
-<name>Картридж HP 938e EvoMore Yellow Original Ink Cartridge (4S6Y1PE) (оригинал)</name>
-<price>23687</price>
-<picture>https://www.comportal.kz/upload/iblock/814/kcsc60o0ny45bsr5l25730cnyrsffgjy.jpg</picture>
-<vendor>HP</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Оригинальный картридж HP 938e EvoMore Yellow Original Ink Cartridge код — 4S6Y1PE; цвет — Жёлтый; ресурс — 1 650; технология печати — Лазерная.]]></description>
-<param name="Тип">Картридж</param>
-<param name="Модель">938e EvoMore Yellow Original Ink Cartridge</param>
-<param name="Цвет">Жёлтый</param>
-<param name="Технология печати">Лазерная</param>
-<param name="Ресурс">1 650</param>
-<param name="Коды">4S6Y1PE</param>
-<param name="Для бренда">HP</param>
-<param name="Оригинальность">Оригинал</param>
 </offer>
 
 <offer id="CP13871452" available="true">
@@ -14669,6 +14767,22 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Для бренда">Dell</param>
 <param name="Модель">Pro 16 PC16250</param>
 <param name="Коды">BTO121_PC16250_EMEA_210-BQHB</param>
+</offer>
+
+<offer id="CP13873127" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13873127</vendorCode>
+<name>Комплект переноса HP LaserJet Managed 220V Fuser Kit: 225k (3WT88MC)</name>
+<price>104113</price>
+<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
+<vendor>HP</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+расходный материал HP Комплект переноса HP LaserJet Managed 220V Fuser Kit: 225k код — 3WT88MC.]]></description>
+<param name="Тип">Расходный материал</param>
+<param name="Коды">3WT88MC</param>
+<param name="Модель">Комплект переноса HP LaserJet Managed 220V Fuser Kit: 225k</param>
+<param name="Для бренда">HP</param>
 </offer>
 
 <offer id="CP13873166" available="true">
