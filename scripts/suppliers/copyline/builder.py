@@ -1,23 +1,18 @@
 # -*- coding: utf-8 -*-
 """
 Path: scripts/suppliers/copyline/builder.py
-CopyLine builder layer.
 
-Что изменено в этой версии:
-- builder больше не кормит extractor narrative-cleaned текстом;
-- для extraction используется отдельный very-light `extract_desc`;
-- для показа используется отдельный `display_desc`;
-- поддержаны новые source-каналы:
-  - raw_desc
-  - raw_desc_pairs
-  - raw_table_params
-- сохранена backward-safe совместимость со старым payload:
-  - desc
-  - params
+CopyLine Builder — supplier-layer сборка clean raw offers.
 
-Главная идея:
-- text-for-data и text-for-display больше не смешиваются;
-- главный extractor работает по `extract_desc`, а не по `cleaned_desc`.
+Что делает:
+- собирает raw offer из normalized basics, params, compat и pictures;
+- разводит text-for-data и text-for-display;
+- сохраняет backward-safe поддержку старого payload.
+
+Что не делает:
+- не переносит supplier-specific repairs в shared core;
+- не заменяет source/params/compat-слой;
+- не строит final shared HTML description.
 """
 
 from __future__ import annotations
