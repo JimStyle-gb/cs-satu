@@ -77,28 +77,20 @@ _CONSUMABLE_PREFIXES = (
     "Экономичный набор",
 )
 
-
 # -----------------------------
 # Низкоуровневые helper-ы
 # -----------------------------
 
-
 def _norm_spaces(text: str) -> str:
     return _WS_RE.sub(" ", (text or "").strip())
-
-
 
 def _plain(text: str) -> str:
     text = _TAG_RE.sub(" ", text or "")
     text = _BRACKET_RE.sub(" ", text)
     return _norm_spaces(text)
 
-
-
 def _cf(text: str) -> str:
     return _plain(text).casefold().replace("ё", "е")
-
-
 
 def _dedupe_keep_order(items: Iterable[str]) -> List[str]:
     out: List[str] = []
@@ -114,8 +106,6 @@ def _dedupe_keep_order(items: Iterable[str]) -> List[str]:
         out.append(x)
     return out
 
-
-
 def _split_tokens(value: str) -> List[str]:
     raw = _plain(value)
     if not raw:
@@ -129,13 +119,9 @@ def _split_tokens(value: str) -> List[str]:
         out.append(x)
     return _dedupe_keep_order(out)
 
-
-
 def _is_consumable_name(name: str) -> bool:
     src = _norm_spaces(name)
     return any(src.startswith(p) for p in _CONSUMABLE_PREFIXES)
-
-
 
 def _looks_like_device_phrase(text: str) -> bool:
     s = _cf(text)
@@ -146,8 +132,6 @@ def _looks_like_device_phrase(text: str) -> bool:
         "ecotank", "workforce", "expression", "surecolor", "laserjet",
         "pixma", "imageclass", "dcp", "mfc", "l3150", "l3250", "l8050",
     ))
-
-
 
 def _clean_noise_prefixes(text: str) -> str:
     x = _norm_spaces(text)
@@ -160,8 +144,6 @@ def _clean_noise_prefixes(text: str) -> str:
     y = re.sub(r"\b(?:модель|модели|серия|series)\b\s*:?", " ", y, flags=re.IGNORECASE)
     y = _norm_spaces(y.strip(" ,;:-"))
     return y
-
-
 
 def _titleish_device(text: str) -> str:
     x = _norm_spaces(text)
@@ -178,11 +160,9 @@ def _titleish_device(text: str) -> str:
             words.append(token[:1].upper() + token[1:])
     return _norm_spaces(" ".join(words))
 
-
 # -----------------------------
 # Коды
 # -----------------------------
-
 
 def extract_codes_from_text(*texts: Optional[str]) -> List[str]:
     found: List[str] = []
@@ -192,8 +172,6 @@ def extract_codes_from_text(*texts: Optional[str]) -> List[str]:
         for m in _CODE_RE.finditer(text):
             found.append(m.group(0).upper())
     return _dedupe_keep_order(found)
-
-
 
 def extract_primary_code_from_name(name: str) -> str:
     src = _norm_spaces(name)
@@ -205,23 +183,16 @@ def extract_primary_code_from_name(name: str) -> str:
     codes = extract_codes_from_text(src)
     return codes[0] if codes else ""
 
-
-
 def clean_codes_value(value: str) -> str:
     codes = extract_codes_from_text(value)
     return ", ".join(codes)
 
-
-
-
 _RE_PRIMARY_CONSUMABLE_CODE = re.compile(r"(?iu)\bC(?:11|12|13|33)[A-Z0-9]{5,10}\b")
 _RE_SECONDARY_T_CODE = re.compile(r"(?iu)\bT[0-9A-Z]{5,10}\b")
-
 
 def pick_name_primary_code(name: str) -> str:
     m = _RE_PRIMARY_CONSUMABLE_CODE.search(_clean_text(name))
     return _clean_text(m.group(0)).upper() if m else ""
-
 
 def pick_secondary_t_code(name: str, desc: str, primary: str) -> str:
     joined = " / ".join([_clean_text(name), _clean_text(desc)]).upper()
@@ -251,7 +222,6 @@ def pick_secondary_t_code(name: str, desc: str, primary: str) -> str:
 
     return ""
 
-
 def should_force_consumable_model(current_model: str, primary_code: str, name: str) -> bool:
     cur = _clean_text(current_model).upper()
     if not primary_code:
@@ -268,12 +238,9 @@ def should_force_consumable_model(current_model: str, primary_code: str, name: s
         return True
     return False
 
-
-
 # -----------------------------
 # Совместимость / Для устройства
 # -----------------------------
-
 
 def _split_compat_chunks(value: str) -> List[str]:
     text = _clean_noise_prefixes(value)
@@ -293,13 +260,9 @@ def _split_compat_chunks(value: str) -> List[str]:
             out.append(_titleish_device(item))
     return _dedupe_keep_order(out)
 
-
-
 def clean_compat_value(value: str) -> str:
     items = _split_compat_chunks(value)
     return ", ".join(items)
-
-
 
 def clean_device_value(value: str) -> str:
     items = _split_compat_chunks(value)
@@ -307,9 +270,6 @@ def clean_device_value(value: str) -> str:
         x = _titleish_device(_clean_noise_prefixes(value))
         return x
     return ", ".join(items)
-
-
-
 
 # -----------------------------
 # Consumable device normalization / extraction
@@ -340,14 +300,11 @@ _RE_ECOTANK_MODEL = re.compile(r"(?iu)\b(?:Epson\s+)?EcoTank\s+[A-Z0-9-]+\b")
 _RE_STYLUS_MODEL = re.compile(r"(?iu)\b(?:Epson\s+)?Stylus(?:\s+Pro)?\s+[A-Z0-9-]+\b")
 _RE_GENERIC_EPS_MODEL = re.compile(r"(?iu)\b(?:WF|SC|ET|L)-?[A-Z0-9]{2,}\b")
 
-
 def _dedupe_text_items(items: Iterable[str]) -> List[str]:
     return _dedupe_keep_order(items)
 
-
 def _clean_text(value: object) -> str:
     return _norm_spaces(str(value or ""))
-
 
 def _title_eps_family(value: str) -> str:
     v = _clean_text(value)
@@ -360,7 +317,6 @@ def _title_eps_family(value: str) -> str:
     v = re.sub(r"(?iu)\bstylus\b", "Stylus", v)
     v = re.sub(r"(?iu)\bw/?o\s*stand\b", "", v)
     return _clean_text(v)
-
 
 def extract_models_from_text(text: str) -> str:
     src = _clean_text(text)
@@ -385,7 +341,6 @@ def extract_models_from_text(text: str) -> str:
                 items.append(f"Epson {token}")
 
     return " / ".join(_dedupe_text_items([x for x in items if x]))
-
 
 def extract_explicit_epson_devices(text: str) -> str:
     src = _clean_text(text)
@@ -413,7 +368,6 @@ def extract_explicit_epson_devices(text: str) -> str:
                 items.append(f"Epson EcoTank {token}")
 
     return " / ".join(_dedupe_text_items([x for x in items if x]))
-
 
 def extract_direct_epson_device_list(text: str) -> str:
     src = _clean_text(text)
@@ -452,7 +406,6 @@ def extract_direct_epson_device_list(text: str) -> str:
                 items.append(f"Epson EcoTank ET-{t}")
 
     return " / ".join(_dedupe_text_items([x for x in items if x]))
-
 
 def normalize_consumable_device_value(value: str) -> str:
     src = _clean_text(value)
@@ -495,7 +448,6 @@ def normalize_consumable_device_value(value: str) -> str:
     cleaned = _dedupe_text_items(parts)
     return " / ".join(cleaned) if cleaned else ""
 
-
 def looks_generic_device_value(value: str) -> bool:
     low = _cf(value)
     if not low:
@@ -503,7 +455,6 @@ def looks_generic_device_value(value: str) -> bool:
     if any(x in low for x in ["широкоформатный принтер", "принтер", "мфу", "фотопечать", "устройств epson"]):
         return True
     return not bool(_RE_DEVICE_MODEL.search(value))
-
 
 def normalize_epson_device_list(value: str) -> str:
     src = _clean_text(value)
@@ -519,7 +470,6 @@ def normalize_epson_device_list(value: str) -> str:
     models = extract_models_from_text(src) or src
     parts = _dedupe_text_items([_clean_text(x) for x in re.split(r"\s*/\s*", models) if _clean_text(x)])
     return " / ".join(parts)
-
 
 def extract_consumable_device_candidate(name: str, desc: str) -> str:
     text = _clean_text(desc)
@@ -556,7 +506,6 @@ def extract_consumable_device_candidate(name: str, desc: str) -> str:
 
     return ""
 
-
 def normalize_consumable_device_params(params: Sequence[Tuple[str, str]], *, kind: str) -> List[Tuple[str, str]]:
     if kind != "consumable" or not params:
         return list(params or [])
@@ -588,15 +537,12 @@ def normalize_consumable_device_params(params: Sequence[Tuple[str, str]], *, kin
 # Сборка supplier-side cleanup
 # -----------------------------
 
-
 def _get_param(params: Sequence[Tuple[str, str]], key: str) -> str:
     key_cf = key.casefold()
     for k, v in params:
         if (k or "").casefold() == key_cf and (v or "").strip():
             return _norm_spaces(v)
     return ""
-
-
 
 def _set_param(params: Sequence[Tuple[str, str]], key: str, value: str) -> List[Tuple[str, str]]:
     out: List[Tuple[str, str]] = []
@@ -614,13 +560,9 @@ def _set_param(params: Sequence[Tuple[str, str]], key: str, value: str) -> List[
         out.append((key, clean_value))
     return out
 
-
-
 def _drop_param(params: Sequence[Tuple[str, str]], key: str) -> List[Tuple[str, str]]:
     key_cf = key.casefold()
     return [(k, v) for k, v in params if (k or "").casefold() != key_cf]
-
-
 
 def reconcile_consumable_params(
     params: Sequence[Tuple[str, str]],
@@ -683,8 +625,6 @@ def reconcile_consumable_params(
 
     return out
 
-
-
 def reconcile_params(
     params: Sequence[Tuple[str, str]],
     *,
@@ -694,7 +634,6 @@ def reconcile_params(
 ) -> List[Tuple[str, str]]:
     """Общая точка входа для builder.py."""
     return reconcile_consumable_params(params, name=name, model=model, kind=kind)
-
 
 __all__ = [
     "extract_codes_from_text",
