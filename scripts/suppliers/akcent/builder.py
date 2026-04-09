@@ -52,16 +52,12 @@ from suppliers.akcent.normalize import (
 from suppliers.akcent.params import collect_xml_params, detect_kind_by_name, resolve_allowed_keys
 from suppliers.akcent.pictures import collect_picture_urls
 
-
 _RE_WS = re.compile(r"\s+")
-
 
 _RE_DROP_CONSUMABLE_DESC_LINE = re.compile(
     r"(?iu)\b(?:поддерживаемые\s+модели(?:\s+принтеров|\s+устройств|\s+техники)?|"
     r"совместимые\s+модели(?:\s+техники)?|совместимые\s+продукты(?:\s+для)?|для)\s*:"
 )
-
-
 
 _RE_INLINE_SUPPLIER_HEADER = re.compile(
     r"(?iu)^(?:основные\s+преимущества|общие\s+характеристики|общие\s+характерстики)\s*:\s*"
@@ -71,7 +67,6 @@ _ORIGINALITY_PARAM_NAME = "Оригинальность"
 _NAME_ORIGINALITY_SUFFIX_RE = re.compile(r"\s*\((?:оригинал|совместимый)\)\s*$", re.I)
 _DESC_ORIGINALITY_HEAD_RE = re.compile(r"(?iu)^\s*(?:Оригинальн(?:ый|ая|ое|ые)|Совместим(?:ый|ая|ое|ые))")
 
-
 def _param_value(params: list[tuple[str, str]], key: str) -> str:
     key_cf = _clean_text(key).casefold().replace("ё", "е")
     for k, v in params or []:
@@ -80,7 +75,6 @@ def _param_value(params: list[tuple[str, str]], key: str) -> str:
             return _clean_text(v)
     return ""
 
-
 def _original_consumable_prefix(subject: str) -> str:
     low = _clean_text(subject).casefold().replace("ё", "е")
     if "емкость" in low or "ёмкость" in low:
@@ -88,7 +82,6 @@ def _original_consumable_prefix(subject: str) -> str:
     if low == "чернила":
         return "Оригинальные"
     return "Оригинальный"
-
 
 def _color_phrase(color_value: str) -> str:
     color = _clean_text(color_value)
@@ -102,7 +95,6 @@ def _color_phrase(color_value: str) -> str:
     if low.endswith("ое"):
         return f"{color[:-2]}ого цвета"
     return f"{color} цвета"
-
 
 def _build_consumable_short_desc(params: list[tuple[str, str]]) -> str:
     type_value = _clean_text(_param_value(params, "Тип") or "Расходный материал")
@@ -151,7 +143,6 @@ def _build_consumable_short_desc(params: list[tuple[str, str]]) -> str:
 
     return _clean_text(parts[-1]).strip(". ") + "."
 
-
 def _normalize_consumable_device_value(value: str) -> str:
     src = _clean_text(value)
     if not src:
@@ -171,7 +162,6 @@ def _normalize_consumable_device_value(value: str) -> str:
         out.append(item)
     return " / ".join(out)
 
-
 def _drop_consumable_device_narrative(clean_desc: str, params: list[tuple[str, str]], *, kind: str) -> str:
     text = _clean_text(clean_desc)
     if kind != "consumable" or not text:
@@ -185,7 +175,6 @@ def _drop_consumable_device_narrative(clean_desc: str, params: list[tuple[str, s
     if text.casefold().replace("ё", "е") == device_value.casefold().replace("ё", "е"):
         return ""
     return text
-
 
 def _looks_wrong_ink_color_text(text: str, params: list[tuple[str, str]]) -> bool:
     color = _cf(_param_value(params, "Цвет"))
@@ -208,7 +197,6 @@ def _looks_wrong_ink_color_text(text: str, params: list[tuple[str, str]]) -> boo
     if has_any(["cyan", "циан", "голуб"]) and not any(x in color for x in ["cyan", "циан", "голуб"]):
         return True
     return False
-
 
 def _soften_consumable_body(clean_desc: str, params: list[tuple[str, str]], *, kind: str) -> str:
     text = _drop_consumable_device_narrative(clean_desc, params, kind=kind)
@@ -243,7 +231,6 @@ def _soften_consumable_body(clean_desc: str, params: list[tuple[str, str]], *, k
 
     return text
 
-
 def _tail_after_model(name: str, model: str) -> str:
     s = _clean_text(name)
     m = _clean_text(model)
@@ -256,10 +243,8 @@ def _tail_after_model(name: str, model: str) -> str:
     tail = re.sub(r"(?u)\bТ(?=\d)", "T", tail)
     return tail
 
-
 def _waste_tank_generic_second_sentence() -> str:
     return "Контейнер предназначен для сбора отработанных чернил и заменяется после уведомления принтера."
-
 
 def _device_sentence_from_params(params: list[tuple[str, str]]) -> str:
     device_value = _normalize_consumable_device_value(
@@ -268,7 +253,6 @@ def _device_sentence_from_params(params: list[tuple[str, str]]) -> str:
     if not device_value:
         return ""
     return _clean_text(f"Подходит для устройств: {device_value}.")
-
 
 def _finalize_waste_tank_desc(desc: str, name: str, params: list[tuple[str, str]]) -> str:
     text = _clean_text(desc)
@@ -352,7 +336,6 @@ def _finalize_waste_tank_desc(desc: str, name: str, params: list[tuple[str, str]
         text += "."
     return text
 
-
 def _infer_consumable_type(name: str, desc: str, current_type: str) -> str:
     low = _cf(" ".join([name, desc, current_type]))
     name_cf = _cf(name)
@@ -366,7 +349,6 @@ def _infer_consumable_type(name: str, desc: str, current_type: str) -> str:
         return "Чернила"
     return _clean_text(current_type)
 
-
 def _normalize_print_type_value(value: str) -> str:
     low = _cf(value)
     mapping = {
@@ -377,7 +359,6 @@ def _normalize_print_type_value(value: str) -> str:
         "термосублимационный": "Термосублимационная",
     }
     return mapping.get(low, _clean_text(value))
-
 
 def _set_single_param(params: list[tuple[str, str]], key: str, value: str) -> list[tuple[str, str]]:
     kcf = _cf(key)
@@ -394,7 +375,6 @@ def _set_single_param(params: list[tuple[str, str]], key: str, value: str) -> li
     if not placed and v:
         out.append((key, v))
     return out
-
 
 def _repair_consumable_params(params: list[tuple[str, str]], *, name: str, desc: str, kind: str) -> list[tuple[str, str]]:
     if kind != "consumable":
@@ -485,10 +465,8 @@ def _repair_consumable_params(params: list[tuple[str, str]], *, name: str, desc:
 def _clean_text(value: Any) -> str:
     return norm_ws(str(value or ""))
 
-
 def _cf(value: Any) -> str:
     return _clean_text(value).casefold().replace("ё", "е")
-
 
 def _get_field(obj: Any, *names: str) -> Any:
     for name in names:
@@ -497,7 +475,6 @@ def _get_field(obj: Any, *names: str) -> Any:
         if hasattr(obj, name):
             return getattr(obj, name)
     return None
-
 
 def _get_offer_el(src: Any) -> ET.Element | None:
     el = _get_field(src, "offer_el", "el", "xml_offer")
@@ -554,7 +531,6 @@ def _read_price_triplet(src: Any) -> tuple[str, str, str]:
 
     return dealer, price, rrp
 
-
 def _read_warranty_values(src: Any) -> list[str]:
     values: list[str] = []
     for raw in (
@@ -593,7 +569,6 @@ def _read_warranty_values(src: Any) -> list[str]:
         out.append(value)
     return out
 
-
 def _append_unique_param(out: list[tuple[str, str]], seen: set[tuple[str, str]], key: str, value: str) -> None:
     k = _clean_text(key)
     v = _clean_text(value)
@@ -605,7 +580,6 @@ def _append_unique_param(out: list[tuple[str, str]], seen: set[tuple[str, str]],
     seen.add(item)
     out.append(item)
 
-
 def _first_value(params: Iterable[tuple[str, str]], key: str) -> str:
     key_cf = _cf(key)
     for k, v in params:
@@ -613,10 +587,8 @@ def _first_value(params: Iterable[tuple[str, str]], key: str) -> str:
             return _clean_text(v)
     return ""
 
-
 def _has_key(params: Iterable[tuple[str, str]], key: str) -> bool:
     return bool(_first_value(params, key))
-
 
 def _merge_params(
     xml_params: list[tuple[str, str]],
@@ -658,7 +630,6 @@ def _merge_params(
 
     return out
 
-
 def _ensure_default_params(
     params: list[tuple[str, str]],
     *,
@@ -681,9 +652,6 @@ def _ensure_default_params(
         _append_unique_param(out, seen, "Для бренда", vendor)
 
     return out
-
-
-
 
 def _dedupe_type_params(params: list[tuple[str, str]]) -> list[tuple[str, str]]:
     """
@@ -753,7 +721,6 @@ def _dedupe_type_params(params: list[tuple[str, str]]) -> list[tuple[str, str]]:
         out.append(item)
     return out
 
-
 def _filter_allowed(params: list[tuple[str, str]], allow_keys: set[str]) -> list[tuple[str, str]]:
     if not allow_keys:
         return params
@@ -768,7 +735,6 @@ def _filter_allowed(params: list[tuple[str, str]], allow_keys: set[str]) -> list
             continue
         _append_unique_param(out, seen, k, v)
     return out
-
 
 def _render_extra_info(extra_info: list[tuple[str, str]], *, limit: int = 12) -> str:
     items: list[str] = []
@@ -789,11 +755,9 @@ def _merge_native_desc(clean_desc: str, extra_info: list[tuple[str, str]]) -> st
         return f"{base}\n\n{extra_block}"
     return base or extra_block
 
-
 def _has_param_ci(params: list[tuple[str, str]], key: str) -> bool:
     want = norm_ws(key).casefold()
     return any(norm_ws(k).casefold() == want for k, _ in params)
-
 
 def _upsert_param(params: list[tuple[str, str]], key: str, value: str) -> list[tuple[str, str]]:
     want = norm_ws(key).casefold()
@@ -810,10 +774,8 @@ def _upsert_param(params: list[tuple[str, str]], key: str, value: str) -> list[t
         cleaned.append((key, value))
     return cleaned
 
-
 def _strip_originality_suffix(name: str) -> str:
     return norm_ws(_NAME_ORIGINALITY_SUFFIX_RE.sub("", norm_ws(name)))
-
 
 def _detect_consumable_type_label(name: str, params: list[tuple[str, str]]) -> str:
     type_from_param = ""
@@ -856,7 +818,6 @@ def _detect_consumable_type_label(name: str, params: list[tuple[str, str]]) -> s
             return label
     return "Расходный материал"
 
-
 def _build_originality_sentence(status: str, type_label: str) -> str:
     tl = norm_ws(type_label) or "Расходный материал"
     tl_cf = tl.casefold().replace("ё", "е")
@@ -888,7 +849,6 @@ def _build_originality_sentence(status: str, type_label: str) -> str:
         return compatible_map.get(tl_cf, f"Совместимый {tl.lower()}.")
     return ""
 
-
 def _is_consumable_for_originality(src: Any, name: str, params: list[tuple[str, str]]) -> bool:
     _ = src
     title_low = norm_ws(name).casefold().replace("ё", "е")
@@ -905,12 +865,10 @@ def _is_consumable_for_originality(src: Any, name: str, params: list[tuple[str, 
     )
     return any(x in hay for x in needles)
 
-
 def _detect_consumable_originality(src: Any, name: str, params: list[tuple[str, str]]) -> str:
     if not _is_consumable_for_originality(src, name, params):
         return ""
     return "original"
-
 
 def _apply_consumable_originality(name: str, params: list[tuple[str, str]], native_desc: str, status: str) -> tuple[str, list[tuple[str, str]], str]:
     if status not in {"original", "compatible"}:
@@ -929,7 +887,6 @@ def _apply_consumable_originality(name: str, params: list[tuple[str, str]], nati
         elif not _DESC_ORIGINALITY_HEAD_RE.match(desc_out):
             desc_out = f"{sentence} {desc_out}"
     return name_out, params_out, desc_out
-
 
 def _build_single_offer(
     src: Any,
@@ -1084,7 +1041,6 @@ def _build_single_offer(
         "used_placeholder_picture": bool(pictures and len(pictures) == 1 and pictures[0] == placeholder_picture),
     }
     return offer, info
-
 
 def build_offers(
     filtered_offers: list[Any],
