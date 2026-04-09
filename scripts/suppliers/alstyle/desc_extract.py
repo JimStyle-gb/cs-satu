@@ -2,19 +2,16 @@
 """
 Path: scripts/suppliers/alstyle/desc_extract.py
 
-AlStyle supplier layer — extraction params из description.
+AlStyle description extraction layer.
 
 Что делает:
-- извлекает безопасные поля из cleaned description;
-- готовит body и spec-pairs для builder;
-- чистит грязные compatibility-candidates.
+- извлекает только допустимые supplier-поля из title/body;
+- не подменяет главный params extractor;
 
 Что не делает:
-- не генерирует данные из воздуха;
-- не строит final HTML description;
-- не подменяет supplier params pipeline.
+- не придумывает данные из воздуха;
+- не заменяет supplier params layer.
 """
-
 from __future__ import annotations
 
 import re
