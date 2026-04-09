@@ -1,16 +1,17 @@
 # -*- coding: utf-8 -*-
 """
+Path: scripts/cs/keywords.py
+
 CS Keywords — общий сборщик <keywords>.
 
-Файл не зависит от cs.core.py и использует единые shared-хелперы из cs.util.
-Роли модуля:
-- сборка итоговой строки <keywords>
-- дедупликация токенов со стабильным порядком
-- ограничение длины keywords
-- общий гео-хвост по Казахстану
+Роль файла:
+- собирает итоговую строку <keywords>;
+- делает дедупликацию токенов со стабильным порядком;
+- ограничивает длину keywords;
+- добавляет общий гео-хвост по Казахстану.
 
 Важно:
-- fix_mixed_cyr_lat и norm_ws импортируются из cs.util — это единый источник правды;
+- fix_mixed_cyr_lat и norm_ws импортируются из cs.util;
 - имена импортов сохранены на уровне модуля для backward compatibility.
 """
 
@@ -48,6 +49,10 @@ CS_KEYWORDS_PHRASES = (
 )
 
 
+# -----------------------------
+# Внутренние helper'ы
+# -----------------------------
+
 def _dedup_keep_order(items: list[str]) -> list[str]:
     """Дедупликация со стабильным порядком без сортировки."""
     seen: set[str] = set()
@@ -62,6 +67,10 @@ def _dedup_keep_order(items: list[str]) -> list[str]:
         out.append(item)
     return out
 
+
+# -----------------------------
+# Public API
+# -----------------------------
 
 def build_keywords(
     vendor: str | None,
