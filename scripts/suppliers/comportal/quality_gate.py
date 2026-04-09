@@ -2,21 +2,17 @@
 """
 Path: scripts/suppliers/comportal/quality_gate.py
 
-ComPortal quality gate.
+ComPortal Quality Gate — проверка raw и final результата поставщика.
 
-Роль файла:
-- проверяет final feed после supplier-layer и shared core;
-- пишет единый quality gate отчёт через shared cs.qg_report writer;
-- разделяет blocking и report-only cosmetic tails.
+Что делает:
+- считает critical и cosmetic issue-паттерны;
+- сравнивает результат с baseline;
+- готовит данные для общего quality gate report writer.
 
-Что файл делает:
-- ловит critical классы вроде empty_vendor / empty_price / supplier_vendor_leak;
-- сохраняет placeholder_picture как допустимый known cosmetic tail;
-- отдельно подсвечивает name/picture хвосты, которые стоит добивать в supplier-layer.
-
-Что файл НЕ делает:
-- не чинит normalize/builder/pictures;
-- не тащит supplier-specific repair логику в quality gate.
+Что не делает:
+- не меняет supplier offers;
+- не подменяет shared validators;
+- не строит финальный XML/YML.
 """
 
 from __future__ import annotations
