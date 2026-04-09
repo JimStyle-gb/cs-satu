@@ -2,14 +2,17 @@
 """
 Path: scripts/suppliers/alstyle/params.py
 
-XML params pipeline для AlStyle.
-Только cleanup родных XML <param>.
+AlStyle supplier layer — cleanup XML params.
 
-v125:
-- сохраняет текущий post-clean для Совместимость / Модель / Ёмкость;
-- добавляет страховку для мусорных вариантов ключа Мощность (Bt/Bт/Вt);
-- жёстко режет служебные marketplace-ключи, чтобы они не ехали в raw/final;
-- не меняет core и не меняет общую selective-clean логику.
+Что делает:
+- чистит родные XML params;
+- нормализует ключи и значения;
+- готовит supplier params для raw offer.
+
+Что не делает:
+- не выполняет final XML-рендер;
+- не содержит shared-core policy;
+- не строит final description.
 """
 
 from __future__ import annotations
@@ -20,7 +23,6 @@ from typing import Any
 
 from cs.util import norm_ws
 from suppliers.alstyle.compat import clean_compatibility_text, dedupe_code_series_text, sanitize_param_value
-
 
 _RE_HAS_LETTER = re.compile(r"[A-Za-zА-Яа-яЁё]")
 _RE_LETTER_SLASH_LETTER = re.compile(r"([A-Za-zА-Яа-яЁё])\s*/\s*([A-Za-zА-Яа-яЁё])")
@@ -66,7 +68,6 @@ _MARKETPLACE_KEY_RE = re.compile(
     r"(?iu)(?:^\(?\s*маркетплейсы\s*\)?|\bмаркетплейсы\b|\bсклад\s+отгрузки\b|\bожидаемая\s+дата\s+прихода\b|\bожидаемое\s+количество\s+прихода\b)"
 )
 
-
 def key_quality_ok(k: str, *, require_letter: bool, max_len: int, max_words: int) -> bool:
     kk = norm_ws(k)
     if not kk:
@@ -78,7 +79,6 @@ def key_quality_ok(k: str, *, require_letter: bool, max_len: int, max_words: int
     if max_words and len(kk.split()) > int(max_words):
         return False
     return True
-
 
 def normalize_warranty_to_months(v: str) -> str:
     vv = norm_ws(v)
@@ -97,7 +97,6 @@ def normalize_warranty_to_months(v: str) -> str:
         return f"{int(m.group(1))} мес"
     return vv
 
-
 def normalize_tech_value(v: str) -> str:
     s = norm_ws(v)
     if not s:
@@ -108,7 +107,6 @@ def normalize_tech_value(v: str) -> str:
     s = re.sub(r"(?iu)\bFull\s*HD\b", "Full HD", s)
     s = re.sub(r"(?iu)\bANSI\s*люмен\b", "ANSI люмен", s)
     return norm_ws(s)
-
 
 def _strip_trailing_compat_garbage(s: str) -> str:
     out = norm_ws(s)
@@ -121,7 +119,6 @@ def _strip_trailing_compat_garbage(s: str) -> str:
         out = _DANGLING_BRAND_TAIL_RE.sub("", out).strip()
         out = _DANGLING_CONNECTOR_RE.sub("", out).strip()
     return norm_ws(out.strip(" ;,.-"))
-
 
 def _normalize_color_word(word: str) -> str:
     low = norm_ws(word).casefold().replace("ё", "е")
@@ -152,7 +149,6 @@ def _normalize_color_word(word: str) -> str:
             return clean
     return norm_ws(word)
 
-
 def _post_clean_color_xml_value(v: str) -> str:
     s = norm_ws(v).strip(" ;,.-")
     if not s:
@@ -172,7 +168,6 @@ def _post_clean_color_xml_value(v: str) -> str:
         return ""
     return s
 
-
 def _post_clean_technology_xml_value(v: str) -> str:
     s = norm_ws(v).strip(" ;,.-")
     if not s:
@@ -188,7 +183,6 @@ def _post_clean_technology_xml_value(v: str) -> str:
         return norm_ws(m.group(1))
     return ""
 
-
 def _post_clean_resource_xml_value(v: str) -> str:
     s = norm_ws(v).strip(" ;,.-")
     if not s:
@@ -199,7 +193,6 @@ def _post_clean_resource_xml_value(v: str) -> str:
     if _RESOURCE_NUMBER_ONLY_RE.fullmatch(s):
         return s
     return ""
-
 
 def _post_clean_compat_xml_value(v: str) -> str:
     s = norm_ws(v)
@@ -213,7 +206,6 @@ def _post_clean_compat_xml_value(v: str) -> str:
 
     return norm_ws(s.strip(" ;,.-"))
 
-
 def _post_clean_model_xml_value(v: str) -> str:
     s = dedupe_code_series_text(norm_ws(v).strip(" ;,.-"))
     if not s:
@@ -224,7 +216,6 @@ def _post_clean_model_xml_value(v: str) -> str:
         s = s.rstrip(") ")
     return norm_ws(s)
 
-
 def _post_clean_capacity_xml_value(v: str) -> str:
     s = norm_ws(v).strip(" ;,.-")
     if not s:
@@ -234,7 +225,6 @@ def _post_clean_capacity_xml_value(v: str) -> str:
     if not _CAPACITY_VALID_RE.search(s):
         return ""
     return s
-
 
 def _post_clean_xml_value(key: str, val: str) -> str:
     kcf = norm_ws(key).casefold()
@@ -251,7 +241,6 @@ def _post_clean_xml_value(key: str, val: str) -> str:
     if kcf in {"ёмкость", "емкость", "ёмкость лотка", "емкость лотка"}:
         return _post_clean_capacity_xml_value(val)
     return norm_ws(val)
-
 
 def apply_value_normalizers(key: str, val: str, schema: dict[str, Any]) -> str:
     v = norm_ws(val)
@@ -290,7 +279,6 @@ def apply_value_normalizers(key: str, val: str, schema: dict[str, Any]) -> str:
         v = re.sub(r"(?iu)\b(\d+(?:,\d+)?)\s+Гбит\s*/?\s*с\b", r"\1 Гбит/с", v)
         v = re.sub(r"(?iu)\b(\d+)\s*[xх×]\s*(\d+)\s*Вт\b", r"\1 × \2 Вт", v)
     return norm_ws(v)
-
 
 def collect_xml_params(offer_el: ET.Element, schema: dict[str, Any]) -> list[tuple[str, str]]:
     drop = {str(x).casefold() for x in (schema.get("drop_keys_casefold") or [])}
@@ -346,7 +334,6 @@ def collect_xml_params(offer_el: ET.Element, schema: dict[str, Any]) -> list[tup
         out.append((k, v2))
 
     return out
-
 
 # Backward-compatible aliases for already split stages.
 _key_quality_ok = key_quality_ok
