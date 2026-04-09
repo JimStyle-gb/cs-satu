@@ -2,19 +2,16 @@
 """
 Path: scripts/suppliers/alstyle/models.py
 
-AlStyle Models — внутренние carrier-модели поставщика.
+AlStyle models layer.
 
 Что делает:
-- держит dataclass-контракты между source, filtering, builder и diagnostics;
-- хранит только структуры данных supplier-layer;
-- упрощает типовой обмен данными внутри адаптера.
+- держит carrier-структуры supplier-layer;
+- задаёт контракт между source, filtering, builder и diagnostics;
 
 Что не делает:
-- не содержит supplier-business логики;
-- не знает о final HTML и shared core rendering;
-- не подменяет normalize, compat и builder.
+- не содержит бизнес-логики;
+- не хранит regex или repair-эвристики.
 """
-
 from __future__ import annotations
 
 from dataclasses import dataclass, field
