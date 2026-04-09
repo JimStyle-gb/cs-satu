@@ -2,19 +2,16 @@
 """
 Path: scripts/suppliers/akcent/filtering.py
 
-AkCent Filtering — жёсткая фильтрация входного потока.
+AkCent filtering layer.
 
 Что делает:
-- пропускает только товары с разрешёнными name-prefixes;
-- режет article-исключения и отдельные drop-case'ы;
-- возвращает filtered list и подробный report для diagnostics/orchestrator.
+- держит supplier-layer правила фильтрации;
+- собирает стабильный filter_report для build summary;
 
 Что не делает:
-- не нормализует supplier-поля;
-- не строит raw OfferOut;
-- не переносит supplier-specific правила в shared core.
+- не строит final offers;
+- не переносит supplier-правила в shared core.
 """
-
 from __future__ import annotations
 
 from collections import Counter
