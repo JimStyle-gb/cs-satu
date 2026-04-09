@@ -2,10 +2,17 @@
 """
 Path: scripts/suppliers/comportal/models.py
 
-Внутренние модели supplier layer для ComPortal.
-Архитектурно — тот же тип слоя, что и у готовых поставщиков:
-- dataclass-модели для source/builder/diagnostics;
-- без бизнес-логики.
+ComPortal Models — внутренние carrier-модели поставщика.
+
+Что делает:
+- держит dataclass-контракты между source, filtering, builder и diagnostics;
+- хранит только структуры данных supplier-layer;
+- упрощает типовой обмен данными внутри адаптера.
+
+Что не делает:
+- не содержит supplier-business логики;
+- не знает о final HTML и shared core rendering;
+- не подменяет normalize, compat и builder.
 """
 
 from __future__ import annotations
@@ -13,14 +20,12 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from typing import Any
 
-
 @dataclass(slots=True)
 class ParamItem:
-    """Один source param."""
+    """Один исходный param."""
     name: str
     value: str
     source: str = "xml"
-
 
 @dataclass(slots=True)
 class CategoryRecord:
@@ -30,7 +35,6 @@ class CategoryRecord:
     parent_id: str = ""
     path: str = ""
     root_id: str = ""
-
 
 @dataclass(slots=True)
 class SourceOffer:
@@ -55,7 +59,6 @@ class SourceOffer:
     params: list[ParamItem] = field(default_factory=list)
     offer_el: Any | None = None
 
-
 @dataclass(slots=True)
 class BuildStats:
     """Базовая supplier-статистика сборки."""
@@ -65,7 +68,6 @@ class BuildStats:
     missing_picture_count: int = 0
     placeholder_picture_count: int = 0
     empty_vendor_count: int = 0
-
 
 __all__ = [
     "ParamItem",
