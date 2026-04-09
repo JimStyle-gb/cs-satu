@@ -2,16 +2,15 @@
 """
 Path: scripts/suppliers/vtt/models.py
 
-VTT Models — carrier-модели supplier-layer.
+VTT models layer.
 
 Что делает:
-- держит dataclass-структуры supplier-layer;
-- задаёт типовой контракт между source, filtering, builder и diagnostics.
+- держит carrier-структуры supplier-layer;
+- задаёт контракт между source, filtering, builder и diagnostics;
 
 Что не делает:
-- не содержит бизнес-логику;
-- не хранит supplier-specific regex или repair-эвристики;
-- не заменяет normalize/source/builder слой.
+- не содержит бизнес-логики;
+- не хранит regex или repair-эвристики.
 """
 from __future__ import annotations
 
