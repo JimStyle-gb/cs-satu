@@ -2,19 +2,16 @@
 """
 Path: scripts/suppliers/copyline/builder.py
 
-CopyLine Builder — supplier-layer сборка clean raw offers.
+CopyLine builder layer.
 
 Что делает:
-- собирает raw offer из normalized basics, params, compat и pictures;
-- разводит text-for-data и text-for-display;
-- сохраняет backward-safe поддержку старого payload.
+- собирает clean raw offers supplier-layer;
+- не подменяет shared core final rendering;
 
 Что не делает:
-- не переносит supplier-specific repairs в shared core;
-- не заменяет source/params/compat-слой;
-- не строит final shared HTML description.
+- не хранит shared final rules;
+- не подменяет shared description/keywords/writer.
 """
-
 from __future__ import annotations
 
 import re
@@ -27,7 +24,6 @@ from suppliers.copyline.desc_extract import extract_desc_params
 from suppliers.copyline.normalize import normalize_source_basics
 from suppliers.copyline.params import extract_page_params
 from suppliers.copyline.pictures import full_only_if_present, prefer_full_product_pictures
-
 
 BRAND_HINTS: tuple[tuple[str, str], ...] = (
     (r"\bKonica[- ]?Minolta\b", "Konica-Minolta"),
@@ -84,13 +80,11 @@ _COPYLINE_BAD_CONSUMABLE_DESC_RE = re.compile(
 _TITLE_AFTERMARKET_BRAND_RE = re.compile(r"(?iu)\b(Europrint(?:\s+Business)?|Hi-Black)\b")
 _TITLE_RESOURCE_RE = re.compile(r"(?iu)\b(\d+(?:[.,]\d+)?)\s*(мл|ml|k)\b")
 
-
 # ----------------------------- basic helpers -----------------------------
 
 def safe_str(x: object) -> str:
     """Безопасно привести значение к строке."""
     return str(x).strip() if x is not None else ""
-
 
 def _norm_spaces(text: str) -> str:
     """Лёгкая нормализация текста без narrative-cleaning."""
@@ -100,13 +94,11 @@ def _norm_spaces(text: str) -> str:
     s = re.sub(r"\n{3,}", "\n\n", s)
     return s.strip()
 
-
 def _mk_oid(sku: str) -> str:
     """Стабильный OID по supplier SKU."""
     sku = safe_str(sku)
     sku = re.sub(r"[^A-Za-z0-9\-\._/]", "", sku)
     return "CL" + sku
-
 
 def _merge_params(*blocks: Sequence[Tuple[str, str]]) -> list[Tuple[str, str]]:
     """Мягко склеить param-блоки без дублей."""
@@ -125,7 +117,6 @@ def _merge_params(*blocks: Sequence[Tuple[str, str]]) -> list[Tuple[str, str]]:
             out.append((k, v))
     return out
 
-
 def _coerce_pairs(items: Iterable[object]) -> list[Tuple[str, str]]:
     """Нормализовать список сырых pair-элементов к (key, value)."""
     out: list[Tuple[str, str]] = []
@@ -141,7 +132,6 @@ def _coerce_pairs(items: Iterable[object]) -> list[Tuple[str, str]]:
         if key and value:
             out.append((key, value))
     return out
-
 
 def _build_extract_desc(raw_desc: str) -> str:
     """
@@ -174,14 +164,11 @@ def _build_extract_desc(raw_desc: str) -> str:
     s = re.sub(r"\n{3,}", "\n\n", s)
     return s.strip()
 
-
 def _is_numeric_model(value: str) -> bool:
     return bool(re.fullmatch(r"\d+", safe_str(value)))
 
-
 def _is_allowed_numeric_code(value: str) -> bool:
     return bool(re.fullmatch(r"016\d{6}", safe_str(value)))
-
 
 def _code_score(code: str) -> int:
     token = safe_str(code)
@@ -191,7 +178,6 @@ def _code_score(code: str) -> int:
     if _is_allowed_numeric_code(token):
         return 95
     return 10
-
 
 def _first_code_from_params(params: Sequence[Tuple[str, str]]) -> str:
     """Взять лучший код из уже собранных params."""
@@ -208,7 +194,6 @@ def _first_code_from_params(params: Sequence[Tuple[str, str]]) -> str:
                 best_code = part
     return best_code
 
-
 def _infer_vendor_from_text(text: str) -> str:
     """Грубый vendor-hint из текста."""
     hay = safe_str(text)
@@ -219,7 +204,6 @@ def _infer_vendor_from_text(text: str) -> str:
             return vendor
     return ""
 
-
 def _infer_vendor_from_compat(params: Sequence[Tuple[str, str]]) -> str:
     """Попытаться понять vendor по полю совместимости."""
     compat = ""
@@ -228,7 +212,6 @@ def _infer_vendor_from_compat(params: Sequence[Tuple[str, str]]) -> str:
             compat = safe_str(value)
             break
     return _infer_vendor_from_text(compat)
-
 
 def _drop_weak_params(params: Sequence[Tuple[str, str]]) -> list[Tuple[str, str]]:
     """Отфильтровать совсем слабые значения."""
@@ -243,7 +226,6 @@ def _drop_weak_params(params: Sequence[Tuple[str, str]]) -> list[Tuple[str, str]
             continue
         out.append((k, v))
     return out
-
 
 def _has_consumable_type(params: Sequence[Tuple[str, str]]) -> bool:
     """Понять, является ли товар расходником."""
@@ -265,10 +247,8 @@ def _has_consumable_type(params: Sequence[Tuple[str, str]]) -> bool:
     }
     return any(safe_str(key) == "Тип" and safe_str(value) in consumable_types for key, value in params)
 
-
 def _strip_originality_suffix(name: str) -> str:
     return safe_str(_NAME_ORIGINALITY_SUFFIX_RE.sub("", safe_str(name)))
-
 
 def _strip_originality_markers(text: str) -> str:
     s = safe_str(text)
@@ -282,7 +262,6 @@ def _strip_originality_markers(text: str) -> str:
     s = re.sub(r"\s+([,.;:])", r"\1", s)
     s = re.sub(r"([,.;:]){2,}", r"\1", s)
     return s.strip(" ,-–—")
-
 
 def _source_originality_haystack(page: dict, name: str, params: Sequence[Tuple[str, str]]) -> str:
     chunks: list[str] = [safe_str(name)]
@@ -302,7 +281,6 @@ def _source_originality_haystack(page: dict, name: str, params: Sequence[Tuple[s
             chunks.append(f"{k}: {v}")
     return "\n".join(x for x in chunks if x)
 
-
 def _upsert_param(params: Sequence[Tuple[str, str]], key: str, value: str) -> list[Tuple[str, str]]:
     want = safe_str(key).casefold()
     out: list[Tuple[str, str]] = []
@@ -318,12 +296,10 @@ def _upsert_param(params: Sequence[Tuple[str, str]], key: str, value: str) -> li
         out.append((key, value))
     return out
 
-
 _DESC_FIELD_START_RE = re.compile(
     r"(?iu)^(?:цвет|ресурс|технология(?:\s+печати)?|тип|партномер|модель|код(?:ы)?|совместимость|"
     r"для\s+бренда|гарантия|об[ъь]ем|объём|вес|номер|применение|количество)\s*:"
 )
-
 
 def _strip_leading_type_phrase(desc: str, type_label: str) -> str:
     d = safe_str(desc)
@@ -337,7 +313,6 @@ def _strip_leading_type_phrase(desc: str, type_label: str) -> str:
     rest = d[m.end():].lstrip(" .,:;()-–—")
     return safe_str(rest)
 
-
 def _merge_originality_sentence(sentence: str, desc: str, type_label: str) -> str:
     s = safe_str(sentence)
     d = _strip_leading_type_phrase(desc, type_label)
@@ -349,7 +324,6 @@ def _merge_originality_sentence(sentence: str, desc: str, type_label: str) -> st
         return f"{s} {d}" if s.endswith('.') else f"{s}. {d}"
     s_join = s[:-1] if s.endswith('.') else s
     return f"{s_join} {d}"
-
 
 def _detect_consumable_type_label(name: str, params: Sequence[Tuple[str, str]]) -> str:
     type_from_param = ""
@@ -402,7 +376,6 @@ def _detect_consumable_type_label(name: str, params: Sequence[Tuple[str, str]]) 
             return label
     return "Расходный материал"
 
-
 def _build_originality_sentence(status: str, type_label: str) -> str:
     tl = safe_str(type_label) or "Расходный материал"
     tl_cf = tl.casefold().replace("ё", "е")
@@ -446,7 +419,6 @@ def _build_originality_sentence(status: str, type_label: str) -> str:
         return compatible_map.get(tl_cf, f"Совместимый {tl.lower()}.")
     return ""
 
-
 def _is_consumable_for_originality(page: dict, name: str, params: Sequence[Tuple[str, str]]) -> bool:
     _ = page
     if _has_consumable_type(params):
@@ -467,7 +439,6 @@ def _is_consumable_for_originality(page: dict, name: str, params: Sequence[Tuple
     )
     return any(x in title_low for x in needles)
 
-
 def _detect_consumable_originality(page: dict, name: str, params: Sequence[Tuple[str, str]]) -> str:
     if not _is_consumable_for_originality(page, name, params):
         return ""
@@ -476,7 +447,6 @@ def _detect_consumable_originality(page: dict, name: str, params: Sequence[Tuple
     if _RAW_ORIGINAL_RE.search(hay):
         return "original"
     return "compatible"
-
 
 def _apply_consumable_originality(name: str, params: Sequence[Tuple[str, str]], native_desc: str, status: str) -> tuple[str, list[Tuple[str, str]], str]:
     if status not in {"original", "compatible"}:
@@ -496,7 +466,6 @@ def _apply_consumable_originality(name: str, params: Sequence[Tuple[str, str]], 
             desc_out = _merge_originality_sentence(sentence, desc_out, type_label)
     return name_out, params_out, desc_out
 
-
 def _get_param_ci(params: Sequence[Tuple[str, str]], *keys: str) -> str:
     wants = {safe_str(x).casefold() for x in keys if safe_str(x)}
     for k, v in params:
@@ -504,11 +473,9 @@ def _get_param_ci(params: Sequence[Tuple[str, str]], *keys: str) -> str:
             return safe_str(v)
     return ""
 
-
 def _title_aftermarket_brand(title: str) -> str:
     m = _TITLE_AFTERMARKET_BRAND_RE.search(safe_str(title))
     return safe_str(m.group(1)) if m else ""
-
 
 def _resource_from_title(title: str) -> str:
     m = _TITLE_RESOURCE_RE.search(safe_str(title))
@@ -522,10 +489,8 @@ def _resource_from_title(title: str) -> str:
         unit = 'K'
     return f"{num} {unit}".strip()
 
-
 def _is_consumable_seo_target(name: str, params: Sequence[Tuple[str, str]]) -> bool:
     return _detect_consumable_type_label(name, params) != "Расходный материал"
-
 
 def _looks_generic_consumable_desc(desc: str) -> bool:
     body = safe_str(desc)
@@ -536,7 +501,6 @@ def _looks_generic_consumable_desc(desc: str) -> bool:
     if _COPYLINE_BAD_CONSUMABLE_DESC_RE.search(body):
         return True
     return False
-
 
 def _build_consumable_seo_intro(name: str, vendor: str, params: Sequence[Tuple[str, str]], status: str) -> str:
     if status not in {"original", "compatible"}:
@@ -583,7 +547,6 @@ def _build_consumable_seo_intro(name: str, vendor: str, params: Sequence[Tuple[s
         return f"{first}."
     return f"{first} {'; '.join(extras)}."
 
-
 def _apply_consumable_seo_intro(name: str, vendor: str, params: Sequence[Tuple[str, str]], native_desc: str, status: str) -> str:
     body = safe_str(native_desc)
     if not _is_consumable_seo_target(name, params):
@@ -592,7 +555,6 @@ def _apply_consumable_seo_intro(name: str, vendor: str, params: Sequence[Tuple[s
         return body
     intro = _build_consumable_seo_intro(name, vendor, params, status)
     return intro or body
-
 
 # ----------------------------- resolve helpers -----------------------------
 
@@ -611,7 +573,6 @@ def _resolve_source_channels(page: dict) -> tuple[str, list[Tuple[str, str]], li
     raw_table_params = _coerce_pairs(page.get("raw_table_params") or [])
     legacy_params = _coerce_pairs(page.get("params") or [])
     return raw_desc, raw_desc_pairs, raw_table_params, legacy_params
-
 
 def _resolve_page_basics(page: dict, *, fallback_title: str) -> tuple[str, str, str, str, str, str, list[Tuple[str, str]]]:
     """
@@ -655,7 +616,6 @@ def _resolve_page_basics(page: dict, *, fallback_title: str) -> tuple[str, str, 
 
     return sku, title, vendor, model, extract_desc, display_desc, page_params_input
 
-
 def _repair_model_param(params: Sequence[Tuple[str, str]], model: str) -> list[Tuple[str, str]]:
     """Подстраховать `Модель` лучшим кодом, если там слабое значение."""
     merged = _merge_params(params, [("Модель", model)]) if model else list(params)
@@ -683,7 +643,6 @@ def _repair_model_param(params: Sequence[Tuple[str, str]], model: str) -> list[T
 
     return merged
 
-
 def _resolve_vendor(title: str, vendor: str, params: Sequence[Tuple[str, str]]) -> str:
     """Финально определить vendor по basics → compat → title."""
     resolved = safe_str(vendor)
@@ -692,7 +651,6 @@ def _resolve_vendor(title: str, vendor: str, params: Sequence[Tuple[str, str]]) 
     if not resolved:
         resolved = _infer_vendor_from_text(title)
     return resolved
-
 
 def _finalize_params(params: Sequence[Tuple[str, str]], vendor: str) -> list[Tuple[str, str]]:
     """Финальный supplier-side cleanup params."""
@@ -703,17 +661,14 @@ def _finalize_params(params: Sequence[Tuple[str, str]], vendor: str) -> list[Tup
     merged = reconcile_copyline_params(merged)
     return merged
 
-
 def _build_pictures(page: dict) -> list[str]:
     """Подготовить supplier pictures."""
     pictures = prefer_full_product_pictures(page.get("pics") or [])
     return full_only_if_present(pictures)
 
-
 def _resolve_available(_: dict) -> bool:
     """По текущему правилу проекта CopyLine всегда available=true."""
     return True
-
 
 # ----------------------------- main builder -----------------------------
 
