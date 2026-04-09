@@ -1,25 +1,18 @@
 # -*- coding: utf-8 -*-
 """
 Path: scripts/suppliers/copyline/source.py
-CopyLine source layer.
 
-Задача модуля:
-- скачать sitemap поставщика;
-- собрать product URLs;
-- распарсить карточку товара в сырой page-payload;
-- сохранить provenance сырья без ранней semantic-свёртки.
+CopyLine Source — supplier-layer загрузка и парсинг исходного сырья.
 
-В этом модуле НЕТ supplier-business логики:
-- нет фильтра по ассортименту;
-- нет нормализации vendor/model;
-- нет CS-обогащения;
-- нет выбора «какой источник параметров главнее».
+Что делает:
+- скачивает sitemap и собирает product URLs;
+- парсит карточку товара в сырой page-payload;
+- сохраняет provenance сырья без ранней semantic-свёртки.
 
-Важно:
-- source.py может делать low-level parsing HTML;
-- source.py не должен рано схлопывать происхождение фактов;
-- для backward-safe этапа сохраняем legacy-ключи desc/params,
-  но дополнительно отдаём raw_desc/raw_desc_pairs/raw_table_params.
+Что не делает:
+- не фильтрует ассортимент;
+- не нормализует vendor/model;
+- не принимает решение, какой источник параметров главнее.
 """
 
 from __future__ import annotations
