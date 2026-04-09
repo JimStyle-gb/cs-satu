@@ -32,7 +32,7 @@ from suppliers.alstyle.normalize import (
     normalize_price_in,
     normalize_vendor,
 )
-from suppliers.alstyle.params_xml import collect_xml_params
+from suppliers.alstyle.params import collect_xml_params
 from suppliers.alstyle.pictures import collect_picture_urls
 
 
