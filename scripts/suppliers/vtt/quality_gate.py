@@ -2,23 +2,18 @@
 """
 Path: scripts/suppliers/vtt/quality_gate.py
 
-VTT quality gate.
+VTT Quality Gate — quality gate-слой supplier-layer.
 
-Роль файла:
+Что делает:
 - проверяет final feed после supplier-layer и shared core;
 - разделяет blocking и allowed cosmetic tails;
 - пишет единый отчёт через shared cs.qg_report writer.
 
-Что файл делает:
-- ловит empty_vendor, oaicite leaks, decimal_k_resource;
-- сохраняет placeholder_picture как допустимый known cosmetic tail;
-- возвращает backward-safe QualityGateResult для build_vtt.py.
-
-Что файл НЕ делает:
+Что не делает:
 - не чинит raw feed;
-- не заменяет normalize/builder/pictures слой.
+- не заменяет normalize/builder/pictures слой;
+- не подменяет build orchestration.
 """
-
 from __future__ import annotations
 
 from collections import defaultdict
@@ -35,7 +30,6 @@ except Exception:  # pragma: no cover
 
 from cs.qg_report import write_quality_gate_report
 
-
 PLACEHOLDER_URL = "https://placehold.co/800x800/png?text=No+Photo"
 QUALITY_BASELINE_DEFAULT = "scripts/suppliers/vtt/config/quality_gate_baseline.yml"
 QUALITY_REPORT_DEFAULT = "docs/raw/vtt_quality_gate.txt"
@@ -43,7 +37,6 @@ _DECIMAL_K_RE = re.compile(r"^\d+(?:[.,]\d+)+K$", re.I)
 _WS_RE = re.compile(r"\s+")
 _RULES_EXCLUDED_FROM_ENFORCE = {"placeholder_picture"}
 _RULES_TREATED_AS_ALLOWED_KNOWN = {"placeholder_picture"}
-
 
 @dataclass(frozen=True)
 class QualityIssue:
@@ -53,7 +46,6 @@ class QualityIssue:
     name: str
     details: str
 
-
 @dataclass(frozen=True)
 class QualityGateResult:
     ok: bool
@@ -61,13 +53,11 @@ class QualityGateResult:
     critical_count: int
     cosmetic_count: int
 
-
 def _norm_ws(s: str) -> str:
     s2 = unescape(s or "")
     s2 = s2.replace("\u00a0", " ").strip()
     s2 = _WS_RE.sub(" ", s2).strip()
     return s2
-
 
 def _read_yaml(path: str | None) -> dict:
     if not path:
@@ -80,14 +70,12 @@ def _read_yaml(path: str | None) -> dict:
     except Exception:
         return {}
 
-
 def _write_yaml(path: str | None, data: dict) -> None:
     if not path or yaml is None:
         return
     p = Path(path)
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(yaml.safe_dump(data, allow_unicode=True, sort_keys=False), encoding="utf-8")
-
 
 def _offer_params(offer_el: ET.Element) -> dict[str, list[str]]:
     out: dict[str, list[str]] = defaultdict(list)
@@ -98,7 +86,6 @@ def _offer_params(offer_el: ET.Element) -> dict[str, list[str]]:
             out[k].append(v)
     return dict(out)
 
-
 def _make_issue(severity: str, rule: str, oid: str, name: str, details: str) -> QualityIssue:
     return QualityIssue(
         severity=severity,
@@ -107,7 +94,6 @@ def _make_issue(severity: str, rule: str, oid: str, name: str, details: str) -> 
         name=_norm_ws(name),
         details=_norm_ws(details),
     )
-
 
 def _detect_issues(feed_path: str) -> tuple[list[QualityIssue], int]:
     xml_path = Path(feed_path)
@@ -146,7 +132,6 @@ def _detect_issues(feed_path: str) -> tuple[list[QualityIssue], int]:
 
     return sorted(deduped.values(), key=lambda x: (x.severity, x.rule, x.oid, x.details)), offer_count
 
-
 def _load_cosmetic_baseline(baseline_path: str | None) -> dict[str, set[str]]:
     data = _read_yaml(baseline_path)
     raw = data.get("accepted_cosmetic") or {}
@@ -154,7 +139,6 @@ def _load_cosmetic_baseline(baseline_path: str | None) -> dict[str, set[str]]:
     for rule, oids in raw.items():
         out[str(rule)] = {str(x).strip() for x in (oids or []) if str(x).strip()}
     return out
-
 
 def _make_baseline_payload(cosmetic: list[QualityIssue]) -> dict:
     grouped: dict[str, list[str]] = defaultdict(list)
@@ -166,7 +150,6 @@ def _make_baseline_payload(cosmetic: list[QualityIssue]) -> dict:
     for rule in sorted(grouped):
         payload["accepted_cosmetic"][rule] = sorted(set(grouped[rule]))
     return payload
-
 
 def _write_report(
     path: str,
@@ -196,7 +179,6 @@ def _write_report(
         max_cosmetic_offers=int(max_cosmetic_offers),
         max_cosmetic_issues=int(max_cosmetic_issues),
     )
-
 
 def run_quality_gate(
 
