@@ -30,7 +30,7 @@ from suppliers.copyline.compat import reconcile_copyline_params
 from suppliers.copyline.desc_clean import clean_description
 from suppliers.copyline.desc_extract import extract_desc_params
 from suppliers.copyline.normalize import normalize_source_basics
-from suppliers.copyline.params_page import extract_page_params
+from suppliers.copyline.params import extract_page_params
 from suppliers.copyline.pictures import full_only_if_present, prefer_full_product_pictures
 
 
