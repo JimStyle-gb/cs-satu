@@ -2,19 +2,18 @@
 """
 Path: scripts/suppliers/vtt/builder.py
 
-VTT builder layer.
+VTT Builder — builder-слой supplier-layer.
 
-Patch focus v7:
-- сохранить явную supplier-policy выбора stable ID / vendorCode;
-- исправить регрессию: param "Артикул" нельзя выпускать в final,
-  он должен использоваться только как внутренний источник stable ID;
-- source priority для VTT:
-    1) явный article/SKU из params
-    2) clean part_number
-    3) clean display_part_number
-    4) raw sku
+Что делает:
+- собирает clean raw offers для shared core;
+- держит supplier-policy выбора stable ID / vendorCode;
+- использует compat / params / normalize / pictures для сборки raw offer.
+
+Что не делает:
+- не пишет final XML напрямую;
+- не переносит supplier-specific repair в shared core;
+- не заменяет source и quality gate слой.
 """
-
 from __future__ import annotations
 
 import re
@@ -44,7 +43,6 @@ from .normalize import (
     safe_str,
 )
 from .pictures import PLACEHOLDER, collect_picture_urls
-
 
 SKIP_PARAM_KEYS = {
     "Артикул",
@@ -171,7 +169,6 @@ _FOR_BRAND_PATTERNS = (
     (re.compile(r"(?iu)(?:^|\b)(?:для|for)\s+Minolta\b"), "Konica Minolta"),
 )
 
-
 def _canonical_vendor(value: str) -> str:
     s = norm_ws(value)
     if not s:
@@ -180,7 +177,6 @@ def _canonical_vendor(value: str) -> str:
         if s.casefold() == raw.casefold():
             return canon
     return s
-
 
 def _vendor_from_texts(*texts: str) -> str:
     hay = "\n".join([norm_ws(x) for x in texts if norm_ws(x)])
@@ -201,7 +197,6 @@ def _vendor_from_texts(*texts: str) -> str:
             return vendor
 
     return ""
-
 
 def _resolve_vendor(
     *,
@@ -240,7 +235,6 @@ def _resolve_vendor(
 
     return ""
 
-
 def _resolve_for_brand(*, vendor: str, title: str, compat: str) -> str:
     """Определить target printer brand для param 'Для бренда'.
 
@@ -264,7 +258,6 @@ def _resolve_for_brand(*, vendor: str, title: str, compat: str) -> str:
         if target and target.casefold() != "hi-black":
             return target
     return ""
-
 
 def _prefer_title_type(current_type: str, title: str) -> str:
     t = norm_ws(title).lower()
@@ -293,12 +286,10 @@ def _prefer_title_type(current_type: str, title: str) -> str:
             return canonical
     return current_type
 
-
 def _normalize_code_token(value: str) -> str:
     s = norm_ws(value).upper()
     s = s.replace(" ", "")
     return s
-
 
 def _primary_id_from_params(params: list[tuple[str, str]]) -> str:
     for key, value in params or []:
@@ -313,7 +304,6 @@ def _primary_id_from_params(params: list[tuple[str, str]]) -> str:
         if token:
             return token
     return ""
-
 
 def _select_stable_offer_code(*, raw_params: list[tuple[str, str]], raw_sku: str, part_number: str, display_part_number: str) -> str:
     from_params = _primary_id_from_params(raw_params)
@@ -335,7 +325,6 @@ def _select_stable_offer_code(*, raw_params: list[tuple[str, str]], raw_sku: str
         return sku
 
     return ""
-
 
 def _merge_params(
     raw: dict,
@@ -421,7 +410,6 @@ def _merge_params(
 
     return out
 
-
 def _strip_tail_noise(title_no_suffix: str) -> str:
     changed = True
     t = title_no_suffix
@@ -437,7 +425,6 @@ def _strip_tail_noise(title_no_suffix: str) -> str:
         t = re.sub(r"(?:,\s*|\s+)(?:bk|c|m|y|cl|ml|lc|lm)\s*$", "", t, flags=re.I).strip(" ,")
         changed = t != before
     return t
-
 
 def _repair_known_titles(title_no_suffix: str, compat: str) -> str:
     t = norm_ws(title_no_suffix)
@@ -484,7 +471,6 @@ def _repair_known_titles(title_no_suffix: str, compat: str) -> str:
 
     return t
 
-
 _ORIGINALITY_PARAM_NAME = "Оригинальность"
 _ORIGINALITY_MARK_RE = re.compile(r"(?iu)\(\s*[OО]\s*\)")
 _DESC_ORIGINALITY_HEAD_RE = re.compile(r"(?iu)^\s*(?:Оригинальн(?:ый|ая|ое)|Совместим(?:ый|ая|ое))\b")
@@ -497,10 +483,8 @@ _DESC_FIELD_LABEL_RE = re.compile(
     r"технология(?:\s+печати)?|коды\s+расходников|для\s+бренда)\s*:"
 )
 
-
 def _strip_originality_suffix(name: str) -> str:
     return re.sub(r"\s*\((?:оригинал|совместимый)\)\s*$", "", norm_ws(name), flags=re.I).strip()
-
 
 def _apply_originality_suffix(name: str, status: str) -> str:
     base_name = _strip_originality_suffix(name)
@@ -509,7 +493,6 @@ def _apply_originality_suffix(name: str, status: str) -> str:
     if status == "compatible":
         return f"{base_name} (совместимый)"
     return base_name
-
 
 def _strip_leading_type_phrase(text: str, type_label: str) -> str:
     src = norm_ws(text)
@@ -522,12 +505,10 @@ def _strip_leading_type_phrase(text: str, type_label: str) -> str:
         return src
     return norm_ws(src[m.end():].lstrip(" .,:;()-–—"))
 
-
 def _contains_token(hay: str, needle: str) -> bool:
     h = norm_ws(hay).casefold()
     n = norm_ws(needle).casefold()
     return bool(h and n and n in h)
-
 
 def _append_intro_field(parts: list[str], label: str, value: str, *, seen_text: str) -> None:
     val = norm_ws(value)
@@ -536,7 +517,6 @@ def _append_intro_field(parts: list[str], label: str, value: str, *, seen_text: 
     if _contains_token(seen_text, val):
         return
     parts.append(f"{label} — {val}")
-
 
 def _desc_needs_seo_intro(desc: str) -> bool:
     d = norm_ws(desc)
@@ -548,7 +528,6 @@ def _desc_needs_seo_intro(desc: str) -> bool:
     if field_hits >= 2 and d.count(";") >= 2 and len(d) <= 280:
         return True
     return False
-
 
 def _build_consumable_seo_intro(
     *,
@@ -589,7 +568,6 @@ def _build_consumable_seo_intro(
         intro += "."
     return intro
 
-
 def _upsert_param(params: list[tuple[str, str]], key: str, value: str) -> list[tuple[str, str]]:
     out: list[tuple[str, str]] = []
     inserted = False
@@ -604,7 +582,6 @@ def _upsert_param(params: list[tuple[str, str]], key: str, value: str) -> list[t
     if not inserted and norm_ws(value):
         out.append((key, value))
     return out
-
 
 def _detect_consumable_type_label(name: str, type_name: str, params: list[tuple[str, str]]) -> str:
     title_cf = norm_ws(name).casefold()
@@ -655,7 +632,6 @@ def _detect_consumable_type_label(name: str, type_name: str, params: list[tuple[
         return "Бункер для отработанного тонера"
 
     return norm_ws(type_name) or "Расходный материал"
-
 
 def _build_originality_sentence(status: str, type_label: str) -> str:
     tl = norm_ws(type_label)
@@ -720,7 +696,6 @@ def _build_originality_sentence(status: str, type_label: str) -> str:
         return compatible_map.get(tl_cf, f"Совместимый {tl.lower()}." if tl else "Совместимый расходный материал.")
     return ""
 
-
 def _is_consumable_for_originality(raw: dict, name: str, type_name: str, params: list[tuple[str, str]]) -> bool:
     hay = " ".join(
         [
@@ -760,7 +735,6 @@ def _is_consumable_for_originality(raw: dict, name: str, type_name: str, params:
     )
     return any(x in hay for x in needles)
 
-
 def _detect_consumable_originality(raw: dict, name: str, type_name: str, params: list[tuple[str, str]]) -> str:
     if not _is_consumable_for_originality(raw, name, type_name, params):
         return ""
@@ -775,7 +749,6 @@ def _detect_consumable_originality(raw: dict, name: str, type_name: str, params:
     if _ORIGINALITY_MARK_RE.search(source_text):
         return "original"
     return "compatible"
-
 
 def _apply_consumable_originality(name: str, params: list[tuple[str, str]], native_desc: str, status: str, type_name: str) -> tuple[str, list[tuple[str, str]], str]:
     if status not in {"original", "compatible"}:
@@ -794,7 +767,6 @@ def _apply_consumable_originality(name: str, params: list[tuple[str, str]], nati
             desc_out = f"{sentence} {desc_out}"
 
     return name_out, params_out, desc_out
-
 
 def build_offer_from_raw(raw: dict, *, id_prefix: str = "VT", placeholder_picture: str | None = None) -> OfferOut | None:
     clean_title_value = clean_title(norm_ws(raw.get("name")))
@@ -933,7 +905,6 @@ def build_offer_from_raw(raw: dict, *, id_prefix: str = "VT", placeholder_pictur
         params=params,
         native_desc=desc,
     )
-
 
 __all__ = [
     "SKIP_PARAM_KEYS",
