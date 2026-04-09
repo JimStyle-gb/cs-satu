@@ -2,20 +2,16 @@
 """
 Path: scripts/suppliers/akcent/quality_gate.py
 
-AkCent Quality Gate — quality gate поставщика.
+AkCent quality gate layer.
 
 Что делает:
-- читает raw-feed и считает critical/cosmetic tails;
-- отделяет known/new cosmetic через baseline;
-- пишет канонический quality gate report;
-- возвращает стабильный результат для build_akcent.py.
+- проверяет final feed supplier-side rules;
+- пишет единый quality gate report;
 
 Что не делает:
-- не чинит и не мутирует feed;
-- не переносит supplier-specific классы ошибок в shared core;
-- не подменяет builder и report writer.
+- не чинит raw feed;
+- не заменяет normalize/builder/pictures слой.
 """
-
 from __future__ import annotations
 
 from collections import defaultdict
