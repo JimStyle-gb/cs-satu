@@ -2,18 +2,58 @@
 """
 Path: scripts/suppliers/vtt/diagnostics.py
 
-VTT Diagnostics — операционные сводки и служебный вывод прогонов.
+VTT diagnostics layer.
 
 Что делает:
 - печатает стабильный build summary для orchestrator;
-- форматирует отчёты прогона без изменения данных;
-- оставляет служебные helper-функции для диагностики.
+- держит summary-логику вне build_vtt.py;
+- помогает разбирать прогоны без вмешательства в бизнес-логику.
 
 Что не делает:
 - не фильтрует offers;
-- не меняет supplier-логику;
+- не меняет supplier raw/final данные.
 """
-Печатает стабильный summary прогона VTT."""
+
+from __future__ import annotations
+
+from typing import Any
+
+_SUMMARY_WIDTH = 72
+
+def _safe_int(value: Any, default: int = 0) -> int:
+    try:
+        return int(value)
+    except Exception:
+        return default
+
+def _safe_bool(value: Any) -> bool:
+    if isinstance(value, bool):
+        return value
+    s = str(value or "").strip().casefold()
+    return s in {"1", "true", "yes", "y", "on"}
+
+def _safe_text(value: Any) -> str:
+    return str(value or "").strip()
+
+def _get_qg_attr(qg: Any, name: str, default: Any = None) -> Any:
+    if qg is None:
+        return default
+    if isinstance(qg, dict):
+        return qg.get(name, default)
+    return getattr(qg, name, default)
+
+def print_build_summary(
+    *,
+    version: str,
+    before: int,
+    after: int,
+    raw_out_file: str,
+    out_file: str,
+    qg: Any,
+    availability_true: int,
+    availability_false: int,
+) -> None:
+    """Печатает стабильный summary прогона VTT."""
     print("=" * _SUMMARY_WIDTH)
     print("[VTT] build summary")
     print("=" * _SUMMARY_WIDTH)
