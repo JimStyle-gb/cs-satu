@@ -2,11 +2,17 @@
 """
 Path: scripts/suppliers/comportal/params.py
 
-XML params pipeline для ComPortal.
+ComPortal Params — сборка и очистка supplier parameters.
 
-Что улучшено:
-- шумный слабополезный param "По принадлежности" вырезается;
-- для витрины остаются более полезные характеристики.
+Что делает:
+- парсит сырой набор параметров поставщика;
+- чистит ключи и значения;
+- готовит итоговый набор params для builder.py.
+
+Что не делает:
+- не переносит supplier-specific cleanup в shared core;
+- не строит финальный shared description;
+- не заменяет source.py и builder.py.
 """
 
 from __future__ import annotations
