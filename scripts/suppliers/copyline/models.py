@@ -2,23 +2,19 @@
 """
 Path: scripts/suppliers/copyline/models.py
 
-CopyLine Models — типовые carrier-контракты supplier-layer.
+CopyLine models layer.
 
 Что делает:
-- держит TypedDict-контракты для index/page/filter payload;
-- фиксирует границы между source, filtering, builder и diagnostics;
-- выносит структуры данных из business-логики.
+- держит carrier-структуры supplier-layer;
+- задаёт контракт между source, filtering, builder и diagnostics;
 
 Что не делает:
-- не содержит regex и parsing-логики;
-- не нормализует supplier-поля;
-- не подменяет builder и quality gate.
+- не содержит бизнес-логики;
+- не хранит regex или repair-эвристики.
 """
-
 from __future__ import annotations
 
 from typing import TypedDict
-
 
 class ProductIndexItem(TypedDict, total=False):
     """Короткая карточка товара из supplier-index."""
@@ -30,18 +26,15 @@ class ProductIndexItem(TypedDict, total=False):
     pic: str
     pics: list[str]
 
-
 class RawDescPair(TypedDict, total=False):
     """Сырая пара ключ-значение, поднятая из описания."""
     name: str
     value: str
 
-
 class RawTableParam(TypedDict, total=False):
     """Сырой параметр, поднятый из таблицы товара."""
     name: str
     value: str
-
 
 class ProductPagePayload(TypedDict, total=False):
     """Полный сырой payload страницы товара до semantic extraction."""
@@ -58,7 +51,6 @@ class ProductPagePayload(TypedDict, total=False):
     price_raw: str
     available: bool
 
-
 class FilterReport(TypedDict, total=False):
     """Отчёт ассортиментного фильтра."""
     mode: str
@@ -67,7 +59,6 @@ class FilterReport(TypedDict, total=False):
     rejected_total: int
     allowed_prefix_count: int
     allowed_prefixes: list[str]
-
 
 __all__ = [
     "ProductIndexItem",
