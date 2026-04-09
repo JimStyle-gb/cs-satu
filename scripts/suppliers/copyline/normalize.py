@@ -2,19 +2,16 @@
 """
 Path: scripts/suppliers/copyline/normalize.py
 
-CopyLine Normalize — supplier-layer нормализация базовых полей.
+CopyLine normalize layer.
 
 Что делает:
-- выполняет только базовую supplier-нормализацию;
-- нормализует title, vendor и model без narrative-cleaning;
-- готовит light-body для дальнейшего extraction-слоя.
+- держит базовую supplier-нормализацию;
+- даёт helper-ы для builder/compat/params слоя;
 
 Что не делает:
-- не собирает display-description;
-- не режет narrative под final HTML;
-- не заменяет compat/params/builder-слой.
+- не содержит source-crawl логики;
+- не делает final rendering.
 """
-
 from __future__ import annotations
 
 import re
@@ -25,7 +22,6 @@ _BRAND_TEXT_REPLACEMENTS: tuple[tuple[str, str], ...] = (
     (r"\bKATYUSHA\b", "Катюша"),
     (r"\bКАТЮША\b", "Катюша"),
 )
-
 
 VENDOR_PRIORITY: list[str] = [
     "HP",
@@ -101,11 +97,9 @@ CODE_PATTERNS: list[re.Pattern[str]] = [
     re.compile(r"\b0?71H\b", re.I),
 ]
 
-
 def safe_str(x: object) -> str:
     """Безопасно привести значение к строке."""
     return str(x).strip() if x is not None else ""
-
 
 def _canonical_brand_text(text: str) -> str:
     """Канонизировать брендовые токены в title/desc без semantic-cleaning."""
@@ -115,7 +109,6 @@ def _canonical_brand_text(text: str) -> str:
     for pattern, repl in _BRAND_TEXT_REPLACEMENTS:
         s = re.sub(pattern, repl, s, flags=re.I)
     return s
-
 
 def _norm_spaces(s: str) -> str:
     """Мягкая нормализация пробелов и переводов строк без narrative-cleaning."""
@@ -129,7 +122,6 @@ def _norm_spaces(s: str) -> str:
     s = re.sub(r"\n{3,}", "\n\n", s)
     return s.strip()
 
-
 def _normalize_code_token(s: str) -> str:
     s = safe_str(s).upper()
     if not s:
@@ -139,19 +131,15 @@ def _normalize_code_token(s: str) -> str:
     s = re.sub(r"\s+", "", s)
     return s
 
-
 def _looks_numeric_sku(s: str) -> bool:
     return bool(re.fullmatch(r"\d+", safe_str(s)))
-
 
 def _is_allowed_numeric_code(s: str) -> bool:
     return bool(re.fullmatch(r"016\d{6}", _normalize_code_token(s)))
 
-
 def _looks_consumable_title(title: str) -> bool:
     t = safe_str(title).lower()
     return any(t.startswith(prefix) for prefix in _CONSUMABLE_TITLE_PREFIXES)
-
 
 def _localize_title_color_tokens(title: str) -> str:
     s = _norm_spaces(_canonical_brand_text(title))
@@ -159,13 +147,11 @@ def _localize_title_color_tokens(title: str) -> str:
         s = re.sub(rf"(?<![A-Za-zА-Яа-яЁё]){en}(?![A-Za-zА-Яа-яЁё])", ru, s, flags=re.I)
     return s
 
-
 def normalize_title(title: str) -> str:
     """Нормализовать title без supplier-side смысловой правки."""
     s = _localize_title_color_tokens(title)
     s = re.sub(r"\s{2,}", " ", s)
     return s[:240]
-
 
 def _drop_title_echo_from_desc(title: str, description: str) -> str:
     """Убрать только очевидный дубль заголовка в первой строке extraction-body."""
@@ -182,7 +168,6 @@ def _drop_title_echo_from_desc(title: str, description: str) -> str:
         lines = lines[1:]
     return "\n".join([ln for ln in lines if safe_str(ln)]).strip()
 
-
 def build_extract_description(*, title: str, description_text: str) -> str:
     """
     Подготовить body для extraction.
@@ -197,7 +182,6 @@ def build_extract_description(*, title: str, description_text: str) -> str:
     if not s:
         return ""
     return s[:6000]
-
 
 def _first_vendor_from_text(texts: Sequence[str]) -> str:
     hay = "\n".join([_canonical_brand_text(safe_str(x)) for x in texts if safe_str(x)])
@@ -222,7 +206,6 @@ def _first_vendor_from_text(texts: Sequence[str]) -> str:
             return vendor
     return ""
 
-
 def detect_vendor(*, title: str = "", description: str = "", params: Sequence[Tuple[str, str]] | None = None) -> str:
     """Мягко определить vendor по title/description/params."""
     params = params or []
@@ -239,7 +222,6 @@ def detect_vendor(*, title: str = "", description: str = "", params: Sequence[Tu
         param_texts.append(value2)
     return _first_vendor_from_text([title, description, *param_texts])
 
-
 def _search_code(text: str) -> str:
     hay = _norm_spaces(text)
     if not hay:
@@ -251,7 +233,6 @@ def _search_code(text: str) -> str:
         if match:
             return _normalize_code_token(match.group(0))
     return ""
-
 
 def _description_head_for_model(description: str) -> str:
     """Взять только head текста для поиска модели без device-хвостов."""
@@ -265,7 +246,6 @@ def _description_head_for_model(description: str) -> str:
         flags=re.I,
     )[0]
     return head.strip()
-
 
 def detect_model(*, title: str = "", description: str = "", sku: str = "") -> str:
     """Определить model/code по title → description head → sku."""
@@ -290,7 +270,6 @@ def detect_model(*, title: str = "", description: str = "", sku: str = "") -> st
     if re.fullmatch(r"[A-Z0-9._/-]{3,40}", sku_norm) and (not _looks_numeric_sku(sku_norm) or _is_allowed_numeric_code(sku_norm)):
         return sku_norm
     return ""
-
 
 def normalize_source_basics(
     *,
