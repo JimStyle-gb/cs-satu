@@ -9,10 +9,9 @@ CS Policy — shared common defaults only.
 - supplier-specific policy не живет в core и не определяется по OID/коду поставщика;
 - если какому-то поставщику нужны особые правила, это обязанность RAW / supplier-layer.
 
-v18:
-- убрана supplier-aware логика из shared policy;
-- сохранен backward-safe API (SupplierPolicy / get_supplier_policy / _supplier_code_from_oid),
-  чтобы не ломать существующие импорты при поэтапной чистке core.
+Важно:
+- backward-safe API сохранён;
+- shared core не должен ветвиться по поставщику.
 """
 
 from __future__ import annotations
@@ -35,12 +34,17 @@ class SupplierPolicy:
     enable_clean_params: bool = False
 
 
+# -----------------------------
+# Backward-safe API
+# -----------------------------
+
 def _supplier_code_from_oid(oid: str) -> str:
     oid_u = (oid or "").upper()
     return oid_u[:2] if len(oid_u) >= 2 else oid_u
 
 
 def get_supplier_policy(oid: str) -> SupplierPolicy:
+    _ = oid
     # Shared core больше не определяет поведение по поставщику.
     # Возвращаем единый общий policy-объект только для backward compatibility.
     return SupplierPolicy(code="*")
