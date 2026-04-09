@@ -2,19 +2,16 @@
 """
 Path: scripts/suppliers/copyline/source.py
 
-CopyLine Source — supplier-layer загрузка и парсинг исходного сырья.
+CopyLine source layer.
 
 Что делает:
-- скачивает sitemap и собирает product URLs;
-- парсит карточку товара в сырой page-payload;
-- сохраняет provenance сырья без ранней semantic-свёртки.
+- содержит только source/session/crawl/page parsing;
+- не хранит supplier-business логику final-layer;
 
 Что не делает:
-- не фильтрует ассортимент;
-- не нормализует vendor/model;
-- не принимает решение, какой источник параметров главнее.
+- не строит final offers;
+- не подменяет builder/filtering/quality_gate.
 """
-
 from __future__ import annotations
 
 import os
@@ -49,18 +46,15 @@ UA = {
     "Connection": "keep-alive",
 }
 
-
 def safe_str(x: Any) -> str:
     """Безопасно привести значение к строке."""
     return str(x).strip() if x is not None else ""
-
 
 def title_clean(s: str) -> str:
     """Подчистить title карточки/ссылки."""
     s = (s or "").strip()
     s = re.sub(r"\s*\((?:Артикул|SKU|Код)\s*[:#]?\s*[^)]+\)\s*$", "", s, flags=re.I)
     return re.sub(r"\s{2,}", " ", s).strip()[:240]
-
 
 def parse_price_tenge(text: str) -> int:
     """Вытащить цену в тг из текста вроде '7 051 тг.'"""
@@ -75,7 +69,6 @@ def parse_price_tenge(text: str) -> int:
         return int(num)
     except Exception:
         return 0
-
 
 def parse_price_digits(text: str) -> int:
     """Вытащить число из блока цены без привязки к 'тг'."""
@@ -97,12 +90,10 @@ def parse_price_digits(text: str) -> int:
     except Exception:
         return 0
 
-
 def _sleep_jitter(ms: int) -> None:
     """Небольшая пауза между HTTP-запросами."""
     d = max(0.0, ms / 1000.0)
     time.sleep(d * (1.0 + random.uniform(-0.15, 0.15)))
-
 
 def http_get(url: str, tries: int = 3, min_bytes: int = 0) -> Optional[bytes]:
     """Скачать URL с простым retry."""
@@ -120,13 +111,11 @@ def http_get(url: str, tries: int = 3, min_bytes: int = 0) -> Optional[bytes]:
         delay *= 1.6
     return None
 
-
 def soup_of(data: bytes | str) -> BeautifulSoup:
     """Сделать BeautifulSoup из bytes/str."""
     if isinstance(data, bytes):
         return BeautifulSoup(data, "lxml")
     return BeautifulSoup(data or "", "lxml")
-
 
 def extract_kv_pairs_from_text(text: str) -> List[tuple[str, str]]:
     """Мягкий парсер строк вида 'Ключ: значение'."""
@@ -141,7 +130,6 @@ def extract_kv_pairs_from_text(text: str) -> List[tuple[str, str]]:
         if key and value and len(key) <= 80 and len(value) <= 240:
             out.append((key, value))
     return out
-
 
 def _dedupe_pairs(items: List[tuple[str, str]]) -> List[tuple[str, str]]:
     """Дедуп param-пары без потери их канала происхождения до merge-этапа."""
@@ -159,7 +147,6 @@ def _dedupe_pairs(items: List[tuple[str, str]]) -> List[tuple[str, str]]:
         out.append((k, v))
     return out
 
-
 def _extract_table_pairs(table) -> List[tuple[str, str]]:
     """Вытащить сырые пары из HTML-таблицы без semantic-решений."""
     out: List[tuple[str, str]] = []
@@ -175,14 +162,12 @@ def _extract_table_pairs(table) -> List[tuple[str, str]]:
             out.append((key, value))
     return _dedupe_pairs(out)
 
-
 def _abs_url(href: str) -> str:
     """Нормализовать URL относительно BASE_URL."""
     href = safe_str(href)
     if not href:
         return ""
     return urljoin(BASE_URL + "/", href)
-
 
 def parse_sitemap_html_products(html_bytes: bytes) -> List[Dict[str, str]]:
     """Прочитать HTML-sitemap и вернуть все product links без фильтрации."""
@@ -203,7 +188,6 @@ def parse_sitemap_html_products(html_bytes: bytes) -> List[Dict[str, str]]:
         seen.add(url)
         out.append({"url": url, "title": title})
     return out
-
 
 def parse_sitemap_xml_products(xml_bytes: bytes) -> List[Dict[str, str]]:
     """Fallback: прочитать sitemap.xml и вернуть product links без фильтрации."""
@@ -228,7 +212,6 @@ def parse_sitemap_xml_products(xml_bytes: bytes) -> List[Dict[str, str]]:
         out.append({"url": url, "title": title})
     return out
 
-
 def fetch_product_index() -> List[Dict[str, str]]:
     """Скачать sitemap и вернуть список product URLs."""
     html_bytes = http_get(SITEMAP_URL, tries=3, min_bytes=20_000)
@@ -241,7 +224,6 @@ def fetch_product_index() -> List[Dict[str, str]]:
     if not xml_bytes:
         raise RuntimeError("CopyLine: не удалось скачать sitemap (HTML) и sitemap.xml.")
     return parse_sitemap_xml_products(xml_bytes)
-
 
 def _parse_price_from_page(s: BeautifulSoup) -> int:
     """Найти цену на карточке товара."""
@@ -277,14 +259,12 @@ def _parse_price_from_page(s: BeautifulSoup) -> int:
     text = safe_str(main.get_text(" ", strip=True))
     return parse_price_tenge(text) or parse_price_digits(text)
 
-
 def _parse_available_from_page(s: BeautifulSoup) -> bool:
     """Определить наличие товара по тексту страницы."""
     txt = safe_str(s.get_text(" ", strip=True)).lower()
     if "нет в наличии" in txt or "отсутств" in txt:
         return False
     return True
-
 
 def _extract_picture_candidates(s: BeautifulSoup) -> List[str]:
     """Вытащить все возможные URL картинок со страницы."""
@@ -339,7 +319,6 @@ def _extract_picture_candidates(s: BeautifulSoup) -> List[str]:
         seen.add(url)
         out.append(url)
     return out
-
 
 def parse_product_page(url: str) -> Optional[Dict[str, Any]]:
     """Распарсить карточку товара в сырой payload с сохранением provenance."""
