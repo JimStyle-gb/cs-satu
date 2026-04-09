@@ -2,12 +2,17 @@
 """
 Path: scripts/cs/validators.py
 
-CS Validators — проверки готового CS-фида.
+CS Validators — общие проверки готового CS-фида.
 
-Роль файла:
-- проверяет уже собранный final XML;
-- использует общие shared-хелперы из cs.util;
-- не содержит supplier-specific логики.
+Что делает:
+- валидирует уже собранный XML/YML;
+- проверяет общие запреты и обязательные поля;
+- ловит критичные ошибки финального feed-вывода.
+
+Что не делает:
+- не содержит supplier-specific repairs;
+- не собирает feed и не пишет файлы;
+- не заменяет quality gate и builder-слой.
 """
 
 from __future__ import annotations
@@ -16,13 +21,11 @@ import re
 
 from .util import norm_ws, safe_int
 
-
 # -----------------------------
 # Общие regex валидатора
 # -----------------------------
 
 _RE_HASH_LIKE_OID = re.compile(r"^[A-Z]{2}H[0-9A-F]{10}$")
-
 
 # -----------------------------
 # Public API
