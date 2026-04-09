@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 """
-CS quality gate report writer.
-Единый writer для всех docs/raw/<supplier>_quality_gate.txt
+Path: scripts/cs/qg_report.py
 
-v2:
-- добивает полную одинаковость заголовков секций;
-- вместо 'NEW COSMETIC VS BASELINE' и 'KNOWN COSMETIC FROM BASELINE'
-  теперь везде используются короткие канонические:
-  'NEW COSMETIC' и 'KNOWN COSMETIC'.
+CS quality gate report writer.
+
+Роль файла:
+- пишет единый отчёт для docs/raw/<supplier>_quality_gate.txt;
+- держит канонические названия секций quality gate;
+- не содержит supplier-specific логики.
 """
 
 from __future__ import annotations
@@ -15,6 +15,10 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Iterable
 
+
+# -----------------------------
+# Внутренние helper'ы
+# -----------------------------
 
 def _ru_rule_comment(rule: str) -> str:
     comments = {
@@ -48,6 +52,10 @@ def _section(lines: list[str], title: str, issues: Iterable) -> None:
     for issue in items:
         lines.append(_issue_line(issue))
 
+
+# -----------------------------
+# Public API
+# -----------------------------
 
 def write_quality_gate_report(
     path: str,
