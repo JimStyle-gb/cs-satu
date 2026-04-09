@@ -19,7 +19,7 @@ import re
 from typing import Any
 
 from cs.util import norm_ws
-from suppliers.akcent.params_xml import (
+from suppliers.akcent.params import (
     detect_kind_by_name,
     key_quality_ok,
     normalize_param_value,
