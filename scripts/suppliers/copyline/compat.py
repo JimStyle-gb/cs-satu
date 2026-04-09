@@ -1,11 +1,18 @@
 # -*- coding: utf-8 -*-
 """
 Path: scripts/suppliers/copyline/compat.py
-CopyLine compat/reconcile layer.
 
-Задача:
-- нормализовать codes/compat lists;
-- дочистить supplier-params до аккуратного raw.
+CopyLine Compat — supplier-layer нормализация compat/codes.
+
+Что делает:
+- нормализует codes и compat-списки;
+- дочищает supplier-params до аккуратного raw-вида;
+- держит supplier-specific reconcile-логику внутри adapter-layer.
+
+Что не делает:
+- не переносит compat-эвристики в shared core;
+- не заменяет params/source/builder-слой;
+- не принимает final business-решения по offer.
 """
 
 from __future__ import annotations
