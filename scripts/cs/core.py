@@ -2,17 +2,17 @@
 """
 Path: scripts/cs/core.py
 
-CS Core — shared common layer для финальной сборки CS-фида.
+CS Core — shared final/raw orchestration layer.
 
-Роль файла:
-- держит общий OfferOut и общий final/raw orchestration;
+Что делает:
+- держит общий OfferOut и final/raw orchestration;
 - применяет только shared post-rules, одинаковые для всех поставщиков;
-- не должен хранить supplier-specific repairs.
+
+Что не делает:
+- не должен хранить supplier-specific repairs;
+- не должен чинить raw вместо supplier-layer.
 """
-
-
 from __future__ import annotations
-
 
 from dataclasses import dataclass
 from datetime import datetime, timedelta
@@ -66,7 +66,6 @@ def _dedup_keep_order(items: list[str]) -> list[str]:
         seen.add(k)
         out.append(x)
     return out
-
 
 def _cs_norm_url(u: str) -> str:
     # CS: нормализуем URL картинок (пробелы ломают загрузку)
@@ -373,10 +372,6 @@ def _cs_clean_compat_value(v: str) -> str:
         return ""
     return out
 
-
-
-
-
 def _cs_trim_compat_to_max(v: str, max_len: int = 260) -> str:
     """Обрезает совместимость безопасно, не разрезая модель на середине.
     Стараемся обрезать по последней запятой/точке с запятой/пробелу в пределах max_len,
@@ -408,7 +403,6 @@ def _cs_trim_compat_to_max(v: str, max_len: int = 260) -> str:
     # И короткий обрывок после запятой/пробела (например ', M1')
     cut = re.sub(r"(?:,|\s)+(?=[A-Za-zА-Яа-я])[A-Za-zА-Яа-я0-9]{1,2}$", "", cut).rstrip(" ,;/.-")
     return cut
-
 
 def _cs_looks_like_device_models(s: str) -> bool:
     s0 = _cs_clean_compat_value(s)
@@ -447,8 +441,6 @@ def _cs_looks_like_device_models(s: str) -> bool:
             return True
 
     return False
-
-
 
 def _cs_extract_compat_candidate(text: str) -> str:
     t = norm_ws(text).replace("\xa0", " ").strip()
@@ -535,7 +527,6 @@ def _cs_merge_compat_values(vals: list[str]) -> str:
         return ""
     return out
 
-
 def ensure_compatibility_param(params: list[tuple[str, str]], name_full: str, native_desc: str) -> None:
     """
     Adapter-first:
@@ -580,7 +571,6 @@ def normalize_offer_name(name: str) -> str:
     s = fix_mixed_cyr_lat(s)
     return s
 
-
 _RE_COLOR_TOKENS = [
     ("Голубой", re.compile(r"\bcyan\b", re.IGNORECASE)),
     ("Пурпурный", re.compile(r"\bmagenta\b", re.IGNORECASE)),
@@ -598,7 +588,6 @@ _RE_COLOR_TOKENS = [
 ]
 
 _RE_HI_BLACK = re.compile(r"\bhi[-\s]?black\b", re.IGNORECASE)
-
 
 def _compat_fragments(s: str) -> list[str]:
     # CS: разбиваем строку совместимости на фрагменты (стабильно)
@@ -626,14 +615,12 @@ def _compat_fragments(s: str) -> list[str]:
         out.append(p)
     return out
 
-
 def _get_param_value(params: list[tuple[str, str]], key_name: str) -> str:
     kn = key_name.casefold()
     for k, v in params:
         if norm_ws(k).casefold() == kn:
             return norm_ws(v)
     return ""
-
 
 # CS: ключи, где может жить совместимость (в разных поставщиках)
 _COMPAT_KEYS = ("Совместимость", "Совместимые модели", "Для", "Применение")
@@ -657,7 +644,6 @@ _COMPAT_NOISE_IN_COMPAT_RE = re.compile(
     r"cyan|magenta|yellow|black|grey|gray|matt\s*black|photo\s*black|photoblack|light\s*cyan|light\s*magenta)\b"
 )
 
-
 # CS: мусор в скобках (ресурс/комплект/обрезанные хвосты)
 _COMPAT_PARENS_YIELD_PACK_RE = re.compile(r"(?i)\([^)]*(?:\b\d+\s*[kк]\b|\b\d+\s*шт\b|pcs|pieces|yield|страниц|стр\.?|ресурс|увелич)[^)]*\)")
 _COMPAT_YIELD_ANY_RE = re.compile(r"(?i)\b\d+\s*[kк]\b")
@@ -675,7 +661,6 @@ _COMPAT_COLOR_ONLY_RE = re.compile(
 _COMPAT_SKIP_WORD_RE = re.compile(r"^\s*(?:совместим\w*|compatible|original|оригинал)\s*$", re.I)
 _COMPAT_NUM_ONLY_RE = re.compile(r"^\s*\d+(?:[.,]\d+)?\s*$")
 _COMPAT_NO_CODE_RE = re.compile(r"^\s*(?:№|#)\s*\d{2,}\s*$")
-
 
 def _clean_compat_fragment(f: str) -> str:
     # CS: чистим один фрагмент совместимости (безопасно)
@@ -796,7 +781,6 @@ _COMPAT_MODEL_TOKEN_RE = re.compile(r"(?i)\b[A-ZА-Я]{1,6}\s*\d{2,5}[A-ZА-Я]?
 _COMPAT_TEXT_SPLIT_RE = re.compile(r"[\n\r\.\!\?]+")
 _COMPAT_HTML_TAG_RE = re.compile(r"<[^>]+>")
 
-
 def _shorten_smart_name(name: str, params: list[tuple[str, str]], max_len: int) -> str:
     # CS: Универсально — делаем короткое имя без потери кода/смысла.
     # Полная совместимость остаётся в param "Совместимость" (обогащённая из name/desc/params).
@@ -842,9 +826,6 @@ def _shorten_smart_name(name: str, params: list[tuple[str, str]], max_len: int) 
     # Фоллбэк: просто режем по границе и добавляем "…"
     return _truncate_text(name, max_len, suffix=" и др.")
 
-
-
-
 # Лимиты (по умолчанию):
 # - <name> держим коротким и читаемым (150 по решению пользователя)
 CS_NAME_MAX_LEN = int((os.getenv("CS_NAME_MAX_LEN", "150") or "150").strip() or "150")
@@ -856,7 +837,6 @@ CS_COMPAT_CLEAN_REPEAT_BLOCKS = (os.getenv("CS_COMPAT_CLEAN_REPEAT_BLOCKS", "1")
 
 # Заглушка картинки, если у оффера нет фото (можно переопределить env CS_PICTURE_PLACEHOLDER_URL)
 CS_PICTURE_PLACEHOLDER_URL = (os.getenv("CS_PICTURE_PLACEHOLDER_URL") or "https://placehold.co/800x800/png?text=No+Photo").strip()
-
 
 PARAM_DROP_DEFAULT = {
     "Штрихкод",
@@ -878,7 +858,6 @@ PARAM_DROP_DEFAULT = {
 }
 PARAM_DROP_DEFAULT_CF = {str(x).strip().casefold() for x in PARAM_DROP_DEFAULT}
 
-
 def enforce_name_policy(oid: str, name: str, params: list[tuple[str, str]]) -> str:
     # CS: глобальная политика имени — одинаково для всех поставщиков
     name = norm_ws(name)
@@ -889,8 +868,6 @@ def enforce_name_policy(oid: str, name: str, params: list[tuple[str, str]]) -> s
 
     # Универсальное "умное" укорочение
     return _shorten_smart_name(name, params, CS_NAME_MAX_LEN)
-
-
 
 def extract_color_from_name(name: str) -> str:
     # CS: цвет берём строго из имени (без ложных совпадений на бренд Hi-Black)
@@ -924,7 +901,6 @@ def extract_color_from_name(name: str) -> str:
         return "Цветной"
     return found[0]
 
-
 def apply_color_from_name(params: Sequence[tuple[str, str]], name: str) -> list[tuple[str, str]]:
     # CS: если в имени явно указан цвет — перезаписываем param "Цвет"; если param отсутствует — добавляем
     color = extract_color_from_name(name)
@@ -944,8 +920,6 @@ def apply_color_from_name(params: Sequence[tuple[str, str]], name: str) -> list[
     if not found:
         out.append(("Цвет", color))
     return out
-
-
 
 def normalize_color_value(raw: str) -> str:
     # CS: нормализация значения цвета (из params/описания) → каноническая форма
@@ -1038,12 +1012,10 @@ def normalize_color_value(raw: str) -> str:
 
     return ""
 
-
 _RE_SERVICE_KV = re.compile(
     r"^(?:артикул|каталожный номер|oem\s*-?номер|oem\s*номер|ш?трих\s*-?код|штрихкод|код товара|код производителя|аналоги|аналог)\s*[:\-].*$",
     re.IGNORECASE,
 )
-
 
 def strip_service_kv_lines(text: str) -> str:
     # CS: удаляем служебные строки "Ключ: значение" из текста описания
@@ -1059,10 +1031,6 @@ def strip_service_kv_lines(text: str) -> str:
             continue
         keep.append(ln)
     return "\n".join(keep).strip()
-
-
-
-
 
 # Shared core не чинит смешанные кир/лат токены внутри кодов и названий.
 # Любая агрессивная правка таких токенов должна жить в supplier-layer.
@@ -1085,7 +1053,6 @@ def normalize_mixed_hyphen(s: str) -> str:
     # Начиная с v061 не удаляем дефис между LAT/CYR:
     # LCD-дисплей, LED-индикаторы, SNMP-карты, Android-приставка и т.п.
     return t
-
 
 _RE_MIXED_SLASH_LAT_CYR_RE_MIXED_SLASH_LAT_CYR = re.compile(r"([A-Za-z]{1,}[A-Za-z0-9]*)/([Ѐ-ӿ]{2,})")
 _RE_MIXED_SLASH_CYR_LAT = re.compile(r"([Ѐ-ӿ]{2,})/([A-Za-z]{1,}[A-Za-z0-9]*)")
@@ -1195,7 +1162,6 @@ def parse_id_set(env_value: str | None, fallback: Iterable[int] | None = None) -
         out = {str(int(x)) for x in fallback}
     return out
 
-
 # Генератор стабильного id (если у поставщика нет id)
 
 _WGT_WORDS = ("вес", "масса", "weight")
@@ -1246,8 +1212,6 @@ def _is_sane_dims(v: str) -> bool:
     if len(nums) >= 2 and (_RE_DIM_SEP.search(vv) or any(u in vv for u in ("мм", "см", "м", "cm", "mm"))):
         return True
     return False
-
-
 
 # Эвристика: похоже ли значение "Совместимость" на список моделей/серий (а не на общее назначение "для дома")
 def _looks_like_model_compat(v: str) -> bool:
@@ -1330,7 +1294,6 @@ def _looks_like_model_compat(v: str) -> bool:
         return True
 
     return False
-
 
 def _cs_trim_float(v: str, max_decimals: int = 4) -> str:
     # CS: аккуратно укорачиваем длинные дроби (объём/вес/габариты) для читаемости
@@ -1490,7 +1453,6 @@ def clean_params(
                     k = "Кол-во"
                     v = tail
 
-        
         # CS: эвристика против перевёрнутых пар (когда name выглядит как значение, а value как ключ)
         _KEYLIKE = {
             "совместимость","интерфейс","технология","сертификация","частоты","частота","разрешение",
@@ -1613,7 +1575,6 @@ def clean_params(
         display['модель'] = 'Модель'
         order.insert(0, 'модель')
 
-
     out: list[tuple[str, str]] = []
     for kcf in order:
         vals = buckets.get(kcf) or []
@@ -1634,7 +1595,6 @@ def clean_params(
 
     return out
 
-
 # --- Backward-safe shims: supplier-specific param rules больше не живут в shared core. ---
 
 def _ac_compact_barcode_support(params: list[tuple[str, str]]) -> list[tuple[str, str]]:
@@ -1646,7 +1606,6 @@ def _ac_compact_barcode_support(params: list[tuple[str, str]]) -> list[tuple[str
     """
     return list(params or [])
 
-
 def _ac_drop_barcode_params(params: list[tuple[str, str]]) -> list[tuple[str, str]]:
     """
     Back-compat shim.
@@ -1655,7 +1614,6 @@ def _ac_drop_barcode_params(params: list[tuple[str, str]]) -> list[tuple[str, st
     Любая такая очистка должна происходить в supplier raw.
     """
     return list(params or [])
-
 
 def apply_supplier_param_rules(params: Sequence[tuple[str, str]], oid: str, name: str) -> list[tuple[str, str]]:
     """
@@ -1683,7 +1641,6 @@ def apply_supplier_param_rules(params: Sequence[tuple[str, str]], oid: str, name
         out.append((kk, vv))
     return out
 
-
 def sort_params(params: Sequence[tuple[str, str]], priority: Sequence[str] | None = None) -> list[tuple[str, str]]:
     pr = [norm_ws(x) for x in (priority or []) if norm_ws(x)]
     pr_map = {p.casefold(): i for i, p in enumerate(pr)}
@@ -1694,7 +1651,6 @@ def sort_params(params: Sequence[tuple[str, str]], priority: Sequence[str] | Non
         return (idx, k.casefold())
 
     return sorted(list(params), key=key)
-
 
 # Пробует извлечь пары "Характеристика: значение" из HTML описания (если поставщик кладёт это в description)
 def enrich_params_from_desc(params: list[tuple[str, str]], desc_html: str) -> None:
@@ -1722,14 +1678,11 @@ def enrich_params_from_desc(params: list[tuple[str, str]], desc_html: str) -> No
                     continue
             params.append((k, v))
 
-
 # Лёгкое обогащение характеристик из name/description (когда у поставщика params бедные)
 
 def _extract_color_from_name(name: str) -> str:
     """CS: совместимость со старым именем функции (цвет из name)."""
     return extract_color_from_name(name)
-
-
 
 def enrich_params_from_name_and_desc(params: list[tuple[str, str]], name: str, desc_text: str) -> None:
     name = name or ""
@@ -1821,7 +1774,6 @@ def enrich_params_from_name_and_desc(params: list[tuple[str, str]], name: str, d
                     params.append(("Цвет", canon))
                     keys_cf.add("цвет")
 
-
 # Делает текст описания "без странностей" (убираем лишние пробелы)
 def fix_text(s: str) -> str:
     # Нормализует переносы строк и убирает мусорные пробелы/табуляции на пустых строках
@@ -1860,11 +1812,6 @@ def fix_text(s: str) -> str:
     t = fix_mixed_cyr_lat(t)
     return t
 
-
-
-
-
-
 def _native_has_specs_text(d: str) -> bool:
     # Если в "родном" описании уже есть свой блок характеристик/спецификаций — НЕ дублируем CS-блок.
     # Важно: у части поставщиков характеристики приходят таблично (через "\t") или внутри одной строки
@@ -1897,7 +1844,6 @@ def _looks_like_section_header(line: str) -> bool:
     if s.endswith("."):
         return False
     return True
-
 
 def _build_specs_html_from_text(d: str) -> str:
     # Превращает "текстовую кашу" характеристик (с \n и \t) в читабельный HTML.
@@ -1997,9 +1943,6 @@ def _build_specs_html_from_text(d: str) -> str:
 _RE_SPECS_HDR_LINE = re.compile(r"^[^A-Za-zА-Яа-яЁё]*\s*(?:Технические характеристики|Основные характеристики|Характеристики)\b", re.IGNORECASE)
 _RE_SPECS_HDR_ANY = re.compile(r"\b(Технические характеристики|Основные характеристики|Характеристики)\b", re.IGNORECASE)
 
-
-
-
 def _htmlish_to_text(s: str) -> str:
     """Превращает HTML-подобный текст (с <br>, <p>, списками) в текст с \n.
     Нужно, чтобы корректно вытащить тех/осн характеристики из CopyLine и похожих источников.
@@ -2040,8 +1983,6 @@ def _split_inline_specs_bullets(rest: str) -> str:
     # нормализуем пустые строки
     t = re.sub(r"\n{3,}", "\n\n", t)
     return t
-
-
 
 def extract_specs_pairs_and_strip_desc(d: str) -> tuple[str, list[tuple[str, str]]]:
     """Единый CS-подход:
@@ -2092,7 +2033,6 @@ def extract_specs_pairs_and_strip_desc(d: str) -> tuple[str, list[tuple[str, str
         return raw, []
 
     return pre, pairs
-
 
 def _parse_specs_pairs_from_text(text: str) -> list[tuple[str, str]]:
     """Парсит блок характеристик в пары key/value.
@@ -2178,7 +2118,6 @@ def _parse_specs_pairs_from_text(text: str) -> list[tuple[str, str]]:
             if not ln:
                 i += 1
                 continue
-
 
         # dash-separated пары внутри буллета: "Ключ — Значение" / "Ключ - Значение"
         md = re.match(r"^([^:]{1,80}?)\s+[–—-]\s+(.{1,250})$", ln)
@@ -2332,9 +2271,6 @@ def _parse_specs_pairs_from_text(text: str) -> list[tuple[str, str]]:
 
     return out
 
-
-
-
 def _cmp_name_like_text(s: str) -> str:
     # Для сравнения "похоже ли это на название" (используем только в дедупе описаний).
     t = (s or "")
@@ -2346,7 +2282,6 @@ def _cmp_name_like_text(s: str) -> str:
     t = re.sub(r"[\s\-–—:|·•,\.]+$", "", t).strip()
     t = re.sub(r"^[\s\-–—:|·•,\.]+", "", t).strip()
     return t.casefold()
-
 
 def _dedupe_desc_leading_name(desc: str, name: str) -> str:
     # CS: убираем повтор названия в начале "родного" описания (заголовок <h3> выводим сами).
@@ -2416,7 +2351,6 @@ def _dedupe_desc_leading_name(desc: str, name: str) -> str:
         return d
     return out
 
-
 def _clip_desc_plain(desc: str, *, max_chars: int = 1200) -> str:
     # CS: обрезание слишком длинного текста описания (маркетинговые простыни),
     # чтобы карточка была читабельной и не дублировала характеристики.
@@ -2457,8 +2391,6 @@ def _clip_desc_plain(desc: str, *, max_chars: int = 1200) -> str:
     if len(s) - len(out) >= 80 and not out.endswith("…"):
         out = out + "…"
     return out
-
-
 
 def _build_desc_part(name: str, native_desc: str) -> str:
     # CS: возвращает ТОЛЬКО тело описания (<p>...</p>), без <h3> (заголовок строится выше шаблоном)
@@ -2525,10 +2457,7 @@ def normalize_pictures(pictures: Sequence[str]) -> list[str]:
         out.append(u)
     return out
 
-
-
 # Собирает keywords: бренд + полное имя + разбор имени на слова + города (в конце)
-
 
 # Собирает keywords: бренд + имя + ключи по доставке + города (компактно, без "простыни")
 # Важно: никаких "CS_CITY_TAIL" больше нет — keywords строятся только здесь.
@@ -2545,7 +2474,6 @@ def _is_sentence_like_param_name(k: str) -> bool:
     # исключение: это нормальные характеристики (оставляем в блоке "Характеристики")
     if (("рекомендуемая" in cf) or ("рекомендуемое" in cf)) and (("нагрузк" in cf) or ("количеств" in cf)):
         return False
-
 
     # исключение: гарантия — это характеристика (а не маркетинг/фраза)
     if cf.startswith("гаранти") and (len(kk) <= 25) and (len(kk.split()) <= 3):
@@ -2600,7 +2528,6 @@ def _is_sentence_like_param_name(k: str) -> bool:
 
     return False
 
-
 def split_params_for_chars(
     params_sorted: Sequence[tuple[str, str]],
 ) -> tuple[list[tuple[str, str]], list[str]]:
@@ -2643,9 +2570,6 @@ def split_params_for_chars(
 
         kept.append((kk, vv))
 
-
-
-
     # uniq + limit
     notes: list[str] = []
     seen: set[str] = set()
@@ -2660,7 +2584,6 @@ def split_params_for_chars(
         notes.append(x2)
 
     return kept, notes[:2]
-
 
 def _build_param_summary(params_sorted: Sequence[tuple[str, str]]) -> str:
     """
@@ -2729,8 +2652,6 @@ def _cs_chars_block_html(params: list[tuple[str, str]]) -> str:
         return '<h3>Характеристики</h3><p>Характеристики уточняются.</p>'
     return f'<h3>Характеристики</h3><ul>{items}</ul>'
 
-
-
 def get_public_vendor(supplier: str | None = None) -> str:
     """
     Публичный fallback-вендор для финального YML.
@@ -2760,7 +2681,6 @@ def get_public_vendor(supplier: str | None = None) -> str:
         return "CS"
     return raw
 
-
 def next_run_dom_at_hour(now: datetime, hour: int, doms: Sequence[int]) -> datetime:
     """
     Back-compat shim.
@@ -2769,8 +2689,6 @@ def next_run_dom_at_hour(now: datetime, hour: int, doms: Sequence[int]) -> datet
     чтобы не ломать существующие вызовы.
     """
     return _meta_next_run_dom_at_hour(now, hour=hour, doms=tuple(doms or ()))
-
-
 
 # CS: собирает полный XML фида (header + FEED_META + offers + footer)
 def write_cs_feed_raw(
@@ -2826,8 +2744,6 @@ def write_cs_feed(
     )
     validate_cs_yml(full, param_drop_default_cf=PARAM_DROP_DEFAULT_CF)
     return write_if_changed(out_file, full, encoding=encoding)
-
-
 
 # Пишет файл только если изменился (атомарно)
 def normalize_vendor(v: str) -> str:
@@ -3002,7 +2918,6 @@ def pick_vendor(
 
     return norm_ws(public_vendor)
 
-
 @dataclass
 class OfferOut:
     oid: str
@@ -3144,7 +3059,6 @@ class OfferOut:
             f"</offer>"
         )
         return out
-
 
 # Валидирует готовый CS-фид (страховка: если что-то сломалось — падаем сборкой)
 def _cs_build_description(*args, **kwargs):
