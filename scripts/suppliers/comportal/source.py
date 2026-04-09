@@ -2,19 +2,16 @@
 """
 Path: scripts/suppliers/comportal/source.py
 
-ComPortal Source — получение и парсинг сырого источника поставщика.
+ComPortal source layer.
 
 Что делает:
-- читает listing и page-данные поставщика;
-- собирает сырой supplier record;
-- готовит SourceOffer и raw payload для следующих слоёв.
+- содержит только source/session/crawl/page parsing;
+- не хранит supplier-business логику final-layer;
 
 Что не делает:
-- не строит final shared offer;
-- не переносит supplier-specific repairs в shared core;
-- не заменяет builder.py.
+- не строит final offers;
+- не подменяет builder/filtering/quality_gate.
 """
-
 from __future__ import annotations
 
 import xml.etree.ElementTree as ET
@@ -24,13 +21,11 @@ import requests
 from cs.util import norm_ws
 from suppliers.comportal.models import CategoryRecord, ParamItem, SourceOffer
 
-
 def _preview_text(text: str, limit: int = 240) -> str:
     s = (text or "").replace("\r", " ").replace("\n", " ").strip()
     if len(s) > limit:
         return s[:limit] + "..."
     return s
-
 
 def fetch_xml_text(
     url: str,
@@ -62,13 +57,11 @@ def fetch_xml_text(
 
     return text
 
-
 def get_text(el: ET.Element | None) -> str:
     """Безопасно вытащить text из XML-узла."""
     if el is None:
         return ""
     return "".join(el.itertext()).strip()
-
 
 def parse_xml_root(xml_text: str) -> ET.Element:
     """Распарсить XML root с понятной ошибкой."""
@@ -84,11 +77,9 @@ def parse_xml_root(xml_text: str) -> ET.Element:
             f"ParseError: {e}. Preview: {_preview_text(text)}"
         ) from e
 
-
 def iter_offer_elements(root: ET.Element):
     """Итератор source offer nodes."""
     return root.findall(".//offer")
-
 
 def build_category_index(root: ET.Element) -> dict[str, CategoryRecord]:
     """Построить индекс source categories."""
@@ -124,7 +115,6 @@ def build_category_index(root: ET.Element) -> dict[str, CategoryRecord]:
 
     return out
 
-
 def collect_params(offer_el: ET.Element) -> list[ParamItem]:
     """Собрать source params."""
     out: list[ParamItem] = []
@@ -137,7 +127,6 @@ def collect_params(offer_el: ET.Element) -> list[ParamItem]:
         out.append(ParamItem(name=name, value=value, source="xml"))
 
     return out
-
 
 def extract_source_offer(
     offer_el: ET.Element,
@@ -173,7 +162,6 @@ def extract_source_offer(
         params=collect_params(offer_el),
         offer_el=offer_el,
     )
-
 
 def load_source_bundle(
     *,
