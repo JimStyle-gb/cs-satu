@@ -2,15 +2,17 @@
 """
 Path: scripts/suppliers/alstyle/models.py
 
-AlStyle supplier layer — внутренние dataclass-модели.
+AlStyle Models — внутренние carrier-модели поставщика.
 
-Роль файла:
-- держать типовой контракт между source / filtering / builder / diagnostics;
-- не хранить supplier-business логику;
-- не знать о final HTML и shared core rendering.
+Что делает:
+- держит dataclass-контракты между source, filtering, builder и diagnostics;
+- хранит только структуры данных supplier-layer;
+- упрощает типовой обмен данными внутри адаптера.
 
-Важно:
-- любые supplier-specific transforms живут не здесь, а в normalize / builder / compat.
+Что не делает:
+- не содержит supplier-business логики;
+- не знает о final HTML и shared core rendering;
+- не подменяет normalize, compat и builder.
 """
 
 from __future__ import annotations
@@ -18,13 +20,11 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from typing import Any
 
-
 @dataclass(slots=True)
 class ParamItem:
     name: str
     value: str
     source: str = "xml"
-
 
 @dataclass(slots=True)
 class SourceOffer:
@@ -39,7 +39,6 @@ class SourceOffer:
     price_text: str
     picture_urls: list[str] = field(default_factory=list)
     offer_el: Any | None = None
-
 
 @dataclass(slots=True)
 class BuildStats:
