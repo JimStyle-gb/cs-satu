@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<yml_catalog date="2026-04-09 11:17:43">
+<yml_catalog date="2026-04-09 12:16:02">
 <shop><offers>
 <!--FEED_META
 Поставщик                                  | CopyLine
 URL поставщика                             | https://copyline.kz/goods.html
-Время сборки (Алматы)                      | 2026-04-09 11:17:43
+Время сборки (Алматы)                      | 2026-04-09 12:16:02
 Ближайшая сборка (Алматы)                  | 2026-04-10 04:00:00
-Сколько товаров у поставщика до фильтра    | 2707
+Сколько товаров у поставщика до фильтра    | 2706
 Сколько товаров у поставщика после фильтра | 1220
 Сколько товаров есть в наличии (true)      | 1220
 Сколько товаров нет в наличии (false)      | 0
@@ -4895,13 +4895,13 @@ LBP-3010 / LBP-3100 / LBP-3250 / LBP-6000 / LBP-6020.
 <offer id="CL101552" available="true">
 <categoryId></categoryId>
 <vendorCode>CL101552</vendorCode>
-<name>Чернила HP universal Чёрный 1л. (совместимый)</name>
+<name>Чернила для HP universal Чёрный 1л. (совместимый)</name>
 <price>4045</price>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_hp-univ-Bk.jpg</picture>
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимые чернила HP universal Чёрный 1л.]]></description>
+Совместимые чернила для HP universal Чёрный 1л.]]></description>
 <param name="Тип">Чернила</param>
 <param name="Цвет">Чёрный</param>
 <param name="Для бренда">HP</param>
@@ -4911,13 +4911,13 @@ LBP-3010 / LBP-3100 / LBP-3250 / LBP-6000 / LBP-6020.
 <offer id="CL101553" available="true">
 <categoryId></categoryId>
 <vendorCode>CL101553</vendorCode>
-<name>Чернила HP universal Голубой 1л. (совместимый)</name>
+<name>Чернила для HP universal Голубой 1л. (совместимый)</name>
 <price>4045</price>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_hp-univ-C.jpg</picture>
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимые чернила HP universal Голубой 1л.]]></description>
+Совместимые чернила для HP universal Голубой 1л.]]></description>
 <param name="Тип">Чернила</param>
 <param name="Цвет">Голубой</param>
 <param name="Для бренда">HP</param>
@@ -8221,7 +8221,7 @@ Canon i-SENSYS LBP7010C, LBP7018C.
 <offer id="CL102626" available="true">
 <categoryId></categoryId>
 <vendorCode>CL102626</vendorCode>
-<name>Чернила Epson universal Light Пурпурный 1л (совместимый)</name>
+<name>Чернила для Epson universal Light Пурпурный 1л (совместимый)</name>
 <price>4265</price>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_ink-jet-lm.JPG</picture>
 <vendor>Epson</vendor>
@@ -8238,7 +8238,7 @@ Canon i-SENSYS LBP7010C, LBP7018C.
 <offer id="CL102627" available="true">
 <categoryId></categoryId>
 <vendorCode>CL102627</vendorCode>
-<name>Чернила Epson universal Light Голубой 1л (совместимый)</name>
+<name>Чернила для Epson universal Light Голубой 1л (совместимый)</name>
 <price>4265</price>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_ink-jet-lc.JPG</picture>
 <vendor>Epson</vendor>
@@ -8255,7 +8255,7 @@ Canon i-SENSYS LBP7010C, LBP7018C.
 <offer id="CL102628" available="true">
 <categoryId></categoryId>
 <vendorCode>CL102628</vendorCode>
-<name>Чернила Epson universal Голубой 1л (совместимый)</name>
+<name>Чернила для Epson universal Голубой 1л (совместимый)</name>
 <price>4265</price>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_ink-jet-c.JPG</picture>
 <vendor>Epson</vendor>
@@ -8272,7 +8272,7 @@ Canon i-SENSYS LBP7010C, LBP7018C.
 <offer id="CL102629" available="true">
 <categoryId></categoryId>
 <vendorCode>CL102629</vendorCode>
-<name>Чернила Epson universal Желтый 1л (совместимый)</name>
+<name>Чернила для Epson universal Желтый 1л (совместимый)</name>
 <price>4265</price>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_ink-jet-y.JPG</picture>
 <vendor>Epson</vendor>
@@ -8289,7 +8289,7 @@ Canon i-SENSYS LBP7010C, LBP7018C.
 <offer id="CL102630" available="true">
 <categoryId></categoryId>
 <vendorCode>CL102630</vendorCode>
-<name>Чернила Epson universal Чёрный 1л (совместимый)</name>
+<name>Чернила для Epson universal Чёрный 1л (совместимый)</name>
 <price>4265</price>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_ink-jet-bk.JPG</picture>
 <vendor>Epson</vendor>
@@ -8305,7 +8305,7 @@ Canon i-SENSYS LBP7010C, LBP7018C.
 <offer id="CL102631" available="true">
 <categoryId></categoryId>
 <vendorCode>CL102631</vendorCode>
-<name>Чернила Epson universal Пурпурный 1л (совместимый)</name>
+<name>Чернила для Epson universal Пурпурный 1л (совместимый)</name>
 <price>4265</price>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_ink-jet-m.JPG</picture>
 <vendor>Epson</vendor>
@@ -10465,7 +10465,7 @@ Canon i-SENSYS LBP6000, LBP6020, LBP6020B, LBP6030, LBP6030B, LBP6030w, MF3010, 
 <offer id="CL103089" available="true">
 <categoryId></categoryId>
 <vendorCode>CL103089</vendorCode>
-<name>Чернила Epson T67364A for L800/1800/810/850 LM 70 мл (оригинал)</name>
+<name>Чернила для Epson T67364A for L800/1800/810/850 LM 70 мл (оригинал)</name>
 <price>11030</price>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_epson_l800-lm.jpg</picture>
 <vendor>Epson</vendor>
@@ -10858,13 +10858,13 @@ Canon i-SENSYS LBP6000, LBP6020, LBP6020B, LBP6030, LBP6030B, LBP6030w, MF3010, 
 <offer id="CL103157" available="true">
 <categoryId></categoryId>
 <vendorCode>CL103157</vendorCode>
-<name>Чернила Epson T67314A for L800/1800/810/850 Чёрный 70 мл (оригинал)</name>
+<name>Чернила для Epson T67314A for L800/1800/810/850 Чёрный 70 мл (оригинал)</name>
 <price>11030</price>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_epson-l800-black.jpg</picture>
 <vendor>Epson</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальные чернила Epson T67314A for L800/1800/810/850 Чёрный 70 мл]]></description>
+Оригинальные чернила для Epson T67314A for L800/1800/810/850 Чёрный 70 мл]]></description>
 <param name="Тип">Чернила</param>
 <param name="Совместимость">Epson L800, Epson 1800, Epson 810, Epson 850</param>
 <param name="Коды расходников">T67314A</param>
@@ -11283,13 +11283,13 @@ CLP-360/365/365W, CLX-3300/3305/3305W/3305FW/3305FN, Xpress C410/C460.
 <offer id="CL103438" available="true">
 <categoryId></categoryId>
 <vendorCode>CL103438</vendorCode>
-<name>Чернила HP universal Пурпурный 1л. (совместимый)</name>
+<name>Чернила для HP universal Пурпурный 1л. (совместимый)</name>
 <price>4045</price>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_hp-univ-M.jpg</picture>
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимые чернила HP universal Пурпурный 1л.]]></description>
+Совместимые чернила для HP universal Пурпурный 1л.]]></description>
 <param name="Тип">Чернила</param>
 <param name="Цвет">Пурпурный</param>
 <param name="Для бренда">HP</param>
@@ -11299,13 +11299,13 @@ CLP-360/365/365W, CLX-3300/3305/3305W/3305FW/3305FN, Xpress C410/C460.
 <offer id="CL103439" available="true">
 <categoryId></categoryId>
 <vendorCode>CL103439</vendorCode>
-<name>Чернила HP universal Желтый 1л. (совместимый)</name>
+<name>Чернила для HP universal Желтый 1л. (совместимый)</name>
 <price>4045</price>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_hp-univ-Y.jpg</picture>
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимые чернила HP universal Желтый 1л.]]></description>
+Совместимые чернила для HP universal Желтый 1л.]]></description>
 <param name="Тип">Чернила</param>
 <param name="Цвет">Желтый</param>
 <param name="Для бренда">HP</param>
@@ -14904,7 +14904,7 @@ M181fw.
 <offer id="CL104206" available="true">
 <categoryId></categoryId>
 <vendorCode>CL104206</vendorCode>
-<name>Чернила HP комплект из 4-цветов universal 100мл (совместимый)</name>
+<name>Чернила для HP комплект из 4-цветов universal 100мл (совместимый)</name>
 <price>3200</price>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_100ml-Universal-Compatible-Refill-Dye-Ink-Kit-for-HP.jpg</picture>
 <vendor>HP</vendor>
@@ -14919,7 +14919,7 @@ M181fw.
 <offer id="CL104207" available="true">
 <categoryId></categoryId>
 <vendorCode>CL104207</vendorCode>
-<name>Чернила EPSON (EIM) комплект из 6-цветов 100 мл Hi-Чёрный (совместимый)</name>
+<name>Чернила для Epson (EIM) комплект из 6-цветов 100 мл Hi-Чёрный (совместимый)</name>
 <price>4825</price>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_ink-epson-hi-black.jpg</picture>
 <vendor>Epson</vendor>
@@ -16047,13 +16047,13 @@ LBP-3010 / LBP-3100 / LBP-3250 / LBP-6000 / LBP-6020.
 <offer id="CL104412" available="true">
 <categoryId></categoryId>
 <vendorCode>CL104412</vendorCode>
-<name>Чернила HP universal Чёрный 1000ml (совместимый)</name>
+<name>Чернила для HP universal Чёрный 1000ml (совместимый)</name>
 <price>4305</price>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_ink-1000ml-dye-Bk.jpg</picture>
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимые чернила HP universal Чёрный 1000ml]]></description>
+Совместимые чернила для HP universal Чёрный 1000ml]]></description>
 <param name="Тип">Чернила</param>
 <param name="Цвет">Чёрный</param>
 <param name="Для бренда">HP</param>
@@ -16063,13 +16063,13 @@ LBP-3010 / LBP-3100 / LBP-3250 / LBP-6000 / LBP-6020.
 <offer id="CL104413" available="true">
 <categoryId></categoryId>
 <vendorCode>CL104413</vendorCode>
-<name>Чернила HP universal Пурпурный 1000ml (совместимый)</name>
+<name>Чернила для HP universal Пурпурный 1000ml (совместимый)</name>
 <price>4305</price>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_ink-1000ml-dye-M.jpg</picture>
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимые чернила HP universal Пурпурный 1000ml]]></description>
+Совместимые чернила для HP universal Пурпурный 1000ml]]></description>
 <param name="Тип">Чернила</param>
 <param name="Цвет">Пурпурный</param>
 <param name="Для бренда">HP</param>
@@ -16079,13 +16079,13 @@ LBP-3010 / LBP-3100 / LBP-3250 / LBP-6000 / LBP-6020.
 <offer id="CL104414" available="true">
 <categoryId></categoryId>
 <vendorCode>CL104414</vendorCode>
-<name>Чернила HP universal Желтый 1000ml (совместимый)</name>
+<name>Чернила для HP universal Желтый 1000ml (совместимый)</name>
 <price>4305</price>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_ink-1000ml-dye-Y.jpg</picture>
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимые чернила HP universal Желтый 1000ml]]></description>
+Совместимые чернила для HP universal Желтый 1000ml]]></description>
 <param name="Тип">Чернила</param>
 <param name="Цвет">Желтый</param>
 <param name="Для бренда">HP</param>
@@ -16851,15 +16851,15 @@ LBP-3010 / LBP-3100 / LBP-3250 / LBP-6000 / LBP-6020.
 <offer id="CL104556" available="true">
 <categoryId></categoryId>
 <vendorCode>CL104556</vendorCode>
-<name>Чернила Epson/ Canon/ HP/ Brother/ Lexmark комплект из 6-цветов 100 мл (совместимый)</name>
+<name>Чернила для Epson/ Canon/ HP/ Brother/ Lexmark комплект из 6-цветов 100 мл (совместимый)</name>
 <price>6060</price>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_dye-ink-6-color.jpg</picture>
-<vendor>HP</vendor>
+<vendor>Epson</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
 Совместимые чернила Водорастворимые чернила (BK+C+M+Y+LC+LM) с дозатором]]></description>
 <param name="Тип">Чернила</param>
-<param name="Для бренда">HP</param>
+<param name="Для бренда">Epson</param>
 <param name="Оригинальность">Совместимый</param>
 </offer>
 
@@ -16979,13 +16979,13 @@ LBP-3010 / LBP-3100 / LBP-3250 / LBP-6000 / LBP-6020.
 <offer id="CL104590" available="true">
 <categoryId></categoryId>
 <vendorCode>CL104590</vendorCode>
-<name>Чернила HP universal Голубой 1000ml (совместимый)</name>
+<name>Чернила для HP universal Голубой 1000ml (совместимый)</name>
 <price>4305</price>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_ink-1000ml-dye-C.jpg</picture>
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимые чернила HP universal Голубой 1000ml]]></description>
+Совместимые чернила для HP universal Голубой 1000ml]]></description>
 <param name="Тип">Чернила</param>
 <param name="Цвет">Голубой</param>
 <param name="Для бренда">HP</param>
@@ -19084,7 +19084,7 @@ LBP-3010 / LBP-3100 / LBP-3250 / LBP-6000 / LBP-6020.
 <offer id="CL104896" available="true">
 <categoryId></categoryId>
 <vendorCode>CL104896</vendorCode>
-<name>Чернила Epson 103 EcoTank Голубой 65ml C13T00S24A (оригинал)</name>
+<name>Чернила для Epson 103 EcoTank Голубой 65ml C13T00S24A (оригинал)</name>
 <price>4750</price>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_C13T00S24A.jpg</picture>
 <vendor>Epson</vendor>
@@ -19103,7 +19103,7 @@ LBP-3010 / LBP-3100 / LBP-3250 / LBP-6000 / LBP-6020.
 <offer id="CL104898" available="true">
 <categoryId></categoryId>
 <vendorCode>CL104898</vendorCode>
-<name>Чернила Epson 103 EcoTank Желтый 65ml C13T00S44A (оригинал)</name>
+<name>Чернила для Epson 103 EcoTank Желтый 65ml C13T00S44A (оригинал)</name>
 <price>4750</price>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_C13T00S44A.jpg</picture>
 <vendor>Epson</vendor>
@@ -20959,7 +20959,7 @@ SL-C430, SL-C430W, SL-C480, SL-C480W, SL-C480FW.
 <offer id="CL105163" available="true">
 <categoryId></categoryId>
 <vendorCode>CL105163</vendorCode>
-<name>Чернила EPSON комплект из 6-цветов 100 мл (совместимый)</name>
+<name>Чернила для Epson комплект из 6-цветов 100 мл (совместимый)</name>
 <price>4280</price>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_ink-6.jpg</picture>
 <vendor>Epson</vendor>
@@ -22749,7 +22749,7 @@ LBP-3010 / LBP-3100 / LBP-3250 / LBP-6000 / LBP-6020.
 <offer id="CL105517" available="true">
 <categoryId></categoryId>
 <vendorCode>CL105517</vendorCode>
-<name>Чернила HP/Canon комплект из 4-цветов водорастворимые 100мл Hi-Чёрный (совместимый)</name>
+<name>Чернила для HP/Canon комплект из 4-цветов водорастворимые 100мл Hi-Чёрный (совместимый)</name>
 <price>3825</price>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_ink-set4-hi-black.jpg</picture>
 <vendor>HP</vendor>
