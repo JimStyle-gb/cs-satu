@@ -2,19 +2,16 @@
 """
 Path: scripts/suppliers/comportal/diagnostics.py
 
-ComPortal Diagnostics — служебный summary-слой поставщика.
+ComPortal diagnostics layer.
 
 Что делает:
-- собирает краткие сводки по source, raw offers и build stats;
-- готовит watch-сообщения для ручной проверки нужных OID;
-- пишет лёгкий operational-отчёт без business-логики.
+- печатает стабильный build summary;
+- держит diagnostics вне build-оркестратора;
 
 Что не делает:
-- не фильтрует и не меняет offers;
-- не содержит supplier-specific parsing-логики;
-- не подменяет builder, source и quality gate.
+- не меняет supplier raw/final данные;
+- не подменяет builder/source слой.
 """
-
 from __future__ import annotations
 
 from pathlib import Path
@@ -47,7 +44,6 @@ def build_watch_source_map(
         }
     return out
 
-
 def make_watch_messages(
     *,
     watch_ids: set[str],
@@ -65,7 +61,6 @@ def make_watch_messages(
         else:
             messages.append(f"MISS {oid}: not found in source")
     return messages
-
 
 def write_watch_report(path: str | Path, lines: list[str]) -> None:
     """Записать watch-report в utf-8."""
@@ -121,7 +116,6 @@ def summarize_offer_outs(offers: list[OfferOut]) -> dict[str, int]:
         "available_false": available_false,
     }
 
-
 def summarize_source_offers(source_offers: list[SourceOffer]) -> dict[str, int]:
     """Посчитать сводку по source-offers."""
     with_picture = 0
@@ -147,7 +141,6 @@ def summarize_source_offers(source_offers: list[SourceOffer]) -> dict[str, int]:
         "with_vendor": with_vendor,
         "without_vendor": without_vendor,
     }
-
 
 def summarize_build_stats(stats: BuildStats) -> dict[str, int]:
     """Преобразовать supplier build stats в компактную сводку."""
