@@ -2,7 +2,7 @@
 """
 Path: scripts/suppliers/akcent/quality_gate.py
 
-AkCent supplier layer — quality gate.
+AkCent Quality Gate — quality gate поставщика.
 
 Что делает:
 - читает raw-feed и считает critical/cosmetic tails;
@@ -10,10 +10,12 @@ AkCent supplier layer — quality gate.
 - пишет канонический quality gate report;
 - возвращает стабильный результат для build_akcent.py.
 
-Важно:
-- quality gate ничего не чинит и не мутирует feed;
-- supplier-specific классы ошибок должны описываться здесь, а не в shared core.
+Что не делает:
+- не чинит и не мутирует feed;
+- не переносит supplier-specific классы ошибок в shared core;
+- не подменяет builder и report writer.
 """
+
 from __future__ import annotations
 
 from collections import defaultdict
@@ -103,7 +105,6 @@ _OID_VENDOR_HINTS: list[tuple[re.Pattern[str], str]] = [
     (re.compile(r"(?iu)^ACSBID-"), "SMART"),
 ]
 
-
 @dataclass(frozen=True)
 class QualityIssue:
     severity: str
@@ -112,16 +113,13 @@ class QualityIssue:
     name: str
     details: str
 
-
 def _norm_ws(value: Any) -> str:
     s = unescape(str(value or "")).replace("\xa0", " ").strip()
     s = _WS_RE.sub(" ", s)
     return s.strip()
 
-
 def _cf(value: Any) -> str:
     return _norm_ws(value).casefold().replace("ё", "е")
-
 
 def _read_yaml(path: str) -> dict[str, Any]:
     p = Path(path)
@@ -129,12 +127,10 @@ def _read_yaml(path: str) -> dict[str, Any]:
         return {}
     return yaml.safe_load(p.read_text(encoding="utf-8")) or {}
 
-
 def _write_yaml(path: str, data: dict[str, Any]) -> None:
     p = Path(path)
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(yaml.safe_dump(data, allow_unicode=True, sort_keys=False), encoding="utf-8")
-
 
 def _offer_params(offer_el: ET.Element) -> dict[str, list[str]]:
     out: dict[str, list[str]] = defaultdict(list)
@@ -145,7 +141,6 @@ def _offer_params(offer_el: ET.Element) -> dict[str, list[str]]:
             out[key].append(val)
     return dict(out)
 
-
 def _safe_price_int(text: str) -> int | None:
     m = _PRICE_NUM_RE.search(_norm_ws(text))
     if not m:
@@ -154,7 +149,6 @@ def _safe_price_int(text: str) -> int | None:
         return int(m.group(0))
     except Exception:
         return None
-
 
 def _description_plain_for_gate(desc_html: str) -> str:
     html = desc_html or ""
@@ -168,7 +162,6 @@ def _description_plain_for_gate(desc_html: str) -> str:
         if line:
             lines.append(line)
     return "\n".join(lines)
-
 
 def _infer_vendor_candidate(*, oid: str, name: str, desc_plain: str, params: dict[str, list[str]]) -> str:
     for rx, vendor in _OID_VENDOR_HINTS:
@@ -185,7 +178,6 @@ def _infer_vendor_candidate(*, oid: str, name: str, desc_plain: str, params: dic
             return vendor
 
     return ""
-
 
 def _is_suspicious_vendor(*, vendor: str, name: str, desc_plain: str, params: dict[str, list[str]], oid: str) -> bool:
     v = _cf(vendor)
@@ -208,7 +200,6 @@ def _is_suspicious_vendor(*, vendor: str, name: str, desc_plain: str, params: di
         params=params,
     )
     return not bool(inferred)
-
 
 def _detect_issues(feed_path: str) -> list[QualityIssue]:
     xml_text = Path(feed_path).read_text(encoding="utf-8", errors="ignore")
@@ -261,7 +252,6 @@ def _detect_issues(feed_path: str) -> list[QualityIssue]:
 
     return sorted(deduped.values(), key=lambda x: (x.severity, x.rule, x.oid))
 
-
 def _load_cosmetic_baseline(baseline_path: str) -> dict[str, set[str]]:
     data = _read_yaml(baseline_path)
     raw = data.get("accepted_cosmetic") or {}
@@ -269,7 +259,6 @@ def _load_cosmetic_baseline(baseline_path: str) -> dict[str, set[str]]:
     for rule, oids in raw.items():
         out[str(rule)] = {str(x).strip() for x in (oids or []) if str(x).strip()}
     return out
-
 
 def _make_baseline_payload(cosmetic: list[QualityIssue]) -> dict[str, Any]:
     grouped: dict[str, list[str]] = defaultdict(list)
@@ -280,7 +269,6 @@ def _make_baseline_payload(cosmetic: list[QualityIssue]) -> dict[str, Any]:
     for rule in sorted(grouped):
         payload["accepted_cosmetic"][rule] = sorted(set(grouped[rule]))
     return payload
-
 
 def _write_report(
     path: str,
@@ -310,7 +298,6 @@ def _write_report(
         max_cosmetic_offers=max_cosmetic_offers,
         max_cosmetic_issues=max_cosmetic_issues,
     )
-
 
 def run_quality_gate(
     *,
