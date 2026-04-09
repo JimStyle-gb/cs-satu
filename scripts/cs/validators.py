@@ -4,12 +4,10 @@ Path: scripts/cs/validators.py
 
 CS Validators — проверки готового CS-фида.
 
-Что изменено в этой версии:
-- убраны локальные дубли norm_ws/safe_int;
-- используем единые shared-хелперы из cs.util;
-- убран жёсткий хардкод старого списка поставщиков (AC/AS/CL/NP);
-- hash-like id теперь определяется по общей форме, без привязки к конкретному поставщику;
-- структура файла выровнена и снабжена короткими русскими комментариями.
+Роль файла:
+- проверяет уже собранный final XML;
+- использует общие shared-хелперы из cs.util;
+- не содержит supplier-specific логики.
 """
 
 from __future__ import annotations
@@ -19,9 +17,16 @@ import re
 from .util import norm_ws, safe_int
 
 
+# -----------------------------
 # Общие regex валидатора
+# -----------------------------
+
 _RE_HASH_LIKE_OID = re.compile(r"^[A-Z]{2}H[0-9A-F]{10}$")
 
+
+# -----------------------------
+# Public API
+# -----------------------------
 
 def validate_cs_yml(xml: str, *, param_drop_default_cf: set[str]) -> None:
     """Проверить уже собранный CS-фид и бросить ValueError при ошибках."""
@@ -76,7 +81,6 @@ def validate_cs_yml(xml: str, *, param_drop_default_cf: set[str]) -> None:
                 if offer_id in ids_seen:
                     dup_ids.append(offer_id)
                 ids_seen.add(offer_id)
-                # Это не критическая ошибка, а сигнал о подозрительно hash-похожем id.
                 if _RE_HASH_LIKE_OID.fullmatch(offer_id):
                     hash_like_ids.append(offer_id)
             continue
@@ -120,7 +124,6 @@ def validate_cs_yml(xml: str, *, param_drop_default_cf: set[str]) -> None:
                 if not price_ok:
                     bad_price.append(offer_id)
 
-            # Сбрасываем состояние offer
             in_offer = False
             offer_id = ""
             has_picture = False
