@@ -2,19 +2,16 @@
 """
 Path: scripts/cs/pricing.py
 
-CS Pricing — общий расчёт финальной цены.
+CS Pricing — shared price calculation layer.
 
 Что делает:
-- держит единые ценовые tiers для CS-шаблона;
-- считает финальную цену по общему правилу;
-- возвращает безопасный fallback для некорректных значений.
+- считает финальную цену по общему CS-правилу;
+- не зависит от supplier-specific логики;
 
 Что не делает:
-- не содержит supplier-specific логики;
-- не читает source-данные напрямую;
-- не подменяет builder и core-оркестрацию.
+- не строит offers;
+- не содержит supplier-specific правил.
 """
-
 from __future__ import annotations
 
 CS_PRICE_TIERS = [
