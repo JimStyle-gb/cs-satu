@@ -1,18 +1,18 @@
 # -*- coding: utf-8 -*-
 """
 Path: scripts/suppliers/copyline/desc_clean.py
-CopyLine display-description clean layer.
 
-Роль модуля:
-- готовить ТОЛЬКО display-body для raw/native_desc и final;
-- убирать supplier-мусор и техшапки;
-- не участвовать в truth extraction;
-- не резать текст под extractor-логику.
+CopyLine Desc Clean — supplier-layer очистка display-description.
 
-Важно:
-- главный extractor работает раньше и не должен зависеть от narrative-cleaning;
-- этот модуль обслуживает только витринный текст;
-- функция clean_description() намеренно оставлена как backward-safe public API.
+Что делает:
+- готовит только display-body для raw/native_desc и final;
+- убирает supplier-мусор и явные техшапки;
+- оставляет backward-safe public API для narrative-cleaning.
+
+Что не делает:
+- не участвует в truth extraction;
+- не заменяет desc_extract-слой;
+- не строит финальный shared HTML description.
 """
 
 from __future__ import annotations
@@ -58,7 +58,6 @@ def safe_str(x: object) -> str:
     return str(x).strip() if x is not None else ""
 
 
-
 def _norm_spaces(text: str) -> str:
     """Нормализовать пробелы/переводы строк без semantic-решений."""
     s = safe_str(text)
@@ -70,7 +69,6 @@ def _norm_spaces(text: str) -> str:
     s = re.sub(r" *\n *", "\n", s)
     s = re.sub(r"\n{3,}", "\n\n", s)
     return s.strip()
-
 
 
 def _cut_display_tail(text: str) -> str:
@@ -90,7 +88,6 @@ def _cut_display_tail(text: str) -> str:
     return s[:best].strip()
 
 
-
 def _drop_known_header_prefixes(text: str) -> str:
     """Убрать одиночные техшапки в начале текста."""
     s = _norm_spaces(text)
@@ -99,7 +96,6 @@ def _drop_known_header_prefixes(text: str) -> str:
     for header in DISPLAY_CUT_HEADERS:
         s = re.sub(rf"^\s*{re.escape(header)}\s*:?\s*", "", s, flags=re.I)
     return s.strip()
-
 
 
 def _drop_noise_lines(lines: Iterable[str]) -> list[str]:
@@ -122,7 +118,6 @@ def _drop_noise_lines(lines: Iterable[str]) -> list[str]:
     return out
 
 
-
 def _cleanup_punctuation(text: str) -> str:
     """Мягкая косметика narrative без изменения смысла."""
     s = safe_str(text)
@@ -135,7 +130,6 @@ def _cleanup_punctuation(text: str) -> str:
     s = re.sub(r"\s{2,}", " ", s)
     s = re.sub(r" ?\n ?", "\n", s)
     return s.strip()
-
 
 
 def clean_description(text: str) -> str:
