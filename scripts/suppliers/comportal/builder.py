@@ -33,7 +33,7 @@ from suppliers.comportal.normalize import (
     normalize_price_in,
     normalize_vendor,
 )
-from suppliers.comportal.params_xml import build_params_from_xml
+from suppliers.comportal.params import build_params_from_xml
 from suppliers.comportal.pictures import collect_picture_urls
 
 
