@@ -2,26 +2,25 @@
 """
 Path: scripts/suppliers/akcent/diagnostics.py
 
-AkCent supplier layer — build diagnostics / summary.
+AkCent Diagnostics — служебный summary-слой поставщика.
 
 Что делает:
 - печатает стабильный build summary для orchestrator;
 - форматирует filter/build report без лишнего шума;
 - держит простые watch-helper'ы для ручной диагностики.
 
-Важно:
-- это operational tooling, а не бизнес-логика;
-- модуль ничего не фильтрует и не меняет в offers;
-- нужен для удобного разбора прогонов AkCent.
+Что не делает:
+- не фильтрует и не меняет offers;
+- не содержит supplier-specific business-логики;
+- не подменяет builder и quality gate.
 """
 
 from __future__ import annotations
 
+from pathlib import Path
 from typing import Any, Iterable
 
-
 _SUMMARY_WIDTH = 72
-
 
 # -----------------------------
 # Базовые helper'ы
@@ -30,18 +29,15 @@ _SUMMARY_WIDTH = 72
 def _clean_text(value: Any) -> str:
     return str(value or "").strip()
 
-
 def _to_int(value: Any, default: int = 0) -> int:
     try:
         return int(value)
     except Exception:
         return default
 
-
 def _sort_key(value: Any) -> tuple[int, str]:
-    text = _clean_text(value)
-    return (0, text.casefold()) if text else (1, "")
-
+    s = _clean_text(value)
+    return (0, s.casefold()) if s else (1, "")
 
 def _fmt_scalar(value: Any) -> str:
     if isinstance(value, bool):
@@ -50,36 +46,30 @@ def _fmt_scalar(value: Any) -> str:
         return ""
     return str(value)
 
-
 def _fmt_inline_map(data: dict[str, Any]) -> list[str]:
     lines: list[str] = []
     for key in sorted(data.keys(), key=_sort_key):
-        value = data.get(key)
-
-        if isinstance(value, dict):
+        val = data.get(key)
+        if isinstance(val, dict):
             lines.append(f"  {key}:")
-            for sub_key in sorted(value.keys(), key=_sort_key):
-                lines.append(f"    {sub_key}: {_fmt_scalar(value.get(sub_key))}")
+            for sub_key in sorted(val.keys(), key=_sort_key):
+                lines.append(f"    {sub_key}: {_fmt_scalar(val.get(sub_key))}")
             continue
-
-        if isinstance(value, (list, tuple, set)):
-            items = [_clean_text(item) for item in value if _clean_text(item)]
-            if not items:
+        if isinstance(val, (list, tuple, set)):
+            seq = [_clean_text(x) for x in val if _clean_text(x)]
+            if not seq:
                 lines.append(f"  {key}: []")
             else:
                 lines.append(f"  {key}:")
-                for item in items:
+                for item in seq:
                     lines.append(f"    - {item}")
             continue
-
-        lines.append(f"  {key}: {_fmt_scalar(value)}")
+        lines.append(f"  {key}: {_fmt_scalar(val)}")
     return lines
-
 
 def _extract_top_counts(data: Any, *, top_n: int = 12) -> list[tuple[str, int]]:
     if not isinstance(data, dict):
         return []
-
     items: list[tuple[str, int]] = []
     for key, value in data.items():
         try:
@@ -90,10 +80,8 @@ def _extract_top_counts(data: Any, *, top_n: int = 12) -> list[tuple[str, int]]:
         if not name:
             continue
         items.append((name, count))
-
-    items.sort(key=lambda item: (-item[1], item[0].casefold()))
+    items.sort(key=lambda x: (-x[1], x[0].casefold()))
     return items[:top_n]
-
 
 # -----------------------------
 # Summary print
@@ -111,6 +99,7 @@ def print_build_summary(
     raw_out_file: str,
 ) -> None:
     """Печатает стабильный summary прогона AkCent."""
+
     supplier_name = _clean_text(supplier) or "AkCent"
     filter_report = dict(filter_report or {})
     build_report = dict(build_report or {})
@@ -151,7 +140,6 @@ def print_build_summary(
             print(f"  - {name}: {count}")
         print("-" * _SUMMARY_WIDTH)
 
-
 # -----------------------------
 # Watch helpers (на будущее)
 # -----------------------------
@@ -168,38 +156,20 @@ def build_watch_source_map(
     - по article;
     - по name-prefix.
     """
-    watch_articles_cf = {
-        _clean_text(item).casefold()
-        for item in (watch_articles or set())
-        if _clean_text(item)
-    }
-    watch_prefixes_cf = tuple(
-        _clean_text(item).casefold().replace("ё", "е")
-        for item in (watch_prefixes or [])
-        if _clean_text(item)
-    )
+    watch_articles_cf = {_clean_text(x).casefold() for x in (watch_articles or set()) if _clean_text(x)}
+    watch_prefixes_cf = tuple(_clean_text(x).casefold().replace("ё", "е") for x in (watch_prefixes or []) if _clean_text(x))
     prefix = _clean_text(prefix) or "AC"
 
     out: dict[str, dict[str, str]] = {}
     for src in source_offers:
-        name = _clean_text(
-            getattr(src, "name", None)
-            if hasattr(src, "name")
-            else (src.get("name") if isinstance(src, dict) else "")
-        )
+        name = _clean_text(getattr(src, "name", None) if hasattr(src, "name") else (src.get("name") if isinstance(src, dict) else ""))
         article = _clean_text(
-            getattr(src, "article", None)
-            if hasattr(src, "article")
-            else (src.get("article") if isinstance(src, dict) else "")
+            getattr(src, "article", None) if hasattr(src, "article") else (src.get("article") if isinstance(src, dict) else "")
         )
         raw_id = _clean_text(
             getattr(src, "raw_id", None)
             if hasattr(src, "raw_id")
-            else (
-                src.get("raw_id")
-                if isinstance(src, dict)
-                else (src.get("id") if isinstance(src, dict) else "")
-            )
+            else (src.get("raw_id") if isinstance(src, dict) else (src.get("id") if isinstance(src, dict) else ""))
         )
         category_id = _clean_text(
             getattr(src, "category_id", None)
@@ -209,13 +179,10 @@ def build_watch_source_map(
 
         name_cf = name.casefold().replace("ё", "е")
         article_cf = article.casefold()
-
         matched = False
         if article_cf and article_cf in watch_articles_cf:
             matched = True
-        if not matched and watch_prefixes_cf and any(
-            name_cf.startswith(item) for item in watch_prefixes_cf
-        ):
+        if not matched and watch_prefixes_cf and any(name_cf.startswith(p) for p in watch_prefixes_cf):
             matched = True
         if not matched:
             continue
@@ -225,14 +192,12 @@ def build_watch_source_map(
             oid = f"{prefix}{oid}"
         if not oid:
             continue
-
         out[oid] = {
             "article": article,
             "categoryId": category_id,
             "name": name,
         }
     return out
-
 
 def make_watch_messages(
     *,
@@ -242,8 +207,7 @@ def make_watch_messages(
     """Строит простые watch-сообщения по найденным / потерянным товарам."""
     watch_out = set(watch_out or set())
     messages: list[str] = []
-
-    for oid in sorted(watch_source.keys(), key=lambda item: item.casefold()):
+    for oid in sorted(watch_source.keys(), key=lambda x: x.casefold()):
         info = watch_source.get(oid) or {}
         if oid in watch_out:
             messages.append(
@@ -256,3 +220,15 @@ def make_watch_messages(
             f"categoryId={info.get('categoryId', '')!r}; name={info.get('name', '')!r}"
         )
     return messages
+
+def write_watch_report(path_str: str, messages: list[str]) -> None:
+    """Пишет watch-report в txt, если путь задан."""
+    path_str = _clean_text(path_str)
+    if not path_str:
+        return
+    try:
+        path = Path(path_str)
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text("\n".join(messages) + ("\n" if messages else ""), encoding="utf-8")
+    except Exception as e:
+        print(f"[build_akcent] WARN: failed to write watch report {path_str!r}: {e}")
