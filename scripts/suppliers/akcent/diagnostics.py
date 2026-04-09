@@ -2,19 +2,16 @@
 """
 Path: scripts/suppliers/akcent/diagnostics.py
 
-AkCent Diagnostics — служебный summary-слой поставщика.
+AkCent diagnostics layer.
 
 Что делает:
-- печатает стабильный build summary для orchestrator;
-- форматирует filter/build report без лишнего шума;
-- держит простые watch-helper'ы для ручной диагностики.
+- печатает стабильный build summary;
+- держит diagnostics вне build-оркестратора;
 
 Что не делает:
-- не фильтрует и не меняет offers;
-- не содержит supplier-specific business-логики;
-- не подменяет builder и quality gate.
+- не меняет supplier raw/final данные;
+- не подменяет builder/source слой.
 """
-
 from __future__ import annotations
 
 from pathlib import Path
