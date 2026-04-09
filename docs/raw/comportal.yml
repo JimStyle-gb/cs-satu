@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<yml_catalog date="2026-04-09 16:13:05">
+<yml_catalog date="2026-04-10 00:10:54">
 <shop><offers>
 <!--FEED_META
 Поставщик                                  | ComPortal
 URL поставщика                             | https://www.comportal.kz/auth/documents/prices/yml-catalog.php
-Время сборки (Алматы)                      | 2026-04-09 16:13:05
+Время сборки (Алматы)                      | 2026-04-10 00:10:54
 Ближайшая сборка (Алматы)                  | 2026-04-10 03:00:00
-Сколько товаров у поставщика до фильтра    | 1198
-Сколько товаров у поставщика после фильтра | 598
-Сколько товаров есть в наличии (true)      | 598
+Сколько товаров у поставщика до фильтра    | 1193
+Сколько товаров у поставщика после фильтра | 596
+Сколько товаров есть в наличии (true)      | 596
 Сколько товаров нет в наличии (false)      | 0
 -->
 
@@ -198,6 +198,23 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Коды">CN055AE#BGX</param>
 <param name="Для бренда">HP</param>
 <param name="Оригинальность">Оригинал</param>
+</offer>
+
+<offer id="CP13873145" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13873145</vendorCode>
+<name>МФУ Canon i-SENSYS MF3010 (5252B004)</name>
+<price>136972</price>
+<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
+<vendor>Canon</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+МФУ. Гарантия: 12 мес. Для бренда: Canon. Модель: i-SENSYS MF3010. Коды: 5252B004.]]></description>
+<param name="Тип">МФУ</param>
+<param name="Гарантия">12 мес</param>
+<param name="Коды">5252B004</param>
+<param name="Модель">i-SENSYS MF3010</param>
+<param name="Для бренда">Canon</param>
 </offer>
 
 <offer id="CP10304640" available="true">
@@ -3082,23 +3099,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Нагрузка">15 000</param>
 <param name="Коды">1418C170</param>
 <param name="Для бренда">Canon</param>
-<param name="Оригинальность">Оригинал</param>
-</offer>
-
-<offer id="CP13873126" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13873126</vendorCode>
-<name>Картридж HP CF214XH (CF214XH) (оригинал)</name>
-<price>149566</price>
-<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
-<vendor>HP</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Оригинальный картридж HP CF214XH код — CF214XH.]]></description>
-<param name="Тип">Картридж</param>
-<param name="Коды">CF214XH</param>
-<param name="Модель">CF214XH</param>
-<param name="Для бренда">HP</param>
 <param name="Оригинальность">Оригинал</param>
 </offer>
 
@@ -11170,56 +11170,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Диагональ">23.8</param>
 <param name="Частота обновления">100</param>
 <param name="Коды">210-BRDM</param>
-<param name="Для бренда">Dell</param>
-</offer>
-
-<offer id="CP13871048" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13871048</vendorCode>
-<name>Монитор Dell Pro 27 Plus QHD USB-C Hub Monitor - P2725DE, 68.6cm (27.0") (210-BQSZ)</name>
-<price>172832</price>
-<picture>https://www.comportal.kz/upload/iblock/114/e1dbko2jzbaan2x70pd8x69ltzuwio28.JPG</picture>
-<vendor>Dell</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Монитор. Диагональ: 27. Максимальное разрешение: 2560x1440. Тип матрицы: IPS. Частота обновления: 100. Время отклика: 5. Порты: 1 HDMI port (HDCP 1.4) (Supports up to QHD 2560 x 1440 100Hz TMDS as per specified in HDMI 2.1)/1 Display Port 1.4 (HDCP1.4)(Support up to 2560 x 1440 100Hz)/1 DisplayPort (out) port with MST (HDCP 1.4)/1 USB-C 5Gbps upstream port (DisplayPort 1.4 Alternate mode, Power Delivery up to 90W)/1 USB-C 5Gbps downstream port/3 USB 5Gbps Type-A downstream ports/1 RJ45. Гарантия: 36 мес.]]></description>
-<param name="Тип">Монитор</param>
-<param name="Модель">P2725DE</param>
-<param name="Порты">1 HDMI port (HDCP 1.4) (Supports up to QHD 2560 x 1440 100Hz TMDS as per specified in HDMI 2.1)/1 Display Port 1.4 (HDCP1.4)(Support up to 2560 x 1440 100Hz)/1 DisplayPort (out) port with MST (HDCP 1.4)/1 USB-C 5Gbps upstream port (DisplayPort 1.4 Alternate mode, Power Delivery up to 90W)/1 USB-C 5Gbps downstream port/3 USB 5Gbps Type-A downstream ports/1 RJ45</param>
-<param name="Тип матрицы">IPS</param>
-<param name="Гарантия">36 мес</param>
-<param name="Контрастность">1500:1</param>
-<param name="Яркость">350</param>
-<param name="Время отклика">5</param>
-<param name="Максимальное разрешение">2560x1440</param>
-<param name="Диагональ">27</param>
-<param name="Частота обновления">100</param>
-<param name="Коды">210-BQSZ</param>
-<param name="Для бренда">Dell</param>
-</offer>
-
-<offer id="CP13870733" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13870733</vendorCode>
-<name>Монитор Dell Pro 27 Plus 4K USB-C Hub Monitor - P2725QE, 68.6cm (27.0") (210-BRDS)</name>
-<price>174792</price>
-<picture>https://www.comportal.kz/upload/iblock/207/l3nzdtv3uohiqeeeg56byh15sd1nuqvu.JPG</picture>
-<vendor>Dell</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Монитор. Диагональ: 27. Максимальное разрешение: 3840x2160. Тип матрицы: IPS. Частота обновления: 100. Время отклика: 5. Порты: 1 HDMI port (HDCP2.3) (supports up to UHD 3840 x 2160 100 Hz FRL as per specified in HDMI 2.1)/1 Display Port 1.4 (HDCP2.3)(Support up to 3840 x 2160 100Hz)/1 USB-C 5Gbps upstream port (DisplayPort 1.4 Alternate mode, Power Delivery up to 90W)/1 USB-C 5Gbps downstream port/3 USB 5Gbps Type-A downstream ports/1 RJ45 Ethernet port, 1GbE. Гарантия: 36 мес.]]></description>
-<param name="Тип">Монитор</param>
-<param name="Модель">P2725QE</param>
-<param name="Порты">1 HDMI port (HDCP2.3) (supports up to UHD 3840 x 2160 100 Hz FRL as per specified in HDMI 2.1)/1 Display Port 1.4 (HDCP2.3)(Support up to 3840 x 2160 100Hz)/1 USB-C 5Gbps upstream port (DisplayPort 1.4 Alternate mode, Power Delivery up to 90W)/1 USB-C 5Gbps downstream port/3 USB 5Gbps Type-A downstream ports/1 RJ45 Ethernet port, 1GbE</param>
-<param name="Тип матрицы">IPS</param>
-<param name="Гарантия">36 мес</param>
-<param name="Контрастность">1500:1</param>
-<param name="Яркость">350</param>
-<param name="Время отклика">5</param>
-<param name="Максимальное разрешение">3840x2160</param>
-<param name="Диагональ">27</param>
-<param name="Частота обновления">100</param>
-<param name="Коды">210-BRDS</param>
 <param name="Для бренда">Dell</param>
 </offer>
 
