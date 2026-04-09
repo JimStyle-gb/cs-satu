@@ -2,19 +2,16 @@
 """
 Path: scripts/suppliers/comportal/builder.py
 
-ComPortal Builder — supplier-layer сборка clean raw offers.
+ComPortal builder layer.
 
 Что делает:
-- собирает raw offer из normalized basics, params, compat и pictures;
-- разводит text-for-data и text-for-display;
-- готовит clean raw OfferOut для shared core.
+- собирает clean raw offers supplier-layer;
+- не подменяет shared core final rendering;
 
 Что не делает:
-- не переносит supplier-specific repairs в shared core;
-- не строит final shared HTML description;
-- не заменяет source.py, params.py и compat.py.
+- не хранит shared final rules;
+- не подменяет shared description/keywords/writer.
 """
-
 from __future__ import annotations
 
 from html import unescape
@@ -37,7 +34,6 @@ from suppliers.comportal.normalize import (
 )
 from suppliers.comportal.params import build_params_from_xml
 from suppliers.comportal.pictures import collect_picture_urls
-
 
 _RECONCILE_KEYS = {
     "коды",
@@ -63,7 +59,6 @@ _ORIGINALITY_PARAM_NAME = "Оригинальность"
 _NAME_ORIGINALITY_SUFFIX_RE = re.compile(r"\s*\((?:оригинал|совместимый)\)\s*$", re.I)
 _DESC_ORIGINALITY_HEAD_RE = re.compile(r"(?iu)^\s*(?:Оригинальн(?:ый|ая|ое|ые)|Совместим(?:ый|ая|ое|ые))")
 
-
 def _param_map(params: list[ParamItem]) -> dict[str, str]:
     out: dict[str, str] = {}
     seen: set[str] = set()
@@ -79,29 +74,24 @@ def _param_map(params: list[ParamItem]) -> dict[str, str]:
         seen.add(ncf)
     return out
 
-
 def _drop_param_casefold(params: list[ParamItem], name_to_drop: str) -> list[ParamItem]:
     target = norm_ws(name_to_drop).casefold()
     return [p for p in params if norm_ws(p.name).casefold() != target]
 
-
 def _join_nonempty(parts: list[str], sep: str = ". ") -> str:
     vals = [norm_ws(x) for x in parts if norm_ws(x)]
     return sep.join(vals).strip()
-
 
 def _append_param_line(bits: list[str], label: str, value: str) -> None:
     v = norm_ws(value)
     if v:
         bits.append(f"{label}: {v}")
 
-
 def _finalize_desc(text: str) -> str:
     t = norm_ws(text)
     if t and not t.endswith("."):
         t += "."
     return t
-
 
 def _param_value_score(name: str, value: str) -> int:
     ncf = norm_ws(name).casefold()
@@ -141,7 +131,6 @@ def _param_value_score(name: str, value: str) -> int:
 
     return score
 
-
 def _model_reconcile_should_keep_old(old_value: str, new_value: str) -> bool:
     old_v = norm_ws(old_value)
     new_v = norm_ws(new_value)
@@ -165,7 +154,6 @@ def _model_reconcile_should_keep_old(old_value: str, new_value: str) -> bool:
 
     return False
 
-
 _CODE_LIKE_RE = re.compile(r"^[A-Z0-9][A-Z0-9_#./\-]{4,}$", re.IGNORECASE)
 _TITLE_TAIL_CODE_RE = re.compile(r"\(([^()]{2,})\)\s*$")
 _CM_INCH_RE = re.compile(r"\b\d{2,3}(?:[.,]\d+)?\s*cm\s*\((\d{1,2}(?:[.,]\d)?)\s*\"\)")
@@ -177,16 +165,13 @@ _PUBLIC_HEAD_RE = re.compile(
     r"(?:AIWA|Dell|HP|Canon|Epson|Xerox|Brother|Kyocera|Pantum|Ricoh|APC|Lenovo|ASUS|Acer|MSI|LG|Samsung|Huawei|iiyama|Gigabyte|Hikvision|ViewSonic|BenQ|AOC|TP\-?Link|D\-?Link|Cisco|Zyxel|Eaton|Poly)\s+"
 )
 
-
 def _decode_text(value: str) -> str:
     return norm_ws(unescape(value or "").replace("&quot;", '"').replace("quot;", '"'))
-
 
 def _extract_title_tail_code(clean_name: str) -> str:
     s = _decode_text(clean_name)
     m = _TITLE_TAIL_CODE_RE.search(s)
     return _decode_text(m.group(1)) if m else ""
-
 
 def _shorten_public_series(text: str) -> str:
     s = _decode_text(text)
@@ -216,7 +201,6 @@ def _shorten_public_series(text: str) -> str:
 
     return s
 
-
 def _is_code_like_value(value: str, *, codes: str = "") -> bool:
     v = _decode_text(value)
     c = _decode_text(codes)
@@ -231,7 +215,6 @@ def _is_code_like_value(value: str, *, codes: str = "") -> bool:
     if len(v) >= 18 and sum(ch.isdigit() for ch in v) >= 4 and any(sep in v for sep in ("-", "_", "#", "/")):
         return True
     return False
-
 
 def _clean_public_series_text(text: str, *, vendor: str, ptype: str, code: str) -> str:
     s = _decode_text(text)
@@ -276,10 +259,8 @@ def _clean_public_series_text(text: str, *, vendor: str, ptype: str, code: str) 
     s = _shorten_public_series(s)
     return s
 
-
 def _title_public_series(clean_name: str, *, vendor: str, ptype: str, codes: str) -> str:
     return _clean_public_series_text(clean_name, vendor=vendor, ptype=ptype, code=codes)
-
 
 def _title_monitor_diagonal(clean_name: str) -> str:
     s = _decode_text(clean_name)
@@ -294,7 +275,6 @@ def _title_monitor_diagonal(clean_name: str) -> str:
         return m.group(1)
     return ""
 
-
 def _effective_public_model(pmap: dict[str, str], *, clean_name: str, vendor: str, ptype: str) -> str:
     model = _decode_text(pmap.get("Модель", ""))
     codes = _decode_text(pmap.get("Коды", ""))
@@ -303,7 +283,6 @@ def _effective_public_model(pmap: dict[str, str], *, clean_name: str, vendor: st
     if title_series and (_is_code_like_value(model, codes=codes) or _NOISY_MODEL_RE.search(model)):
         return title_series
     return model or title_series
-
 
 def _polish_model_param(params: list[ParamItem], *, clean_name: str, vendor: str) -> list[ParamItem]:
     pmap = _param_map(params)
@@ -319,7 +298,6 @@ def _polish_model_param(params: list[ParamItem], *, clean_name: str, vendor: str
     if not current_model or _is_code_like_value(current_model, codes=codes) or _NOISY_MODEL_RE.search(current_model) or (_extract_title_tail_code(clean_name) and _extract_title_tail_code(clean_name).casefold() in current_model.casefold()):
         return _upsert_param(params, name="Модель", value=better_model, source="title")
     return params
-
 
 def _merge_desc_enrichment(xml_params: list[ParamItem], desc_params: list[ParamItem]) -> list[ParamItem]:
     out = list(xml_params)
@@ -363,7 +341,6 @@ def _merge_desc_enrichment(xml_params: list[ParamItem], desc_params: list[ParamI
 
     return out
 
-
 def _enrich_sparse_device_desc(bits: list[str], pmap: dict[str, str]) -> list[str]:
     strong_payload_count = max(0, len(bits) - 1)
     if strong_payload_count >= 3:
@@ -379,7 +356,6 @@ def _enrich_sparse_device_desc(bits: list[str], pmap: dict[str, str]) -> list[st
 
     return bits
 
-
 def _desc_for_printing_device(pmap: dict[str, str]) -> str:
     bits: list[str] = []
     ptype = norm_ws(pmap.get("Тип", ""))
@@ -394,7 +370,6 @@ def _desc_for_printing_device(pmap: dict[str, str]) -> str:
     _append_param_line(bits, "Гарантия", pmap.get("Гарантия", ""))
     bits = _enrich_sparse_device_desc(bits, pmap)
     return _finalize_desc(_join_nonempty(bits))
-
 
 def _desc_for_monitor(pmap: dict[str, str], *, clean_name: str, vendor: str) -> str:
     bits: list[str] = ["Монитор"]
@@ -422,7 +397,6 @@ def _desc_for_monitor(pmap: dict[str, str], *, clean_name: str, vendor: str) -> 
 
     bits = _enrich_sparse_device_desc(bits, enrich_map)
     return _finalize_desc(_join_nonempty(bits))
-
 
 def _desc_for_computer(pmap: dict[str, str], *, clean_name: str, vendor: str) -> str:
     bits: list[str] = []
@@ -502,7 +476,6 @@ def _desc_for_computer(pmap: dict[str, str], *, clean_name: str, vendor: str) ->
     bits = _enrich_sparse_device_desc(bits, enrich_map)
     return _finalize_desc(_join_nonempty(bits))
 
-
 def _desc_for_power(pmap: dict[str, str]) -> str:
     bits: list[str] = []
     ptype = norm_ws(pmap.get("Тип", ""))
@@ -524,7 +497,6 @@ def _desc_for_power(pmap: dict[str, str]) -> str:
     bits = _enrich_sparse_device_desc(bits, pmap)
     return _finalize_desc(_join_nonempty(bits))
 
-
 def _seo_head_word_from_originality(value: str) -> str:
     v = norm_ws(value).casefold().replace("ё", "е")
     if v == "оригинал":
@@ -532,7 +504,6 @@ def _seo_head_word_from_originality(value: str) -> str:
     if v == "совместимый":
         return "Совместимый"
     return ""
-
 
 def _shorten_compat_list(text: str, *, max_items: int = 5, max_len: int = 160) -> str:
     s = norm_ws(text)
@@ -557,7 +528,6 @@ def _shorten_compat_list(text: str, *, max_items: int = 5, max_len: int = 160) -
             break
     cut = cut.rstrip(" ,;/")
     return cut + "…"
-
 
 def _desc_for_consumable(pmap: dict[str, str]) -> str:
     ptype = norm_ws(pmap.get("Тип", "")) or "Расходный материал"
@@ -623,7 +593,6 @@ def _desc_for_consumable(pmap: dict[str, str]) -> str:
     _append_param_line(bits, "Применение", use_case)
     return _finalize_desc(_join_nonempty(bits))
 
-
 def _canonical_param_name_for_prune(name: str) -> str:
     """
     Канонизация supplier-key только для prune-сравнения.
@@ -632,7 +601,6 @@ def _canonical_param_name_for_prune(name: str) -> str:
     s = re.sub(r"\b(\d+)\s*-\s*го\b", r"\1-го", s)
     s = re.sub(r"\s+", " ", s)
     return s.strip()
-
 
 def _prune_low_value_params(params: list[ParamItem]) -> list[ParamItem]:
     """
@@ -652,7 +620,6 @@ def _prune_low_value_params(params: list[ParamItem]) -> list[ParamItem]:
             continue
         out.append(p)
     return out
-
 
 def _build_native_desc(*, clean_name: str, source_offer: SourceOffer, params: list[ParamItem]) -> str:
     native = sanitize_native_desc(source_offer.description or "", title=clean_name)
@@ -694,7 +661,6 @@ def _build_native_desc(*, clean_name: str, source_offer: SourceOffer, params: li
         return f"Категория поставщика: {norm_ws(source_offer.category_path)}."
     return ""
 
-
 _IDENTITY_GENERIC_VALUES = {
     "моноблок",
     "ноутбук",
@@ -710,7 +676,6 @@ _IDENTITY_GENERIC_VALUES = {
     "cs",
 }
 
-
 def _is_weak_identity_value(value: str, *, vendor: str) -> bool:
     v = norm_ws(value)
     if not v:
@@ -723,7 +688,6 @@ def _is_weak_identity_value(value: str, *, vendor: str) -> bool:
         return True
 
     return False
-
 
 def _upsert_param(params: list[ParamItem], *, name: str, value: str, source: str) -> list[ParamItem]:
     target = norm_ws(name).casefold()
@@ -740,7 +704,6 @@ def _upsert_param(params: list[ParamItem], *, name: str, value: str, source: str
     if not replaced:
         out.append(ParamItem(name=norm_ws(name), value=norm_ws(value), source=source))
     return out
-
 
 def _ensure_base_params(*, source_offer: SourceOffer, params: list[ParamItem], vendor: str, model: str, clean_name: str) -> list[ParamItem]:
     out = list(params)
@@ -772,10 +735,8 @@ def _ensure_base_params(*, source_offer: SourceOffer, params: list[ParamItem], v
 
     return out
 
-
 def _strip_originality_suffix(name: str) -> str:
     return norm_ws(_NAME_ORIGINALITY_SUFFIX_RE.sub("", norm_ws(name)))
-
 
 def _upsert_param_tuple(params: list[tuple[str, str]], key: str, value: str) -> list[tuple[str, str]]:
     want = norm_ws(key).casefold()
@@ -792,12 +753,10 @@ def _upsert_param_tuple(params: list[tuple[str, str]], key: str, value: str) -> 
         out.append((key, value))
     return out
 
-
 _DESC_FIELD_START_RE = re.compile(
     r"(?iu)^(?:цвет|ресурс|технология(?:\s+печати)?|тип|партномер|модель|код(?:ы)?|совместимость|"
     r"для\s+бренда|гарантия|об[ъь]ем|объём|вес|номер|применение|количество)\s*:"
 )
-
 
 def _strip_leading_type_phrase(desc: str, type_label: str) -> str:
     d = norm_ws(desc)
@@ -811,7 +770,6 @@ def _strip_leading_type_phrase(desc: str, type_label: str) -> str:
     rest = d[m.end():].lstrip(" .,:;()-–—")
     return norm_ws(rest)
 
-
 def _merge_originality_sentence(sentence: str, desc: str, type_label: str) -> str:
     s = norm_ws(sentence)
     d = _strip_leading_type_phrase(desc, type_label)
@@ -823,7 +781,6 @@ def _merge_originality_sentence(sentence: str, desc: str, type_label: str) -> st
         return f"{s} {d}" if s.endswith('.') else f"{s}. {d}"
     s_join = s[:-1] if s.endswith('.') else s
     return f"{s_join} {d}"
-
 
 def _detect_consumable_type_label(name: str, params: list[tuple[str, str]]) -> str:
     type_from_param = ""
@@ -884,7 +841,6 @@ def _detect_consumable_type_label(name: str, params: list[tuple[str, str]]) -> s
             return label
     return "Расходный материал"
 
-
 def _build_originality_sentence(status: str, type_label: str) -> str:
     tl = norm_ws(type_label) or "Расходный материал"
     tl_cf = tl.casefold().replace("ё", "е")
@@ -936,7 +892,6 @@ def _build_originality_sentence(status: str, type_label: str) -> str:
         return compatible_map.get(tl_cf, f"Совместимый {tl.lower()}.")
     return ""
 
-
 def _is_consumable_for_originality(source_offer: SourceOffer, name: str, params: list[tuple[str, str]]) -> bool:
     title_low = norm_ws(name).casefold().replace("ё", "е")
     type_low = " ".join(norm_ws(v).casefold().replace("ё", "е") for k, v in params if norm_ws(k).casefold() == "тип")
@@ -962,12 +917,10 @@ def _is_consumable_for_originality(source_offer: SourceOffer, name: str, params:
     )
     return any(x in hay for x in needles)
 
-
 def _detect_consumable_originality(source_offer: SourceOffer, name: str, params: list[tuple[str, str]]) -> str:
     if not _is_consumable_for_originality(source_offer, name, params):
         return ""
     return "original"
-
 
 def _apply_consumable_originality(name: str, params: list[tuple[str, str]], native_desc: str, status: str) -> tuple[str, list[tuple[str, str]], str]:
     if status not in {"original", "compatible"}:
@@ -986,7 +939,6 @@ def _apply_consumable_originality(name: str, params: list[tuple[str, str]], nati
         elif not _DESC_ORIGINALITY_HEAD_RE.match(desc_out):
             desc_out = _merge_originality_sentence(sentence, desc_out, type_label)
     return name_out, params_out, desc_out
-
 
 def build_offer_out(source_offer: SourceOffer, *, schema: dict[str, Any], policy: dict[str, Any]) -> OfferOut | None:
     prefix = norm_ws(schema.get("id_prefix") or schema.get("supplier_prefix") or "CP")
@@ -1045,7 +997,6 @@ def build_offer_out(source_offer: SourceOffer, *, schema: dict[str, Any], policy
         params=params_tuples,
         native_desc=native_desc,
     )
-
 
 def build_offers(source_offers: list[SourceOffer], *, schema: dict[str, Any], policy: dict[str, Any]) -> tuple[list[OfferOut], BuildStats]:
     out: list[OfferOut] = []
