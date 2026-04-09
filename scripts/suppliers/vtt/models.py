@@ -2,7 +2,7 @@
 """
 Path: scripts/suppliers/vtt/models.py
 
-VTT Models — внутренние carrier-модели supplier-layer.
+VTT Models — carrier-модели supplier-layer.
 
 Что делает:
 - держит dataclass-структуры supplier-layer;
@@ -11,11 +11,11 @@ VTT Models — внутренние carrier-модели supplier-layer.
 Что не делает:
 - не содержит бизнес-логику;
 - не хранит supplier-specific regex или repair-эвристики;
+- не заменяет normalize/source/builder слой.
 """
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-
 
 @dataclass(slots=True)
 class VTTConfig:
@@ -34,13 +34,11 @@ class VTTConfig:
     categories: list[str] = field(default_factory=list)
     allowed_title_prefixes: list[str] = field(default_factory=list)
 
-
 @dataclass(slots=True)
 class ProductIndexItem:
     url: str
     source_categories: list[str] = field(default_factory=list)
     listing_titles: list[str] = field(default_factory=list)
-
 
 @dataclass(slots=True)
 class ParsedProductPage:
