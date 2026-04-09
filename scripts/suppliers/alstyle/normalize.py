@@ -2,19 +2,17 @@
 """
 Path: scripts/suppliers/alstyle/normalize.py
 
-Базовая supplier-нормализация полей AlStyle.
+AlStyle supplier layer — базовая нормализация полей.
 
 Что делает:
-- мягко чистит name;
+- мягко чистит name и vendor;
 - собирает стабильный oid;
-- нормализует available;
-- берёт входную цену purchase_price -> price;
-- канонизирует vendor и умеет добрать его из name/description, если source vendor пуст.
+- нормализует available и цену supplier-layer.
 
-Важно:
-- без supplier-specific compat/params cleanup;
-- без final-description логики;
-- только базовые поля supplier-layer до builder.py.
+Что не делает:
+- не выполняет compat/params cleanup;
+- не строит final description;
+- не содержит shared-core правил.
 """
 
 from __future__ import annotations
@@ -22,7 +20,6 @@ from __future__ import annotations
 import re
 
 from cs.util import norm_ws, safe_int
-
 
 _VENDOR_CANON_MAP = {
     "asus": "ASUS",
@@ -56,7 +53,6 @@ _NAME_VENDOR_PATTERNS: list[tuple[str, str]] = [
     (r"\bHP\b", "HP"),
 ]
 
-
 def _clean_spaces(text: str) -> str:
     s = norm_ws(text)
     s = re.sub(r"\(\s+", "(", s)
@@ -64,14 +60,12 @@ def _clean_spaces(text: str) -> str:
     s = re.sub(r"\s+", " ", s)
     return s.strip()
 
-
 def _canon_vendor_token(vendor: str) -> str:
     s = _clean_spaces(vendor)
     if not s:
         return ""
     key = s.casefold()
     return _VENDOR_CANON_MAP.get(key, s)
-
 
 def _infer_vendor_from_text(*parts: str) -> str:
     text = " ".join(_clean_spaces(x) for x in parts if _clean_spaces(x))
@@ -81,7 +75,6 @@ def _infer_vendor_from_text(*parts: str) -> str:
         if re.search(pattern, text, flags=re.IGNORECASE):
             return vendor
     return ""
-
 
 def normalize_name(name: str) -> str:
     s = _clean_spaces(name)
@@ -97,7 +90,6 @@ def normalize_name(name: str) -> str:
         s = re.sub(pattern, repl, s, flags=re.IGNORECASE)
     return s
 
-
 def build_offer_oid(raw_id: str, *, prefix: str) -> str:
     rid = _clean_spaces(raw_id)
     if not rid:
@@ -106,7 +98,6 @@ def build_offer_oid(raw_id: str, *, prefix: str) -> str:
         return rid
     return f"{prefix}{rid}"
 
-
 def normalize_available(available_attr: str, available_tag: str) -> bool:
     av_attr = (available_attr or "").strip().lower()
     if av_attr in ("true", "1", "yes"):
@@ -114,7 +105,6 @@ def normalize_available(available_attr: str, available_tag: str) -> bool:
     if av_attr in ("false", "0", "no"):
         return False
     return (available_tag or "").strip().lower() in ("true", "1", "yes")
-
 
 def normalize_vendor(
     vendor: str,
@@ -140,7 +130,6 @@ def normalize_vendor(
         return guessed
 
     return ""
-
 
 def normalize_price_in(purchase_price_text: str, price_text: str) -> int | None:
     price_in = safe_int(purchase_price_text)
