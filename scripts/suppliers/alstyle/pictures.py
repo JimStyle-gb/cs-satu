@@ -2,19 +2,16 @@
 """
 Path: scripts/suppliers/alstyle/pictures.py
 
-AlStyle Pictures — supplier-layer для картинок.
+AlStyle pictures layer.
 
 Что делает:
-- собирает и нормализует picture URLs из supplier-source;
-- чистит пробелы и убирает дубли;
-- возвращает placeholder, если реальных картинок не осталось.
+- собирает и нормализует picture URL;
+- возвращает готовый список картинок для builder.py;
 
 Что не делает:
-- не решает вопросы description, params и vendor;
-- не меняет business-логику offers;
-- не подменяет builder и quality gate.
+- не меняет business-логику товаров;
+- не управляет ассортиментной фильтрацией.
 """
-
 from __future__ import annotations
 
 from cs.util import norm_ws
