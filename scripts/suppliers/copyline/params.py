@@ -2,24 +2,20 @@
 """
 Path: scripts/suppliers/copyline/params.py
 
-CopyLine Params — supplier-layer extractor page/body params.
+CopyLine params layer.
 
 Что делает:
-- принимает раздельные сырьевые каналы page/body parsing;
-- нормализует page params из HTML-таблиц и описания;
-- поднимает supplier-specific поля до raw-уровня.
+- держит supplier params extractor и helpers;
+- отдаёт source/builder чистые supplier-данные;
 
 Что не делает:
-- не переносит semantic merge в source.py;
-- не превращается в final validator;
-- не заменяет compat и builder-слой.
+- не строит final offers;
+- не переносит supplier cleanup в shared core.
 """
-
 from __future__ import annotations
 
 import re
 from typing import List, Sequence, Tuple
-
 
 CODE_RX = re.compile(
     r"\b(?:"
@@ -88,7 +84,6 @@ CABLE_DIM_RX = re.compile(r"\b(\d+)x\d+x\d+/([0-9]+(?:[.,][0-9]+)?)\b", re.I)
 CABLE_MATERIAL_RX = re.compile(r"\b(LSZH|PVC|PE)\b", re.I)
 CABLE_SPOOL_RX = re.compile(r"\b(\d+)\s*м/б\b", re.I)
 
-
 CODE_PREFIX_WEIGHTS = (
     (re.compile(r"^(?:CF|CE|CB|CC|Q|W)\d", re.I), 100),
     (re.compile(r"^(?:106R|006R|108R|113R|013R)\d", re.I), 100),
@@ -113,10 +108,8 @@ CONSUMABLE_TITLE_RX = re.compile(
     re.I,
 )
 
-
 def safe_str(x: object) -> str:
     return str(x).strip() if x is not None else ""
-
 
 def _title_kind(title: str) -> str:
     t = safe_str(title).lower()
@@ -140,7 +133,6 @@ def _title_kind(title: str) -> str:
         return "Чернила"
     return ""
 
-
 KEY_MAP = {
     "технология печати": "Технология печати",
     "цвет печати": "Цвет",
@@ -157,12 +149,10 @@ KEY_MAP = {
     "бухта": "Бухта",
 }
 
-
 def _norm_spaces(s: str) -> str:
     s = safe_str(s).replace("\xa0", " ")
     s = re.sub(r"\s+", " ", s)
     return s.strip()
-
 
 def _normalize_code_token(s: str) -> str:
     s = safe_str(s).upper()
@@ -170,14 +160,12 @@ def _normalize_code_token(s: str) -> str:
     s = re.sub(r"\s+", "", s)
     return s
 
-
 def _normalize_code_search_text(text: str) -> str:
     text = safe_str(text).replace("\xa0", " ")
     text = re.sub(r"\s+", " ", text)
     text = re.sub(r"\b(113R|108R|106R|006R|013R|016|C13T|C12C|C33S)\s+(\d{4,8}[A-Z0-9]*)\b", r"\1\2", text, flags=re.I)
     text = re.sub(r"\b(CLT|MLT|ML|KX|TK|TN|DR|DL|TL|PC|T|C|NPG|GPR|EP|E|FX|DQ|FQ|S)\s*-\s*([A-Z0-9]{1,})\b", r"\1-\2", text, flags=re.I)
     return text.strip()
-
 
 def _norm_color(val: str) -> str:
     s = safe_str(val)
@@ -195,7 +183,6 @@ def _norm_color(val: str) -> str:
             return v
     return s[:120]
 
-
 def _dedupe_params(items: Sequence[Tuple[str, str]]) -> List[Tuple[str, str]]:
     out: list[Tuple[str, str]] = []
     seen: set[tuple[str, str]] = set()
@@ -211,15 +198,12 @@ def _dedupe_params(items: Sequence[Tuple[str, str]]) -> List[Tuple[str, str]]:
         out.append((k2, v2))
     return out
 
-
 def _is_consumable_title(title: str) -> bool:
     return bool(CONSUMABLE_TITLE_RX.search(safe_str(title)))
-
 
 def _is_allowed_numeric_code(code: str) -> bool:
     code = _normalize_code_token(code)
     return bool(re.fullmatch(r"016\d{6}", code))
-
 
 def _looks_device_series(code: str) -> bool:
     code = _normalize_code_token(code)
@@ -228,7 +212,6 @@ def _looks_device_series(code: str) -> bool:
     if re.fullmatch(r"\d{3}", code):
         return True
     return False
-
 
 def _code_weight(code: str) -> int:
     raw = _norm_spaces(code)
@@ -243,7 +226,6 @@ def _code_weight(code: str) -> int:
     if _is_allowed_numeric_code(norm):
         return 95
     return 10
-
 
 def _extract_title_canon_numeric_codes(title: str) -> list[str]:
     title = _norm_spaces(title)
@@ -265,7 +247,6 @@ def _extract_title_canon_numeric_codes(title: str) -> list[str]:
                 seen.add(branded)
                 out.append(branded)
     return out
-
 
 def _extract_title_canon_family_codes(title: str) -> list[str]:
     title = _norm_spaces(title)
@@ -307,7 +288,6 @@ def _extract_xerox_developer_title_codes(title: str) -> list[str]:
                 seen.add(token)
                 out.append(token)
     return out
-
 
 def _extract_title_bare_family_codes(title: str) -> list[str]:
     title = _norm_spaces(title)
@@ -361,7 +341,6 @@ def _extract_title_bare_family_codes(title: str) -> list[str]:
 
     return out
 
-
 def _extract_ink_title_compat(title: str) -> str:
     title = _norm_spaces(title)
     if not title:
@@ -386,7 +365,6 @@ def _extract_ink_title_compat(title: str) -> str:
             out.append(token)
     return ", ".join(out[:8])
 
-
 def _extract_riso_title_compat(title: str) -> str:
     title = _norm_spaces(title)
     if not title or not re.search(r"\bRISO\b", title, re.I):
@@ -409,7 +387,6 @@ def _extract_riso_title_compat(title: str) -> str:
         return ", ".join([f"RISO {safe_str(x).upper()}" for x in re.split(r"\s*/\s*", token) if safe_str(x)])
     return f"RISO {token}"
 
-
 def _extract_epson_desc_compat(title: str, description: str) -> str:
     blob = _norm_spaces(f"{safe_str(title)} {safe_str(description)}")
     if not re.search(r"\bEpson\b", blob, re.I):
@@ -426,7 +403,6 @@ def _extract_epson_desc_compat(title: str, description: str) -> str:
         out.append(f"Epson {part}")
     return ", ".join(out[:8])
 
-
 def _extract_panasonic_integral_compat(description: str) -> str:
     d = _norm_spaces(description)
     if not d:
@@ -436,7 +412,6 @@ def _extract_panasonic_integral_compat(description: str) -> str:
         return ""
     return _trim_compat_tail(m.group(1))
 
-
 def _split_title_body_parts(title: str) -> tuple[str, str]:
     title = _norm_spaces(title)
     if not title:
@@ -445,7 +420,6 @@ def _split_title_body_parts(title: str) -> tuple[str, str]:
     if not m:
         return title, ""
     return title[: m.start()].strip(" ,;/"), title[m.start():].strip()
-
 
 def _extract_single_brand_numeric_tail(title: str) -> list[str]:
     out: list[str] = []
@@ -461,7 +435,6 @@ def _extract_single_brand_numeric_tail(title: str) -> list[str]:
             seen.add(branded)
             out.append(branded)
     return out
-
 
 def _extract_title_brand_alpha_tail(title: str) -> list[str]:
     title = _norm_spaces(title)
@@ -535,7 +508,6 @@ def _strip_compat_zone(text: str) -> str:
         return text[: m.start()].strip()
     return text
 
-
 def _collect_codes_from_text(text: str, *, allow_numeric: bool) -> list[str]:
     text = _normalize_code_search_text(text)
     found: list[str] = []
@@ -551,7 +523,6 @@ def _collect_codes_from_text(text: str, *, allow_numeric: bool) -> list[str]:
         seen.add(val)
         found.append(val)
     return found
-
 
 def _pick_best_codes(codes: Sequence[str], *, limit: int = 8) -> list[str]:
     ordered = sorted(codes, key=lambda c: (-_code_weight(c), codes.index(c)))
@@ -569,7 +540,6 @@ def _pick_best_codes(codes: Sequence[str], *, limit: int = 8) -> list[str]:
         if len(out) >= limit:
             break
     return out
-
 
 def _extract_codes(title: str, description: str) -> str:
     title = safe_str(title)
@@ -603,7 +573,6 @@ def _extract_codes(title: str, description: str) -> str:
     best = _pick_best_codes(codes)
     return ", ".join(best)
 
-
 def _trim_compat_tail(value: str) -> str:
     value = _norm_spaces(value)
     if not value:
@@ -622,7 +591,6 @@ def _trim_compat_tail(value: str) -> str:
     value = value.strip(" ,.;:-")
     return value[:320]
 
-
 def _extract_compat_from_desc(description: str) -> str:
     d = safe_str(description)
     if not d:
@@ -636,7 +604,6 @@ def _extract_compat_from_desc(description: str) -> str:
         if val:
             return val
     return ""
-
 
 def _extract_cable_params_from_text(title: str, description: str) -> list[Tuple[str, str]]:
     text = _norm_spaces(f"{safe_str(title)} {safe_str(description)}")
@@ -665,7 +632,6 @@ def _extract_cable_params_from_text(title: str, description: str) -> list[Tuple[
 
     return out
 
-
 def _normalize_param_block(block: Sequence[Tuple[str, str]] | None) -> list[Tuple[str, str]]:
     out: list[Tuple[str, str]] = []
     for key, value in block or []:
@@ -675,7 +641,6 @@ def _normalize_param_block(block: Sequence[Tuple[str, str]] | None) -> list[Tupl
             continue
         out.append((k, v))
     return out
-
 
 def _merge_raw_param_channels(
     *,
@@ -695,7 +660,6 @@ def _merge_raw_param_channels(
     merged.extend(_normalize_param_block(raw_desc_pairs))
     merged.extend(_normalize_param_block(page_params))
     return merged
-
 
 def extract_page_params(
     *,
@@ -764,13 +728,11 @@ def extract_page_params(
 
     return _dedupe_params(out)
 
-
 # Public aliases for fill-missing layer / future cleanup
 trim_compat_tail = _trim_compat_tail
 extract_compat_from_text = _extract_compat_from_desc
 extract_codes_from_text = _extract_codes
 norm_spaces = _norm_spaces
-
 
 __all__ = [
     "CODE_RX",
