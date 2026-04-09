@@ -2,26 +2,17 @@
 """
 Path: scripts/suppliers/alstyle/desc_clean.py
 
-AlStyle description cleaning.
-Только narrative-cleaning, без desc->params extraction.
+AlStyle supplier layer — narrative-cleaning description.
 
-v123:
-- расширяет словарь typо/narrative-fixes (в случае / в отличие / при прокладке и т.п.);
-- добавляет regex-дочистку 4-х / или 1 / 100-метровый и похожих хвостов;
-- срезает прилипший title-prefix в первой строке native description;
-- режет не только полное имя, но и короткий supplier-title по SKU;
-- удаляет мусорные одиночные строки "." / "," / ";" / ":";
-- сохраняет границы строк для multiline extraction;
-- мягко разрезает плотные one-line тех-описания на label-friendly строки;
-- чище дочищает Xerox/Canon narrative-хвосты;
-- не схлопывает extraction-текст обратно в одну строку;
-- убирает дубли бренда в narrative;
-- чинит Canon imagePROGRAF glue и обрезанный хвост "...610Can";
-- режет хвосты совместимости в narrative:
-  Цвет / Ресурс / Наличие чипа / Принт-картриджи / Комплект поставки;
-- сохраняет уже сделанный фикс CopyCentre 245 / 255;
-- вырезает конфликтные intro/warning blocks, если narrative относится к другому accessory/model token;
-- удаляет мусорные одиночные строки '>' / '&gt;'.
+Что делает:
+- чистит native description;
+- сохраняет границы строк для extraction;
+- убирает supplier-мусор и конфликтные narrative-блоки.
+
+Что не делает:
+- не строит final HTML description;
+- не извлекает params как final truth;
+- не содержит shared SEO-логику.
 """
 
 from __future__ import annotations
@@ -31,7 +22,6 @@ from difflib import SequenceMatcher
 from html import unescape
 
 from cs.util import norm_ws
-
 
 _CODE_SERIES_RE = re.compile(
     r"(?<![\w/])(?:(?=[A-Z0-9._-]*\d)[A-Z0-9._-]{3,}(?:\s*/\s*(?=[A-Z0-9._-]*\d)[A-Z0-9._-]{3,})+)"
@@ -129,7 +119,6 @@ _ALLOWED_CONFLICT_CONTEXT_RE = re.compile(
 )
 _PURE_GARBAGE_LINE_RE = re.compile(r"(?iu)^(?:>|&gt;|&amp;gt;|&lt;|&amp;lt;)$")
 
-
 def dedupe_code_series_text(text: str) -> str:
     s = norm_ws(text)
     if not s:
@@ -150,7 +139,6 @@ def dedupe_code_series_text(text: str) -> str:
 
     return _CODE_SERIES_RE.sub(repl, s)
 
-
 def is_service_desc_line(line: str) -> bool:
     s = norm_ws(unescape(re.sub(r"<[^>]+>", " ", line or "")))
     if not s:
@@ -169,7 +157,6 @@ def is_service_desc_line(line: str) -> bool:
     if re.fullmatch(r"(?i)(hdmi|displayport|usb-?c|usb|rj45|lan|vga|audio)\s*x\d+", s):
         return True
     return False
-
 
 def fix_common_broken_words(s: str) -> str:
     s = s or ""
@@ -202,12 +189,10 @@ def fix_common_broken_words(s: str) -> str:
     s = re.sub(r"(?iu)\.\s*Также\b", ". Также", s)
     return s
 
-
 def norm_title_like_text(s: str) -> str:
     s = norm_ws(unescape(re.sub(r"<[^>]+>", " ", s or "")))
     s = re.sub(r"[()\[\],;:!?.«»\"'`]+", " ", s)
     return norm_ws(s).casefold()
-
 
 def is_title_like_duplicate(name: str, line: str) -> bool:
     a = norm_title_like_text(name)
@@ -223,7 +208,6 @@ def is_title_like_duplicate(name: str, line: str) -> bool:
             return True
     return SequenceMatcher(None, a, b).ratio() >= 0.9
 
-
 def _extract_modelish_tokens(text: str) -> set[str]:
     out: set[str] = set()
     for m in _MODELISH_TOKEN_RE.finditer(text or ""):
@@ -231,7 +215,6 @@ def _extract_modelish_tokens(text: str) -> set[str]:
         if tok:
             out.add(tok)
     return out
-
 
 def _looks_like_conflicting_product_title_line(name_tokens: set[str], line: str) -> bool:
     s = norm_ws(line)
@@ -247,7 +230,6 @@ def _looks_like_conflicting_product_title_line(name_tokens: set[str], line: str)
     if _ALLOWED_CONFLICT_CONTEXT_RE.search(s):
         return False
     return True
-
 
 def _warning_block_has_conflict(name_tokens: set[str], lines: list[str], start_idx: int) -> bool:
     probe = []
@@ -275,7 +257,6 @@ def _warning_block_has_conflict(name_tokens: set[str], lines: list[str], start_i
         if _CONFLICTING_TITLE_PREFIX_RE.match(ln) or "Canon" in ln or "Xerox" in ln:
             return True
     return False
-
 
 def _drop_conflicting_named_blocks(name: str, desc: str) -> str:
     lines = [norm_ws(x) for x in re.split(r"(?:\r?\n)+", desc or "") if norm_ws(x)]
@@ -312,13 +293,11 @@ def _drop_conflicting_named_blocks(name: str, desc: str) -> str:
 
     return "\n".join(out)
 
-
 def dedupe_desc_leading_title(name: str, desc: str) -> str:
     parts = [norm_ws(x) for x in re.split(r"(?:\r?\n)+", unescape(desc or "")) if norm_ws(x)]
     while parts and is_title_like_duplicate(name, parts[0]):
         parts.pop(0)
     return "\n".join(parts)
-
 
 def strip_desc_sections(desc: str) -> str:
     lines = [norm_ws(x) for x in re.split(r"(?:\r?\n)+", unescape(desc or ""))]
@@ -345,7 +324,6 @@ def strip_desc_sections(desc: str) -> str:
         if before and after < max(40, int(before * 0.35)):
             return norm_ws(unescape(desc or ""))
     return cleaned
-
 
 def align_desc_model_from_name(name: str, desc: str) -> str:
     n = norm_ws(name)
@@ -374,7 +352,6 @@ def align_desc_model_from_name(name: str, desc: str) -> str:
         lines[0] = first_line.replace(sku_desc, sku_name, 1)
         return "\n".join(lines)
     return raw
-
 
 def _strip_name_prefix_from_first_line(name: str, desc: str) -> str:
     raw = unescape(desc or "")
@@ -431,7 +408,6 @@ def _strip_name_prefix_from_first_line(name: str, desc: str) -> str:
 
     return raw
 
-
 def _preserve_clean_lines(lines: list[str]) -> str:
     out: list[str] = []
     prev = ""
@@ -445,7 +421,6 @@ def _preserve_clean_lines(lines: list[str]) -> str:
         prev = ln
     return "\n".join(out)
 
-
 def _inject_label_breaks(text: str) -> str:
     s = text or ""
     if not s:
@@ -456,7 +431,6 @@ def _inject_label_breaks(text: str) -> str:
     s = re.sub(r"(?iu)\b(Совместимость)\s+(Устройства|Устройство|Совместимые\s+модели|Для\s+принтеров)\b", r"\1\n\2", s)
     s = re.sub(r"\n{3,}", "\n\n", s)
     return s.strip()
-
 
 def _dedupe_repeated_brands(s: str) -> str:
     out = norm_ws(s)
@@ -469,14 +443,12 @@ def _dedupe_repeated_brands(s: str) -> str:
         out = nxt
     return norm_ws(out)
 
-
 def _fix_known_xerox_compat_typos(s: str) -> str:
     out = s or ""
     out = re.sub(r"(?iu)\bCopyCentre\s+245\s*/\s*25\b", "CopyCentre 245 / 255", out)
     out = re.sub(r"(?iu)\bWorkCentre\s+7220i\s*/\s*7225i\b", "WorkCentre 7220i / 7225i", out)
     out = re.sub(r"(?iu)\bWorkCentre\s+5865i\s*/\s*5875i\s*/\s*5890i\b", "WorkCentre 5865i / 5875i / 5890i", out)
     return out
-
 
 def _fix_known_canon_compat_typos(s: str) -> str:
     out = s or ""
@@ -488,7 +460,6 @@ def _fix_known_canon_compat_typos(s: str) -> str:
         out,
     )
     return out
-
 
 def _trim_compat_narrative_noise(s: str) -> str:
     out = norm_ws(s)
@@ -510,14 +481,12 @@ def _trim_compat_narrative_noise(s: str) -> str:
 
     return norm_ws(out.strip(" ;,.-"))
 
-
 def _looks_like_compat_narrative_line(s: str) -> bool:
     if not s:
         return False
     if re.match(r"(?iu)^(Совместимость|Совместимые\s+модели|Устройства|Для\s+принтеров)\b", s):
         return True
     return bool(_COMPAT_NARRATIVE_HINT_RE.search(s))
-
 
 def _clean_compat_narrative_line(s: str) -> str:
     out = fix_common_broken_words(s)
@@ -547,7 +516,6 @@ def _clean_compat_narrative_line(s: str) -> str:
 
     return norm_ws(out)
 
-
 def clean_desc_text_for_extraction(desc: str) -> str:
     s = unescape(desc or "")
     s = _OAICITE_RE.sub(" ", s)
@@ -559,7 +527,6 @@ def clean_desc_text_for_extraction(desc: str) -> str:
     s = _inject_label_breaks(s)
     lines = [norm_ws(x) for x in re.split(r"(?:\r?\n)+", s)]
     return _preserve_clean_lines(lines)
-
 
 def sanitize_desc_quality_text(desc: str) -> str:
     lines = [norm_ws(x) for x in re.split(r"(?:\r?\n)+", desc or "") if norm_ws(x)]
@@ -576,7 +543,6 @@ def sanitize_desc_quality_text(desc: str) -> str:
         if s and not _PURE_GARBAGE_LINE_RE.fullmatch(s):
             out.append(s)
     return _preserve_clean_lines(out)
-
 
 def sanitize_native_desc(desc: str, *, name: str = "") -> str:
     raw = clean_desc_text_for_extraction(desc)
@@ -600,7 +566,6 @@ def sanitize_native_desc(desc: str, *, name: str = "") -> str:
 
     lines = [x for x in lines if x not in {".", ",", ";", ":"}]
     return "\n".join(lines)
-
 
 # Backward-compatible aliases for already split stages.
 _is_service_desc_line = is_service_desc_line
