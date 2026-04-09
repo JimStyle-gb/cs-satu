@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<yml_catalog date="2026-04-09 11:16:18">
+<yml_catalog date="2026-04-09 12:14:28">
 <shop><offers>
 <!--FEED_META
 Поставщик                                  | ComPortal
 URL поставщика                             | https://www.comportal.kz/auth/documents/prices/yml-catalog.php
-Время сборки (Алматы)                      | 2026-04-09 11:16:18
+Время сборки (Алматы)                      | 2026-04-09 12:14:28
 Ближайшая сборка (Алматы)                  | 2026-04-10 03:00:00
-Сколько товаров у поставщика до фильтра    | 1197
-Сколько товаров у поставщика после фильтра | 596
-Сколько товаров есть в наличии (true)      | 596
+Сколько товаров у поставщика до фильтра    | 1194
+Сколько товаров у поставщика после фильтра | 594
+Сколько товаров есть в наличии (true)      | 594
 Сколько товаров нет в наличии (false)      | 0
 -->
 
@@ -4509,25 +4509,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Оригинальность">Оригинал</param>
 </offer>
 
-<offer id="CP13501331" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13501331</vendorCode>
-<name>Тонер-картридж Canon C-EXV 35 (3764B002) (оригинал)</name>
-<price>51924</price>
-<picture>https://www.comportal.kz/upload/iblock/410/41082f33de603a53cd553fabac77cfb7.JPG</picture>
-<vendor>Canon</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Оригинальный тонер Canon C-EXV 35 код — 3764B002; ресурс — 70 000.]]></description>
-<param name="Тип">Тонер</param>
-<param name="Модель">C-EXV 35</param>
-<param name="Дополнительная информация">Чёрный</param>
-<param name="Ресурс">70 000</param>
-<param name="Коды">3764B002</param>
-<param name="Для бренда">Canon</param>
-<param name="Оригинальность">Оригинал</param>
-</offer>
-
 <offer id="CP13867051" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13867051</vendorCode>
@@ -5743,25 +5724,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Жесткий диск">256Gb</param>
 <param name="Коды">5975C005AA</param>
 <param name="Для бренда">Canon</param>
-</offer>
-
-<offer id="CP13817611" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13817611</vendorCode>
-<name>Тонер Canon C-EXV 67 (5746C002) (оригинал)</name>
-<price>67276</price>
-<picture>https://www.comportal.kz/upload/iblock/f9c/3s4oemm7adepcclmkweqj2tyxauu43gr.JPG</picture>
-<vendor>Canon</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Оригинальный тонер Canon C-EXV 67 код — 5746C002; ресурс — 25 500.]]></description>
-<param name="Тип">Тонер</param>
-<param name="Модель">C-EXV 67</param>
-<param name="Дополнительная информация">черный</param>
-<param name="Ресурс">25 500</param>
-<param name="Коды">5746C002</param>
-<param name="Для бренда">Canon</param>
-<param name="Оригинальность">Оригинал</param>
 </offer>
 
 <offer id="CP13871088" available="true">
@@ -8783,45 +8745,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Разрешение дисплея">1920x1080</param>
 <param name="Коды">90NX06X1-M01150</param>
 <param name="Для бренда">ASUS</param>
-</offer>
-
-<offer id="CP13870591" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13870591</vendorCode>
-<name>Компьютер ASUS G22CH-1470KF0020 (90PF03T2-M00TC0 / 1)</name>
-<price>1022416</price>
-<picture>https://www.comportal.kz/upload/iblock/3c3/sfngjurx3k8gb5wysxozdanz8z2pz4a0.jpg</picture>
-<vendor>ASUS</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Настольный ПК. Процессор: Intel 14700KF Core i7 3,4. Оперативная память: 16 Gb / DDR5 / 4800. Накопитель: 1000 / M.2 PCIe SSD / 1 шт. ОС: Без операционной системы. Видеокарта: nVidia RTX 4070 12 Gb. Гарантия: 12 мес.]]></description>
-<param name="Тип">Настольный ПК</param>
-<param name="Модель">G22CH-1470KF0020</param>
-<param name="Объем жесткого диска">1000</param>
-<param name="Тип жесткого диска">M.2 PCIe SSD</param>
-<param name="Производитель процессора">Intel</param>
-<param name="Модель процессора">Core i7</param>
-<param name="Серия процессора">14700KF</param>
-<param name="Частота процессора">3,4</param>
-<param name="Сетевая карта (скорость передачи)">10/25GbE</param>
-<param name="Оперативная память">16 Gb</param>
-<param name="Частота оперативной памяти">4800</param>
-<param name="Объем видеопамяти">12 Gb</param>
-<param name="Тип оперативной памяти">DDR5</param>
-<param name="Блок питания">АТХ 600W</param>
-<param name="Порты">1x RJ45 Gigabit Ethernet/1x HDMI 2.0a/3 x Audio jacks/2x USB 2.0 Type-A/2x USB 3.2 Gen 1 Type-A/1x 3.5mm combo audio jack/1x USB 3.2 Gen 2 Type-C/2x USB 3.2 Gen 2 Type-A</param>
-<param name="Тип привода">No ODD</param>
-<param name="Количество дисков">1</param>
-<param name="Производитель чипсета видеокарты">nVidia</param>
-<param name="Марка чипсета видеокарты">GeForce</param>
-<param name="Модель чипсета видеокарты">RTX 4070</param>
-<param name="Операционная система">Без операционной системы</param>
-<param name="Гарантия">12 мес</param>
-<param name="Тип кейса">SFF</param>
-<param name="Клавиатура">Without keyboard</param>
-<param name="Манипулятор">Without mouse</param>
-<param name="Для бренда">ASUS</param>
-<param name="Коды">90PF03T2-M00TC0 / 1</param>
 </offer>
 
 <offer id="CP13869291" available="true">
@@ -13929,6 +13852,23 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Камера">13 Mpix</param>
 <param name="Разрешение дисплея">2560x1600</param>
 <param name="Коды">90NR0JY1-M002E0</param>
+<param name="Для бренда">ASUS</param>
+</offer>
+
+<offer id="CP13872662" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13872662</vendorCode>
+<name>Ноутбук ASUS TUF Gaming F16 / FX608JPR-QT092 (90NR0NG1-M00680)</name>
+<price>862299</price>
+<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
+<vendor>ASUS</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Ноутбук. Гарантия: 12 мес. Для бренда: ASUS. Модель: TUF Gaming F16 / FX608JPR-QT092. Коды: 90NR0NG1-M00680.]]></description>
+<param name="Тип">Ноутбук</param>
+<param name="Гарантия">12 мес</param>
+<param name="Коды">90NR0NG1-M00680</param>
+<param name="Модель">TUF Gaming F16 / FX608JPR-QT092</param>
 <param name="Для бренда">ASUS</param>
 </offer>
 

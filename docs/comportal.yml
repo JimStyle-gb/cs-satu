@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<yml_catalog date="2026-04-09 11:16:18">
+<yml_catalog date="2026-04-09 12:14:28">
 <shop><offers>
 <!--FEED_META
 Поставщик                                  | ComPortal
 URL поставщика                             | https://www.comportal.kz/auth/documents/prices/yml-catalog.php
-Время сборки (Алматы)                      | 2026-04-09 11:16:18
+Время сборки (Алматы)                      | 2026-04-09 12:14:28
 Ближайшая сборка (Алматы)                  | 2026-04-10 03:00:00
-Сколько товаров у поставщика до фильтра    | 1197
-Сколько товаров у поставщика после фильтра | 596
-Сколько товаров есть в наличии (true)      | 596
+Сколько товаров у поставщика до фильтра    | 1194
+Сколько товаров у поставщика после фильтра | 594
+Сколько товаров есть в наличии (true)      | 594
 Сколько товаров нет в наличии (false)      | 0
 -->
 
@@ -6731,36 +6731,6 @@ URL поставщика                             | https://www.comportal.kz/
 <keywords>Canon, Тонер-картридж Canon T01 (8066B001) (оригинал), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
-<offer id="CP13501331" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13501331</vendorCode>
-<name>Тонер-картридж Canon C-EXV 35 (3764B002) (оригинал)</name>
-<price>61900</price>
-<picture>https://www.comportal.kz/upload/iblock/410/41082f33de603a53cd553fabac77cfb7.JPG</picture>
-<vendor>Canon</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-<!-- Наименование товара -->
-<h3>Тонер-картридж Canon C-EXV 35 (3764B002) (оригинал)</h3>
-<!-- Описание -->
-<p>Оригинальный тонер Canon C-EXV 35 код — 3764B002; ресурс — 70 000.</p>
-<!-- WhatsApp -->
-<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
-<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
-<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
-<h3>Характеристики</h3><ul><li><strong>Для бренда:</strong> Canon</li><li><strong>Дополнительная информация:</strong> Чёрный</li><li><strong>Коды:</strong> 3764B002</li><li><strong>Модель:</strong> C-EXV 35</li><li><strong>Оригинальность:</strong> Оригинал</li><li><strong>Ресурс:</strong> 70 000</li><li><strong>Тип:</strong> Тонер</li></ul>
-<!-- Оплата и доставка -->
-<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><div style="background:#FFF6E5; border:1px solid #F1E2C6; padding:12px 14px; border-radius:0; text-align:left;"><h3 style="margin:0 0 8px; font-size:17px;">Оплата</h3><ul style="margin:0; padding-left:18px;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000;"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul><hr style="border:none; border-top:1px solid #E7D6B7; margin:12px 0;" /><h3 style="margin:0 0 8px; font-size:17px;">Доставка по Алматы и Казахстану</h3><ul style="margin:0; padding-left:18px;"><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul></div></div>]]></description>
-<param name="Для бренда">Canon</param>
-<param name="Дополнительная информация">Чёрный</param>
-<param name="Коды">3764B002</param>
-<param name="Модель">C-EXV 35</param>
-<param name="Оригинальность">Оригинал</param>
-<param name="Ресурс">70 000</param>
-<param name="Тип">Тонер</param>
-<keywords>Canon, Тонер-картридж Canon C-EXV 35 (3764B002) (оригинал), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
-</offer>
-
 <offer id="CP13867051" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13867051</vendorCode>
@@ -8460,36 +8430,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Формат печати">A3</param>
 <param name="Функция">Принтер-Сканер(АПД-100с.)-Копир</param>
 <keywords>Canon, МФУ Canon imageRUNNER 2930i (5975C005AA), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
-</offer>
-
-<offer id="CP13817611" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13817611</vendorCode>
-<name>Тонер Canon C-EXV 67 (5746C002) (оригинал)</name>
-<price>76900</price>
-<picture>https://www.comportal.kz/upload/iblock/f9c/3s4oemm7adepcclmkweqj2tyxauu43gr.JPG</picture>
-<vendor>Canon</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-<!-- Наименование товара -->
-<h3>Тонер Canon C-EXV 67 (5746C002) (оригинал)</h3>
-<!-- Описание -->
-<p>Оригинальный тонер Canon C-EXV 67 код — 5746C002; ресурс — 25 500.</p>
-<!-- WhatsApp -->
-<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
-<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
-<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
-<h3>Характеристики</h3><ul><li><strong>Для бренда:</strong> Canon</li><li><strong>Дополнительная информация:</strong> черный</li><li><strong>Коды:</strong> 5746C002</li><li><strong>Модель:</strong> C-EXV 67</li><li><strong>Оригинальность:</strong> Оригинал</li><li><strong>Ресурс:</strong> 25 500</li><li><strong>Тип:</strong> Тонер</li></ul>
-<!-- Оплата и доставка -->
-<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><div style="background:#FFF6E5; border:1px solid #F1E2C6; padding:12px 14px; border-radius:0; text-align:left;"><h3 style="margin:0 0 8px; font-size:17px;">Оплата</h3><ul style="margin:0; padding-left:18px;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000;"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul><hr style="border:none; border-top:1px solid #E7D6B7; margin:12px 0;" /><h3 style="margin:0 0 8px; font-size:17px;">Доставка по Алматы и Казахстану</h3><ul style="margin:0; padding-left:18px;"><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul></div></div>]]></description>
-<param name="Для бренда">Canon</param>
-<param name="Дополнительная информация">черный</param>
-<param name="Коды">5746C002</param>
-<param name="Модель">C-EXV 67</param>
-<param name="Оригинальность">Оригинал</param>
-<param name="Ресурс">25 500</param>
-<param name="Тип">Тонер</param>
-<keywords>Canon, Тонер Canon C-EXV 67 (5746C002) (оригинал), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP13871088" available="true">
@@ -12798,56 +12738,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Частота оперативной памяти">3200</param>
 <param name="Частота процессора">1,2</param>
 <keywords>ASUS, Ноутбук ASUS B1502CVA-BQ0897X (90NX06X1-M01150), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
-</offer>
-
-<offer id="CP13870591" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13870591</vendorCode>
-<name>Компьютер ASUS G22CH-1470KF0020 (90PF03T2-M00TC0 / 1)</name>
-<price>1103900</price>
-<picture>https://www.comportal.kz/upload/iblock/3c3/sfngjurx3k8gb5wysxozdanz8z2pz4a0.jpg</picture>
-<vendor>ASUS</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-<!-- Наименование товара -->
-<h3>Компьютер ASUS G22CH-1470KF0020 (90PF03T2-M00TC0 / 1)</h3>
-<!-- Описание -->
-<p>Настольный ПК. Процессор: Intel 14700KF Core i7 3,4. Оперативная память: 16 Gb / DDR5 / 4800. Накопитель: 1000 / M.2 PCIe SSD / 1 шт. ОС: Без операционной системы. Видеокарта: nVidia RTX 4070 12 Gb. Гарантия: 12 мес.</p>
-<!-- WhatsApp -->
-<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
-<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
-<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
-<h3>Характеристики</h3><ul><li><strong>Блок питания:</strong> АТХ 600W</li><li><strong>Гарантия:</strong> 12 мес</li><li><strong>Для бренда:</strong> ASUS</li><li><strong>Клавиатура:</strong> Without keyboard</li><li><strong>Коды:</strong> 90PF03T2-M00TC0 / 1</li><li><strong>Количество дисков:</strong> 1</li><li><strong>Манипулятор:</strong> Without mouse</li><li><strong>Марка чипсета видеокарты:</strong> GeForce</li><li><strong>Модель:</strong> G22CH-1470KF0020</li><li><strong>Модель процессора:</strong> Core i7</li><li><strong>Модель чипсета видеокарты:</strong> RTX 4070</li><li><strong>Объем видеопамяти:</strong> 12 Gb</li><li><strong>Объем жесткого диска:</strong> 1000</li><li><strong>Оперативная память:</strong> 16 Gb</li><li><strong>Операционная система:</strong> Без операционной системы</li><li><strong>Порты:</strong> 1x RJ45 Gigabit Ethernet/1x HDMI 2.0a/3 x Audio jacks/2x USB 2.0 Type-A/2x USB 3.2 Gen 1 Type-A/1x 3.5mm combo audio jack/1x USB 3.2 Gen 2 Type-C/2x USB 3.2 Gen 2 Type-A</li><li><strong>Производитель процессора:</strong> Intel</li><li><strong>Производитель чипсета видеокарты:</strong> nVidia</li><li><strong>Серия процессора:</strong> 14700KF</li><li><strong>Сетевая карта (скорость передачи):</strong> 10/25GbE</li><li><strong>Тип:</strong> Настольный ПК</li><li><strong>Тип жесткого диска:</strong> M.2 PCIe SSD</li><li><strong>Тип кейса:</strong> SFF</li><li><strong>Тип оперативной памяти:</strong> DDR5</li><li><strong>Тип привода:</strong> No ODD</li><li><strong>Частота оперативной памяти:</strong> 4800</li><li><strong>Частота процессора:</strong> 3,4</li></ul>
-<!-- Оплата и доставка -->
-<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><div style="background:#FFF6E5; border:1px solid #F1E2C6; padding:12px 14px; border-radius:0; text-align:left;"><h3 style="margin:0 0 8px; font-size:17px;">Оплата</h3><ul style="margin:0; padding-left:18px;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000;"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul><hr style="border:none; border-top:1px solid #E7D6B7; margin:12px 0;" /><h3 style="margin:0 0 8px; font-size:17px;">Доставка по Алматы и Казахстану</h3><ul style="margin:0; padding-left:18px;"><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul></div></div>]]></description>
-<param name="Блок питания">АТХ 600W</param>
-<param name="Гарантия">12 мес</param>
-<param name="Для бренда">ASUS</param>
-<param name="Клавиатура">Without keyboard</param>
-<param name="Коды">90PF03T2-M00TC0 / 1</param>
-<param name="Количество дисков">1</param>
-<param name="Манипулятор">Without mouse</param>
-<param name="Марка чипсета видеокарты">GeForce</param>
-<param name="Модель">G22CH-1470KF0020</param>
-<param name="Модель процессора">Core i7</param>
-<param name="Модель чипсета видеокарты">RTX 4070</param>
-<param name="Объем видеопамяти">12 Gb</param>
-<param name="Объем жесткого диска">1000</param>
-<param name="Оперативная память">16 Gb</param>
-<param name="Операционная система">Без операционной системы</param>
-<param name="Порты">1x RJ45 Gigabit Ethernet/1x HDMI 2.0a/3 x Audio jacks/2x USB 2.0 Type-A/2x USB 3.2 Gen 1 Type-A/1x 3.5mm combo audio jack/1x USB 3.2 Gen 2 Type-C/2x USB 3.2 Gen 2 Type-A</param>
-<param name="Производитель процессора">Intel</param>
-<param name="Производитель чипсета видеокарты">nVidia</param>
-<param name="Серия процессора">14700KF</param>
-<param name="Сетевая карта (скорость передачи)">10/25GbE</param>
-<param name="Тип">Настольный ПК</param>
-<param name="Тип жесткого диска">M.2 PCIe SSD</param>
-<param name="Тип кейса">SFF</param>
-<param name="Тип оперативной памяти">DDR5</param>
-<param name="Тип привода">No ODD</param>
-<param name="Частота оперативной памяти">4800</param>
-<param name="Частота процессора">3,4</param>
-<keywords>ASUS, Компьютер ASUS G22CH-1470KF0020 (90PF03T2-M00TC0 / 1), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP13869291" available="true">
@@ -19771,6 +19661,34 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Частота процессора">3</param>
 <param name="Языковая версия операционной системы">Многоязычная</param>
 <keywords>ASUS, Ноутбук ASUS ROG Flow Z13 / GZ302EA-RU045W (90NR0JY1-M002E0), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+</offer>
+
+<offer id="CP13872662" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13872662</vendorCode>
+<name>Ноутбук ASUS TUF Gaming F16 / FX608JPR-QT092 (90NR0NG1-M00680)</name>
+<price>931900</price>
+<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
+<vendor>ASUS</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+<!-- Наименование товара -->
+<h3>Ноутбук ASUS TUF Gaming F16 / FX608JPR-QT092 (90NR0NG1-M00680)</h3>
+<!-- Описание -->
+<p>Ноутбук. Гарантия: 12 мес. Для бренда: ASUS. Модель: TUF Gaming F16 / FX608JPR-QT092. Коды: 90NR0NG1-M00680.</p>
+<!-- WhatsApp -->
+<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
+<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
+<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
+<h3>Характеристики</h3><ul><li><strong>Гарантия:</strong> 12 мес</li><li><strong>Для бренда:</strong> ASUS</li><li><strong>Коды:</strong> 90NR0NG1-M00680</li><li><strong>Модель:</strong> TUF Gaming F16 / FX608JPR-QT092</li><li><strong>Тип:</strong> Ноутбук</li></ul>
+<!-- Оплата и доставка -->
+<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><div style="background:#FFF6E5; border:1px solid #F1E2C6; padding:12px 14px; border-radius:0; text-align:left;"><h3 style="margin:0 0 8px; font-size:17px;">Оплата</h3><ul style="margin:0; padding-left:18px;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000;"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul><hr style="border:none; border-top:1px solid #E7D6B7; margin:12px 0;" /><h3 style="margin:0 0 8px; font-size:17px;">Доставка по Алматы и Казахстану</h3><ul style="margin:0; padding-left:18px;"><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul></div></div>]]></description>
+<param name="Гарантия">12 мес</param>
+<param name="Для бренда">ASUS</param>
+<param name="Коды">90NR0NG1-M00680</param>
+<param name="Модель">TUF Gaming F16 / FX608JPR-QT092</param>
+<param name="Тип">Ноутбук</param>
+<keywords>ASUS, Ноутбук ASUS TUF Gaming F16 / FX608JPR-QT092 (90NR0NG1-M00680), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP13872384" available="true">
