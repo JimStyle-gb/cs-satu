@@ -2,19 +2,16 @@
 """
 Path: scripts/suppliers/alstyle/normalize.py
 
-AlStyle supplier layer — базовая нормализация полей.
+AlStyle normalize layer.
 
 Что делает:
-- мягко чистит name и vendor;
-- собирает стабильный oid;
-- нормализует available и цену supplier-layer.
+- держит базовую supplier-нормализацию;
+- даёт helper-ы для builder/compat/params слоя;
 
 Что не делает:
-- не выполняет compat/params cleanup;
-- не строит final description;
-- не содержит shared-core правил.
+- не содержит source-crawl логики;
+- не делает final rendering.
 """
-
 from __future__ import annotations
 
 import re
