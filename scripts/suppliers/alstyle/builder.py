@@ -2,19 +2,16 @@
 """
 Path: scripts/suppliers/alstyle/builder.py
 
-AlStyle supplier layer — сборка raw offer.
+AlStyle builder layer.
 
 Что делает:
-- собирает clean raw offer из supplier-data;
-- применяет supplier-side rules;
-- готовит OfferOut для shared core.
+- собирает clean raw offers supplier-layer;
+- не подменяет shared core final rendering;
 
 Что не делает:
-- не дублирует shared-core финализацию;
-- не выполняет final XML-рендер;
-- не содержит unrelated supplier logic.
+- не хранит shared final rules;
+- не подменяет shared description/keywords/writer.
 """
-
 from __future__ import annotations
 
 import re
