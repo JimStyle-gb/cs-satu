@@ -2,21 +2,16 @@
 """
 Path: scripts/suppliers/akcent/desc_clean.py
 
-AkCent Desc Clean — очистка supplier description.
+AkCent narrative description cleaning layer.
 
 Что делает:
-- чистит HTML и служебный мусор;
-- сохраняет границы строк для desc_extract.py;
-- режет дубли title, model и vendor в начале описания;
-- убирает пустые и шумные строки;
-- удаляет supplier-хвосты и мягко разрезает плотные тех-строки.
+- чистит supplier narrative/body от шумового текста;
+- готовит безопасный plain-text для extraction и native_desc;
 
 Что не делает:
-- не строит финальное HTML-описание;
-- не вытаскивает params сам по себе;
-- не усиливает supplier-text через shared core.
+- не строит final HTML description;
+- не подменяет compat и params layer.
 """
-
 from __future__ import annotations
 
 import html
