@@ -2,40 +2,24 @@
 """
 Path: scripts/suppliers/vtt/normalize.py
 
-VTT normalize layer under CS-template.
+VTT Normalize — normalization-слой supplier-layer.
 
-Роль файла:
-- только базовая supplier-нормализация;
-- helper-ы для title / vendor / type / tech / resource / color;
-- без source-crawl логики;
-- без compat repair-логики;
-- без final description/render.
+Что делает:
+- держит базовую supplier-нормализацию title / vendor / type / tech / resource / color;
+- даёт backward-safe helper-ы для builder, compat и desc_extract;
+- оставляет VTT-specific part-number и compat cleanup за compat.py.
 
-Важно:
-- VTT-specific совместимость и part-number cleanup живут в compat.py;
-- extraction из HTML-страницы живёт в params.py;
-- builder использует этот модуль как базовый normalization-layer.
-
-Файл intentionally backward-safe:
-- сохраняет старые public helper-ы, которые уже импортируют builder.py / compat.py /
-  desc_extract.py / params_page.py / filtering.py / pictures.py;
-- дополнительно даёт более канонические alias-функции под общий supplier-template.
-
-Спец-правило для Hi-Black:
-- бренд Hi-Black защищён как vendor-token / brand-token;
-- сначала бренд исключается из color-localization и color-detection;
-- только потом выполняется нормализация цвета;
-- если во входном тексте уже попался сломанный вариант вроде "Hi-Чёрный",
-  он тоже возвращается в канон "Hi-Black".
+Что не делает:
+- не занимается source-crawl логикой;
+- не делает compat repair;
+- не строит final description и final XML.
 """
-
 from __future__ import annotations
 
 import re
 from typing import Sequence
 
 from cs.util import safe_int as _safe_int_shared
-
 
 # ----------------------------- constants / regex -----------------------------
 
@@ -174,20 +158,15 @@ _VENDOR_SUFFIX_RE = re.compile(r"(?iu)\b(?:gmbh|co\.?ltd|inc\.?|corp\.?|limited|
 _BOOL_TRUE = {"true", "1", "yes", "y", "да", "in stock", "available"}
 _BOOL_FALSE = {"false", "0", "no", "n", "нет", "out of stock", "unavailable"}
 
-
 # ----------------------------- basic helpers -----------------------------
 
 def safe_str(x: object) -> str:
     """Безопасно привести значение к строке."""
     return str(x).strip() if x is not None else ""
 
-
-
 def norm_ws(text: str) -> str:
     """Мягкая нормализация пробелов."""
     return " ".join(safe_str(text).replace("\xa0", " ").split()).strip()
-
-
 
 def _norm_spaces(text: str) -> str:
     """Мягкая нормализация пробелов и переводов строк без narrative-cleaning."""
@@ -201,8 +180,6 @@ def _norm_spaces(text: str) -> str:
     s = re.sub(r"\n{3,}", "\n\n", s)
     return s.strip()
 
-
-
 def _normalize_code_token(s: str) -> str:
     s = safe_str(s).upper()
     if not s:
@@ -212,22 +189,15 @@ def _normalize_code_token(s: str) -> str:
     s = re.sub(r"\s+", "", s)
     return s
 
-
-
 def _looks_numeric_sku(s: str) -> bool:
     return bool(re.fullmatch(r"\d+", safe_str(s)))
-
-
 
 def _is_allowed_numeric_code(s: str) -> bool:
     return bool(re.fullmatch(r"016\d{6}", _normalize_code_token(s)))
 
-
-
 def _looks_consumable_title(title: str) -> bool:
     t = safe_str(title).lower()
     return any(t.startswith(prefix) for prefix in _CONSUMABLE_TITLE_PREFIXES)
-
 
 # ----------------------------- protected brand tokens -----------------------------
 
@@ -240,8 +210,6 @@ def _protect_brand_tokens(text: str) -> str:
         s = rx.sub(placeholder, s)
     return s
 
-
-
 def _restore_brand_tokens(text: str) -> str:
     """Вернуть канонические брендовые токены после локализации/чистки."""
     s = _norm_spaces(text)
@@ -250,7 +218,6 @@ def _restore_brand_tokens(text: str) -> str:
     for placeholder, replacement in _RESTORE_PROTECTED_BRANDS.items():
         s = s.replace(placeholder, replacement)
     return s
-
 
 # ----------------------------- vendor / title -----------------------------
 
@@ -281,8 +248,6 @@ def canon_vendor(vendor: str) -> str:
     }
     return mapping.get(low, v)
 
-
-
 def _first_vendor_from_text(texts: Sequence[str]) -> str:
     hay = "\n".join([safe_str(x) for x in texts if safe_str(x)])
     if not hay:
@@ -310,8 +275,6 @@ def _first_vendor_from_text(texts: Sequence[str]) -> str:
             return canon_vendor(vendor)
     return ""
 
-
-
 def guess_vendor(raw_vendor: str, title: str, params: Sequence[tuple[str, str]]) -> str:
     """Backward-safe vendor guess для builder."""
     vendor = canon_vendor(raw_vendor)
@@ -323,8 +286,6 @@ def guess_vendor(raw_vendor: str, title: str, params: Sequence[tuple[str, str]])
         if any(x in key for x in ("бренд", "vendor", "марка", "производ", "для бренда")) and val:
             return val
     return _first_vendor_from_text([title])
-
-
 
 def detect_vendor(*, title: str = "", description: str = "", params: Sequence[tuple[str, str]] | None = None) -> str:
     """Канонический alias для мягкого определения vendor."""
@@ -342,8 +303,6 @@ def detect_vendor(*, title: str = "", description: str = "", params: Sequence[tu
         param_texts.append(value2)
     return _first_vendor_from_text([title, description, *param_texts])
 
-
-
 def _localize_title_color_tokens(title: str) -> str:
     """Локализовать цветовые токены, не трогая защищённые бренды."""
     s = _protect_brand_tokens(title)
@@ -351,15 +310,11 @@ def _localize_title_color_tokens(title: str) -> str:
         s = re.sub(rf"(?<![A-Za-zА-Яа-яЁё]){en}(?![A-Za-zА-Яа-яЁё])", ru, s, flags=re.I)
     return _restore_brand_tokens(s)
 
-
-
 def normalize_title(title: str) -> str:
     """Нормализовать title без supplier-side смысловой правки."""
     s = _localize_title_color_tokens(title)
     s = re.sub(r"\s{2,}", " ", s)
     return s[:240]
-
-
 
 def clean_title(title: str) -> str:
     """Backward-safe cleanup title для builder."""
@@ -379,13 +334,9 @@ def clean_title(title: str) -> str:
             title = head
     return _restore_brand_tokens(norm_ws(title))
 
-
-
 def normalize_name(name: str) -> str:
     """Канонический alias под общий supplier-template."""
     return normalize_title(name)
-
-
 
 def append_original_suffix(title: str, original: bool) -> str:
     title = norm_ws(title)
@@ -395,7 +346,6 @@ def append_original_suffix(title: str, original: bool) -> str:
         return title
     return f"{title} (оригинал)"
 
-
 # ----------------------------- code / model / oid -----------------------------
 
 def first_code(text: str) -> str:
@@ -404,8 +354,6 @@ def first_code(text: str) -> str:
         if len(code) >= 3 and re.search(r"\d", code):
             return code
     return ""
-
-
 
 def _search_code(text: str) -> str:
     hay = _norm_spaces(text)
@@ -418,8 +366,6 @@ def _search_code(text: str) -> str:
         if match:
             return _normalize_code_token(match.group(0))
     return ""
-
-
 
 def detect_model(*, title: str = "", description: str = "", sku: str = "") -> str:
     """Определить model/code по title → description head → sku."""
@@ -448,14 +394,10 @@ def detect_model(*, title: str = "", description: str = "", sku: str = "") -> st
         return sku_norm
     return ""
 
-
-
 def make_oid(sku: str, title: str) -> str:
     base = safe_str(sku) or first_code(title) or re.sub(r"[^A-Za-z0-9]+", "", title)[:28]
     base = re.sub(r"[^A-Za-z0-9._/-]+", "", base)
     return "VT" + base
-
-
 
 def build_offer_oid(raw_vendor_code: str, raw_id: str, *, prefix: str) -> str:
     """Канонический alias под общий supplier-template."""
@@ -469,13 +411,10 @@ def build_offer_oid(raw_vendor_code: str, raw_id: str, *, prefix: str) -> str:
         return base
     return f"{prefix}{base}"
 
-
 # ----------------------------- resource / color / original -----------------------------
 
 def is_original(*parts: str) -> bool:
     return any(ORIGINAL_MARK_RE.search(safe_str(x)) for x in parts if safe_str(x))
-
-
 
 def format_resource_value(value: str) -> str:
     s = norm_ws(value)
@@ -498,8 +437,6 @@ def format_resource_value(value: str) -> str:
                 num = num[:-2]
             return f"{num} л".replace(".", ",")
     return s
-
-
 
 def infer_color_from_title(title: str) -> str:
     """Определить цвет из title, не принимая бренд Hi-Black за цвет."""
@@ -524,12 +461,9 @@ def infer_color_from_title(title: str) -> str:
         return "Чёрный"
     return ""
 
-
-
 def norm_color(value: str) -> str:
     """Нормализовать цвет supplier-layer без тяжёлой магии."""
     return infer_color_from_title(value) or _restore_brand_tokens(norm_ws(value))
-
 
 # ----------------------------- type / tech -----------------------------
 
@@ -550,8 +484,6 @@ def infer_type(source_categories: Sequence[str], title: str) -> str:
             return prefix.capitalize() if prefix.isascii() else prefix[:1].upper() + prefix[1:]
     return ""
 
-
-
 def infer_tech(source_categories: Sequence[str], type_name: str, title: str) -> str:
     for code in source_categories or []:
         if code in TECH_BY_CATEGORY:
@@ -563,7 +495,6 @@ def infer_tech(source_categories: Sequence[str], type_name: str, title: str) -> 
     if any(x in t for x in ("матрич",)):
         return "Матричная"
     return "Лазерная" if t else ""
-
 
 # ----------------------------- extraction-body helpers -----------------------------
 
@@ -580,16 +511,12 @@ def _drop_title_echo_from_desc(title: str, description: str) -> str:
         lines = lines[1:]
     return "\n".join([ln for ln in lines if safe_str(ln)]).strip()
 
-
-
 def build_extract_description(*, title: str, description_text: str) -> str:
     s = _drop_title_echo_from_desc(title, description_text)
     s = _norm_spaces(s)
     if not s:
         return ""
     return s[:6000]
-
-
 
 def normalize_source_basics(
     *,
@@ -610,7 +537,6 @@ def normalize_source_basics(
         "extract_desc": extract_desc,
         "description": extract_desc,
     }
-
 
 # ----------------------------- common-template aliases -----------------------------
 
@@ -638,8 +564,6 @@ def normalize_vendor(
         return fallback
     return ""
 
-
-
 def normalize_model(
     name: str,
     params: Sequence[tuple[str, str]] | None = None,
@@ -650,16 +574,12 @@ def normalize_model(
     """Канонический alias под общий supplier-template."""
     return detect_model(title=name, description=description_text, sku=sku)
 
-
-
 def normalize_price_in(price_text: str = "", *, fallback_text: str = "") -> int | None:
     """Мягкая нормализация входной цены."""
     price_in = _safe_int_shared(price_text)
     if price_in is not None:
         return price_in
     return _safe_int_shared(fallback_text)
-
-
 
 def normalize_available(available_attr: str = "", available_tag: str = "", active: str = "") -> bool:
     """Общий bool-normalizer; для VTT policy всё равно always_true_available=true."""
@@ -670,7 +590,6 @@ def normalize_available(available_attr: str = "", available_tag: str = "", activ
         if s in _BOOL_FALSE:
             return False
     return False
-
 
 __all__ = [
     "CATEGORY_TYPE_MAP",
