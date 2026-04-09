@@ -2,33 +2,29 @@
 """
 Path: scripts/suppliers/vtt/params.py
 
-Canonical VTT params layer under CS-template.
+VTT Params — canonical params-слой supplier-layer.
 
-Назначение:
-- держать главный extractor supplier-параметров;
-- сохранять backward-safe public API старого params_page.py;
-- отдавать source.py те же low-level helper-ы, что раньше:
-  extract_title / extract_meta_desc / extract_price_rub / extract_sku /
-  extract_images_from_html / extract_params_and_desc(_fast).
+Что делает:
+- держит главный extractor supplier-параметров;
+- сохраняет backward-safe public API старого params_page.py;
+- отдаёт source.py low-level helper-ы для title / meta / price / sku / images / params.
 
-Важно:
-- это фикс совместимости после ввода canonical params.py;
-- логика intentionally оставлена максимально близкой к старому params_page.py,
-  чтобы не ломать build_vtt.py и source.py.
+Что не делает:
+- не строит final offers;
+- не заменяет builder и normalize слой;
+- не переносит supplier-specific repair в shared core.
 """
-
 from __future__ import annotations
 
 import html as ihtml
 import re
-from typing import List, Sequence, Tuple
+from typing import Sequence
 from urllib.parse import urljoin
 
 from bs4 import BeautifulSoup
 
-from .normalize import canon_vendor, norm_ws
+from .normalize import norm_ws
 from .pictures import clean_picture_urls
-
 
 # ----------------------------- low-level HTML extractors -----------------------------
 
@@ -55,14 +51,12 @@ TR_RE = re.compile(r"<tr[^>]*>(.*?)</tr>", re.I | re.S)
 CELL_RE = re.compile(r"<(?:th|td)[^>]*>(.*?)</(?:th|td)>", re.I | re.S)
 CODE_TOKEN_RE = re.compile(r"\b[A-Z0-9][A-Z0-9\-./]{2,}\b")
 
-
 def html_text_fast(fragment: str) -> str:
     if not fragment:
         return ""
     text = TAG_RE.sub(" ", fragment)
     text = ihtml.unescape(text)
     return norm_ws(text)
-
 
 def safe_int_from_text(text: str) -> int:
     s = norm_ws(text).replace(" ", "").replace(",", ".")
@@ -74,7 +68,6 @@ def safe_int_from_text(text: str) -> int:
     except Exception:
         return 0
 
-
 def extract_title(html: str) -> str:
     m = H1_RE.search(html)
     if m:
@@ -82,11 +75,9 @@ def extract_title(html: str) -> str:
     m = TITLE_RE.search(html)
     return html_text_fast(m.group(1)) if m else ""
 
-
 def extract_meta_desc(html: str) -> str:
     m = META_DESC_RE.search(html)
     return norm_ws(ihtml.unescape(m.group(1))) if m else ""
-
 
 def extract_price_rub(html: str) -> int:
     m = PRICE_RUB_RE.search(html)
@@ -98,18 +89,15 @@ def extract_price_rub(html: str) -> int:
     m = PRICE_MAIN_RE.search(html)
     return safe_int_from_text(m.group(1)) if m else 0
 
-
 def extract_sku(html: str) -> str:
     m = SKU_RE.search(html)
     return norm_ws(m.group(1)) if m else ""
-
 
 def extract_images_from_html(page_url: str, html: str) -> list[str]:
     urls: list[str] = []
     for raw in IMAGE_RE.findall(html or ""):
         urls.append(urljoin(page_url, raw.strip()))
     return clean_picture_urls(urls)
-
 
 def extract_params_and_desc_fast(html: str) -> tuple[list[tuple[str, str]], str]:
     params: list[tuple[str, str]] = []
@@ -138,7 +126,6 @@ def extract_params_and_desc_fast(html: str) -> tuple[list[tuple[str, str]], str]
     if m:
         desc = html_text_fast(m.group(1))
     return params, desc
-
 
 def extract_params_and_desc(html: str) -> tuple[list[tuple[str, str]], str]:
     params, desc = extract_params_and_desc_fast(html)
@@ -178,7 +165,6 @@ def extract_params_and_desc(html: str) -> tuple[list[tuple[str, str]], str]:
             desc = html_text_fast(m.group(1))
     return params, desc
 
-
 def extract_title_codes(title: str) -> list[str]:
     out: list[str] = []
     seen: set[str] = set()
@@ -190,7 +176,6 @@ def extract_title_codes(title: str) -> list[str]:
             seen.add(code)
             out.append(code)
     return out
-
 
 # ----------------------------- high-level params extractor -----------------------------
 
@@ -254,14 +239,11 @@ CABLE_PARAM_KEYS = {
     "Бухта",
 }
 
-
 def safe_str(value: object) -> str:
     return str(value).strip() if value is not None else ""
 
-
 def _norm_spaces(text: str) -> str:
     return " ".join(safe_str(text).replace("\xa0", " ").split()).strip()
-
 
 def _dedupe_params(items: Sequence[Tuple[str, str]]) -> list[Tuple[str, str]]:
     out: list[Tuple[str, str]] = []
@@ -277,7 +259,6 @@ def _dedupe_params(items: Sequence[Tuple[str, str]]) -> list[Tuple[str, str]]:
         seen.add(sig)
         out.append((k, v))
     return out
-
 
 def _title_kind(title: str) -> str:
     t = safe_str(title).lower()
@@ -313,7 +294,6 @@ def _title_kind(title: str) -> str:
             return value
     return ""
 
-
 def _norm_color(value: str) -> str:
     s = _norm_spaces(value)
     low = s.casefold()
@@ -327,7 +307,6 @@ def _norm_color(value: str) -> str:
         return "Голубой"
     return s
 
-
 def _trim_compat_tail(value: str) -> str:
     s = _norm_spaces(value).strip(" ;,.-")
     if not s:
@@ -339,7 +318,6 @@ def _trim_compat_tail(value: str) -> str:
             break
         s = _norm_spaces(parts[0]).strip(" ;,.-")
     return s
-
 
 def _extract_compat_from_desc(text: str) -> str:
     s = _norm_spaces(text)
@@ -353,7 +331,6 @@ def _extract_compat_from_desc(text: str) -> str:
                 return val
     return ""
 
-
 def _extract_codes(title: str, text: str) -> str:
     found: list[str] = []
     seen: set[str] = set()
@@ -365,7 +342,6 @@ def _extract_codes(title: str, text: str) -> str:
         seen.add(code)
         found.append(code)
     return ", ".join(found)
-
 
 def _extract_cable_params_from_text(title: str, text: str) -> list[Tuple[str, str]]:
     joined = _norm_spaces(f"{title} {text}")
@@ -397,7 +373,6 @@ def _extract_cable_params_from_text(title: str, text: str) -> list[Tuple[str, st
 
     return out
 
-
 def _normalize_param_block(block: Sequence[Tuple[str, str]] | None) -> list[Tuple[str, str]]:
     out: list[Tuple[str, str]] = []
     for key, value in block or []:
@@ -407,7 +382,6 @@ def _normalize_param_block(block: Sequence[Tuple[str, str]] | None) -> list[Tupl
             continue
         out.append((k, v))
     return out
-
 
 def _merge_raw_param_channels(
     *,
@@ -420,7 +394,6 @@ def _merge_raw_param_channels(
     merged.extend(_normalize_param_block(raw_desc_pairs))
     merged.extend(_normalize_param_block(page_params))
     return merged
-
 
 def extract_page_params(
     *,
@@ -479,13 +452,11 @@ def extract_page_params(
 
     return _dedupe_params(out)
 
-
 # Public aliases for fill-missing layer / future cleanup
 trim_compat_tail = _trim_compat_tail
 extract_compat_from_text = _extract_compat_from_desc
 extract_codes_from_text = _extract_codes
 norm_spaces = _norm_spaces
-
 
 __all__ = [
     "TAG_RE",
