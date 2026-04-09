@@ -2,19 +2,16 @@
 """
 Path: scripts/suppliers/copyline/filtering.py
 
-CopyLine Filtering — ассортиментный include-filter supplier-layer.
+CopyLine filtering layer.
 
 Что делает:
-- фильтрует supplier-index по префиксам title;
-- компилирует строгие startswith-patterns;
-- возвращает filtered index и стабильный filter_report.
+- держит supplier-layer правила фильтрации;
+- собирает стабильный filter_report для build summary;
 
 Что не делает:
-- не парсит product pages;
-- не меняет business-логику builder;
-- не переносит supplier-aware правила в shared core.
+- не строит final offers;
+- не переносит supplier-правила в shared core.
 """
-
 from __future__ import annotations
 
 from pathlib import Path
@@ -36,11 +33,9 @@ DEFAULT_INCLUDE_PREFIXES: list[str] = [
     "Чернила",
 ]
 
-
 def safe_str(value: object) -> str:
     """Безопасно привести значение к строке."""
     return str(value).strip() if value is not None else ""
-
 
 def compile_startswith_patterns(prefixes: Sequence[str]) -> list[re.Pattern[str]]:
     """Скомпилировать строгие regex по префиксам названия."""
@@ -52,12 +47,10 @@ def compile_startswith_patterns(prefixes: Sequence[str]) -> list[re.Pattern[str]
         out.append(re.compile(r"^\s*" + re.escape(val).replace(r"\ ", " ") + r"(?!\w)", re.I))
     return out
 
-
 def title_allowed(title: str, patterns: Sequence[re.Pattern[str]]) -> bool:
     """Проверить, разрешён ли title по фильтру префиксов."""
     title = safe_str(title)
     return bool(title) and any(pattern.search(title) for pattern in patterns)
-
 
 def load_filter_config(path: str | None = None) -> dict:
     """Прочитать filter.yml; если файла нет — вернуть defaults."""
@@ -78,7 +71,6 @@ def load_filter_config(path: str | None = None) -> dict:
         "mode": safe_str(data.get("mode") or "include").lower() or "include",
         "include_prefixes": [safe_str(item) for item in prefixes if safe_str(item)],
     }
-
 
 def filter_product_index(
     products: Iterable[dict],
