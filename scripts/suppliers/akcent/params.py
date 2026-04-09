@@ -26,7 +26,6 @@ from typing import Any, Iterable
 
 from cs.util import fix_mixed_cyr_lat, norm_ws, safe_int
 
-
 # ----------------------------- regex / const -----------------------------
 
 _RE_HAS_LETTER = re.compile(r"[A-Za-zА-Яа-яЁё]")
@@ -122,9 +121,7 @@ _VALUE_TITLE_CASE_KEYS = {
     "тип расходных материалов",
 }
 
-
 # ----------------------------- small helpers -----------------------------
-
 
 def _clean_text(value: Any) -> str:
     s = str(value or "").replace("\xa0", " ")
@@ -135,7 +132,6 @@ def _clean_text(value: Any) -> str:
     s = _RE_WS.sub(" ", s).strip(" ;,.-")
     return s
 
-
 # Короткий доступ к полю объекта/dict.
 def _get_field(obj: Any, *names: str) -> Any:
     for name in names:
@@ -145,18 +141,15 @@ def _get_field(obj: Any, *names: str) -> Any:
             return getattr(obj, name)
     return None
 
-
 # XML itertext с fallback.
 def _text_of(el: ET.Element | None) -> str:
     if el is None:
         return ""
     return _clean_text("".join(el.itertext()))
 
-
 # Casefold-set из списка.
 def _cf_set(values: Iterable[Any]) -> set[str]:
     return {_clean_text(v).casefold() for v in values if _clean_text(v)}
-
 
 # Resolve aliases backward-safe.
 def _resolve_aliases(schema_cfg: dict[str, Any]) -> dict[str, str]:
@@ -169,7 +162,6 @@ def _resolve_aliases(schema_cfg: dict[str, Any]) -> dict[str, str]:
             out[s.casefold()] = d
     return out
 
-
 # Resolve default+kind allowlist.
 def resolve_allowed_keys(schema_cfg: dict[str, Any], kind: str = "") -> set[str]:
     allow_by_kind = schema_cfg.get("allow_by_kind") or {}
@@ -177,7 +169,6 @@ def resolve_allowed_keys(schema_cfg: dict[str, Any], kind: str = "") -> set[str]
     if kind:
         keys.extend(list(allow_by_kind.get(kind) or []))
     return {_clean_text(x) for x in keys if _clean_text(x)}
-
 
 # Определяем kind по началу name.
 def detect_kind_by_name(name: str, schema_cfg: dict[str, Any]) -> str:
@@ -189,7 +180,6 @@ def detect_kind_by_name(name: str, schema_cfg: dict[str, Any]) -> str:
             if pref and text_cf.startswith(pref.casefold().replace("ё", "е")):
                 return str(kind)
     return ""
-
 
 # Общая проверка качества ключа.
 def key_quality_ok(key: str, schema_cfg: dict[str, Any]) -> bool:
@@ -217,7 +207,6 @@ def key_quality_ok(key: str, schema_cfg: dict[str, Any]) -> bool:
 
     return True
 
-
 # Нормализация ключа: cleanup + alias.
 def normalize_param_key(raw_key: Any, schema_cfg: dict[str, Any]) -> str:
     key = _clean_text(raw_key)
@@ -228,7 +217,6 @@ def normalize_param_key(raw_key: Any, schema_cfg: dict[str, Any]) -> str:
     key = key.replace("г/м2", "г/м²")
     key = key.replace("  ", " ")
     return _clean_text(key)
-
 
 # Нормализация цвета.
 def _normalize_color_list(value: str) -> str:
@@ -247,7 +235,6 @@ def _normalize_color_list(value: str) -> str:
         seen.add(canon.casefold())
         out.append(canon)
     return ", ".join(out)
-
 
 # Нормализация интерфейсов.
 def _normalize_interfaces(value: str) -> str:
@@ -290,7 +277,6 @@ def _normalize_interfaces(value: str) -> str:
         out.append(canon)
     return ", ".join(out)
 
-
 # Нормализация кодов/артикулов.
 def _normalize_codes(value: str) -> str:
     parts = _RE_SPLIT_STARS.split(value) if "*" in value else _RE_SPLIT_LIST.split(value)
@@ -313,7 +299,6 @@ def _normalize_codes(value: str) -> str:
         out.append(p)
     return ", ".join(out)
 
-
 # Нормализация совместимости / для устройства.
 def _normalize_compat(value: str) -> str:
     s = _clean_text(value)
@@ -323,7 +308,6 @@ def _normalize_compat(value: str) -> str:
     s = s.replace("/ /", "/")
     s = re.sub(r"\s{2,}", " ", s)
     return s.strip(" ;,.-")
-
 
 # Нормализация гарантии в месяцы.
 def _normalize_warranty(value: str) -> str:
@@ -340,7 +324,6 @@ def _normalize_warranty(value: str) -> str:
         return f"{int(s)} мес."
     return s
 
-
 # Нормализация простых yes/no параметров.
 def _normalize_bool(value: str) -> str:
     s = _clean_text(value)
@@ -351,7 +334,6 @@ def _normalize_bool(value: str) -> str:
     if _RE_BOOL_NO.match(s):
         return "Нет"
     return s
-
 
 # Нормализация размеров/весов/единиц.
 def _normalize_unitish(value: str) -> str:
@@ -367,7 +349,6 @@ def _normalize_unitish(value: str) -> str:
             num = m.group(1).replace(",", ".")
             return f"{num}{unit}"
     return s
-
 
 # Нормализация объёма.
 def _normalize_volume(value: str) -> str:
@@ -404,7 +385,6 @@ def _normalize_volume(value: str) -> str:
         return f"{num} {'мл' if unit in {'ml','мл'} else 'л'}"
 
     return s
-
 
 # Умеренная чистка значения по ключу.
 def normalize_param_value(key: str, raw_value: Any, schema_cfg: dict[str, Any]) -> str:
@@ -481,7 +461,6 @@ def normalize_param_value(key: str, raw_value: Any, schema_cfg: dict[str, Any]) 
 
     return out
 
-
 # Извлекаем сырые пары Param name/value из source backward-safe.
 def iter_source_param_pairs(src: Any) -> list[tuple[str, str]]:
     # 1) Если уже есть готовый params list.
@@ -510,7 +489,6 @@ def iter_source_param_pairs(src: Any) -> list[tuple[str, str]]:
 
     return []
 
-
 # Dedup params по ключу+значению с сохранением порядка.
 def _append_unique(pairs: list[tuple[str, str]], key: str, value: str, seen: set[tuple[str, str]]) -> None:
     item = (key, value)
@@ -518,7 +496,6 @@ def _append_unique(pairs: list[tuple[str, str]], key: str, value: str, seen: set
         return
     seen.add(item)
     pairs.append(item)
-
 
 # Главная функция XML params pipeline.
 def extract_xml_params(
@@ -586,7 +563,6 @@ def extract_xml_params(
         stats["kept_param_count"] = len(kept)
 
     return kept, extra_info, stats
-
 
 # Alias под будущий builder, если захочется более явное имя.
 def collect_xml_params(
