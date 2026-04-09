@@ -2,17 +2,15 @@
 """
 Path: scripts/suppliers/vtt/desc_extract.py
 
-VTT Desc Extract — extraction-слой supplier-layer.
+VTT description extraction layer.
 
 Что делает:
-- только safe extraction недостающих полей из title/description;
-- нормализует ресурс без лишней supplier-фантазии;
-- сохраняет backward-safe API extract_resource / build_native_description.
+- извлекает только допустимые supplier-поля из title/body;
+- не подменяет главный params extractor;
 
 Что не делает:
-- не чинит compat-логику;
-- не строит final description;
-- не заменяет params.py как главный extractor supplier-параметров.
+- не придумывает данные из воздуха;
+- не заменяет supplier params layer.
 """
 from __future__ import annotations
 
