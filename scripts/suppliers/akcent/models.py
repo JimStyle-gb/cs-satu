@@ -12,7 +12,7 @@ AkCent supplier layer — внутренние модели.
 Важно:
 - models.py не должен знать про core-эвристики;
 - models.py не должен тянуть supplier-specific regex;
-- только структуры данных.
+- здесь живут только структуры данных.
 """
 
 from __future__ import annotations
@@ -21,17 +21,23 @@ from dataclasses import dataclass, field
 from typing import Any
 
 
-# Родной Param поставщика с указанием источника.
+# -----------------------------
+# Source / params carriers
+# -----------------------------
+
 @dataclass(slots=True)
 class ParamItem:
+    """Родной param поставщика с указанием источника."""
+
     name: str
     value: str
     source: str = "xml"
 
 
-# Честрый source-object без нормализации бизнес-полей.
 @dataclass(slots=True)
 class SourceOffer:
+    """Честный source-object без нормализации бизнес-полей."""
+
     raw_id: str
     offer_id: str = ""
     article: str = ""
@@ -54,9 +60,14 @@ class SourceOffer:
     offer_el: Any | None = None
 
 
-# Нормализованная базовая часть supplier-offer до сборки OfferOut.
+# -----------------------------
+# Normalized / builder carriers
+# -----------------------------
+
 @dataclass(slots=True)
 class NormalizedOfferBasics:
+    """Нормализованная базовая часть supplier-offer до сборки OfferOut."""
+
     oid: str
     article: str = ""
     name: str = ""
@@ -70,17 +81,19 @@ class NormalizedOfferBasics:
     source_price_text: str = ""
 
 
-# Небольшой carrier для supplier-side результата params pipeline.
 @dataclass(slots=True)
 class ParamBuildResult:
+    """Небольшой carrier для supplier-side результата params pipeline."""
+
     kind: str = ""
     params: list[tuple[str, str]] = field(default_factory=list)
     extra_info: list[str] = field(default_factory=list)
 
 
-# Сводная статистика supplier-layer.
 @dataclass(slots=True)
 class BuildStats:
+    """Сводная статистика supplier-layer."""
+
     before: int = 0
     after: int = 0
     filtered_out: int = 0
@@ -90,9 +103,10 @@ class BuildStats:
     watch_hits: int = 0
 
 
-# Маленький container под watched-offer сообщения.
 @dataclass(slots=True)
 class WatchMessage:
+    """Маленький container под watched-offer сообщения."""
+
     oid: str = ""
     name: str = ""
     kind: str = ""
