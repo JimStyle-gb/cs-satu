@@ -2,21 +2,16 @@
 """
 Path: scripts/suppliers/akcent/normalize.py
 
-AkCent Normalize — базовая нормализация полей поставщика.
+AkCent normalize layer.
 
 Что делает:
-- нормализует name, model и vendor;
-- строит стабильный oid с префиксом AC;
-- выбирает входную цену из dealer -> price -> rrp;
-- приводит available к bool и нормализует warranty;
-- мягко восстанавливает vendor и article/code для узкого потока AkCent.
+- держит базовую supplier-нормализацию;
+- даёт helper-ы для builder/compat/params слоя;
 
 Что не делает:
-- не собирает финальный raw OfferOut;
-- не чистит compat и description-глубокую логику;
-- не переносит supplier-specific правила в shared core.
+- не содержит source-crawl логики;
+- не делает final rendering.
 """
-
 from __future__ import annotations
 
 import re
