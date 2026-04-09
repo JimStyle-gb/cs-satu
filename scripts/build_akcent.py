@@ -5,6 +5,21 @@ Path: scripts/build_akcent.py
 AkCent Build — тонкий orchestrator поставщика.
 
 Что делает:
+- загружает supplier config и запускает supplier-layer;
+- пишет raw/final feed и запускает quality gate;
+
+Что не делает:
+- не хранит supplier parsing/compat/normalize внутри себя;
+- не подменяет source.py / builder.py / quality_gate.py.
+"""
+
+# -*- coding: utf-8 -*-
+"""
+Path: scripts/build_akcent.py
+
+AkCent Build — тонкий orchestrator поставщика.
+
+Что делает:
 - загружает supplier config и исходный XML;
 - прогоняет source, filtering и builder-слой;
 - пишет raw и final feed;
@@ -115,7 +130,7 @@ def _call_builder(filtered_offers: list[Any], *, schema_cfg: dict[str, Any], pol
     offers = list(result or [])
     return offers, {"before": len(filtered_offers), "after": len(offers)}
 
-# ------------------------------ qg helpers --------------------------------
+# ----------------------------- qg helpers -----------------------------
 
 def _write_fallback_qg_report(report_path: str, baseline_path: str, *, reason: str) -> None:
     p = Path(report_path)
@@ -222,7 +237,7 @@ def _run_quality_gate(*, out_file: str, raw_out_file: str, policy_cfg: dict[str,
     elif isinstance(result, bool) and not result:
         raise SystemExit(1)
 
-# -------------------------------- entrypoint ------------------------------
+# ----------------------------- entrypoint -----------------------------
 
 def main() -> int:
     url = os.getenv("AKCENT_URL", AKCENT_URL_DEFAULT)
