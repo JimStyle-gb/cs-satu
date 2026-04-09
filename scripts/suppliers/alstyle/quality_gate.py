@@ -2,22 +2,17 @@
 """
 Path: scripts/suppliers/alstyle/quality_gate.py
 
-AlStyle quality gate.
+AlStyle supplier layer — quality gate.
 
-Роль файла:
+Что делает:
 - проверяет final feed после supplier-layer и shared core;
-- считает critical/cosmetic хвосты в едином CS-формате;
-- пишет отчёт через shared cs.qg_report writer.
+- считает critical и cosmetic хвосты;
+- пишет отчёт через shared cs.qg_report.
 
-Что файл делает:
-- ловит compat/description leaks, bad power keys, marketplace leaks;
-- поддерживает baseline accepted_cosmetic и freeze_current_as_baseline;
-- сохраняет backward-safe контракт для build_alstyle.py.
-
-Что файл НЕ делает:
+Что не делает:
 - не чинит supplier raw;
-- не дублирует normalize/builder;
-- не должен хранить supplier-specific post-fix логику.
+- не дублирует normalize и builder;
+- не хранит post-fix логику вместо pipeline.
 """
 
 from __future__ import annotations
@@ -46,7 +41,6 @@ _TECH_BODY_LEAK_RE = re.compile(
 )
 _WS_RE = re.compile(r"\s+")
 
-
 @dataclass(frozen=True)
 class QualityIssue:
     severity: str
@@ -55,20 +49,17 @@ class QualityIssue:
     name: str
     details: str
 
-
 def _norm_ws(s: str) -> str:
     s2 = unescape(s or "")
     s2 = s2.replace("\u00a0", " ").strip()
     s2 = _WS_RE.sub(" ", s2).strip()
     return s2
 
-
 def _read_yaml(path: str) -> dict:
     p = Path(path)
     if not p.exists():
         return {}
     return yaml.safe_load(p.read_text(encoding="utf-8")) or {}
-
 
 def _write_yaml(path: str, data: dict) -> None:
     p = Path(path)
@@ -78,7 +69,6 @@ def _write_yaml(path: str, data: dict) -> None:
         encoding="utf-8",
     )
 
-
 def _offer_params(offer_el: ET.Element) -> dict[str, list[str]]:
     out: dict[str, list[str]] = defaultdict(list)
     for p in offer_el.findall("param"):
@@ -87,7 +77,6 @@ def _offer_params(offer_el: ET.Element) -> dict[str, list[str]]:
         if k and v:
             out[k].append(v)
     return dict(out)
-
 
 def _detect_issues(feed_path: str) -> list[QualityIssue]:
     xml_text = Path(feed_path).read_text(encoding="utf-8", errors="ignore")
@@ -132,7 +121,6 @@ def _detect_issues(feed_path: str) -> list[QualityIssue]:
 
     return sorted(deduped.values(), key=lambda x: (x.severity, x.rule, x.oid))
 
-
 def _load_cosmetic_baseline(baseline_path: str) -> dict[str, set[str]]:
     data = _read_yaml(baseline_path)
     raw = data.get("accepted_cosmetic") or {}
@@ -140,7 +128,6 @@ def _load_cosmetic_baseline(baseline_path: str) -> dict[str, set[str]]:
     for rule, oids in raw.items():
         out[str(rule)] = {str(x).strip() for x in (oids or []) if str(x).strip()}
     return out
-
 
 def _make_baseline_payload(cosmetic: list[QualityIssue]) -> dict:
     grouped: dict[str, list[str]] = defaultdict(list)
@@ -151,7 +138,6 @@ def _make_baseline_payload(cosmetic: list[QualityIssue]) -> dict:
     for rule in sorted(grouped):
         payload["accepted_cosmetic"][rule] = sorted(set(grouped[rule]))
     return payload
-
 
 def run_quality_gate(
     *,
