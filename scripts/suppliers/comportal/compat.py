@@ -2,12 +2,17 @@
 """
 Path: scripts/suppliers/comportal/compat.py
 
-ComPortal compat / codes cleanup helpers.
+ComPortal Compat — supplier-layer нормализация совместимости и кодов.
 
-Роль как у других поставщиков:
-- supplier-side cleanup для кодов / совместимости / модельных серий;
-- никакой генерации совместимости;
-- только безопасная нормализация уже существующих значений.
+Что делает:
+- нормализует OEM, партномера и compat-токены;
+- очищает supplier-specific совместимость;
+- готовит compat-данные для params и builder слоя.
+
+Что не делает:
+- не переносит compat-логику в shared core;
+- не строит финальный shared description;
+- не заменяет params.py и builder.py.
 """
 
 from __future__ import annotations
