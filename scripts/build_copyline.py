@@ -2,21 +2,19 @@
 """
 Path: scripts/build_copyline.py
 
-CopyLine adapter (CL) — thin orchestrator under CS-template.
+CopyLine Build — thin orchestrator поставщика в CS-template.
 
 Что делает:
-- грузит supplier config: filter / policy;
-- читает индекс товаров поставщика;
-- фильтрует ассортимент;
+- грузит supplier config: filter и policy;
+- читает supplier-index и фильтрует ассортимент;
 - догружает product pages и собирает raw offers;
-- пишет raw feed;
-- пишет final feed;
-- запускает supplier-side quality gate.
+- пишет raw и final feed;
+- запускает supplier-side quality gate и печатает summary.
 
-Важно:
-- supplier-specific логика остаётся только в suppliers/copyline/*;
-- build_copyline.py не должен знать parsing-логику страниц CopyLine;
-- next_run для CopyLine считается строго по дням месяца 1/10/20 через shared cs.meta.
+Что не делает:
+- не содержит parsing-логики product pages;
+- не держит supplier-specific builder-эвристики;
+- не переносит supplier-aware правила в shared core.
 """
 
 from __future__ import annotations
@@ -25,7 +23,7 @@ import os
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timedelta
 from pathlib import Path
-from typing import Any, List
+from typing import Any
 
 import yaml
 
@@ -33,10 +31,10 @@ from cs.core import get_public_vendor, write_cs_feed, write_cs_feed_raw
 from cs.meta import next_run_dom_at_hour, now_almaty
 
 from suppliers.copyline.builder import build_offer_from_page
+from suppliers.copyline.diagnostics import print_build_summary
 from suppliers.copyline.filtering import filter_product_index
 from suppliers.copyline.quality_gate import run_quality_gate
 from suppliers.copyline.source import fetch_product_index, parse_product_page
-
 
 BUILD_COPYLINE_VERSION = "build_copyline_v13_fix_qg_policy_and_next_run_dom"
 
@@ -56,10 +54,8 @@ COPYLINE_QG_BASELINE_DEFAULT = "scripts/suppliers/copyline/config/quality_gate_b
 COPYLINE_QG_REPORT_DEFAULT = "docs/raw/copyline_quality_gate.txt"
 
 
-# ----------------------------- config helpers -----------------------------
-
-
 def _read_yaml(path: Path) -> dict[str, Any]:
+    """Безопасно прочитать YAML-файл."""
     if not path.exists():
         return {}
     try:
@@ -69,12 +65,14 @@ def _read_yaml(path: Path) -> dict[str, Any]:
 
 
 def _load_supplier_config(cfg_dir: Path) -> tuple[dict[str, Any], dict[str, Any]]:
+    """Загрузить filter и policy config поставщика."""
     filter_cfg = _read_yaml(cfg_dir / FILTER_FILE_DEFAULT)
     policy_cfg = _read_yaml(cfg_dir / POLICY_FILE_DEFAULT)
     return filter_cfg, policy_cfg
 
 
 def _safe_int(value: Any, default: int) -> int:
+    """Безопасно привести значение к int."""
     try:
         return int(value)
     except Exception:
@@ -82,16 +80,18 @@ def _safe_int(value: Any, default: int) -> int:
 
 
 def _load_param_priority(policy_cfg: dict[str, Any]) -> tuple[str, ...]:
+    """Поднять приоритет ключей param из policy."""
     raw = policy_cfg.get("param_priority") or []
     out: list[str] = []
     for item in raw:
-        s = str(item or "").strip()
-        if s:
-            out.append(s)
+        value = str(item or "").strip()
+        if value:
+            out.append(value)
     return tuple(out)
 
 
 def _resolve_dom_list(policy_cfg: dict[str, Any]) -> tuple[int, ...]:
+    """Определить список дней месяца для next_run."""
     raw = (
         policy_cfg.get("schedule_days_of_month")
         or policy_cfg.get("next_run_days_of_month")
@@ -106,12 +106,9 @@ def _resolve_dom_list(policy_cfg: dict[str, Any]) -> tuple[int, ...]:
     return tuple(out or [1, 10, 20])
 
 
-
-
-# ----------------------------- crawl helpers ------------------------------
-
 def _build_offers(filtered_index: list[dict[str, Any]]) -> list[Any]:
-    out_offers: List[Any] = []
+    """Догрузить product pages и собрать raw offers."""
+    out_offers: list[Any] = []
     seen_oids: set[str] = set()
     deadline = datetime.utcnow() + timedelta(minutes=MAX_CRAWL_MINUTES)
 
@@ -133,45 +130,8 @@ def _build_offers(filtered_index: list[dict[str, Any]]) -> list[Any]:
     return out_offers
 
 
-def print_build_summary(
-    *,
-    version: str,
-    before: int,
-    out_offers: list[Any],
-    filter_report: dict[str, Any],
-    qg: dict[str, Any],
-    out_file: str,
-    raw_out_file: str,
-) -> None:
-    after = len(out_offers)
-    in_true = sum(1 for offer in out_offers if getattr(offer, "available", False))
-    in_false = after - in_true
-
-    print("=" * 72)
-    print("[CopyLine] build summary")
-    print("=" * 72)
-    print(f"version: {version}")
-    print(f"before: {before}")
-    print(f"after:  {after}")
-    print(f"raw_out_file: {raw_out_file}")
-    print(f"out_file: {out_file}")
-    print("-" * 72)
-    print("filter_report:")
-    for key, value in filter_report.items():
-        print(f"  {key}: {value}")
-    print("-" * 72)
-    print(f"quality_gate_ok:   {qg.get('ok')}")
-    print(f"quality_gate_report: {qg.get('report_path') or qg.get('report_file')}")
-    print(f"availability_true:  {in_true}")
-    print(f"availability_false: {in_false}")
-    print("=" * 72)
-
-
-
-
-# -------------------------------- entrypoint ------------------------------
-
 def main() -> int:
+    """Запустить сборку поставщика CopyLine."""
     cfg_dir = Path(os.getenv("COPYLINE_CFG_DIR", CFG_DIR_DEFAULT))
     filter_cfg, policy_cfg = _load_supplier_config(cfg_dir)
 
@@ -182,8 +142,7 @@ def main() -> int:
     output_encoding = os.getenv("OUTPUT_ENCODING", OUTPUT_ENCODING_DEFAULT)
 
     hour = _safe_int(
-        policy_cfg.get("schedule_hour_almaty")
-        or policy_cfg.get("next_run_hour_local"),
+        policy_cfg.get("schedule_hour_almaty") or policy_cfg.get("next_run_hour_local"),
         4,
     )
     dom = _resolve_dom_list(policy_cfg)
@@ -193,12 +152,10 @@ def main() -> int:
 
     index = fetch_product_index()
     before = len(index)
-
     filtered_index, filter_report = filter_product_index(
         index,
         include_prefixes=filter_cfg.get("include_prefixes") or [],
     )
-
     out_offers = _build_offers(filtered_index)
 
     write_cs_feed_raw(
@@ -253,7 +210,6 @@ def main() -> int:
         out_file=out_file,
         raw_out_file=raw_out_file,
     )
-
     if not qg.get("ok", True):
         return 1
     return 0
