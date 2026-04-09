@@ -12,6 +12,7 @@ CS Pricing — общий расчёт цены.
 
 from __future__ import annotations
 
+
 CS_PRICE_TIERS = [
     (101, 10_000, 3_000),
     (10_001, 25_000, 4_000),
@@ -29,21 +30,29 @@ CS_PRICE_TIERS = [
 ]
 
 
+# -----------------------------
+# Внутренние helper'ы
+# -----------------------------
+
 def _safe_price_int(v) -> int | None:
     if v is None:
         return None
     try:
         if isinstance(v, (int, float)):
             return int(v)
-        s = str(v).strip()
-        if not s:
+        text = str(v).strip()
+        if not text:
             return None
-        s = s.replace(" ", "").replace(" ", "")
-        s = s.split(".")[0]
-        return int(s)
+        text = text.replace(" ", "").replace(" ", "")
+        text = text.split(".")[0]
+        return int(text)
     except Exception:
         return None
 
+
+# -----------------------------
+# Public API
+# -----------------------------
 
 def compute_price(price_in: int | None) -> int:
     p = _safe_price_int(price_in)
