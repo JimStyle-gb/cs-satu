@@ -2,17 +2,17 @@
 """
 Path: scripts/suppliers/akcent/models.py
 
-AkCent supplier layer — внутренние модели.
+AkCent Models — carrier-модели supplier-layer.
 
-Задача файла:
-- держать компактные dataclass-модели supplier-layer;
-- не тащить business-логику сюда;
-- дать единый типовой контракт для source / filtering / builder / diagnostics.
+Что делает:
+- держит компактные dataclass-модели поставщика;
+- задаёт типовой контракт между source, filtering, builder и diagnostics;
+- изолирует структуры данных от логики обработки.
 
-Важно:
-- models.py не должен знать про core-эвристики;
-- models.py не должен тянуть supplier-specific regex;
-- здесь живут только структуры данных.
+Что не делает:
+- не содержит business-логики;
+- не знает supplier-specific regex и cleanup-правил;
+- не дублирует core-эвристики.
 """
 
 from __future__ import annotations
@@ -20,24 +20,16 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from typing import Any
 
-
-# -----------------------------
-# Source / params carriers
-# -----------------------------
-
+# Родной Param поставщика с указанием источника.
 @dataclass(slots=True)
 class ParamItem:
-    """Родной param поставщика с указанием источника."""
-
     name: str
     value: str
     source: str = "xml"
 
-
+# Честный source-object без нормализации бизнес-полей.
 @dataclass(slots=True)
 class SourceOffer:
-    """Честный source-object без нормализации бизнес-полей."""
-
     raw_id: str
     offer_id: str = ""
     article: str = ""
@@ -59,15 +51,9 @@ class SourceOffer:
     raw_params: list[tuple[str, str]] = field(default_factory=list)
     offer_el: Any | None = None
 
-
-# -----------------------------
-# Normalized / builder carriers
-# -----------------------------
-
+# Нормализованная базовая часть supplier-offer до сборки OfferOut.
 @dataclass(slots=True)
 class NormalizedOfferBasics:
-    """Нормализованная базовая часть supplier-offer до сборки OfferOut."""
-
     oid: str
     article: str = ""
     name: str = ""
@@ -80,20 +66,16 @@ class NormalizedOfferBasics:
     rrp_price_text: str = ""
     source_price_text: str = ""
 
-
+# Небольшой carrier для supplier-side результата params pipeline.
 @dataclass(slots=True)
 class ParamBuildResult:
-    """Небольшой carrier для supplier-side результата params pipeline."""
-
     kind: str = ""
     params: list[tuple[str, str]] = field(default_factory=list)
     extra_info: list[str] = field(default_factory=list)
 
-
+# Сводная статистика supplier-layer.
 @dataclass(slots=True)
 class BuildStats:
-    """Сводная статистика supplier-layer."""
-
     before: int = 0
     after: int = 0
     filtered_out: int = 0
@@ -102,11 +84,9 @@ class BuildStats:
     extra_info_items: int = 0
     watch_hits: int = 0
 
-
+# Маленький container под watched-offer сообщения.
 @dataclass(slots=True)
 class WatchMessage:
-    """Маленький container под watched-offer сообщения."""
-
     oid: str = ""
     name: str = ""
     kind: str = ""
