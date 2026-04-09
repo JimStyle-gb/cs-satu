@@ -1,4 +1,19 @@
-"""Typed payload contracts for CopyLine supplier-layer."""
+# -*- coding: utf-8 -*-
+"""
+Path: scripts/suppliers/copyline/models.py
+
+CopyLine Models — типовые carrier-контракты supplier-layer.
+
+Что делает:
+- держит TypedDict-контракты для index/page/filter payload;
+- фиксирует границы между source, filtering, builder и diagnostics;
+- выносит структуры данных из business-логики.
+
+Что не делает:
+- не содержит regex и parsing-логики;
+- не нормализует supplier-поля;
+- не подменяет builder и quality gate.
+"""
 
 from __future__ import annotations
 
@@ -6,7 +21,7 @@ from typing import TypedDict
 
 
 class ProductIndexItem(TypedDict, total=False):
-    """Короткая карточка товара из списка поставщика."""
+    """Короткая карточка товара из supplier-index."""
     sku: str
     url: str
     title: str
