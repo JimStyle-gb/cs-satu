@@ -1,15 +1,14 @@
 # Path: .github/workflows/build_akcent.yml
 #
-# Build_AkCent — workflow сборки.
+# Build_AkCent — workflow сборки AkCent.
 #
 # Что делает:
-# - запускает pipeline сборки и публикации для поставщика;
-# - сохраняет артефакты и итоговые feed-файлы;
+# - запускает supplier build pipeline и публикует артефакты;
+# - держит только CI/CD orchestration без supplier parsing logic.
 #
 # Что не делает:
-# - не хранит supplier parsing-логику;
+# - не хранит supplier business-логику;
 # - не подменяет scripts/build_*.py.
-
 name: Build_AkCent
 
 on:
