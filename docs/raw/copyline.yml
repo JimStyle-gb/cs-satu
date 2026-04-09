@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<yml_catalog date="2026-04-08 20:53:42">
+<yml_catalog date="2026-04-09 11:17:43">
 <shop><offers>
 <!--FEED_META
 Поставщик                                  | CopyLine
 URL поставщика                             | https://copyline.kz/goods.html
-Время сборки (Алматы)                      | 2026-04-08 20:53:42
+Время сборки (Алматы)                      | 2026-04-09 11:17:43
 Ближайшая сборка (Алматы)                  | 2026-04-10 04:00:00
 Сколько товаров у поставщика до фильтра    | 2707
 Сколько товаров у поставщика после фильтра | 1220
@@ -2239,7 +2239,7 @@ PE
 <offer id="CL100426" available="true">
 <categoryId></categoryId>
 <vendorCode>CL100426</vendorCode>
-<name>Drum Unit Panasonic KX-FAD473A7 (совместимый)</name>
+<name>Drum Unit для Panasonic KX-FAD473A7 (совместимый)</name>
 <price>21830</price>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_panasonic-drum-kx-fad473a7.jpg</picture>
 <vendor>Panasonic</vendor>
@@ -4274,7 +4274,7 @@ LBP-3010 / LBP-3100 / LBP-3250 / LBP-6000 / LBP-6020.
 <offer id="CL101154" available="true">
 <categoryId></categoryId>
 <vendorCode>CL101154</vendorCode>
-<name>Drum Unit Panasonic KX-FA412 Europrint (совместимый)</name>
+<name>Drum Unit для Panasonic KX-FA412 Europrint (совместимый)</name>
 <price>12040</price>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_kx-fa412-europrint.jpg</picture>
 <vendor>Panasonic</vendor>
@@ -4546,7 +4546,7 @@ LBP-3010 / LBP-3100 / LBP-3250 / LBP-6000 / LBP-6020.
 <offer id="CL101244" available="true">
 <categoryId></categoryId>
 <vendorCode>CL101244</vendorCode>
-<name>Drum Unit Panasonic KX-FA78 (совместимый)</name>
+<name>Drum Unit для Panasonic KX-FA78 (совместимый)</name>
 <price>13895</price>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_Panasonic-KX-FAD78A.jpg</picture>
 <vendor>Panasonic</vendor>
@@ -4564,7 +4564,7 @@ LBP-3010 / LBP-3100 / LBP-3250 / LBP-6000 / LBP-6020.
 <offer id="CL101246" available="true">
 <categoryId></categoryId>
 <vendorCode>CL101246</vendorCode>
-<name>Drum Unit Panasonic KX-FA86 (совместимый)</name>
+<name>Drum Unit для Panasonic KX-FA86 (совместимый)</name>
 <price>15815</price>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_Panasonic-KX-FAD86A.jpg</picture>
 <vendor>Panasonic</vendor>
@@ -4582,7 +4582,7 @@ LBP-3010 / LBP-3100 / LBP-3250 / LBP-6000 / LBP-6020.
 <offer id="CL101247" available="true">
 <categoryId></categoryId>
 <vendorCode>CL101247</vendorCode>
-<name>Drum Unit Panasonic KX-FA89 (совместимый)</name>
+<name>Drum Unit для Panasonic KX-FA89 (совместимый)</name>
 <price>15185</price>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_kx_fa89_.jpg</picture>
 <vendor>Panasonic</vendor>
@@ -4600,7 +4600,7 @@ LBP-3010 / LBP-3100 / LBP-3250 / LBP-6000 / LBP-6020.
 <offer id="CL101248" available="true">
 <categoryId></categoryId>
 <vendorCode>CL101248</vendorCode>
-<name>Drum Unit Panasonic KX-FAD93A (совместимый)</name>
+<name>Drum Unit для Panasonic KX-FAD93A (совместимый)</name>
 <price>13675</price>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_Panasonic-KX-FAD93A.jpg</picture>
 <vendor>Panasonic</vendor>
@@ -4618,7 +4618,7 @@ LBP-3010 / LBP-3100 / LBP-3250 / LBP-6000 / LBP-6020.
 <offer id="CL101249" available="true">
 <categoryId></categoryId>
 <vendorCode>CL101249</vendorCode>
-<name>Drum Unit Panasonic KX-FA95 (совместимый)</name>
+<name>Drum Unit для Panasonic KX-FA95 (совместимый)</name>
 <price>14920</price>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_kx-fad95.jpg</picture>
 <vendor>Panasonic</vendor>
@@ -7253,7 +7253,7 @@ Enterprise 700 M712, M725.
 <offer id="CL102335" available="true">
 <categoryId></categoryId>
 <vendorCode>CL102335</vendorCode>
-<name>Drum Unit Kyocera DK-130 для FS-1100/1300 (совместимый)</name>
+<name>Drum Unit для Kyocera DK-130 для FS-1100/1300 (совместимый)</name>
 <price>87395</price>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_DK130.jpg</picture>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_Kyocera_DK-130.jpg</picture>
@@ -10891,7 +10891,7 @@ Canon i-SENSYS LBP6000, LBP6020, LBP6020B, LBP6030, LBP6030B, LBP6030w, MF3010, 
 <offer id="CL103179" available="true">
 <categoryId></categoryId>
 <vendorCode>CL103179</vendorCode>
-<name>Drum Unit Lexmark MS310/410/510/610 (50F0Z00) (совместимый)</name>
+<name>Drum Unit для Lexmark MS310/410/510/610 (50F0Z00) (совместимый)</name>
 <price>15295</price>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_50F0Z00.jpg</picture>
 <vendor>Lexmark</vendor>
@@ -11841,7 +11841,7 @@ LBP-3010 / LBP-3100 / LBP-3250 / LBP-6000 / LBP-6020.
 <offer id="CL103544" available="true">
 <categoryId></categoryId>
 <vendorCode>CL103544</vendorCode>
-<name>Девелопер Xerox DC 240/250 Голубой 440гр MagneTone (совместимый)</name>
+<name>Девелопер для Xerox DC 240/250 Голубой 440гр MagneTone (совместимый)</name>
 <price>15755</price>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_dev-xe-dc-240-C-440g.jpg</picture>
 <vendor>Xerox</vendor>
@@ -11860,7 +11860,7 @@ LBP-3010 / LBP-3100 / LBP-3250 / LBP-6000 / LBP-6020.
 <offer id="CL103546" available="true">
 <categoryId></categoryId>
 <vendorCode>CL103546</vendorCode>
-<name>Девелопер Xerox DC 240/250 Желтый 440гр MagneTone (совместимый)</name>
+<name>Девелопер для Xerox DC 240/250 Желтый 440гр MagneTone (совместимый)</name>
 <price>15755</price>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_dev-xe-dc-240-Y-440g.jpg</picture>
 <vendor>Xerox</vendor>
@@ -11879,7 +11879,7 @@ LBP-3010 / LBP-3100 / LBP-3250 / LBP-6000 / LBP-6020.
 <offer id="CL103551" available="true">
 <categoryId></categoryId>
 <vendorCode>CL103551</vendorCode>
-<name>Девелопер Xerox WC 7120 Чёрный 220гр MagneTone (совместимый)</name>
+<name>Девелопер для Xerox WC 7120 Чёрный 220гр MagneTone (совместимый)</name>
 <price>8405</price>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_dev-xe-wc-7120-BK-220g.jpg</picture>
 <vendor>Xerox</vendor>
@@ -11898,7 +11898,7 @@ LBP-3010 / LBP-3100 / LBP-3250 / LBP-6000 / LBP-6020.
 <offer id="CL103552" available="true">
 <categoryId></categoryId>
 <vendorCode>CL103552</vendorCode>
-<name>Девелопер Xerox WC 7120 Голубой 220гр MagneTone (совместимый)</name>
+<name>Девелопер для Xerox WC 7120 Голубой 220гр MagneTone (совместимый)</name>
 <price>8405</price>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_dev-xe-wc-7120-C-220g.jpg</picture>
 <vendor>Xerox</vendor>
@@ -11917,7 +11917,7 @@ LBP-3010 / LBP-3100 / LBP-3250 / LBP-6000 / LBP-6020.
 <offer id="CL103553" available="true">
 <categoryId></categoryId>
 <vendorCode>CL103553</vendorCode>
-<name>Девелопер Xerox WC 7120 Пурпурный 220гр MagneTone (совместимый)</name>
+<name>Девелопер для Xerox WC 7120 Пурпурный 220гр MagneTone (совместимый)</name>
 <price>8405</price>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_dev-xe-wc-7120-M-220g.jpg</picture>
 <vendor>Xerox</vendor>
@@ -11936,7 +11936,7 @@ LBP-3010 / LBP-3100 / LBP-3250 / LBP-6000 / LBP-6020.
 <offer id="CL103554" available="true">
 <categoryId></categoryId>
 <vendorCode>CL103554</vendorCode>
-<name>Девелопер Xerox WC 7120 Желтый 220гр MagneTone (совместимый)</name>
+<name>Девелопер для Xerox WC 7120 Желтый 220гр MagneTone (совместимый)</name>
 <price>8405</price>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_dev-xe-wc-7120-Y-220g.jpg</picture>
 <vendor>Xerox</vendor>
@@ -11955,7 +11955,7 @@ LBP-3010 / LBP-3100 / LBP-3250 / LBP-6000 / LBP-6020.
 <offer id="CL103563" available="true">
 <categoryId></categoryId>
 <vendorCode>CL103563</vendorCode>
-<name>Девелопер Xerox WC 7425 Желтый 220гр MagneTone (совместимый)</name>
+<name>Девелопер для Xerox WC 7425 Желтый 220гр MagneTone (совместимый)</name>
 <price>8405</price>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_dev-xe-wc-7425-Y-220g.jpg</picture>
 <vendor>Xerox</vendor>
@@ -12600,7 +12600,7 @@ LBP-3010 / LBP-3100 / LBP-3250 / LBP-6000 / LBP-6020.
 <offer id="CL103795" available="true">
 <categoryId></categoryId>
 <vendorCode>CL103795</vendorCode>
-<name>Drum Unit Ricoh SP4500E (совместимый)</name>
+<name>Drum Unit для Ricoh SP4500E (совместимый)</name>
 <price>21010</price>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_Drum-Unit-Ricoh-SP4500E.jpg</picture>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_Drum-Unit-Ricoh-SP-4500E.jpg</picture>
@@ -12619,7 +12619,7 @@ LBP-3010 / LBP-3100 / LBP-3250 / LBP-6000 / LBP-6020.
 <offer id="CL103824" available="true">
 <categoryId></categoryId>
 <vendorCode>CL103824</vendorCode>
-<name>Девелопер Konica-Minolta bizhub 200/222/250/ 282/350/362 300гр (совместимый)</name>
+<name>Девелопер для Konica-Minolta bizhub 200/222/250/ 282/350/362 300гр (совместимый)</name>
 <price>9455</price>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_developer-dv310.jpg</picture>
 <vendor>Konica-Minolta</vendor>
@@ -12637,7 +12637,7 @@ LBP-3010 / LBP-3100 / LBP-3250 / LBP-6000 / LBP-6020.
 <offer id="CL103827" available="true">
 <categoryId></categoryId>
 <vendorCode>CL103827</vendorCode>
-<name>Девелопер Konica-Minolta bizhub C224/C284/C364/C454/C554 Чёрный 250гр (совместимый)</name>
+<name>Девелопер для Konica-Minolta bizhub C224/C284/C364/C454/C554 Чёрный 250гр (совместимый)</name>
 <price>15760</price>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_DV-512k.jpg</picture>
 <vendor>Konica-Minolta</vendor>
@@ -12656,7 +12656,7 @@ LBP-3010 / LBP-3100 / LBP-3250 / LBP-6000 / LBP-6020.
 <offer id="CL103828" available="true">
 <categoryId></categoryId>
 <vendorCode>CL103828</vendorCode>
-<name>Девелопер Konica-Minolta bizhub C224/C284/C364/C454/C554 Голубой 250гр (совместимый)</name>
+<name>Девелопер для Konica-Minolta bizhub C224/C284/C364/C454/C554 Голубой 250гр (совместимый)</name>
 <price>15760</price>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_DV-512c.jpg</picture>
 <vendor>Konica-Minolta</vendor>
@@ -12675,7 +12675,7 @@ LBP-3010 / LBP-3100 / LBP-3250 / LBP-6000 / LBP-6020.
 <offer id="CL103829" available="true">
 <categoryId></categoryId>
 <vendorCode>CL103829</vendorCode>
-<name>Девелопер Konica-Minolta bizhub C224/C284/C364/C454/C554 Пурпурный 250гр (совместимый)</name>
+<name>Девелопер для Konica-Minolta bizhub C224/C284/C364/C454/C554 Пурпурный 250гр (совместимый)</name>
 <price>15760</price>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_DV-512m.jpg</picture>
 <vendor>Konica-Minolta</vendor>
@@ -12694,7 +12694,7 @@ LBP-3010 / LBP-3100 / LBP-3250 / LBP-6000 / LBP-6020.
 <offer id="CL103830" available="true">
 <categoryId></categoryId>
 <vendorCode>CL103830</vendorCode>
-<name>Девелопер Konica-Minolta bizhub C224/C284/C364/C454/C554 Желтый 250гр (совместимый)</name>
+<name>Девелопер для Konica-Minolta bizhub C224/C284/C364/C454/C554 Желтый 250гр (совместимый)</name>
 <price>15760</price>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_DV-512y.jpg</picture>
 <vendor>Konica-Minolta</vendor>
@@ -12713,7 +12713,7 @@ LBP-3010 / LBP-3100 / LBP-3250 / LBP-6000 / LBP-6020.
 <offer id="CL103831" available="true">
 <categoryId></categoryId>
 <vendorCode>CL103831</vendorCode>
-<name>Девелопер Panasonic DP-1520/1820 400гр (совместимый)</name>
+<name>Девелопер для Panasonic DP-1520/1820 400гр (совместимый)</name>
 <price>6555</price>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_developer-dq-z60j.jpg</picture>
 <vendor>Panasonic</vendor>
@@ -12731,7 +12731,7 @@ LBP-3010 / LBP-3100 / LBP-3250 / LBP-6000 / LBP-6020.
 <offer id="CL103832" available="true">
 <categoryId></categoryId>
 <vendorCode>CL103832</vendorCode>
-<name>Девелопер Xerox Phaser 5500/5550 250гр (совместимый)</name>
+<name>Девелопер для Xerox Phaser 5500/5550 250гр (совместимый)</name>
 <price>5255</price>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_developer-5550.jpg</picture>
 <vendor>Xerox</vendor>
@@ -12974,7 +12974,7 @@ Enterprise M806dn, M806x+, Flow M830z.
 <offer id="CL103879" available="true">
 <categoryId></categoryId>
 <vendorCode>CL103879</vendorCode>
-<name>Девелопер Toshiba D4530 500гр (совместимый)</name>
+<name>Девелопер для Toshiba D4530 500гр (совместимый)</name>
 <price>11555</price>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_developer-Toshiba_D-4530.jpg</picture>
 <vendor>Toshiba</vendor>
@@ -14728,7 +14728,7 @@ M181fw.
 <offer id="CL104154" available="true">
 <categoryId></categoryId>
 <vendorCode>CL104154</vendorCode>
-<name>Девелопер Konica-Minolta bizhub C220/C280/C360 Желтый 250гр (совместимый)</name>
+<name>Девелопер для Konica-Minolta bizhub C220/C280/C360 Желтый 250гр (совместимый)</name>
 <price>16810</price>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_DV311y.jpg</picture>
 <vendor>Konica-Minolta</vendor>
@@ -16303,7 +16303,7 @@ LBP-3010 / LBP-3100 / LBP-3250 / LBP-6000 / LBP-6020.
 <offer id="CL104444" available="true">
 <categoryId></categoryId>
 <vendorCode>CL104444</vendorCode>
-<name>Drum Unit Ricoh SP400 (408059) (совместимый)</name>
+<name>Drum Unit для Ricoh SP400 (408059) (совместимый)</name>
 <price>20490</price>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_drum-SP400.jpg</picture>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_Drum_Unit_Ricoh_SP400.jpg</picture>
@@ -20044,7 +20044,7 @@ LBP-3010 / LBP-3100 / LBP-3250 / LBP-6000 / LBP-6020.
 <offer id="CL105054" available="true">
 <categoryId></categoryId>
 <vendorCode>CL105054</vendorCode>
-<name>Drum Unit Lexmark 52D0Z00 (100K) (оригинал)</name>
+<name>Drum Unit для Lexmark 52D0Z00 (100K) (оригинал)</name>
 <price>40670</price>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_52D0Z00.jpg</picture>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_52D0Z00_fotobaraban-lexmark.jpg</picture>
@@ -20063,7 +20063,7 @@ LBP-3010 / LBP-3100 / LBP-3250 / LBP-6000 / LBP-6020.
 <offer id="CL105055" available="true">
 <categoryId></categoryId>
 <vendorCode>CL105055</vendorCode>
-<name>Drum Unit Lexmark 50F0Z00 (оригинал)</name>
+<name>Drum Unit для Lexmark 50F0Z00 (оригинал)</name>
 <price>63105</price>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_50F0Z00-1.jpg</picture>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_50F0Z00.jpg</picture>
@@ -20663,7 +20663,7 @@ SL-C430, SL-C430W, SL-C480, SL-C480W, SL-C480FW.
 <offer id="CL105140" available="true">
 <categoryId></categoryId>
 <vendorCode>CL105140</vendorCode>
-<name>Девелопер HP M436 (CF257) foil bags 230гр (совместимый)</name>
+<name>Девелопер для HP M436 (CF257) foil bags 230гр (совместимый)</name>
 <price>6500</price>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_developer-for-Hp-M436.jpg</picture>
 <vendor>HP</vendor>
@@ -21627,7 +21627,7 @@ LBP-3010 / LBP-3100 / LBP-3250 / LBP-6000 / LBP-6020.
 <offer id="CL105281" available="true">
 <categoryId></categoryId>
 <vendorCode>CL105281</vendorCode>
-<name>Drum Unit Kyocera DK-3170 (302T993060) БУЛАТ s-Line (совместимый)</name>
+<name>Drum Unit для Kyocera DK-3170 (302T993060) БУЛАТ s-Line (совместимый)</name>
 <price>86110</price>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_DK-3170-302T993060-bulat.jpg</picture>
 <vendor>Kyocera</vendor>
@@ -23338,7 +23338,7 @@ LBP-3010 / LBP-3100 / LBP-3250 / LBP-6000 / LBP-6020.
 <offer id="CL105647" available="true">
 <categoryId></categoryId>
 <vendorCode>CL105647</vendorCode>
-<name>Drum Unit Kyocera DK-170 для FS-1035/1320 (совместимый)</name>
+<name>Drum Unit для Kyocera DK-170 для FS-1035/1320 (совместимый)</name>
 <price>10090</price>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_DK-170.jpg</picture>
 <vendor>Kyocera</vendor>
@@ -24014,7 +24014,7 @@ LBP-3010 / LBP-3100 / LBP-3250 / LBP-6000 / LBP-6020.
 <offer id="CL105722" available="true">
 <categoryId></categoryId>
 <vendorCode>CL105722</vendorCode>
-<name>Drum Unit Kyocera DK-1150 (совместимый)</name>
+<name>Drum Unit для Kyocera DK-1150 (совместимый)</name>
 <price>9980</price>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_DK-1150.jpg</picture>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_DK-1150-1.jpg</picture>
@@ -24033,7 +24033,7 @@ LBP-3010 / LBP-3100 / LBP-3250 / LBP-6000 / LBP-6020.
 <offer id="CL105723" available="true">
 <categoryId></categoryId>
 <vendorCode>CL105723</vendorCode>
-<name>Drum Unit Kyocera DK-1110 (совместимый)</name>
+<name>Drum Unit для Kyocera DK-1110 (совместимый)</name>
 <price>11470</price>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_DK-1110-1.jpg</picture>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_DK-1110-2.jpg</picture>
@@ -24816,7 +24816,7 @@ LBP-3010 / LBP-3100 / LBP-3250 / LBP-6000 / LBP-6020.
 <offer id="CL105785" available="true">
 <categoryId></categoryId>
 <vendorCode>CL105785</vendorCode>
-<name>Drum Unit PANTUM DL-420 (12K) Europrint (совместимый)</name>
+<name>Drum Unit для PANTUM DL-420 (12K) Europrint (совместимый)</name>
 <price>3190</price>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_dl-420-01.jpg</picture>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_DL-420-12K.jpg</picture>
@@ -25338,7 +25338,7 @@ LBP362DW.
 <offer id="CL105821" available="true">
 <categoryId></categoryId>
 <vendorCode>CL105821</vendorCode>
-<name>Drum Unit Катюша DR133 (30K) Europrint (совместимый)</name>
+<name>Drum Unit для Катюша DR133 (30K) Europrint (совместимый)</name>
 <price>8720</price>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_DR133_ep.jpg</picture>
 <vendor>Катюша</vendor>
@@ -25382,7 +25382,7 @@ LBP362DW.
 <offer id="CL105825" available="true">
 <categoryId></categoryId>
 <vendorCode>CL105825</vendorCode>
-<name>Drum Unit PANTUM DL-5120 (30K) Europrint (совместимый)</name>
+<name>Drum Unit для PANTUM DL-5120 (30K) Europrint (совместимый)</name>
 <price>3410</price>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_DL-5120-ep.jpg</picture>
 <picture>https://copyline.kz/components/com_jshopping/files/img_products/full_DL-5120-1.jpg</picture>
