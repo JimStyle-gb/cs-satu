@@ -2,17 +2,17 @@
 """
 Path: scripts/suppliers/alstyle/diagnostics.py
 
-AlStyle supplier layer — build diagnostics / summary.
+AlStyle Diagnostics — служебный summary-слой поставщика.
 
 Что делает:
-- печатает стабильный build summary для orchestrator;
-- форматирует filter/build report без лишнего шума;
-- держит watch-helpers вне build_alstyle.py;
-- не содержит supplier-business логики.
+- печатает стабильные watch- и build-диагностики для orchestrator;
+- формирует сообщения по watched offers и пишет watch-report;
+- выносит diagnostics-логику из build_alstyle.py.
 
-Важно:
-- файл только показывает состояние supplier-layer;
-- не меняет offers и не участвует в final rendering.
+Что не делает:
+- не фильтрует и не меняет offers;
+- не содержит supplier-specific business-логики;
+- не подменяет builder и quality gate.
 """
 
 from __future__ import annotations
@@ -21,7 +21,6 @@ from pathlib import Path
 
 from suppliers.alstyle.models import SourceOffer
 
-
 def build_watch_source_map(source_offers: list[SourceOffer], *, prefix: str, watch_ids: set[str]) -> dict[str, dict[str, str]]:
     out: dict[str, dict[str, str]] = {}
     for src in source_offers:
@@ -29,7 +28,6 @@ def build_watch_source_map(source_offers: list[SourceOffer], *, prefix: str, wat
         if oid in watch_ids:
             out[oid] = {"categoryId": src.category_id, "name": src.name}
     return out
-
 
 def make_watch_messages(*, watch_ids: set[str], watch_source: dict[str, dict[str, str]], watch_out: set[str], allowed: set[str]) -> list[str]:
     messages: list[str] = []
@@ -51,7 +49,6 @@ def make_watch_messages(*, watch_ids: set[str], watch_source: dict[str, dict[str
             f"[build_alstyle] WATCH_OK: {wid}; categoryId={info.get('categoryId', '')!r}; name={info.get('name', '')!r}"
         )
     return messages
-
 
 def write_watch_report(path_str: str, messages: list[str]) -> None:
     if not path_str:
