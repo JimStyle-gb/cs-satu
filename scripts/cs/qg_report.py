@@ -2,19 +2,16 @@
 """
 Path: scripts/cs/qg_report.py
 
-CS QG Report — единый writer quality gate отчётов.
+CS Quality Gate Report — shared report writer layer.
 
 Что делает:
-- формирует канонический текст quality gate отчёта;
-- держит единые названия секций и краткие rule-комментарии;
-- записывает итоговый report в docs/raw/*.txt.
+- пишет единый quality gate report;
+- держит канонические секции supplier QG-отчётов;
 
 Что не делает:
-- не определяет бизнес-правила quality gate;
-- не содержит supplier-specific логики;
-- не подменяет сам quality gate анализ.
+- не анализирует XML сам по себе;
+- не подменяет quality_gate.py.
 """
-
 from __future__ import annotations
 
 from pathlib import Path
