@@ -2,21 +2,29 @@
 """
 Path: scripts/cs/description.py
 
-CS Description — общий сборщик HTML для <description>.
+CS Description — общий сборщик HTML-описания.
 
-Роль файла:
+Что делает:
 - собирает единый CS description-шаблон для всех поставщиков;
-- формирует WhatsApp / Характеристики / Оплата / Доставка в одном каноне;
-- не зависит от cs.core и не содержит supplier-specific правок.
+- формирует блоки WhatsApp, Характеристики, Оплата и Доставка;
+- нормализует финальный HTML перед выводом в feed.
+
+Что не делает:
+- не содержит supplier-specific repairs;
+- не заменяет desc_clean.py и desc_extract.py поставщика;
+- не принимает решения за builder и core.
 """
 
 from __future__ import annotations
 
-import os
 import re
 from typing import Sequence
 
 from .util import fix_mixed_cyr_lat
+
+# -----------------------------
+# Константы и regex
+# -----------------------------
 
 # Константы (вынесены из core без изменения)
 CS_HR_2PX = "<hr style=\"border:none; border-top:2px solid #E7D6B7; margin:12px 0;\" />"
@@ -78,7 +86,6 @@ def _truncate_text(s: str, max_len: int, *, suffix: str = "") -> str:
         return (chunk + suffix)[:max_len]
     return chunk
 
-
 # Сборщики description/характеристик (вынесено из core, без изменения)
 
 def norm_ws(s: str) -> str:
@@ -95,7 +102,6 @@ def xml_escape_text(s: str) -> str:
         .replace(">", "&gt;")
     )
 
-
 # XML escape для атрибутов
 
 # Нормализация смешанных текстов (как в core)
@@ -108,7 +114,6 @@ def normalize_mixed_hyphen(s: str) -> str:
     t = _RE_MIXED_HYPHEN_A1_CYR.sub(r"\1 \2", t)
     t = _RE_MIXED_HYPHEN_CYR_LAT.sub(r"\1 \2", t)
     return t
-
 
 _RE_MIXED_SLASH_LAT_CYR = re.compile(r"([A-Za-z]{1,}[A-Za-z0-9]*)/([Ѐ-ӿ]{2,})")
 _RE_MIXED_HYPHEN_LAT_CYR = re.compile(r"([A-Za-z])\s*[-–—]\s*([А-Яа-яЁё])")
