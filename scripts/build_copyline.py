@@ -2,21 +2,16 @@
 """
 Path: scripts/build_copyline.py
 
-CopyLine Build — thin orchestrator поставщика в CS-template.
+CopyLine orchestrator layer.
 
 Что делает:
-- грузит supplier config: filter и policy;
-- читает supplier-index и фильтрует ассортимент;
-- догружает product pages и собирает raw offers;
-- пишет raw и final feed;
-- запускает supplier-side quality gate и печатает summary.
+- грузит supplier config и запускает supplier-layer;
+- пишет raw/final feed и запускает quality gate;
 
 Что не делает:
-- не содержит parsing-логики product pages;
-- не держит supplier-specific builder-эвристики;
-- не переносит supplier-aware правила в shared core.
+- не хранит supplier parsing/compat/normalize внутри себя;
+- не подменяет source.py / builder.py / quality_gate.py.
 """
-
 from __future__ import annotations
 
 import os
@@ -53,7 +48,6 @@ POLICY_FILE_DEFAULT = "policy.yml"
 COPYLINE_QG_BASELINE_DEFAULT = "scripts/suppliers/copyline/config/quality_gate_baseline.yml"
 COPYLINE_QG_REPORT_DEFAULT = "docs/raw/copyline_quality_gate.txt"
 
-
 def _read_yaml(path: Path) -> dict[str, Any]:
     """Безопасно прочитать YAML-файл."""
     if not path.exists():
@@ -63,13 +57,11 @@ def _read_yaml(path: Path) -> dict[str, Any]:
     except Exception:
         return {}
 
-
 def _load_supplier_config(cfg_dir: Path) -> tuple[dict[str, Any], dict[str, Any]]:
     """Загрузить filter и policy config поставщика."""
     filter_cfg = _read_yaml(cfg_dir / FILTER_FILE_DEFAULT)
     policy_cfg = _read_yaml(cfg_dir / POLICY_FILE_DEFAULT)
     return filter_cfg, policy_cfg
-
 
 def _safe_int(value: Any, default: int) -> int:
     """Безопасно привести значение к int."""
@@ -77,7 +69,6 @@ def _safe_int(value: Any, default: int) -> int:
         return int(value)
     except Exception:
         return default
-
 
 def _load_param_priority(policy_cfg: dict[str, Any]) -> tuple[str, ...]:
     """Поднять приоритет ключей param из policy."""
@@ -88,7 +79,6 @@ def _load_param_priority(policy_cfg: dict[str, Any]) -> tuple[str, ...]:
         if value:
             out.append(value)
     return tuple(out)
-
 
 def _resolve_dom_list(policy_cfg: dict[str, Any]) -> tuple[int, ...]:
     """Определить список дней месяца для next_run."""
@@ -104,7 +94,6 @@ def _resolve_dom_list(policy_cfg: dict[str, Any]) -> tuple[int, ...]:
         except Exception:
             continue
     return tuple(out or [1, 10, 20])
-
 
 def _build_offers(filtered_index: list[dict[str, Any]]) -> list[Any]:
     """Догрузить product pages и собрать raw offers."""
@@ -128,7 +117,6 @@ def _build_offers(filtered_index: list[dict[str, Any]]) -> list[Any]:
 
     out_offers.sort(key=lambda offer: offer.oid)
     return out_offers
-
 
 def main() -> int:
     """Запустить сборку поставщика CopyLine."""
@@ -213,7 +201,6 @@ def main() -> int:
     if not qg.get("ok", True):
         return 1
     return 0
-
 
 if __name__ == "__main__":
     raise SystemExit(main())
