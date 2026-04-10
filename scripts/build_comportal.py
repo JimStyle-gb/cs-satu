@@ -22,6 +22,7 @@ import yaml
 
 from cs.core import write_cs_feed, write_cs_feed_raw
 from cs.meta import next_run_at_hour, now_almaty
+from cs.qg_report import QualityGateResult, coerce_quality_gate_result, make_quality_gate_result
 from suppliers.comportal.builder import build_offers
 from suppliers.comportal.diagnostics import (
     build_watch_source_map,
@@ -35,7 +36,7 @@ from suppliers.comportal.filtering import filter_source_offers, parse_id_set
 from suppliers.comportal.quality_gate import run_quality_gate
 from suppliers.comportal.source import load_source_bundle
 
-BUILD_COMPORTAL_VERSION = "build_comportal_v7_full_qg_contract"
+BUILD_COMPORTAL_VERSION = "build_comportal_v8_qg_result_unified"
 COMPORTAL_URL_DEFAULT = "https://www.comportal.kz/auth/documents/prices/yml-catalog.php"
 COMPORTAL_OUT_DEFAULT = "docs/comportal.yml"
 COMPORTAL_RAW_OUT_DEFAULT = "docs/raw/comportal.yml"
@@ -151,22 +152,18 @@ def _resolve_watch_ids() -> set[str]:
         return set(COMPORTAL_WATCH_OIDS)
     return {item for item in (chunk.strip() for chunk in raw.replace(";", ",").split(",")) if item}
 
-def _run_quality_gate(*, raw_out_file: str, cfg_dir: Path, qg: dict[str, Any]) -> dict[str, object]:
+def _run_quality_gate(*, raw_out_file: str, cfg_dir: Path, qg: dict[str, Any]) -> QualityGateResult:
     """Запустить supplier-side quality gate или вернуть пустой успешный результат."""
     if not qg.get("enabled", True):
-        return {
-            "ok": True,
-            "critical_count": 0,
-            "cosmetic_total_count": 0,
-            "known_cosmetic_count": 0,
-            "new_cosmetic_count": 0,
-            "critical_preview": [],
-            "report_file": str(qg.get("report_file") or QUALITY_REPORT_DEFAULT),
-            "baseline_file": str(qg.get("baseline_file") or QUALITY_BASELINE_DEFAULT),
-        }
+        return make_quality_gate_result(
+            ok=True,
+            report_path=str(qg.get("report_file") or QUALITY_REPORT_DEFAULT),
+            baseline_path=str(qg.get("baseline_file") or QUALITY_BASELINE_DEFAULT),
+            summary=f"[ComPortal quality_gate] PASS | disabled | report={str(qg.get('report_file') or QUALITY_REPORT_DEFAULT)}",
+        )
 
     schema_path = cfg_dir / SCHEMA_FILE_DEFAULT
-    return run_quality_gate(
+    return coerce_quality_gate_result(run_quality_gate(
         feed_path=raw_out_file,
         schema_path=str(schema_path),
         enforce=bool(qg.get("enforce", True)),
@@ -175,6 +172,10 @@ def _run_quality_gate(*, raw_out_file: str, cfg_dir: Path, qg: dict[str, Any]) -
         max_new_cosmetic_offers=_safe_int(qg.get("max_new_cosmetic_offers"), 5),
         max_new_cosmetic_issues=_safe_int(qg.get("max_new_cosmetic_issues"), 5),
         freeze_current_as_baseline=bool(qg.get("freeze_current_as_baseline", False)),
+    ),
+        report_path=str(qg.get("report_path") or qg.get("report_file") or QUALITY_REPORT_DEFAULT),
+        baseline_path=str(qg.get("baseline_path") or qg.get("baseline_file") or QUALITY_BASELINE_DEFAULT),
+        enforce=bool(qg.get("enforce", True)),
     )
 
 # -----------------------------
