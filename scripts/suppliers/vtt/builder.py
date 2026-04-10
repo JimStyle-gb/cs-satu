@@ -2,15 +2,17 @@
 """
 Path: scripts/suppliers/vtt/builder.py
 
-VTT builder layer.
+VTT Builder — builder-слой supplier-layer.
 
 Что делает:
-- собирает clean raw offers supplier-layer;
-- не подменяет shared core final rendering;
+- собирает clean raw offers для shared core;
+- держит supplier-policy выбора stable ID / vendorCode;
+- использует compat / params / normalize / pictures для сборки raw offer.
 
 Что не делает:
-- не хранит shared final rules;
-- не подменяет shared description/keywords/writer.
+- не пишет final XML напрямую;
+- не переносит supplier-specific repair в shared core;
+- не заменяет source и quality gate слой.
 """
 from __future__ import annotations
 
