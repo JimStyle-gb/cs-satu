@@ -24,7 +24,7 @@ from typing import Any
 
 import yaml
 
-from cs.qg_report import write_quality_gate_report
+from cs.qg_report import QualityGateResult, write_quality_gate_report
 
 _WS_RE = re.compile(r"\s+")
 _PRICE_NUM_RE = re.compile(r"-?\d+")
@@ -305,7 +305,7 @@ def run_quality_gate(
     enforce: bool = True,
     freeze_current_as_baseline: bool = False,
     **_legacy_unused: object,
-) -> tuple[bool, str]:
+) -> QualityGateResult:
     issues = _detect_issues(feed_path)
     critical = [x for x in issues if x.severity == "critical"]
     cosmetic = [x for x in issues if x.severity == "cosmetic"]
@@ -349,6 +349,19 @@ def run_quality_gate(
         f"cosmetic_offers={cosmetic_offer_count} | report={report_path}"
     )
 
-    if enforce and not passed:
-        return False, summary
-    return True, summary
+    effective_ok = True if not enforce else passed
+    return QualityGateResult(
+        ok=effective_ok,
+        report_path=report_path,
+        baseline_path=baseline_path,
+        critical_count=len(critical),
+        cosmetic_count=len(cosmetic),
+        cosmetic_offer_count=cosmetic_offer_count,
+        known_cosmetic_count=len(known_cosmetic),
+        new_cosmetic_count=len(new_cosmetic),
+        enforce=bool(enforce),
+        threshold_ok=passed,
+        max_cosmetic_offers=int(max_new_cosmetic_offers),
+        max_cosmetic_issues=int(max_new_cosmetic_issues),
+        summary=summary,
+    )
