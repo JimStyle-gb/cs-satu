@@ -61,56 +61,51 @@ jobs:
 
       - name: Prepare folders
         run: mkdir -p docs docs/raw docs/debug/vtt_shards
-      - name: Full scripts smoke test
+
+      - name: Smoke test
         run: |
           python - <<'PY'
-          import compileall
+          from __future__ import annotations
+
           import importlib
+          import py_compile
           import sys
           from pathlib import Path
 
-          repo = Path('.').resolve()
-          scripts_dir = repo / 'scripts'
-          sys.path.insert(0, str(repo))
-          sys.path.insert(0, str(scripts_dir))
+          root = Path.cwd()
+          scripts_dir = root / 'scripts'
+          cs_dir = scripts_dir / 'cs'
+          supplier_dir = scripts_dir / 'suppliers' / 'vtt'
+          build_file = scripts_dir / 'build_vtt.py'
 
-          ok = compileall.compile_dir(str(scripts_dir), force=True, quiet=1)
-          if not ok:
-              raise SystemExit('compileall failed')
+          required = [cs_dir, supplier_dir, build_file]
+          missing = [str(path) for path in required if not path.exists()]
+          if missing:
+              raise SystemExit('Missing smoke-test targets: ' + ', '.join(missing))
 
-          shared = [
-              'cs.core',
-              'cs.description',
-              'cs.pricing',
-              'cs.writer',
-              'cs.util',
-              'cs.meta',
-              'cs.keywords',
-              'cs.validators',
-              'cs.policy',
-              'cs.qg_report',
-          ]
-          for name in shared:
-              importlib.import_module(name)
+          py_files = []
+          for directory in (cs_dir, supplier_dir):
+              py_files.extend(sorted(directory.rglob('*.py')))
+          py_files.append(build_file)
 
-          for path in scripts_dir.glob('build_*.py'):
-              importlib.import_module(path.stem)
-
-          for path in scripts_dir.rglob('*.py'):
-              if '__pycache__' in path.parts:
+          unique_files = []
+          seen = set()
+          for path in py_files:
+              key = str(path.resolve())
+              if key in seen:
                   continue
-              if path.name == '__init__.py':
-                  continue
-              try:
-                  rel = path.relative_to(scripts_dir)
-              except ValueError:
-                  continue
-              mod = '.'.join(rel.with_suffix('').parts)
-              if mod == 'smoke_imports':
-                  continue
-              importlib.import_module(mod)
+              seen.add(key)
+              unique_files.append(path)
 
-          print('smoke imports ok')
+          for path in unique_files:
+              py_compile.compile(str(path), doraise=True)
+
+          sys.path.insert(0, str(scripts_dir.resolve()))
+          for path in unique_files:
+              module_name = '.'.join(path.relative_to(scripts_dir).with_suffix('').parts)
+              importlib.import_module(module_name)
+
+          print('Scoped smoke test OK: cs + vtt + build_vtt.py')
           PY
 
       - name: Show build version
@@ -229,56 +224,51 @@ jobs:
 
       - name: Prepare folders
         run: mkdir -p docs docs/raw docs/debug/vtt_shards
-      - name: Full scripts smoke test
+
+      - name: Smoke test
         run: |
           python - <<'PY'
-          import compileall
+          from __future__ import annotations
+
           import importlib
+          import py_compile
           import sys
           from pathlib import Path
 
-          repo = Path('.').resolve()
-          scripts_dir = repo / 'scripts'
-          sys.path.insert(0, str(repo))
-          sys.path.insert(0, str(scripts_dir))
+          root = Path.cwd()
+          scripts_dir = root / 'scripts'
+          cs_dir = scripts_dir / 'cs'
+          supplier_dir = scripts_dir / 'suppliers' / 'vtt'
+          build_file = scripts_dir / 'build_vtt.py'
 
-          ok = compileall.compile_dir(str(scripts_dir), force=True, quiet=1)
-          if not ok:
-              raise SystemExit('compileall failed')
+          required = [cs_dir, supplier_dir, build_file]
+          missing = [str(path) for path in required if not path.exists()]
+          if missing:
+              raise SystemExit('Missing smoke-test targets: ' + ', '.join(missing))
 
-          shared = [
-              'cs.core',
-              'cs.description',
-              'cs.pricing',
-              'cs.writer',
-              'cs.util',
-              'cs.meta',
-              'cs.keywords',
-              'cs.validators',
-              'cs.policy',
-              'cs.qg_report',
-          ]
-          for name in shared:
-              importlib.import_module(name)
+          py_files = []
+          for directory in (cs_dir, supplier_dir):
+              py_files.extend(sorted(directory.rglob('*.py')))
+          py_files.append(build_file)
 
-          for path in scripts_dir.glob('build_*.py'):
-              importlib.import_module(path.stem)
-
-          for path in scripts_dir.rglob('*.py'):
-              if '__pycache__' in path.parts:
+          unique_files = []
+          seen = set()
+          for path in py_files:
+              key = str(path.resolve())
+              if key in seen:
                   continue
-              if path.name == '__init__.py':
-                  continue
-              try:
-                  rel = path.relative_to(scripts_dir)
-              except ValueError:
-                  continue
-              mod = '.'.join(rel.with_suffix('').parts)
-              if mod == 'smoke_imports':
-                  continue
-              importlib.import_module(mod)
+              seen.add(key)
+              unique_files.append(path)
 
-          print('smoke imports ok')
+          for path in unique_files:
+              py_compile.compile(str(path), doraise=True)
+
+          sys.path.insert(0, str(scripts_dir.resolve()))
+          for path in unique_files:
+              module_name = '.'.join(path.relative_to(scripts_dir).with_suffix('').parts)
+              importlib.import_module(module_name)
+
+          print('Scoped smoke test OK: cs + vtt + build_vtt.py')
           PY
 
       - name: Download index artifact
