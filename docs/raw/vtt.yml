@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<yml_catalog date="2026-04-10 08:42:45">
+<yml_catalog date="2026-04-10 18:47:35">
 <shop><offers>
 <!--FEED_META
 Поставщик                                  | VTT
 URL поставщика                             | https://b2b.vtt.ru/catalog/
-Время сборки (Алматы)                      | 2026-04-10 08:42:45
+Время сборки (Алматы)                      | 2026-04-10 18:47:35
 Ближайшая сборка (Алматы)                  | 2026-04-20 05:00:00
 Сколько товаров у поставщика до фильтра    | 3122
 Сколько товаров у поставщика после фильтра | 3117
@@ -15802,7 +15802,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <categoryId></categoryId>
 <vendorCode>VT2K093110</vendorCode>
 <name>302K093110/WT-895 Бункер отработанного тонера Kyocera FS-C8020/C8025/C8520/C8525 (оригинал)</name>
-<price>100</price>
+<price>9900</price>
 <picture>https://placehold.co/800x800/png?text=No+Photo</picture>
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
@@ -15812,7 +15812,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
 <param name="Партномер">302K093110</param>
-<param name="Коды расходников">WT-895</param>
+<param name="Коды расходников">2K093110, WT-895</param>
 <param name="Оригинальность">Оригинал</param>
 </offer>
 
@@ -15874,7 +15874,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <categoryId></categoryId>
 <vendorCode>VT2LC93014</vendorCode>
 <name>2LC93014/DK-8505 Драм-юнит Kyocera TASKalfa 3050ci/3550ci/4550ci/5550ci (оригинал)</name>
-<price>100</price>
+<price>261900</price>
 <picture>https://placehold.co/800x800/png?text=No+Photo</picture>
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
@@ -15892,7 +15892,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <categoryId></categoryId>
 <vendorCode>VT2LH93034</vendorCode>
 <name>2LH93034/DV-6305 Блок проявки Kyocera TASKalfa-3500i/4500i/5500i (оригинал)</name>
-<price>184900</price>
+<price>177900</price>
 <picture>https://placehold.co/800x800/png?text=No+Photo</picture>
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
@@ -15947,7 +15947,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <categoryId></categoryId>
 <vendorCode>VT2MY93033</vendorCode>
 <name>302MY93033/DV-896M Блок проявки Kyocera FS-C8020MFP/C8025MFP (Пурпурный) (оригинал)</name>
-<price>100</price>
+<price>127900</price>
 <picture>https://b2b.vtt.ru/images/2MY93033.jpg</picture>
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
@@ -15957,7 +15957,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
 <param name="Партномер">302MY93033</param>
-<param name="Коды расходников">302K093035, 302MY93031, 302MY93032, 302MY93034, DV-895M, DV-896M</param>
+<param name="Коды расходников">2MY93033, 302K093035, 302MY93031, 302MY93032, 302MY93034, DV-895M, DV-896M</param>
 <param name="Цвет">Пурпурный</param>
 <param name="Оригинальность">Оригинал</param>
 </offer>
@@ -15985,7 +15985,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <categoryId></categoryId>
 <vendorCode>VT2MY93052</vendorCode>
 <name>302MY93052/DV-896K Блок проявки Kyocera FS-C8020MFP/C8025MFP (Чёрный) (оригинал)</name>
-<price>100</price>
+<price>149900</price>
 <picture>https://b2b.vtt.ru/images/2MY93052.jpg</picture>
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
@@ -15996,7 +15996,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <param name="Для бренда">Kyocera</param>
 <param name="Партномер">302MY93052</param>
 <param name="Ресурс">896K</param>
-<param name="Коды расходников">302K093050, 302K093051, 302K093052, 302K093053, 302K093054, 302K093055, 302MY93053, 302MY93054, DV-895K, DV-896K</param>
+<param name="Коды расходников">2MY93052, 302K093050, 302K093051, 302K093052, 302K093053, 302K093054, 302K093055, 302MY93053, 302MY93054, DV-895K, DV-896K</param>
 <param name="Цвет">Чёрный</param>
 <param name="Оригинальность">Оригинал</param>
 </offer>
@@ -16005,7 +16005,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <categoryId></categoryId>
 <vendorCode>VT2NG93010</vendorCode>
 <name>302NG93010/DV-4105 Блок проявки Kyocera TASKalfa 1800/2200/1801/2201 (оригинал)</name>
-<price>100</price>
+<price>74900</price>
 <picture>https://placehold.co/800x800/png?text=No+Photo</picture>
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
@@ -16015,7 +16015,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
 <param name="Партномер">302NG93010</param>
-<param name="Коды расходников">DV-4105</param>
+<param name="Коды расходников">2NG93010, DV-4105</param>
 <param name="Оригинальность">Оригинал</param>
 </offer>
 
@@ -17094,7 +17094,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <categoryId></categoryId>
 <vendorCode>VT302N993033</vendorCode>
 <name>302N993033/DK-6306 Драм-юнит Kyocera TASKalfa 3501i/4501i/5501i (оригинал)</name>
-<price>218900</price>
+<price>219900</price>
 <picture>https://b2b.vtt.ru/images/302N993033.jpg</picture>
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
@@ -17111,7 +17111,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <categoryId></categoryId>
 <vendorCode>VT302ND93070</vendorCode>
 <name>302ND93070/DK-8550 Драм-юнит Kyocera TASKalfa-4052ci/5052ci/6052ci/3552ci/4002i (оригинал)</name>
-<price>100</price>
+<price>234900</price>
 <picture>https://b2b.vtt.ru/images/302ND93070.jpg</picture>
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
@@ -17295,7 +17295,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <categoryId></categoryId>
 <vendorCode>VT302P193010</vendorCode>
 <name>302P193010/302P193011 Драм юнит DK-6115 Kyocera M4125idn/M4132idn (оригинал)</name>
-<price>139900</price>
+<price>140900</price>
 <picture>https://b2b.vtt.ru/images/302P193010.jpg</picture>
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
@@ -17402,7 +17402,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <categoryId></categoryId>
 <vendorCode>VT302P393060</vendorCode>
 <name>302P393060/DK-8115 Драм-юнит Kyocera M8124cidn/M8130cidn (оригинал)</name>
-<price>125900</price>
+<price>123900</price>
 <picture>https://placehold.co/800x800/png?text=No+Photo</picture>
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
@@ -17490,7 +17490,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <categoryId></categoryId>
 <vendorCode>VT302T693030</vendorCode>
 <name>302T693031/302T693030/DK-3190 Драм-юнит Kyocera P3050dn/P3055dn/P3060dn/P3150dn/P3155dn (оригинал)</name>
-<price>122900</price>
+<price>118900</price>
 <picture>https://placehold.co/800x800/png?text=No+Photo</picture>
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
@@ -17508,7 +17508,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <categoryId></categoryId>
 <vendorCode>VT302T993061</vendorCode>
 <name>302T993061/DK-3170 Драм-юнит Kyocera P3045dn (оригинал)</name>
-<price>100</price>
+<price>117900</price>
 <picture>https://b2b.vtt.ru/images/302T993061.jpg</picture>
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
@@ -20372,8 +20372,8 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <offer id="VT41006032" available="true">
 <categoryId></categoryId>
 <vendorCode>VT41006032</vendorCode>
-<name>DV-1130/302MH93020 Блок проявки Kyocera FS-1030MFP/1130MFP , 41006032 (оригинал)</name>
-<price>100</price>
+<name>DV-1130/302MH93020 Блок проявки Kyocera FS-1030MFP/1130MFP (оригинал)</name>
+<price>74900</price>
 <picture>https://b2b.vtt.ru/images/41006032.jpg</picture>
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
@@ -21113,8 +21113,8 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <offer id="VT41006035" available="true">
 <categoryId></categoryId>
 <vendorCode>VT41006035</vendorCode>
-<name>DK-3100/302MS93020 Драм-юнит Kyocera FS-2100D/2100DN/ECOSYS M3040dn/M3540dn , 41006035 (оригинал)</name>
-<price>100</price>
+<name>DK-3100/302MS93020 Драм-юнит Kyocera FS-2100D/2100DN/ECOSYS M3040dn/M3540dn (оригинал)</name>
+<price>100900</price>
 <picture>https://placehold.co/800x800/png?text=No+Photo</picture>
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
@@ -21263,7 +21263,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <categoryId></categoryId>
 <vendorCode>VT4100695</vendorCode>
 <name>302M293031/302M293030 Бункер отработанного тонера WT-1110 Kyocera FS1020/1025/1120 (оригинал)</name>
-<price>9900</price>
+<price>8900</price>
 <picture>https://placehold.co/800x800/png?text=No+Photo</picture>
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
@@ -31013,8 +31013,8 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <offer id="VT989606019" available="true">
 <categoryId></categoryId>
 <vendorCode>VT989606019</vendorCode>
-<name>DK-170/302LZ93060/302LZ93061 Драм-юнит Kyocera FS-1320D/1370DN , 989606019 (оригинал)</name>
-<price>100</price>
+<name>DK-170/302LZ93060/302LZ93061 Драм-юнит Kyocera FS-1320D/1370DN (оригинал)</name>
+<price>66900</price>
 <picture>https://placehold.co/800x800/png?text=No+Photo</picture>
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
@@ -31085,8 +31085,8 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <offer id="VT989606296" available="true">
 <categoryId></categoryId>
 <vendorCode>VT989606296</vendorCode>
-<name>DK-1110 Драм-юнит Kyocera FS-1040/1060DN/1020MFP/1120MFP/1025MFP/1125MFP , 989606296 (оригинал)</name>
-<price>100</price>
+<name>DK-1110 Драм-юнит Kyocera FS-1040/1060DN/1020MFP/1120MFP/1025MFP/1125MFP (оригинал)</name>
+<price>36900</price>
 <picture>https://placehold.co/800x800/png?text=No+Photo</picture>
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
@@ -44488,7 +44488,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <categoryId></categoryId>
 <vendorCode>VTC13T03P14A</vendorCode>
 <name>Контейнер с чернилами Epson для M1100/1120/2140 (оригинал)</name>
-<price>17900</price>
+<price>100</price>
 <picture>https://b2b.vtt.ru/images/C13T03P14A.jpg</picture>
 <vendor>Epson</vendor>
 <currencyId>KZT</currencyId>
@@ -44545,7 +44545,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <categoryId></categoryId>
 <vendorCode>VTC13T03V34A</vendorCode>
 <name>Чернила Epson EcoTank L4150/4160/L6160/L6170/L6190, 70мл малиновые (оригинал)</name>
-<price>12900</price>
+<price>100</price>
 <picture>https://placehold.co/800x800/png?text=No+Photo</picture>
 <vendor>Epson</vendor>
 <currencyId>KZT</currencyId>
@@ -51796,7 +51796,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <categoryId></categoryId>
 <vendorCode>VTCET471045P</vendorCode>
 <name>Драм-юнит DR-316K (c двухслойным ракелем) (CET) Konica Minolta BizHub C250i/C300i (совместимый)</name>
-<price>77900</price>
+<price>73900</price>
 <picture>https://b2b.vtt.ru/images/CET471045P.jpg</picture>
 <vendor>Konica Minolta</vendor>
 <currencyId>KZT</currencyId>
@@ -56906,7 +56906,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <categoryId></categoryId>
 <vendorCode>VTDK-5230</vendorCode>
 <name>DK-5230 Узел фотобарабана (Тех. упаковка) Kyocera P5021cdn/P5026cdn/M5521cdn/M5526cdw (совместимый)</name>
-<price>67900</price>
+<price>62900</price>
 <picture>https://placehold.co/800x800/png?text=No+Photo</picture>
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
@@ -56925,7 +56925,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <categoryId></categoryId>
 <vendorCode>VTDK-5231</vendorCode>
 <name>DK-5231 Узел фотобарабана (Тех. упаковка) Kyocera P5021cdn/P5026cdn/M5521cdn/M5526cdw (совместимый)</name>
-<price>82900</price>
+<price>68900</price>
 <picture>https://placehold.co/800x800/png?text=No+Photo</picture>
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
@@ -57212,7 +57212,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <categoryId></categoryId>
 <vendorCode>VTDV-3100</vendorCode>
 <name>DV-3100 Блок проявки (Тех.упаковка) Kyocera FS-2100/4100/4200/4300DN (совместимый)</name>
-<price>41900</price>
+<price>45900</price>
 <picture>https://placehold.co/800x800/png?text=No+Photo</picture>
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
@@ -57372,7 +57372,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <categoryId></categoryId>
 <vendorCode>VTDV-5230K</vendorCode>
 <name>DV-5230K Узел проявки (Тех. упаковка) Kyocera P5021cdn/P5026cdn</name>
-<price>64900</price>
+<price>53900</price>
 <picture>https://placehold.co/800x800/png?text=No+Photo</picture>
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
@@ -57390,19 +57390,19 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <offer id="VTDV-5230K-ORIG" available="true">
 <categoryId></categoryId>
 <vendorCode>VTDV-5230K-ORIG</vendorCode>
-<name>DV-5230K Блок проявки Kyocera P5021cdn/P5021cdw/P5026cdn/P5026cdw/M5521cdn/M5526cdn чёрный , DV-5230K-ORIG (оригинал)</name>
-<price>100</price>
+<name>DV-5230K Блок проявки Kyocera P5021cdn/P5021cdw/P5026cdn/P5026cdw/M5521cdn/M5526cdn (оригинал)</name>
+<price>75900</price>
 <picture>https://placehold.co/800x800/png?text=No+Photo</picture>
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный блок проявки; партномер — DV-5230K/302R793030/302R793031; технология печати — Лазерная.]]></description>
+Оригинальный блок проявки; партномер — DV-5230K/302R793030/302R793031; цвет — Чёрный; технология печати — Лазерная.]]></description>
 <param name="Тип">Блок</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
 <param name="Партномер">DV-5230K/302R793030/302R793031</param>
 <param name="Ресурс">5230K</param>
-<param name="Коды расходников">DV-5230K, 302R793060</param>
+<param name="Коды расходников">DV-5230K-ORIG, DV-5230K, 302R793060</param>
 <param name="Цвет">Чёрный</param>
 <param name="Оригинальность">Оригинал</param>
 </offer>
