@@ -22,6 +22,7 @@ import yaml
 
 from cs.core import write_cs_feed, write_cs_feed_raw
 from cs.meta import next_run_at_hour, now_almaty
+from cs.qg_report import QualityGateResult, coerce_quality_gate_result
 
 from suppliers.alstyle.builder import build_offers
 from suppliers.alstyle.diagnostics import (
@@ -33,7 +34,7 @@ from suppliers.alstyle.filtering import filter_source_offers, parse_id_set
 from suppliers.alstyle.quality_gate import run_quality_gate
 from suppliers.alstyle.source import load_source_offers
 
-BUILD_ALSTYLE_VERSION = "build_alstyle_v110_qg_raw_target"
+BUILD_ALSTYLE_VERSION = "build_alstyle_v111_qg_result_unified"
 
 ALSTYLE_URL_DEFAULT = "https://al-style.kz/upload/catalog_export/al_style_catalog.php"
 ALSTYLE_OUT_DEFAULT = "docs/alstyle.yml"
@@ -132,11 +133,11 @@ def _resolve_quality_gate(policy_cfg: dict[str, Any]) -> dict[str, Any]:
         or _env_truthy("ALSTYLE_QUALITY_FREEZE_BASELINE"),
     }
 
-def _run_quality_gate(*, raw_out_file: str, qg: dict[str, Any]) -> None:
+def _run_quality_gate(*, raw_out_file: str, qg: dict[str, Any]) -> QualityGateResult:
     if not qg.get("enabled", True):
-        return
+        return QualityGateResult(ok=True)
 
-    ok, summary = run_quality_gate(
+    qg_result = coerce_quality_gate_result(run_quality_gate(
         feed_path=raw_out_file,
         baseline_path=str(qg.get("baseline_path") or QUALITY_BASELINE_DEFAULT),
         report_path=str(qg.get("report_path") or QUALITY_REPORT_DEFAULT),
@@ -144,10 +145,16 @@ def _run_quality_gate(*, raw_out_file: str, qg: dict[str, Any]) -> None:
         max_new_cosmetic_issues=_safe_int(qg.get("max_cosmetic_issues"), 5),
         enforce=bool(qg.get("enforce", True)),
         freeze_current_as_baseline=bool(qg.get("freeze_current_as_baseline", False)),
+    ),
+        report_path=str(qg.get("report_path") or QUALITY_REPORT_DEFAULT),
+        baseline_path=str(qg.get("baseline_path") or QUALITY_BASELINE_DEFAULT),
+        enforce=bool(qg.get("enforce", True)),
     )
-    print(summary)
-    if not ok:
+    if qg_result.summary:
+        print(qg_result.summary)
+    if not qg_result.ok:
         raise SystemExit(1)
+    return qg_result
 
 # ----------------------------- main -----------------------------
 
