@@ -572,5 +572,8 @@ def main() -> int:
         return _run_merge(cfg_dir, filter_cfg, schema_cfg, policy_cfg)
     return _run_full(cfg_dir, filter_cfg, schema_cfg, policy_cfg)
 
+
+__all__ = ["main"]
+
 if __name__ == "__main__":
     raise SystemExit(main())
