@@ -15,12 +15,9 @@ CS Core — shared final/raw orchestration layer.
 from __future__ import annotations
 
 from dataclasses import dataclass
-from datetime import datetime, timedelta
-from pathlib import Path
+from datetime import datetime
 from typing import Iterable, Sequence
-from zoneinfo import ZoneInfo
 import os
-import hashlib
 import re
 
 # Числа для парсинга float/int (вес/объём/габариты и т.п.)
@@ -31,7 +28,7 @@ from decimal import Decimal, InvalidOperation, ROUND_HALF_UP
 from .keywords import build_keywords, CS_KEYWORDS_MAX_LEN
 from . import description as cs_description
 from . import pricing as cs_pricing
-from .meta import now_almaty, next_run_at_hour, next_run_dom_at_hour as _meta_next_run_dom_at_hour
+from .meta import next_run_dom_at_hour as _meta_next_run_dom_at_hour
 from .validators import validate_cs_yml
 from .util import norm_ws, safe_int, _truncate_text
 from .writer import (
@@ -39,10 +36,6 @@ from .writer import (
     xml_escape_attr,
     bool_to_xml,
     xml_escape,
-    make_header,
-    make_footer,
-    ensure_footer_spacing,
-    make_feed_meta,
     build_cs_feed_xml,
     build_cs_feed_xml_raw,
     write_if_changed,
