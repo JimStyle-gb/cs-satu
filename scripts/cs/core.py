@@ -15,9 +15,12 @@ CS Core — shared final/raw orchestration layer.
 from __future__ import annotations
 
 from dataclasses import dataclass
-from datetime import datetime
+from datetime import datetime, timedelta
+from pathlib import Path
 from typing import Iterable, Sequence
+from zoneinfo import ZoneInfo
 import os
+import hashlib
 import re
 
 # Числа для парсинга float/int (вес/объём/габариты и т.п.)
@@ -26,9 +29,10 @@ _RE_DIM_SEP = re.compile(r"(?:[xх×*/]|\bto\b)")  # 10x20, 10×20, 10х20, 10/2
 from decimal import Decimal, InvalidOperation, ROUND_HALF_UP
 
 from .keywords import build_keywords, CS_KEYWORDS_MAX_LEN
-from . import description as cs_description
-from . import pricing as cs_pricing
-from .meta import next_run_dom_at_hour as _meta_next_run_dom_at_hour
+from .description import build_description, build_chars_block
+from .pricing import compute_price, CS_PRICE_TIERS
+from .category_map import resolve_category_id
+from .meta import now_almaty, next_run_at_hour, next_run_dom_at_hour as _meta_next_run_dom_at_hour
 from .validators import validate_cs_yml
 from .util import norm_ws, safe_int, _truncate_text
 from .writer import (
@@ -36,6 +40,10 @@ from .writer import (
     xml_escape_attr,
     bool_to_xml,
     xml_escape,
+    make_header,
+    make_footer,
+    ensure_footer_spacing,
+    make_feed_meta,
     build_cs_feed_xml,
     build_cs_feed_xml_raw,
     write_if_changed,
@@ -2921,6 +2929,7 @@ class OfferOut:
     vendor: str
     params: list[tuple[str, str]]
     native_desc: str
+    category_id: str = ""
 
     # Собирает XML offer (фиксированный порядок)
     def to_xml(
@@ -2937,7 +2946,17 @@ class OfferOut:
         # Core НЕ переносит характеристики из description в params и не enrich'ит их из desc/name.
         native_desc = strip_service_kv_lines(native_desc)
         vendor = pick_vendor(self.vendor, name_full, self.params, native_desc, public_vendor=public_vendor)
-        price_final = cs_pricing.compute_price(self.price)
+        price_final = compute_price(self.price)
+
+        # categoryId — это общая Satu-таксономия проекта, поэтому резолвится в shared-слое.
+        # Если адаптер когда-нибудь задаст category_id сам, core его уважает.
+        category_id = norm_ws(self.category_id) or resolve_category_id(
+            oid=self.oid,
+            name=name_full,
+            vendor=vendor,
+            params=self.params,
+            native_desc=native_desc,
+        )
 
         # RAW обязан отдавать уже чистые и финальные supplier params.
         # Core не чистит, не нормализует и не перестраивает параметры под поставщика.
@@ -2955,7 +2974,7 @@ class OfferOut:
         name_for_desc = name_full if (name_short != name_full) else name_short
         name_for_desc = sanitize_mixed_text(name_for_desc)
 
-        desc_cdata = cs_description.build_description(name_for_desc, native_desc, params_sorted, notes=notes)
+        desc_cdata = build_description(name_for_desc, native_desc, params_sorted, notes=notes)
         desc_cdata = sanitize_mixed_text(desc_cdata)
         keywords = build_keywords(vendor, name_short)
         keywords = _truncate_text(keywords, int(CS_KEYWORDS_MAX_LEN or CS_KEYWORDS_MAX_LEN_FALLBACK))
@@ -2985,7 +3004,7 @@ class OfferOut:
 
         out = (
             f"<offer id=\"{xml_escape_attr(self.oid)}\" available=\"{bool_to_xml(bool(avail_effective))}\">\n"
-            f"<categoryId></categoryId>\n"
+            f"<categoryId>{xml_escape_text(category_id)}</categoryId>\n"
             f"<vendorCode>{xml_escape_text(self.oid)}</vendorCode>\n"
             f"<name>{xml_escape_text(name_short)}</name>\n"
             f"<price>{int(price_final)}</price>"
@@ -3014,6 +3033,7 @@ class OfferOut:
 
         name = xml_escape_text(fix_text(norm_ws(self.name)))
         vendor = xml_escape_text(fix_text(norm_ws(self.vendor)))
+        category_id = norm_ws(self.category_id)
         pi = safe_int(self.price)
         price = int(pi) if pi is not None else 0
 
@@ -3040,7 +3060,7 @@ class OfferOut:
 
         out = (
             f"<offer id=\"{oid}\" available=\"{avail}\">\n"
-            f"<categoryId></categoryId>\n"
+            f"<categoryId>{xml_escape_text(category_id)}</categoryId>\n"
             f"<vendorCode>{xml_escape_text(self.oid)}</vendorCode>\n"
             f"<name>{name}</name>\n"
             f"<price>{price}</price>"
@@ -3054,27 +3074,8 @@ class OfferOut:
         return out
 
 # Валидирует готовый CS-фид (страховка: если что-то сломалось — падаем сборкой)
-# Явные back-compat прокси: source of truth живёт в отдельных shared-модулях.
-# Это позволяет не держать pricing/description-логику внутри core,
-# но не ломать старые импорты адаптеров.
-CS_PRICE_TIERS = cs_pricing.CS_PRICE_TIERS
-
-def compute_price(*args, **kwargs):
-    return cs_pricing.compute_price(*args, **kwargs)
-
 def _cs_build_description(*args, **kwargs):
-    return cs_description.build_description(*args, **kwargs)
+    return build_description(*args, **kwargs)
 
 def _cs_build_chars_block(*args, **kwargs):
-    return cs_description.build_chars_block(*args, **kwargs)
-
-__all__ = [
-    "OfferOut",
-    "get_public_vendor",
-    "write_cs_feed",
-    "write_cs_feed_raw",
-    "compute_price",
-    "CS_PRICE_TIERS",
-    "_cs_build_description",
-    "_cs_build_chars_block",
-]
+    return build_chars_block(*args, **kwargs)
