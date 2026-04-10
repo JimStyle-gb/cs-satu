@@ -24,15 +24,14 @@ import yaml
 
 from cs.core import get_public_vendor, write_cs_feed, write_cs_feed_raw
 from cs.meta import next_run_dom_at_hour, now_almaty
-from cs.qg_report import coerce_quality_gate_result
 
-from suppliers.copyline.builder import build_offer_from_page
+from suppliers.copyline.builder import build_offers
 from suppliers.copyline.diagnostics import print_build_summary
 from suppliers.copyline.filtering import filter_product_index
 from suppliers.copyline.quality_gate import run_quality_gate
 from suppliers.copyline.source import fetch_product_index, parse_product_page
 
-BUILD_COPYLINE_VERSION = "build_copyline_v14_qg_result_unified"
+BUILD_COPYLINE_VERSION = "build_copyline_v14_batch_builder_contract"
 
 SUPPLIER_NAME_DEFAULT = "CopyLine"
 SUPPLIER_URL_DEFAULT = os.getenv("SUPPLIER_URL", "https://copyline.kz/goods.html")
@@ -97,9 +96,8 @@ def _resolve_dom_list(policy_cfg: dict[str, Any]) -> tuple[int, ...]:
     return tuple(out or [1, 10, 20])
 
 def _build_offers(filtered_index: list[dict[str, Any]]) -> list[Any]:
-    """Догрузить product pages и собрать raw offers."""
-    out_offers: list[Any] = []
-    seen_oids: set[str] = set()
+    """Догрузить product pages и собрать raw offers через канонический batch-builder."""
+    build_rows: list[dict[str, Any]] = []
     deadline = datetime.utcnow() + timedelta(minutes=MAX_CRAWL_MINUTES)
 
     with ThreadPoolExecutor(max_workers=MAX_WORKERS) as pool:
@@ -110,14 +108,19 @@ def _build_offers(filtered_index: list[dict[str, Any]]) -> list[Any]:
             page = future.result()
             if not page:
                 continue
-            offer = build_offer_from_page(page, fallback_title=(futures[future].get("title") or ""))
-            if not offer or offer.oid in seen_oids:
-                continue
-            seen_oids.add(offer.oid)
-            out_offers.append(offer)
+            build_rows.append({
+                "page": page,
+                "fallback_title": str(futures[future].get("title") or ""),
+            })
 
-    out_offers.sort(key=lambda offer: offer.oid)
-    return out_offers
+    return build_offers(build_rows)
+
+
+def _qg_ok(qg: Any) -> bool:
+    """Поддержать dict/object QG-контракт без supplier-aware ветвления."""
+    if isinstance(qg, dict):
+        return bool(qg.get("ok", True))
+    return bool(getattr(qg, "ok", True))
 
 def main() -> int:
     """Запустить сборку поставщика CopyLine."""
@@ -173,7 +176,7 @@ def main() -> int:
     )
 
     qg_cfg = policy_cfg.get("quality_gate") or {}
-    qg = coerce_quality_gate_result(run_quality_gate(
+    qg = run_quality_gate(
         feed_path=raw_out_file,
         policy_path=str(cfg_dir / POLICY_FILE_DEFAULT),
         baseline_path=(
@@ -188,24 +191,7 @@ def main() -> int:
             or qg_cfg.get("report_path")
             or COPYLINE_QG_REPORT_DEFAULT
         ),
-    ),
-        report_path=(
-            os.getenv("COPYLINE_QG_REPORT")
-            or qg_cfg.get("report_file")
-            or qg_cfg.get("report_path")
-            or COPYLINE_QG_REPORT_DEFAULT
-        ),
-        baseline_path=(
-            os.getenv("COPYLINE_QG_BASELINE")
-            or qg_cfg.get("baseline_file")
-            or qg_cfg.get("baseline_path")
-            or COPYLINE_QG_BASELINE_DEFAULT
-        ),
-        enforce=bool((qg_cfg or {}).get("enforce", True)),
     )
-
-    if qg.summary:
-        print(qg.summary)
 
     print_build_summary(
         version=BUILD_COPYLINE_VERSION,
@@ -216,7 +202,7 @@ def main() -> int:
         out_file=out_file,
         raw_out_file=raw_out_file,
     )
-    if not qg.get("ok", True):
+    if not _qg_ok(qg):
         return 1
     return 0
 
