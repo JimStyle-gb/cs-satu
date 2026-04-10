@@ -23,7 +23,7 @@ import xml.etree.ElementTree as ET
 
 import yaml
 
-from cs.qg_report import write_quality_gate_report
+from cs.qg_report import QualityGateResult, write_quality_gate_report
 
 _COMPAT_LABEL_LEAK_RE = re.compile(
     r"(?iu)\b(?:Характеристики|Модель|Совместимые\s+модели|Технология\s+печати|Цвет(?:\s+печати)?)\b"
@@ -145,7 +145,7 @@ def run_quality_gate(
     max_new_cosmetic_issues: int = 5,
     enforce: bool = True,
     freeze_current_as_baseline: bool = False,
-) -> tuple[bool, str]:
+) -> QualityGateResult:
     """
     ВАЖНО:
     Для совместимости с build_alstyle.py сохраняем старые имена аргументов:
@@ -208,4 +208,18 @@ def run_quality_gate(
         f"cosmetic_offers={cosmetic_offer_count} | "
         f"report={report_path}"
     )
-    return effective_passed, summary
+    return QualityGateResult(
+        ok=effective_passed,
+        report_path=report_path,
+        baseline_path=baseline_path,
+        critical_count=len(critical),
+        cosmetic_count=len(cosmetic),
+        cosmetic_offer_count=cosmetic_offer_count,
+        known_cosmetic_count=len(known_cosmetic),
+        new_cosmetic_count=len(new_cosmetic),
+        enforce=bool(enforce),
+        threshold_ok=passed,
+        max_cosmetic_offers=int(max_new_cosmetic_offers),
+        max_cosmetic_issues=int(max_new_cosmetic_issues),
+        summary=summary,
+    )
