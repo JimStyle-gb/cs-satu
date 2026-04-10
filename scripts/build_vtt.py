@@ -26,6 +26,7 @@ import yaml
 
 from cs.core import OfferOut, get_public_vendor, write_cs_feed, write_cs_feed_raw
 from cs.meta import next_run_dom_at_hour, now_almaty
+from cs.qg_report import QualityGateResult, coerce_quality_gate_result, make_quality_gate_result
 from suppliers.vtt.builder import build_offer_from_raw
 from suppliers.vtt.diagnostics import print_build_summary
 from suppliers.vtt.filtering import categories_from_cfg, prefixes_from_cfg
@@ -40,7 +41,7 @@ from suppliers.vtt.source import (
     parse_product_page_from_index,
 )
 
-BUILD_VTT_VERSION = "build_vtt_v14_full_qg_contract"
+BUILD_VTT_VERSION = "build_vtt_v15_qg_result_unified"
 SUPPLIER_NAME_DEFAULT = "VTT"
 OUT_FILE_DEFAULT = "docs/vtt.yml"
 RAW_OUT_FILE_DEFAULT = "docs/raw/vtt.yml"
@@ -282,20 +283,19 @@ def _build_offers_for_index(cfg, index: list[dict[str, Any]], *, id_prefix: str)
     out_offers.sort(key=lambda o: o.oid)
     return out_offers
 
-def _run_quality_gate(*, raw_out_file: str, qg_cfg: dict[str, Any]):
+def _run_quality_gate(*, raw_out_file: str, qg_cfg: dict[str, Any]) -> QualityGateResult:
     if not bool(qg_cfg.get("enabled", True)):
-        class _QG:
-            ok = True
-            report_path = str(qg_cfg.get("report_path") or VTT_QG_REPORT_DEFAULT)
-            critical_count = 0
-            cosmetic_count = 0
-
-        return _QG()
+        return make_quality_gate_result(
+            ok=True,
+            report_path=str(qg_cfg.get("report_path") or qg_cfg.get("report_file") or VTT_QG_REPORT_DEFAULT),
+            baseline_path=str(qg_cfg.get("baseline_path") or qg_cfg.get("baseline_file") or VTT_QG_BASELINE_DEFAULT),
+            summary=f"[VTT quality_gate] PASS | disabled | report={str(qg_cfg.get('report_path') or qg_cfg.get('report_file') or VTT_QG_REPORT_DEFAULT)}",
+        )
 
     report_path = str(qg_cfg.get("report_path") or qg_cfg.get("report_file") or VTT_QG_REPORT_DEFAULT)
     baseline_path = str(qg_cfg.get("baseline_path") or qg_cfg.get("baseline_file") or VTT_QG_BASELINE_DEFAULT)
 
-    return run_quality_gate(
+    return coerce_quality_gate_result(run_quality_gate(
         feed_path=raw_out_file,
         report_path=report_path,
         baseline_path=baseline_path,
@@ -303,6 +303,10 @@ def _run_quality_gate(*, raw_out_file: str, qg_cfg: dict[str, Any]):
         max_new_cosmetic_issues=_safe_int(qg_cfg.get("max_new_cosmetic_issues"), 5),
         enforce=bool(qg_cfg.get("enforce", True)),
         freeze_current_as_baseline=bool(qg_cfg.get("freeze_current_as_baseline", False)),
+    ),
+        report_path=report_path,
+        baseline_path=baseline_path,
+        enforce=bool(qg_cfg.get("enforce", True)),
     )
 
 def _write_feeds(
