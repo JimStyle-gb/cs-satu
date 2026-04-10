@@ -26,7 +26,7 @@ try:
 except Exception:  # pragma: no cover
     yaml = None  # type: ignore
 
-from cs.qg_report import write_quality_gate_report
+from cs.qg_report import QualityGateResult, write_quality_gate_report
 
 QUALITY_BASELINE_DEFAULT = "scripts/suppliers/comportal/config/quality_gate_baseline.yml"
 QUALITY_REPORT_DEFAULT = "docs/raw/comportal_quality_gate.txt"
@@ -54,7 +54,7 @@ class QualityIssue:
 def _norm_ws(s: str) -> str:
     return _WS_RE.sub(" ", (s or "").strip())
 
-def _read_yaml(path: str | None) -> dict[str, Any]:
+def _read_yaml(path: str | None) -> QualityGateResult:
     if not path or yaml is None:
         return {}
     p = Path(path)
@@ -138,7 +138,7 @@ def _load_baseline(path: str | None) -> dict[str, set[str]]:
         out[str(rule)] = {str(x).strip() for x in (ids or []) if str(x).strip()}
     return out
 
-def _make_baseline_payload(cosmetic: list[QualityIssue]) -> dict[str, Any]:
+def _make_baseline_payload(cosmetic: list[QualityIssue]) -> QualityGateResult:
     grouped: dict[str, list[str]] = defaultdict(list)
     for issue in cosmetic:
         if issue.rule in _RULES_TREATED_AS_ALLOWED_KNOWN:
@@ -210,16 +210,28 @@ def run_quality_gate(
         max_cosmetic_issues=int(max_new_cosmetic_issues),
     )
 
-    return {
-        "ok": ok,
-        "report_file": report_path,
-        "baseline_file": baseline_path,
-        "critical_count": len(critical),
-        "cosmetic_total_count": len(cosmetic),
-        "known_cosmetic_count": len(known_cosmetic),
-        "new_cosmetic_count": len(new_cosmetic),
-        "critical_preview": [
+    summary = (
+        f"[ComPortal quality_gate] {'PASS' if ok else 'FAIL'} | "
+        f"critical={len(critical)} | cosmetic={len(cosmetic)} | "
+        f"report={report_path}"
+    )
+
+    return QualityGateResult(
+        ok=ok,
+        report_path=report_path,
+        baseline_path=baseline_path,
+        critical_count=len(critical),
+        cosmetic_count=len(cosmetic),
+        cosmetic_offer_count=len({x.oid for x in cosmetic}),
+        known_cosmetic_count=len(known_cosmetic),
+        new_cosmetic_count=len(new_cosmetic),
+        enforce=bool(enforce),
+        threshold_ok=passed,
+        max_cosmetic_offers=int(max_new_cosmetic_offers),
+        max_cosmetic_issues=int(max_new_cosmetic_issues),
+        summary=summary,
+        critical_preview=tuple(
             f"{x.oid} | {x.rule} | {x.details}".strip(" |")
             for x in critical[:20]
-        ],
-    }
+        ),
+    )
