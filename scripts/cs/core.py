@@ -29,8 +29,8 @@ _RE_DIM_SEP = re.compile(r"(?:[xх×*/]|\bto\b)")  # 10x20, 10×20, 10х20, 10/2
 from decimal import Decimal, InvalidOperation, ROUND_HALF_UP
 
 from .keywords import build_keywords, CS_KEYWORDS_MAX_LEN
-from .description import build_description, build_chars_block
-from .pricing import compute_price, CS_PRICE_TIERS
+from . import description as cs_description
+from . import pricing as cs_pricing
 from .meta import now_almaty, next_run_at_hour, next_run_dom_at_hour as _meta_next_run_dom_at_hour
 from .validators import validate_cs_yml
 from .util import norm_ws, safe_int, _truncate_text
@@ -2944,7 +2944,7 @@ class OfferOut:
         # Core НЕ переносит характеристики из description в params и не enrich'ит их из desc/name.
         native_desc = strip_service_kv_lines(native_desc)
         vendor = pick_vendor(self.vendor, name_full, self.params, native_desc, public_vendor=public_vendor)
-        price_final = compute_price(self.price)
+        price_final = cs_pricing.compute_price(self.price)
 
         # RAW обязан отдавать уже чистые и финальные supplier params.
         # Core не чистит, не нормализует и не перестраивает параметры под поставщика.
@@ -2962,7 +2962,7 @@ class OfferOut:
         name_for_desc = name_full if (name_short != name_full) else name_short
         name_for_desc = sanitize_mixed_text(name_for_desc)
 
-        desc_cdata = build_description(name_for_desc, native_desc, params_sorted, notes=notes)
+        desc_cdata = cs_description.build_description(name_for_desc, native_desc, params_sorted, notes=notes)
         desc_cdata = sanitize_mixed_text(desc_cdata)
         keywords = build_keywords(vendor, name_short)
         keywords = _truncate_text(keywords, int(CS_KEYWORDS_MAX_LEN or CS_KEYWORDS_MAX_LEN_FALLBACK))
@@ -3061,8 +3061,27 @@ class OfferOut:
         return out
 
 # Валидирует готовый CS-фид (страховка: если что-то сломалось — падаем сборкой)
+# Явные back-compat прокси: source of truth живёт в отдельных shared-модулях.
+# Это позволяет не держать pricing/description-логику внутри core,
+# но не ломать старые импорты адаптеров.
+CS_PRICE_TIERS = cs_pricing.CS_PRICE_TIERS
+
+def compute_price(*args, **kwargs):
+    return cs_pricing.compute_price(*args, **kwargs)
+
 def _cs_build_description(*args, **kwargs):
-    return build_description(*args, **kwargs)
+    return cs_description.build_description(*args, **kwargs)
 
 def _cs_build_chars_block(*args, **kwargs):
-    return build_chars_block(*args, **kwargs)
+    return cs_description.build_chars_block(*args, **kwargs)
+
+__all__ = [
+    "OfferOut",
+    "get_public_vendor",
+    "write_cs_feed",
+    "write_cs_feed_raw",
+    "compute_price",
+    "CS_PRICE_TIERS",
+    "_cs_build_description",
+    "_cs_build_chars_block",
+]
