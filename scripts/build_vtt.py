@@ -5,13 +5,17 @@ Path: scripts/build_vtt.py
 VTT orchestrator layer.
 
 Что делает:
-- грузит supplier config и запускает supplier-layer;
-- пишет raw/final feed и запускает quality gate;
+- грузит supplier config: filter / schema / policy;
+- поддерживает index / shard / merge / full режимы;
+- собирает raw offers через supplier-layer VTT;
+- пишет raw и final фиды;
+- печатает build summary и запускает supplier-side quality gate.
 
 Что не делает:
-- не хранит supplier parsing/compat/normalize внутри себя;
+- не хранит supplier-specific parsing/compat/normalize внутри себя;
 - не подменяет source.py / builder.py / quality_gate.py.
 """
+
 from __future__ import annotations
 
 import json
@@ -26,7 +30,7 @@ import yaml
 
 from cs.core import OfferOut, get_public_vendor, write_cs_feed, write_cs_feed_raw
 from cs.meta import next_run_dom_at_hour, now_almaty
-from suppliers.vtt.builder import build_offers
+from suppliers.vtt.builder import build_offer_from_raw
 from suppliers.vtt.diagnostics import print_build_summary
 from suppliers.vtt.filtering import categories_from_cfg, prefixes_from_cfg
 from suppliers.vtt.quality_gate import run_quality_gate
@@ -40,7 +44,7 @@ from suppliers.vtt.source import (
     parse_product_page_from_index,
 )
 
-BUILD_VTT_VERSION = "build_vtt_v15_batch_builder_contract"
+BUILD_VTT_VERSION = "build_vtt_v14_full_qg_contract"
 SUPPLIER_NAME_DEFAULT = "VTT"
 OUT_FILE_DEFAULT = "docs/vtt.yml"
 RAW_OUT_FILE_DEFAULT = "docs/raw/vtt.yml"
@@ -241,7 +245,8 @@ def _build_offers_for_index(cfg, index: list[dict[str, Any]], *, id_prefix: str)
     if sess is None:
         return []
 
-    raw_rows: list[dict[str, Any]] = []
+    out_offers: list[OfferOut] = []
+    seen_oids: set[str] = set()
 
     if index:
         thread_state = threading.local()
@@ -271,9 +276,15 @@ def _build_offers_for_index(cfg, index: list[dict[str, Any]], *, id_prefix: str)
                 if not raw:
                     continue
 
-                raw_rows.append(raw)
+                offer = build_offer_from_raw(raw, id_prefix=id_prefix)
+                if not offer or offer.oid in seen_oids:
+                    continue
 
-    return build_offers(raw_rows, id_prefix=id_prefix)
+                seen_oids.add(offer.oid)
+                out_offers.append(offer)
+
+    out_offers.sort(key=lambda o: o.oid)
+    return out_offers
 
 def _run_quality_gate(*, raw_out_file: str, qg_cfg: dict[str, Any]):
     if not bool(qg_cfg.get("enabled", True)):
@@ -571,9 +582,6 @@ def main() -> int:
     if mode == "merge":
         return _run_merge(cfg_dir, filter_cfg, schema_cfg, policy_cfg)
     return _run_full(cfg_dir, filter_cfg, schema_cfg, policy_cfg)
-
-
-__all__ = ["main"]
 
 if __name__ == "__main__":
     raise SystemExit(main())
