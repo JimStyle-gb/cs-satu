@@ -24,12 +24,13 @@ import yaml
 
 from cs.core import get_public_vendor, write_cs_feed, write_cs_feed_raw
 from cs.meta import next_run_at_hour, now_almaty
+from cs.qg_report import QualityGateResult, coerce_quality_gate_result, make_quality_gate_result
 from suppliers.akcent.builder import build_offers
 from suppliers.akcent.diagnostics import print_build_summary
 from suppliers.akcent.filtering import filter_source_offers
 from suppliers.akcent.source import fetch_source_root, iter_source_offers
 
-BUILD_AKCENT_VERSION = "build_akcent_v71_qg_fallback_if_missing"
+BUILD_AKCENT_VERSION = "build_akcent_v72_qg_result_unified"
 AKCENT_URL_DEFAULT = "https://ak-cent.kz/export/Exchange/article_nw2/Ware02224.xml"
 AKCENT_OUT_DEFAULT = "docs/akcent.yml"
 AKCENT_RAW_OUT_DEFAULT = "docs/raw/akcent.yml"
@@ -155,10 +156,10 @@ def _load_akcent_qg_callable():
     exported = sorted(name for name, obj in vars(mod).items() if callable(obj) and not name.startswith("_"))
     return None, ", ".join(exported) if exported else "нет"
 
-def _run_quality_gate(*, out_file: str, raw_out_file: str, policy_cfg: dict[str, Any]) -> None:
+def _run_quality_gate(*, out_file: str, raw_out_file: str, policy_cfg: dict[str, Any]) -> QualityGateResult:
     qg_cfg = policy_cfg.get("quality_gate") or {}
     if not bool(qg_cfg.get("enabled", True)):
-        return
+        return make_quality_gate_result(ok=True, summary="[AkCent quality_gate] PASS | disabled")
 
     baseline_path = os.getenv("AKCENT_QUALITY_BASELINE") or qg_cfg.get("baseline_file") or qg_cfg.get("baseline_path") or QUALITY_BASELINE_DEFAULT
     report_path = os.getenv("AKCENT_QUALITY_REPORT") or qg_cfg.get("report_file") or qg_cfg.get("report_path") or QUALITY_REPORT_DEFAULT
@@ -172,7 +173,7 @@ def _run_quality_gate(*, out_file: str, raw_out_file: str, policy_cfg: dict[str,
         reason = f"quality_gate.py не экспортирует callable entrypoint; найдено: {exported}"
         _write_fallback_qg_report(report_path, baseline_path, reason=reason)
         print(f"[quality_gate] PASS (fallback) | report={report_path} | {reason}")
-        return
+        return make_quality_gate_result(ok=True, report_path=report_path, baseline_path=baseline_path, summary=f"[quality_gate] PASS (fallback) | report={report_path} | {reason}")
 
     params = set(inspect.signature(qg_callable).parameters.keys())
 
@@ -186,14 +187,17 @@ def _run_quality_gate(*, out_file: str, raw_out_file: str, policy_cfg: dict[str,
         if "max_cosmetic_issues" in params: kw["max_cosmetic_issues"] = max_cosmetic_issues
         if "enforce" in params: kw["enforce"] = enforce
         if "freeze_current_as_baseline" in params: kw["freeze_current_as_baseline"] = freeze_current
-        result = qg_callable(**kw)
-        if isinstance(result, tuple) and len(result) == 2 and isinstance(result[0], bool):
-            ok, summary = result
-            if summary: print(summary)
-            if not ok: raise SystemExit(1)
-        elif isinstance(result, bool) and not result:
+        result = coerce_quality_gate_result(
+            qg_callable(**kw),
+            report_path=report_path,
+            baseline_path=baseline_path,
+            enforce=enforce,
+        )
+        if result.summary:
+            print(result.summary)
+        if not result.ok:
             raise SystemExit(1)
-        return
+        return result
 
     kw: dict[str, Any] = {}
     if "out_file" in params: kw["out_file"] = out_file
@@ -208,15 +212,19 @@ def _run_quality_gate(*, out_file: str, raw_out_file: str, policy_cfg: dict[str,
         reason = "quality_gate callable не имеет поддерживаемых аргументов"
         _write_fallback_qg_report(report_path, baseline_path, reason=reason)
         print(f"[quality_gate] PASS (fallback) | report={report_path} | {reason}")
-        return
+        return make_quality_gate_result(ok=True, report_path=report_path, baseline_path=baseline_path, summary=f"[quality_gate] PASS (fallback) | report={report_path} | {reason}")
 
-    result = qg_callable(**kw)
-    if isinstance(result, tuple) and len(result) == 2 and isinstance(result[0], bool):
-        ok, summary = result
-        if summary: print(summary)
-        if not ok: raise SystemExit(1)
-    elif isinstance(result, bool) and not result:
+    result = coerce_quality_gate_result(
+        qg_callable(**kw),
+        report_path=report_path,
+        baseline_path=baseline_path,
+        enforce=enforce,
+    )
+    if result.summary:
+        print(result.summary)
+    if not result.ok:
         raise SystemExit(1)
+    return result
 
 # -------------------------------- entrypoint ------------------------------
 
