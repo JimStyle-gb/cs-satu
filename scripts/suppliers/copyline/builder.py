@@ -15,7 +15,7 @@ CopyLine builder layer.
 from __future__ import annotations
 
 import re
-from typing import Iterable, Sequence, Tuple
+from typing import Any, Iterable, Sequence, Tuple
 
 from cs.core import OfferOut
 from suppliers.copyline.compat import reconcile_copyline_params
@@ -723,3 +723,44 @@ def build_offer_from_page(page: dict, *, fallback_title: str = "") -> OfferOut |
         params=params,
         native_desc=native_desc,
     )
+
+
+def _unwrap_build_row(row: Any) -> tuple[dict[str, Any], str]:
+    """Нормализовать batch-row к (page, fallback_title)."""
+    if isinstance(row, dict) and isinstance(row.get("page"), dict):
+        page = row.get("page") or {}
+        fallback_title = safe_str(row.get("fallback_title") or row.get("title"))
+        return page, fallback_title
+    if isinstance(row, tuple) and len(row) >= 2 and isinstance(row[0], dict):
+        return row[0], safe_str(row[1])
+    if isinstance(row, dict):
+        return row, ""
+    return {}, ""
+
+
+def build_offer(row: Any, *, fallback_title: str = "") -> OfferOut | None:
+    """Канонический single-offer entrypoint с backward-safe совместимостью."""
+    page, row_fallback = _unwrap_build_row(row)
+    return build_offer_from_page(page, fallback_title=(fallback_title or row_fallback))
+
+
+def build_offers(rows: Iterable[Any], *, sort_by_oid: bool = True) -> list[OfferOut]:
+    """Канонический batch entrypoint для parsed pages supplier-layer."""
+    out: list[OfferOut] = []
+    seen_oids: set[str] = set()
+    for row in rows or []:
+        offer = build_offer(row)
+        if not offer or offer.oid in seen_oids:
+            continue
+        seen_oids.add(offer.oid)
+        out.append(offer)
+    if sort_by_oid:
+        out.sort(key=lambda offer: offer.oid)
+    return out
+
+
+__all__ = [
+    "build_offer",
+    "build_offer_from_page",
+    "build_offers",
+]
