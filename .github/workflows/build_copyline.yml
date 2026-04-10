@@ -58,10 +58,9 @@ jobs:
 
       - name: Prepare folders
         run: mkdir -p docs docs/raw docs/debug
-
-      - name: Smoke test
+      - name: Full scripts smoke test
         run: |
-          python -m py_compile             scripts/cs/core.py             scripts/build_copyline.py
+          python scripts/smoke_imports.py
 
       - name: Show build version
         run: |
