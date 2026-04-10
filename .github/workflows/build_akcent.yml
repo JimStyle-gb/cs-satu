@@ -60,7 +60,55 @@ jobs:
         run: mkdir -p docs docs/raw
       - name: Full scripts smoke test
         run: |
-          python scripts/smoke_imports.py
+          python - <<'PY'
+          import compileall
+          import importlib
+          import sys
+          from pathlib import Path
+
+          repo = Path('.').resolve()
+          scripts_dir = repo / 'scripts'
+          sys.path.insert(0, str(repo))
+          sys.path.insert(0, str(scripts_dir))
+
+          ok = compileall.compile_dir(str(scripts_dir), force=True, quiet=1)
+          if not ok:
+              raise SystemExit('compileall failed')
+
+          shared = [
+              'cs.core',
+              'cs.description',
+              'cs.pricing',
+              'cs.writer',
+              'cs.util',
+              'cs.meta',
+              'cs.keywords',
+              'cs.validators',
+              'cs.policy',
+              'cs.qg_report',
+          ]
+          for name in shared:
+              importlib.import_module(name)
+
+          for path in scripts_dir.glob('build_*.py'):
+              importlib.import_module(path.stem)
+
+          for path in scripts_dir.rglob('*.py'):
+              if '__pycache__' in path.parts:
+                  continue
+              if path.name == '__init__.py':
+                  continue
+              try:
+                  rel = path.relative_to(scripts_dir)
+              except ValueError:
+                  continue
+              mod = '.'.join(rel.with_suffix('').parts)
+              if mod == 'smoke_imports':
+                  continue
+              importlib.import_module(mod)
+
+          print('smoke imports ok')
+          PY
 
       - name: Show build version
         run: |
