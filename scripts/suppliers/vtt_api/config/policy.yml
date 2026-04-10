@@ -1,5 +1,0 @@
-source_kind: soap_api
-raw_must_be_clean: true
-desc_extract_mode: only_fill_missing
-max_cosmetic_offers: 5
-max_cosmetic_issues: 5
