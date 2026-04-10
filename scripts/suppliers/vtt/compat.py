@@ -2,15 +2,17 @@
 """
 Path: scripts/suppliers/vtt/compat.py
 
-VTT compat layer.
+VTT Compat — compat-слой supplier-layer.
 
 Что делает:
-- держит supplier-specific compat и part-number helpers;
-- не переносит compat repair в shared core;
+- держит supplier-specific cleanup совместимости и part-number;
+- отделяет device/model compatibility от code-list логики;
+- помогает builder-слою собирать clean display part number и compat.
 
 Что не делает:
-- не строит final offers;
-- не переносит supplier-specific repair в shared core.
+- не crawls source-страницы;
+- не строит final description;
+- не переносит supplier-specific compat repair в shared core.
 """
 from __future__ import annotations
 
@@ -46,6 +48,8 @@ def _canonicalize_known_compat(title: str, compat: str, vendor: str) -> str:
     title_n = norm_ws(title)
     compat_n = norm_ws(compat)
 
+    if "WC 7525/7530/7535/7545/7556/7830/7835" in title_n:
+        return "Xerox WC 7525/7530/7535/7545/7556/7830/7835"
     if "WC 7525/7530/7535/7545/7556/7830/7835" in title_n:
         return "Xerox WC 7525/7530/7535/7545/7556/7830/7835"
     if "LBP312x" in title_n and (not compat_n or compat_n == "Canon"):
@@ -249,16 +253,3 @@ def collect_codes(raw: dict, params: Sequence[tuple[str, str]], resource: str, p
     for code in raw.get("title_codes") or []:
         add(safe_str(code), from_title_codes=True)
     return out
-
-
-__all__ = [
-    "ALT_PART_TAIL_RE",
-    "CODE_SOURCE_KEYS",
-    "cleanup_compat",
-    "collect_codes",
-    "derive_display_part_number",
-    "derive_hiblack_color",
-    "extract_compat",
-    "extract_part_number",
-    "should_keep_code",
-]
