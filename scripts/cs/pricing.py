@@ -14,6 +14,8 @@ CS Pricing — shared price calculation layer.
 """
 from __future__ import annotations
 
+# Source of truth для общей pricing-логики.
+
 CS_PRICE_TIERS = [
     (101, 10_000, 3_000),
     (10_001, 25_000, 4_000),
@@ -74,3 +76,9 @@ def compute_price(price_in: int | None) -> int:
     if out <= 100:
         return 100
     return out
+
+
+__all__ = [
+    "CS_PRICE_TIERS",
+    "compute_price",
+]
