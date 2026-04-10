@@ -24,6 +24,7 @@ import yaml
 
 from cs.core import get_public_vendor, write_cs_feed, write_cs_feed_raw
 from cs.meta import next_run_dom_at_hour, now_almaty
+from cs.qg_report import coerce_quality_gate_result
 
 from suppliers.copyline.builder import build_offer_from_page
 from suppliers.copyline.diagnostics import print_build_summary
@@ -31,7 +32,7 @@ from suppliers.copyline.filtering import filter_product_index
 from suppliers.copyline.quality_gate import run_quality_gate
 from suppliers.copyline.source import fetch_product_index, parse_product_page
 
-BUILD_COPYLINE_VERSION = "build_copyline_v13_fix_qg_policy_and_next_run_dom"
+BUILD_COPYLINE_VERSION = "build_copyline_v14_qg_result_unified"
 
 SUPPLIER_NAME_DEFAULT = "CopyLine"
 SUPPLIER_URL_DEFAULT = os.getenv("SUPPLIER_URL", "https://copyline.kz/goods.html")
@@ -172,7 +173,7 @@ def main() -> int:
     )
 
     qg_cfg = policy_cfg.get("quality_gate") or {}
-    qg = run_quality_gate(
+    qg = coerce_quality_gate_result(run_quality_gate(
         feed_path=raw_out_file,
         policy_path=str(cfg_dir / POLICY_FILE_DEFAULT),
         baseline_path=(
@@ -187,7 +188,24 @@ def main() -> int:
             or qg_cfg.get("report_path")
             or COPYLINE_QG_REPORT_DEFAULT
         ),
+    ),
+        report_path=(
+            os.getenv("COPYLINE_QG_REPORT")
+            or qg_cfg.get("report_file")
+            or qg_cfg.get("report_path")
+            or COPYLINE_QG_REPORT_DEFAULT
+        ),
+        baseline_path=(
+            os.getenv("COPYLINE_QG_BASELINE")
+            or qg_cfg.get("baseline_file")
+            or qg_cfg.get("baseline_path")
+            or COPYLINE_QG_BASELINE_DEFAULT
+        ),
+        enforce=bool((qg_cfg or {}).get("enforce", True)),
     )
+
+    if qg.summary:
+        print(qg.summary)
 
     print_build_summary(
         version=BUILD_COPYLINE_VERSION,
