@@ -23,7 +23,7 @@ import xml.etree.ElementTree as ET
 
 import yaml
 
-from cs.qg_report import write_quality_gate_report
+from cs.qg_report import QualityGateResult, write_quality_gate_report
 
 _WS_RE = re.compile(r"\s+")
 _DESC_HEADER_RE = re.compile(r"(?iu)^\s*(?:Технические\s+характеристики|Характеристики|Основные\s+характеристики)\s*:?")
@@ -73,7 +73,7 @@ def _norm_code(s: str) -> str:
 def _brandless_code(s: str) -> str:
     return _norm_code(_BRAND_PREFIX_RE.sub("", _norm_ws(s)))
 
-def _read_yaml(path: str) -> dict:
+def _read_yaml(path: str) -> QualityGateResult:
     p = Path(path)
     if not p.exists():
         return {}
@@ -270,7 +270,7 @@ def collect_quality_issues(feed_path: str) -> list[QualityIssue]:
 
     return issues
 
-def run_quality_gate(*, feed_path: str, policy_path: str, baseline_path: str | None = None, report_path: str | None = None) -> dict:
+def run_quality_gate(*, feed_path: str, policy_path: str, baseline_path: str | None = None, report_path: str | None = None) -> QualityGateResult:
     """
     CopyLine quality gate с единым форматом отчёта.
 
@@ -329,17 +329,24 @@ def run_quality_gate(*, feed_path: str, policy_path: str, baseline_path: str | N
             max_cosmetic_issues=max_cosmetic_issues,
         )
 
-    return {
-        "ok": effective_ok,
-        "threshold_ok": threshold_ok,
-        "critical_count": critical_count,
-        "cosmetic_total_count": cosmetic_issue_count,
-        "cosmetic_offer_count": cosmetic_offer_count,
-        "known_cosmetic_count": len(known_cosmetic_issues),
-        "new_cosmetic_count": len(new_cosmetic),
-        "max_cosmetic_offers": max_cosmetic_offers,
-        "max_cosmetic_issues": max_cosmetic_issues,
-        "enforce": enforce,
-        "report_path": report_path or "",
-        "baseline_path": baseline_path or "",
-    }
+    summary = (
+        f"[CopyLine quality_gate] {'PASS' if effective_ok else 'FAIL'} | "
+        f"critical={critical_count} | cosmetic={cosmetic_issue_count} | "
+        f"cosmetic_offers={cosmetic_offer_count} | report={report_path or ''}"
+    )
+
+    return QualityGateResult(
+        ok=effective_ok,
+        report_path=report_path or "",
+        baseline_path=baseline_path or "",
+        critical_count=critical_count,
+        cosmetic_count=cosmetic_issue_count,
+        cosmetic_offer_count=cosmetic_offer_count,
+        known_cosmetic_count=len(known_cosmetic_issues),
+        new_cosmetic_count=len(new_cosmetic),
+        enforce=enforce,
+        threshold_ok=threshold_ok,
+        max_cosmetic_offers=max_cosmetic_offers,
+        max_cosmetic_issues=max_cosmetic_issues,
+        summary=summary,
+    )
