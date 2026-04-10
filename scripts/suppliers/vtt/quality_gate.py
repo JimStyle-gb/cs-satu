@@ -26,7 +26,7 @@ try:
 except Exception:  # pragma: no cover
     yaml = None  # type: ignore
 
-from cs.qg_report import write_quality_gate_report
+from cs.qg_report import QualityGateResult, write_quality_gate_report
 
 PLACEHOLDER_URL = "https://placehold.co/800x800/png?text=No+Photo"
 QUALITY_BASELINE_DEFAULT = "scripts/suppliers/vtt/config/quality_gate_baseline.yml"
@@ -43,13 +43,6 @@ class QualityIssue:
     oid: str
     name: str
     details: str
-
-@dataclass(frozen=True)
-class QualityGateResult:
-    ok: bool
-    report_path: str
-    critical_count: int
-    cosmetic_count: int
 
 def _norm_ws(s: str) -> str:
     s2 = unescape(s or "")
@@ -233,9 +226,22 @@ def run_quality_gate(
         passed=passed,
     )
     ok = True if not enforce else passed
+    summary = (
+        f"[VTT quality_gate] {'PASS' if ok else 'FAIL'} | "
+        f"critical={len(critical)} | cosmetic={len(cosmetic)} | report={report_path}"
+    )
     return QualityGateResult(
         ok=ok,
         report_path=report_path,
+        baseline_path=baseline_path,
         critical_count=len(critical),
         cosmetic_count=len(cosmetic),
+        cosmetic_offer_count=len({x.oid for x in cosmetic}),
+        known_cosmetic_count=len(known_cosmetic),
+        new_cosmetic_count=len(new_cosmetic),
+        enforce=bool(enforce),
+        threshold_ok=passed,
+        max_cosmetic_offers=int(max_new_cosmetic_offers),
+        max_cosmetic_issues=int(max_new_cosmetic_issues),
+        summary=summary,
     )
