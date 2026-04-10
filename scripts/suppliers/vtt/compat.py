@@ -48,8 +48,6 @@ def _canonicalize_known_compat(title: str, compat: str, vendor: str) -> str:
 
     if "WC 7525/7530/7535/7545/7556/7830/7835" in title_n:
         return "Xerox WC 7525/7530/7535/7545/7556/7830/7835"
-    if "WC 7525/7530/7535/7545/7556/7830/7835" in title_n:
-        return "Xerox WC 7525/7530/7535/7545/7556/7830/7835"
     if "LBP312x" in title_n and (not compat_n or compat_n == "Canon"):
         return "Canon LBP312x"
     if "MF421dw/MF426dw/MF428x/MF429x" in title_n:
@@ -251,3 +249,16 @@ def collect_codes(raw: dict, params: Sequence[tuple[str, str]], resource: str, p
     for code in raw.get("title_codes") or []:
         add(safe_str(code), from_title_codes=True)
     return out
+
+
+__all__ = [
+    "CODE_SOURCE_KEYS",
+    "ALT_PART_TAIL_RE",
+    "cleanup_compat",
+    "extract_part_number",
+    "extract_compat",
+    "should_keep_code",
+    "derive_display_part_number",
+    "derive_hiblack_color",
+    "collect_codes",
+]
