@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<yml_catalog date="2026-04-10 17:37:51">
+<yml_catalog date="2026-04-10 21:39:51">
 <shop><offers>
 <!--FEED_META
 Поставщик                                  | ComPortal
 URL поставщика                             | https://www.comportal.kz/auth/documents/prices/yml-catalog.php
-Время сборки (Алматы)                      | 2026-04-10 17:37:51
+Время сборки (Алматы)                      | 2026-04-10 21:39:51
 Ближайшая сборка (Алматы)                  | 2026-04-11 03:00:00
-Сколько товаров у поставщика до фильтра    | 1169
-Сколько товаров у поставщика после фильтра | 583
-Сколько товаров есть в наличии (true)      | 583
+Сколько товаров у поставщика до фильтра    | 1167
+Сколько товаров у поставщика после фильтра | 582
+Сколько товаров есть в наличии (true)      | 582
 Сколько товаров нет в наличии (false)      | 0
 -->
 
@@ -5891,35 +5891,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Диапазон входного напряжения">230</param>
 <param name="Коды">5PX3000IRT2UG2</param>
 <param name="Для бренда">Eaton</param>
-</offer>
-
-<offer id="CP13871695" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13871695</vendorCode>
-<name>Монитор Acer Nitro VG270Ebmiix (UM.HV0EE.E06)</name>
-<price>58897</price>
-<picture>https://www.comportal.kz/upload/iblock/e0f/5imduu0kjt04hf7p5ozoguwf09mgoqyg.JPG</picture>
-<vendor>Acer</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Монитор. Модельная серия: Nitro VG270Ebmiix. Диагональ: 27. Максимальное разрешение: 1920x1080. Тип матрицы: IPS. Частота обновления: 100. Время отклика: 4. Порты: 1xVGA/2xHDMI(1.4)/ Audio In Out. Гарантия: 24 мес.]]></description>
-<param name="Тип">Монитор</param>
-<param name="Модель">Nitro VG270Ebmiix</param>
-<param name="Порты">1xVGA/2xHDMI(1.4)/ Audio In Out</param>
-<param name="Тип матрицы">IPS</param>
-<param name="Цвет">Чёрный</param>
-<param name="Гарантия">24 мес</param>
-<param name="Контрастность">1000:1</param>
-<param name="Яркость">250</param>
-<param name="Время отклика">4</param>
-<param name="Максимальное разрешение">1920x1080</param>
-<param name="Наличие динамиков">2Wx2</param>
-<param name="Углы обзора (вертикальный/горизонтальный)">178/178</param>
-<param name="Размер Pix">0,31</param>
-<param name="Диагональ">27</param>
-<param name="Частота обновления">100</param>
-<param name="Коды">UM.HV0EE.E06</param>
-<param name="Для бренда">Acer</param>
 </offer>
 
 <offer id="CP13853745" available="true">

@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<yml_catalog date="2026-04-10 17:37:51">
+<yml_catalog date="2026-04-10 21:39:51">
 <shop><offers>
 <!--FEED_META
 Поставщик                                  | ComPortal
 URL поставщика                             | https://www.comportal.kz/auth/documents/prices/yml-catalog.php
-Время сборки (Алматы)                      | 2026-04-10 17:37:51
+Время сборки (Алматы)                      | 2026-04-10 21:39:51
 Ближайшая сборка (Алматы)                  | 2026-04-11 03:00:00
-Сколько товаров у поставщика до фильтра    | 1169
-Сколько товаров у поставщика после фильтра | 583
-Сколько товаров есть в наличии (true)      | 583
+Сколько товаров у поставщика до фильтра    | 1167
+Сколько товаров у поставщика после фильтра | 582
+Сколько товаров есть в наличии (true)      | 582
 Сколько товаров нет в наличии (false)      | 0
 -->
 
 <offer id="CP10306482" available="true">
-<categoryId></categoryId>
+<categoryId>9631597</categoryId>
 <vendorCode>CP10306482</vendorCode>
 <name>Картридж HP CE400A (CE400A) (оригинал)</name>
 <price>112900</price>
@@ -44,7 +44,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10496860" available="true">
-<categoryId></categoryId>
+<categoryId>9631597</categoryId>
 <vendorCode>CP10496860</vendorCode>
 <name>Картридж HP CE402A (CE402A) (оригинал)</name>
 <price>164900</price>
@@ -75,7 +75,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10328094" available="true">
-<categoryId></categoryId>
+<categoryId>9631597</categoryId>
 <vendorCode>CP10328094</vendorCode>
 <name>Картридж HP CE403A (CE403A) (оригинал)</name>
 <price>164900</price>
@@ -106,7 +106,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10316392" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP10316392</vendorCode>
 <name>Картридж HP CZ109AE (CZ109AE#BHK) (оригинал)</name>
 <price>9900</price>
@@ -138,7 +138,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10316970" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP10316970</vendorCode>
 <name>Картридж HP CZ110AE (CZ110AE#BHK) (оригинал)</name>
 <price>9900</price>
@@ -170,7 +170,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10316794" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP10316794</vendorCode>
 <name>Картридж HP CZ112AE (CZ112AE#BHK) (оригинал)</name>
 <price>9900</price>
@@ -202,7 +202,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10300705" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP10300705</vendorCode>
 <name>Картридж HP CZ102AE (CZ102AE#BHK) (оригинал)</name>
 <price>9900</price>
@@ -234,7 +234,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10303512" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP10303512</vendorCode>
 <name>Картридж HP CN054AE (CN054AE#BGX) (оригинал)</name>
 <price>15900</price>
@@ -267,7 +267,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10303267" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP10303267</vendorCode>
 <name>Картридж HP CN055AE (CN055AE#BGX) (оригинал)</name>
 <price>15900</price>
@@ -300,7 +300,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13873145" available="true">
-<categoryId></categoryId>
+<categoryId>9631615</categoryId>
 <vendorCode>CP13873145</vendorCode>
 <name>МФУ Canon i-SENSYS MF3010 (5252B004)</name>
 <price>153900</price>
@@ -328,7 +328,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10304640" available="true">
-<categoryId></categoryId>
+<categoryId>9631616</categoryId>
 <vendorCode>CP10304640</vendorCode>
 <name>Принтер HP LaserJet Enterprise 700 M712dn (CF236A#B19)</name>
 <price>995900</price>
@@ -363,7 +363,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10299922" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP10299922</vendorCode>
 <name>Картридж HP CZ129A (CZ129A) (оригинал)</name>
 <price>26900</price>
@@ -395,7 +395,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10299923" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP10299923</vendorCode>
 <name>Картридж HP CZ130A (CZ130A) (оригинал)</name>
 <price>22900</price>
@@ -427,7 +427,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10300778" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP10300778</vendorCode>
 <name>Картридж HP CZ131A (CZ131A) (оригинал)</name>
 <price>22900</price>
@@ -459,7 +459,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10299394" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP10299394</vendorCode>
 <name>Картридж HP CZ132A (CZ132A) (оригинал)</name>
 <price>22900</price>
@@ -491,7 +491,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10304361" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP10304361</vendorCode>
 <name>Картридж HP CZ133A (CZ133A) (оригинал)</name>
 <price>42900</price>
@@ -523,7 +523,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13811894" available="true">
-<categoryId></categoryId>
+<categoryId>9631602</categoryId>
 <vendorCode>CP13811894</vendorCode>
 <name>Печатающая головка HP B3P06A (B3P06A) (оригинал)</name>
 <price>221900</price>
@@ -555,7 +555,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10325602" available="true">
-<categoryId></categoryId>
+<categoryId>9631597</categoryId>
 <vendorCode>CP10325602</vendorCode>
 <name>Картридж HP Q2612AF (Q2612AF) (оригинал)</name>
 <price>76900</price>
@@ -615,7 +615,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10305821" available="true">
-<categoryId></categoryId>
+<categoryId>9631597</categoryId>
 <vendorCode>CP10305821</vendorCode>
 <name>Картридж HP CF283A (CF283A) (оригинал)</name>
 <price>49900</price>
@@ -646,7 +646,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870159" available="true">
-<categoryId></categoryId>
+<categoryId>9631601</categoryId>
 <vendorCode>CP13870159</vendorCode>
 <name>Барабан HP CF364A (CF364A)</name>
 <price>165900</price>
@@ -674,7 +674,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870161" available="true">
-<categoryId></categoryId>
+<categoryId>9631601</categoryId>
 <vendorCode>CP13870161</vendorCode>
 <name>Барабан HP CF359A (CF359A)</name>
 <price>164900</price>
@@ -702,7 +702,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870163" available="true">
-<categoryId></categoryId>
+<categoryId>9631601</categoryId>
 <vendorCode>CP13870163</vendorCode>
 <name>Барабан HP CF365A (CF365A)</name>
 <price>165900</price>
@@ -730,7 +730,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870165" available="true">
-<categoryId></categoryId>
+<categoryId>9631601</categoryId>
 <vendorCode>CP13870165</vendorCode>
 <name>Барабан HP CF358A (CF358A)</name>
 <price>64900</price>
@@ -758,7 +758,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13867162" available="true">
-<categoryId></categoryId>
+<categoryId>9631597</categoryId>
 <vendorCode>CP13867162</vendorCode>
 <name>Картридж HP C9732AC (C9732AC) (оригинал)</name>
 <price>212900</price>
@@ -789,7 +789,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13827646" available="true">
-<categoryId></categoryId>
+<categoryId>9631642</categoryId>
 <vendorCode>CP13827646</vendorCode>
 <name>ИБП APC SMX3000RMHV2U (SMX3000RMHV2U)</name>
 <price>1390900</price>
@@ -826,7 +826,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10865855" available="true">
-<categoryId></categoryId>
+<categoryId>9631642</categoryId>
 <vendorCode>CP10865855</vendorCode>
 <name>ИБП APC SMX2200HV (SMX2200HV)</name>
 <price>971900</price>
@@ -865,7 +865,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13827520" available="true">
-<categoryId></categoryId>
+<categoryId>9631642</categoryId>
 <vendorCode>CP13827520</vendorCode>
 <name>ИБП APC SRT10KRMXLI (SRT10KRMXLI)</name>
 <price>3201900</price>
@@ -932,7 +932,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10376754" available="true">
-<categoryId></categoryId>
+<categoryId>9631642</categoryId>
 <vendorCode>CP10376754</vendorCode>
 <name>ИБП APC SRT10KXLI (SRT10KXLI)</name>
 <price>2834900</price>
@@ -970,7 +970,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10303174" available="true">
-<categoryId></categoryId>
+<categoryId>9631642</categoryId>
 <vendorCode>CP10303174</vendorCode>
 <name>ИБП APC SRT6KXLI (SRT6KXLI)</name>
 <price>2350900</price>
@@ -1008,7 +1008,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10404631" available="true">
-<categoryId></categoryId>
+<categoryId>9631644</categoryId>
 <vendorCode>CP10404631</vendorCode>
 <name>Аккумулятор APC APCRBC140 (APCRBC140)</name>
 <price>363900</price>
@@ -1046,7 +1046,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10303148" available="true">
-<categoryId></categoryId>
+<categoryId>9631644</categoryId>
 <vendorCode>CP10303148</vendorCode>
 <name>Аккумулятор APC APCRBC140 (APCRBC140)</name>
 <price>363900</price>
@@ -1074,7 +1074,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10553057" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP10553057</vendorCode>
 <name>Картридж HP C2P10AE (C2P10AE#BHK) (оригинал)</name>
 <price>15900</price>
@@ -1106,7 +1106,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10553058" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP10553058</vendorCode>
 <name>Картридж HP C2P11AE (C2P11AE#BHK) (оригинал)</name>
 <price>14900</price>
@@ -1138,7 +1138,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10303852" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP10303852</vendorCode>
 <name>Картридж HP F6V16AE (F6V16AE) (оригинал)</name>
 <price>11900</price>
@@ -1171,7 +1171,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10303149" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP10303149</vendorCode>
 <name>Картридж HP F6V17AE (F6V17AE) (оригинал)</name>
 <price>10900</price>
@@ -1204,7 +1204,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10335499" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP10335499</vendorCode>
 <name>Картридж HP F6V24AE (F6V24AE#BHK) (оригинал)</name>
 <price>10900</price>
@@ -1237,7 +1237,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10299294" available="true">
-<categoryId></categoryId>
+<categoryId>9631600</categoryId>
 <vendorCode>CP10299294</vendorCode>
 <name>Тонер Canon C-EXV42 (6908B002) (оригинал)</name>
 <price>31900</price>
@@ -1267,7 +1267,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13827510" available="true">
-<categoryId></categoryId>
+<categoryId>9631642</categoryId>
 <vendorCode>CP13827510</vendorCode>
 <name>ИБП APC SRT6KRMXLI (SRT6KRMXLI)</name>
 <price>2159900</price>
@@ -1305,7 +1305,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10420608" available="true">
-<categoryId></categoryId>
+<categoryId>9631642</categoryId>
 <vendorCode>CP10420608</vendorCode>
 <name>ИБП APC SRT8KRMXLI (SRT8KRMXLI)</name>
 <price>2598900</price>
@@ -1343,7 +1343,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10297301" available="true">
-<categoryId></categoryId>
+<categoryId>9631600</categoryId>
 <vendorCode>CP10297301</vendorCode>
 <name>Тонер Canon C-EXV49 (8524B002) (оригинал)</name>
 <price>50900</price>
@@ -1373,7 +1373,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10364644" available="true">
-<categoryId></categoryId>
+<categoryId>9631642</categoryId>
 <vendorCode>CP10364644</vendorCode>
 <name>ИБП APC SRT2200XLI (SRT2200XLI)</name>
 <price>789900</price>
@@ -1412,7 +1412,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10402565" available="true">
-<categoryId></categoryId>
+<categoryId>9631642</categoryId>
 <vendorCode>CP10402565</vendorCode>
 <name>ИБП APC SRT2200RMXLI (SRT2200RMXLI)</name>
 <price>936900</price>
@@ -1451,7 +1451,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10372081" available="true">
-<categoryId></categoryId>
+<categoryId>9631642</categoryId>
 <vendorCode>CP10372081</vendorCode>
 <name>ИБП APC SRT3000XLI (SRT3000XLI)</name>
 <price>1260900</price>
@@ -1490,7 +1490,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10361619" available="true">
-<categoryId></categoryId>
+<categoryId>9631642</categoryId>
 <vendorCode>CP10361619</vendorCode>
 <name>ИБП APC SRT3000RMXLI (SRT3000RMXLI)</name>
 <price>1409900</price>
@@ -1558,7 +1558,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10317753" available="true">
-<categoryId></categoryId>
+<categoryId>9631616</categoryId>
 <vendorCode>CP10317753</vendorCode>
 <name>Принтер HP LaserJet Pro M501dn (J8H61A#B19)</name>
 <price>234900</price>
@@ -1593,7 +1593,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10310241" available="true">
-<categoryId></categoryId>
+<categoryId>9631597</categoryId>
 <vendorCode>CP10310241</vendorCode>
 <name>Картридж HP CF230A (CF230A) (оригинал)</name>
 <price>48900</price>
@@ -1624,7 +1624,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10323246" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP10323246</vendorCode>
 <name>Чернила HP M0H54AE (M0H54AE) (оригинал)</name>
 <price>7900</price>
@@ -1656,7 +1656,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10323247" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP10323247</vendorCode>
 <name>Чернила HP M0H55AE (M0H55AE) (оригинал)</name>
 <price>7900</price>
@@ -1688,7 +1688,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10313272" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP10313272</vendorCode>
 <name>Чернила HP M0H56AE (M0H56AE) (оригинал)</name>
 <price>7900</price>
@@ -1720,7 +1720,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10325101" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP10325101</vendorCode>
 <name>Картридж HP L0S70AE (L0S70AE#BGX) (оригинал)</name>
 <price>35900</price>
@@ -1753,7 +1753,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10377081" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP10377081</vendorCode>
 <name>Картридж HP F6U17AE (F6U17AE#BGX) (оригинал)</name>
 <price>26900</price>
@@ -1786,7 +1786,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10328531" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP10328531</vendorCode>
 <name>Картридж HP F6U18AE (F6U18AE#BGX) (оригинал)</name>
 <price>27900</price>
@@ -1819,7 +1819,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13821643" available="true">
-<categoryId></categoryId>
+<categoryId>9631600</categoryId>
 <vendorCode>CP13821643</vendorCode>
 <name>Тонер Canon 034 MG (9452B001) (оригинал)</name>
 <price>158900</price>
@@ -1849,7 +1849,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870156" available="true">
-<categoryId></categoryId>
+<categoryId>9631601</categoryId>
 <vendorCode>CP13870156</vendorCode>
 <name>Барабан Canon C-EXV49 CYM (8528B003AA)</name>
 <price>133900</price>
@@ -1877,7 +1877,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10416521" available="true">
-<categoryId></categoryId>
+<categoryId>9631642</categoryId>
 <vendorCode>CP10416521</vendorCode>
 <name>ИБП APC SMX2000I (SMC2000I)</name>
 <price>689900</price>
@@ -1913,7 +1913,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10300961" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP10300961</vendorCode>
 <name>Чернила Canon INK GI-490 BK (0663C001) (оригинал)</name>
 <price>7900</price>
@@ -1946,7 +1946,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10300827" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP10300827</vendorCode>
 <name>Чернила Canon INK GI-490 C (0664C001) (оригинал)</name>
 <price>7900</price>
@@ -1979,7 +1979,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10300828" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP10300828</vendorCode>
 <name>Чернила Canon INK GI-490 M (0665C001) (оригинал)</name>
 <price>7900</price>
@@ -2012,7 +2012,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10300829" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP10300829</vendorCode>
 <name>Чернила Canon INK GI-490 Y (0666C001) (оригинал)</name>
 <price>7900</price>
@@ -2045,7 +2045,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10297347" available="true">
-<categoryId></categoryId>
+<categoryId>9631600</categoryId>
 <vendorCode>CP10297347</vendorCode>
 <name>Тонер Canon C-EXV54 Bk (1394C002) (оригинал)</name>
 <price>43900</price>
@@ -2075,7 +2075,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10297251" available="true">
-<categoryId></categoryId>
+<categoryId>9631600</categoryId>
 <vendorCode>CP10297251</vendorCode>
 <name>Тонер Canon C-EXV54 Y (1397C002) (оригинал)</name>
 <price>60900</price>
@@ -2105,7 +2105,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10297249" available="true">
-<categoryId></categoryId>
+<categoryId>9631600</categoryId>
 <vendorCode>CP10297249</vendorCode>
 <name>Тонер Canon C-EXV54 C (1395C002) (оригинал)</name>
 <price>60900</price>
@@ -2135,7 +2135,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10297250" available="true">
-<categoryId></categoryId>
+<categoryId>9631600</categoryId>
 <vendorCode>CP10297250</vendorCode>
 <name>Тонер Canon C-EXV54 M (1396C002) (оригинал)</name>
 <price>61900</price>
@@ -2165,7 +2165,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP11240517" available="true">
-<categoryId></categoryId>
+<categoryId>9631616</categoryId>
 <vendorCode>CP11240517</vendorCode>
 <name>Принтер HP OfficeJet 202 Mobile (N4K99C#A82)</name>
 <price>154900</price>
@@ -2200,7 +2200,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10309660" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP10309660</vendorCode>
 <name>Картридж Canon PG-46 (9059B001) (оригинал)</name>
 <price>9900</price>
@@ -2232,7 +2232,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10323959" available="true">
-<categoryId></categoryId>
+<categoryId>9631597</categoryId>
 <vendorCode>CP10323959</vendorCode>
 <name>Картридж HP CF542A (CF542A) (оригинал)</name>
 <price>50900</price>
@@ -2263,7 +2263,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10325347" available="true">
-<categoryId></categoryId>
+<categoryId>9631597</categoryId>
 <vendorCode>CP10325347</vendorCode>
 <name>Картридж HP CF543A (CF543A) (оригинал)</name>
 <price>50900</price>
@@ -2294,7 +2294,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13847448" available="true">
-<categoryId></categoryId>
+<categoryId>9631597</categoryId>
 <vendorCode>CP13847448</vendorCode>
 <name>Картридж Canon 052 (2199C002) (оригинал)</name>
 <price>73900</price>
@@ -2325,7 +2325,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13835386" available="true">
-<categoryId></categoryId>
+<categoryId>9631642</categoryId>
 <vendorCode>CP13835386</vendorCode>
 <name>ИБП HPE R1500 INTL (Q1L90A)</name>
 <price>329900</price>
@@ -2358,7 +2358,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13866070" available="true">
-<categoryId></categoryId>
+<categoryId>9631597</categoryId>
 <vendorCode>CP13866070</vendorCode>
 <name>Картридж HP CF473XC (CF473XC) (оригинал)</name>
 <price>189900</price>
@@ -2390,7 +2390,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10304876" available="true">
-<categoryId></categoryId>
+<categoryId>9631642</categoryId>
 <vendorCode>CP10304876</vendorCode>
 <name>ИБП APC BV1000I-GR (BV1000I-GR)</name>
 <price>44900</price>
@@ -2428,7 +2428,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10388184" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP10388184</vendorCode>
 <name>Картридж HP P2V69A (P2V69A) (оригинал)</name>
 <price>101900</price>
@@ -2460,7 +2460,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13850386" available="true">
-<categoryId></categoryId>
+<categoryId>9631602</categoryId>
 <vendorCode>CP13850386</vendorCode>
 <name>Печатающая головка HP P2V25A (P2V25A) (оригинал)</name>
 <price>68900</price>
@@ -2488,7 +2488,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13837247" available="true">
-<categoryId></categoryId>
+<categoryId>9631597</categoryId>
 <vendorCode>CP13837247</vendorCode>
 <name>Картридж HP P2V79A (P2V79A) (оригинал)</name>
 <price>92900</price>
@@ -2516,7 +2516,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13837249" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP13837249</vendorCode>
 <name>Картридж HP P2V83A (P2V83A) (оригинал)</name>
 <price>92900</price>
@@ -2548,7 +2548,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870237" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP13870237</vendorCode>
 <name>Картридж HP M0J90AE (M0J90AE) (оригинал)</name>
 <price>141900</price>
@@ -2580,7 +2580,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870240" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP13870240</vendorCode>
 <name>Картридж HP M0J94AE (M0J94AE) (оригинал)</name>
 <price>141900</price>
@@ -2612,7 +2612,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10409118" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP10409118</vendorCode>
 <name>Картридж HP P2V68A (P2V68A) (оригинал)</name>
 <price>101900</price>
@@ -2644,7 +2644,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10406455" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP10406455</vendorCode>
 <name>Картридж HP P2V70A (P2V70A) (оригинал)</name>
 <price>101900</price>
@@ -2676,7 +2676,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10409376" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP10409376</vendorCode>
 <name>Картридж HP P2V71A (P2V71A) (оригинал)</name>
 <price>101900</price>
@@ -2708,7 +2708,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10409377" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP10409377</vendorCode>
 <name>Картридж HP P2V72A (P2V72A) (оригинал)</name>
 <price>101900</price>
@@ -2740,7 +2740,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10406458" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP10406458</vendorCode>
 <name>Картридж HP P2V73A (P2V73A) (оригинал)</name>
 <price>101900</price>
@@ -2772,7 +2772,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870263" available="true">
-<categoryId></categoryId>
+<categoryId>9631602</categoryId>
 <vendorCode>CP13870263</vendorCode>
 <name>Печатающая головка HP 3YP61AE (3YP61AE) (оригинал)</name>
 <price>18900</price>
@@ -2801,7 +2801,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10308520" available="true">
-<categoryId></categoryId>
+<categoryId>9631600</categoryId>
 <vendorCode>CP10308520</vendorCode>
 <name>Тонер Canon T03 (2725C001) (оригинал)</name>
 <price>195900</price>
@@ -2832,7 +2832,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10991404" available="true">
-<categoryId></categoryId>
+<categoryId>9631642</categoryId>
 <vendorCode>CP10991404</vendorCode>
 <name>ИБП APC SRT1000RMXLI (SRT1000RMXLI)</name>
 <price>594900</price>
@@ -2870,7 +2870,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13853154" available="true">
-<categoryId></categoryId>
+<categoryId>9631642</categoryId>
 <vendorCode>CP13853154</vendorCode>
 <name>ИБП APC SRT1500XLI (SRT1500XLI)</name>
 <price>629900</price>
@@ -2907,7 +2907,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872259" available="true">
-<categoryId></categoryId>
+<categoryId>9631642</categoryId>
 <vendorCode>CP13872259</vendorCode>
 <name>ИБП APC SRT1500RMXLI (SRT1500RMXLI)</name>
 <price>642900</price>
@@ -2944,7 +2944,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10686385" available="true">
-<categoryId></categoryId>
+<categoryId>9631644</categoryId>
 <vendorCode>CP10686385</vendorCode>
 <name>Аккумулятор APC SRT48BP (SRT48BP)</name>
 <price>376900</price>
@@ -2973,7 +2973,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872229" available="true">
-<categoryId></categoryId>
+<categoryId>9631642</categoryId>
 <vendorCode>CP13872229</vendorCode>
 <name>ИБП APC SRV1KI (SRV1KI)</name>
 <price>171900</price>
@@ -3010,7 +3010,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10328175" available="true">
-<categoryId></categoryId>
+<categoryId>9631597</categoryId>
 <vendorCode>CP10328175</vendorCode>
 <name>Картридж HP W9103MC (W9103MC) (оригинал)</name>
 <price>76900</price>
@@ -3041,7 +3041,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP11151945" available="true">
-<categoryId></categoryId>
+<categoryId>9631642</categoryId>
 <vendorCode>CP11151945</vendorCode>
 <name>ИБП APC SMC3000RMI2U (SMC3000RMI2U)</name>
 <price>676900</price>
@@ -3079,7 +3079,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10486769" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP10486769</vendorCode>
 <name>Картридж Canon PFI-120 BLACK (2885C001) (оригинал)</name>
 <price>47900</price>
@@ -3110,7 +3110,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10495806" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP10495806</vendorCode>
 <name>Картридж Canon PFI-120 Cyan (2886C001) (оригинал)</name>
 <price>49900</price>
@@ -3141,7 +3141,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10477799" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP10477799</vendorCode>
 <name>Картридж Canon PFI-120 Magenta (2887C001) (оригинал)</name>
 <price>49900</price>
@@ -3172,7 +3172,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10495808" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP10495808</vendorCode>
 <name>Картридж Canon PFI-120 Yellow (2888C001) (оригинал)</name>
 <price>49900</price>
@@ -3203,7 +3203,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10309390" available="true">
-<categoryId></categoryId>
+<categoryId>9631615</categoryId>
 <vendorCode>CP10309390</vendorCode>
 <name>МФУ Canon i-SENSYS MF3010 (5252B034)</name>
 <price>172900</price>
@@ -3239,7 +3239,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10358738" available="true">
-<categoryId></categoryId>
+<categoryId>9631616</categoryId>
 <vendorCode>CP10358738</vendorCode>
 <name>Принтер HP LaserJet Enterprise M507dn (1PV87A#B19)</name>
 <price>250900</price>
@@ -3274,7 +3274,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870526" available="true">
-<categoryId></categoryId>
+<categoryId>9631602</categoryId>
 <vendorCode>CP13870526</vendorCode>
 <name>Печатающая головка Canon PF-06 (2352C001) (оригинал)</name>
 <price>290900</price>
@@ -3303,7 +3303,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10347834" available="true">
-<categoryId></categoryId>
+<categoryId>9631597</categoryId>
 <vendorCode>CP10347834</vendorCode>
 <name>Картридж HP CF259A / 59A (CF259A) (оригинал)</name>
 <price>62900</price>
@@ -3334,7 +3334,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10373984" available="true">
-<categoryId></categoryId>
+<categoryId>9631597</categoryId>
 <vendorCode>CP10373984</vendorCode>
 <name>Тонер-картридж Canon C-EXV 59 (3760C002) (оригинал)</name>
 <price>72900</price>
@@ -3364,7 +3364,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10416791" available="true">
-<categoryId></categoryId>
+<categoryId>9631615</categoryId>
 <vendorCode>CP10416791</vendorCode>
 <name>МФУ HP Color Laser 178nw (4ZB96A#B19)</name>
 <price>166900</price>
@@ -3401,7 +3401,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP11231732" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP11231732</vendorCode>
 <name>Картридж Canon PFI-320 (2891C001) (оригинал)</name>
 <price>99900</price>
@@ -3433,7 +3433,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10742851" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP10742851</vendorCode>
 <name>Картридж Canon PFI-320 (2890C001) (оригинал)</name>
 <price>99900</price>
@@ -3465,7 +3465,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10806653" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP10806653</vendorCode>
 <name>Картридж Canon PFI-710BK (2354C001) (оригинал)</name>
 <price>181900</price>
@@ -3497,7 +3497,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10736920" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP10736920</vendorCode>
 <name>Картридж Canon PFI-320 (2892C001) (оригинал)</name>
 <price>98900</price>
@@ -3529,7 +3529,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10811474" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP10811474</vendorCode>
 <name>Картридж Canon PFI-320 (2889C001) (оригинал)</name>
 <price>101900</price>
@@ -3561,7 +3561,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10736919" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP10736919</vendorCode>
 <name>Картридж Canon PFI-320 (2893C001) (оригинал)</name>
 <price>99900</price>
@@ -3593,7 +3593,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872050" available="true">
-<categoryId></categoryId>
+<categoryId>9631618</categoryId>
 <vendorCode>CP13872050</vendorCode>
 <name>Сканер Canon LIDE 300 (2995C010)</name>
 <price>50900</price>
@@ -3627,7 +3627,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10703230" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP10703230</vendorCode>
 <name>Картридж Canon PFI-710YL (2357C001) (оригинал)</name>
 <price>181900</price>
@@ -3659,7 +3659,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10703229" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP10703229</vendorCode>
 <name>Картридж Canon PFI-710M (2356C001) (оригинал)</name>
 <price>181900</price>
@@ -3691,7 +3691,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10704801" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP10704801</vendorCode>
 <name>Картридж Canon PFI-710C (2355C001) (оригинал)</name>
 <price>181900</price>
@@ -3723,7 +3723,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10720849" available="true">
-<categoryId></categoryId>
+<categoryId>9631597</categoryId>
 <vendorCode>CP10720849</vendorCode>
 <name>Картридж HP W2031A / 415A (W2031A) (оригинал)</name>
 <price>70900</price>
@@ -3754,7 +3754,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10720850" available="true">
-<categoryId></categoryId>
+<categoryId>9631597</categoryId>
 <vendorCode>CP10720850</vendorCode>
 <name>Картридж HP W2032A / 415A (W2032A) (оригинал)</name>
 <price>70900</price>
@@ -3785,7 +3785,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10578844" available="true">
-<categoryId></categoryId>
+<categoryId>9631616</categoryId>
 <vendorCode>CP10578844</vendorCode>
 <name>Принтер Canon i-SENSYS LBP6030B (8468B042)</name>
 <price>136900</price>
@@ -3820,7 +3820,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10678161" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP10678161</vendorCode>
 <name>Чернила HP GT53XL (1VV21AE) (оригинал)</name>
 <price>8900</price>
@@ -3862,7 +3862,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10798172" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP10798172</vendorCode>
 <name>Картридж HP P2V62A (P2V62A) (оригинал)</name>
 <price>51900</price>
@@ -3894,7 +3894,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10801857" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP10801857</vendorCode>
 <name>Картридж HP P2V64A (P2V64A) (оригинал)</name>
 <price>51900</price>
@@ -3926,7 +3926,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10832691" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP10832691</vendorCode>
 <name>Картридж HP P2V65A (P2V65A) (оригинал)</name>
 <price>51900</price>
@@ -3958,7 +3958,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10801858" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP10801858</vendorCode>
 <name>Картридж HP P2V66A (P2V66A) (оригинал)</name>
 <price>51900</price>
@@ -3990,7 +3990,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10789204" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP10789204</vendorCode>
 <name>Картридж HP P2V67A (P2V67A) (оригинал)</name>
 <price>51900</price>
@@ -4022,7 +4022,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10669578" available="true">
-<categoryId></categoryId>
+<categoryId>9631616</categoryId>
 <vendorCode>CP10669578</vendorCode>
 <name>Принтер HP Color Laser 150nw (4ZB95A#B19)</name>
 <price>137900</price>
@@ -4058,7 +4058,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10725204" available="true">
-<categoryId></categoryId>
+<categoryId>9631615</categoryId>
 <vendorCode>CP10725204</vendorCode>
 <name>МФУ HP Color Laser MFP 179fnw (4ZB97A#B19)</name>
 <price>188900</price>
@@ -4095,7 +4095,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10600974" available="true">
-<categoryId></categoryId>
+<categoryId>9631616</categoryId>
 <vendorCode>CP10600974</vendorCode>
 <name>Принтер HP LaserJet Enterprise M611dn (7PS84A#B19)</name>
 <price>429900</price>
@@ -4130,7 +4130,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10772654" available="true">
-<categoryId></categoryId>
+<categoryId>9631600</categoryId>
 <vendorCode>CP10772654</vendorCode>
 <name>Тонер Canon C-EXV60 (4311C001) (оригинал)</name>
 <price>24900</price>
@@ -4160,7 +4160,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP11337741" available="true">
-<categoryId></categoryId>
+<categoryId>9631597</categoryId>
 <vendorCode>CP11337741</vendorCode>
 <name>Картридж HP 207X (W2211X) (оригинал)</name>
 <price>67900</price>
@@ -4191,7 +4191,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13868903" available="true">
-<categoryId></categoryId>
+<categoryId>9631642</categoryId>
 <vendorCode>CP13868903</vendorCode>
 <name>ИБП APC BX750MI (BX750MI)</name>
 <price>50900</price>
@@ -4227,7 +4227,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13869829" available="true">
-<categoryId></categoryId>
+<categoryId>9631642</categoryId>
 <vendorCode>CP13869829</vendorCode>
 <name>ИБП APC BX950MI (BX950MI)</name>
 <price>75900</price>
@@ -4263,7 +4263,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13840825" available="true">
-<categoryId></categoryId>
+<categoryId>9631642</categoryId>
 <vendorCode>CP13840825</vendorCode>
 <name>ИБП APC BX950MI (BX950MI)</name>
 <price>65900</price>
@@ -4299,7 +4299,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13817039" available="true">
-<categoryId></categoryId>
+<categoryId>9631642</categoryId>
 <vendorCode>CP13817039</vendorCode>
 <name>ИБП APC BX1600MI-GR (BX1600MI-GR)</name>
 <price>94900</price>
@@ -4336,7 +4336,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13818987" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13818987</vendorCode>
 <name>Монитор Acer ED272Abix (UM.HE2EE.A01)</name>
 <price>122900</price>
@@ -4373,7 +4373,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10703299" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP10703299</vendorCode>
 <name>Картридж HP 843C PageWide XL (C1Q65A) (оригинал)</name>
 <price>52900</price>
@@ -4404,7 +4404,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10688037" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP10688037</vendorCode>
 <name>Картридж HP 843C PageWide XL (C1Q66A) (оригинал)</name>
 <price>79900</price>
@@ -4435,7 +4435,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10688038" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP10688038</vendorCode>
 <name>Картридж HP 843C PageWide XL (C1Q67A) (оригинал)</name>
 <price>79900</price>
@@ -4466,7 +4466,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10688039" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP10688039</vendorCode>
 <name>Картридж HP 843C PageWide XL (C1Q68A) (оригинал)</name>
 <price>79900</price>
@@ -4497,7 +4497,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10740881" available="true">
-<categoryId></categoryId>
+<categoryId>9631618</categoryId>
 <vendorCode>CP10740881</vendorCode>
 <name>Сканер HP ScanJet Pro 2000 s2 (6FW06A#B19)</name>
 <price>184900</price>
@@ -4530,7 +4530,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13820562" available="true">
-<categoryId></categoryId>
+<categoryId>9631618</categoryId>
 <vendorCode>CP13820562</vendorCode>
 <name>Сканер HP ScanJet Pro 3000 s4 (6FW07A#B19)</name>
 <price>248900</price>
@@ -4563,7 +4563,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13846250" available="true">
-<categoryId></categoryId>
+<categoryId>9631618</categoryId>
 <vendorCode>CP13846250</vendorCode>
 <name>Сканер HP ScanJet Pro N4000 snw1 (6FW08A#B19)</name>
 <price>303900</price>
@@ -4596,7 +4596,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10831590" available="true">
-<categoryId></categoryId>
+<categoryId>9631615</categoryId>
 <vendorCode>CP10831590</vendorCode>
 <name>МФУ HP LaserJet M442dn (8AF71A#B19)</name>
 <price>311900</price>
@@ -4631,7 +4631,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13873144" available="true">
-<categoryId></categoryId>
+<categoryId>9631615</categoryId>
 <vendorCode>CP13873144</vendorCode>
 <name>МФУ Canon i-SENSYS MF237W BUND(2 картриджа) (1418C170) (оригинал)</name>
 <price>212900</price>
@@ -4660,7 +4660,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13868634" available="true">
-<categoryId></categoryId>
+<categoryId>9631615</categoryId>
 <vendorCode>CP13868634</vendorCode>
 <name>МФУ Canon i-SENSYS MF237W BUND(2 картриджа) (1418C170) (оригинал)</name>
 <price>212900</price>
@@ -4697,7 +4697,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP11336876" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP11336876</vendorCode>
 <name>Картридж HP DesignJet (3ED67A) (оригинал)</name>
 <price>21900</price>
@@ -4729,7 +4729,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP11336878" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP11336878</vendorCode>
 <name>Картридж HP DesignJet (3ED68A) (оригинал)</name>
 <price>21900</price>
@@ -4761,7 +4761,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP11336877" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP11336877</vendorCode>
 <name>Картридж HP DesignJet (3ED69A) (оригинал)</name>
 <price>21900</price>
@@ -4793,7 +4793,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP11411676" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP11411676</vendorCode>
 <name>Картридж HP 963XL (3JA27AE#BGX) (оригинал)</name>
 <price>23900</price>
@@ -4825,7 +4825,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13760826" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP13760826</vendorCode>
 <name>Картридж HP 963XL (3JA28AE#BGX) (оригинал)</name>
 <price>23900</price>
@@ -4857,7 +4857,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13760827" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP13760827</vendorCode>
 <name>Картридж HP 963XL (3JA29AE#BGX) (оригинал)</name>
 <price>23900</price>
@@ -4889,7 +4889,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13760828" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP13760828</vendorCode>
 <name>Картридж HP 963XL (3JA30AE#BGX) (оригинал)</name>
 <price>29900</price>
@@ -4921,7 +4921,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10781136" available="true">
-<categoryId></categoryId>
+<categoryId>9631616</categoryId>
 <vendorCode>CP10781136</vendorCode>
 <name>Принтер HP LaserJet M211d (9YF82A#B19)</name>
 <price>81900</price>
@@ -4956,7 +4956,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP11021173" available="true">
-<categoryId></categoryId>
+<categoryId>9631616</categoryId>
 <vendorCode>CP11021173</vendorCode>
 <name>Принтер HP M211dw (9YF83A#B19)</name>
 <price>99900</price>
@@ -4991,7 +4991,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP11213803" available="true">
-<categoryId></categoryId>
+<categoryId>9631615</categoryId>
 <vendorCode>CP11213803</vendorCode>
 <name>МФУ HP M236d (9YF94A#B19)</name>
 <price>124900</price>
@@ -5025,7 +5025,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10791135" available="true">
-<categoryId></categoryId>
+<categoryId>9631615</categoryId>
 <vendorCode>CP10791135</vendorCode>
 <name>МФУ HP M236dw (9YF95A#B19)</name>
 <price>134900</price>
@@ -5059,7 +5059,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10794803" available="true">
-<categoryId></categoryId>
+<categoryId>9631615</categoryId>
 <vendorCode>CP10794803</vendorCode>
 <name>МФУ HP M236sdn (9YG08A#B19)</name>
 <price>136900</price>
@@ -5095,7 +5095,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10820899" available="true">
-<categoryId></categoryId>
+<categoryId>9631615</categoryId>
 <vendorCode>CP10820899</vendorCode>
 <name>МФУ HP M236sdw (9YG09A#B19)</name>
 <price>156900</price>
@@ -5130,7 +5130,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13842679" available="true">
-<categoryId></categoryId>
+<categoryId>9631602</categoryId>
 <vendorCode>CP13842679</vendorCode>
 <name>Печатающая головка HP 729 DesignJet Printhead Replacement Kit (F9J81A) (оригинал)</name>
 <price>270900</price>
@@ -5158,7 +5158,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13827515" available="true">
-<categoryId></categoryId>
+<categoryId>9631597</categoryId>
 <vendorCode>CP13827515</vendorCode>
 <name>Тонер-картридж Canon CRG (3025C002) (оригинал)</name>
 <price>54900</price>
@@ -5188,7 +5188,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13844328" available="true">
-<categoryId></categoryId>
+<categoryId>9631597</categoryId>
 <vendorCode>CP13844328</vendorCode>
 <name>Тонер-картридж Canon CRG (3026C002) (оригинал)</name>
 <price>53900</price>
@@ -5218,7 +5218,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP11222714" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP11222714</vendorCode>
 <name>Картридж HP 305 (3YM60AE#UUQ) (оригинал)</name>
 <price>9900</price>
@@ -5249,7 +5249,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP11067541" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP11067541</vendorCode>
 <name>Картридж HP 305 (3YM61AE#UUQ) (оригинал)</name>
 <price>9900</price>
@@ -5280,7 +5280,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP11416310" available="true">
-<categoryId></categoryId>
+<categoryId>9631637</categoryId>
 <vendorCode>CP11416310</vendorCode>
 <name>Моноблок Acer Aspire C24-1650 (DQ.BFTMC.00B)</name>
 <price>366900</price>
@@ -5335,7 +5335,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13760819" available="true">
-<categoryId></categoryId>
+<categoryId>9631597</categoryId>
 <vendorCode>CP13760819</vendorCode>
 <name>Тонер-картридж HP Black Original LaserJet (W1470A) (оригинал)</name>
 <price>113900</price>
@@ -5365,7 +5365,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13866500" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP13866500</vendorCode>
 <name>Картридж Canon GI-40 BK (3385C001) (оригинал)</name>
 <price>8900</price>
@@ -5397,7 +5397,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13871828" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13871828</vendorCode>
 <name>Монитор Dell U4021QW (210-AYJF)</name>
 <price>871900</price>
@@ -5436,7 +5436,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13858211" available="true">
-<categoryId></categoryId>
+<categoryId>9631597</categoryId>
 <vendorCode>CP13858211</vendorCode>
 <name>Картридж HP CF300AH (CF300AH) (оригинал)</name>
 <price>79900</price>
@@ -5467,7 +5467,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13846254" available="true">
-<categoryId></categoryId>
+<categoryId>9631618</categoryId>
 <vendorCode>CP13846254</vendorCode>
 <name>Сканер HP ScanJet Enterprise Flow 5000 s5 (6FW09A#B19)</name>
 <price>376900</price>
@@ -5502,7 +5502,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13817035" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13817035</vendorCode>
 <name>Монитор HP E14 G4 Portable (1B065AA#ABB)</name>
 <price>162900</price>
@@ -5540,7 +5540,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13582739" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13582739</vendorCode>
 <name>Монитор HP P34hc G4 WQHD (21Y56AA#ABB)</name>
 <price>216900</price>
@@ -5578,7 +5578,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13816809" available="true">
-<categoryId></categoryId>
+<categoryId>9631616</categoryId>
 <vendorCode>CP13816809</vendorCode>
 <name>Принтер HP LaserJet M111w (7MD68A#B19)</name>
 <price>71900</price>
@@ -5614,7 +5614,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP11385145" available="true">
-<categoryId></categoryId>
+<categoryId>9631616</categoryId>
 <vendorCode>CP11385145</vendorCode>
 <name>Принтер HP LaserJet M111w (7MD68A#B19)</name>
 <price>72900</price>
@@ -5650,7 +5650,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP12883861" available="true">
-<categoryId></categoryId>
+<categoryId>9631616</categoryId>
 <vendorCode>CP12883861</vendorCode>
 <name>Принтер HP LaserJet M111a (7MD67A#B19)</name>
 <price>66900</price>
@@ -5686,7 +5686,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP11387379" available="true">
-<categoryId></categoryId>
+<categoryId>9631615</categoryId>
 <vendorCode>CP11387379</vendorCode>
 <name>МФУ HP LaserJet MFP M141a (7MD73A#B19)</name>
 <price>83900</price>
@@ -5723,7 +5723,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP11387378" available="true">
-<categoryId></categoryId>
+<categoryId>9631615</categoryId>
 <vendorCode>CP11387378</vendorCode>
 <name>МФУ HP LaserJet MFP M141w (7MD74A#B19)</name>
 <price>96900</price>
@@ -5760,7 +5760,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13866768" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP13866768</vendorCode>
 <name>Картридж HP PageWide XL (C1Q53A) (оригинал)</name>
 <price>81900</price>
@@ -5792,7 +5792,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP11384632" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP11384632</vendorCode>
 <name>Картридж HP PageWide XL (3ED86A) (оригинал)</name>
 <price>62900</price>
@@ -5824,7 +5824,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP12905119" available="true">
-<categoryId></categoryId>
+<categoryId>9631597</categoryId>
 <vendorCode>CP12905119</vendorCode>
 <name>Картридж Canon CRG 064 M (4933C001) (оригинал)</name>
 <price>102900</price>
@@ -5855,7 +5855,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP12949146" available="true">
-<categoryId></categoryId>
+<categoryId>9631597</categoryId>
 <vendorCode>CP12949146</vendorCode>
 <name>Картридж Canon CRG 064 BK (4937C001) (оригинал)</name>
 <price>83900</price>
@@ -5886,7 +5886,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13873146" available="true">
-<categoryId></categoryId>
+<categoryId>9631615</categoryId>
 <vendorCode>CP13873146</vendorCode>
 <name>МФУ Canon i-SENSYS MF453dw (5161C007)</name>
 <price>208900</price>
@@ -5914,7 +5914,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP12943457" available="true">
-<categoryId></categoryId>
+<categoryId>9631615</categoryId>
 <vendorCode>CP12943457</vendorCode>
 <name>МФУ Canon i-SENSYS MF453dw (5161C007)</name>
 <price>208900</price>
@@ -5950,7 +5950,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13866763" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP13866763</vendorCode>
 <name>Картридж HP 842C PageWide XL (C1Q56A) (оригинал)</name>
 <price>108900</price>
@@ -5982,7 +5982,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870779" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13870779</vendorCode>
 <name>Ноутбук Acer Nitro 5 AN515-46 (NH.QGZER.003)</name>
 <price>721900</price>
@@ -6040,7 +6040,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13091733" available="true">
-<categoryId></categoryId>
+<categoryId>9631600</categoryId>
 <vendorCode>CP13091733</vendorCode>
 <name>Тонер Canon C-EXV 63 (5142C002) (оригинал)</name>
 <price>69900</price>
@@ -6070,7 +6070,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870639" available="true">
-<categoryId></categoryId>
+<categoryId>9631642</categoryId>
 <vendorCode>CP13870639</vendorCode>
 <name>ИБП APC SRTG20KXLI (SRTG20KXLI)</name>
 <price>5243900</price>
@@ -6101,7 +6101,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13525154" available="true">
-<categoryId></categoryId>
+<categoryId>9631642</categoryId>
 <vendorCode>CP13525154</vendorCode>
 <name>ИБП APC SRTG20KXLI (SRTG20KXLI)</name>
 <price>5244900</price>
@@ -6132,7 +6132,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13866815" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13866815</vendorCode>
 <name>Монитор Dell P2723QE (210-BDFZ)</name>
 <price>277900</price>
@@ -6170,7 +6170,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870788" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13870788</vendorCode>
 <name>Ноутбук Dell Vostro 5620 (210-BDBL-2)</name>
 <price>725900</price>
@@ -6228,7 +6228,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13866016" available="true">
-<categoryId></categoryId>
+<categoryId>9631637</categoryId>
 <vendorCode>CP13866016</vendorCode>
 <name>Моноблок Dell Optiplex 5400 AIO (210-BCUL)</name>
 <price>515900</price>
@@ -6282,7 +6282,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13831496" available="true">
-<categoryId></categoryId>
+<categoryId>9631642</categoryId>
 <vendorCode>CP13831496</vendorCode>
 <name>ИБП Eaton 9SX 1000i Rack2U (9SX1000IR)</name>
 <price>395900</price>
@@ -6318,7 +6318,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13816711" available="true">
-<categoryId></categoryId>
+<categoryId>9631642</categoryId>
 <vendorCode>CP13816711</vendorCode>
 <name>ИБП Eaton 9SX 1500i Rack2U (9SX1500IR)</name>
 <price>516900</price>
@@ -6354,7 +6354,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13831497" available="true">
-<categoryId></categoryId>
+<categoryId>9631642</categoryId>
 <vendorCode>CP13831497</vendorCode>
 <name>ИБП Eaton 9SX 2000i Rack2U (9SX2000IR)</name>
 <price>630900</price>
@@ -6389,7 +6389,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13831499" available="true">
-<categoryId></categoryId>
+<categoryId>9631644</categoryId>
 <vendorCode>CP13831499</vendorCode>
 <name>Аккумулятор Eaton 9SX EBM Rack2U (9SXEBM36R)</name>
 <price>201900</price>
@@ -6418,7 +6418,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13831500" available="true">
-<categoryId></categoryId>
+<categoryId>9631644</categoryId>
 <vendorCode>CP13831500</vendorCode>
 <name>Аккумулятор Eaton 9SX EBM Rack2U (9SXEBM48R)</name>
 <price>201900</price>
@@ -6476,7 +6476,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13760855" available="true">
-<categoryId></categoryId>
+<categoryId>9631642</categoryId>
 <vendorCode>CP13760855</vendorCode>
 <name>ИБП Eaton 5SC 2200i RT2U (5SC2200IRT)</name>
 <price>521900</price>
@@ -6511,7 +6511,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13760856" available="true">
-<categoryId></categoryId>
+<categoryId>9631642</categoryId>
 <vendorCode>CP13760856</vendorCode>
 <name>ИБП Eaton 5SC 2200i RT2U (5SC3000IRT)</name>
 <price>571900</price>
@@ -6546,7 +6546,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13850310" available="true">
-<categoryId></categoryId>
+<categoryId>9631618</categoryId>
 <vendorCode>CP13850310</vendorCode>
 <name>Сканер HP ScanJet Pro 3600 f1 (20G06A#B19)</name>
 <price>245900</price>
@@ -6581,7 +6581,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13503023" available="true">
-<categoryId></categoryId>
+<categoryId>9631597</categoryId>
 <vendorCode>CP13503023</vendorCode>
 <name>Тонер-картридж Canon imagePRESS Toner T07 (3641C001) (оригинал)</name>
 <price>103900</price>
@@ -6611,7 +6611,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13503020" available="true">
-<categoryId></categoryId>
+<categoryId>9631597</categoryId>
 <vendorCode>CP13503020</vendorCode>
 <name>Тонер-картридж Canon imagePRESS Toner T07 (3642C001) (оригинал)</name>
 <price>164900</price>
@@ -6641,7 +6641,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13503022" available="true">
-<categoryId></categoryId>
+<categoryId>9631597</categoryId>
 <vendorCode>CP13503022</vendorCode>
 <name>Тонер-картридж Canon imagePRESS Toner T07 (3643C001) (оригинал)</name>
 <price>164900</price>
@@ -6671,7 +6671,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13503021" available="true">
-<categoryId></categoryId>
+<categoryId>9631597</categoryId>
 <vendorCode>CP13503021</vendorCode>
 <name>Тонер-картридж Canon imagePRESS Toner T07 (3644C001) (оригинал)</name>
 <price>174900</price>
@@ -6701,7 +6701,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13503016" available="true">
-<categoryId></categoryId>
+<categoryId>9631597</categoryId>
 <vendorCode>CP13503016</vendorCode>
 <name>Тонер-картридж Canon T01 (8066B001) (оригинал)</name>
 <price>105900</price>
@@ -6731,7 +6731,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13867052" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13867052</vendorCode>
 <name>Ноутбук Dell Vostro 5620 (210-BDBL-6)</name>
 <price>539900</price>
@@ -6789,7 +6789,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13871094" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13871094</vendorCode>
 <name>Ноутбук Dell Vostro 7620 (210-BDVL-2)</name>
 <price>890900</price>
@@ -6847,7 +6847,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13760906" available="true">
-<categoryId></categoryId>
+<categoryId>9631615</categoryId>
 <vendorCode>CP13760906</vendorCode>
 <name>МФУ Canon i-SENSYS MF754Cdw (5455C023)</name>
 <price>295900</price>
@@ -6884,7 +6884,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13867053" available="true">
-<categoryId></categoryId>
+<categoryId>9631638</categoryId>
 <vendorCode>CP13867053</vendorCode>
 <name>Компьютер Dell OptiPlex 5000 (210-BCRM-3)</name>
 <price>370900</price>
@@ -6938,7 +6938,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13867056" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13867056</vendorCode>
 <name>Ноутбук Dell Vostro 3525 (210-BDRB-5)</name>
 <price>368900</price>
@@ -6996,7 +6996,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870789" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13870789</vendorCode>
 <name>Ноутбук Dell Vostro 5625 (210-BDFL-3)</name>
 <price>474900</price>
@@ -7055,7 +7055,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870790" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13870790</vendorCode>
 <name>Ноутбук Dell Vostro 5625 (210-BDFL-2)</name>
 <price>490900</price>
@@ -7114,7 +7114,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13867146" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13867146</vendorCode>
 <name>Ноутбук Dell Vostro 7620 (210-BDVL-5)</name>
 <price>795900</price>
@@ -7172,7 +7172,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13816838" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP13816838</vendorCode>
 <name>Картридж HP 3YM63AE (3YM63AE#UUQ) (оригинал)</name>
 <price>15900</price>
@@ -7203,7 +7203,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13871076" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13871076</vendorCode>
 <name>Ноутбук Acer Aspire 3 A315-58-51UE (NX.AL0ER.008)</name>
 <price>280900</price>
@@ -7259,7 +7259,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13871689" available="true">
-<categoryId></categoryId>
+<categoryId>9631620</categoryId>
 <vendorCode>CP13871689</vendorCode>
 <name>Проектор Acer H6830BD (MR.JVK11.001)</name>
 <price>581900</price>
@@ -7294,7 +7294,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13822475" available="true">
-<categoryId></categoryId>
+<categoryId>9631620</categoryId>
 <vendorCode>CP13822475</vendorCode>
 <name>Проектор Acer L812 (MR.JUZ11.001)</name>
 <price>1419900</price>
@@ -7331,7 +7331,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13760962" available="true">
-<categoryId></categoryId>
+<categoryId>9631615</categoryId>
 <vendorCode>CP13760962</vendorCode>
 <name>МФУ HP LaserJet Pro 4103dw (2Z627A#B19)</name>
 <price>197900</price>
@@ -7367,7 +7367,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13679866" available="true">
-<categoryId></categoryId>
+<categoryId>9631615</categoryId>
 <vendorCode>CP13679866</vendorCode>
 <name>МФУ HP LaserJet Pro 4103fdn (2Z628A#B19)</name>
 <price>211900</price>
@@ -7403,7 +7403,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13760963" available="true">
-<categoryId></categoryId>
+<categoryId>9631615</categoryId>
 <vendorCode>CP13760963</vendorCode>
 <name>МФУ HP LaserJet Pro MFP 4103fdw (2Z629A#B19)</name>
 <price>241900</price>
@@ -7439,7 +7439,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13871095" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13871095</vendorCode>
 <name>Ноутбук Dell Vostro 3420 (210-BDZW-3)</name>
 <price>397900</price>
@@ -7497,7 +7497,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13871085" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13871085</vendorCode>
 <name>Ноутбук Dell Vostro 3525 (210-BDRB-10)</name>
 <price>390900</price>
@@ -7555,7 +7555,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13871073" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13871073</vendorCode>
 <name>Монитор Acer Nitro XV272UZbmiipruzx (UM.HX2EE.Z01)</name>
 <price>317900</price>
@@ -7591,7 +7591,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13816864" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13816864</vendorCode>
 <name>Монитор Acer Vero V227QBbiv (UM.WV7EE.B11)</name>
 <price>46900</price>
@@ -7628,7 +7628,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13866223" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13866223</vendorCode>
 <name>Хранилище HPE MSA 1060 16Gb FC SFF Storage (R0Q85B)</name>
 <price>1129900</price>
@@ -7658,7 +7658,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13714886" available="true">
-<categoryId></categoryId>
+<categoryId>9631597</categoryId>
 <vendorCode>CP13714886</vendorCode>
 <name>Картридж HP 151X (W1510X) (оригинал)</name>
 <price>131900</price>
@@ -7688,7 +7688,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13771028" available="true">
-<categoryId></categoryId>
+<categoryId>9631615</categoryId>
 <vendorCode>CP13771028</vendorCode>
 <name>МФУ Canon i-SENSYS MF267dw II (5938C008)</name>
 <price>252900</price>
@@ -7722,7 +7722,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13696872" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP13696872</vendorCode>
 <name>Картридж Canon PFI-740 (4768C001) (оригинал)</name>
 <price>181900</price>
@@ -7753,7 +7753,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13696871" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP13696871</vendorCode>
 <name>Картридж Canon PFI-740 (4769C001) (оригинал)</name>
 <price>181900</price>
@@ -7784,7 +7784,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13695215" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP13695215</vendorCode>
 <name>Картридж Canon PFI-740 (4770C001) (оригинал)</name>
 <price>181900</price>
@@ -7815,7 +7815,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13695213" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP13695213</vendorCode>
 <name>Картридж Canon PFI-740 (4771C001) (оригинал)</name>
 <price>181900</price>
@@ -7846,7 +7846,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13695214" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP13695214</vendorCode>
 <name>Картридж Canon PFI-740 (4772C001) (оригинал)</name>
 <price>181900</price>
@@ -7905,7 +7905,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13866825" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13866825</vendorCode>
 <name>Монитор Dell Alienware AW3423DWF (210-BFRQ)</name>
 <price>615900</price>
@@ -7941,7 +7941,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13816309" available="true">
-<categoryId></categoryId>
+<categoryId>9631597</categoryId>
 <vendorCode>CP13816309</vendorCode>
 <name>Картридж Canon 067 (5101C002) (оригинал)</name>
 <price>45900</price>
@@ -7972,7 +7972,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13789159" available="true">
-<categoryId></categoryId>
+<categoryId>9631597</categoryId>
 <vendorCode>CP13789159</vendorCode>
 <name>Тонер-картридж HP W9090MC (W9090MC) (оригинал)</name>
 <price>55900</price>
@@ -8003,7 +8003,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13789165" available="true">
-<categoryId></categoryId>
+<categoryId>9631615</categoryId>
 <vendorCode>CP13789165</vendorCode>
 <name>МФУ HP LaserJet Pro 3103fdn (3G631A#B19)</name>
 <price>159900</price>
@@ -8039,7 +8039,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13816553" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP13816553</vendorCode>
 <name>Картридж HP 3YM62AE (3YM62AE#UUQ) (оригинал)</name>
 <price>17900</price>
@@ -8071,7 +8071,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13866828" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13866828</vendorCode>
 <name>Монитор Dell U4924DW (210-BGTX)</name>
 <price>817900</price>
@@ -8108,7 +8108,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13816868" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP13816868</vendorCode>
 <name>Картридж HP PageWide XL (3ED83A) (оригинал)</name>
 <price>99900</price>
@@ -8140,7 +8140,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13816870" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP13816870</vendorCode>
 <name>Картридж HP PageWide XL (3ED85A) (оригинал)</name>
 <price>99900</price>
@@ -8172,7 +8172,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13817003" available="true">
-<categoryId></categoryId>
+<categoryId>9631615</categoryId>
 <vendorCode>CP13817003</vendorCode>
 <name>МФУ Canon imageRUNNER ADVANCE DX C3926i (5963C005)</name>
 <price>2050900</price>
@@ -8209,7 +8209,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872560" available="true">
-<categoryId></categoryId>
+<categoryId>9631600</categoryId>
 <vendorCode>CP13872560</vendorCode>
 <name>Тонер Canon C-EXV 64 (5753C002) (оригинал)</name>
 <price>54900</price>
@@ -8237,7 +8237,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13817004" available="true">
-<categoryId></categoryId>
+<categoryId>9631600</categoryId>
 <vendorCode>CP13817004</vendorCode>
 <name>Тонер Canon C-EXV 64 (5753C002) (оригинал)</name>
 <price>63900</price>
@@ -8267,7 +8267,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872561" available="true">
-<categoryId></categoryId>
+<categoryId>9631600</categoryId>
 <vendorCode>CP13872561</vendorCode>
 <name>Тонер Canon C-EXV 64 (5754C002) (оригинал)</name>
 <price>98900</price>
@@ -8295,7 +8295,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13817005" available="true">
-<categoryId></categoryId>
+<categoryId>9631600</categoryId>
 <vendorCode>CP13817005</vendorCode>
 <name>Тонер Canon C-EXV 64 (5754C002) (оригинал)</name>
 <price>110900</price>
@@ -8325,7 +8325,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872562" available="true">
-<categoryId></categoryId>
+<categoryId>9631600</categoryId>
 <vendorCode>CP13872562</vendorCode>
 <name>Тонер Canon C-EXV 64 (5756C002) (оригинал)</name>
 <price>103900</price>
@@ -8353,7 +8353,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13817006" available="true">
-<categoryId></categoryId>
+<categoryId>9631600</categoryId>
 <vendorCode>CP13817006</vendorCode>
 <name>Тонер Canon C-EXV 64 (5756C002) (оригинал)</name>
 <price>110900</price>
@@ -8383,7 +8383,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872563" available="true">
-<categoryId></categoryId>
+<categoryId>9631600</categoryId>
 <vendorCode>CP13872563</vendorCode>
 <name>Тонер Canon C-EXV 64 (5755C002) (оригинал)</name>
 <price>98900</price>
@@ -8411,7 +8411,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13817007" available="true">
-<categoryId></categoryId>
+<categoryId>9631600</categoryId>
 <vendorCode>CP13817007</vendorCode>
 <name>Тонер Canon C-EXV 64 (5755C002) (оригинал)</name>
 <price>110900</price>
@@ -8441,7 +8441,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13817610" available="true">
-<categoryId></categoryId>
+<categoryId>9631615</categoryId>
 <vendorCode>CP13817610</vendorCode>
 <name>МФУ Canon imageRUNNER 2930i (5975C005AA)</name>
 <price>1899900</price>
@@ -8479,7 +8479,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13871088" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13871088</vendorCode>
 <name>Ноутбук Acer Predator Helios 300 PH315-55-57AH (NH.QGNER.004)</name>
 <price>836900</price>
@@ -8537,7 +8537,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13819517" available="true">
-<categoryId></categoryId>
+<categoryId>9631642</categoryId>
 <vendorCode>CP13819517</vendorCode>
 <name>ИБП Eaton 5PX 2200i RT3U G2 (5PX2200IRT3UG2)</name>
 <price>553900</price>
@@ -8571,7 +8571,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13866022" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13866022</vendorCode>
 <name>Ноутбук Dell Latitude 3540 (210-BGDW)</name>
 <price>415900</price>
@@ -8631,7 +8631,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13822436" available="true">
-<categoryId></categoryId>
+<categoryId>9631642</categoryId>
 <vendorCode>CP13822436</vendorCode>
 <name>ИБП Eaton 5PX 3000i RT2U (5PX3000IRT2UG2)</name>
 <price>929900</price>
@@ -8665,48 +8665,8 @@ URL поставщика                             | https://www.comportal.kz/
 <keywords>Eaton, ИБП Eaton 5PX 3000i RT2U (5PX3000IRT2UG2), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
-<offer id="CP13871695" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13871695</vendorCode>
-<name>Монитор Acer Nitro VG270Ebmiix (UM.HV0EE.E06)</name>
-<price>68900</price>
-<picture>https://www.comportal.kz/upload/iblock/e0f/5imduu0kjt04hf7p5ozoguwf09mgoqyg.JPG</picture>
-<vendor>Acer</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-<!-- Наименование товара -->
-<h3>Монитор Acer Nitro VG270Ebmiix (UM.HV0EE.E06)</h3>
-<!-- Описание -->
-<p>Монитор. Модельная серия: Nitro VG270Ebmiix. Диагональ: 27. Максимальное разрешение: 1920x1080. Тип матрицы: IPS. Частота обновления: 100. Время отклика: 4. Порты: 1xVGA/2xHDMI(1.4)/ Audio In Out. Гарантия: 24 мес.</p>
-<!-- WhatsApp -->
-<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
-<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><p style="text-align:center; margin:0 0 12px;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);">&#128172; Написать в WhatsApp</a></p></div>
-<hr style="border:none; border-top:2px solid #E7D6B7; margin:12px 0;" />
-<h3>Характеристики</h3><ul><li><strong>Время отклика:</strong> 4</li><li><strong>Гарантия:</strong> 24 мес</li><li><strong>Диагональ:</strong> 27</li><li><strong>Для бренда:</strong> Acer</li><li><strong>Коды:</strong> UM.HV0EE.E06</li><li><strong>Контрастность:</strong> 1000:1</li><li><strong>Максимальное разрешение:</strong> 1920x1080</li><li><strong>Модель:</strong> Nitro VG270Ebmiix</li><li><strong>Наличие динамиков:</strong> 2Wx2</li><li><strong>Порты:</strong> 1xVGA/2xHDMI(1.4)/ Audio In Out</li><li><strong>Размер Pix:</strong> 0,31</li><li><strong>Тип:</strong> Монитор</li><li><strong>Тип матрицы:</strong> IPS</li><li><strong>Углы обзора (вертикальный/горизонтальный):</strong> 178/178</li><li><strong>Цвет:</strong> Чёрный</li><li><strong>Частота обновления:</strong> 100</li><li><strong>Яркость:</strong> 250</li></ul>
-<!-- Оплата и доставка -->
-<div style="font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;"><div style="background:#FFF6E5; border:1px solid #F1E2C6; padding:12px 14px; border-radius:0; text-align:left;"><h3 style="margin:0 0 8px; font-size:17px;">Оплата</h3><ul style="margin:0; padding-left:18px;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000;"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul><hr style="border:none; border-top:1px solid #E7D6B7; margin:12px 0;" /><h3 style="margin:0 0 8px; font-size:17px;">Доставка по Алматы и Казахстану</h3><ul style="margin:0; padding-left:18px;"><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul></div></div>]]></description>
-<param name="Время отклика">4</param>
-<param name="Гарантия">24 мес</param>
-<param name="Диагональ">27</param>
-<param name="Для бренда">Acer</param>
-<param name="Коды">UM.HV0EE.E06</param>
-<param name="Контрастность">1000:1</param>
-<param name="Максимальное разрешение">1920x1080</param>
-<param name="Модель">Nitro VG270Ebmiix</param>
-<param name="Наличие динамиков">2Wx2</param>
-<param name="Порты">1xVGA/2xHDMI(1.4)/ Audio In Out</param>
-<param name="Размер Pix">0,31</param>
-<param name="Тип">Монитор</param>
-<param name="Тип матрицы">IPS</param>
-<param name="Углы обзора (вертикальный/горизонтальный)">178/178</param>
-<param name="Цвет">Чёрный</param>
-<param name="Частота обновления">100</param>
-<param name="Яркость">250</param>
-<keywords>Acer, Монитор Acer Nitro VG270Ebmiix (UM.HV0EE.E06), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
-</offer>
-
 <offer id="CP13853745" available="true">
-<categoryId></categoryId>
+<categoryId>9631642</categoryId>
 <vendorCode>CP13853745</vendorCode>
 <name>ИБП APC SRTG8KXLI (SRTG8KXLI)</name>
 <price>2254900</price>
@@ -8741,7 +8701,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13838559" available="true">
-<categoryId></categoryId>
+<categoryId>9631644</categoryId>
 <vendorCode>CP13838559</vendorCode>
 <name>ИБП APC SRV1KIL with External Battery Pack (SRV1KIL)</name>
 <price>248900</price>
@@ -8776,7 +8736,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13859878" available="true">
-<categoryId></categoryId>
+<categoryId>9631642</categoryId>
 <vendorCode>CP13859878</vendorCode>
 <name>ИБП APC SRV1KRILRK with Rail kit Batt pack ONLINE (SRV1KRILRK)</name>
 <price>447900</price>
@@ -8811,7 +8771,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13842899" available="true">
-<categoryId></categoryId>
+<categoryId>9631644</categoryId>
 <vendorCode>CP13842899</vendorCode>
 <name>ИБП APC SRV2KIL with External Battery Pack (SRV2KIL)</name>
 <price>389900</price>
@@ -8846,7 +8806,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13838560" available="true">
-<categoryId></categoryId>
+<categoryId>9631642</categoryId>
 <vendorCode>CP13838560</vendorCode>
 <name>ИБП APC SRV2KRILRK with Rail kit Batt pack ONLINE (SRV2KRILRK)</name>
 <price>502900</price>
@@ -8881,7 +8841,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13838562" available="true">
-<categoryId></categoryId>
+<categoryId>9631642</categoryId>
 <vendorCode>CP13838562</vendorCode>
 <name>ИБП APC SRV3KRILRK with Rail kit Batt pack ONLINE (SRV3KRILRK)</name>
 <price>637900</price>
@@ -8916,7 +8876,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13842900" available="true">
-<categoryId></categoryId>
+<categoryId>9631644</categoryId>
 <vendorCode>CP13842900</vendorCode>
 <name>ИБП APC SRV6KRILRK with External Battery Pack, with RailKit (SRV6KRILRK)</name>
 <price>979900</price>
@@ -9013,7 +8973,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872950" available="true">
-<categoryId></categoryId>
+<categoryId>9631615</categoryId>
 <vendorCode>CP13872950</vendorCode>
 <name>МФУ Canon imageRUNNER C3326i (5965C005)</name>
 <price>806900</price>
@@ -9041,7 +9001,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872564" available="true">
-<categoryId></categoryId>
+<categoryId>9631600</categoryId>
 <vendorCode>CP13872564</vendorCode>
 <name>Тонер Canon C-EXV 65 (5761C001) (оригинал)</name>
 <price>68900</price>
@@ -9069,7 +9029,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13835275" available="true">
-<categoryId></categoryId>
+<categoryId>9631600</categoryId>
 <vendorCode>CP13835275</vendorCode>
 <name>Тонер Canon C-EXV 65 (5761C001) (оригинал)</name>
 <price>53900</price>
@@ -9100,7 +9060,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872565" available="true">
-<categoryId></categoryId>
+<categoryId>9631600</categoryId>
 <vendorCode>CP13872565</vendorCode>
 <name>Тонер Canon C-EXV 65 (5762C001) (оригинал)</name>
 <price>97900</price>
@@ -9128,7 +9088,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13835276" available="true">
-<categoryId></categoryId>
+<categoryId>9631600</categoryId>
 <vendorCode>CP13835276</vendorCode>
 <name>Тонер Canon C-EXV 65 (5762C001) (оригинал)</name>
 <price>88900</price>
@@ -9159,7 +9119,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872566" available="true">
-<categoryId></categoryId>
+<categoryId>9631600</categoryId>
 <vendorCode>CP13872566</vendorCode>
 <name>Тонер Canon C-EXV 65 (5764C001) (оригинал)</name>
 <price>97900</price>
@@ -9187,7 +9147,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13835277" available="true">
-<categoryId></categoryId>
+<categoryId>9631600</categoryId>
 <vendorCode>CP13835277</vendorCode>
 <name>Тонер Canon C-EXV 65 (5764C001) (оригинал)</name>
 <price>88900</price>
@@ -9218,7 +9178,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872567" available="true">
-<categoryId></categoryId>
+<categoryId>9631600</categoryId>
 <vendorCode>CP13872567</vendorCode>
 <name>Тонер Canon C-EXV 65 (5763C001) (оригинал)</name>
 <price>97900</price>
@@ -9246,7 +9206,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13835278" available="true">
-<categoryId></categoryId>
+<categoryId>9631600</categoryId>
 <vendorCode>CP13835278</vendorCode>
 <name>Тонер Canon C-EXV 65 (5763C001) (оригинал)</name>
 <price>88900</price>
@@ -9277,7 +9237,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13866028" available="true">
-<categoryId></categoryId>
+<categoryId>9631638</categoryId>
 <vendorCode>CP13866028</vendorCode>
 <name>Компьютер Dell OptiPlex 7010 plus (210-BFWR-1)</name>
 <price>556900</price>
@@ -9332,7 +9292,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13832053" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13832053</vendorCode>
 <name>Монитор Dell U3824DW (210-BHXB)</name>
 <price>733900</price>
@@ -9372,7 +9332,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13834337" available="true">
-<categoryId></categoryId>
+<categoryId>9631615</categoryId>
 <vendorCode>CP13834337</vendorCode>
 <name>МФУ Canon I-SENSYS MF461DW (5951C020AA)</name>
 <price>270900</price>
@@ -9409,7 +9369,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13834574" available="true">
-<categoryId></categoryId>
+<categoryId>9631643</categoryId>
 <vendorCode>CP13834574</vendorCode>
 <name>ИБП APC SMT2200IC SmartConnect Port+SmartSlot, AVR, LCD (SMT2200IC)</name>
 <price>476900</price>
@@ -9445,7 +9405,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13834771" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13834771</vendorCode>
 <name>Ноутбук Acer PH3D15-71-99NY Predator Helios 3D 15 SpatialLabs Edition (NH.QLWER.002)</name>
 <price>1827900</price>
@@ -9503,7 +9463,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13835248" available="true">
-<categoryId></categoryId>
+<categoryId>9631642</categoryId>
 <vendorCode>CP13835248</vendorCode>
 <name>ИБП APC SRV2KRIRK SRV RM with RailKit (SRV2KRIRK)</name>
 <price>341900</price>
@@ -9535,7 +9495,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13835250" available="true">
-<categoryId></categoryId>
+<categoryId>9631644</categoryId>
 <vendorCode>CP13835250</vendorCode>
 <name>ИБП APC SRV10KRIRK SRV RM with RailKit, External Battery Pack (SRV10KRIRK)</name>
 <price>1083900</price>
@@ -9568,7 +9528,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13835253" available="true">
-<categoryId></categoryId>
+<categoryId>9631642</categoryId>
 <vendorCode>CP13835253</vendorCode>
 <name>ИБП APC SMT3000RMI2UC LCD RM 2U 230V with SmartConnect (SMT3000RMI2UC)</name>
 <price>706900</price>
@@ -9602,7 +9562,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13835256" available="true">
-<categoryId></categoryId>
+<categoryId>9631643</categoryId>
 <vendorCode>CP13835256</vendorCode>
 <name>ИБП APC BVX700LI-GR 230V, AVR, Schuko Sockets (BVX700LI-GR)</name>
 <price>44900</price>
@@ -9635,7 +9595,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13835257" available="true">
-<categoryId></categoryId>
+<categoryId>9631643</categoryId>
 <vendorCode>CP13835257</vendorCode>
 <name>ИБП APC BVX900LI-GR 230V, AVR, Schuko Sockets (BVX900LI-GR)</name>
 <price>56900</price>
@@ -9668,7 +9628,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13835258" available="true">
-<categoryId></categoryId>
+<categoryId>9631643</categoryId>
 <vendorCode>CP13835258</vendorCode>
 <name>ИБП APC BVX1200LI-GR 230V, AVR, Schuko Sockets</name>
 <price>72900</price>
@@ -9700,7 +9660,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13835259" available="true">
-<categoryId></categoryId>
+<categoryId>9631643</categoryId>
 <vendorCode>CP13835259</vendorCode>
 <name>ИБП APC BVX1600LI-GR 230V, AVR, Schuko Sockets (BVX1600LI-GR)</name>
 <price>96900</price>
@@ -9734,7 +9694,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13835280" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP13835280</vendorCode>
 <name>Картридж HP 3YM74AE (3YM74AE#BHK) (оригинал)</name>
 <price>9900</price>
@@ -9766,7 +9726,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13835281" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP13835281</vendorCode>
 <name>Картридж HP 3YM75AE (3YM75AE#BHK) (оригинал)</name>
 <price>11900</price>
@@ -9798,7 +9758,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13850377" available="true">
-<categoryId></categoryId>
+<categoryId>9631643</categoryId>
 <vendorCode>CP13850377</vendorCode>
 <name>ИБП APC SMT1500RMI2UC 230V, 4x IEC C13 outlets, SmartConnect Port+SmartSlot, AVR, LCD (SMT1500RMI2UC)</name>
 <price>501900</price>
@@ -9833,7 +9793,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13842525" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13842525</vendorCode>
 <name>Ноутбук Acer SFX16-61G-R12Z Swift X 16 (NX.KFPER.001)</name>
 <price>726900</price>
@@ -9890,7 +9850,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13839973" available="true">
-<categoryId></categoryId>
+<categoryId>9631615</categoryId>
 <vendorCode>CP13839973</vendorCode>
 <name>МФУ Canon MF272DW (5621C013)</name>
 <price>175900</price>
@@ -9926,7 +9886,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13866892" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13866892</vendorCode>
 <name>Монитор Dell P2424HT Touch (210-BHSK)</name>
 <price>229900</price>
@@ -9964,7 +9924,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13841414" available="true">
-<categoryId></categoryId>
+<categoryId>9631643</categoryId>
 <vendorCode>CP13841414</vendorCode>
 <name>ИБП APC SMT2200RMI2UC 230V, 8x IEC C13+2x IEC C19 outlets, SmartConnect Port+SmartSlot, AVR, LCD (SMT2200RMI2UC)</name>
 <price>645900</price>
@@ -10000,7 +9960,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13843628" available="true">
-<categoryId></categoryId>
+<categoryId>9631616</categoryId>
 <vendorCode>CP13843628</vendorCode>
 <name>Принтер HP LaserJet Pro 4203dn (4RA89A#B19)</name>
 <price>218900</price>
@@ -10036,7 +9996,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13843630" available="true">
-<categoryId></categoryId>
+<categoryId>9631615</categoryId>
 <vendorCode>CP13843630</vendorCode>
 <name>МФУ HP LaserJet M141cw</name>
 <price>75900</price>
@@ -10071,7 +10031,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13843637" available="true">
-<categoryId></categoryId>
+<categoryId>9631615</categoryId>
 <vendorCode>CP13843637</vendorCode>
 <name>МФУ HP Color LaserJet Pro 4303dw (5HH65A#B19)</name>
 <price>262900</price>
@@ -10108,7 +10068,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13845109" available="true">
-<categoryId></categoryId>
+<categoryId>9631616</categoryId>
 <vendorCode>CP13845109</vendorCode>
 <name>Принтер HP LaserJet Pro 3003dn (3G653A#B19)</name>
 <price>101900</price>
@@ -10143,7 +10103,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13845110" available="true">
-<categoryId></categoryId>
+<categoryId>9631615</categoryId>
 <vendorCode>CP13845110</vendorCode>
 <name>МФУ HP LaserJet Pro 3103fdw (3G632A#B19)</name>
 <price>175900</price>
@@ -10179,7 +10139,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13845111" available="true">
-<categoryId></categoryId>
+<categoryId>9631616</categoryId>
 <vendorCode>CP13845111</vendorCode>
 <name>Принтер HP LaserJet Pro 3003dw (3G654A#B19)</name>
 <price>107900</price>
@@ -10214,7 +10174,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13846405" available="true">
-<categoryId></categoryId>
+<categoryId>9631615</categoryId>
 <vendorCode>CP13846405</vendorCode>
 <name>МФУ HP Smart Tank 520 (1F3W2A#671)</name>
 <price>99900</price>
@@ -10250,7 +10210,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13846631" available="true">
-<categoryId></categoryId>
+<categoryId>9631642</categoryId>
 <vendorCode>CP13846631</vendorCode>
 <name>ИБП Eaton 9PX 5000i RT3U Netpack (9PX5KiRTN)</name>
 <price>1927900</price>
@@ -10282,7 +10242,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13846841" available="true">
-<categoryId></categoryId>
+<categoryId>9631615</categoryId>
 <vendorCode>CP13846841</vendorCode>
 <name>МФУ Canon imageRUNNER ADVANCE DX C3926I (5963C005 / bundle)</name>
 <price>2705900</price>
@@ -10320,7 +10280,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13846857" available="true">
-<categoryId></categoryId>
+<categoryId>9631597</categoryId>
 <vendorCode>CP13846857</vendorCode>
 <name>Картридж Canon 070H (5640C002) (оригинал)</name>
 <price>94900</price>
@@ -10351,7 +10311,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13846858" available="true">
-<categoryId></categoryId>
+<categoryId>9631597</categoryId>
 <vendorCode>CP13846858</vendorCode>
 <name>Картридж Canon 070 (5639C002) (оригинал)</name>
 <price>52900</price>
@@ -10382,7 +10342,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13847754" available="true">
-<categoryId></categoryId>
+<categoryId>9631617</categoryId>
 <vendorCode>CP13847754</vendorCode>
 <name>Плоттер Canon imagePROGRAF TM-240 (6242C003)</name>
 <price>377900</price>
@@ -10416,7 +10376,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13847755" available="true">
-<categoryId></categoryId>
+<categoryId>9631617</categoryId>
 <vendorCode>CP13847755</vendorCode>
 <name>Плоттер Canon imagePROGRAF TM-340 (6248C003)</name>
 <price>509900</price>
@@ -10450,7 +10410,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13847756" available="true">
-<categoryId></categoryId>
+<categoryId>9631617</categoryId>
 <vendorCode>CP13847756</vendorCode>
 <name>Плоттер Canon imagePROGRAF TM-350 (6246C003)</name>
 <price>800900</price>
@@ -10484,7 +10444,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13847758" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP13847758</vendorCode>
 <name>Картридж Canon Ink PFI-030 (3489C001) (оригинал)</name>
 <price>34900</price>
@@ -10515,7 +10475,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13847759" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP13847759</vendorCode>
 <name>Картридж Canon Ink PFI-030 (3490C001) (оригинал)</name>
 <price>35900</price>
@@ -10546,7 +10506,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13847761" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP13847761</vendorCode>
 <name>Картридж Canon Ink PFI-030 (3492C001) (оригинал)</name>
 <price>35900</price>
@@ -10577,7 +10537,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13848726" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP13848726</vendorCode>
 <name>Чернила Canon PFI-121 (6267C001) (оригинал)</name>
 <price>55900</price>
@@ -10608,7 +10568,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13850427" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13850427</vendorCode>
 <name>Монитор Acer Nitro VG270KLbmiipx (UM.HS2EE.E25)</name>
 <price>103900</price>
@@ -10648,7 +10608,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13871701" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13871701</vendorCode>
 <name>Монитор Acer Nitro XF273M3bmiiprx (UM.HX3EE.302)</name>
 <price>98900</price>
@@ -10687,7 +10647,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13871694" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13871694</vendorCode>
 <name>Монитор Acer Nitro XV345CURV3bmiphuzx (UM.CX5EE.301)</name>
 <price>201900</price>
@@ -10726,7 +10686,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13866838" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13866838</vendorCode>
 <name>Монитор Dell U2424H (210-BKTZ)</name>
 <price>145900</price>
@@ -10763,7 +10723,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13853521" available="true">
-<categoryId></categoryId>
+<categoryId>9631597</categoryId>
 <vendorCode>CP13853521</vendorCode>
 <name>Картридж Canon LBP CARTRIDGE 071 (5645C002) (оригинал)</name>
 <price>34900</price>
@@ -10793,7 +10753,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13857177" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP13857177</vendorCode>
 <name>Картридж Canon Ink PFI-050 (5698C001) (оригинал)</name>
 <price>44900</price>
@@ -10824,7 +10784,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13857178" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP13857178</vendorCode>
 <name>Картридж Canon Ink PFI-050 (5699C001) (оригинал)</name>
 <price>44900</price>
@@ -10855,7 +10815,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13857179" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP13857179</vendorCode>
 <name>Картридж Canon Ink PFI-050 (5700C001) (оригинал)</name>
 <price>44900</price>
@@ -10886,7 +10846,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13857180" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP13857180</vendorCode>
 <name>Картридж Canon Ink PFI-050 (5701C001) (оригинал)</name>
 <price>44900</price>
@@ -10917,7 +10877,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13858805" available="true">
-<categoryId></categoryId>
+<categoryId>9631642</categoryId>
 <vendorCode>CP13858805</vendorCode>
 <name>ИБП Eaton Offline 3S Gen2 (3S700D)</name>
 <price>48900</price>
@@ -10950,7 +10910,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13858807" available="true">
-<categoryId></categoryId>
+<categoryId>9631642</categoryId>
 <vendorCode>CP13858807</vendorCode>
 <name>ИБП Eaton 3S 550 DIN (3S550D)</name>
 <price>55900</price>
@@ -10986,7 +10946,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13858811" available="true">
-<categoryId></categoryId>
+<categoryId>9631642</categoryId>
 <vendorCode>CP13858811</vendorCode>
 <name>ИБП Eaton 9E (9E1000I)</name>
 <price>230900</price>
@@ -11024,7 +10984,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872829" available="true">
-<categoryId></categoryId>
+<categoryId>9631620</categoryId>
 <vendorCode>CP13872829</vendorCode>
 <name>Проектор Acer X1328WHn (MR.JX211.001)</name>
 <price>263900</price>
@@ -11052,7 +11012,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13858832" available="true">
-<categoryId></categoryId>
+<categoryId>9631642</categoryId>
 <vendorCode>CP13858832</vendorCode>
 <name>ИБП Eaton 9E (9E2000I)</name>
 <price>341900</price>
@@ -11090,7 +11050,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13858833" available="true">
-<categoryId></categoryId>
+<categoryId>9631642</categoryId>
 <vendorCode>CP13858833</vendorCode>
 <name>ИБП Eaton 9E (9E3000I)</name>
 <price>447900</price>
@@ -11128,7 +11088,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13866488" available="true">
-<categoryId></categoryId>
+<categoryId>9631642</categoryId>
 <vendorCode>CP13866488</vendorCode>
 <name>ИБП Eaton 9E (9E2000IR)</name>
 <price>404900</price>
@@ -11165,7 +11125,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13858835" available="true">
-<categoryId></categoryId>
+<categoryId>9631642</categoryId>
 <vendorCode>CP13858835</vendorCode>
 <name>ИБП Eaton 9E (9E3000IR)</name>
 <price>768900</price>
@@ -11203,7 +11163,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13858841" available="true">
-<categoryId></categoryId>
+<categoryId>9631597</categoryId>
 <vendorCode>CP13858841</vendorCode>
 <name>Картридж HP CF301AH (CF301AH) (оригинал)</name>
 <price>349900</price>
@@ -11234,7 +11194,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13858842" available="true">
-<categoryId></categoryId>
+<categoryId>9631597</categoryId>
 <vendorCode>CP13858842</vendorCode>
 <name>Картридж HP CF302AH (CF302AH) (оригинал)</name>
 <price>349900</price>
@@ -11265,7 +11225,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13866839" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13866839</vendorCode>
 <name>Монитор Dell P2724DEB / 27 Video Conferencing Monitor (210-BFMZ)</name>
 <price>279900</price>
@@ -11304,7 +11264,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870381" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13870381</vendorCode>
 <name>Ноутбук Dell Vostro 3520 (210-BECX_N3002PVNB3520EMEA01)</name>
 <price>363900</price>
@@ -11361,7 +11321,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870382" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13870382</vendorCode>
 <name>Ноутбук Dell Vostro 3530 (210-BGLW-N1605PVNB3530EMEA01_UBU)</name>
 <price>412900</price>
@@ -11417,7 +11377,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13861561" available="true">
-<categoryId></categoryId>
+<categoryId>9631615</categoryId>
 <vendorCode>CP13861561</vendorCode>
 <name>МФУ HP LaserJet 5800dn (6QN29A#B19)</name>
 <price>766900</price>
@@ -11455,7 +11415,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13862015" available="true">
-<categoryId></categoryId>
+<categoryId>9631597</categoryId>
 <vendorCode>CP13862015</vendorCode>
 <name>Тонер-картридж HP 145A (W1450A) (оригинал)</name>
 <price>45900</price>
@@ -11486,7 +11446,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13862600" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP13862600</vendorCode>
 <name>Картридж Canon PFI-340 (4776C001) (оригинал)</name>
 <price>84900</price>
@@ -11517,7 +11477,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13866541" available="true">
-<categoryId></categoryId>
+<categoryId>9631639</categoryId>
 <vendorCode>CP13866541</vendorCode>
 <name>Мобильная рабочая станция Dell Precision 3590 (210-BLMX_N002P3590EMEA_VP)</name>
 <price>1049900</price>
@@ -11574,7 +11534,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13866544" available="true">
-<categoryId></categoryId>
+<categoryId>9631638</categoryId>
 <vendorCode>CP13866544</vendorCode>
 <name>Компьютер Dell Vostro 3030 (210-BKVT-5)</name>
 <price>325900</price>
@@ -11625,7 +11585,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870490" available="true">
-<categoryId></categoryId>
+<categoryId>9631638</categoryId>
 <vendorCode>CP13870490</vendorCode>
 <name>Компьютер Dell Vostro 3030 (210-BKVT_N2016VDT3030MTEMEA01)</name>
 <price>506900</price>
@@ -11678,7 +11638,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13863653" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13863653</vendorCode>
 <name>Монитор Dell P2425 (210-BMJD)</name>
 <price>112900</price>
@@ -11716,7 +11676,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13863654" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13863654</vendorCode>
 <name>Монитор Dell Pro 24 Plus P2425H (210-BMFF)</name>
 <price>103900</price>
@@ -11754,7 +11714,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13866844" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13866844</vendorCode>
 <name>Монитор Dell S2425HS (210-BMHH)</name>
 <price>90900</price>
@@ -11793,7 +11753,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13866845" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13866845</vendorCode>
 <name>Монитор Dell S2725H (210-BMHK)</name>
 <price>98900</price>
@@ -11832,7 +11792,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13866846" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13866846</vendorCode>
 <name>Монитор Dell S2725HS (210-BMHG)</name>
 <price>104900</price>
@@ -11871,7 +11831,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13863659" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13863659</vendorCode>
 <name>Монитор Dell P2425E USB-C (210-BMJF)</name>
 <price>154900</price>
@@ -11909,7 +11869,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13866848" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13866848</vendorCode>
 <name>Монитор Dell P2425HE USB-C (210-BMJB)</name>
 <price>144900</price>
@@ -11947,7 +11907,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13863660" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13863660</vendorCode>
 <name>Монитор Dell P2425HE USB-C (210-BMJB)</name>
 <price>139900</price>
@@ -11985,7 +11945,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13866849" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13866849</vendorCode>
 <name>Монитор Dell P2725H (210-BMGC)</name>
 <price>118900</price>
@@ -12023,7 +11983,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13863665" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13863665</vendorCode>
 <name>Монитор Dell U4025QW USB-C (210-BMDV)</name>
 <price>1008900</price>
@@ -12062,7 +12022,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872947" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13872947</vendorCode>
 <name>Ноутбук Dell Vostro 3530 (210-BGLW-N1601PVNB3530EMEA01_UBU)</name>
 <price>388900</price>
@@ -12090,7 +12050,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13864290" available="true">
-<categoryId></categoryId>
+<categoryId>9631597</categoryId>
 <vendorCode>CP13864290</vendorCode>
 <name>Картридж HP CF303AH / 827H Contract Original Toner Cartridge (CF303AH) (оригинал)</name>
 <price>349900</price>
@@ -12120,7 +12080,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13864621" available="true">
-<categoryId></categoryId>
+<categoryId>9631615</categoryId>
 <vendorCode>CP13864621</vendorCode>
 <name>МФУ HP Color LaserJet 5800zf (58R10A#B19)</name>
 <price>1397900</price>
@@ -12158,7 +12118,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13864638" available="true">
-<categoryId></categoryId>
+<categoryId>9631616</categoryId>
 <vendorCode>CP13864638</vendorCode>
 <name>Принтер HP Color LaserJet Pro 3203dw (499N4A#B19)</name>
 <price>166900</price>
@@ -12194,7 +12154,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13864639" available="true">
-<categoryId></categoryId>
+<categoryId>9631616</categoryId>
 <vendorCode>CP13864639</vendorCode>
 <name>Принтер HP Color LaserJet Pro 3203dn (8D7L2A#B19)</name>
 <price>172900</price>
@@ -12230,7 +12190,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13864728" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13864728</vendorCode>
 <name>Монитор HP S7 Pro 738pu +Thunderbolt 4 (8K167AA#ABB)</name>
 <price>560900</price>
@@ -12266,7 +12226,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13866557" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13866557</vendorCode>
 <name>Ноутбук Dell Vostro 3530 (210-BGLW-N3404PVNB3530EMEA01_UBU)</name>
 <price>324900</price>
@@ -12321,7 +12281,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13866492" available="true">
-<categoryId></categoryId>
+<categoryId>9631616</categoryId>
 <vendorCode>CP13866492</vendorCode>
 <name>Принтер Canon i-SENSYS LBP673Cdw CIS (5456C020)</name>
 <price>198900</price>
@@ -12357,7 +12317,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870176" available="true">
-<categoryId></categoryId>
+<categoryId>9631647</categoryId>
 <vendorCode>CP13870176</vendorCode>
 <name>Кабель Canon 8985B013 (8985B013)</name>
 <price>6900</price>
@@ -12414,7 +12374,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872230" available="true">
-<categoryId></categoryId>
+<categoryId>9631617</categoryId>
 <vendorCode>CP13872230</vendorCode>
 <name>Плоттер HP DesignJet T830 / 24" (F9A28D#B19)</name>
 <price>1497900</price>
@@ -12448,7 +12408,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13866859" available="true">
-<categoryId></categoryId>
+<categoryId>9631615</categoryId>
 <vendorCode>CP13866859</vendorCode>
 <name>МФУ Canon imageRUNNER C3326i (5965C005 / bundle)</name>
 <price>1140900</price>
@@ -12485,7 +12445,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870391" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13870391</vendorCode>
 <name>Ноутбук Dell Vostro 3530 (210-BGLW-N1605QVNB3530EMEA01)</name>
 <price>476900</price>
@@ -12546,7 +12506,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872357" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP13872357</vendorCode>
 <name>Чернила Canon INK GI-40 C (3400C001) (оригинал)</name>
 <price>6900</price>
@@ -12579,7 +12539,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872652" available="true">
-<categoryId></categoryId>
+<categoryId>9631597</categoryId>
 <vendorCode>CP13872652</vendorCode>
 <name>Чернила Canon INK GI-40 M (3401C001) (оригинал)</name>
 <price>6900</price>
@@ -12607,7 +12567,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870401" available="true">
-<categoryId></categoryId>
+<categoryId>9631597</categoryId>
 <vendorCode>CP13870401</vendorCode>
 <name>Чернила Canon INK GI-40 Y (3402C001) (оригинал)</name>
 <price>6900</price>
@@ -12635,7 +12595,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13867135" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13867135</vendorCode>
 <name>Ноутбук ASUS B1502CVA-BQ0897X (90NX06X1-M01150)</name>
 <price>358900</price>
@@ -12692,7 +12652,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13869291" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13869291</vendorCode>
 <name>Ноутбук Dell Vostro 3530 (210-BGLW-N1605QVNB3530EMEA01_UBU)</name>
 <price>375900</price>
@@ -12754,7 +12714,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13869655" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13869655</vendorCode>
 <name>Ноутбук Dell Latitude 3550 (210-BLRD_N006L355015EMEA_VP_UBU)</name>
 <price>417900</price>
@@ -12816,7 +12776,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870493" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13870493</vendorCode>
 <name>Ноутбук Dell Latitude 5550 (210-BLMN_N007L555015EMEA_VP)</name>
 <price>686900</price>
@@ -12880,7 +12840,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870494" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13870494</vendorCode>
 <name>Ноутбук Dell Latitude 5550 (210-BLMN_N015L555015EMEA_VP)</name>
 <price>806900</price>
@@ -12944,7 +12904,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13869656" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13869656</vendorCode>
 <name>Ноутбук Dell Latitude 3550 (210-BLRD_N004L355015EMEA_VP)</name>
 <price>423900</price>
@@ -13008,7 +12968,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870470" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13870470</vendorCode>
 <name>Ноутбук HP 250R G9 (A37RJET#UUQ)</name>
 <price>396900</price>
@@ -13066,7 +13026,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13869734" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13869734</vendorCode>
 <name>Кабель Poly 89L85AA (89L85AA)</name>
 <price>132900</price>
@@ -13094,7 +13054,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870484" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13870484</vendorCode>
 <name>Монитор Dell E2425H (210-BNJN)</name>
 <price>64900</price>
@@ -13136,7 +13096,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870489" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13870489</vendorCode>
 <name>Монитор Dell P2425HE (210-BMTC)</name>
 <price>132900</price>
@@ -13175,7 +13135,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13869155" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13869155</vendorCode>
 <name>Ноутбук Dell Latitude 5550 (210-BLYZ_12)</name>
 <price>744900</price>
@@ -13235,7 +13195,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13869161" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13869161</vendorCode>
 <name>Ноутбук Dell Latitude 7650 (210-BLQN_2)</name>
 <price>766900</price>
@@ -13294,7 +13254,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13869162" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13869162</vendorCode>
 <name>Ноутбук Dell Latitude 7650 (210-BLQN_3)</name>
 <price>942900</price>
@@ -13353,7 +13313,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13871826" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13871826</vendorCode>
 <name>Монитор Acer Predator XB323QKV3bmiiphx (UM.JX3EE.301)</name>
 <price>311900</price>
@@ -13391,7 +13351,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13871713" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13871713</vendorCode>
 <name>Монитор Acer Nitro XV270X1bmiipx (UM.HX1EE.101)</name>
 <price>97900</price>
@@ -13429,7 +13389,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13871703" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13871703</vendorCode>
 <name>Монитор Acer Nitro XF270X1biiph (UM.HX0EE.101)</name>
 <price>83900</price>
@@ -13467,7 +13427,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13871706" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13871706</vendorCode>
 <name>Монитор Acer Vero RS272G0bpamix (UM.HR2EE.026)</name>
 <price>70900</price>
@@ -13505,7 +13465,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13871708" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13871708</vendorCode>
 <name>Монитор Acer KA272Gbip (UM.HX2EE.G05)</name>
 <price>64900</price>
@@ -13543,7 +13503,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13871710" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13871710</vendorCode>
 <name>Монитор Acer SB272Ebmix (UM.HS2EE.E05)</name>
 <price>65900</price>
@@ -13581,7 +13541,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13871711" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13871711</vendorCode>
 <name>Монитор Acer KA272UEbmiipx (UM.HX2EE.E25)</name>
 <price>93900</price>
@@ -13619,7 +13579,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870600" available="true">
-<categoryId></categoryId>
+<categoryId>9631645</categoryId>
 <vendorCode>CP13870600</vendorCode>
 <name>ИБП Astergo AST.UPS.ORT1000IB1U (AST.UPS.ORT1000IB1U)</name>
 <price>247900</price>
@@ -13652,7 +13612,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870601" available="true">
-<categoryId></categoryId>
+<categoryId>9631645</categoryId>
 <vendorCode>CP13870601</vendorCode>
 <name>ИБП Astergo AST.UPS.LRT800VS2U (AST.UPS.LRT800VS2U)</name>
 <price>167900</price>
@@ -13686,7 +13646,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870602" available="true">
-<categoryId></categoryId>
+<categoryId>9631645</categoryId>
 <vendorCode>CP13870602</vendorCode>
 <name>ИБП Astergo AST.UPS.LRT1100VS2U (AST.UPS.LRT1100VS2U)</name>
 <price>196900</price>
@@ -13720,7 +13680,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870603" available="true">
-<categoryId></categoryId>
+<categoryId>9631645</categoryId>
 <vendorCode>CP13870603</vendorCode>
 <name>ИБП Astergo AST.UPS.LRT2000VS2U (AST.UPS.LRT2000VS2U)</name>
 <price>253900</price>
@@ -13754,7 +13714,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870604" available="true">
-<categoryId></categoryId>
+<categoryId>9631645</categoryId>
 <vendorCode>CP13870604</vendorCode>
 <name>ИБП Astergo AST.UPS.LRT3000VS2U (AST.UPS.LRT3000VS2U)</name>
 <price>310900</price>
@@ -13788,7 +13748,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870605" available="true">
-<categoryId></categoryId>
+<categoryId>9631645</categoryId>
 <vendorCode>CP13870605</vendorCode>
 <name>ИБП Astergo AST.UPS.PGO2000LCD2U (AST.UPS.PGO2000LCD2U)</name>
 <price>287900</price>
@@ -13822,7 +13782,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870606" available="true">
-<categoryId></categoryId>
+<categoryId>9631645</categoryId>
 <vendorCode>CP13870606</vendorCode>
 <name>ИБП Astergo AST.UPS.PGO3000LCD2U (AST.UPS.PGO3000LCD2U)</name>
 <price>352900</price>
@@ -13856,7 +13816,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870607" available="true">
-<categoryId></categoryId>
+<categoryId>9631645</categoryId>
 <vendorCode>CP13870607</vendorCode>
 <name>ИБП Astergo AST.UPS.PGO6KLCD2U (AST.UPS.PGO6KLCD2U)</name>
 <price>523900</price>
@@ -13889,7 +13849,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870608" available="true">
-<categoryId></categoryId>
+<categoryId>9631645</categoryId>
 <vendorCode>CP13870608</vendorCode>
 <name>ИБП Astergo AST.UPS.PGO10KLCD2U (AST.UPS.PGO10KLCD2U)</name>
 <price>636900</price>
@@ -13980,7 +13940,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870613" available="true">
-<categoryId></categoryId>
+<categoryId>9631645</categoryId>
 <vendorCode>CP13870613</vendorCode>
 <name>ИБП Astergo AST.UPS.PGOT1000 (AST.UPS.PGOT1000)</name>
 <price>178900</price>
@@ -14013,7 +13973,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870614" available="true">
-<categoryId></categoryId>
+<categoryId>9631645</categoryId>
 <vendorCode>CP13870614</vendorCode>
 <name>ИБП Astergo AST.UPS.PGOT2000 (AST.UPS.PGOT2000)</name>
 <price>259900</price>
@@ -14046,7 +14006,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870615" available="true">
-<categoryId></categoryId>
+<categoryId>9631645</categoryId>
 <vendorCode>CP13870615</vendorCode>
 <name>ИБП Astergo AST.UPS.PGOT3000 (AST.UPS.PGOT3000)</name>
 <price>316900</price>
@@ -14079,7 +14039,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870616" available="true">
-<categoryId></categoryId>
+<categoryId>9631645</categoryId>
 <vendorCode>CP13870616</vendorCode>
 <name>ИБП Astergo AST.UPS.PGOT6KS (AST.UPS.PGOT6KS)</name>
 <price>575900</price>
@@ -14112,7 +14072,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870617" available="true">
-<categoryId></categoryId>
+<categoryId>9631645</categoryId>
 <vendorCode>CP13870617</vendorCode>
 <name>ИБП Astergo AST.UPS.PGOT10KS (AST.UPS.PGOT10KS)</name>
 <price>746900</price>
@@ -14145,7 +14105,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870618" available="true">
-<categoryId></categoryId>
+<categoryId>9631642</categoryId>
 <vendorCode>CP13870618</vendorCode>
 <name>ИБП Astergo AST.UPS.LA1500USB8I (AST.UPS.LA1500USB8I)</name>
 <price>176900</price>
@@ -14178,7 +14138,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870395" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13870395</vendorCode>
 <name>Ноутбук Dell Latitude 5550 (210-BLMN_N013L555015EMEA_VP)</name>
 <price>890900</price>
@@ -14242,7 +14202,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870396" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13870396</vendorCode>
 <name>Ноутбук Dell Latitude 5550 (210-BLMN_N065L555015EMEA_VP)</name>
 <price>788900</price>
@@ -14306,7 +14266,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870235" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13870235</vendorCode>
 <name>Ноутбук Dell Latitude 5550 (210-BLMN_1_N015L555015EMEA_VP)</name>
 <price>854900</price>
@@ -14369,7 +14329,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872771" available="true">
-<categoryId></categoryId>
+<categoryId>9631637</categoryId>
 <vendorCode>CP13872771</vendorCode>
 <name>Моноблок AIWA PF2402-D 8-256 (PF2402-D 8-256)</name>
 <price>221900</price>
@@ -14397,7 +14357,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872772" available="true">
-<categoryId></categoryId>
+<categoryId>9631637</categoryId>
 <vendorCode>CP13872772</vendorCode>
 <name>Моноблок AIWA PF2402-K 8-512 (PF2402-K 8-512)</name>
 <price>240900</price>
@@ -14425,7 +14385,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872773" available="true">
-<categoryId></categoryId>
+<categoryId>9631637</categoryId>
 <vendorCode>CP13872773</vendorCode>
 <name>Моноблок AIWA PF2702-K 16-512 (PF2702-K 16-512)</name>
 <price>259900</price>
@@ -14453,7 +14413,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13869798" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13869798</vendorCode>
 <name>Ноутбук ASUS Vivobook Pro 15 OLED / N6506CU-MA037W (90NB15E3-M00310)</name>
 <price>847900</price>
@@ -14511,7 +14471,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870328" available="true">
-<categoryId></categoryId>
+<categoryId>9631637</categoryId>
 <vendorCode>CP13870328</vendorCode>
 <name>Моноблок ASUS E3402WVA-WPC004X (90PT03T1-M01090)</name>
 <price>414900</price>
@@ -14567,7 +14527,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870517" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13870517</vendorCode>
 <name>Ноутбук ASUS ROG Strix G18 / G815LR-S9085 (90NR0LT1-M00390)</name>
 <price>1470900</price>
@@ -14625,7 +14585,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870436" available="true">
-<categoryId></categoryId>
+<categoryId>9631617</categoryId>
 <vendorCode>CP13870436</vendorCode>
 <name>Плоттер Canon imagePROGRAF TM-255 (6238C003)</name>
 <price>562900</price>
@@ -14655,7 +14615,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870951" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13870951</vendorCode>
 <name>Ноутбук HP EliteBook X G1i 14 AI (B68ZKET#BJA)</name>
 <price>1372900</price>
@@ -14711,7 +14671,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13869983" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13869983</vendorCode>
 <name>Монитор HP Series 5 Pro 527pm USB-C Conferencing (9E0Y9UT#ABB)</name>
 <price>221900</price>
@@ -14750,7 +14710,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870533" available="true">
-<categoryId></categoryId>
+<categoryId>9631639</categoryId>
 <vendorCode>CP13870533</vendorCode>
 <name>Мобильная рабочая станция Dell Precision 3590 (210-BLMX_N001P3590EMEA_VP)</name>
 <price>988900</price>
@@ -14808,7 +14768,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870496" available="true">
-<categoryId></categoryId>
+<categoryId>9631639</categoryId>
 <vendorCode>CP13870496</vendorCode>
 <name>Мобильная рабочая станция Dell Precision 3590 (210-BLMX_N004P3590EMEA_VP)</name>
 <price>1061900</price>
@@ -14866,7 +14826,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870690" available="true">
-<categoryId></categoryId>
+<categoryId>9631639</categoryId>
 <vendorCode>CP13870690</vendorCode>
 <name>Мобильная рабочая станция Dell Precision 3590 (210-BLMX_N006P3590EMEA_VP)</name>
 <price>825900</price>
@@ -14924,7 +14884,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870692" available="true">
-<categoryId></categoryId>
+<categoryId>9631639</categoryId>
 <vendorCode>CP13870692</vendorCode>
 <name>Мобильная рабочая станция Dell Precision 3591 (210-BLND_N101P3591EMEA_VP)</name>
 <price>1071900</price>
@@ -14982,7 +14942,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870693" available="true">
-<categoryId></categoryId>
+<categoryId>9631639</categoryId>
 <vendorCode>CP13870693</vendorCode>
 <name>Мобильная рабочая станция Dell Precision 3591 (210-BLND_NN102P3591EMEA_VP)</name>
 <price>1162900</price>
@@ -15040,7 +15000,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870309" available="true">
-<categoryId></categoryId>
+<categoryId>9631615</categoryId>
 <vendorCode>CP13870309</vendorCode>
 <name>МФУ HP OfficeJet Pro 9120b (4V2N8C#613)</name>
 <price>145900</price>
@@ -15075,7 +15035,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870573" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13870573</vendorCode>
 <name>Монитор Dell 55 4K Conference Room Monitor - P5525QC (210-BNTN)</name>
 <price>602900</price>
@@ -15113,7 +15073,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13873043" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13873043</vendorCode>
 <name>Монитор Dell UltraSharp 32 4K Thunderbolt Hub Monitor - U3225QE (210-BQTK)</name>
 <price>570900</price>
@@ -15141,7 +15101,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870648" available="true">
-<categoryId></categoryId>
+<categoryId>9631642</categoryId>
 <vendorCode>CP13870648</vendorCode>
 <name>ИБП APC SRTL3000RM4UXLI (SRTL3000RM4UXLI)</name>
 <price>3461900</price>
@@ -15178,7 +15138,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870644" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13870644</vendorCode>
 <name>Монитор Dell Pro 24 Adjustable Stand Monitor - E2425HSM (210-BRDV)</name>
 <price>76900</price>
@@ -15216,7 +15176,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870442" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13870442</vendorCode>
 <name>Монитор HP S 3 Pro 324pf (9U5J5UT#ABB)</name>
 <price>72900</price>
@@ -15253,7 +15213,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870443" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13870443</vendorCode>
 <name>Монитор HP S 5 Pro 524pn (9D9A7AA#ABB)</name>
 <price>104900</price>
@@ -15290,7 +15250,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872351" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13872351</vendorCode>
 <name>Монитор Dell Alienware 27 4K Dual-Resolution Gaming Monitor - AW2725QF (210-BNHT)</name>
 <price>314900</price>
@@ -15327,7 +15287,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870922" available="true">
-<categoryId></categoryId>
+<categoryId>9631642</categoryId>
 <vendorCode>CP13870922</vendorCode>
 <name>ИБП Eaton 5P 1550i Rack 1U G2 (5P1550IRG2)</name>
 <price>713900</price>
@@ -15361,7 +15321,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872311" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13872311</vendorCode>
 <name>Ноутбук ASUS ROG Strix SCAR 18 / G835LX-SA022W (90NR0LF1-M000V0)</name>
 <price>2501900</price>
@@ -15424,7 +15384,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872312" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13872312</vendorCode>
 <name>Ноутбук ASUS ROG Strix SCAR 18 / G835LX-SA126W (90NR0LF1-M005S0)</name>
 <price>2704900</price>
@@ -15487,7 +15447,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13873044" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13873044</vendorCode>
 <name>Монитор Dell Pro 24 Monitor - E2425HM, 60.47cm (23.8") (210-BRDN)</name>
 <price>64900</price>
@@ -15515,7 +15475,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13873045" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13873045</vendorCode>
 <name>Монитор Dell Pro 24 Plus Monitor - P2425D, 60.5cm (23.8") (210-BQMX)</name>
 <price>148900</price>
@@ -15543,7 +15503,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870731" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13870731</vendorCode>
 <name>Монитор Dell Pro 24 Plus QHD USB-C Hub Monitor - P2425DE, 60.5cm (23.8") (210-BRDM)</name>
 <price>184900</price>
@@ -15579,7 +15539,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870736" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13870736</vendorCode>
 <name>Монитор Dell Pro 34 Plus USB-C Hub Monitor - P3425WE, 86.5cm (34.1") (210-BRDR)</name>
 <price>338900</price>
@@ -15615,7 +15575,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870562" available="true">
-<categoryId></categoryId>
+<categoryId>9631637</categoryId>
 <vendorCode>CP13870562</vendorCode>
 <name>Моноблок Dell OptiPlex All-in-One 7420 (210-BLDV_N004O7420AIO65WEMEA_VP_1)</name>
 <price>788900</price>
@@ -15667,7 +15627,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870584" available="true">
-<categoryId></categoryId>
+<categoryId>9631637</categoryId>
 <vendorCode>CP13870584</vendorCode>
 <name>Моноблок Dell OptiPlex All-in-One Plus 7420 (210-BKVX_N002O7420AIOPEMEA_VP_1)</name>
 <price>711900</price>
@@ -15720,7 +15680,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13871813" available="true">
-<categoryId></categoryId>
+<categoryId>9631638</categoryId>
 <vendorCode>CP13871813</vendorCode>
 <name>Компьютер Dell Optiplex 7020 Plus (210-BLDM_N013O7020MTPEMEA_VP_1)</name>
 <price>592900</price>
@@ -15768,7 +15728,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870816" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13870816</vendorCode>
 <name>Монитор HP E32k G5 USB-C 4K (6N4D6AA#ABB)</name>
 <price>258900</price>
@@ -15834,7 +15794,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870713" available="true">
-<categoryId></categoryId>
+<categoryId>9631637</categoryId>
 <vendorCode>CP13870713</vendorCode>
 <name>Моноблок ASUS V440VAK-WPC0300 (90PT03X1-M00AC0)</name>
 <price>277900</price>
@@ -15889,7 +15849,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870846" available="true">
-<categoryId></categoryId>
+<categoryId>9631648</categoryId>
 <vendorCode>CP13870846</vendorCode>
 <name>Сканер HP ScanJet Pro 4200 s1 +АПД (8Q4W2A#B19)</name>
 <price>252900</price>
@@ -15922,7 +15882,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870940" available="true">
-<categoryId></categoryId>
+<categoryId>9631615</categoryId>
 <vendorCode>CP13870940</vendorCode>
 <name>МФУ HP Color LaserJet Enterprise Flow MFP 6800zf (6QN36A#B19)</name>
 <price>2082900</price>
@@ -15960,7 +15920,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13871379" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13871379</vendorCode>
 <name>Монитор Dell 27 Plus 4K USB-C Monitor-S2725QC (210-BQWS)</name>
 <price>230900</price>
@@ -15997,7 +15957,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13871380" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13871380</vendorCode>
 <name>Монитор Dell 27 Plus 4K Monitor-S2725QS (210-BQWM)</name>
 <price>178900</price>
@@ -16034,7 +15994,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870899" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13870899</vendorCode>
 <name>Монитор Dell 32 Plus 4K Monitor-S3225QS (210-BQWP)</name>
 <price>263900</price>
@@ -16071,7 +16031,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13873047" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13873047</vendorCode>
 <name>Монитор Dell 27 Monitor - SE2725HM (210-BQZW)</name>
 <price>72900</price>
@@ -16099,7 +16059,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13873013" available="true">
-<categoryId></categoryId>
+<categoryId>9631637</categoryId>
 <vendorCode>CP13873013</vendorCode>
 <name>Моноблок Dell Pro 24 All-in-One Plus QB24250 (210-BPPG)</name>
 <price>703900</price>
@@ -16127,7 +16087,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13871801" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13871801</vendorCode>
 <name>Ноутбук Dell Pro 14 Plus PB14250 (210-BPDK_BTO211_PB14250_EMEA)</name>
 <price>598900</price>
@@ -16184,7 +16144,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13871802" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13871802</vendorCode>
 <name>Ноутбук Dell Pro 16 PC16250 (210-BPBF_BTO010_PC16250_EMEA)</name>
 <price>490900</price>
@@ -16242,7 +16202,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13871806" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13871806</vendorCode>
 <name>Ноутбук Dell Pro 16 PC16250 (210-BQHB_BTO107_PC16250_EMEA)</name>
 <price>582900</price>
@@ -16300,7 +16260,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870786" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13870786</vendorCode>
 <name>Ноутбук Dell Pro 16 PC16250 (210-BQHB_BTO108_PC16250_EMEA)</name>
 <price>816900</price>
@@ -16359,7 +16319,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13871815" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13871815</vendorCode>
 <name>Ноутбук Dell Pro 16 PC16250 (210-BQHB_BTO109_PC16250_EMEA)</name>
 <price>606900</price>
@@ -16417,7 +16377,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13871875" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13871875</vendorCode>
 <name>Ноутбук Dell Pro 16 Plus (PB16250) XCTO Base (210-BPCJ)</name>
 <price>988900</price>
@@ -16474,7 +16434,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13871816" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13871816</vendorCode>
 <name>Ноутбук Dell Pro 16 Plus (PB16250) XCTO Base (210-BPCK)</name>
 <price>817900</price>
@@ -16531,7 +16491,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870900" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13870900</vendorCode>
 <name>Ноутбук ASUS ExpertBook B5605CVA-MB0058 (90NX08H1-M001X0)</name>
 <price>391900</price>
@@ -16588,7 +16548,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872581" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13872581</vendorCode>
 <name>Ноутбук ASUS ROG Strix G16 / G615JHR-S5039 (90NR0LL1-M001B0)</name>
 <price>841900</price>
@@ -16616,7 +16576,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13873048" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13873048</vendorCode>
 <name>Монитор Dell 32 Plus 4K QD-OLED Monitor - S3225QC (210-BRVT)</name>
 <price>566900</price>
@@ -16644,7 +16604,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13871817" available="true">
-<categoryId></categoryId>
+<categoryId>9631639</categoryId>
 <vendorCode>CP13871817</vendorCode>
 <name>Рабочая станция Dell Pro Max Tower T2 FCT2250 (210-BPSN_BTO107_FCT2250_EMEA)</name>
 <price>1222900</price>
@@ -16697,7 +16657,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13871818" available="true">
-<categoryId></categoryId>
+<categoryId>9631639</categoryId>
 <vendorCode>CP13871818</vendorCode>
 <name>Рабочая станция Dell Pro Max Tower T2 FCT2250 (210-BPSN_BTO108_FCT2250_EMEA)</name>
 <price>1309900</price>
@@ -16750,7 +16710,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13871123" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13871123</vendorCode>
 <name>Монитор HP OMEN 27 inch QHD (AK2B3AA#ABB)</name>
 <price>160900</price>
@@ -16788,7 +16748,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13871342" available="true">
-<categoryId></categoryId>
+<categoryId>9631615</categoryId>
 <vendorCode>CP13871342</vendorCode>
 <name>МФУ Canon i-SENSYS MF287dw (6354C009)</name>
 <price>210900</price>
@@ -16823,7 +16783,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870960" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13870960</vendorCode>
 <name>Ноутбук ASUS Vivobook S14 / S3407CA-LY014W (90NB16J1-M00640)</name>
 <price>454900</price>
@@ -16883,7 +16843,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13871112" available="true">
-<categoryId></categoryId>
+<categoryId>9631642</categoryId>
 <vendorCode>CP13871112</vendorCode>
 <name>ИБП Eaton 9PX 6000i RT3U Netpack G2 (9PX6KIRTNG2)</name>
 <price>1795900</price>
@@ -16919,7 +16879,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872261" available="true">
-<categoryId></categoryId>
+<categoryId>9631643</categoryId>
 <vendorCode>CP13872261</vendorCode>
 <name>ИБП APC BVX2200LI 230V, AVR, IEC Sockets (BVX2200LI)</name>
 <price>123900</price>
@@ -16952,7 +16912,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872262" available="true">
-<categoryId></categoryId>
+<categoryId>9631643</categoryId>
 <vendorCode>CP13872262</vendorCode>
 <name>ИБП APC BVX1600LI 230V, AVR, IEC Sockets (BVX1600LI)</name>
 <price>96900</price>
@@ -16985,7 +16945,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872263" available="true">
-<categoryId></categoryId>
+<categoryId>9631643</categoryId>
 <vendorCode>CP13872263</vendorCode>
 <name>ИБП APC BVX900LI 230V, AVR, IEC Sockets (BVX900LI)</name>
 <price>56900</price>
@@ -17018,7 +16978,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13871452" available="true">
-<categoryId></categoryId>
+<categoryId>9631607</categoryId>
 <vendorCode>CP13871452</vendorCode>
 <name>Девелопер HP Color LaserJet 8JM70A Black Developer Unit (8JM70A) (оригинал)</name>
 <price>21900</price>
@@ -17046,7 +17006,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872831" available="true">
-<categoryId></categoryId>
+<categoryId>9631620</categoryId>
 <vendorCode>CP13872831</vendorCode>
 <name>Проектор Acer X139 (MR.JX611.00Z)</name>
 <price>246900</price>
@@ -17074,7 +17034,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872827" available="true">
-<categoryId></categoryId>
+<categoryId>9631620</categoryId>
 <vendorCode>CP13872827</vendorCode>
 <name>Проектор Acer QF23s (MR.JXC11.005)</name>
 <price>95900</price>
@@ -17102,7 +17062,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13871969" available="true">
-<categoryId></categoryId>
+<categoryId>9631616</categoryId>
 <vendorCode>CP13871969</vendorCode>
 <name>Принтер Canon I-SENSYS LBP246DW II (7187C006)</name>
 <price>155900</price>
@@ -17137,7 +17097,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13871970" available="true">
-<categoryId></categoryId>
+<categoryId>9631616</categoryId>
 <vendorCode>CP13871970</vendorCode>
 <name>Принтер Canon I-SENSYS LBP243DW II (7187C013)</name>
 <price>143900</price>
@@ -17172,7 +17132,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872198" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13872198</vendorCode>
 <name>Монитор HP S5 Pro 527pu (9E0G5AA#ABB)</name>
 <price>165900</price>
@@ -17208,7 +17168,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872105" available="true">
-<categoryId></categoryId>
+<categoryId>9631615</categoryId>
 <vendorCode>CP13872105</vendorCode>
 <name>МФУ HP LaserJet MFP 8601dn (9S186A#B19)</name>
 <price>3673900</price>
@@ -17245,7 +17205,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13871939" available="true">
-<categoryId></categoryId>
+<categoryId>9631642</categoryId>
 <vendorCode>CP13871939</vendorCode>
 <name>ИБП Eaton 9E6KIR (9E6KIR)</name>
 <price>1363900</price>
@@ -17282,7 +17242,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13871940" available="true">
-<categoryId></categoryId>
+<categoryId>9631644</categoryId>
 <vendorCode>CP13871940</vendorCode>
 <name>Аккумулятор Eaton 9E11KIPMR (9EEBM180R)</name>
 <price>725900</price>
@@ -17311,7 +17271,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13871943" available="true">
-<categoryId></categoryId>
+<categoryId>9631642</categoryId>
 <vendorCode>CP13871943</vendorCode>
 <name>ИБП Eaton 9SX11KIRT4UG2 (9SX11KIRT4UG2)</name>
 <price>2925900</price>
@@ -17349,7 +17309,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13871944" available="true">
-<categoryId></categoryId>
+<categoryId>9631642</categoryId>
 <vendorCode>CP13871944</vendorCode>
 <name>ИБП Eaton 9SX6KIRT3UG2 (9SX6KIRT3UG2)</name>
 <price>1824900</price>
@@ -17387,7 +17347,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13871836" available="true">
-<categoryId></categoryId>
+<categoryId>9631597</categoryId>
 <vendorCode>CP13871836</vendorCode>
 <name>Картридж Canon LBP CARTRIDGE 072 (5647C002) (оригинал)</name>
 <price>19900</price>
@@ -17418,7 +17378,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13871837" available="true">
-<categoryId></categoryId>
+<categoryId>9631597</categoryId>
 <vendorCode>CP13871837</vendorCode>
 <name>Картридж Canon LBP CARTRIDGE 072H (5648C002) (оригинал)</name>
 <price>32900</price>
@@ -17449,7 +17409,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872108" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13872108</vendorCode>
 <name>Ноутбук HP ProBook 4 G1q (B39XGAT#BJA)</name>
 <price>451900</price>
@@ -17504,7 +17464,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872109" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13872109</vendorCode>
 <name>Ноутбук HP EliteBook 6 G1q (C5LZ6AT#BJA)</name>
 <price>493900</price>
@@ -17559,7 +17519,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872110" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13872110</vendorCode>
 <name>Ноутбук HP ProBook 4 G1i (AD2M1ET#BJA)</name>
 <price>679900</price>
@@ -17616,7 +17576,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872372" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13872372</vendorCode>
 <name>Ноутбук HP ProBook 4 G1i (C43J5ET#BJA)</name>
 <price>520900</price>
@@ -17674,7 +17634,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872989" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13872989</vendorCode>
 <name>Ноутбук Dell Pro 14 PC14250 (BTO109_PC14250_EMEA_210-BQHF)</name>
 <price>700900</price>
@@ -17702,7 +17662,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13871907" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13871907</vendorCode>
 <name>Ноутбук Dell Pro 14 Plus PB14250 (BTO105_PB14250_EMEA_210-BPDL)</name>
 <price>716900</price>
@@ -17758,7 +17718,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872990" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13872990</vendorCode>
 <name>Ноутбук Dell Pro 14 Plus PB14250 (BTO111_PB14250_EMEA_210-BPDL)</name>
 <price>845900</price>
@@ -17786,7 +17746,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872991" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13872991</vendorCode>
 <name>Ноутбук Dell Pro 14 Plus PB14250 (210-BPDL_BTO110_PB14250_EMEA)</name>
 <price>792900</price>
@@ -17814,7 +17774,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872992" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13872992</vendorCode>
 <name>Ноутбук Dell Pro 16 PC16250 (BTO109_PC16250_EMEA_210-BQHB)</name>
 <price>703900</price>
@@ -17842,7 +17802,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872993" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13872993</vendorCode>
 <name>Ноутбук Dell Pro 16 PC16250 (BTO107_PC16250_EMEA_210-BQHB)</name>
 <price>737900</price>
@@ -17870,7 +17830,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13871912" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13871912</vendorCode>
 <name>Ноутбук Dell Pro 16 PC16250 (BTO106_PC16250_EMEA_210-BQHB)</name>
 <price>719900</price>
@@ -17926,7 +17886,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872994" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13872994</vendorCode>
 <name>Ноутбук Dell Pro 16 PC16255 (BTO602_PC16255_EMEA_210-BQPC)</name>
 <price>585900</price>
@@ -17954,7 +17914,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13871914" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13871914</vendorCode>
 <name>Ноутбук Dell Pro 16 PC16255 (BTO604_PC16255_EMEA_210-BQPC)</name>
 <price>997900</price>
@@ -18010,7 +17970,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872995" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13872995</vendorCode>
 <name>Ноутбук Dell Pro 16 Plus PB16250 (BTO105_PB16250_EMEA_UBU_210-BPCM)</name>
 <price>757900</price>
@@ -18038,7 +17998,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872233" available="true">
-<categoryId></categoryId>
+<categoryId>9631639</categoryId>
 <vendorCode>CP13872233</vendorCode>
 <name>Мобильная рабочая станция Dell Pro Max 14 MC14250 (BTO120_MC14250_EMEA_210-BPVX)</name>
 <price>1043900</price>
@@ -18095,7 +18055,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872131" available="true">
-<categoryId></categoryId>
+<categoryId>9631639</categoryId>
 <vendorCode>CP13872131</vendorCode>
 <name>Мобильная рабочая станция Dell Pro Max 16 / 16XE MC16250 (BTO128_MC16250_EMEA_210-BPVR)</name>
 <price>1370900</price>
@@ -18152,7 +18112,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872132" available="true">
-<categoryId></categoryId>
+<categoryId>9631639</categoryId>
 <vendorCode>CP13872132</vendorCode>
 <name>Мобильная рабочая станция Dell Pro Max 16 / 16XE MC16250 (BTO127_MC16250_EMEA_210-BPVR)</name>
 <price>1421900</price>
@@ -18209,7 +18169,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872133" available="true">
-<categoryId></categoryId>
+<categoryId>9631639</categoryId>
 <vendorCode>CP13872133</vendorCode>
 <name>Мобильная рабочая станция Dell Pro Max 16 / 16XE MC16250 (BTO129_MC16250_EMEA_210-BPVR)</name>
 <price>910900</price>
@@ -18265,7 +18225,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872134" available="true">
-<categoryId></categoryId>
+<categoryId>9631639</categoryId>
 <vendorCode>CP13872134</vendorCode>
 <name>Мобильная рабочая станция Dell Pro Max 16 / 16XE MC16250 (BTO122_MC16250_EMEA_210-BPVR)</name>
 <price>1178900</price>
@@ -18322,7 +18282,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872114" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13872114</vendorCode>
 <name>Ноутбук HP EliteBook 8 G1i (AD4H2ET#BJA)</name>
 <price>601900</price>
@@ -18379,7 +18339,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13873050" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13873050</vendorCode>
 <name>Монитор Dell SE2725HG (210-BSNS)</name>
 <price>94900</price>
@@ -18407,7 +18367,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872353" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13872353</vendorCode>
 <name>Монитор Dell SE2425HG (210-BSNR)</name>
 <price>74900</price>
@@ -18443,7 +18403,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872354" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13872354</vendorCode>
 <name>Монитор Dell AW2725Q (210-BQWV)</name>
 <price>486900</price>
@@ -18477,7 +18437,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872877" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13872877</vendorCode>
 <name>Монитор Dell AW2725D (210-BRZW)</name>
 <price>314900</price>
@@ -18505,7 +18465,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872763" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13872763</vendorCode>
 <name>Монитор Dell AW2725DM (210-BQWQ)</name>
 <price>178900</price>
@@ -18533,7 +18493,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872296" available="true">
-<categoryId></categoryId>
+<categoryId>9631617</categoryId>
 <vendorCode>CP13872296</vendorCode>
 <name>Плоттер Canon Плоттер Canon / imagePROGRAF TX-3200 incl. stand / A1 / 2400 x1200 dpi. (6854C003)</name>
 <price>2545900</price>
@@ -18563,7 +18523,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872100" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13872100</vendorCode>
 <name>Ноутбук HP EliteBook 8 G1a (AD4J8ET#BJA)</name>
 <price>654900</price>
@@ -18620,7 +18580,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872440" available="true">
-<categoryId></categoryId>
+<categoryId>9631637</categoryId>
 <vendorCode>CP13872440</vendorCode>
 <name>Моноблок HP EliteStudio 8 AiO G1i 27 (A0ZF4EA#BJA)</name>
 <price>708900</price>
@@ -18675,7 +18635,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872101" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13872101</vendorCode>
 <name>Ноутбук HP EliteBook 8 G1a (AD4J9ET#BJA)</name>
 <price>718900</price>
@@ -18732,7 +18692,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872116" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13872116</vendorCode>
 <name>Ноутбук HP EliteBook 8 G1i (AD4H8ET#BJA)</name>
 <price>746900</price>
@@ -18788,7 +18748,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872375" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13872375</vendorCode>
 <name>Ноутбук HP EliteBook Ultra G1i AI (B66V4AT#UUQ)</name>
 <price>831900</price>
@@ -18849,7 +18809,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872118" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13872118</vendorCode>
 <name>Ноутбук HP ProBook 4 G1i (AD2L3ET#BJA)</name>
 <price>630900</price>
@@ -18907,7 +18867,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872265" available="true">
-<categoryId></categoryId>
+<categoryId>9631643</categoryId>
 <vendorCode>CP13872265</vendorCode>
 <name>ИБП APC BVG1600I-GR 230V, AVR, 4 Schuko Sockets (BVG1600I-GR)</name>
 <price>83900</price>
@@ -18941,7 +18901,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872266" available="true">
-<categoryId></categoryId>
+<categoryId>9631643</categoryId>
 <vendorCode>CP13872266</vendorCode>
 <name>ИБП APC BVG2200I-GR 230V, AVR, 4 Schuko Sockets (BVG2200I-GR)</name>
 <price>109900</price>
@@ -18975,7 +18935,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872125" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13872125</vendorCode>
 <name>Монитор HP Series 3 Pro / 324pe (B1GM5AA#ABB)</name>
 <price>76900</price>
@@ -19013,7 +18973,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872599" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13872599</vendorCode>
 <name>Монитор HP Series 5 Pro / 524pu (9D9V7AA#ABB)</name>
 <price>133900</price>
@@ -19041,7 +19001,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872127" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13872127</vendorCode>
 <name>Монитор HP Series 7 Pro / 734pm (8K157UT#ABB)</name>
 <price>493900</price>
@@ -19079,7 +19039,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13873051" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13873051</vendorCode>
 <name>Монитор Dell 24 Plus Monitor – S2425HSM (210-BSZD)</name>
 <price>90900</price>
@@ -19107,7 +19067,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13873053" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13873053</vendorCode>
 <name>Монитор Dell 27 Plus Monitor – S2725HSM (210-BSZF)</name>
 <price>104900</price>
@@ -19135,7 +19095,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872628" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13872628</vendorCode>
 <name>Монитор Dell 27 Plus Monitor – S2725HSM (210-BSZF)</name>
 <price>104900</price>
@@ -19163,7 +19123,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13873054" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13873054</vendorCode>
 <name>Монитор Dell 27 Plus QHD USB-C Monitor - S2725DC (210-BSRL)</name>
 <price>181900</price>
@@ -19191,7 +19151,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872313" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13872313</vendorCode>
 <name>Ноутбук ASUS ROG Flow Z13 / GZ302EA-RU045W (90NR0JY1-M002E0)</name>
 <price>1301900</price>
@@ -19251,7 +19211,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872662" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13872662</vendorCode>
 <name>Ноутбук ASUS TUF Gaming F16 / FX608JPR-QT092 (90NR0NG1-M00680)</name>
 <price>927900</price>
@@ -19279,7 +19239,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872384" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13872384</vendorCode>
 <name>Ноутбук ASUS ExpertBook / P1403CVA-S61785 (90NX0871-M022T0)</name>
 <price>309900</price>
@@ -19335,7 +19295,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872585" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13872585</vendorCode>
 <name>Ноутбук ASUS ExpertBook / P1403CVA-S61790X (90NX0871-M022V0)</name>
 <price>474900</price>
@@ -19363,7 +19323,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872591" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13872591</vendorCode>
 <name>Ноутбук ASUS ExpertBook / P1503CVA-S72536X (90NX0881-M02Y90)</name>
 <price>522900</price>
@@ -19391,7 +19351,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872314" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13872314</vendorCode>
 <name>Ноутбук ASUS ExpertBook / B1503CVA-S77885X (90NX0801-M08YY0)</name>
 <price>465900</price>
@@ -19452,7 +19412,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872617" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13872617</vendorCode>
 <name>Ноутбук HP EliteBook 8 G1a (AZ3N2AV / 74051488)</name>
 <price>602900</price>
@@ -19480,7 +19440,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872623" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13872623</vendorCode>
 <name>Ноутбук Dell 14 Premium (DA14250) (210-BPBH_DA14250_ARLH_101)</name>
 <price>1284900</price>
@@ -19508,7 +19468,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872996" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13872996</vendorCode>
 <name>Ноутбук Dell 14 Premium (DA14250) (210-BPBH_DA14250_ARLH_102)</name>
 <price>1691900</price>
@@ -19536,7 +19496,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872997" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13872997</vendorCode>
 <name>Ноутбук Dell 14 Premium (DA14250) (210-BPBH_DA14250_ARLH_104)</name>
 <price>1599900</price>
@@ -19564,7 +19524,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872998" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13872998</vendorCode>
 <name>Ноутбук Dell 16 Premium (DA16250) (210-BRTS_DA16250_ARLH_003)</name>
 <price>1658900</price>
@@ -19592,7 +19552,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872999" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13872999</vendorCode>
 <name>Ноутбук Dell 16 Premium (DA16250) (210-BRTS_DA16250_ARLH_011)</name>
 <price>1883900</price>
@@ -19620,7 +19580,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13873000" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13873000</vendorCode>
 <name>Ноутбук Dell 16 Premium (DA16250) (210-BRTS_DA16250_ARLH_006)</name>
 <price>1786900</price>
@@ -19648,7 +19608,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13873001" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13873001</vendorCode>
 <name>Ноутбук Dell 16 Premium (DA16250) (210-BRTS_DA16250_ARLH_008)</name>
 <price>2043900</price>
@@ -19676,7 +19636,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13873002" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13873002</vendorCode>
 <name>Ноутбук Dell 16 Premium (DA16250) (210-BRTS_DA16250_ARLH_010)</name>
 <price>2474900</price>
@@ -19704,7 +19664,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13873016" available="true">
-<categoryId></categoryId>
+<categoryId>9631637</categoryId>
 <vendorCode>CP13873016</vendorCode>
 <name>Моноблок Dell Pro 24 All-in-One QC24251 (210-BPPN_BTO103_QC24251_EMEA)</name>
 <price>645900</price>
@@ -19732,7 +19692,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13873017" available="true">
-<categoryId></categoryId>
+<categoryId>9631637</categoryId>
 <vendorCode>CP13873017</vendorCode>
 <name>Моноблок Dell Pro 24 All-in-One QC24250 (210-BPNS_BTO155_QC24250_EMEA)</name>
 <price>850900</price>
@@ -19760,7 +19720,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872548" available="true">
-<categoryId></categoryId>
+<categoryId>9631637</categoryId>
 <vendorCode>CP13872548</vendorCode>
 <name>Моноблок Dell Pro 24 All-in-One QC24250 (210-BPNS_BTO155_QC24250_EMEA)</name>
 <price>850900</price>
@@ -19819,7 +19779,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13873018" available="true">
-<categoryId></categoryId>
+<categoryId>9631637</categoryId>
 <vendorCode>CP13873018</vendorCode>
 <name>Моноблок Dell Pro 24 All-in-One QC24250 (210-BPNS_BTO154_QC24250_EMEA)</name>
 <price>799900</price>
@@ -19847,7 +19807,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13873019" available="true">
-<categoryId></categoryId>
+<categoryId>9631637</categoryId>
 <vendorCode>CP13873019</vendorCode>
 <name>Моноблок Dell Pro 24 All-in-One Plus QB24250 (210-BPPG_BTO103_QB24250_EMEA)</name>
 <price>807900</price>
@@ -19875,7 +19835,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13873021" available="true">
-<categoryId></categoryId>
+<categoryId>9631638</categoryId>
 <vendorCode>CP13873021</vendorCode>
 <name>Компьютер Dell Pro Micro QCM1250 (210-BPQB_BTO003_QCM1250_EMEA)</name>
 <price>415900</price>
@@ -19903,7 +19863,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13873023" available="true">
-<categoryId></categoryId>
+<categoryId>9631638</categoryId>
 <vendorCode>CP13873023</vendorCode>
 <name>Компьютер Dell Pro Micro QCM1250 (210-BPPV_BTO106_QCM1250_EMEA)</name>
 <price>507900</price>
@@ -19931,7 +19891,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13873024" available="true">
-<categoryId></categoryId>
+<categoryId>9631637</categoryId>
 <vendorCode>CP13873024</vendorCode>
 <name>Моноблок Dell Pro 24 All-in-One Plus QB24250 (210-BPPG_BTO101_QB24250_EMEA)</name>
 <price>712900</price>
@@ -19959,7 +19919,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13873025" available="true">
-<categoryId></categoryId>
+<categoryId>9631638</categoryId>
 <vendorCode>CP13873025</vendorCode>
 <name>Компьютер Dell Pro Micro QCM1250 (210-BPPV_BTO107_QCM1250_EMEA)</name>
 <price>641900</price>
@@ -19987,7 +19947,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13873026" available="true">
-<categoryId></categoryId>
+<categoryId>9631638</categoryId>
 <vendorCode>CP13873026</vendorCode>
 <name>Компьютер Dell Pro Tower QCT1250 (210-BPRW_BTO107_QCT1250_EMEA)</name>
 <price>550900</price>
@@ -20015,7 +19975,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13873027" available="true">
-<categoryId></categoryId>
+<categoryId>9631638</categoryId>
 <vendorCode>CP13873027</vendorCode>
 <name>Компьютер Dell Pro Max Tower T2 FCT2250 (210-BPSN_BTO103_FCT2250_EMEA)</name>
 <price>949900</price>
@@ -20043,7 +20003,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13873028" available="true">
-<categoryId></categoryId>
+<categoryId>9631638</categoryId>
 <vendorCode>CP13873028</vendorCode>
 <name>Компьютер Dell Pro Max Tower T2 FCT2250 (210-BPSN_BTO113_FCT2250_EMEA)</name>
 <price>1304900</price>
@@ -20071,7 +20031,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13873029" available="true">
-<categoryId></categoryId>
+<categoryId>9631638</categoryId>
 <vendorCode>CP13873029</vendorCode>
 <name>Компьютер Dell Pro Max Tower T2 FCT2250 (210-BPSN_BTO109_FCT2250_EMEA)</name>
 <price>1060900</price>
@@ -20099,7 +20059,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13873030" available="true">
-<categoryId></categoryId>
+<categoryId>9631638</categoryId>
 <vendorCode>CP13873030</vendorCode>
 <name>Компьютер Dell Pro Max Tower T2 FCT2250 (210-BPSN_BTO112_FCT2250_EMEA)</name>
 <price>1227900</price>
@@ -20127,7 +20087,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13873031" available="true">
-<categoryId></categoryId>
+<categoryId>9631638</categoryId>
 <vendorCode>CP13873031</vendorCode>
 <name>Компьютер Dell Pro Tower QCT1250 (210-BPRW_BTO110_QCT1250_EMEA)</name>
 <price>648900</price>
@@ -20155,7 +20115,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872965" available="true">
-<categoryId></categoryId>
+<categoryId>9631637</categoryId>
 <vendorCode>CP13872965</vendorCode>
 <name>Моноблок Dell All-in-One EC27250 (210-BPFS_EC27250_RPLU-R_010)</name>
 <price>834900</price>
@@ -20183,7 +20143,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13873003" available="true">
-<categoryId></categoryId>
+<categoryId>9631638</categoryId>
 <vendorCode>CP13873003</vendorCode>
 <name>Компьютер Dell Tower Plus EBT2250 (210-BPDZ_EBT2250_ARL_127)</name>
 <price>1512900</price>
@@ -20211,7 +20171,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13873004" available="true">
-<categoryId></categoryId>
+<categoryId>9631638</categoryId>
 <vendorCode>CP13873004</vendorCode>
 <name>Компьютер Dell Tower Plus EBT2250 (210-BPDZ_EBT2250_ARL_128)</name>
 <price>2155900</price>
@@ -20239,7 +20199,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872444" available="true">
-<categoryId></categoryId>
+<categoryId>9631635</categoryId>
 <vendorCode>CP13872444</vendorCode>
 <name>Переносной монитор HP 5 Pro (B88JWAA#ABB)</name>
 <price>158900</price>
@@ -20280,7 +20240,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872332" available="true">
-<categoryId></categoryId>
+<categoryId>9631618</categoryId>
 <vendorCode>CP13872332</vendorCode>
 <name>Сканер Canon imageFORMULA DR-C240 + RIPDF 25 (0651C003 / bundle)</name>
 <price>324900</price>
@@ -20316,7 +20276,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872381" available="true">
-<categoryId></categoryId>
+<categoryId>9631618</categoryId>
 <vendorCode>CP13872381</vendorCode>
 <name>Сканер Canon imageFORMULA DR-C230 (2646C003 / bundle)</name>
 <price>263900</price>
@@ -20350,7 +20310,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872879" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13872879</vendorCode>
 <name>Ноутбук Dell Pro 14 Plus (210-BPDN_1)</name>
 <price>779900</price>
@@ -20378,7 +20338,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872774" available="true">
-<categoryId></categoryId>
+<categoryId>9631637</categoryId>
 <vendorCode>CP13872774</vendorCode>
 <name>Моноблок AIWA PF2402-D-8-512 (PF2402-D 8-512 white)</name>
 <price>236900</price>
@@ -20406,7 +20366,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13872917" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13872917</vendorCode>
 <name>Ноутбук Dell Pro 16 PC16250 (BTO120_PC16250_EMEA_210-BQHB)</name>
 <price>652900</price>
@@ -20434,7 +20394,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13873005" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13873005</vendorCode>
 <name>Ноутбук Dell Pro 16 PC16250 (BTO118_PC16250_EMEA_210-BQHB)</name>
 <price>807900</price>
@@ -20462,7 +20422,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13873006" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13873006</vendorCode>
 <name>Ноутбук Dell Pro 16 PC16250 (BTO121_PC16250_EMEA_210-BQHB)</name>
 <price>798900</price>
@@ -20490,7 +20450,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13873166" available="true">
-<categoryId></categoryId>
+<categoryId>9631639</categoryId>
 <vendorCode>CP13873166</vendorCode>
 <name>Мобильная рабочая станция Dell Pro Max 16 Plus MB16250 (210-BRXR / BTO102_MB16250_EMEA)</name>
 <price>2090900</price>
@@ -20518,7 +20478,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13873137" available="true">
-<categoryId></categoryId>
+<categoryId>9631639</categoryId>
 <vendorCode>CP13873137</vendorCode>
 <name>Мобильная рабочая станция Dell Pro Max 18 Plus MB18250 (210-BRXL / BTO101_MB18250_EMEA)</name>
 <price>2189900</price>
@@ -20546,7 +20506,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13873167" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13873167</vendorCode>
 <name>Ноутбук Dell Pro 13 Plus PB13250 (210-BPKT / BTO210_PB13250_EMEA)</name>
 <price>807900</price>
@@ -20574,7 +20534,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13873168" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13873168</vendorCode>
 <name>Ноутбук Dell Pro 14 PC14250 (210-BQHF / BTO108_PC14250_EMEA)</name>
 <price>1047900</price>
@@ -20602,7 +20562,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13873169" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13873169</vendorCode>
 <name>Ноутбук Dell Pro 14 PC14250 (210-BQHF / BTO121_PC14250_EMEA)</name>
 <price>933900</price>
@@ -20630,7 +20590,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13873170" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13873170</vendorCode>
 <name>Ноутбук Dell Pro 14 PC14250 (210-BQHF / BTO120_PC14250_EMEA)</name>
 <price>764900</price>
@@ -20658,7 +20618,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13873058" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13873058</vendorCode>
 <name>Ноутбук Dell Pro 14 Plus PB14250 (210-BPDK / BTO217_PB14250_EMEA)</name>
 <price>997900</price>
@@ -20686,7 +20646,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13873061" available="true">
-<categoryId></categoryId>
+<categoryId>9631634</categoryId>
 <vendorCode>CP13873061</vendorCode>
 <name>Ноутбук Dell Pro 14 Plus (PB14250) (210-BPDK_3 / BTO211_PB14250_EMEA)</name>
 <price>778900</price>
@@ -20714,7 +20674,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10318173" available="true">
-<categoryId></categoryId>
+<categoryId>9631597</categoryId>
 <vendorCode>CP10318173</vendorCode>
 <name>Картридж HP Q2612A (Q2612A) (оригинал)</name>
 <price>52900</price>
@@ -20745,7 +20705,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10314067" available="true">
-<categoryId></categoryId>
+<categoryId>9631597</categoryId>
 <vendorCode>CP10314067</vendorCode>
 <name>Картридж HP CB436A (CB436A) (оригинал)</name>
 <price>60900</price>
@@ -20776,7 +20736,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10327600" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP10327600</vendorCode>
 <name>Картридж HP C9372A (C9372A) (оригинал)</name>
 <price>52900</price>
@@ -20809,7 +20769,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10360427" available="true">
-<categoryId></categoryId>
+<categoryId>9631602</categoryId>
 <vendorCode>CP10360427</vendorCode>
 <name>Печатающая головка HP C9380A (C9380A) (оригинал)</name>
 <price>54900</price>
@@ -20841,7 +20801,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10402349" available="true">
-<categoryId></categoryId>
+<categoryId>9631602</categoryId>
 <vendorCode>CP10402349</vendorCode>
 <name>Печатающая головка HP C9383A (C9383A) (оригинал)</name>
 <price>53900</price>
@@ -20873,7 +20833,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10315763" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP10315763</vendorCode>
 <name>Картридж HP CC640HE (CC640HE) (оригинал)</name>
 <price>15900</price>
@@ -20906,7 +20866,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10317541" available="true">
-<categoryId></categoryId>
+<categoryId>9631616</categoryId>
 <vendorCode>CP10317541</vendorCode>
 <name>Принтер HP Color LaserJet CP5225 (CE710A#B19)</name>
 <price>712900</price>
@@ -20942,7 +20902,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10366118" available="true">
-<categoryId></categoryId>
+<categoryId>9631597</categoryId>
 <vendorCode>CP10366118</vendorCode>
 <name>Картридж HP CE255A (CE255A) (оригинал)</name>
 <price>95900</price>
@@ -20973,7 +20933,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10319544" available="true">
-<categoryId></categoryId>
+<categoryId>9631616</categoryId>
 <vendorCode>CP10319544</vendorCode>
 <name>Принтер HP Color LaserJet CP5225dn (CE712A#B19)</name>
 <price>871900</price>
@@ -21009,7 +20969,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10322486" available="true">
-<categoryId></categoryId>
+<categoryId>9631616</categoryId>
 <vendorCode>CP10322486</vendorCode>
 <name>Принтер HP Color LaserJet CP5225N (CE711A#B19)</name>
 <price>768900</price>
@@ -21045,7 +21005,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10300039" available="true">
-<categoryId></categoryId>
+<categoryId>9631597</categoryId>
 <vendorCode>CP10300039</vendorCode>
 <name>Картридж HP CE285A (CE285A) (оригинал)</name>
 <price>48900</price>
@@ -21076,7 +21036,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10362386" available="true">
-<categoryId></categoryId>
+<categoryId>9631597</categoryId>
 <vendorCode>CP10362386</vendorCode>
 <name>Картридж HP CE742A (CE742A) (оригинал)</name>
 <price>195900</price>
@@ -21107,7 +21067,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10362387" available="true">
-<categoryId></categoryId>
+<categoryId>9631597</categoryId>
 <vendorCode>CP10362387</vendorCode>
 <name>Картридж HP CE743A (CE743A) (оригинал)</name>
 <price>192900</price>
@@ -21138,7 +21098,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10298665" available="true">
-<categoryId></categoryId>
+<categoryId>9631600</categoryId>
 <vendorCode>CP10298665</vendorCode>
 <name>Тонер Canon C-EXV33 IR2520 / 30 (2785B002) (оригинал)</name>
 <price>37900</price>
@@ -21168,7 +21128,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10302806" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP10302806</vendorCode>
 <name>Картридж HP CH561HE (CH561HE) (оригинал)</name>
 <price>11900</price>
@@ -21200,7 +21160,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10303950" available="true">
-<categoryId></categoryId>
+<categoryId>9631598</categoryId>
 <vendorCode>CP10303950</vendorCode>
 <name>Картридж HP CH562HE (CH562HE) (оригинал)</name>
 <price>13900</price>
@@ -21232,7 +21192,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10316382" available="true">
-<categoryId></categoryId>
+<categoryId>9631597</categoryId>
 <vendorCode>CP10316382</vendorCode>
 <name>Картридж HP CE322A (CE322A) (оригинал)</name>
 <price>44900</price>
