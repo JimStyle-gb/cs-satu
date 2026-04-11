@@ -2,23 +2,28 @@
 """
 Path: scripts/suppliers/vtt/source.py
 
-VTT source layer.
+VTT Source — source-слой supplier-layer.
 
 Что делает:
-- содержит только source/session/crawl/page parsing;
-- не хранит supplier-business логику final-layer;
+- держит login/session/crawl/product-page parsing;
+- собирает canonical raw source-данные для builder.py;
+- использует filtering.py и params.py как source of truth для своих подпроцессов.
 
 Что не делает:
+- не принимает business-решения по final витрине;
 - не строит final offers;
-- не подменяет builder/filtering/quality_gate.
+- не заменяет builder и quality gate слой.
 """
 from __future__ import annotations
 
 import os
+import random
 import re
+import threading
 import time
 from collections import deque
 from datetime import datetime
+from email.utils import parsedate_to_datetime
 from html import unescape
 from pathlib import Path
 from typing import Any
@@ -87,6 +92,9 @@ _ANCHOR_RE = re.compile(r'''<a\b[^>]*href=["\']([^"\']+)["\'][^>]*>(.*?)</a>''',
 _META_CSRF_RE = re.compile(r'''<meta[^>]+name=["\']csrf-token["\'][^>]+content=["\']([^"\']+)["\']''', re.I)
 _VENDOR_TOKEN_RE = re.compile(r"\b(?:HP|CANON|XEROX|BROTHER|KYOCERA|SAMSUNG|EPSON|RICOH|KONICA\s+MINOLTA|PANTUM|LEXMARK|OKI|SHARP|PANASONIC|TOSHIBA|DEVELOP|GESTETNER|RISO)\b", re.I)
 
+_RATE_LIMIT_LOCK = threading.Lock()
+_RATE_LIMIT_UNTIL_MONOTONIC = 0.0
+
 def log(msg: str) -> None:
     print(msg, flush=True)
 
@@ -105,6 +113,70 @@ def _safe_float(value: Any, default: float) -> float:
         return float(value)
     except Exception:
         return default
+
+def _request_jitter_ms() -> int:
+    return max(0, _safe_int(os.getenv("VTT_REQUEST_JITTER_MS") or "180", 180))
+
+def _delay_with_jitter_ms(delay_ms: int) -> int:
+    base = max(0, int(delay_ms))
+    jitter = _request_jitter_ms()
+    if jitter <= 0:
+        return base
+    return base + random.randint(0, jitter)
+
+def _rate_limit_retries() -> int:
+    return max(1, _safe_int(os.getenv("VTT_429_RETRIES") or os.getenv("VTT_NETWORK_OUTER_RETRIES") or "5", 5))
+
+def _rate_limit_min_cooldown_s() -> float:
+    return max(1.0, _safe_float(os.getenv("VTT_429_MIN_COOLDOWN_S") or "20", 20.0))
+
+def _rate_limit_base_cooldown_s() -> float:
+    return max(_rate_limit_min_cooldown_s(), _safe_float(os.getenv("VTT_429_COOLDOWN_S") or "45", 45.0))
+
+def _rate_limit_max_cooldown_s() -> float:
+    return max(_rate_limit_base_cooldown_s(), _safe_float(os.getenv("VTT_429_MAX_COOLDOWN_S") or "180", 180.0))
+
+def _parse_retry_after_seconds(resp: requests.Response) -> float | None:
+    raw = (resp.headers.get("Retry-After") or "").strip()
+    if not raw:
+        return None
+    try:
+        return max(0.0, float(raw))
+    except Exception:
+        pass
+    try:
+        dt = parsedate_to_datetime(raw)
+        if dt.tzinfo is None:
+            return None
+        return max(0.0, (dt.timestamp() - time.time()))
+    except Exception:
+        return None
+
+def _set_global_rate_limit_cooldown(seconds: float) -> None:
+    if seconds <= 0:
+        return
+    global _RATE_LIMIT_UNTIL_MONOTONIC
+    until = time.monotonic() + seconds
+    with _RATE_LIMIT_LOCK:
+        if until > _RATE_LIMIT_UNTIL_MONOTONIC:
+            _RATE_LIMIT_UNTIL_MONOTONIC = until
+
+def _wait_for_global_rate_limit_window() -> None:
+    while True:
+        with _RATE_LIMIT_LOCK:
+            wait_s = _RATE_LIMIT_UNTIL_MONOTONIC - time.monotonic()
+        if wait_s <= 0:
+            return
+        time.sleep(min(wait_s, 5.0))
+
+def _rate_limit_backoff_s(resp: requests.Response, attempt_no: int) -> float:
+    retry_after_s = _parse_retry_after_seconds(resp)
+    if retry_after_s is not None:
+        return min(_rate_limit_max_cooldown_s(), max(_rate_limit_min_cooldown_s(), retry_after_s))
+
+    step = max(5.0, _safe_float(os.getenv("VTT_429_BACKOFF_STEP_S") or "15", 15.0))
+    fallback = _rate_limit_base_cooldown_s() + max(0, attempt_no - 1) * step
+    return min(_rate_limit_max_cooldown_s(), max(_rate_limit_min_cooldown_s(), fallback))
 
 def _configure_session(sess: requests.Session, cfg: VTTConfig) -> requests.Session:
     retry = Retry(
@@ -156,12 +228,12 @@ def cfg_from_env() -> VTTConfig:
         password=(os.getenv("VTT_PASSWORD") or "").strip(),
         timeout_s=_safe_int(os.getenv("VTT_TIMEOUT_S") or "45", 45),
         listing_request_delay_ms=_safe_int(
-            os.getenv("VTT_LISTING_REQUEST_DELAY_MS") or os.getenv("VTT_REQUEST_DELAY_MS") or "6",
-            6,
+            os.getenv("VTT_LISTING_REQUEST_DELAY_MS") or os.getenv("VTT_REQUEST_DELAY_MS") or "150",
+            150,
         ),
-        product_request_delay_ms=_safe_int(os.getenv("VTT_PRODUCT_REQUEST_DELAY_MS") or "0", 0),
+        product_request_delay_ms=_safe_int(os.getenv("VTT_PRODUCT_REQUEST_DELAY_MS") or "700", 700),
         max_listing_pages=_safe_int(os.getenv("VTT_MAX_LISTING_PAGES") or "5000", 5000),
-        max_workers=_safe_int(os.getenv("VTT_MAX_WORKERS") or "20", 20),
+        max_workers=_safe_int(os.getenv("VTT_MAX_WORKERS") or "2", 2),
         max_crawl_minutes=_safe_float(os.getenv("VTT_MAX_CRAWL_MINUTES") or "90", 90.0),
         softfail=(os.getenv("VTT_SOFTFAIL") or "false").strip().lower() == "true",
         categories=list(categories),
@@ -169,7 +241,7 @@ def cfg_from_env() -> VTTConfig:
     )
 
 def _network_outer_retries() -> int:
-    return max(1, _safe_int(os.getenv("VTT_NETWORK_OUTER_RETRIES") or "3", 3))
+    return max(1, _safe_int(os.getenv("VTT_NETWORK_OUTER_RETRIES") or "5", 5))
 
 def _network_retry_sleep_s(attempt_no: int) -> float:
     return min(20.0, 2.5 * max(1, attempt_no))
@@ -183,14 +255,17 @@ def _request_with_outer_retry(
     delay_ms: int,
     **kwargs,
 ) -> requests.Response:
-    attempts = _network_outer_retries()
+    attempts = max(_network_outer_retries(), _rate_limit_retries())
     last_exc: Exception | None = None
+    last_resp: requests.Response | None = None
 
     for attempt_no in range(1, attempts + 1):
         if attempt_no == 1:
-            _sleep_ms(delay_ms)
+            _wait_for_global_rate_limit_window()
+            _sleep_ms(_delay_with_jitter_ms(delay_ms))
         else:
             time.sleep(_network_retry_sleep_s(attempt_no - 1))
+            _wait_for_global_rate_limit_window()
 
         try:
             resp = sess.request(
@@ -200,8 +275,33 @@ def _request_with_outer_retry(
                 allow_redirects=True,
                 **kwargs,
             )
+            last_resp = resp
+
+            if resp.status_code == 429:
+                cooldown_s = _rate_limit_backoff_s(resp, attempt_no)
+                _set_global_rate_limit_cooldown(cooldown_s)
+                if attempt_no >= attempts:
+                    resp.raise_for_status()
+                log(
+                    f"[VTT] rate limit retry {attempt_no}/{attempts - 1}: "
+                    f"{method} {url} :: 429 cooldown={cooldown_s:.1f}s"
+                )
+                continue
+
             resp.raise_for_status()
             return resp
+        except req_exc.HTTPError as exc:
+            last_exc = exc
+            status = getattr(exc.response, "status_code", None)
+            if status == 429 and exc.response is not None and attempt_no < attempts:
+                cooldown_s = _rate_limit_backoff_s(exc.response, attempt_no)
+                _set_global_rate_limit_cooldown(cooldown_s)
+                log(
+                    f"[VTT] rate limit retry {attempt_no}/{attempts - 1}: "
+                    f"{method} {url} :: 429 cooldown={cooldown_s:.1f}s"
+                )
+                continue
+            raise
         except (
             req_exc.ConnectTimeout,
             req_exc.ReadTimeout,
@@ -213,6 +313,8 @@ def _request_with_outer_retry(
                 raise
             log(f"[VTT] network retry {attempt_no}/{attempts - 1}: {method} {url} :: {exc}")
 
+    if last_resp is not None:
+        last_resp.raise_for_status()
     assert last_exc is not None
     raise last_exc
 
