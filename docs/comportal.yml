@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<yml_catalog date="2026-04-11 03:26:45">
+<yml_catalog date="2026-04-11 18:51:35">
 <shop><offers>
 <!--FEED_META
 Поставщик                                  | ComPortal
 URL поставщика                             | https://www.comportal.kz/auth/documents/prices/yml-catalog.php
-Время сборки (Алматы)                      | 2026-04-11 03:26:45
+Время сборки (Алматы)                      | 2026-04-11 18:51:35
 Ближайшая сборка (Алматы)                  | 2026-04-12 03:00:00
 Сколько товаров у поставщика до фильтра    | 1167
 Сколько товаров у поставщика после фильтра | 582
@@ -586,7 +586,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10658452" available="true">
-<categoryId></categoryId>
+<categoryId>9631644</categoryId>
 <vendorCode>CP10658452</vendorCode>
 <name>Дополнительная батарея APC SMX120BP (SMX120BP)</name>
 <price>620900</price>
@@ -903,7 +903,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10406026" available="true">
-<categoryId></categoryId>
+<categoryId>9631644</categoryId>
 <vendorCode>CP10406026</vendorCode>
 <name>Дополнительная батарея APC SRT192RMBP2 (SRT192RMBP2)</name>
 <price>940900</price>
@@ -1529,7 +1529,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP10395514" available="true">
-<categoryId></categoryId>
+<categoryId>9631644</categoryId>
 <vendorCode>CP10395514</vendorCode>
 <name>Дополнительная батарея APC SRT192RMBP (SRT192RMBP)</name>
 <price>710900</price>
@@ -6447,7 +6447,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13760849" available="true">
-<categoryId></categoryId>
+<categoryId>9631644</categoryId>
 <vendorCode>CP13760849</vendorCode>
 <name>Дополнительная батарея Eaton 9SX EBM (9SXEBM240)</name>
 <price>366900</price>
@@ -7877,7 +7877,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870174" available="true">
-<categoryId></categoryId>
+<categoryId>9631613</categoryId>
 <vendorCode>CP13870174</vendorCode>
 <name>Привод Canon FE3-3011-000000 (FE3-3011-000000)</name>
 <price>3900</price>
@@ -8911,7 +8911,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13838563" available="true">
-<categoryId></categoryId>
+<categoryId>9631644</categoryId>
 <vendorCode>CP13838563</vendorCode>
 <name>Дополнительная батарея APC SRV36BP-9A (SRV36BP-9A)</name>
 <price>130900</price>
@@ -8942,7 +8942,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13838564" available="true">
-<categoryId></categoryId>
+<categoryId>9631644</categoryId>
 <vendorCode>CP13838564</vendorCode>
 <name>Дополнительная батарея APC SRV72BP-9A (SRV72BP-9A)</name>
 <price>232900</price>
@@ -12345,7 +12345,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870177" available="true">
-<categoryId></categoryId>
+<categoryId>9631613</categoryId>
 <vendorCode>CP13870177</vendorCode>
 <name>Панель управления Canon 5257C001 (5257C001)</name>
 <price>1012900</price>
@@ -13882,7 +13882,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870609" available="true">
-<categoryId></categoryId>
+<categoryId>9631644</categoryId>
 <vendorCode>CP13870609</vendorCode>
 <name>Дополнительная батарея Astergo AST.UPS.PGOBP3U240V7 (AST.UPS.PGOBP3U240V7)</name>
 <price>325900</price>
@@ -13911,7 +13911,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870610" available="true">
-<categoryId></categoryId>
+<categoryId>9631644</categoryId>
 <vendorCode>CP13870610</vendorCode>
 <name>Дополнительная батарея Astergo AST.UPS.PGOBP3U240V9 (AST.UPS.PGOBP3U240V9)</name>
 <price>394900</price>
@@ -15765,7 +15765,7 @@ URL поставщика                             | https://www.comportal.kz/
 </offer>
 
 <offer id="CP13870534" available="true">
-<categoryId></categoryId>
+<categoryId>9631644</categoryId>
 <vendorCode>CP13870534</vendorCode>
 <name>Модуль батарей Eaton 9E EBM (9EEBM72)</name>
 <price>327900</price>
