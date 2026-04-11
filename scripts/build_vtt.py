@@ -21,6 +21,7 @@ from __future__ import annotations
 import json
 import os
 import threading
+import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timedelta
 from pathlib import Path
@@ -44,7 +45,7 @@ from suppliers.vtt.source import (
     parse_product_page_from_index,
 )
 
-BUILD_VTT_VERSION = "build_vtt_v14_full_qg_contract"
+BUILD_VTT_VERSION = "build_vtt_v15_rate_limit_guard"
 SUPPLIER_NAME_DEFAULT = "VTT"
 OUT_FILE_DEFAULT = "docs/vtt.yml"
 RAW_OUT_FILE_DEFAULT = "docs/raw/vtt.yml"
@@ -174,6 +175,40 @@ def _prepare_source_env(cfg_dir: Path, filter_cfg: dict[str, Any]) -> None:
     if not (os.getenv("VTT_ALLOWED_TITLE_PREFIXES") or "").strip():
         os.environ["VTT_ALLOWED_TITLE_PREFIXES"] = ",".join(prefixes_from_cfg(filter_cfg))
 
+    safe_defaults = {
+        "VTT_LISTING_REQUEST_DELAY_MS": "150",
+        "VTT_PRODUCT_REQUEST_DELAY_MS": "700",
+        "VTT_MAX_WORKERS": "2",
+        "VTT_MAX_WORKERS_HARD_CAP": "4",
+        "VTT_NETWORK_OUTER_RETRIES": "5",
+        "VTT_429_RETRIES": "5",
+        "VTT_429_MIN_COOLDOWN_S": "20",
+        "VTT_429_COOLDOWN_S": "45",
+        "VTT_429_MAX_COOLDOWN_S": "180",
+        "VTT_429_BACKOFF_STEP_S": "15",
+        "VTT_REQUEST_JITTER_MS": "180",
+        "VTT_SHARD_START_DELAY_S": "45",
+    }
+    for key, value in safe_defaults.items():
+        os.environ.setdefault(key, value)
+
+def _resolve_effective_workers(cfg) -> int:
+    requested = max(1, int(getattr(cfg, "max_workers", 1)))
+    hard_cap = max(1, _safe_int(os.getenv("VTT_MAX_WORKERS_HARD_CAP") or "4", 4))
+    effective = min(requested, hard_cap)
+    if effective < requested:
+        log(f"[VTT] workers capped: requested={requested} effective={effective}")
+    return effective
+
+def _maybe_stagger_shard_start() -> None:
+    shard_no = max(0, _safe_int(os.getenv("VTT_SHARD_NO") or "0", 0))
+    per_shard_delay_s = max(0, _safe_int(os.getenv("VTT_SHARD_START_DELAY_S") or "45", 45))
+    total_delay_s = shard_no * per_shard_delay_s
+    if total_delay_s <= 0:
+        return
+    log(f"[VTT] shard stagger: shard_no={shard_no} sleep={total_delay_s}s")
+    time.sleep(total_delay_s)
+
 def _print_summary(
     *,
     version: str,
@@ -247,9 +282,17 @@ def _build_offers_for_index(cfg, index: list[dict[str, Any]], *, id_prefix: str)
 
     out_offers: list[OfferOut] = []
     seen_oids: set[str] = set()
+    workers = _resolve_effective_workers(cfg)
+
+    log(
+        f"[VTT] crawl profile: workers={workers} "
+        f"listing_delay_ms={int(cfg.listing_request_delay_ms)} "
+        f"product_delay_ms={int(cfg.product_request_delay_ms)}"
+    )
 
     if index:
         thread_state = threading.local()
+        parse_errors = 0
 
         def parse_worker(item: dict[str, Any]):
             worker_sess = getattr(thread_state, "sess", None)
@@ -258,7 +301,7 @@ def _build_offers_for_index(cfg, index: list[dict[str, Any]], *, id_prefix: str)
                 thread_state.sess = worker_sess
             return parse_product_page_from_index(worker_sess, cfg, item)
 
-        with ThreadPoolExecutor(max_workers=max(1, int(cfg.max_workers))) as pool:
+        with ThreadPoolExecutor(max_workers=workers) as pool:
             futures = []
             for item in index:
                 if datetime.utcnow() >= deadline:
@@ -271,6 +314,7 @@ def _build_offers_for_index(cfg, index: list[dict[str, Any]], *, id_prefix: str)
                 try:
                     raw = fut.result()
                 except Exception as exc:
+                    parse_errors += 1
                     log(f"[VTT] product parse error: {exc}")
                     continue
                 if not raw:
@@ -282,6 +326,9 @@ def _build_offers_for_index(cfg, index: list[dict[str, Any]], *, id_prefix: str)
 
                 seen_oids.add(offer.oid)
                 out_offers.append(offer)
+
+        if parse_errors:
+            log(f"[VTT] product parse errors total: {parse_errors}")
 
     out_offers.sort(key=lambda o: o.oid)
     return out_offers
@@ -368,6 +415,7 @@ def _run_index(cfg_dir: Path, filter_cfg: dict[str, Any], schema_cfg: dict[str, 
 
 def _run_shard_index(cfg_dir: Path, filter_cfg: dict[str, Any], schema_cfg: dict[str, Any], policy_cfg: dict[str, Any]) -> int:
     _prepare_source_env(cfg_dir, filter_cfg)
+    _maybe_stagger_shard_start()
     cfg = cfg_from_env()
 
     shard_name = (os.getenv("VTT_SHARD_NAME") or "shard").strip() or "shard"
