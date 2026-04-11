@@ -167,7 +167,7 @@ def _resolve_exact(*, name_n: str, vendor_n: str, type_n: str, tech_n: str, hay:
     # 4. Проекторы / интерактивка
     if _contains_any(hay, ["ops", "крепление", "стойка", "стенд", "пульт", "стилус", "маркер", "держатель"]) and _contains_any(hay, ["интерактив", "проектор", "экран"]):
         return GROUP_IDS["interactive_accessories"]
-    if _title_or_type(name_n, type_n, "интерактивная панель", "interactive panel", "интерактивный дисплей"):
+    if _title_or_type(name_n, type_n, "интерактивная панель", "interactive panel", "интерактивный дисплей", "интерактивный киоск", "interactive kiosk"):
         return GROUP_IDS["interactive_panels"]
     if _title_or_type(name_n, type_n, "интерактивная доска", "interactive board"):
         return GROUP_IDS["interactive_boards"]
@@ -181,7 +181,7 @@ def _resolve_exact(*, name_n: str, vendor_n: str, type_n: str, tech_n: str, hay:
         return GROUP_IDS["laminating_film"]
     if _title_or_type(name_n, type_n, "ламинатор", "laminator"):
         return GROUP_IDS["laminators"]
-    if _title_or_type(name_n, type_n, "переплетчик", "binder", "binding machine"):
+    if _title_or_type(name_n, type_n, "переплетчик", "binder", "binding machine", "переплетная машина"):
         return GROUP_IDS["binders"]
     if _title_or_type(name_n, type_n, "шредер", "shredder"):
         return GROUP_IDS["shredders"]
@@ -206,7 +206,9 @@ def _resolve_exact(*, name_n: str, vendor_n: str, type_n: str, tech_n: str, hay:
     # 7. ИБП / стабилизаторы / батареи
     if _contains_any(hay, ["snmp", "адаптер для ибп", "рельсы для ибп", "карта управления", "коммуникационная карта"]) and _contains_any(hay, ["ибп", "ups"]):
         return GROUP_IDS["ups_accessories"]
-    if _contains_any(hay, ["аккумулятор", "аккумуляторная батарея", "батарейный блок", "battery pack", "battery module", "акб"]):
+    if _contains_any(hay, ["силовой модуль", "power module", "upm module"]) and _contains_any(hay, ["ибп", "ups", "svc", "eaton", "apc"]):
+        return GROUP_IDS["ups_accessories"]
+    if _contains_any(hay, ["аккумулятор", "аккумуляторная батарея", "батарейный блок", "battery pack", "battery module", "акб", "дополнительная батарея", "модуль батарей", "ebm"]):
         return GROUP_IDS["batteries"]
     if _title_or_type(name_n, type_n, "стабилизатор", "stabilizer", "avr"):
         return GROUP_IDS["stabilizers"]
@@ -230,17 +232,19 @@ def _resolve_exact(*, name_n: str, vendor_n: str, type_n: str, tech_n: str, hay:
         return GROUP_IDS["printers"]
 
     # 2. Запчасти и комплектующие для принтеров и МФУ
+    if _contains_any(hay, ["степлер", "скрепки", "refill"]) and _contains_any(hay, ["xerox", "canon", "hp", "printer", "принтер", "мфу", "finisher", "финишер"]):
+        return GROUP_IDS["finishers_trays_stands"]
     if _contains_any(hay, ["финишер", "лоток", "кассета", "подающий модуль", "дополнительный лоток", "подставка", "pedestal", "tray"]):
         return GROUP_IDS["finishers_trays_stands"]
-    if _contains_any(hay, ["комплект обслуживания", "maintenance kit", "сервисный комплект", "service kit", "комплект инициализации", "init kit"]):
+    if _contains_any(hay, ["комплект обслуживания", "maintenance kit", "сервисный комплект", "service kit", "комплект инициализации", "init kit", "сервисный набор", "ремонтный комплект"]):
         return GROUP_IDS["service_kits"]
     if _contains_any(hay, ["термоблок", "fuser", "печка", "узел закрепления", "fixing unit"]):
         return GROUP_IDS["fusers"]
-    if _contains_any(hay, ["блок проявки", "developer unit", "dev unit"]):
+    if _contains_any(hay, ["блок проявки", "developer unit", "dev unit", "блока проявки", "магнитный вал блока проявки"]):
         return GROUP_IDS["developer_units"]
-    if _contains_any(hay, ["ремень переноса", "узел переноса", "transfer belt", "transfer unit", "лента переноса"]):
+    if _contains_any(hay, ["ремень переноса", "узел переноса", "transfer belt", "transfer unit", "лента переноса", "вал переноса", "коротрон", "corona", "первичн перенос"]):
         return GROUP_IDS["transfer_units"]
-    if _contains_any(hay, ["ролик подачи", "ролик захвата", "ролик отделения", "pickup roller", "feed roller", "separation roller", "ремкомплект"]):
+    if _contains_any(hay, ["ролик подачи", "ролик захвата", "ролик отделения", "pickup roller", "feed roller", "separation roller", "ремкомплект", "вал подачи", "палец отделения", "пальцы отделения", "тормозная площадка", "площадка отделения", "площадка отделен", "держатель площадки тормозной"]):
         return GROUP_IDS["rollers_kits"]
 
     # 1. Расходные материалы для принтеров и МФУ
@@ -250,8 +254,10 @@ def _resolve_exact(*, name_n: str, vendor_n: str, type_n: str, tech_n: str, hay:
         return GROUP_IDS["waste_containers"]
     if _contains_any(hay, ["девелопер", "developer"]) or (_contains_any(hay, ["тонер"]) and not _contains_any(hay, ["тонер-картридж", "toner cartridge"])):
         return GROUP_IDS["toners_developers"]
-    if _contains_any(hay, ["драм-юнит", "drum unit", "фотобарабан", "барабан", "imaging drum", "image drum", "drum cartridge"]):
+    if _contains_any(hay, ["драм-юнит", "drum unit", "фотобарабан", "барабан", "imaging drum", "image drum", "drum cartridge", "блок формирования изображения", "комплект блока формирования изображений"]):
         return GROUP_IDS["drums_photodrums"]
+    if _contains_any(hay, ["растворитель", "калибровочная бумага"]):
+        return GROUP_IDS["other_consumables"]
     if _contains_any(hay, ["чернила", "ink bottle", "ultrachrome"]) and not _contains_any(hay, ["картридж", "cartridge", "емкость", "tank"]):
         return GROUP_IDS["inks"]
 
@@ -278,7 +284,12 @@ def _resolve_soft_fallback(*, hay: str) -> str:
 
         if _contains_any(hay, [
             "узел", "модуль", "kit", "ролик", "fuser", "печка", "термоблок",
-            "ремень переноса", "лоток", "финишер", "кассета", "подставка"
+            "ремень переноса", "лоток", "финишер", "кассета", "подставка",
+            "шлейф", "муфта", "направляющая", "шарнир", "петля", "консоль",
+            "шестерня", "зубчатая передача", "подшипник", "датчик", "активатор",
+            "шкив", "привод", "панель управления", "автоподатчик", "dadf", "adf",
+            "блок подачи чернил", "пылевой фильтр", "рычаг датчика", "газлифт",
+            "жесткий диск", "нагревательная лампа", "транспортного модуля", "транспортный модуль"
         ]):
             return GROUP_IDS["other_parts"]
 
