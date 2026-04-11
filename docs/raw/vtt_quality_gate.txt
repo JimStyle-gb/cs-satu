@@ -13,13 +13,13 @@ freeze_current_as_baseline: no
 # yes = текущие cosmetic-хвосты сохранены как baseline-снимок
 critical_count: 0
 # Сколько найдено критичных проблем
-cosmetic_total_count: 449
+cosmetic_total_count: 448
 # Общее число некритичных проблем
-cosmetic_offer_count: 449
+cosmetic_offer_count: 448
 # В скольких товарах есть cosmetic-проблемы
-known_cosmetic_count: 449
+known_cosmetic_count: 448
 # Сколько cosmetic-проблем уже известны по baseline
-known_cosmetic_offer_count: 449
+known_cosmetic_offer_count: 448
 # В скольких товарах есть уже известные cosmetic-проблемы
 new_cosmetic_count: 0
 # Сколько найдено новых cosmetic-проблем
@@ -126,7 +126,6 @@ VT1507060254780 | placeholder_picture | Требует ручной провер
 VT1507060254790 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 VT1507060254801 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 VT1507060254810 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
-VT15070602550 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 VT150706025500 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 VT150706025510 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 VT150706025512 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
@@ -580,7 +579,6 @@ VT1507060254780 | placeholder_picture | Требует ручной провер
 VT1507060254790 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 VT1507060254801 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 VT1507060254810 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
-VT15070602550 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 VT150706025500 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 VT150706025510 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 VT150706025512 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo

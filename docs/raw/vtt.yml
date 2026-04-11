@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<yml_catalog date="2026-04-10 22:08:59">
+<yml_catalog date="2026-04-11 21:00:21">
 <shop><offers>
 <!--FEED_META
 Поставщик                                  | VTT
 URL поставщика                             | https://b2b.vtt.ru/catalog/
-Время сборки (Алматы)                      | 2026-04-10 22:08:59
+Время сборки (Алматы)                      | 2026-04-11 21:00:21
 Ближайшая сборка (Алматы)                  | 2026-04-20 05:00:00
-Сколько товаров у поставщика до фильтра    | 3122
-Сколько товаров у поставщика после фильтра | 3117
-Сколько товаров есть в наличии (true)      | 3117
+Сколько товаров у поставщика до фильтра    | 3113
+Сколько товаров у поставщика после фильтра | 3108
+Сколько товаров есть в наличии (true)      | 3108
 Сколько товаров нет в наличии (false)      | 0
 -->
 
@@ -2311,26 +2311,6 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <param name="Партномер">N-CE285A</param>
 <param name="Совместимость">HP LJ Pro P1102/P1120W/M1212nf/M1132MFP/Canon 725</param>
 <param name="Ресурс">2K</param>
-<param name="Оригинальность">Совместимый</param>
-</offer>
-
-<offer id="VT12003020" available="true">
-<categoryId></categoryId>
-<vendorCode>VT12003020</vendorCode>
-<name>Картридж NetProduct (N-E-30) для Canon FC 200/210/220/230 (совместимый)</name>
-<price>12900</price>
-<picture>https://b2b.vtt.ru/images/12003020.jpg</picture>
-<vendor>Canon</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Совместимый картридж NetProduct (N-E-30) для Canon FC 200/210/220/230; цвет — Чёрный; ресурс — 4K; технология печати — Лазерная.]]></description>
-<param name="Тип">Картридж</param>
-<param name="Технология печати">Лазерная</param>
-<param name="Для бренда">Canon</param>
-<param name="Цвет">Чёрный</param>
-<param name="Партномер">N-E-30</param>
-<param name="Совместимость">Canon FC 200/210/220/230</param>
-<param name="Ресурс">4K</param>
 <param name="Оригинальность">Совместимый</param>
 </offer>
 
@@ -8969,20 +8949,20 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <categoryId></categoryId>
 <vendorCode>VT15070602550</vendorCode>
 <name>Чернила InkTec (C5026) для Canon PIXMA iP4820/MG5120 (CLI-226/426), Y, 0,1 л. (совместимый)</name>
-<price>3900</price>
-<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
+<price>4900</price>
+<picture>https://b2b.vtt.ru/images/15070602550.jpg</picture>
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимые чернила. Совместимые чернила InkTec (C5026) для Canon PIXMA iP4820/MG5120 (CLI-226/426), Y, 0,1 л.; партномер — IT-CAN-C5026-100Ml-Y; цвет — Желтый; технология печати — Струйная.]]></description>
+Совместимые чернила. Совместимые чернила InkTec (C5026) для Canon PIXMA iP4820/MG5120 (CLI-226/426), Y, 0,1 л.; партномер — IT-CAN-C5026-100Ml-Y-WatB; цвет — Желтый; технология печати — Струйная.]]></description>
 <param name="Тип">Чернила</param>
 <param name="Технология печати">Струйная</param>
 <param name="Для бренда">Canon</param>
 <param name="Цвет">Желтый</param>
-<param name="Партномер">IT-CAN-C5026-100Ml-Y</param>
+<param name="Партномер">IT-CAN-C5026-100Ml-Y-WatB</param>
 <param name="Совместимость">Canon PIXMA iP4820/MG5120 (CLI-226/426)</param>
 <param name="Ресурс">0,1 л</param>
-<param name="Коды расходников">15070602550уц, C5026-LY</param>
+<param name="Коды расходников">C5026-LY</param>
 <param name="Оригинальность">Совместимый</param>
 </offer>
 
@@ -9494,20 +9474,20 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <categoryId></categoryId>
 <vendorCode>VT15070604495</vendorCode>
 <name>Чернила InkTec (C5041) для Canon CL-441/441CXL, Y, 0,1 л. (совместимый)</name>
-<price>4900</price>
+<price>3900</price>
 <picture>https://placehold.co/800x800/png?text=No+Photo</picture>
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимые чернила. Совместимые чернила InkTec (C5041) для Canon CL-441/441CXL, Y, 0,1 л.; партномер — IT-CAN-C5041-100Ml-Y-WatB; цвет — Желтый; технология печати — Струйная.]]></description>
+Совместимые чернила. Совместимые чернила InkTec (C5041) для Canon CL-441/441CXL, Y, 0,1 л.; партномер — IT-CAN-C5041-100Ml-Y; цвет — Желтый; технология печати — Струйная.]]></description>
 <param name="Тип">Чернила</param>
 <param name="Технология печати">Струйная</param>
 <param name="Для бренда">Canon</param>
 <param name="Цвет">Желтый</param>
-<param name="Партномер">IT-CAN-C5041-100Ml-Y-WatB</param>
+<param name="Партномер">IT-CAN-C5041-100Ml-Y</param>
 <param name="Совместимость">Canon CL-441/441CXL</param>
 <param name="Ресурс">0,1 л</param>
-<param name="Коды расходников">C5041-LY</param>
+<param name="Коды расходников">15070604495уц, C5041-LY</param>
 <param name="Оригинальность">Совместимый</param>
 </offer>
 
@@ -15765,7 +15745,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <categoryId></categoryId>
 <vendorCode>VT2893C001</vendorCode>
 <name>Картридж PFI-320Y Canon TM-200/205/300 (оригинал)</name>
-<price>100</price>
+<price>101900</price>
 <picture>https://b2b.vtt.ru/images/2893C001.jpg</picture>
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
@@ -15820,7 +15800,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <categoryId></categoryId>
 <vendorCode>VT2K393130</vendorCode>
 <name>2K393130/WT-475 Бункер отработанного тонера Kyocera FS-6025/6030/6525/6530 (оригинал)</name>
-<price>10900</price>
+<price>100</price>
 <picture>https://placehold.co/800x800/png?text=No+Photo</picture>
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
@@ -18111,7 +18091,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <categoryId></categoryId>
 <vendorCode>VT3WT90A</vendorCode>
 <name>3WT90A Бункер сбора отработанного тонера HP CLJ Enterprise M751 (оригинал)</name>
-<price>100</price>
+<price>27900</price>
 <picture>https://b2b.vtt.ru/images/3WT90A.jpg</picture>
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
@@ -21613,7 +21593,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <categoryId></categoryId>
 <vendorCode>VT5219B005</vendorCode>
 <name>Картридж струйный Canon PG-440/CL-441 для Canon MG2140/MG3140, 180стр чёрный+цвет (оригинал)</name>
-<price>28900</price>
+<price>100</price>
 <picture>https://b2b.vtt.ru/images/5219B005.jpg</picture>
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
@@ -40069,8 +40049,8 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <offer id="VT9956501101" available="true">
 <categoryId></categoryId>
 <vendorCode>VT9956501101</vendorCode>
-<name>DV-1110/302M293020 Блок проявки Kyocera FS-1020MFP/1025MFP , 9956501101 (оригинал)</name>
-<price>100</price>
+<name>DV-1110/302M293020 Блок проявки Kyocera FS-1020MFP/1025MFP (оригинал)</name>
+<price>33900</price>
 <picture>https://b2b.vtt.ru/images/9956501101.jpg</picture>
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
@@ -59163,206 +59143,6 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <param name="Оригинальность">Совместимый</param>
 </offer>
 
-<offer id="VTHB-IMC3510HBK" available="true">
-<categoryId></categoryId>
-<vendorCode>VTHB-IMC3510HBK</vendorCode>
-<name>Тонер-картридж Hi-Black (HB-IMC3510H BK) для Ricoh IM C3010/IM C3510 (совместимый)</name>
-<price>24900</price>
-<picture>https://b2b.vtt.ru/images/HB-IMC3510HBK.jpg</picture>
-<picture>https://b2b.vtt.ru/images/HB-IMC3510HBK_2.jpg</picture>
-<picture>https://b2b.vtt.ru/images/HB-IMC3510HBK_3.jpg</picture>
-<picture>https://b2b.vtt.ru/images/HB-IMC3510HBK_4.jpg</picture>
-<picture>https://b2b.vtt.ru/images/HB-IMC3510HBK_5.jpg</picture>
-<picture>https://b2b.vtt.ru/images/HB-IMC3510HBK_6.jpg</picture>
-<vendor>Ricoh</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Совместимый тонер-картридж Hi-Black (HB-IMC3510H BK) для Ricoh IM C3010/IM C3510; партномер — HB-IMC3510HBK; цвет — Чёрный; ресурс — 40K; технология печати — Лазерная.]]></description>
-<param name="Тип">Тонер-картридж</param>
-<param name="Технология печати">Лазерная</param>
-<param name="Для бренда">Ricoh</param>
-<param name="Цвет">Чёрный</param>
-<param name="Партномер">HB-IMC3510HBK</param>
-<param name="Совместимость">Ricoh IM C3010/IM C3510</param>
-<param name="Ресурс">40K</param>
-<param name="Оригинальность">Совместимый</param>
-</offer>
-
-<offer id="VTHB-IMC3510HC" available="true">
-<categoryId></categoryId>
-<vendorCode>VTHB-IMC3510HC</vendorCode>
-<name>Тонер-картридж Hi-Black (HB-IMC3510H C) для Ricoh IM C3010/IM C3510 (совместимый)</name>
-<price>26900</price>
-<picture>https://b2b.vtt.ru/images/HB-IMC3510HC.jpg</picture>
-<picture>https://b2b.vtt.ru/images/HB-IMC3510HC_2.jpg</picture>
-<picture>https://b2b.vtt.ru/images/HB-IMC3510HC_3.jpg</picture>
-<picture>https://b2b.vtt.ru/images/HB-IMC3510HC_4.jpg</picture>
-<picture>https://b2b.vtt.ru/images/HB-IMC3510HC_5.jpg</picture>
-<picture>https://b2b.vtt.ru/images/HB-IMC3510HC_6.jpg</picture>
-<vendor>Ricoh</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Совместимый тонер-картридж Hi-Black (HB-IMC3510H C) для Ricoh IM C3010/IM C3510; партномер — HB-IMC3510HC; цвет — Голубой; ресурс — 28K; технология печати — Лазерная.]]></description>
-<param name="Тип">Тонер-картридж</param>
-<param name="Технология печати">Лазерная</param>
-<param name="Для бренда">Ricoh</param>
-<param name="Цвет">Голубой</param>
-<param name="Партномер">HB-IMC3510HC</param>
-<param name="Совместимость">Ricoh IM C3010/IM C3510</param>
-<param name="Ресурс">28K</param>
-<param name="Оригинальность">Совместимый</param>
-</offer>
-
-<offer id="VTHB-IMC3510HM" available="true">
-<categoryId></categoryId>
-<vendorCode>VTHB-IMC3510HM</vendorCode>
-<name>Тонер-картридж Hi-Black (HB-IMC3510H M) для Ricoh IM C3010/IM C3510 (совместимый)</name>
-<price>26900</price>
-<picture>https://b2b.vtt.ru/images/HB-IMC3510HM.jpg</picture>
-<picture>https://b2b.vtt.ru/images/HB-IMC3510HM_2.jpg</picture>
-<picture>https://b2b.vtt.ru/images/HB-IMC3510HM_3.jpg</picture>
-<picture>https://b2b.vtt.ru/images/HB-IMC3510HM_4.jpg</picture>
-<picture>https://b2b.vtt.ru/images/HB-IMC3510HM_5.jpg</picture>
-<picture>https://b2b.vtt.ru/images/HB-IMC3510HM_6.jpg</picture>
-<vendor>Ricoh</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Совместимый тонер-картридж Hi-Black (HB-IMC3510H M) для Ricoh IM C3010/IM C3510; партномер — HB-IMC3510HM; цвет — Пурпурный; ресурс — 28K; технология печати — Лазерная.]]></description>
-<param name="Тип">Тонер-картридж</param>
-<param name="Технология печати">Лазерная</param>
-<param name="Для бренда">Ricoh</param>
-<param name="Цвет">Пурпурный</param>
-<param name="Партномер">HB-IMC3510HM</param>
-<param name="Совместимость">Ricoh IM C3010/IM C3510</param>
-<param name="Ресурс">28K</param>
-<param name="Оригинальность">Совместимый</param>
-</offer>
-
-<offer id="VTHB-IMC3510HY" available="true">
-<categoryId></categoryId>
-<vendorCode>VTHB-IMC3510HY</vendorCode>
-<name>Тонер-картридж Hi-Black (HB-IMC3510H Y) для Ricoh IM C3010/IM C3510 (совместимый)</name>
-<price>26900</price>
-<picture>https://b2b.vtt.ru/images/HB-IMC3510HY.jpg</picture>
-<picture>https://b2b.vtt.ru/images/HB-IMC3510HY_2.jpg</picture>
-<picture>https://b2b.vtt.ru/images/HB-IMC3510HY_3.jpg</picture>
-<picture>https://b2b.vtt.ru/images/HB-IMC3510HY_4.jpg</picture>
-<picture>https://b2b.vtt.ru/images/HB-IMC3510HY_5.jpg</picture>
-<picture>https://b2b.vtt.ru/images/HB-IMC3510HY_6.jpg</picture>
-<vendor>Ricoh</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Совместимый тонер-картридж Hi-Black (HB-IMC3510H Y) для Ricoh IM C3010/IM C3510; партномер — HB-IMC3510HY; цвет — Желтый; ресурс — 28K; технология печати — Лазерная.]]></description>
-<param name="Тип">Тонер-картридж</param>
-<param name="Технология печати">Лазерная</param>
-<param name="Для бренда">Ricoh</param>
-<param name="Цвет">Желтый</param>
-<param name="Партномер">HB-IMC3510HY</param>
-<param name="Совместимость">Ricoh IM C3010/IM C3510</param>
-<param name="Ресурс">28K</param>
-<param name="Оригинальность">Совместимый</param>
-</offer>
-
-<offer id="VTHB-IMC6010HBK" available="true">
-<categoryId></categoryId>
-<vendorCode>VTHB-IMC6010HBK</vendorCode>
-<name>Тонер-картридж Hi-Black (HB-IMC6010H BK) для Ricoh IM C4510/C5510/C6010 (совместимый)</name>
-<price>26900</price>
-<picture>https://b2b.vtt.ru/images/HB-IMC6010HBK.jpg</picture>
-<picture>https://b2b.vtt.ru/images/HB-IMC6010HBK_2.jpg</picture>
-<picture>https://b2b.vtt.ru/images/HB-IMC6010HBK_3.jpg</picture>
-<picture>https://b2b.vtt.ru/images/HB-IMC6010HBK_4.jpg</picture>
-<picture>https://b2b.vtt.ru/images/HB-IMC6010HBK_5.jpg</picture>
-<picture>https://b2b.vtt.ru/images/HB-IMC6010HBK_6.jpg</picture>
-<vendor>Ricoh</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Совместимый тонер-картридж Hi-Black (HB-IMC6010H BK) для Ricoh IM C4510/C5510/C6010; партномер — HB-IMC6010HBK; цвет — Чёрный; ресурс — 42K; технология печати — Лазерная.]]></description>
-<param name="Тип">Тонер-картридж</param>
-<param name="Технология печати">Лазерная</param>
-<param name="Для бренда">Ricoh</param>
-<param name="Цвет">Чёрный</param>
-<param name="Партномер">HB-IMC6010HBK</param>
-<param name="Совместимость">Ricoh IM C4510/C5510/C6010</param>
-<param name="Ресурс">42K</param>
-<param name="Оригинальность">Совместимый</param>
-</offer>
-
-<offer id="VTHB-IMC6010HC" available="true">
-<categoryId></categoryId>
-<vendorCode>VTHB-IMC6010HC</vendorCode>
-<name>Тонер-картридж Hi-Black (HB-IMC6010H C) для Ricoh IM C4510/C5510/C6010 (совместимый)</name>
-<price>28900</price>
-<picture>https://b2b.vtt.ru/images/HB-IMC6010HC.jpg</picture>
-<picture>https://b2b.vtt.ru/images/HB-IMC6010HC_2.jpg</picture>
-<picture>https://b2b.vtt.ru/images/HB-IMC6010HC_3.jpg</picture>
-<picture>https://b2b.vtt.ru/images/HB-IMC6010HC_4.jpg</picture>
-<picture>https://b2b.vtt.ru/images/HB-IMC6010HC_5.jpg</picture>
-<picture>https://b2b.vtt.ru/images/HB-IMC6010HC_6.jpg</picture>
-<vendor>Ricoh</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Совместимый тонер-картридж Hi-Black (HB-IMC6010H C) для Ricoh IM C4510/C5510/C6010; партномер — HB-IMC6010HC; цвет — Голубой; ресурс — 28K; технология печати — Лазерная.]]></description>
-<param name="Тип">Тонер-картридж</param>
-<param name="Технология печати">Лазерная</param>
-<param name="Для бренда">Ricoh</param>
-<param name="Цвет">Голубой</param>
-<param name="Партномер">HB-IMC6010HC</param>
-<param name="Совместимость">Ricoh IM C4510/C5510/C6010</param>
-<param name="Ресурс">28K</param>
-<param name="Оригинальность">Совместимый</param>
-</offer>
-
-<offer id="VTHB-IMC6010HM" available="true">
-<categoryId></categoryId>
-<vendorCode>VTHB-IMC6010HM</vendorCode>
-<name>Тонер-картридж Hi-Black (HB-IMC6010H M) для Ricoh IM C4510/C5510/C6010 (совместимый)</name>
-<price>28900</price>
-<picture>https://b2b.vtt.ru/images/HB-IMC6010HM.jpg</picture>
-<picture>https://b2b.vtt.ru/images/HB-IMC6010HM_2.jpg</picture>
-<picture>https://b2b.vtt.ru/images/HB-IMC6010HM_3.jpg</picture>
-<picture>https://b2b.vtt.ru/images/HB-IMC6010HM_4.jpg</picture>
-<picture>https://b2b.vtt.ru/images/HB-IMC6010HM_5.jpg</picture>
-<picture>https://b2b.vtt.ru/images/HB-IMC6010HM_6.jpg</picture>
-<vendor>Ricoh</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Совместимый тонер-картридж Hi-Black (HB-IMC6010H M) для Ricoh IM C4510/C5510/C6010; партномер — HB-IMC6010HM; цвет — Пурпурный; ресурс — 28K; технология печати — Лазерная.]]></description>
-<param name="Тип">Тонер-картридж</param>
-<param name="Технология печати">Лазерная</param>
-<param name="Для бренда">Ricoh</param>
-<param name="Цвет">Пурпурный</param>
-<param name="Партномер">HB-IMC6010HM</param>
-<param name="Совместимость">Ricoh IM C4510/C5510/C6010</param>
-<param name="Ресурс">28K</param>
-<param name="Оригинальность">Совместимый</param>
-</offer>
-
-<offer id="VTHB-IMC6010HY" available="true">
-<categoryId></categoryId>
-<vendorCode>VTHB-IMC6010HY</vendorCode>
-<name>Тонер-картридж Hi-Black (HB-IMC6010H Y) для Ricoh IM C4510/C5510/C6010 (совместимый)</name>
-<price>28900</price>
-<picture>https://b2b.vtt.ru/images/HB-IMC6010HY.jpg</picture>
-<picture>https://b2b.vtt.ru/images/HB-IMC6010HY_2.jpg</picture>
-<picture>https://b2b.vtt.ru/images/HB-IMC6010HY_3.jpg</picture>
-<picture>https://b2b.vtt.ru/images/HB-IMC6010HY_4.jpg</picture>
-<picture>https://b2b.vtt.ru/images/HB-IMC6010HY_5.jpg</picture>
-<picture>https://b2b.vtt.ru/images/HB-IMC6010HY_6.jpg</picture>
-<vendor>Ricoh</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Совместимый тонер-картридж Hi-Black (HB-IMC6010H Y) для Ricoh IM C4510/C5510/C6010; партномер — HB-IMC6010HY; цвет — Желтый; ресурс — 28K; технология печати — Лазерная.]]></description>
-<param name="Тип">Тонер-картридж</param>
-<param name="Технология печати">Лазерная</param>
-<param name="Для бренда">Ricoh</param>
-<param name="Цвет">Желтый</param>
-<param name="Партномер">HB-IMC6010HY</param>
-<param name="Совместимость">Ricoh IM C4510/C5510/C6010</param>
-<param name="Ресурс">28K</param>
-<param name="Оригинальность">Совместимый</param>
-</offer>
-
 <offer id="VTHB-PC-211EV-MPS" available="true">
 <categoryId></categoryId>
 <vendorCode>VTHB-PC-211EV-MPS</vendorCode>
@@ -63273,7 +63053,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <categoryId></categoryId>
 <vendorCode>VTW2210X</vendorCode>
 <name>Картридж лазерный HP 207X для HP M255/MFP M282/M283 (оригинал)</name>
-<price>100</price>
+<price>79900</price>
 <picture>https://b2b.vtt.ru/images/W2210X.jpg</picture>
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
