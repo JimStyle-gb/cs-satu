@@ -1,428 +1,420 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Проверка итогового файла Price.yml."""
-
+"""Checker для docs/Price.yml + Telegram уведомление."""
 from __future__ import annotations
 
 import json
+import os
+import re
 import sys
+import urllib.parse
+import urllib.request
 import xml.etree.ElementTree as ET
-from collections import Counter
 from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
 from typing import Any
 
-ROOT = Path(__file__).resolve().parents[1]
-PRICE_PATH = ROOT / "docs" / "Price.yml"
-RAW_DIR = ROOT / "docs" / "raw"
-REPORT_PATH = RAW_DIR / "price_checker_report.txt"
-BASELINE_PATH = RAW_DIR / "price_checker_last_success.json"
+PRICE_PATH = Path("docs/Price.yml")
+REPORT_PATH = Path("docs/raw/price_checker_report.txt")
+BASELINE_PATH = Path("docs/raw/price_checker_last_success.json")
+EXPECTED_SUPPLIERS = ["AkCent", "AlStyle", "ComPortal", "CopyLine", "VTT"]
+TIMEZONE_LABEL = "Алматы"
 
-SUPPLIERS = {
-    "AkCent": ("ACC", "AK", "AC"),
-    "AlStyle": ("AS",),
-    "ComPortal": ("CP",),
-    "CopyLine": ("CL",),
-    "VTT": ("VT",),
-}
+# Пороги предупреждений
+WARN_TOTAL_DELTA_PCT = 5.0
+WARN_SUPPLIER_DELTA_PCT = 10.0
+WARN_PRICE100_ABS = 50
+WARN_PRICE100_PCT = 10.0
+WARN_PLACEHOLDER_ABS = 50
+WARN_PLACEHOLDER_PCT = 10.0
+WARN_FALSE_PCT = 20.0
 
-PLACEHOLDER = "https://placehold.co/800x800/png?text=No+Photo"
+# Пороги ошибок
+FAIL_TOTAL_DROP_PCT = 15.0
+FAIL_SUPPLIER_DROP_PCT = 25.0
+
+PLACEHOLDER_URL = "https://placehold.co/800x800/png?text=No+Photo"
 
 
 @dataclass
 class CheckResult:
     status: str
     reason: str
+    stats: dict[str, Any]
     report_text: str
-    metrics: dict[str, Any]
-    extra_issue_count: int = 0
 
 
-def _now_str() -> str:
-    return datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
-
-
-def _safe_int(value: str | None, default: int = 0) -> int:
+def _safe_int(text: str | None, default: int = 0) -> int:
     try:
-        return int(str(value).strip())
+        return int(str(text).strip())
     except Exception:
         return default
 
 
-def _safe_float(value: str | None, default: float = 0.0) -> float:
+def _safe_float(value: int, baseline: int) -> float:
+    if baseline <= 0:
+        return 0.0 if value == 0 else 100.0
+    return abs(value - baseline) * 100.0 / baseline
+
+
+def _extract_feed_meta(text: str) -> str:
+    m = re.search(r"<!--FEED_META\n(.*?)-->", text, re.DOTALL)
+    return m.group(1).strip() if m else ""
+
+
+def _extract_meta_value(meta: str, key: str) -> str:
+    pattern = rf"^{re.escape(key)}\s*\|\s*(.+)$"
+    for line in meta.splitlines():
+        m = re.match(pattern, line)
+        if m:
+            return m.group(1).strip()
+    return ""
+
+
+def _parse_supplier_counts(meta: str) -> dict[str, int]:
+    blocks = [b.strip() for b in meta.split("\n\n") if b.strip()]
+    result: dict[str, int] = {}
+    for block in blocks:
+        supplier = _extract_meta_value(block, "Поставщик")
+        if supplier in EXPECTED_SUPPLIERS:
+            count = _safe_int(_extract_meta_value(block, "Сколько товаров у поставщика после фильтра"))
+            result[supplier] = count
+    return result
+
+
+def _send_telegram(text: str) -> tuple[bool, str]:
+    token = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
+    chat_id = os.getenv("TELEGRAM_CHAT_ID", "").strip()
+    if not token or not chat_id:
+        return False, "Telegram секреты не заданы"
+
+    endpoint = f"https://api.telegram.org/bot{token}/sendMessage"
+    payload = urllib.parse.urlencode({
+        "chat_id": chat_id,
+        "text": text,
+    }).encode("utf-8")
+    req = urllib.request.Request(endpoint, data=payload, method="POST")
     try:
-        return float(str(value).strip())
+        with urllib.request.urlopen(req, timeout=20) as resp:
+            body = resp.read().decode("utf-8", errors="ignore")
+        return True, body[:200]
+    except Exception as exc:
+        return False, str(exc)
+
+
+def _load_baseline() -> dict[str, Any]:
+    if not BASELINE_PATH.exists():
+        return {}
+    try:
+        return json.loads(BASELINE_PATH.read_text(encoding="utf-8"))
     except Exception:
-        return default
+        return {}
 
 
-def _text(elem: ET.Element | None) -> str:
-    return (elem.text or "").strip() if elem is not None else ""
+def _save_baseline(stats: dict[str, Any]) -> None:
+    BASELINE_PATH.parent.mkdir(parents=True, exist_ok=True)
+    BASELINE_PATH.write_text(json.dumps(stats, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
-def _prefix_supplier(offer_id: str) -> str | None:
-    offer_id = offer_id.strip().upper()
-    for supplier, prefixes in SUPPLIERS.items():
-        for prefix in prefixes:
-            if offer_id.startswith(prefix):
-                return supplier
-    return None
-
-
-def _load_xml(path: Path) -> ET.ElementTree:
-    parser = ET.XMLParser(target=ET.TreeBuilder(insert_comments=True))
-    return ET.parse(path, parser=parser)
-
-
-def _collect_metrics(price_path: Path) -> dict[str, Any]:
-    if not price_path.exists():
-        raise FileNotFoundError("Файл Price.yml не найден.")
-    if price_path.stat().st_size == 0:
-        raise ValueError("Файл Price.yml пустой.")
-
-    tree = _load_xml(price_path)
-    root = tree.getroot()
-
-    if root.tag != "yml_catalog":
-        raise ValueError("Корневой тег yml_catalog отсутствует.")
-
-    build_time = root.attrib.get("date", "").strip()
-    shop = root.find("shop")
-    if shop is None:
-        raise ValueError("Тег shop отсутствует.")
-
-    categories_node = shop.find("categories")
-    if categories_node is None:
+def _collect_stats(root: ET.Element, price_text: str) -> dict[str, Any]:
+    offers_parent = root.find("./shop/offers")
+    categories_parent = root.find("./shop/categories")
+    if offers_parent is None:
+        raise ValueError("В Price отсутствует блок offers.")
+    if categories_parent is None:
         raise ValueError("В Price отсутствует блок categories.")
 
-    offers_node = shop.find("offers")
-    if offers_node is None:
-        raise ValueError("В Price отсутствует блок offers.")
+    category_ids = {str(cat.get("id", "")).strip() for cat in categories_parent.findall("category") if str(cat.get("id", "")).strip()}
+    offers = offers_parent.findall("offer")
 
-    categories = categories_node.findall("category")
-    offers = offers_node.findall("offer")
-    if not offers:
-        raise ValueError("В Price отсутствует блок offers.")
+    total = len(offers)
+    true_count = 0
+    false_count = 0
+    price100 = 0
+    placeholder = 0
+    no_category = 0
+    no_satu_category = 0
+    duplicate_offer_ids = 0
+    duplicate_vendor_codes = 0
+    bad_category_refs = 0
 
-    category_ids: set[str] = set()
-    category_portal_map: dict[str, str] = {}
-    for cat in categories:
-        cid = cat.attrib.get("id", "").strip()
-        if cid:
-            category_ids.add(cid)
-            portal_id = cat.attrib.get("portal_id", "").strip()
-            if portal_id:
-                category_portal_map[cid] = portal_id
-
-    offer_ids: list[str] = []
-    vendor_codes: list[str] = []
-    supplier_counts: Counter[str] = Counter()
-    missing_category_id = 0
-    missing_satu_category = 0
-    missing_category_ref = 0
-    price_100 = 0
-    placeholder_photo = 0
-    available_true = 0
-    available_false = 0
+    seen_offer_ids: set[str] = set()
+    seen_vendor_codes: set[str] = set()
 
     for offer in offers:
-        offer_id = offer.attrib.get("id", "").strip()
-        offer_ids.append(offer_id)
-        supplier = _prefix_supplier(offer_id)
-        if supplier:
-            supplier_counts[supplier] += 1
+        offer_id = str(offer.get("id", "")).strip()
+        if offer_id in seen_offer_ids:
+            duplicate_offer_ids += 1
+        elif offer_id:
+            seen_offer_ids.add(offer_id)
 
-        available = offer.attrib.get("available", "").strip().lower()
-        if available == "true":
-            available_true += 1
+        if str(offer.get("available", "")).strip().lower() == "true":
+            true_count += 1
         else:
-            available_false += 1
+            false_count += 1
 
-        category_id = _text(offer.find("categoryId"))
+        category_id = (offer.findtext("categoryId") or "").strip()
         if not category_id:
-            missing_category_id += 1
+            no_category += 1
         elif category_id not in category_ids:
-            missing_category_ref += 1
+            bad_category_refs += 1
 
-        portal_category_id = _text(offer.find("portal_category_id"))
+        # Проверка наличия категории Satu: либо override в offer, либо portal_id у категории
+        portal_category_id = (offer.findtext("portal_category_id") or "").strip()
+        if not portal_category_id and category_id:
+            cat_el = categories_parent.find(f"category[@id='{category_id}']")
+            if cat_el is not None:
+                portal_category_id = str(cat_el.get("portal_id", "")).strip()
         if not portal_category_id:
-            portal_category_id = category_portal_map.get(category_id, "")
-        if not portal_category_id:
-            missing_satu_category += 1
+            no_satu_category += 1
 
-        vendor_code = _text(offer.find("vendorCode"))
-        vendor_codes.append(vendor_code)
+        vendor_code = (offer.findtext("vendorCode") or "").strip()
+        if vendor_code in seen_vendor_codes:
+            duplicate_vendor_codes += 1
+        elif vendor_code:
+            seen_vendor_codes.add(vendor_code)
 
-        price = _safe_float(_text(offer.find("price")), default=-1)
-        if price == 100:
-            price_100 += 1
+        price_val = (offer.findtext("price") or "").strip()
+        if price_val == "100":
+            price100 += 1
 
         for pic in offer.findall("picture"):
-            if _text(pic) == PLACEHOLDER:
-                placeholder_photo += 1
+            if (pic.text or "").strip() == PLACEHOLDER_URL:
+                placeholder += 1
                 break
 
-    duplicate_offer_ids = sum(count - 1 for count in Counter(offer_ids).values() if count > 1)
-    duplicate_vendor_codes = sum(count - 1 for count in Counter(vendor_codes).values() if count > 1)
-
-    missing_suppliers = [name for name in SUPPLIERS if supplier_counts.get(name, 0) == 0]
+    meta = _extract_feed_meta(price_text)
+    supplier_counts = _parse_supplier_counts(meta)
+    missing_suppliers = [s for s in EXPECTED_SUPPLIERS if s not in supplier_counts]
+    build_time = _extract_meta_value(meta, "Время сборки (Алматы)") or ""
 
     return {
-        "checked_at": _now_str(),
         "build_time": build_time,
-        "price_path": str(price_path),
-        "total_offers": len(offers),
-        "available_true": available_true,
-        "available_false": available_false,
-        "price_100": price_100,
-        "placeholder_photo": placeholder_photo,
-        "missing_category_id": missing_category_id,
-        "missing_satu_category": missing_satu_category,
+        "total": total,
+        "true_count": true_count,
+        "false_count": false_count,
+        "price100": price100,
+        "placeholder": placeholder,
+        "no_category": no_category,
+        "no_satu_category": no_satu_category,
         "duplicate_offer_ids": duplicate_offer_ids,
         "duplicate_vendor_codes": duplicate_vendor_codes,
-        "missing_category_ref": missing_category_ref,
-        "categories_total": len(categories),
-        "supplier_counts": {name: supplier_counts.get(name, 0) for name in SUPPLIERS},
+        "bad_category_refs": bad_category_refs,
+        "supplier_counts": supplier_counts,
         "missing_suppliers": missing_suppliers,
-        "status_check_price": "УСПЕШНО",
-        "status_check_satu": "УСПЕШНО" if missing_satu_category == 0 else "НЕУСПЕШНО",
     }
 
 
-def _load_baseline(path: Path) -> dict[str, Any] | None:
-    if not path.exists():
-        return None
-    try:
-        return json.loads(path.read_text(encoding="utf-8"))
-    except Exception:
-        return None
+def _main_failure_reason(price_text: str, stats: dict[str, Any], parse_error: str = "") -> str:
+    if not price_text:
+        return "Файл Price.yml пустой."
+    if parse_error:
+        return "XML в Price повреждён."
+    if stats["missing_suppliers"]:
+        return "В Price отсутствует один или несколько поставщиков."
+    if stats["no_category"] > 0:
+        return "В Price есть товары без categoryId."
+    if stats["no_satu_category"] > 0:
+        return "В Price есть товары без категории Satu."
+    if stats["duplicate_offer_ids"] > 0:
+        return "В Price обнаружены дубли offer id."
+    if stats["duplicate_vendor_codes"] > 0:
+        return "В Price обнаружены дубли vendorCode."
+    if stats["bad_category_refs"] > 0:
+        return "В Price есть товары с categoryId, которых нет в блоке categories."
+    return "Сборка Price не завершилась успешно."
 
 
-def _critical_reason(metrics: dict[str, Any]) -> tuple[str | None, list[str]]:
-    errors: list[str] = []
+def _warning_reason(stats: dict[str, Any], baseline: dict[str, Any]) -> str:
+    total = int(stats["total"])
+    base_total = int(baseline.get("total", total))
+    total_pct = _safe_float(total, base_total)
+    if total_pct > WARN_TOTAL_DELTA_PCT:
+        return "Общее количество товаров изменилось больше допустимого порога."
 
-    price_path = Path(metrics["price_path"])
-    if not price_path.exists():
-        return "Файл Price.yml не найден.", errors
-    if price_path.stat().st_size == 0:
-        return "Файл Price.yml пустой.", errors
+    for supplier in EXPECTED_SUPPLIERS:
+        cur = int(stats["supplier_counts"].get(supplier, 0))
+        base = int(baseline.get("supplier_counts", {}).get(supplier, cur))
+        pct = _safe_float(cur, base)
+        if pct > WARN_SUPPLIER_DELTA_PCT:
+            return f"Количество товаров у поставщика {supplier} изменилось больше допустимого порога."
 
-    if metrics["missing_suppliers"]:
-        errors.append("В Price отсутствует один или несколько поставщиков.")
-    if metrics["missing_category_id"] > 0:
-        errors.append("В Price есть товары без categoryId.")
-    if metrics["missing_satu_category"] > 0:
-        errors.append("В Price есть товары без категории Satu.")
-    if metrics["duplicate_offer_ids"] > 0:
-        errors.append("В Price обнаружены дубли offer id.")
-    if metrics["duplicate_vendor_codes"] > 0:
-        errors.append("В Price обнаружены дубли vendorCode.")
-    if metrics["missing_category_ref"] > 0:
-        errors.append("В Price есть товары с categoryId, которых нет в блоке categories.")
+    cur_100 = int(stats["price100"])
+    base_100 = int(baseline.get("price100", cur_100))
+    if cur_100 - base_100 >= WARN_PRICE100_ABS or _safe_float(cur_100, base_100) > WARN_PRICE100_PCT:
+        return "Количество товаров с ценой 100 выросло больше допустимого порога."
 
-    if errors:
-        return errors[0], errors[1:]
-    return None, []
+    cur_ph = int(stats["placeholder"])
+    base_ph = int(baseline.get("placeholder", cur_ph))
+    if cur_ph - base_ph >= WARN_PLACEHOLDER_ABS or _safe_float(cur_ph, base_ph) > WARN_PLACEHOLDER_PCT:
+        return "Количество товаров с заглушкой фото выросло больше допустимого порога."
 
+    cur_false = int(stats["false_count"])
+    base_false = int(baseline.get("false_count", cur_false))
+    if cur_false > base_false and _safe_float(cur_false, base_false) > WARN_FALSE_PCT:
+        return "Количество товаров Нет в наличии выросло больше допустимого порога."
 
-def _pct_change(old: int, new: int) -> float:
-    if old <= 0:
-        return 0.0 if new <= 0 else 100.0
-    return ((new - old) / old) * 100.0
+    return ""
 
 
-def _warning_reason(metrics: dict[str, Any], baseline: dict[str, Any] | None) -> tuple[str | None, list[str]]:
+def _hard_drop_failure(stats: dict[str, Any], baseline: dict[str, Any]) -> str:
     if not baseline:
-        return None, []
+        return ""
+    total = int(stats["total"])
+    base_total = int(baseline.get("total", total))
+    if base_total > 0 and total < base_total:
+        drop_pct = (base_total - total) * 100.0 / base_total
+        if drop_pct > FAIL_TOTAL_DROP_PCT:
+            return "Общее количество товаров просело больше допустимого порога."
 
-    warnings: list[str] = []
-    total_change = abs(_pct_change(_safe_int(baseline.get("total_offers")), metrics["total_offers"]))
-    if total_change > 5:
-        warnings.append("Общее количество товаров изменилось больше допустимого порога.")
-
-    for supplier in SUPPLIERS:
-        old_count = _safe_int((baseline.get("supplier_counts") or {}).get(supplier))
-        new_count = _safe_int(metrics["supplier_counts"].get(supplier))
-        if abs(_pct_change(old_count, new_count)) > 10:
-            warnings.append(f"Количество товаров у поставщика {supplier} изменилось больше допустимого порога.")
-            break
-
-    old_price_100 = _safe_int(baseline.get("price_100"))
-    price_100_delta = metrics["price_100"] - old_price_100
-    if price_100_delta > 50 or (old_price_100 > 0 and _pct_change(old_price_100, metrics["price_100"]) > 10):
-        warnings.append("Количество товаров с ценой 100 выросло больше допустимого порога.")
-
-    old_placeholder = _safe_int(baseline.get("placeholder_photo"))
-    placeholder_delta = metrics["placeholder_photo"] - old_placeholder
-    if placeholder_delta > 50 or (old_placeholder > 0 and _pct_change(old_placeholder, metrics["placeholder_photo"]) > 10):
-        warnings.append("Количество товаров с заглушкой фото выросло больше допустимого порога.")
-
-    old_unavailable = _safe_int(baseline.get("available_false"))
-    if _pct_change(old_unavailable, metrics["available_false"]) > 20:
-        warnings.append("Количество товаров Нет в наличии выросло больше допустимого порога.")
-
-    if warnings:
-        return warnings[0], warnings[1:]
-    return None, []
+    for supplier in EXPECTED_SUPPLIERS:
+        cur = int(stats["supplier_counts"].get(supplier, 0))
+        base = int(baseline.get("supplier_counts", {}).get(supplier, cur))
+        if base > 0 and cur < base:
+            drop_pct = (base - cur) * 100.0 / base
+            if drop_pct > FAIL_SUPPLIER_DROP_PCT:
+                return f"Количество товаров у поставщика {supplier} просело больше допустимого порога."
+    return ""
 
 
-def _catastrophic_drop_reason(metrics: dict[str, Any], baseline: dict[str, Any] | None) -> tuple[str | None, list[str]]:
-    if not baseline:
-        return None, []
-
-    errors: list[str] = []
-    total_change = _pct_change(_safe_int(baseline.get("total_offers")), metrics["total_offers"])
-    if total_change < -15:
-        errors.append("Общее количество товаров просело больше допустимого порога.")
-
-    for supplier in SUPPLIERS:
-        old_count = _safe_int((baseline.get("supplier_counts") or {}).get(supplier))
-        new_count = _safe_int(metrics["supplier_counts"].get(supplier))
-        if _pct_change(old_count, new_count) < -25:
-            errors.append(f"Количество товаров у поставщика {supplier} просело больше допустимого порога.")
-            break
-
-    if errors:
-        return errors[0], errors[1:]
-    return None, []
-
-
-def _render_report(status: str, reason: str, metrics: dict[str, Any], extra: list[str]) -> str:
-    lines = [
-        f"Price — {status}",
-        "",
-        f"Время проверки                              | {metrics['checked_at']}",
-        f"Время сборки Price                           | {metrics['build_time'] or 'не определено'}",
-        f"Файл Price                                   | {metrics['price_path']}",
-        "",
-        f"Причина                                      | {reason}",
-        "",
-        f"Сколько товаров в Price                      | {metrics['total_offers']}",
-        f"Сколько товаров есть в наличии               | {metrics['available_true']}",
-        f"Сколько товаров нет в наличии                | {metrics['available_false']}",
-        f"Сколько товаров с ценой 100                  | {metrics['price_100']}",
-        f"Сколько товаров с заглушкой фото             | {metrics['placeholder_photo']}",
-        f"Сколько товаров без categoryId               | {metrics['missing_category_id']}",
-        f"Сколько товаров без категории Satu           | {metrics['missing_satu_category']}",
-        f"Сколько дублей offer id                      | {metrics['duplicate_offer_ids']}",
-        f"Сколько дублей vendorCode                    | {metrics['duplicate_vendor_codes']}",
-        f"Сколько неверных ссылок на categoryId        | {metrics['missing_category_ref']}",
-        "",
-        "Поставщики",
-    ]
-    for supplier in SUPPLIERS:
-        lines.append(f"{supplier:<45} | {metrics['supplier_counts'].get(supplier, 0)}")
-
-    if metrics["missing_suppliers"]:
-        lines.extend([
-            "",
-            "Отсутствующие поставщики",
-            ", ".join(metrics["missing_suppliers"]),
-        ])
-
-    if extra:
-        lines.extend([
-            "",
-            "Дополнительно",
-            *extra,
-        ])
-
-    return "\n".join(lines).rstrip() + "\n"
-
-
-def _write_report(text: str) -> None:
-    RAW_DIR.mkdir(parents=True, exist_ok=True)
-    REPORT_PATH.write_text(text, encoding="utf-8")
-
-
-def _save_baseline(metrics: dict[str, Any]) -> None:
-    RAW_DIR.mkdir(parents=True, exist_ok=True)
-    BASELINE_PATH.write_text(json.dumps(metrics, ensure_ascii=False, indent=2), encoding="utf-8")
-
-
-def run() -> CheckResult:
-    try:
-        metrics = _collect_metrics(PRICE_PATH)
-    except FileNotFoundError as exc:
-        metrics = {
-            "checked_at": _now_str(),
-            "build_time": "",
-            "price_path": str(PRICE_PATH),
-            "total_offers": 0,
-            "available_true": 0,
-            "available_false": 0,
-            "price_100": 0,
-            "placeholder_photo": 0,
-            "missing_category_id": 0,
-            "missing_satu_category": 0,
-            "duplicate_offer_ids": 0,
-            "duplicate_vendor_codes": 0,
-            "missing_category_ref": 0,
-            "categories_total": 0,
-            "supplier_counts": {name: 0 for name in SUPPLIERS},
-            "missing_suppliers": list(SUPPLIERS.keys()),
-        }
-        text = _render_report("НЕУСПЕШНО", str(exc), metrics, [])
-        _write_report(text)
-        return CheckResult("НЕУСПЕШНО", str(exc), text, metrics)
-    except Exception as exc:
-        metrics = {
-            "checked_at": _now_str(),
-            "build_time": "",
-            "price_path": str(PRICE_PATH),
-            "total_offers": 0,
-            "available_true": 0,
-            "available_false": 0,
-            "price_100": 0,
-            "placeholder_photo": 0,
-            "missing_category_id": 0,
-            "missing_satu_category": 0,
-            "duplicate_offer_ids": 0,
-            "duplicate_vendor_codes": 0,
-            "missing_category_ref": 0,
-            "categories_total": 0,
-            "supplier_counts": {name: 0 for name in SUPPLIERS},
-            "missing_suppliers": list(SUPPLIERS.keys()),
-        }
-        text = _render_report("НЕУСПЕШНО", f"XML в Price повреждён или не удалось прочитать файл. {exc}", metrics, [])
-        _write_report(text)
-        return CheckResult("НЕУСПЕШНО", f"XML в Price повреждён или не удалось прочитать файл. {exc}", text, metrics)
-
-    baseline = _load_baseline(BASELINE_PATH)
-
-    critical_reason, critical_extra = _critical_reason(metrics)
-    catastrophic_reason, catastrophic_extra = _catastrophic_drop_reason(metrics, baseline)
-    if critical_reason:
-        text = _render_report("НЕУСПЕШНО", critical_reason, metrics, critical_extra)
-        _write_report(text)
-        return CheckResult("НЕУСПЕШНО", critical_reason, text, metrics, len(critical_extra))
-    if catastrophic_reason:
-        text = _render_report("НЕУСПЕШНО", catastrophic_reason, metrics, catastrophic_extra)
-        _write_report(text)
-        return CheckResult("НЕУСПЕШНО", catastrophic_reason, text, metrics, len(catastrophic_extra))
-
-    warning_reason, warning_extra = _warning_reason(metrics, baseline)
-    if warning_reason:
-        text = _render_report("ТРЕБУЕТ ВНИМАНИЯ", warning_reason, metrics, warning_extra)
-        _write_report(text)
-        return CheckResult("ТРЕБУЕТ ВНИМАНИЯ", warning_reason, text, metrics, len(warning_extra))
-
-    text = _render_report("УСПЕШНО", "Критичных ошибок и заметных отклонений не обнаружено.", metrics, [])
-    _write_report(text)
-    _save_baseline(metrics)
-    return CheckResult("УСПЕШНО", "Критичных ошибок и заметных отклонений не обнаружено.", text, metrics)
-
-
-def main() -> int:
-    result = run()
-    print(result.report_text)
+def _format_message(result: CheckResult, checked_at: str) -> str:
+    s = result.stats
     if result.status == "НЕУСПЕШНО":
-        return 2
+        return (
+            "❌ Price — НЕУСПЕШНО\n\n"
+            f"Время проверки ({TIMEZONE_LABEL}): {checked_at}\n\n"
+            f"Причина:\n{result.reason}\n\n"
+            "Статус проверки Price: НЕУСПЕШНО"
+        )
+
+    body = [
+        f"{'⚠️' if result.status == 'ТРЕБУЕТ ВНИМАНИЯ' else '✅'} Price — {result.status}",
+        "",
+        f"Время проверки ({TIMEZONE_LABEL}): {checked_at}",
+        f"Время сборки Price ({TIMEZONE_LABEL}): {s.get('build_time', '')}",
+        "",
+        f"Товаров в Price: {s['total']}",
+        f"Есть в наличии: {s['true_count']}",
+        f"Нет в наличии: {s['false_count']}",
+        "",
+        f"С ценой 100: {s['price100']}",
+        f"С заглушкой фото: {s['placeholder']}",
+        f"Без categoryId: {s['no_category']}",
+        f"Без категории Satu: {s['no_satu_category']}",
+    ]
     if result.status == "ТРЕБУЕТ ВНИМАНИЯ":
+        body.extend(["", f"Причина:\n{result.reason}"])
+    body.extend([
+        "",
+        f"Привязка к категориям Satu: {'УСПЕШНО' if s['no_satu_category'] == 0 else 'НЕУСПЕШНО'}",
+        f"Статус проверки Price: {result.status}",
+    ])
+    return "\n".join(body)
+
+
+def _format_report(result: CheckResult, checked_at: str, tg_status: str) -> str:
+    s = result.stats
+    lines = [
+        "Итог проверки Price",
+        f"Время проверки ({TIMEZONE_LABEL})                      | {checked_at}",
+        f"Статус проверки Price                      | {result.status}",
+        f"Причина                                     | {result.reason or '-'}",
+        f"Время сборки Price ({TIMEZONE_LABEL})        | {s.get('build_time', '')}",
+        f"Товаров в Price                              | {s.get('total', 0)}",
+        f"Есть в наличии                               | {s.get('true_count', 0)}",
+        f"Нет в наличии                                | {s.get('false_count', 0)}",
+        f"С ценой 100                                  | {s.get('price100', 0)}",
+        f"С заглушкой фото                             | {s.get('placeholder', 0)}",
+        f"Без categoryId                               | {s.get('no_category', 0)}",
+        f"Без категории Satu                           | {s.get('no_satu_category', 0)}",
+        f"Дубли offer id                               | {s.get('duplicate_offer_ids', 0)}",
+        f"Дубли vendorCode                             | {s.get('duplicate_vendor_codes', 0)}",
+        f"Некорректные categoryId                      | {s.get('bad_category_refs', 0)}",
+        f"Пропавшие поставщики                         | {', '.join(s.get('missing_suppliers', [])) or '-'}",
+        f"Статус Telegram                              | {tg_status}",
+    ]
+    return "\n".join(lines) + "\n"
+
+
+def run() -> int:
+    checked_at = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+    if not PRICE_PATH.exists():
+        result = CheckResult("НЕУСПЕШНО", "Файл Price.yml не найден.", {}, "")
+        message = _format_message(result, checked_at)
+        ok, tg = _send_telegram(message)
+        REPORT_PATH.parent.mkdir(parents=True, exist_ok=True)
+        REPORT_PATH.write_text(_format_report(result, checked_at, "ОТПРАВЛЕНО" if ok else f"НЕ ОТПРАВЛЕНО: {tg}"), encoding="utf-8")
         return 1
-    return 0
+
+    price_text = PRICE_PATH.read_text(encoding="utf-8", errors="ignore")
+    if not price_text.strip():
+        result = CheckResult("НЕУСПЕШНО", "Файл Price.yml пустой.", {}, "")
+        message = _format_message(result, checked_at)
+        ok, tg = _send_telegram(message)
+        REPORT_PATH.parent.mkdir(parents=True, exist_ok=True)
+        REPORT_PATH.write_text(_format_report(result, checked_at, "ОТПРАВЛЕНО" if ok else f"НЕ ОТПРАВЛЕНО: {tg}"), encoding="utf-8")
+        return 1
+
+    parse_error = ""
+    try:
+        root = ET.fromstring(price_text)
+        stats = _collect_stats(root, price_text)
+    except Exception as exc:
+        parse_error = str(exc)
+        stats = {
+            "build_time": "",
+            "total": 0,
+            "true_count": 0,
+            "false_count": 0,
+            "price100": 0,
+            "placeholder": 0,
+            "no_category": 0,
+            "no_satu_category": 0,
+            "duplicate_offer_ids": 0,
+            "duplicate_vendor_codes": 0,
+            "bad_category_refs": 0,
+            "supplier_counts": {},
+            "missing_suppliers": EXPECTED_SUPPLIERS,
+        }
+
+    baseline = _load_baseline()
+    reason = ""
+    status = "УСПЕШНО"
+
+    if parse_error:
+        status = "НЕУСПЕШНО"
+        reason = _main_failure_reason(price_text, stats, parse_error)
+    else:
+        reason = _hard_drop_failure(stats, baseline)
+        if reason:
+            status = "НЕУСПЕШНО"
+        else:
+            reason = _main_failure_reason(price_text, stats)
+            if reason != "Сборка Price не завершилась успешно.":
+                status = "НЕУСПЕШНО"
+            else:
+                reason = _warning_reason(stats, baseline)
+                if reason:
+                    status = "ТРЕБУЕТ ВНИМАНИЯ"
+                else:
+                    reason = ""
+                    status = "УСПЕШНО"
+
+    result = CheckResult(status=status, reason=reason, stats=stats, report_text="")
+    message = _format_message(result, checked_at)
+    ok, tg = _send_telegram(message)
+    tg_status = "ОТПРАВЛЕНО" if ok else f"НЕ ОТПРАВЛЕНО: {tg}"
+
+    REPORT_PATH.parent.mkdir(parents=True, exist_ok=True)
+    REPORT_PATH.write_text(_format_report(result, checked_at, tg_status), encoding="utf-8")
+
+    if status == "УСПЕШНО":
+        _save_baseline(stats)
+
+    return 0 if status != "НЕУСПЕШНО" else 1
 
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    raise SystemExit(run())
