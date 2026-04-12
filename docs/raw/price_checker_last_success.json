@@ -1,9 +1,9 @@
 {
-  "checked_at": "2026-04-12T20:37:35.387506+05:00",
-  "build_time": "2026-04-12T19:22:00+05:00",
-  "total": 7318,
-  "true_count": 6658,
-  "false_count": 660,
+  "checked_at": "2026-04-12T22:36:05.585779+05:00",
+  "build_time": "2026-04-12T22:34:00+05:00",
+  "total": 7317,
+  "true_count": 6656,
+  "false_count": 661,
   "price100": 456,
   "placeholder": 566,
   "missing_category_id": 0,
@@ -14,7 +14,7 @@
   "supplier_counts": {
     "AkCent": 180,
     "AlStyle": 2228,
-    "ComPortal": 582,
+    "ComPortal": 581,
     "CopyLine": 1220,
     "VTT": 3108
   },
