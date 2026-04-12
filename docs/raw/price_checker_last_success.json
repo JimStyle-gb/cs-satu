@@ -1,22 +1,24 @@
 {
-  "schema_version": 2,
-  "price_build_time": "2026-04-12 19:22",
-  "total_offers": 7318,
-  "available_true": 6658,
-  "available_false": 660,
-  "price_100_count": 456,
-  "placeholder_picture_count": 566,
-  "empty_category_id_count": 0,
-  "no_satu_category_count": 0,
-  "duplicate_offer_id_count": 0,
-  "duplicate_vendor_code_count": 0,
-  "invalid_category_ref_count": 0,
-  "categories_count": 48,
+  "status": "УСПЕШНО",
+  "metrics": {
+    "total": 7318,
+    "available_true": 6658,
+    "available_false": 660,
+    "price_100": 456,
+    "placeholder_picture": 566,
+    "missing_category_id": 0,
+    "missing_satu_category": 0,
+    "duplicate_offer_id": 0,
+    "duplicate_vendor_code": 0,
+    "invalid_category_refs": 0
+  },
   "supplier_counts": {
     "AkCent": 180,
     "AlStyle": 2228,
     "ComPortal": 582,
     "CopyLine": 1220,
     "VTT": 3108
-  }
+  },
+  "build_time": "12 апреля 2026 г. 19:22:44",
+  "check_time": "12 апреля 2026 г. 20:23:53"
 }
