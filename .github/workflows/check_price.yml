@@ -1,0 +1,63 @@
+name: Check_Price
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 8 * * *"
+      timezone: Asia/Almaty
+
+permissions:
+  contents: write
+
+jobs:
+  check-price:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Python compile sanity check
+        run: python -m py_compile scripts/build_price_checker.py
+
+      - name: Run Price checker
+        id: run_check
+        shell: bash
+        run: |
+          set +e
+          python scripts/build_price_checker.py
+          STATUS=$?
+          echo "checker_exit_code=$STATUS" >> "$GITHUB_OUTPUT"
+          exit 0
+
+      - name: Commit checker reports
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/raw/price_checker_report.txt docs/raw/price_checker_last_success.json || true
+          if git diff --cached --quiet; then
+            echo "No checker report changes to commit"
+          else
+            git commit -m "Update Price checker reports"
+            git push
+          fi
+
+      - name: Fail on checker problem
+        shell: bash
+        run: |
+          CODE="${{ steps.run_check.outputs.checker_exit_code }}"
+          if [ "$CODE" = "2" ]; then
+            echo "Price checker status: НЕУСПЕШНО"
+            exit 1
+          fi
+          if [ "$CODE" = "1" ]; then
+            echo "Price checker status: ТРЕБУЕТ ВНИМАНИЯ"
+            exit 1
+          fi
+          echo "Price checker status: УСПЕШНО"
