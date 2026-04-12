@@ -1,0 +1,21 @@
+{
+  "build_time": "2026-04-12 01:41:33",
+  "total": 7318,
+  "true_count": 6658,
+  "false_count": 660,
+  "price100": 456,
+  "placeholder": 566,
+  "no_category": 0,
+  "no_satu_category": 0,
+  "duplicate_offer_ids": 0,
+  "duplicate_vendor_codes": 0,
+  "bad_category_refs": 0,
+  "supplier_counts": {
+    "AkCent": 180,
+    "AlStyle": 2228,
+    "ComPortal": 582,
+    "CopyLine": 1220,
+    "VTT": 3108
+  },
+  "missing_suppliers": []
+}
