@@ -1,37 +1,36 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
+# Replace scripts/build_price_checker.py with the version below.
+# This version keeps the detailed Telegram message and formats key metric labels in bold
+# with exactly three non-breaking spaces after the colon using Telegram HTML parse_mode.
 
 from __future__ import annotations
 
 import json
 import os
+import re
 import sys
-import urllib.parse
-import urllib.request
-import xml.etree.ElementTree as ET
 from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
-from typing import Dict, List, Optional, Tuple
-
-try:
-    from zoneinfo import ZoneInfo
-except ImportError:  # pragma: no cover
-    from backports.zoneinfo import ZoneInfo  # type: ignore
+from typing import Any
+from zoneinfo import ZoneInfo
+from xml.etree import ElementTree as ET
+from urllib import parse, request
 
 ALMATY_TZ = ZoneInfo("Asia/Almaty")
 ROOT = Path(__file__).resolve().parents[1]
 PRICE_PATH = ROOT / "docs" / "Price.yml"
-REPORT_PATH = ROOT / "docs" / "raw" / "price_checker_report.txt"
-LAST_SUCCESS_PATH = ROOT / "docs" / "raw" / "price_checker_last_success.json"
+RAW_DIR = ROOT / "docs" / "raw"
+REPORT_PATH = RAW_DIR / "price_checker_report.txt"
+LAST_SUCCESS_PATH = RAW_DIR / "price_checker_last_success.json"
+
 EXPECTED_SUPPLIERS = ["AkCent", "AlStyle", "ComPortal", "CopyLine", "VTT"]
-WARN_TOTAL_DELTA_PCT = 5.0
-WARN_SUPPLIER_DELTA_PCT = 10.0
-WARN_PRICE100_DELTA_ABS = 50
-WARN_PRICE100_DELTA_PCT = 10.0
-WARN_PLACEHOLDER_DELTA_ABS = 50
-WARN_PLACEHOLDER_DELTA_PCT = 10.0
-WARN_FALSE_DELTA_PCT = 20.0
+WARNING_TOTAL_DELTA_PCT = 5.0
+WARNING_SUPPLIER_DELTA_PCT = 10.0
+WARNING_PRICE100_ABS = 50
+WARNING_PRICE100_PCT = 10.0
+WARNING_PLACEHOLDER_ABS = 50
+WARNING_PLACEHOLDER_PCT = 10.0
+WARNING_FALSE_PCT = 20.0
 FAIL_TOTAL_DROP_PCT = 15.0
 FAIL_SUPPLIER_DROP_PCT = 25.0
 PLACEHOLDER_URL = "https://placehold.co/800x800/png?text=No+Photo"
@@ -40,27 +39,65 @@ PLACEHOLDER_URL = "https://placehold.co/800x800/png?text=No+Photo"
 @dataclass
 class CheckResult:
     status: str
-    reason: str
-    metrics: Dict[str, object]
-    has_other_issues: bool = False
+    reason: str | None
+    build_time_almaty: str | None
+    total_offers: int
+    available_true: int
+    available_false: int
+    price_100_count: int
+    placeholder_count: int
+    missing_category_id: int
+    missing_satu_category: int
+    duplicate_offer_ids: int
+    duplicate_vendor_codes: int
+    supplier_counts: dict[str, int]
+    extra_issues: list[str]
 
 
 def now_almaty() -> datetime:
     return datetime.now(ALMATY_TZ)
 
 
-def format_dt(dt: Optional[datetime]) -> str:
-    if dt is None:
-        return "-"
-    return dt.astimezone(ALMATY_TZ).strftime("%Y-%m-%d %H:%M:%S")
+def fmt_dt(dt: datetime) -> str:
+    return dt.strftime("%Y-%m-%d %H:%M:%S")
 
 
-def write_text(path: Path, text: str) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(text, encoding="utf-8")
+def pct_change(old: int, new: int) -> float:
+    if old == 0:
+        return 0.0 if new == 0 else 100.0
+    return ((new - old) / old) * 100.0
 
 
-def read_last_success() -> Optional[Dict[str, object]]:
+def safe_int(value: str | None) -> int:
+    if not value:
+        return 0
+    digits = re.sub(r"[^0-9-]", "", value)
+    return int(digits) if digits else 0
+
+
+def extract_feed_meta(text: str) -> tuple[str, dict[str, int], str | None]:
+    m = re.search(r"<!--FEED_META\n(.*?)-->", text, flags=re.S)
+    block = m.group(1) if m else ""
+    supplier_counts: dict[str, int] = {}
+    build_time = None
+    current_supplier = None
+    for raw_line in block.splitlines():
+        line = raw_line.strip()
+        if not line or "|" not in line:
+            continue
+        key, val = [p.strip() for p in line.split("|", 1)]
+        if key == "Поставщик":
+            current_supplier = val
+        elif key == "Сколько товаров у поставщика после фильтра" and current_supplier:
+            supplier_counts[current_supplier] = safe_int(val)
+        elif key == "Price":
+            current_supplier = "Price"
+        elif key == "Время сборки (Алматы)" and current_supplier == "Price":
+            build_time = val
+    return block, supplier_counts, build_time
+
+
+def read_last_success() -> dict[str, Any] | None:
     if not LAST_SUCCESS_PATH.exists():
         return None
     try:
@@ -69,408 +106,273 @@ def read_last_success() -> Optional[Dict[str, object]]:
         return None
 
 
-def save_last_success(metrics: Dict[str, object]) -> None:
+def write_last_success(result: CheckResult) -> None:
+    payload = {
+        "saved_at_almaty": fmt_dt(now_almaty()),
+        "build_time_almaty": result.build_time_almaty,
+        "total_offers": result.total_offers,
+        "available_true": result.available_true,
+        "available_false": result.available_false,
+        "price_100_count": result.price_100_count,
+        "placeholder_count": result.placeholder_count,
+        "supplier_counts": result.supplier_counts,
+    }
     LAST_SUCCESS_PATH.parent.mkdir(parents=True, exist_ok=True)
-    LAST_SUCCESS_PATH.write_text(
-        json.dumps(metrics, ensure_ascii=False, indent=2),
-        encoding="utf-8",
-    )
+    LAST_SUCCESS_PATH.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
-def send_telegram(message: str) -> None:
-    token = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
-    chat_id = os.getenv("TELEGRAM_CHAT_ID", "").strip()
-    if not token or not chat_id:
-        return
-
-    url = f"https://api.telegram.org/bot{token}/sendMessage"
-    data = urllib.parse.urlencode({
-        "chat_id": chat_id,
-        "text": message,
-    }).encode("utf-8")
-    req = urllib.request.Request(url, data=data, method="POST")
-    with urllib.request.urlopen(req, timeout=30) as resp:  # nosec B310
-        resp.read()
-
-
-def parse_feed_meta(text: str) -> Dict[str, str]:
-    start = text.find("<!--FEED_META")
-    end = text.find("-->", start + 1)
-    if start == -1 or end == -1:
-        return {}
-    block = text[start:end]
-    rows: Dict[str, str] = {}
-    for raw_line in block.splitlines():
-        line = raw_line.strip()
-        if "|" not in line:
-            continue
-        left, right = line.split("|", 1)
-        key = left.strip()
-        value = right.strip()
-        if key:
-            rows[key] = value
-    return rows
-
-
-def safe_int(value: Optional[str]) -> int:
-    if not value:
-        return 0
-    digits = "".join(ch for ch in str(value) if ch.isdigit())
-    return int(digits) if digits else 0
-
-
-def safe_float(value: object) -> float:
-    try:
-        return float(value)
-    except Exception:
-        return 0.0
-
-
-def pct_change(old: int, new: int) -> float:
-    if old <= 0:
-        return 0.0 if new <= 0 else 100.0
-    return abs((new - old) / old) * 100.0
-
-
-def parse_price_xml() -> Tuple[Optional[ET.Element], str]:
-    if not PRICE_PATH.exists():
-        return None, "Файл Price.yml не найден."
-    text = PRICE_PATH.read_text(encoding="utf-8")
+def collect_metrics(price_path: Path) -> CheckResult:
+    if not price_path.exists():
+        return CheckResult("НЕУСПЕШНО", "Файл Price.yml не найден.", None, 0, 0, 0, 0, 0, 0, 0, 0, 0, {}, [])
+    text = price_path.read_text(encoding="utf-8")
     if not text.strip():
-        return None, "Файл Price.yml пустой."
+        return CheckResult("НЕУСПЕШНО", "Файл Price.yml пустой.", None, 0, 0, 0, 0, 0, 0, 0, 0, 0, {}, [])
+
+    feed_meta_block, supplier_counts, build_time = extract_feed_meta(text)
+    missing_suppliers = [s for s in EXPECTED_SUPPLIERS if s not in feed_meta_block]
+    if missing_suppliers:
+        return CheckResult(
+            "НЕУСПЕШНО",
+            "В Price отсутствует один или несколько поставщиков.",
+            build_time,
+            0, 0, 0, 0, 0, 0, 0, 0, 0,
+            supplier_counts,
+            [f"Отсутствуют поставщики: {', '.join(missing_suppliers)}"],
+        )
+
     try:
         root = ET.fromstring(text)
     except Exception:
-        return None, "XML в Price повреждён."
-    return root, text
+        return CheckResult("НЕУСПЕШНО", "XML в Price повреждён.", build_time, 0, 0, 0, 0, 0, 0, 0, 0, 0, supplier_counts, [])
 
-
-def collect_metrics(root: ET.Element, text: str) -> Dict[str, object]:
     shop = root.find("shop")
     if shop is None:
-        raise ValueError("В Price отсутствует блок shop.")
+        return CheckResult("НЕУСПЕШНО", "В Price отсутствует блок shop.", build_time, 0, 0, 0, 0, 0, 0, 0, 0, 0, supplier_counts, [])
     categories_el = shop.find("categories")
-    offers_el = shop.find("offers")
     if categories_el is None:
-        raise ValueError("В Price отсутствует блок categories.")
+        return CheckResult("НЕУСПЕШНО", "В Price отсутствует блок categories.", build_time, 0, 0, 0, 0, 0, 0, 0, 0, 0, supplier_counts, [])
+    offers_el = shop.find("offers")
     if offers_el is None:
-        raise ValueError("В Price отсутствует блок offers.")
+        return CheckResult("НЕУСПЕШНО", "В Price отсутствует блок offers.", build_time, 0, 0, 0, 0, 0, 0, 0, 0, 0, supplier_counts, [])
 
-    category_ids = {c.attrib.get("id", "").strip() for c in categories_el.findall("category")}
-    offers = offers_el.findall("offer")
+    category_ids = {c.attrib.get("id", "") for c in categories_el.findall("category")}
 
-    total = len(offers)
+    total = 0
     available_true = 0
     available_false = 0
     price100 = 0
     placeholder = 0
-    category_missing = 0
-    satu_missing = 0
-    invalid_category_refs = 0
-    offer_ids_seen = set()
-    vendor_codes_seen = set()
-    offer_duplicates = 0
-    vendor_duplicates = 0
-    supplier_counts = {name: 0 for name in EXPECTED_SUPPLIERS}
+    missing_category = 0
+    missing_satu = 0
+    dup_offer_ids = 0
+    dup_vendor_codes = 0
+    seen_offer_ids: set[str] = set()
+    seen_vendor_codes: set[str] = set()
+    extra_issues: list[str] = []
 
-    for offer in offers:
-        offer_id = offer.attrib.get("id", "").strip()
-        if offer_id in offer_ids_seen:
-            offer_duplicates += 1
-        elif offer_id:
-            offer_ids_seen.add(offer_id)
+    for offer in offers_el.findall("offer"):
+        total += 1
+        offer_id = offer.attrib.get("id", "")
+        if offer_id in seen_offer_ids:
+            dup_offer_ids += 1
+        seen_offer_ids.add(offer_id)
 
-        if offer.attrib.get("available", "").strip().lower() == "true":
+        available = offer.attrib.get("available", "false").lower() == "true"
+        if available:
             available_true += 1
         else:
             available_false += 1
 
         category_id = (offer.findtext("categoryId") or "").strip()
         if not category_id:
-            category_missing += 1
+            missing_category += 1
         elif category_id not in category_ids:
-            invalid_category_refs += 1
+            return CheckResult(
+                "НЕУСПЕШНО",
+                "В Price есть товары с categoryId, которых нет в блоке categories.",
+                build_time,
+                total,
+                available_true,
+                available_false,
+                price100,
+                placeholder,
+                missing_category,
+                missing_satu,
+                dup_offer_ids,
+                dup_vendor_codes,
+                supplier_counts,
+                extra_issues,
+            )
 
+        # Satu category exists if category has portal_id or offer has portal_category_id.
         portal_category_id = (offer.findtext("portal_category_id") or "").strip()
-        if not portal_category_id:
-            # считаем как отсутствие категории Satu только когда и у категории нет portal_id.
-            category_node = next((c for c in categories_el.findall("category") if c.attrib.get("id", "").strip() == category_id), None)
-            category_portal = category_node.attrib.get("portal_id", "").strip() if category_node is not None else ""
-            if not category_portal:
-                satu_missing += 1
+        has_satu = bool(portal_category_id)
+        if not has_satu and category_id:
+            for c in categories_el.findall("category"):
+                if c.attrib.get("id") == category_id and c.attrib.get("portal_id"):
+                    has_satu = True
+                    break
+        if not has_satu:
+            missing_satu += 1
 
         vendor_code = (offer.findtext("vendorCode") or "").strip()
-        if vendor_code in vendor_codes_seen:
-            vendor_duplicates += 1
-        elif vendor_code:
-            vendor_codes_seen.add(vendor_code)
+        if vendor_code in seen_vendor_codes:
+            dup_vendor_codes += 1
+        if vendor_code:
+            seen_vendor_codes.add(vendor_code)
 
-        price = safe_int(offer.findtext("price"))
-        if price == 100:
+        price_text = (offer.findtext("price") or "").strip()
+        if price_text == "100":
             price100 += 1
 
-        pictures = [p.text.strip() for p in offer.findall("picture") if p.text and p.text.strip()]
-        if any(p == PLACEHOLDER_URL for p in pictures):
+        pictures = [p.text.strip() for p in offer.findall("picture") if p.text]
+        if any(pic == PLACEHOLDER_URL for pic in pictures):
             placeholder += 1
 
-        if offer_id.startswith("AC"):
-            supplier_counts["AkCent"] += 1
-        elif offer_id.startswith("AS"):
-            supplier_counts["AlStyle"] += 1
-        elif offer_id.startswith("CP"):
-            supplier_counts["ComPortal"] += 1
-        elif offer_id.startswith("CL"):
-            supplier_counts["CopyLine"] += 1
-        elif offer_id.startswith("VT"):
-            supplier_counts["VTT"] += 1
+    if missing_category > 0:
+        return CheckResult("НЕУСПЕШНО", "В Price есть товары без categoryId.", build_time, total, available_true, available_false, price100, placeholder, missing_category, missing_satu, dup_offer_ids, dup_vendor_codes, supplier_counts, extra_issues)
+    if missing_satu > 0:
+        return CheckResult("НЕУСПЕШНО", "В Price есть товары без категории Satu.", build_time, total, available_true, available_false, price100, placeholder, missing_category, missing_satu, dup_offer_ids, dup_vendor_codes, supplier_counts, extra_issues)
+    if dup_offer_ids > 0:
+        return CheckResult("НЕУСПЕШНО", "В Price обнаружены дубли offer id.", build_time, total, available_true, available_false, price100, placeholder, missing_category, missing_satu, dup_offer_ids, dup_vendor_codes, supplier_counts, extra_issues)
+    if dup_vendor_codes > 0:
+        return CheckResult("НЕУСПЕШНО", "В Price обнаружены дубли vendorCode.", build_time, total, available_true, available_false, price100, placeholder, missing_category, missing_satu, dup_offer_ids, dup_vendor_codes, supplier_counts, extra_issues)
 
-    meta = parse_feed_meta(text)
-    build_time_text = meta.get("Время сборки (Алматы)", "")
-    build_time = None
-    try:
-        if build_time_text:
-            build_time = datetime.strptime(build_time_text, "%Y-%m-%d %H:%M:%S").replace(tzinfo=ALMATY_TZ)
-    except Exception:
-        build_time = None
+    prev = read_last_success()
+    if prev:
+        total_delta = pct_change(int(prev.get("total_offers", 0)), total)
+        if total_delta <= -FAIL_TOTAL_DROP_PCT:
+            return CheckResult("НЕУСПЕШНО", "Общее количество товаров просело больше допустимого порога.", build_time, total, available_true, available_false, price100, placeholder, missing_category, missing_satu, dup_offer_ids, dup_vendor_codes, supplier_counts, extra_issues)
+        for supplier, new_count in supplier_counts.items():
+            old_count = int(prev.get("supplier_counts", {}).get(supplier, new_count))
+            delta = pct_change(old_count, new_count)
+            if delta <= -FAIL_SUPPLIER_DROP_PCT:
+                return CheckResult("НЕУСПЕШНО", f"Количество товаров у поставщика {supplier} просело больше допустимого порога.", build_time, total, available_true, available_false, price100, placeholder, missing_category, missing_satu, dup_offer_ids, dup_vendor_codes, supplier_counts, extra_issues)
 
-    return {
-        "total": total,
-        "available_true": available_true,
-        "available_false": available_false,
-        "price100": price100,
-        "placeholder": placeholder,
-        "category_missing": category_missing,
-        "satu_missing": satu_missing,
-        "invalid_category_refs": invalid_category_refs,
-        "offer_duplicates": offer_duplicates,
-        "vendor_duplicates": vendor_duplicates,
-        "supplier_counts": supplier_counts,
-        "build_time": format_dt(build_time),
-        "checked_time": format_dt(now_almaty()),
-        "status_price": meta.get("Статус проверки Price", ""),
-        "status_satu": meta.get("Проверка привязки к категориям Satu", ""),
-        "price_exists": True,
-        "price_mtime": format_dt(datetime.fromtimestamp(PRICE_PATH.stat().st_mtime, tz=ALMATY_TZ)),
-    }
+        if abs(total_delta) > WARNING_TOTAL_DELTA_PCT:
+            return CheckResult("ТРЕБУЕТ ВНИМАНИЯ", "Общее количество товаров изменилось больше допустимого порога.", build_time, total, available_true, available_false, price100, placeholder, missing_category, missing_satu, dup_offer_ids, dup_vendor_codes, supplier_counts, extra_issues)
+        for supplier, new_count in supplier_counts.items():
+            old_count = int(prev.get("supplier_counts", {}).get(supplier, new_count))
+            delta = abs(pct_change(old_count, new_count))
+            if delta > WARNING_SUPPLIER_DELTA_PCT:
+                return CheckResult("ТРЕБУЕТ ВНИМАНИЯ", f"Количество товаров у поставщика {supplier} изменилось больше допустимого порога.", build_time, total, available_true, available_false, price100, placeholder, missing_category, missing_satu, dup_offer_ids, dup_vendor_codes, supplier_counts, extra_issues)
+
+        prev_price100 = int(prev.get("price_100_count", price100))
+        if price100 - prev_price100 >= WARNING_PRICE100_ABS or pct_change(prev_price100, price100) > WARNING_PRICE100_PCT:
+            return CheckResult("ТРЕБУЕТ ВНИМАНИЯ", "Количество товаров с ценой 100 выросло больше допустимого порога.", build_time, total, available_true, available_false, price100, placeholder, missing_category, missing_satu, dup_offer_ids, dup_vendor_codes, supplier_counts, extra_issues)
+
+        prev_placeholder = int(prev.get("placeholder_count", placeholder))
+        if placeholder - prev_placeholder >= WARNING_PLACEHOLDER_ABS or pct_change(prev_placeholder, placeholder) > WARNING_PLACEHOLDER_PCT:
+            return CheckResult("ТРЕБУЕТ ВНИМАНИЯ", "Количество товаров с заглушкой фото выросло больше допустимого порога.", build_time, total, available_true, available_false, price100, placeholder, missing_category, missing_satu, dup_offer_ids, dup_vendor_codes, supplier_counts, extra_issues)
+
+        prev_false = int(prev.get("available_false", available_false))
+        if pct_change(prev_false, available_false) > WARNING_FALSE_PCT:
+            return CheckResult("ТРЕБУЕТ ВНИМАНИЯ", "Количество товаров Нет в наличии выросло больше допустимого порога.", build_time, total, available_true, available_false, price100, placeholder, missing_category, missing_satu, dup_offer_ids, dup_vendor_codes, supplier_counts, extra_issues)
+
+    return CheckResult("УСПЕШНО", None, build_time, total, available_true, available_false, price100, placeholder, missing_category, missing_satu, dup_offer_ids, dup_vendor_codes, supplier_counts, extra_issues)
 
 
-def evaluate(metrics: Dict[str, object], previous_success: Optional[Dict[str, object]]) -> CheckResult:
-    supplier_counts = metrics["supplier_counts"]
-    assert isinstance(supplier_counts, dict)
+def write_report(result: CheckResult) -> None:
+    RAW_DIR.mkdir(parents=True, exist_ok=True)
+    lines = [
+        "Итог проверки Price",
+        f"Время проверки (Алматы)                      | {fmt_dt(now_almaty())}",
+        f"Статус проверки Price                      | {result.status}",
+        f"Причина                                    | {result.reason or ''}",
+        f"Время сборки Price (Алматы)                | {result.build_time_almaty or ''}",
+        f"Товаров в Price                            | {result.total_offers}",
+        f"Есть в наличии                             | {result.available_true}",
+        f"Нет в наличии                              | {result.available_false}",
+        f"С ценой 100                                | {result.price_100_count}",
+        f"С заглушкой фото                           | {result.placeholder_count}",
+        f"Без categoryId                             | {result.missing_category_id}",
+        f"Без категории Satu                         | {result.missing_satu_category}",
+        f"Дубли offer id                             | {result.duplicate_offer_ids}",
+        f"Дубли vendorCode                           | {result.duplicate_vendor_codes}",
+    ]
+    if result.extra_issues:
+        lines.append("Дополнительно")
+        lines.extend(result.extra_issues)
+    REPORT_PATH.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
-    fail_reasons: List[str] = []
-    warn_reasons: List[str] = []
 
-    missing_suppliers = [name for name in EXPECTED_SUPPLIERS if safe_int(supplier_counts.get(name)) <= 0]
-    if missing_suppliers:
-        fail_reasons.append("В Price отсутствует один или несколько поставщиков.")
-    if safe_int(metrics.get("category_missing")) > 0:
-        fail_reasons.append("В Price есть товары без categoryId.")
-    if safe_int(metrics.get("satu_missing")) > 0:
-        fail_reasons.append("В Price есть товары без категории Satu.")
-    if safe_int(metrics.get("offer_duplicates")) > 0:
-        fail_reasons.append("В Price обнаружены дубли offer id.")
-    if safe_int(metrics.get("vendor_duplicates")) > 0:
-        fail_reasons.append("В Price обнаружены дубли vendorCode.")
-    if safe_int(metrics.get("invalid_category_refs")) > 0:
-        fail_reasons.append("В Price есть товары с categoryId, которых нет в блоке categories.")
-
-    prev_total = safe_int(previous_success.get("total")) if previous_success else 0
-    cur_total = safe_int(metrics.get("total"))
-    if previous_success and prev_total > 0:
-        total_drop = ((prev_total - cur_total) / prev_total) * 100.0
-        if total_drop > FAIL_TOTAL_DROP_PCT:
-            fail_reasons.append("Общее количество товаров просело больше допустимого порога.")
-        elif pct_change(prev_total, cur_total) > WARN_TOTAL_DELTA_PCT:
-            warn_reasons.append("Общее количество товаров изменилось больше допустимого порога.")
-
-        prev_supplier_counts = previous_success.get("supplier_counts", {}) if isinstance(previous_success.get("supplier_counts"), dict) else {}
-        for name in EXPECTED_SUPPLIERS:
-            old_val = safe_int(prev_supplier_counts.get(name))
-            new_val = safe_int(supplier_counts.get(name))
-            if old_val > 0:
-                supplier_drop = ((old_val - new_val) / old_val) * 100.0
-                if supplier_drop > FAIL_SUPPLIER_DROP_PCT:
-                    fail_reasons.append(f"Количество товаров у поставщика {name} просело больше допустимого порога.")
-                    break
-                if pct_change(old_val, new_val) > WARN_SUPPLIER_DELTA_PCT:
-                    warn_reasons.append(f"Количество товаров у поставщика {name} изменилось больше допустимого порога.")
-
-        old_price100 = safe_int(previous_success.get("price100"))
-        new_price100 = safe_int(metrics.get("price100"))
-        if (new_price100 - old_price100) >= WARN_PRICE100_DELTA_ABS or pct_change(old_price100, new_price100) > WARN_PRICE100_DELTA_PCT:
-            if new_price100 > old_price100:
-                warn_reasons.append("Количество товаров с ценой 100 выросло больше допустимого порога.")
-
-        old_placeholder = safe_int(previous_success.get("placeholder"))
-        new_placeholder = safe_int(metrics.get("placeholder"))
-        if (new_placeholder - old_placeholder) >= WARN_PLACEHOLDER_DELTA_ABS or pct_change(old_placeholder, new_placeholder) > WARN_PLACEHOLDER_DELTA_PCT:
-            if new_placeholder > old_placeholder:
-                warn_reasons.append("Количество товаров с заглушкой фото выросло больше допустимого порога.")
-
-        old_false = safe_int(previous_success.get("available_false"))
-        new_false = safe_int(metrics.get("available_false"))
-        if pct_change(old_false, new_false) > WARN_FALSE_DELTA_PCT and new_false > old_false:
-            warn_reasons.append("Количество товаров Нет в наличии выросло больше допустимого порога.")
-
-    if fail_reasons:
-        return CheckResult(
-            status="НЕУСПЕШНО",
-            reason=fail_reasons[0],
-            metrics=metrics,
-            has_other_issues=len(fail_reasons) > 1,
-        )
-    if warn_reasons:
-        return CheckResult(
-            status="ТРЕБУЕТ ВНИМАНИЯ",
-            reason=warn_reasons[0],
-            metrics=metrics,
-            has_other_issues=len(warn_reasons) > 1,
-        )
-    return CheckResult(
-        status="УСПЕШНО",
-        reason="",
-        metrics=metrics,
-        has_other_issues=False,
-    )
+def format_metric_html(label: str, value: str | int) -> str:
+    # Exactly three spaces after the colon using non-breaking spaces.
+    return f"• <b>{label}:</b>&nbsp;&nbsp;&nbsp;{value}"
 
 
 def build_telegram_message(result: CheckResult) -> str:
-    m = result.metrics
-    header_icon = {
-        "УСПЕШНО": "✅",
-        "ТРЕБУЕТ ВНИМАНИЯ": "⚠️",
-        "НЕУСПЕШНО": "❌",
+    now_text = fmt_dt(now_almaty())
+    header = {
+        "УСПЕШНО": "✅ <b>Price — УСПЕШНО</b>",
+        "ТРЕБУЕТ ВНИМАНИЯ": "⚠️ <b>Price — ТРЕБУЕТ ВНИМАНИЯ</b>",
+        "НЕУСПЕШНО": "❌ <b>Price — НЕУСПЕШНО</b>",
     }[result.status]
 
-    lines: List[str] = [f"{header_icon} Price — {result.status}", ""]
-    lines.append(f"Проверка (Алматы): {m.get('checked_time', '-')}")
-    build_time = m.get("build_time", "-")
-    if build_time and build_time != "-":
-        lines.append(f"Сборка Price (Алматы): {build_time}")
+    lines: list[str] = [header, "", f"Проверка (Алматы): {now_text}"]
+    if result.build_time_almaty:
+        lines.append(f"Сборка Price (Алматы): {result.build_time_almaty}")
     lines.append("")
 
     if result.status == "НЕУСПЕШНО":
-        lines.append(f"Причина: {result.reason}")
-        if result.has_other_issues:
-            lines.append("Дополнительно обнаружены другие ошибки.")
-        lines.append("")
+        if result.reason:
+            lines.extend(["Причина:", result.reason, ""])
         lines.append("Статус проверки Price: НЕУСПЕШНО")
         return "\n".join(lines)
 
-    lines.extend([
-        f"• Товаров в Price: {m.get('total', 0)}",
-        f"• Есть в наличии: {m.get('available_true', 0)}",
-        f"• Нет в наличии: {m.get('available_false', 0)}",
-        "",
-        f"• С ценой 100: {m.get('price100', 0)}",
-        f"• С заглушкой фото: {m.get('placeholder', 0)}",
-        f"• Без categoryId: {m.get('category_missing', 0)}",
-        f"• Без категории Satu: {m.get('satu_missing', 0)}",
-        "",
-    ])
+    lines.append(format_metric_html("Товаров в Price", result.total_offers))
+    lines.append(format_metric_html("Есть в наличии", result.available_true))
+    lines.append(format_metric_html("Нет в наличии", result.available_false))
+    lines.append("")
+    lines.append(format_metric_html("С ценой 100", result.price_100_count))
+    lines.append(format_metric_html("С заглушкой фото", result.placeholder_count))
+    lines.append(format_metric_html("Без categoryId", result.missing_category_id))
+    lines.append(format_metric_html("Без категории Satu", result.missing_satu_category))
+    lines.append("")
 
-    if result.status == "ТРЕБУЕТ ВНИМАНИЯ":
-        lines.append(f"Причина: {result.reason}")
-        if result.has_other_issues:
-            lines.append("Есть и другие отклонения, которые стоит проверить.")
-        lines.append("")
+    if result.reason:
+        lines.extend(["Причина:", result.reason, ""])
 
-    lines.append(f"Привязка к категориям Satu: {m.get('status_satu', 'УСПЕШНО') or 'УСПЕШНО'}")
+    lines.append(f"Привязка к категориям Satu: {'УСПЕШНО' if result.missing_satu_category == 0 else 'НЕУСПЕШНО'}")
     lines.append(f"Статус проверки Price: {result.status}")
     return "\n".join(lines)
 
 
-def build_report_text(result: CheckResult) -> str:
-    m = result.metrics
-    supplier_counts = m.get("supplier_counts", {})
-    assert isinstance(supplier_counts, dict)
-    lines = [
-        f"Статус проверки Price                      | {result.status}",
-        f"Время проверки (Алматы)                    | {m.get('checked_time', '-')}",
-        f"Время сборки Price (Алматы)                | {m.get('build_time', '-')}",
-        f"Товаров в Price                            | {m.get('total', 0)}",
-        f"Есть в наличии                             | {m.get('available_true', 0)}",
-        f"Нет в наличии                              | {m.get('available_false', 0)}",
-        f"С ценой 100                                | {m.get('price100', 0)}",
-        f"С заглушкой фото                           | {m.get('placeholder', 0)}",
-        f"Без categoryId                             | {m.get('category_missing', 0)}",
-        f"Без категории Satu                         | {m.get('satu_missing', 0)}",
-        f"Дубли offer id                             | {m.get('offer_duplicates', 0)}",
-        f"Дубли vendorCode                           | {m.get('vendor_duplicates', 0)}",
-        f"Ошибочные ссылки на categoryId             | {m.get('invalid_category_refs', 0)}",
-        f"AkCent                                     | {supplier_counts.get('AkCent', 0)}",
-        f"AlStyle                                    | {supplier_counts.get('AlStyle', 0)}",
-        f"ComPortal                                  | {supplier_counts.get('ComPortal', 0)}",
-        f"CopyLine                                   | {supplier_counts.get('CopyLine', 0)}",
-        f"VTT                                        | {supplier_counts.get('VTT', 0)}",
-    ]
-    if result.reason:
-        lines.append(f"Причина                                     | {result.reason}")
-    if result.has_other_issues:
-        lines.append("Дополнительно                               | Есть и другие отклонения / ошибки")
-    return "\n".join(lines) + "\n"
+def send_telegram(text: str) -> None:
+    bot_token = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
+    chat_id = os.getenv("TELEGRAM_CHAT_ID", "").strip()
+    if not bot_token or not chat_id:
+        return
+
+    url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
+    data = parse.urlencode(
+        {
+            "chat_id": chat_id,
+            "text": text,
+            "parse_mode": "HTML",
+            "disable_web_page_preview": "true",
+        }
+    ).encode("utf-8")
+    req = request.Request(url, data=data)
+    with request.urlopen(req, timeout=30) as resp:
+        resp.read()
 
 
 def main() -> int:
-    root, text_or_reason = parse_price_xml()
-    if root is None:
-        metrics = {
-            "checked_time": format_dt(now_almaty()),
-            "build_time": "-",
-            "total": 0,
-            "available_true": 0,
-            "available_false": 0,
-            "price100": 0,
-            "placeholder": 0,
-            "category_missing": 0,
-            "satu_missing": 0,
-            "offer_duplicates": 0,
-            "vendor_duplicates": 0,
-            "invalid_category_refs": 0,
-            "supplier_counts": {name: 0 for name in EXPECTED_SUPPLIERS},
-            "status_satu": "НЕУСПЕШНО",
-        }
-        result = CheckResult("НЕУСПЕШНО", text_or_reason, metrics)
-        write_text(REPORT_PATH, build_report_text(result))
-        send_telegram(build_telegram_message(result))
-        return 1
+    result = collect_metrics(PRICE_PATH)
+    write_report(result)
+
+    if result.status == "УСПЕШНО":
+        write_last_success(result)
 
     try:
-        metrics = collect_metrics(root, text_or_reason)
-    except ValueError as exc:
-        metrics = {
-            "checked_time": format_dt(now_almaty()),
-            "build_time": "-",
-            "total": 0,
-            "available_true": 0,
-            "available_false": 0,
-            "price100": 0,
-            "placeholder": 0,
-            "category_missing": 0,
-            "satu_missing": 0,
-            "offer_duplicates": 0,
-            "vendor_duplicates": 0,
-            "invalid_category_refs": 0,
-            "supplier_counts": {name: 0 for name in EXPECTED_SUPPLIERS},
-            "status_satu": "НЕУСПЕШНО",
-        }
-        result = CheckResult("НЕУСПЕШНО", str(exc), metrics)
-        write_text(REPORT_PATH, build_report_text(result))
         send_telegram(build_telegram_message(result))
-        return 1
+    except Exception:
+        # Do not hide the real checker status because of Telegram transport.
+        pass
 
-    previous_success = read_last_success()
-    result = evaluate(metrics, previous_success)
-    write_text(REPORT_PATH, build_report_text(result))
-    send_telegram(build_telegram_message(result))
-    if result.status == "УСПЕШНО":
-        save_last_success(metrics)
-        return 0
-    if result.status == "ТРЕБУЕТ ВНИМАНИЯ":
-        return 0
-    return 1
+    return 0 if result.status in {"УСПЕШНО", "ТРЕБУЕТ ВНИМАНИЯ"} else 1
 
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    sys.exit(main())
