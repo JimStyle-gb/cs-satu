@@ -1,10 +1,10 @@
 name: Check_Price
 
 on:
-  workflow_dispatch:
   schedule:
-    - cron: "0 8 * * *"
-      timezone: Asia/Almaty
+    - cron: '0 8 * * *'
+      timezone: 'Asia/Almaty'
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -20,44 +20,38 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: '3.11'
 
-      - name: Python compile sanity check
-        run: python -m py_compile scripts/build_price_checker.py
-
-      - name: Run Price checker
-        id: run_check
-        shell: bash
+      - name: Run checker
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
-          set +e
           python scripts/build_price_checker.py
-          STATUS=$?
-          echo "checker_exit_code=$STATUS" >> "$GITHUB_OUTPUT"
-          exit 0
 
       - name: Commit checker reports
-        shell: bash
+        if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add docs/raw/price_checker_report.txt docs/raw/price_checker_last_success.json || true
-          if git diff --cached --quiet; then
-            echo "No checker report changes to commit"
-          else
-            git commit -m "Update Price checker reports"
-            git push
-          fi
+          git diff --cached --quiet || git commit -m "Update Price checker reports"
+          git push
 
-      - name: Fail on checker problem
-        shell: bash
+      - name: Fallback Telegram on workflow failure
+        if: failure()
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
-          CODE="${{ steps.run_check.outputs.checker_exit_code }}"
-          if [ "$CODE" = "2" ]; then
-            echo "Price checker status: НЕУСПЕШНО"
-            exit 1
+          if [ -n "$TELEGRAM_BOT_TOKEN" ] && [ -n "$TELEGRAM_CHAT_ID" ]; then
+            TEXT="❌ Price — НЕУСПЕШНО
+
+Причина:
+Checker завершился с ошибкой на уровне workflow.
+
+Статус проверки Price: НЕУСПЕШНО"
+            curl -sS -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+              --data-urlencode "chat_id=${TELEGRAM_CHAT_ID}" \
+              --data-urlencode "text=${TEXT}" >/dev/null
           fi
-          if [ "$CODE" = "1" ]; then
-            echo "Price checker status: ТРЕБУЕТ ВНИМАНИЯ"
-            exit 1
-          fi
-          echo "Price checker status: УСПЕШНО"
