@@ -320,11 +320,11 @@ def evaluate(current: Metrics, baseline: Metrics | None) -> tuple[str, str | Non
 
 
 def build_report(check_time: str, status: str, current: Metrics | None, reason: str | None, extra: list[str]) -> str:
-    lines = [f"Price checker", f"Время проверки (Алматы) | {check_time}", f"Статус | {status}"]
+    lines = [f"Price checker", f"Время проверки | {check_time}", f"Статус | {status}"]
     if current is not None:
         lines.extend(
             [
-                f"Время сборки Price (Алматы) | {current.price_build_time}",
+                f"Время сборки Price | {current.price_build_time}",
                 f"Товаров в Price | {current.total_offers}",
                 f"Есть в наличии | {current.available_true}",
                 f"Нет в наличии | {current.available_false}",
@@ -354,8 +354,8 @@ def build_telegram_message(check_time: str, status: str, current: Metrics | None
         lines = [
             "✅ <b>Price — УСПЕШНО</b>",
             "",
-            f"Проверка (Алматы): {escape(check_time)}",
-            f"Время сборки Price (Алматы): {escape(current.price_build_time)}",
+            f"Проверка: {escape(check_time)}",
+            f"Время сборки Price: {escape(current.price_build_time)}",
             "",
             format_line("Товаров в Price", current.total_offers),
             format_line("Есть в наличии", current.available_true),
@@ -375,8 +375,8 @@ def build_telegram_message(check_time: str, status: str, current: Metrics | None
         lines = [
             "⚠️ <b>Price — ТРЕБУЕТ ВНИМАНИЯ</b>",
             "",
-            f"Проверка (Алматы): {escape(check_time)}",
-            f"Время сборки Price (Алматы): {escape(current.price_build_time)}",
+            f"Проверка: {escape(check_time)}",
+            f"Время сборки Price: {escape(current.price_build_time)}",
             "",
             format_line("Товаров в Price", current.total_offers),
             format_line("Есть в наличии", current.available_true),
@@ -404,7 +404,7 @@ def build_telegram_message(check_time: str, status: str, current: Metrics | None
     lines = [
         "❌ <b>Price — НЕУСПЕШНО</b>",
         "",
-        f"Проверка (Алматы): {escape(check_time)}",
+        f"Проверка: {escape(check_time)}",
         "",
         "Причина:",
         escape(reason or "Checker завершился с ошибкой на уровне workflow."),
