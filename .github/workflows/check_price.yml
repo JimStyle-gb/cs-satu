@@ -45,12 +45,7 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
           if [ -n "$TELEGRAM_BOT_TOKEN" ] && [ -n "$TELEGRAM_CHAT_ID" ]; then
-            TEXT="❌ Price — НЕУСПЕШНО
-
-Причина:
-Checker завершился с ошибкой на уровне workflow.
-
-Статус проверки Price: НЕУСПЕШНО"
+            TEXT=$'❌ Price — НЕУСПЕШНО\n\nПричина:\nChecker завершился с ошибкой на уровне workflow.\n\nСтатус проверки Price: НЕУСПЕШНО'
             curl -sS -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
               --data-urlencode "chat_id=${TELEGRAM_CHAT_ID}" \
               --data-urlencode "text=${TEXT}" >/dev/null
