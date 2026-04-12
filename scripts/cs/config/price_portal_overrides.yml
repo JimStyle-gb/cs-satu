@@ -1,0 +1,100 @@
+overrides:
+  - priority: 10
+    cs_category_id: 9631638
+    cs_category_name: "Настольные ПК и barebone"
+    supplier: ""
+    name_contains:
+      - "barebone"
+      - "mini pc"
+      - "minipc"
+      - "mini-pc"
+      - "nettop"
+      - "nuc"
+    vendor_contains: []
+    params: []
+    portal_category_id: 723
+    note: "Barebone, Mini PC, NUC и Nettop уводим в категорию портала для компактных ПК"
+
+  - priority: 20
+    cs_category_id: 9631647
+    cs_category_name: "Кабели"
+    supplier: ""
+    name_contains:
+      - "кабель питания"
+      - "шнур питания"
+      - "силовой кабель"
+      - "power cord"
+      - "power cable"
+      - "ac cable"
+      - "сетевой шнур"
+    vendor_contains: []
+    params:
+      - name: "Тип"
+        contains: "силовой"
+    portal_category_id: 14190408
+    note: "Силовые кабели и кабели питания уводим в отдельную категорию портала"
+
+  - priority: 30
+    cs_category_id: 9631644
+    cs_category_name: "Аккумуляторы и батарейные блоки"
+    supplier: ""
+    name_contains:
+      - "батарейный блок"
+      - "battery pack"
+      - "battery module"
+      - "ebm"
+      - "external battery"
+      - "external battery pack"
+      - "rbc"
+      - "apcrbc"
+    vendor_contains: []
+    params: []
+    portal_category_id: 14191109
+    note: "Батарейные блоки и сменные батарейные модули для ИБП явно закрепляем за категорией комплектующих ИБП"
+
+  - priority: 40
+    cs_category_id: 9631624
+    cs_category_name: "Аксессуары для интерактивного оборудования"
+    supplier: ""
+    name_contains:
+      - "ops"
+      - "ops pc"
+      - "ops-модуль"
+      - "ops модуль"
+      - "compute module"
+      - "computing module"
+    vendor_contains: []
+    params: []
+    portal_category_id: 282970
+    note: "OPS-модули и вычислительные модули для интерактивных панелей пока оставляем внутри интерактивного оборудования"
+
+  - priority: 50
+    cs_category_id: 9631648
+    cs_category_name: "Аксессуары подключения"
+    supplier: ""
+    name_contains:
+      - "адаптер"
+      - "adapter"
+      - "переходник"
+      - "converter"
+      - "конвертер"
+      - "dock"
+      - "docking"
+      - "док-станция"
+      - "док станция"
+    vendor_contains: []
+    params: []
+    portal_category_id: 63719
+    note: "Переходники, адаптеры, конвертеры и док-станции пока оставляем в общей категории кабелей и аксессуаров подключения"
+
+  - priority: 60
+    cs_category_id: 9631639
+    cs_category_name: "Рабочие станции"
+    supplier: ""
+    name_contains:
+      - "workstation"
+      - "рабочая станция"
+    vendor_contains: []
+    params: []
+    portal_category_id: 701
+    note: "Рабочие станции пока публикуем в общей категории настольных компьютеров до появления более точной категории портала"
