@@ -1,0 +1,240 @@
+mappings:
+  - cs_category_id: 9631597
+    cs_category_name: "Картриджи лазерные и тонер-картриджи"
+    default_portal_id: 71001
+    default_portal_name: "Картриджи, фотобарабаны"
+    note: "Стартовый дефолт для лазерных картриджей и тонер-картриджей"
+
+  - cs_category_id: 9631598
+    cs_category_name: "Картриджи струйные и чернильные ёмкости"
+    default_portal_id: 71001
+    default_portal_name: "Картриджи, фотобарабаны"
+    note: "Стартовый дефолт для струйных картриджей и чернильных ёмкостей"
+
+  - cs_category_id: 9631599
+    cs_category_name: "Чернила"
+    default_portal_id: 71003
+    default_portal_name: "Тонер и чернила для печати"
+    note: "Стартовый дефолт для чернил"
+
+  - cs_category_id: 9631600
+    cs_category_name: "Тонеры и девелоперы"
+    default_portal_id: 71003
+    default_portal_name: "Тонер и чернила для печати"
+    note: "Стартовый дефолт для тонеров и девелоперов"
+
+  - cs_category_id: 9631601
+    cs_category_name: "Драм-юниты и фотобарабаны"
+    default_portal_id: 71001
+    default_portal_name: "Картриджи, фотобарабаны"
+    note: "Стартовый дефолт для драм-юнитов и фотобарабанов"
+
+  - cs_category_id: 9631602
+    cs_category_name: "Печатающие головки"
+    default_portal_id: 71002
+    default_portal_name: "Принтеры, сканеры, мфу и комплектующие, общее"
+    note: "Стартовый дефолт для печатающих головок"
+
+  - cs_category_id: 9631603
+    cs_category_name: "Контейнеры для отработки"
+    default_portal_id: 71002
+    default_portal_name: "Принтеры, сканеры, мфу и комплектующие, общее"
+    note: "Стартовый дефолт для контейнеров для отработки"
+
+  - cs_category_id: 9631604
+    cs_category_name: "Прочие расходные материалы"
+    default_portal_id: 71002
+    default_portal_name: "Принтеры, сканеры, мфу и комплектующие, общее"
+    note: "Стартовый дефолт для прочих расходных материалов"
+
+  - cs_category_id: 9631606
+    cs_category_name: "Термоблоки и фьюзеры"
+    default_portal_id: 71002
+    default_portal_name: "Принтеры, сканеры, мфу и комплектующие, общее"
+    note: "Стартовый дефолт для термоблоков и фьюзеров"
+
+  - cs_category_id: 9631607
+    cs_category_name: "Блоки проявки"
+    default_portal_id: 71002
+    default_portal_name: "Принтеры, сканеры, мфу и комплектующие, общее"
+    note: "Стартовый дефолт для блоков проявки"
+
+  - cs_category_id: 9631608
+    cs_category_name: "Узлы и ремни переноса"
+    default_portal_id: 71002
+    default_portal_name: "Принтеры, сканеры, мфу и комплектующие, общее"
+    note: "Стартовый дефолт для узлов и ремней переноса"
+
+  - cs_category_id: 9631609
+    cs_category_name: "Ролики подачи и ремкомплекты"
+    default_portal_id: 71002
+    default_portal_name: "Принтеры, сканеры, мфу и комплектующие, общее"
+    note: "Стартовый дефолт для роликов подачи и ремкомплектов"
+
+  - cs_category_id: 9631610
+    cs_category_name: "Финишеры, лотки и подставки"
+    default_portal_id: 71002
+    default_portal_name: "Принтеры, сканеры, мфу и комплектующие, общее"
+    note: "Стартовый дефолт для финишеров, лотков и подставок"
+
+  - cs_category_id: 9631611
+    cs_category_name: "Сервисные комплекты и наборы"
+    default_portal_id: 71002
+    default_portal_name: "Принтеры, сканеры, мфу и комплектующие, общее"
+    note: "Стартовый дефолт для сервисных комплектов и наборов"
+
+  - cs_category_id: 9631613
+    cs_category_name: "Прочие запчасти и комплектующие"
+    default_portal_id: 71002
+    default_portal_name: "Принтеры, сканеры, мфу и комплектующие, общее"
+    note: "Стартовый дефолт для прочих запчастей и комплектующих для печатной техники"
+
+  - cs_category_id: 9631615
+    cs_category_name: "МФУ"
+    default_portal_id: 70812
+    default_portal_name: "Принтеры, сканеры, мфу"
+    note: "Стартовый дефолт для МФУ"
+
+  - cs_category_id: 9631616
+    cs_category_name: "Принтеры"
+    default_portal_id: 70812
+    default_portal_name: "Принтеры, сканеры, мфу"
+    note: "Стартовый дефолт для принтеров"
+
+  - cs_category_id: 9631617
+    cs_category_name: "Плоттеры и широкоформатные принтеры"
+    default_portal_id: 2108
+    default_portal_name: "Плоттеры"
+    note: "Стартовый дефолт для плоттеров и широкоформатных принтеров"
+
+  - cs_category_id: 9631618
+    cs_category_name: "Сканеры"
+    default_portal_id: 70812
+    default_portal_name: "Принтеры, сканеры, мфу"
+    note: "Стартовый дефолт для сканеров"
+
+  - cs_category_id: 9631620
+    cs_category_name: "Проекторы"
+    default_portal_id: 6370701
+    default_portal_name: "Проекторы"
+    note: "Стартовый дефолт для проекторов"
+
+  - cs_category_id: 9631621
+    cs_category_name: "Экраны для проекторов"
+    default_portal_id: 212003
+    default_portal_name: "Проекционные экраны"
+    note: "Стартовый дефолт для экранов для проекторов"
+
+  - cs_category_id: 9631622
+    cs_category_name: "Интерактивные панели"
+    default_portal_id: 282970
+    default_portal_name: "Интерактивное оборудование"
+    note: "Стартовый дефолт для интерактивных панелей"
+
+  - cs_category_id: 9631623
+    cs_category_name: "Интерактивные доски"
+    default_portal_id: 282970
+    default_portal_name: "Интерактивное оборудование"
+    note: "Стартовый дефолт для интерактивных досок"
+
+  - cs_category_id: 9631624
+    cs_category_name: "Аксессуары для интерактивного оборудования"
+    default_portal_id: 282970
+    default_portal_name: "Интерактивное оборудование"
+    note: "Стартовый дефолт, дальше при необходимости уточним override-правилами"
+
+  - cs_category_id: 9631626
+    cs_category_name: "Ламинаторы"
+    default_portal_id: 147107
+    default_portal_name: "Ламинаторы"
+    note: "Стартовый дефолт для ламинаторов"
+
+  - cs_category_id: 9631630
+    cs_category_name: "Плёнка для ламинирования"
+    default_portal_id: 230927
+    default_portal_name: "Пленки для ламинирования"
+    note: "Стартовый дефолт для плёнки для ламинирования"
+
+  - cs_category_id: 9631631
+    cs_category_name: "Переплетчики"
+    default_portal_id: 23090303
+    default_portal_name: "Брошюровочно-переплетное оборудование"
+    note: "Стартовый дефолт для переплетчиков"
+
+  - cs_category_id: 9631632
+    cs_category_name: "Шредеры"
+    default_portal_id: 2105
+    default_portal_name: "Шредеры"
+    note: "Стартовый дефолт для шредеров"
+
+  - cs_category_id: 9631634
+    cs_category_name: "Ноутбуки"
+    default_portal_id: 702
+    default_portal_name: "Ноутбуки"
+    note: "Стартовый дефолт для ноутбуков"
+
+  - cs_category_id: 9631635
+    cs_category_name: "Мониторы"
+    default_portal_id: 706
+    default_portal_name: "Мониторы"
+    note: "Стартовый дефолт для мониторов"
+
+  - cs_category_id: 9631637
+    cs_category_name: "Моноблоки"
+    default_portal_id: 701
+    default_portal_name: "Настольные компьютеры"
+    note: "Стартовый дефолт, потом при необходимости уточним правилами"
+
+  - cs_category_id: 9631638
+    cs_category_name: "Настольные ПК и barebone"
+    default_portal_id: 701
+    default_portal_name: "Настольные компьютеры"
+    note: "Стартовый дефолт для настольных ПК и barebone"
+
+  - cs_category_id: 9631639
+    cs_category_name: "Рабочие станции"
+    default_portal_id: 701
+    default_portal_name: "Настольные компьютеры"
+    note: "Стартовый дефолт для рабочих станций"
+
+  - cs_category_id: 9631640
+    cs_category_name: "Комплектующие ПК"
+    default_portal_id: 70707
+    default_portal_name: "Компьютерные комплектующие, общее"
+    note: "Стартовый дефолт для комплектующих ПК"
+
+  - cs_category_id: 9631642
+    cs_category_name: "Источники бесперебойного питания"
+    default_portal_id: 14191106
+    default_portal_name: "Источники бесперебойного питания (ибп)"
+    note: "Стартовый дефолт для ИБП"
+
+  - cs_category_id: 9631643
+    cs_category_name: "Стабилизаторы напряжения"
+    default_portal_id: 14191107
+    default_portal_name: "Стабилизаторы напряжения"
+    note: "Стартовый дефолт для стабилизаторов напряжения"
+
+  - cs_category_id: 9631644
+    cs_category_name: "Аккумуляторы и батарейные блоки"
+    default_portal_id: 14191109
+    default_portal_name: "Комплектующие для блоков питания, ибп"
+    note: "Стартовый дефолт для аккумуляторов и батарейных блоков, потом при необходимости уточним правилами"
+
+  - cs_category_id: 9631645
+    cs_category_name: "Аксессуары и модули для ИБП"
+    default_portal_id: 14191109
+    default_portal_name: "Комплектующие для блоков питания, ибп"
+    note: "Стартовый дефолт для аксессуаров и модулей для ИБП"
+
+  - cs_category_id: 9631647
+    cs_category_name: "Кабели"
+    default_portal_id: 63719
+    default_portal_name: "Кабели для электроники"
+    note: "Стартовый дефолт для кабелей; силовые кабели потом можно уточнять override-правилами"
+
+  - cs_category_id: 9631648
+    cs_category_name: "Аксессуары подключения"
+    default_portal_id: 63719
+    default_portal_name: "Кабели для электроники"
+    note: "Стартовый дефолт для аксессуаров подключения, потом при необходимости уточним правилами"
