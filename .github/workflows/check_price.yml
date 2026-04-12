@@ -1,13 +1,12 @@
 name: Check_Price
 
 on:
-  schedule:
-    - cron: '0 8 * * *'
-      timezone: 'Asia/Almaty'
   workflow_dispatch:
+  schedule:
+    - cron: '0 3 * * *'
 
-permissions:
-  contents: write
+env:
+  TZ: Asia/Almaty
 
 jobs:
   check-price:
@@ -22,7 +21,7 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Run checker
+      - name: Run price checker
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
@@ -45,7 +44,7 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
           if [ -n "$TELEGRAM_BOT_TOKEN" ] && [ -n "$TELEGRAM_CHAT_ID" ]; then
-            TEXT=$'❌ Price — НЕУСПЕШНО\n\nПричина:\nChecker завершился с ошибкой на уровне workflow.\n\nСтатус проверки Price: НЕУСПЕШНО'
+            TEXT=$'❌ Price — НЕУСПЕШНО\n\nПричина: Checker завершился с ошибкой на уровне workflow.\n\nСтатус проверки Price: НЕУСПЕШНО'
             curl -sS -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
               --data-urlencode "chat_id=${TELEGRAM_CHAT_ID}" \
               --data-urlencode "text=${TEXT}" >/dev/null
