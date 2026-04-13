@@ -2693,21 +2693,57 @@ def next_run_dom_at_hour(now: datetime, hour: int, doms: Sequence[int]) -> datet
 
 
 def _category_unresolved_report_path(supplier: str) -> Path:
-    slug = re.sub(r"[^a-z0-9]+", "_", (supplier or "supplier").strip().lower()).strip("_") or "supplier"
-    return Path("docs/raw") / f"{slug}_unmapped_category_ids.txt"
+    _ = supplier
+    return Path("docs/raw/category_id_unresolved.txt")
 
 
 def _write_category_unresolved_report(path: Path, supplier: str, lines: Sequence[str]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    header = [
+
+    start_marker = f"## START {supplier}"
+    end_marker = f"## END {supplier}"
+
+    block_lines = [
+        start_marker,
         f"Поставщик: {supplier}",
         f"Товаров без categoryId: {len(lines)}",
         "",
     ]
     if lines:
-        data = "\n".join(header + list(lines)).rstrip() + "\n"
+        block_lines.extend(list(lines))
     else:
-        data = "\n".join(header + ["# Все товары получили categoryId"]).rstrip() + "\n"
+        block_lines.append("# Все товары получили categoryId")
+    block_lines.append(end_marker)
+
+    new_block = "
+".join(block_lines).rstrip() + "
+"
+
+    current = path.read_text(encoding="utf-8") if path.exists() else ""
+    block_re = re.compile(
+        rf"(?ms)^## START {re.escape(supplier)}
+.*?^## END {re.escape(supplier)}
+?"
+    )
+    current = block_re.sub("", current).strip()
+
+    header = "# Сводный отчёт по товарам без categoryId
+
+"
+    pieces = []
+    if current:
+        current = current.strip()
+        if current.startswith("# Сводный отчёт по товарам без categoryId"):
+            current = re.sub(r"^# Сводный отчёт по товарам без categoryId
+*", "", current).strip()
+        if current:
+            pieces.append(current)
+    pieces.append(new_block.strip())
+
+    data = header + "
+
+".join(pieces).rstrip() + "
+"
     path.write_text(data, encoding="utf-8")
 
 
