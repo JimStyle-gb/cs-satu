@@ -1,0 +1,189 @@
+# -*- coding: utf-8 -*-
+# Path: scripts/cs/config/price_categories.yml
+
+top_groups:
+  - id: '100'
+    name: 'Расходные материалы для принтеров и МФУ'
+  - id: '200'
+    name: 'Запчасти и комплектующие для принтеров и МФУ'
+  - id: '300'
+    name: 'Принтеры, МФУ, плоттеры и сканеры'
+  - id: '400'
+    name: 'Проекторы, экраны и интерактивное оборудование'
+  - id: '500'
+    name: 'Оборудование для документов'
+  - id: '600'
+    name: 'Компьютерная техника и мониторы'
+  - id: '700'
+    name: 'ИБП, стабилизаторы и аккумуляторы'
+  - id: '800'
+    name: 'Кабели и аксессуары подключения'
+
+leaf_groups:
+  - key: laser_cartridges_toners
+    id: '101'
+    parent_id: '100'
+    name: 'Картриджи лазерные и тонер-картриджи'
+  - key: ink_cartridges_tanks
+    id: '102'
+    parent_id: '100'
+    name: 'Картриджи струйные и чернильные ёмкости'
+  - key: inks
+    id: '103'
+    parent_id: '100'
+    name: 'Чернила'
+  - key: toners_developers
+    id: '104'
+    parent_id: '100'
+    name: 'Тонеры и девелоперы'
+  - key: drums_photodrums
+    id: '105'
+    parent_id: '100'
+    name: 'Драм-юниты и фотобарабаны'
+  - key: printheads
+    id: '106'
+    parent_id: '100'
+    name: 'Печатающие головки'
+  - key: waste_containers
+    id: '107'
+    parent_id: '100'
+    name: 'Контейнеры для отработки'
+  - key: other_consumables
+    id: '108'
+    parent_id: '100'
+    name: 'Прочие расходные материалы'
+
+  - key: fusers
+    id: '201'
+    parent_id: '200'
+    name: 'Термоблоки и фьюзеры'
+  - key: developer_units
+    id: '202'
+    parent_id: '200'
+    name: 'Блоки проявки'
+  - key: transfer_units
+    id: '203'
+    parent_id: '200'
+    name: 'Узлы и ремни переноса'
+  - key: rollers_kits
+    id: '204'
+    parent_id: '200'
+    name: 'Ролики подачи и ремкомплекты'
+  - key: finishers_trays_stands
+    id: '205'
+    parent_id: '200'
+    name: 'Финишеры, лотки и подставки'
+  - key: service_kits
+    id: '206'
+    parent_id: '200'
+    name: 'Сервисные комплекты и наборы'
+  - key: other_parts
+    id: '207'
+    parent_id: '200'
+    name: 'Прочие запчасти и комплектующие'
+
+  - key: mfp
+    id: '301'
+    parent_id: '300'
+    name: 'МФУ'
+  - key: printers
+    id: '302'
+    parent_id: '300'
+    name: 'Принтеры'
+  - key: plotters
+    id: '303'
+    parent_id: '300'
+    name: 'Плоттеры и широкоформатные принтеры'
+  - key: scanners
+    id: '304'
+    parent_id: '300'
+    name: 'Сканеры'
+
+  - key: projectors
+    id: '401'
+    parent_id: '400'
+    name: 'Проекторы'
+  - key: projector_screens
+    id: '402'
+    parent_id: '400'
+    name: 'Экраны для проекторов'
+  - key: interactive_panels
+    id: '403'
+    parent_id: '400'
+    name: 'Интерактивные панели'
+  - key: interactive_boards
+    id: '404'
+    parent_id: '400'
+    name: 'Интерактивные доски'
+  - key: interactive_accessories
+    id: '405'
+    parent_id: '400'
+    name: 'Аксессуары для интерактивного оборудования'
+
+  - key: laminators
+    id: '501'
+    parent_id: '500'
+    name: 'Ламинаторы'
+  - key: laminating_film
+    id: '502'
+    parent_id: '500'
+    name: 'Плёнка для ламинирования'
+  - key: binders
+    id: '503'
+    parent_id: '500'
+    name: 'Переплетчики'
+  - key: shredders
+    id: '504'
+    parent_id: '500'
+    name: 'Шредеры'
+
+  - key: laptops
+    id: '601'
+    parent_id: '600'
+    name: 'Ноутбуки'
+  - key: monitors
+    id: '602'
+    parent_id: '600'
+    name: 'Мониторы'
+  - key: monoblocks
+    id: '603'
+    parent_id: '600'
+    name: 'Моноблоки'
+  - key: desktops_barebone
+    id: '604'
+    parent_id: '600'
+    name: 'Настольные ПК и barebone'
+  - key: workstations
+    id: '605'
+    parent_id: '600'
+    name: 'Рабочие станции'
+  - key: pc_components
+    id: '606'
+    parent_id: '600'
+    name: 'Комплектующие ПК'
+
+  - key: ups
+    id: '701'
+    parent_id: '700'
+    name: 'Источники бесперебойного питания'
+  - key: stabilizers
+    id: '702'
+    parent_id: '700'
+    name: 'Стабилизаторы напряжения'
+  - key: batteries
+    id: '703'
+    parent_id: '700'
+    name: 'Аккумуляторы и батарейные блоки'
+  - key: ups_accessories
+    id: '704'
+    parent_id: '700'
+    name: 'Аксессуары и модули для ИБП'
+
+  - key: cables
+    id: '801'
+    parent_id: '800'
+    name: 'Кабели'
+  - key: connection_accessories
+    id: '802'
+    parent_id: '800'
+    name: 'Аксессуары подключения'
