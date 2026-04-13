@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<yml_catalog date="2026-04-13 17:15:19">
+<yml_catalog date="2026-04-13 21:37:33">
 <shop><offers>
 <!--FEED_META
 Поставщик                                  | ComPortal
 URL поставщика                             | https://www.comportal.kz/auth/documents/prices/yml-catalog.php
-Время сборки (Алматы)                      | 2026-04-13 17:15:19
+Время сборки (Алматы)                      | 2026-04-13 21:37:33
 Ближайшая сборка (Алматы)                  | 2026-04-14 03:00:00
 Сколько товаров у поставщика до фильтра    | 1166
-Сколько товаров у поставщика после фильтра | 579
-Сколько товаров есть в наличии (true)      | 579
+Сколько товаров у поставщика после фильтра | 563
+Сколько товаров есть в наличии (true)      | 563
 Сколько товаров нет в наличии (false)      | 0
 -->
 
@@ -683,126 +683,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Тип">Картридж</param>
 <param name="Цвет">Чёрный</param>
 <keywords>HP, Картридж HP CF283A (CF283A) (оригинал), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
-</offer>
-
-<offer id="CP13870159" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13870159</vendorCode>
-<name>Барабан HP CF364A (CF364A)</name>
-<price>165900</price>
-<picture>https://www.comportal.kz/upload/iblock/733/wijfg9ugarqixbuzmx6qc8x0jl1y1inv.jpg</picture>
-<vendor>HP</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-<h3>Барабан HP CF364A (CF364A)</h3>
-<p>расходный материал HP Барабан HP CF364A код — CF364A.</p>
-<hr />
-<p style="text-align:center"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;amp;text&amp;amp;type=phone_number&amp;amp;app_absent=0">💬 Написать в WhatsApp</a></p>
-<hr />
-<h3>Характеристики</h3>
-<ul><li><strong>Для бренда:</strong> HP</li><li><strong>Дополнительная информация:</strong> for M855dn M855x+/M855xh M880z M880z+</li><li><strong>Коды:</strong> CF364A</li><li><strong>Модель:</strong> Барабан HP CF364A</li><li><strong>Тип:</strong> Расходный материал</li></ul>
-<hr />
-<h3>Оплата</h3>
-<ul><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul>
-<hr />
-<h3>Доставка по Алматы и Казахстану</h3>
-<ul><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul>]]></description>
-<param name="Для бренда">HP</param>
-<param name="Дополнительная информация">for M855dn M855x+/M855xh M880z M880z+</param>
-<param name="Коды">CF364A</param>
-<param name="Модель">Барабан HP CF364A</param>
-<param name="Тип">Расходный материал</param>
-<keywords>HP, Барабан HP CF364A (CF364A), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
-</offer>
-
-<offer id="CP13870161" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13870161</vendorCode>
-<name>Барабан HP CF359A (CF359A)</name>
-<price>164900</price>
-<picture>https://www.comportal.kz/upload/iblock/1b0/1zqc9yzsygla41iiq3cr84t4fnnxizk4.jpg</picture>
-<vendor>HP</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-<h3>Барабан HP CF359A (CF359A)</h3>
-<p>расходный материал HP Барабан HP CF359A код — CF359A.</p>
-<hr />
-<p style="text-align:center"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;amp;text&amp;amp;type=phone_number&amp;amp;app_absent=0">💬 Написать в WhatsApp</a></p>
-<hr />
-<h3>Характеристики</h3>
-<ul><li><strong>Для бренда:</strong> HP</li><li><strong>Дополнительная информация:</strong> for M855dn M855x+/M855xh M880z M880z+</li><li><strong>Коды:</strong> CF359A</li><li><strong>Модель:</strong> Барабан HP CF359A</li><li><strong>Тип:</strong> Расходный материал</li></ul>
-<hr />
-<h3>Оплата</h3>
-<ul><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul>
-<hr />
-<h3>Доставка по Алматы и Казахстану</h3>
-<ul><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul>]]></description>
-<param name="Для бренда">HP</param>
-<param name="Дополнительная информация">for M855dn M855x+/M855xh M880z M880z+</param>
-<param name="Коды">CF359A</param>
-<param name="Модель">Барабан HP CF359A</param>
-<param name="Тип">Расходный материал</param>
-<keywords>HP, Барабан HP CF359A (CF359A), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
-</offer>
-
-<offer id="CP13870163" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13870163</vendorCode>
-<name>Барабан HP CF365A (CF365A)</name>
-<price>165900</price>
-<picture>https://www.comportal.kz/upload/iblock/009/dch24p6arcl4xdkwhig1wznfgf2648eu.jpg</picture>
-<vendor>HP</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-<h3>Барабан HP CF365A (CF365A)</h3>
-<p>расходный материал HP Барабан HP CF365A код — CF365A.</p>
-<hr />
-<p style="text-align:center"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;amp;text&amp;amp;type=phone_number&amp;amp;app_absent=0">💬 Написать в WhatsApp</a></p>
-<hr />
-<h3>Характеристики</h3>
-<ul><li><strong>Для бренда:</strong> HP</li><li><strong>Дополнительная информация:</strong> for M855dn M855x+/M855xh M880z M880z+</li><li><strong>Коды:</strong> CF365A</li><li><strong>Модель:</strong> Барабан HP CF365A</li><li><strong>Тип:</strong> Расходный материал</li></ul>
-<hr />
-<h3>Оплата</h3>
-<ul><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul>
-<hr />
-<h3>Доставка по Алматы и Казахстану</h3>
-<ul><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul>]]></description>
-<param name="Для бренда">HP</param>
-<param name="Дополнительная информация">for M855dn M855x+/M855xh M880z M880z+</param>
-<param name="Коды">CF365A</param>
-<param name="Модель">Барабан HP CF365A</param>
-<param name="Тип">Расходный материал</param>
-<keywords>HP, Барабан HP CF365A (CF365A), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
-</offer>
-
-<offer id="CP13870165" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13870165</vendorCode>
-<name>Барабан HP CF358A (CF358A)</name>
-<price>64900</price>
-<picture>https://www.comportal.kz/upload/iblock/2fc/pwqpai6al4g7buq8w9zv6f0b5rnveugj.jpg</picture>
-<vendor>HP</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-<h3>Барабан HP CF358A (CF358A)</h3>
-<p>расходный материал HP Барабан HP CF358A код — CF358A.</p>
-<hr />
-<p style="text-align:center"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;amp;text&amp;amp;type=phone_number&amp;amp;app_absent=0">💬 Написать в WhatsApp</a></p>
-<hr />
-<h3>Характеристики</h3>
-<ul><li><strong>Для бренда:</strong> HP</li><li><strong>Дополнительная информация:</strong> для M855dn M855x+/M855xh M880z M880z+</li><li><strong>Коды:</strong> CF358A</li><li><strong>Модель:</strong> Барабан HP CF358A</li><li><strong>Тип:</strong> Расходный материал</li></ul>
-<hr />
-<h3>Оплата</h3>
-<ul><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul>
-<hr />
-<h3>Доставка по Алматы и Казахстану</h3>
-<ul><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul>]]></description>
-<param name="Для бренда">HP</param>
-<param name="Дополнительная информация">для M855dn M855x+/M855xh M880z M880z+</param>
-<param name="Коды">CF358A</param>
-<param name="Модель">Барабан HP CF358A</param>
-<param name="Тип">Расходный материал</param>
-<keywords>HP, Барабан HP CF358A (CF358A), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP13867162" available="true">
@@ -1721,36 +1601,6 @@ URL поставщика                             | https://www.comportal.kz/
 <keywords>HP, Картридж HP CF230A (CF230A) (оригинал), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
-<offer id="CP13870510" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13870510</vendorCode>
-<name>Барабан HP CF232A (CF232A)</name>
-<price>62900</price>
-<picture>https://www.comportal.kz/upload/iblock/505/7ed8fbh38bqxg1q12o4jspwr3b37clxw.jpg</picture>
-<vendor>HP</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-<h3>Барабан HP CF232A (CF232A)</h3>
-<p>расходный материал HP Барабан HP CF232A код — CF232A.</p>
-<hr />
-<p style="text-align:center"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;amp;text&amp;amp;type=phone_number&amp;amp;app_absent=0">💬 Написать в WhatsApp</a></p>
-<hr />
-<h3>Характеристики</h3>
-<ul><li><strong>Для бренда:</strong> HP</li><li><strong>Дополнительная информация:</strong> 23 000 страниц формата А4</li><li><strong>Коды:</strong> CF232A</li><li><strong>Модель:</strong> Барабан HP CF232A</li><li><strong>Тип:</strong> Расходный материал</li></ul>
-<hr />
-<h3>Оплата</h3>
-<ul><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul>
-<hr />
-<h3>Доставка по Алматы и Казахстану</h3>
-<ul><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul>]]></description>
-<param name="Для бренда">HP</param>
-<param name="Дополнительная информация">23 000 страниц формата А4</param>
-<param name="Коды">CF232A</param>
-<param name="Модель">Барабан HP CF232A</param>
-<param name="Тип">Расходный материал</param>
-<keywords>HP, Барабан HP CF232A (CF232A), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
-</offer>
-
 <offer id="CP10323246" available="true">
 <categoryId>102</categoryId>
 <vendorCode>CP10323246</vendorCode>
@@ -1988,36 +1838,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Ресурс">7 300</param>
 <param name="Тип">Тонер</param>
 <keywords>Canon, Тонер Canon 034 MG (9452B001) (оригинал), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
-</offer>
-
-<offer id="CP13870156" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13870156</vendorCode>
-<name>Барабан Canon C-EXV49 CYM (8528B003AA)</name>
-<price>133900</price>
-<picture>https://www.comportal.kz/upload/iblock/7d0/6383ebgrqumlxd9e19zsnil4303ckfg8.jpg</picture>
-<vendor>Canon</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-<h3>Барабан Canon C-EXV49 CYM (8528B003AA)</h3>
-<p>расходный материал Canon C-EXV49 CYM код — 8528B003AA.</p>
-<hr />
-<p style="text-align:center"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;amp;text&amp;amp;type=phone_number&amp;amp;app_absent=0">💬 Написать в WhatsApp</a></p>
-<hr />
-<h3>Характеристики</h3>
-<ul><li><strong>Для бренда:</strong> Canon</li><li><strong>Дополнительная информация:</strong> iR ADV C3330i, 3325i, 3320i Color ресурс 66K</li><li><strong>Коды:</strong> 8528B003AA</li><li><strong>Модель:</strong> C-EXV49 CYM</li><li><strong>Тип:</strong> Расходный материал</li></ul>
-<hr />
-<h3>Оплата</h3>
-<ul><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul>
-<hr />
-<h3>Доставка по Алматы и Казахстану</h3>
-<ul><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul>]]></description>
-<param name="Для бренда">Canon</param>
-<param name="Дополнительная информация">iR ADV C3330i, 3325i, 3320i Color ресурс 66K</param>
-<param name="Коды">8528B003AA</param>
-<param name="Модель">C-EXV49 CYM</param>
-<param name="Тип">Расходный материал</param>
-<keywords>Canon, Барабан Canon C-EXV49 CYM (8528B003AA), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP10416521" available="true">
@@ -8093,6 +7913,38 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Формат печати">A4</param>
 <param name="Функция">Принтер-Сканер(АПД-50с.)-Копир-Факс</param>
 <keywords>HP, МФУ HP LaserJet Enterprise M430f (3PZ55A#B19), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+</offer>
+
+<offer id="CP13871540" available="true">
+<categoryId>301</categoryId>
+<vendorCode>CP13871540</vendorCode>
+<name>Хранилище HPE HPE MSA 2062 16Gb FC SFF (R0Q80B)</name>
+<price>2030900</price>
+<picture>https://www.comportal.kz/upload/iblock/73e/5rk91hu2phujc5p5xmwhw0a1g9yv1ghp.JPG</picture>
+<vendor>HPE</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+<h3>Хранилище HPE HPE MSA 2062 16Gb FC SFF (R0Q80B)</h3>
+<p>МФУ. Гарантия: 12 мес. Для бренда: HPE. Модель: HPE MSA 2062 16Gb FC SFF. Коды: R0Q80B.</p>
+<hr />
+<p style="text-align:center"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;amp;text&amp;amp;type=phone_number&amp;amp;app_absent=0">💬 Написать в WhatsApp</a></p>
+<hr />
+<h3>Характеристики</h3>
+<ul><li><strong>Гарантия:</strong> 12 мес</li><li><strong>Для бренда:</strong> HPE</li><li><strong>Интерфейс массива:</strong> Fibre Channel</li><li><strong>Коды:</strong> R0Q80B</li><li><strong>Модель:</strong> HPE MSA 2062 16Gb FC SFF</li><li><strong>Тип:</strong> МФУ</li><li><strong>Тип корпуса:</strong> Rack</li></ul>
+<hr />
+<h3>Оплата</h3>
+<ul><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul>
+<hr />
+<h3>Доставка по Алматы и Казахстану</h3>
+<ul><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul>]]></description>
+<param name="Гарантия">12 мес</param>
+<param name="Для бренда">HPE</param>
+<param name="Интерфейс массива">Fibre Channel</param>
+<param name="Коды">R0Q80B</param>
+<param name="Модель">HPE MSA 2062 16Gb FC SFF</param>
+<param name="Тип">МФУ</param>
+<param name="Тип корпуса">Rack</param>
+<keywords>HPE, Хранилище HPE HPE MSA 2062 16Gb FC SFF (R0Q80B), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP13871542" available="true">
@@ -20728,66 +20580,6 @@ URL поставщика                             | https://www.comportal.kz/
 <keywords>Dell, Моноблок Dell Pro 24 All-in-One Plus QB24250 (210-BPPG_BTO103_QB24250_EMEA), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
-<offer id="CP13873021" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13873021</vendorCode>
-<name>Компьютер Dell Pro Micro QCM1250 (210-BPQB_BTO003_QCM1250_EMEA)</name>
-<price>415900</price>
-<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
-<vendor>Dell</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-<h3>Компьютер Dell Pro Micro QCM1250 (210-BPQB_BTO003_QCM1250_EMEA)</h3>
-<p>Настольный ПК. Модельная серия: Pro Micro QCM1250. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro Micro QCM1250. Коды: 210-BPQB_BTO003_QCM1250_EMEA.</p>
-<hr />
-<p style="text-align:center"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;amp;text&amp;amp;type=phone_number&amp;amp;app_absent=0">💬 Написать в WhatsApp</a></p>
-<hr />
-<h3>Характеристики</h3>
-<ul><li><strong>Гарантия:</strong> 36 мес</li><li><strong>Для бренда:</strong> Dell</li><li><strong>Коды:</strong> 210-BPQB_BTO003_QCM1250_EMEA</li><li><strong>Модель:</strong> Pro Micro QCM1250</li><li><strong>Тип:</strong> Настольный ПК</li></ul>
-<hr />
-<h3>Оплата</h3>
-<ul><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul>
-<hr />
-<h3>Доставка по Алматы и Казахстану</h3>
-<ul><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul>]]></description>
-<param name="Гарантия">36 мес</param>
-<param name="Для бренда">Dell</param>
-<param name="Коды">210-BPQB_BTO003_QCM1250_EMEA</param>
-<param name="Модель">Pro Micro QCM1250</param>
-<param name="Тип">Настольный ПК</param>
-<keywords>Dell, Компьютер Dell Pro Micro QCM1250 (210-BPQB_BTO003_QCM1250_EMEA), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
-</offer>
-
-<offer id="CP13873023" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13873023</vendorCode>
-<name>Компьютер Dell Pro Micro QCM1250 (210-BPPV_BTO106_QCM1250_EMEA)</name>
-<price>507900</price>
-<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
-<vendor>Dell</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-<h3>Компьютер Dell Pro Micro QCM1250 (210-BPPV_BTO106_QCM1250_EMEA)</h3>
-<p>Настольный ПК. Модельная серия: Pro Micro QCM1250. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro Micro QCM1250. Коды: 210-BPPV_BTO106_QCM1250_EMEA.</p>
-<hr />
-<p style="text-align:center"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;amp;text&amp;amp;type=phone_number&amp;amp;app_absent=0">💬 Написать в WhatsApp</a></p>
-<hr />
-<h3>Характеристики</h3>
-<ul><li><strong>Гарантия:</strong> 36 мес</li><li><strong>Для бренда:</strong> Dell</li><li><strong>Коды:</strong> 210-BPPV_BTO106_QCM1250_EMEA</li><li><strong>Модель:</strong> Pro Micro QCM1250</li><li><strong>Тип:</strong> Настольный ПК</li></ul>
-<hr />
-<h3>Оплата</h3>
-<ul><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul>
-<hr />
-<h3>Доставка по Алматы и Казахстану</h3>
-<ul><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul>]]></description>
-<param name="Гарантия">36 мес</param>
-<param name="Для бренда">Dell</param>
-<param name="Коды">210-BPPV_BTO106_QCM1250_EMEA</param>
-<param name="Модель">Pro Micro QCM1250</param>
-<param name="Тип">Настольный ПК</param>
-<keywords>Dell, Компьютер Dell Pro Micro QCM1250 (210-BPPV_BTO106_QCM1250_EMEA), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
-</offer>
-
 <offer id="CP13873024" available="true">
 <categoryId>603</categoryId>
 <vendorCode>CP13873024</vendorCode>
@@ -20818,216 +20610,6 @@ URL поставщика                             | https://www.comportal.kz/
 <keywords>Dell, Моноблок Dell Pro 24 All-in-One Plus QB24250 (210-BPPG_BTO101_QB24250_EMEA), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
-<offer id="CP13873025" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13873025</vendorCode>
-<name>Компьютер Dell Pro Micro QCM1250 (210-BPPV_BTO107_QCM1250_EMEA)</name>
-<price>641900</price>
-<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
-<vendor>Dell</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-<h3>Компьютер Dell Pro Micro QCM1250 (210-BPPV_BTO107_QCM1250_EMEA)</h3>
-<p>Настольный ПК. Модельная серия: Pro Micro QCM1250. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro Micro QCM1250. Коды: 210-BPPV_BTO107_QCM1250_EMEA.</p>
-<hr />
-<p style="text-align:center"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;amp;text&amp;amp;type=phone_number&amp;amp;app_absent=0">💬 Написать в WhatsApp</a></p>
-<hr />
-<h3>Характеристики</h3>
-<ul><li><strong>Гарантия:</strong> 36 мес</li><li><strong>Для бренда:</strong> Dell</li><li><strong>Коды:</strong> 210-BPPV_BTO107_QCM1250_EMEA</li><li><strong>Модель:</strong> Pro Micro QCM1250</li><li><strong>Тип:</strong> Настольный ПК</li></ul>
-<hr />
-<h3>Оплата</h3>
-<ul><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul>
-<hr />
-<h3>Доставка по Алматы и Казахстану</h3>
-<ul><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul>]]></description>
-<param name="Гарантия">36 мес</param>
-<param name="Для бренда">Dell</param>
-<param name="Коды">210-BPPV_BTO107_QCM1250_EMEA</param>
-<param name="Модель">Pro Micro QCM1250</param>
-<param name="Тип">Настольный ПК</param>
-<keywords>Dell, Компьютер Dell Pro Micro QCM1250 (210-BPPV_BTO107_QCM1250_EMEA), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
-</offer>
-
-<offer id="CP13873026" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13873026</vendorCode>
-<name>Компьютер Dell Pro Tower QCT1250 (210-BPRW_BTO107_QCT1250_EMEA)</name>
-<price>550900</price>
-<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
-<vendor>Dell</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-<h3>Компьютер Dell Pro Tower QCT1250 (210-BPRW_BTO107_QCT1250_EMEA)</h3>
-<p>Настольный ПК. Модельная серия: Pro Tower QCT1250. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro Tower QCT1250. Коды: 210-BPRW_BTO107_QCT1250_EMEA.</p>
-<hr />
-<p style="text-align:center"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;amp;text&amp;amp;type=phone_number&amp;amp;app_absent=0">💬 Написать в WhatsApp</a></p>
-<hr />
-<h3>Характеристики</h3>
-<ul><li><strong>Гарантия:</strong> 36 мес</li><li><strong>Для бренда:</strong> Dell</li><li><strong>Коды:</strong> 210-BPRW_BTO107_QCT1250_EMEA</li><li><strong>Модель:</strong> Pro Tower QCT1250</li><li><strong>Тип:</strong> Настольный ПК</li></ul>
-<hr />
-<h3>Оплата</h3>
-<ul><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul>
-<hr />
-<h3>Доставка по Алматы и Казахстану</h3>
-<ul><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul>]]></description>
-<param name="Гарантия">36 мес</param>
-<param name="Для бренда">Dell</param>
-<param name="Коды">210-BPRW_BTO107_QCT1250_EMEA</param>
-<param name="Модель">Pro Tower QCT1250</param>
-<param name="Тип">Настольный ПК</param>
-<keywords>Dell, Компьютер Dell Pro Tower QCT1250 (210-BPRW_BTO107_QCT1250_EMEA), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
-</offer>
-
-<offer id="CP13873027" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13873027</vendorCode>
-<name>Компьютер Dell Pro Max Tower T2 FCT2250 (210-BPSN_BTO103_FCT2250_EMEA)</name>
-<price>949900</price>
-<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
-<vendor>Dell</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-<h3>Компьютер Dell Pro Max Tower T2 FCT2250 (210-BPSN_BTO103_FCT2250_EMEA)</h3>
-<p>Настольный ПК. Модельная серия: Pro Max Tower. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro Max Tower. Коды: 210-BPSN_BTO103_FCT2250_EMEA.</p>
-<hr />
-<p style="text-align:center"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;amp;text&amp;amp;type=phone_number&amp;amp;app_absent=0">💬 Написать в WhatsApp</a></p>
-<hr />
-<h3>Характеристики</h3>
-<ul><li><strong>Гарантия:</strong> 36 мес</li><li><strong>Для бренда:</strong> Dell</li><li><strong>Коды:</strong> 210-BPSN_BTO103_FCT2250_EMEA</li><li><strong>Модель:</strong> Pro Max Tower</li><li><strong>Тип:</strong> Настольный ПК</li></ul>
-<hr />
-<h3>Оплата</h3>
-<ul><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul>
-<hr />
-<h3>Доставка по Алматы и Казахстану</h3>
-<ul><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul>]]></description>
-<param name="Гарантия">36 мес</param>
-<param name="Для бренда">Dell</param>
-<param name="Коды">210-BPSN_BTO103_FCT2250_EMEA</param>
-<param name="Модель">Pro Max Tower</param>
-<param name="Тип">Настольный ПК</param>
-<keywords>Dell, Компьютер Dell Pro Max Tower T2 FCT2250 (210-BPSN_BTO103_FCT2250_EMEA), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
-</offer>
-
-<offer id="CP13873028" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13873028</vendorCode>
-<name>Компьютер Dell Pro Max Tower T2 FCT2250 (210-BPSN_BTO113_FCT2250_EMEA)</name>
-<price>1304900</price>
-<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
-<vendor>Dell</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-<h3>Компьютер Dell Pro Max Tower T2 FCT2250 (210-BPSN_BTO113_FCT2250_EMEA)</h3>
-<p>Настольный ПК. Модельная серия: Pro Max Tower. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro Max Tower. Коды: 210-BPSN_BTO113_FCT2250_EMEA.</p>
-<hr />
-<p style="text-align:center"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;amp;text&amp;amp;type=phone_number&amp;amp;app_absent=0">💬 Написать в WhatsApp</a></p>
-<hr />
-<h3>Характеристики</h3>
-<ul><li><strong>Гарантия:</strong> 36 мес</li><li><strong>Для бренда:</strong> Dell</li><li><strong>Коды:</strong> 210-BPSN_BTO113_FCT2250_EMEA</li><li><strong>Модель:</strong> Pro Max Tower</li><li><strong>Тип:</strong> Настольный ПК</li></ul>
-<hr />
-<h3>Оплата</h3>
-<ul><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul>
-<hr />
-<h3>Доставка по Алматы и Казахстану</h3>
-<ul><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul>]]></description>
-<param name="Гарантия">36 мес</param>
-<param name="Для бренда">Dell</param>
-<param name="Коды">210-BPSN_BTO113_FCT2250_EMEA</param>
-<param name="Модель">Pro Max Tower</param>
-<param name="Тип">Настольный ПК</param>
-<keywords>Dell, Компьютер Dell Pro Max Tower T2 FCT2250 (210-BPSN_BTO113_FCT2250_EMEA), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
-</offer>
-
-<offer id="CP13873029" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13873029</vendorCode>
-<name>Компьютер Dell Pro Max Tower T2 FCT2250 (210-BPSN_BTO109_FCT2250_EMEA)</name>
-<price>1060900</price>
-<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
-<vendor>Dell</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-<h3>Компьютер Dell Pro Max Tower T2 FCT2250 (210-BPSN_BTO109_FCT2250_EMEA)</h3>
-<p>Настольный ПК. Модельная серия: Pro Max Tower. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro Max Tower. Коды: 210-BPSN_BTO109_FCT2250_EMEA.</p>
-<hr />
-<p style="text-align:center"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;amp;text&amp;amp;type=phone_number&amp;amp;app_absent=0">💬 Написать в WhatsApp</a></p>
-<hr />
-<h3>Характеристики</h3>
-<ul><li><strong>Гарантия:</strong> 36 мес</li><li><strong>Для бренда:</strong> Dell</li><li><strong>Коды:</strong> 210-BPSN_BTO109_FCT2250_EMEA</li><li><strong>Модель:</strong> Pro Max Tower</li><li><strong>Тип:</strong> Настольный ПК</li></ul>
-<hr />
-<h3>Оплата</h3>
-<ul><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul>
-<hr />
-<h3>Доставка по Алматы и Казахстану</h3>
-<ul><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul>]]></description>
-<param name="Гарантия">36 мес</param>
-<param name="Для бренда">Dell</param>
-<param name="Коды">210-BPSN_BTO109_FCT2250_EMEA</param>
-<param name="Модель">Pro Max Tower</param>
-<param name="Тип">Настольный ПК</param>
-<keywords>Dell, Компьютер Dell Pro Max Tower T2 FCT2250 (210-BPSN_BTO109_FCT2250_EMEA), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
-</offer>
-
-<offer id="CP13873030" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13873030</vendorCode>
-<name>Компьютер Dell Pro Max Tower T2 FCT2250 (210-BPSN_BTO112_FCT2250_EMEA)</name>
-<price>1227900</price>
-<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
-<vendor>Dell</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-<h3>Компьютер Dell Pro Max Tower T2 FCT2250 (210-BPSN_BTO112_FCT2250_EMEA)</h3>
-<p>Настольный ПК. Модельная серия: Pro Max Tower. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro Max Tower. Коды: 210-BPSN_BTO112_FCT2250_EMEA.</p>
-<hr />
-<p style="text-align:center"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;amp;text&amp;amp;type=phone_number&amp;amp;app_absent=0">💬 Написать в WhatsApp</a></p>
-<hr />
-<h3>Характеристики</h3>
-<ul><li><strong>Гарантия:</strong> 36 мес</li><li><strong>Для бренда:</strong> Dell</li><li><strong>Коды:</strong> 210-BPSN_BTO112_FCT2250_EMEA</li><li><strong>Модель:</strong> Pro Max Tower</li><li><strong>Тип:</strong> Настольный ПК</li></ul>
-<hr />
-<h3>Оплата</h3>
-<ul><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul>
-<hr />
-<h3>Доставка по Алматы и Казахстану</h3>
-<ul><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul>]]></description>
-<param name="Гарантия">36 мес</param>
-<param name="Для бренда">Dell</param>
-<param name="Коды">210-BPSN_BTO112_FCT2250_EMEA</param>
-<param name="Модель">Pro Max Tower</param>
-<param name="Тип">Настольный ПК</param>
-<keywords>Dell, Компьютер Dell Pro Max Tower T2 FCT2250 (210-BPSN_BTO112_FCT2250_EMEA), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
-</offer>
-
-<offer id="CP13873031" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13873031</vendorCode>
-<name>Компьютер Dell Pro Tower QCT1250 (210-BPRW_BTO110_QCT1250_EMEA)</name>
-<price>648900</price>
-<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
-<vendor>Dell</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-<h3>Компьютер Dell Pro Tower QCT1250 (210-BPRW_BTO110_QCT1250_EMEA)</h3>
-<p>Настольный ПК. Модельная серия: Pro Tower QCT1250. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro Tower QCT1250. Коды: 210-BPRW_BTO110_QCT1250_EMEA.</p>
-<hr />
-<p style="text-align:center"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;amp;text&amp;amp;type=phone_number&amp;amp;app_absent=0">💬 Написать в WhatsApp</a></p>
-<hr />
-<h3>Характеристики</h3>
-<ul><li><strong>Гарантия:</strong> 36 мес</li><li><strong>Для бренда:</strong> Dell</li><li><strong>Коды:</strong> 210-BPRW_BTO110_QCT1250_EMEA</li><li><strong>Модель:</strong> Pro Tower QCT1250</li><li><strong>Тип:</strong> Настольный ПК</li></ul>
-<hr />
-<h3>Оплата</h3>
-<ul><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul>
-<hr />
-<h3>Доставка по Алматы и Казахстану</h3>
-<ul><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul>]]></description>
-<param name="Гарантия">36 мес</param>
-<param name="Для бренда">Dell</param>
-<param name="Коды">210-BPRW_BTO110_QCT1250_EMEA</param>
-<param name="Модель">Pro Tower QCT1250</param>
-<param name="Тип">Настольный ПК</param>
-<keywords>Dell, Компьютер Dell Pro Tower QCT1250 (210-BPRW_BTO110_QCT1250_EMEA), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
-</offer>
-
 <offer id="CP13872965" available="true">
 <categoryId>603</categoryId>
 <vendorCode>CP13872965</vendorCode>
@@ -21056,66 +20638,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Модель">All-in-One EC27250</param>
 <param name="Тип">Моноблок</param>
 <keywords>Dell, Моноблок Dell All-in-One EC27250 (210-BPFS_EC27250_RPLU-R_010), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
-</offer>
-
-<offer id="CP13873003" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13873003</vendorCode>
-<name>Компьютер Dell Tower Plus EBT2250 (210-BPDZ_EBT2250_ARL_127)</name>
-<price>1512900</price>
-<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
-<vendor>Dell</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-<h3>Компьютер Dell Tower Plus EBT2250 (210-BPDZ_EBT2250_ARL_127)</h3>
-<p>Настольный ПК. Модельная серия: Tower Plus EBT2250. Гарантия: 36 мес. Для бренда: Dell. Модель: Tower Plus EBT2250. Коды: 210-BPDZ_EBT2250_ARL_127.</p>
-<hr />
-<p style="text-align:center"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;amp;text&amp;amp;type=phone_number&amp;amp;app_absent=0">💬 Написать в WhatsApp</a></p>
-<hr />
-<h3>Характеристики</h3>
-<ul><li><strong>Гарантия:</strong> 36 мес</li><li><strong>Для бренда:</strong> Dell</li><li><strong>Коды:</strong> 210-BPDZ_EBT2250_ARL_127</li><li><strong>Модель:</strong> Tower Plus EBT2250</li><li><strong>Тип:</strong> Настольный ПК</li></ul>
-<hr />
-<h3>Оплата</h3>
-<ul><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul>
-<hr />
-<h3>Доставка по Алматы и Казахстану</h3>
-<ul><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul>]]></description>
-<param name="Гарантия">36 мес</param>
-<param name="Для бренда">Dell</param>
-<param name="Коды">210-BPDZ_EBT2250_ARL_127</param>
-<param name="Модель">Tower Plus EBT2250</param>
-<param name="Тип">Настольный ПК</param>
-<keywords>Dell, Компьютер Dell Tower Plus EBT2250 (210-BPDZ_EBT2250_ARL_127), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
-</offer>
-
-<offer id="CP13873004" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13873004</vendorCode>
-<name>Компьютер Dell Tower Plus EBT2250 (210-BPDZ_EBT2250_ARL_128)</name>
-<price>2155900</price>
-<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
-<vendor>Dell</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-<h3>Компьютер Dell Tower Plus EBT2250 (210-BPDZ_EBT2250_ARL_128)</h3>
-<p>Настольный ПК. Модельная серия: Tower Plus EBT2250. Гарантия: 36 мес. Для бренда: Dell. Модель: Tower Plus EBT2250. Коды: 210-BPDZ_EBT2250_ARL_128.</p>
-<hr />
-<p style="text-align:center"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;amp;text&amp;amp;type=phone_number&amp;amp;app_absent=0">💬 Написать в WhatsApp</a></p>
-<hr />
-<h3>Характеристики</h3>
-<ul><li><strong>Гарантия:</strong> 36 мес</li><li><strong>Для бренда:</strong> Dell</li><li><strong>Коды:</strong> 210-BPDZ_EBT2250_ARL_128</li><li><strong>Модель:</strong> Tower Plus EBT2250</li><li><strong>Тип:</strong> Настольный ПК</li></ul>
-<hr />
-<h3>Оплата</h3>
-<ul><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul>
-<hr />
-<h3>Доставка по Алматы и Казахстану</h3>
-<ul><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul>]]></description>
-<param name="Гарантия">36 мес</param>
-<param name="Для бренда">Dell</param>
-<param name="Коды">210-BPDZ_EBT2250_ARL_128</param>
-<param name="Модель">Tower Plus EBT2250</param>
-<param name="Тип">Настольный ПК</param>
-<keywords>Dell, Компьютер Dell Tower Plus EBT2250 (210-BPDZ_EBT2250_ARL_128), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP13872444" available="true">

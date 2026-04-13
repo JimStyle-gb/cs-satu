@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<yml_catalog date="2026-04-13 17:15:19">
+<yml_catalog date="2026-04-13 21:37:33">
 <shop><offers>
 <!--FEED_META
 Поставщик                                  | ComPortal
 URL поставщика                             | https://www.comportal.kz/auth/documents/prices/yml-catalog.php
-Время сборки (Алматы)                      | 2026-04-13 17:15:19
+Время сборки (Алматы)                      | 2026-04-13 21:37:33
 Ближайшая сборка (Алматы)                  | 2026-04-14 03:00:00
 Сколько товаров у поставщика до фильтра    | 1166
-Сколько товаров у поставщика после фильтра | 579
-Сколько товаров есть в наличии (true)      | 579
+Сколько товаров у поставщика после фильтра | 580
+Сколько товаров есть в наличии (true)      | 580
 Сколько товаров нет в наличии (false)      | 0
 -->
 
@@ -5207,6 +5207,25 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Нагрузка">100 000</param>
 <param name="Коды">3PZ55A#B19</param>
 <param name="Для бренда">HP</param>
+</offer>
+
+<offer id="CP13871540" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13871540</vendorCode>
+<name>Хранилище HPE HPE MSA 2062 16Gb FC SFF (R0Q80B)</name>
+<price>1909350</price>
+<picture>https://www.comportal.kz/upload/iblock/73e/5rk91hu2phujc5p5xmwhw0a1g9yv1ghp.JPG</picture>
+<vendor>HPE</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+МФУ. Гарантия: 12 мес. Для бренда: HPE. Модель: HPE MSA 2062 16Gb FC SFF. Коды: R0Q80B.]]></description>
+<param name="Тип">МФУ</param>
+<param name="Модель">HPE MSA 2062 16Gb FC SFF</param>
+<param name="Гарантия">12 мес</param>
+<param name="Интерфейс массива">Fibre Channel</param>
+<param name="Тип корпуса">Rack</param>
+<param name="Коды">R0Q80B</param>
+<param name="Для бренда">HPE</param>
 </offer>
 
 <offer id="CP13871542" available="true">
