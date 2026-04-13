@@ -133,7 +133,7 @@ def _resolve_exact(*, name_n: str, vendor_n: str, type_n: str, tech_n: str, hay:
         return GROUP_IDS["laser_cartridges_toners"]
     if _contains_any(hay, ["чернила", "ink", "ink bottle", "чернильниц"]):
         return GROUP_IDS["inks"]
-    if _contains_any(hay, ["девелопер", "developer", "тонер", "toner powder"]) and _contains_any(hay, ["банка", "туба", "bulk", "бутыль", "bottle", "bag"]) :
+    if _contains_any(hay, ["девелопер", "developer", "тонер", "toner powder"]) and _contains_any(hay, ["банка", "туба", "bulk", "бутыль", "bottle", "bag"]):
         return GROUP_IDS["toners_developers"]
     if _contains_any(hay, ["драм", "drum", "фотобарабан", "блок формирования изображения"]):
         return GROUP_IDS["drums_photodrums"]
@@ -159,17 +159,35 @@ def _resolve_exact(*, name_n: str, vendor_n: str, type_n: str, tech_n: str, hay:
     # 3. Принтеры / МФУ / плоттеры / сканеры
     if _contains_any(hay, ["мфу", "multifunction", "all in one"]):
         return GROUP_IDS["mfp"]
-    if _contains_any(hay, ["плоттер", "plotter", "wide format"]) :
+    if _contains_any(hay, ["плоттер", "plotter", "wide format"]):
         return GROUP_IDS["plotters"]
     if _contains_any(hay, ["сканер", "scanner"]) and not _contains_any(hay, ["мфу", "multifunction"]):
         return GROUP_IDS["scanners"]
     if _contains_any(hay, ["принтер", "printer"]) and not _contains_any(hay, ["мфу", "multifunction", "plotter", "scanner"]):
         return GROUP_IDS["printers"]
 
-    # 4. Проекторы / интерактивка
+    # 4. Проекторы / экраны / интерактивка
     if _contains_any(hay, ["проектор", "projector"]):
         return GROUP_IDS["projectors"]
-    if _contains_any(hay, ["экран", "screen"]) and _contains_any(hay, ["проектор", "projector"]):
+    if _contains_any(hay, [
+        "экран моторизированный",
+        "моторизованный экран",
+        "экран на треноге",
+        "экран механический",
+        "проекционный экран",
+        "моторизированный экран",
+        "экран настенно потолочный",
+        "настенно потолочный экран",
+        "motorized screen",
+        "tripod screen",
+        "projection screen",
+        "projector screen",
+    ]):
+        return GROUP_IDS["projector_screens"]
+    if _contains_any(hay, ["экран", "screen"]) and _contains_any(hay, [
+        "проекцион", "для проектора", "projector", "projection", "моторизирован", "моторизован",
+        "на треноге", "tripod", "механическ", "настенно потолоч", "wall mounted"
+    ]):
         return GROUP_IDS["projector_screens"]
     if _contains_any(hay, ["интерактивная панель", "interactive panel", "интерактивный киоск"]):
         return GROUP_IDS["interactive_panels"]
