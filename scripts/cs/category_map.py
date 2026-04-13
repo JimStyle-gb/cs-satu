@@ -19,8 +19,8 @@ except Exception as exc:  # pragma: no cover
     raise SystemExit(f"Не установлен PyYAML: {exc}")
 
 CONFIG_FILE = Path(__file__).resolve().parent / "config" / "price_categories.yml"
-UNRESOLVED_REPORT_DEFAULT = "docs/raw/category_map_unresolved.txt"
-_ENABLE_UNRESOLVED_REPORT = (os.getenv("CS_CATEGORY_MAP_REPORT_UNRESOLVED", "1") or "1").strip() == "1"
+UNRESOLVED_REPORT_DEFAULT = "docs/raw/category_map_debug_unresolved.txt"
+_ENABLE_UNRESOLVED_REPORT = (os.getenv("CS_CATEGORY_MAP_REPORT_UNRESOLVED", "0") or "0").strip() == "1"
 _UNRESOLVED_SEEN: set[str] = set()
 
 _RE_SPACES = re.compile(r"\s+")
