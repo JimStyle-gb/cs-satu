@@ -95,13 +95,29 @@ def _render_characteristics(items: list[tuple[str, str]]) -> str:
         f"<li><strong>{_escape_text(key)}:</strong> {_escape_text(value)}</li>"
         for key, value in items
     )
-    return f"<hr />\n<h3>Характеристики</h3>\n<ul>{body}</ul>"
+    return f"<h3>Характеристики</h3>\n<ul>{body}</ul>"
+
+
+# Совместимость с shared core.
+def build_chars_block(*args: Any, **kwargs: Any) -> str:
+    raw = kwargs.get("characteristics", kwargs.get("params", kwargs.get("specs", kwargs.get("features"))))
+    if raw is None and args:
+        raw = args[0]
+    return _render_characteristics(_iter_characteristics(raw))
+
+
+def build_characteristics_block(*args: Any, **kwargs: Any) -> str:
+    return build_chars_block(*args, **kwargs)
+
+
+def render_chars_block(*args: Any, **kwargs: Any) -> str:
+    return build_chars_block(*args, **kwargs)
 
 
 def _render_description(name: str, main_text: str, characteristics: Any = None) -> str:
     safe_name = _escape_text(name)
     safe_text = _escape_text(main_text)
-    chars_html = _render_characteristics(_iter_characteristics(characteristics))
+    chars_html = build_chars_block(characteristics)
 
     parts = [f"<h3>{safe_name}</h3>"]
     if safe_text:
@@ -109,25 +125,25 @@ def _render_description(name: str, main_text: str, characteristics: Any = None) 
 
     parts.extend(
         [
-            '<hr />',
+            "<hr />",
             (
                 f'<p style="text-align:center">'
                 f'<a href="{_escape_attr(WHATSAPP_URL)}">💬 Написать в WhatsApp</a>'
-                f'</p>'
+                f"</p>"
             ),
         ]
     )
 
     if chars_html:
-        parts.append(chars_html)
+        parts.extend(["<hr />", chars_html])
 
     parts.extend(
         [
-            '<hr />',
-            '<h3>Оплата</h3>',
+            "<hr />",
+            "<h3>Оплата</h3>",
             _render_list(PAYMENT_ITEMS),
-            '<hr />',
-            '<h3>Доставка по Алматы и Казахстану</h3>',
+            "<hr />",
+            "<h3>Доставка по Алматы и Казахстану</h3>",
             _render_list(DELIVERY_ITEMS),
         ]
     )
@@ -163,15 +179,12 @@ def render_description(*args: Any, **kwargs: Any) -> str:
     return build_description(*args, **kwargs)
 
 
-
 def build_offer_description(*args: Any, **kwargs: Any) -> str:
     return build_description(*args, **kwargs)
 
 
-
 def build_product_description(*args: Any, **kwargs: Any) -> str:
     return build_description(*args, **kwargs)
-
 
 
 def compose_description(*args: Any, **kwargs: Any) -> str:
