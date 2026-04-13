@@ -145,6 +145,7 @@ jobs:
           path: |
             docs/akcent.yml
             docs/raw/akcent.yml
+            docs/raw/category_id_unresolved.txt
             docs/raw/akcent_quality_gate.txt
           if-no-files-found: warn
 
@@ -152,6 +153,9 @@ jobs:
         if: success()
         run: |
           git add docs/akcent.yml docs/raw/akcent.yml
+          if [ -f docs/raw/category_id_unresolved.txt ]; then
+            git add docs/raw/category_id_unresolved.txt
+          fi
           if [ -f docs/raw/akcent_quality_gate.txt ]; then
             git add docs/raw/akcent_quality_gate.txt
           fi
