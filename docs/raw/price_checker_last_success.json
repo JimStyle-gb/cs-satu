@@ -1,0 +1,27 @@
+{
+  "build_time": "14 апреля 2026 г. 00:56:42",
+  "total": 7299,
+  "available_true": 6634,
+  "available_false": 665,
+  "price100": 468,
+  "placeholder": 561,
+  "empty_category": 0,
+  "unknown_satu": 0,
+  "duplicate_offer_ids": 0,
+  "duplicate_vendor_codes": 0,
+  "supplier_counts": {
+    "AkCent": 184,
+    "AlStyle": 2225,
+    "ComPortal": 564,
+    "CopyLine": 1220,
+    "VTT": 3106
+  },
+  "excluded_unmapped_total": 0,
+  "excluded_unmapped_by_supplier": {
+    "AkCent": 0,
+    "AlStyle": 0,
+    "ComPortal": 0,
+    "CopyLine": 0,
+    "VTT": 0
+  }
+}
