@@ -1,6 +1,6 @@
 overrides:
   - priority: 10
-    cs_category_id: 9631638
+    cs_category_id: 604
     cs_category_name: "Настольные ПК и barebone"
     supplier: ""
     name_contains:
@@ -16,7 +16,7 @@ overrides:
     note: "Barebone, Mini PC, NUC и Nettop уводим в категорию портала для компактных ПК"
 
   - priority: 20
-    cs_category_id: 9631647
+    cs_category_id: 801
     cs_category_name: "Кабели"
     supplier: ""
     name_contains:
@@ -35,7 +35,7 @@ overrides:
     note: "Силовые кабели и кабели питания уводим в отдельную категорию портала"
 
   - priority: 30
-    cs_category_id: 9631644
+    cs_category_id: 703
     cs_category_name: "Аккумуляторы и батарейные блоки"
     supplier: ""
     name_contains:
@@ -53,7 +53,7 @@ overrides:
     note: "Батарейные блоки и сменные батарейные модули для ИБП явно закрепляем за категорией комплектующих ИБП"
 
   - priority: 40
-    cs_category_id: 9631624
+    cs_category_id: 405
     cs_category_name: "Аксессуары для интерактивного оборудования"
     supplier: ""
     name_contains:
@@ -69,7 +69,7 @@ overrides:
     note: "OPS-модули и вычислительные модули для интерактивных панелей пока оставляем внутри интерактивного оборудования"
 
   - priority: 50
-    cs_category_id: 9631648
+    cs_category_id: 802
     cs_category_name: "Аксессуары подключения"
     supplier: ""
     name_contains:
@@ -88,7 +88,7 @@ overrides:
     note: "Переходники, адаптеры, конвертеры и док-станции пока оставляем в общей категории кабелей и аксессуаров подключения"
 
   - priority: 60
-    cs_category_id: 9631639
+    cs_category_id: 605
     cs_category_name: "Рабочие станции"
     supplier: ""
     name_contains:
