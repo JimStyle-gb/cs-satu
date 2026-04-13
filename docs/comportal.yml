@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<yml_catalog date="2026-04-13 21:37:33">
+<yml_catalog date="2026-04-13 23:19:49">
 <shop><offers>
 <!--FEED_META
 Поставщик                                  | ComPortal
 URL поставщика                             | https://www.comportal.kz/auth/documents/prices/yml-catalog.php
-Время сборки (Алматы)                      | 2026-04-13 21:37:33
+Время сборки (Алматы)                      | 2026-04-13 23:19:49
 Ближайшая сборка (Алматы)                  | 2026-04-14 03:00:00
-Сколько товаров у поставщика до фильтра    | 1166
-Сколько товаров у поставщика после фильтра | 563
-Сколько товаров есть в наличии (true)      | 563
+Сколько товаров у поставщика до фильтра    | 1168
+Сколько товаров у поставщика после фильтра | 564
+Сколько товаров есть в наличии (true)      | 564
 Сколько товаров нет в наличии (false)      | 0
 -->
 
@@ -5251,6 +5251,36 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Формат печати">A4</param>
 <param name="Функция">Принтер-Сканер(АПД-40с.)-Копир</param>
 <keywords>HP, МФУ HP M236sdw (9YG09A#B19), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+</offer>
+
+<offer id="CP13842679" available="true">
+<categoryId>101</categoryId>
+<vendorCode>CP13842679</vendorCode>
+<name>Печатающая головка HP 729 DesignJet Printhead Replacement Kit (F9J81A) (оригинал)</name>
+<price>270900</price>
+<picture>https://www.comportal.kz/upload/iblock/b8e/b8e51a269d79b68f51de87e15ee80823.JPG</picture>
+<vendor>HP</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+<h3>Печатающая головка HP 729 DesignJet Printhead Replacement Kit (F9J81A) (оригинал)</h3>
+<p>Оригинальный картридж HP 729 DesignJet Printhead Replacement Kit код — F9J81A.</p>
+<hr />
+<p style="text-align:center"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;amp;text&amp;amp;type=phone_number&amp;amp;app_absent=0">💬 Написать в WhatsApp</a></p>
+<hr />
+<h3>Характеристики</h3>
+<ul><li><strong>Для бренда:</strong> HP</li><li><strong>Коды:</strong> F9J81A</li><li><strong>Модель:</strong> 729 DesignJet Printhead Replacement Kit</li><li><strong>Оригинальность:</strong> Оригинал</li><li><strong>Тип:</strong> Картридж</li></ul>
+<hr />
+<h3>Оплата</h3>
+<ul><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul>
+<hr />
+<h3>Доставка по Алматы и Казахстану</h3>
+<ul><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul>]]></description>
+<param name="Для бренда">HP</param>
+<param name="Коды">F9J81A</param>
+<param name="Модель">729 DesignJet Printhead Replacement Kit</param>
+<param name="Оригинальность">Оригинал</param>
+<param name="Тип">Картридж</param>
+<keywords>HP, Печатающая головка HP 729 DesignJet Printhead Replacement Kit (F9J81A) (оригинал), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP13827515" available="true">
