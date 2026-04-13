@@ -8,7 +8,6 @@ Path: scripts/cs/category_map.py
 
 from __future__ import annotations
 
-import os
 import re
 from pathlib import Path
 from typing import Any, Sequence
@@ -19,9 +18,8 @@ except Exception as exc:  # pragma: no cover
     raise SystemExit(f"Не установлен PyYAML: {exc}")
 
 CONFIG_FILE = Path(__file__).resolve().parent / "config" / "price_categories.yml"
-UNRESOLVED_REPORT_DEFAULT = "docs/raw/category_map_debug_unresolved.txt"
-_ENABLE_UNRESOLVED_REPORT = (os.getenv("CS_CATEGORY_MAP_REPORT_UNRESOLVED", "0") or "0").strip() == "1"
-_UNRESOLVED_SEEN: set[str] = set()
+# unresolved-лог теперь ведёт shared core.py в один общий файл.
+# category_map.py только определяет categoryId и ничего отдельно не пишет.
 
 _RE_SPACES = re.compile(r"\s+")
 _RE_PUNCT = re.compile(r"[^\w#+./%-]+", re.U)
@@ -295,8 +293,7 @@ def resolve_category_id(*, name: str, vendor: str = "", params: Sequence[tuple[s
     if fallback:
         return fallback
 
-    _append_unresolved_report(oid=oid, name=name, vendor=vendor, params=params, native_desc=native_desc)
     return ""
 
 
-__all__ = ["GROUP_IDS", "UNRESOLVED_REPORT_DEFAULT", "resolve_category_id"]
+__all__ = ["GROUP_IDS", "resolve_category_id"]
