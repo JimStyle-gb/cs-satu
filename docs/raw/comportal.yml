@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<yml_catalog date="2026-04-13 03:23:03">
+<yml_catalog date="2026-04-13 17:15:19">
 <shop><offers>
 <!--FEED_META
 Поставщик                                  | ComPortal
 URL поставщика                             | https://www.comportal.kz/auth/documents/prices/yml-catalog.php
-Время сборки (Алматы)                      | 2026-04-13 03:23:03
+Время сборки (Алматы)                      | 2026-04-13 17:15:19
 Ближайшая сборка (Алматы)                  | 2026-04-14 03:00:00
 Сколько товаров у поставщика до фильтра    | 1166
-Сколько товаров у поставщика после фильтра | 581
-Сколько товаров есть в наличии (true)      | 581
+Сколько товаров у поставщика после фильтра | 579
+Сколько товаров есть в наличии (true)      | 579
 Сколько товаров нет в наличии (false)      | 0
 -->
 
@@ -1082,6 +1082,23 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Коды">CF230A</param>
 <param name="Для бренда">HP</param>
 <param name="Оригинальность">Оригинал</param>
+</offer>
+
+<offer id="CP13870510" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13870510</vendorCode>
+<name>Барабан HP CF232A (CF232A)</name>
+<price>52888</price>
+<picture>https://www.comportal.kz/upload/iblock/505/7ed8fbh38bqxg1q12o4jspwr3b37clxw.jpg</picture>
+<vendor>HP</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+расходный материал HP Барабан HP CF232A код — CF232A.]]></description>
+<param name="Тип">Расходный материал</param>
+<param name="Модель">Барабан HP CF232A</param>
+<param name="Дополнительная информация">23 000 страниц формата А4</param>
+<param name="Коды">CF232A</param>
+<param name="Для бренда">HP</param>
 </offer>
 
 <offer id="CP10323246" available="true">
@@ -2668,31 +2685,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Оригинальность">Оригинал</param>
 </offer>
 
-<offer id="CP10669578" available="true">
-<categoryId></categoryId>
-<vendorCode>CP10669578</vendorCode>
-<name>Принтер HP Color Laser 150nw (4ZB95A#B19)</name>
-<price>120635</price>
-<picture>https://www.comportal.kz/upload/iblock/3ee/m0oh4ieeo3l95xp19ai5oyqpbkv2f8y0.JPG</picture>
-<vendor>HP</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Принтер. Формат печати: A4. Разрешение: 600x600. Скорость печати ч/б: 18. Скорость печати цветной: 4. Порты: USB LAN WiFI. Технология печати: Лазерная. Гарантия: 12 мес.]]></description>
-<param name="Тип">Принтер</param>
-<param name="Модель">Color Laser 150nw</param>
-<param name="Гарантия">12 мес</param>
-<param name="Разрешение">600x600</param>
-<param name="Формат печати">A4</param>
-<param name="Скорость печати ч/б">18</param>
-<param name="Технология печати">Лазерная</param>
-<param name="Порты">USB LAN WiFI</param>
-<param name="Скорость печати цветной">4</param>
-<param name="Наличие картриджа (тонера) в комплекте">Стартовый</param>
-<param name="Нагрузка">20 000</param>
-<param name="Коды">4ZB95A#B19</param>
-<param name="Для бренда">HP</param>
-</offer>
-
 <offer id="CP10725204" available="true">
 <categoryId></categoryId>
 <vendorCode>CP10725204</vendorCode>
@@ -3411,23 +3403,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Наличие картриджа (тонера) в комплекте">Стартовый</param>
 <param name="Коды">9YG09A#B19</param>
 <param name="Для бренда">HP</param>
-</offer>
-
-<offer id="CP13842679" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13842679</vendorCode>
-<name>Печатающая головка HP 729 DesignJet Printhead Replacement Kit (F9J81A) (оригинал)</name>
-<price>240740</price>
-<picture>https://www.comportal.kz/upload/iblock/b8e/b8e51a269d79b68f51de87e15ee80823.JPG</picture>
-<vendor>HP</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Оригинальный картридж HP 729 DesignJet Printhead Replacement Kit код — F9J81A.]]></description>
-<param name="Тип">Картридж</param>
-<param name="Модель">729 DesignJet Printhead Replacement Kit</param>
-<param name="Коды">F9J81A</param>
-<param name="Для бренда">HP</param>
-<param name="Оригинальность">Оригинал</param>
 </offer>
 
 <offer id="CP13827515" available="true">
@@ -4926,30 +4901,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Для бренда">Acer</param>
 </offer>
 
-<offer id="CP13871689" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13871689</vendorCode>
-<name>Проектор Acer H6830BD (MR.JVK11.001)</name>
-<price>530589</price>
-<picture>https://www.comportal.kz/upload/iblock/445/vzdsc1hmmpi079i8lzfrn362t7yz2saa.jpg</picture>
-<vendor>Acer</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Проектор. Разрешение: 3840 x 2160. Порты: USB/2XHDMI/ 3.5 мм (mini-Jack). Гарантия: 12 мес.]]></description>
-<param name="Тип">Проектор</param>
-<param name="Модель">H6830BD</param>
-<param name="Порты">USB/2XHDMI/ 3.5 мм (mini-Jack)</param>
-<param name="Гарантия">12 мес</param>
-<param name="Контрастность">20000:1</param>
-<param name="Яркость">3 800</param>
-<param name="Разрешение">3840 x 2160</param>
-<param name="Мощность лампы">240</param>
-<param name="Технология">DLP</param>
-<param name="Ресурс лампы">10 000</param>
-<param name="Коды">MR.JVK11.001</param>
-<param name="Для бренда">Acer</param>
-</offer>
-
 <offer id="CP13822475" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13822475</vendorCode>
@@ -5232,6 +5183,49 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Коды">W1510X</param>
 <param name="Для бренда">HP</param>
 <param name="Оригинальность">Оригинал</param>
+</offer>
+
+<offer id="CP13816464" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13816464</vendorCode>
+<name>МФУ HP LaserJet Enterprise M430f (3PZ55A#B19)</name>
+<price>256201</price>
+<picture>https://www.comportal.kz/upload/iblock/2a2/panykxnaffbczzk04kvtfyy00l6956w1.jpg</picture>
+<vendor>HP</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+МФУ. Формат печати: A4. Разрешение: 1200x1200. Скорость печати ч/б: 38. Технология печати: Лазерная. Гарантия: 12 мес.]]></description>
+<param name="Тип">МФУ</param>
+<param name="Модель">LaserJet Enterprise M430f</param>
+<param name="Гарантия">12 мес</param>
+<param name="Разрешение">1200x1200</param>
+<param name="Формат печати">A4</param>
+<param name="Скорость печати ч/б">38</param>
+<param name="Технология печати">Лазерная</param>
+<param name="Функция">Принтер-Сканер(АПД-50с.)-Копир-Факс</param>
+<param name="Наличие картриджа (тонера) в комплекте">Стартовый</param>
+<param name="Нагрузка">100 000</param>
+<param name="Коды">3PZ55A#B19</param>
+<param name="Для бренда">HP</param>
+</offer>
+
+<offer id="CP13871542" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13871542</vendorCode>
+<name>Хранилище HPE HPE MSA 1060 12Gb SAS SFF (R0Q87B)</name>
+<price>1139460</price>
+<picture>https://www.comportal.kz/upload/iblock/e7c/v7bfdqmt9woycxcvstlv0zajhllrr5rn.JPG</picture>
+<vendor>HPE</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+МФУ. Гарантия: 12 мес. Для бренда: HPE. Модель: HPE MSA 1060 12Gb SAS SFF. Коды: R0Q87B.]]></description>
+<param name="Тип">МФУ</param>
+<param name="Модель">HPE MSA 1060 12Gb SAS SFF</param>
+<param name="Гарантия">12 мес</param>
+<param name="Интерфейс массива">SAS</param>
+<param name="Тип корпуса">Rack</param>
+<param name="Коды">R0Q87B</param>
+<param name="Для бренда">HPE</param>
 </offer>
 
 <offer id="CP13771028" available="true">
@@ -6101,23 +6095,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Для бренда">APC</param>
 </offer>
 
-<offer id="CP13872950" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13872950</vendorCode>
-<name>МФУ Canon imageRUNNER C3326i (5965C005)</name>
-<price>746648</price>
-<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
-<vendor>Canon</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-МФУ. Гарантия: 12 мес. Для бренда: Canon. Модель: imageRUNNER C3326i. Коды: 5965C005.]]></description>
-<param name="Тип">МФУ</param>
-<param name="Гарантия">12 мес</param>
-<param name="Коды">5965C005</param>
-<param name="Модель">imageRUNNER C3326i</param>
-<param name="Для бренда">Canon</param>
-</offer>
-
 <offer id="CP13872564" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13872564</vendorCode>
@@ -6364,53 +6341,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Для бренда">APC</param>
 </offer>
 
-<offer id="CP13834771" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13834771</vendorCode>
-<name>Ноутбук Acer PH3D15-71-99NY Predator Helios 3D 15 SpatialLabs Edition (NH.QLWER.002)</name>
-<price>1714260</price>
-<picture>https://www.comportal.kz/upload/iblock/2e0/2e08368624f0be0662e9b1ddc52400d4.JPG</picture>
-<vendor>Acer</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Ноутбук. Процессор: Intel 13900HX Core i9 1,6. Оперативная память: 32 Gb / DDR5 / 5600. Накопитель: 2048 / PCIe NVMe SSD / 2 шт. Диагональ: 15,6. Разрешение: 3840x2160. ОС: Без операционной системы. Видеокарта: nVidia RTX 4080 12 Gb. Wi‑Fi: 802.11 a b/g n/ac ax. Bluetooth: Bluetooth 5.1. Камера: HD Camera. Гарантия: 12 мес.]]></description>
-<param name="Тип">Ноутбук</param>
-<param name="Модель">PH3D15-71-99NY Predator Helios 3D 15 SpatialLabs Edition</param>
-<param name="Объем жесткого диска">2048</param>
-<param name="Тип жесткого диска">PCIe NVMe SSD</param>
-<param name="Производитель процессора">Intel</param>
-<param name="Модель процессора">Core i9</param>
-<param name="Серия процессора">13900HX</param>
-<param name="Частота процессора">1,6</param>
-<param name="Сетевая карта (скорость передачи)">10/100/1000</param>
-<param name="Оперативная память">32 Gb</param>
-<param name="Частота оперативной памяти">5600</param>
-<param name="Количество слотов памяти">2</param>
-<param name="Занятые слоты памяти">2x16GB</param>
-<param name="Объем видеопамяти">12 Gb</param>
-<param name="Тип оперативной памяти">DDR5</param>
-<param name="Порты">1xUSB 3.2 Gen 2/1xDisplayPort over USB-C/1xThunderbolt 4/1xUSB charging 5 V; 3 A/1xDC-in port 20 V; 65 W/1xEthernet (RJ-45) port/1xHDMI 2.1 port with HDCP support/1x3.5 mm headphone speaker jack, supporting headsets with built-in microphone/1xUSB-A 3.2 Gen 1/1xUSB-A 3.2 Gen 2</param>
-<param name="Тип привода">No ODD</param>
-<param name="Количество дисков">2</param>
-<param name="Размер дисплея">15,6</param>
-<param name="Дополнительные характеристики">RGB Micro SD card reader</param>
-<param name="Тип матрицы">UHD IPS</param>
-<param name="Производитель чипсета видеокарты">nVidia</param>
-<param name="Марка чипсета видеокарты">GeForce</param>
-<param name="Модель чипсета видеокарты">RTX 4080</param>
-<param name="Операционная система">Без операционной системы</param>
-<param name="Цвет">Чёрный</param>
-<param name="Bluetooth">Bluetooth 5.1</param>
-<param name="Wi-Fi">802.11 a b/g n/ac ax</param>
-<param name="Адаптер">330W AC Adapter</param>
-<param name="Аккумулятор">4-Cell 90Wh</param>
-<param name="Гарантия">12 мес</param>
-<param name="Камера">HD Camera</param>
-<param name="Разрешение дисплея">3840x2160</param>
-<param name="Коды">NH.QLWER.002</param>
-<param name="Для бренда">Acer</param>
-</offer>
-
 <offer id="CP13835248" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13835248</vendorCode>
@@ -6582,27 +6512,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Номер">№653</param>
 <param name="Ресурс">200</param>
 <param name="Коды">3YM74AE#BHK</param>
-<param name="Для бренда">HP</param>
-<param name="Оригинальность">Оригинал</param>
-</offer>
-
-<offer id="CP13835281" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13835281</vendorCode>
-<name>Картридж HP 3YM75AE (3YM75AE#BHK) (оригинал)</name>
-<price>7694</price>
-<picture>https://www.comportal.kz/upload/iblock/7e6/plggpgh0fwgrsu08dxp9kieh1u6qg4zi.JPG</picture>
-<vendor>HP</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Оригинальный картридж HP 3YM75AE коды — 3YM75AE#BHK / №653; цвет — Чёрный; ресурс — 360; технология печати — Струйная.]]></description>
-<param name="Тип">Картридж</param>
-<param name="Модель">3YM75AE</param>
-<param name="Цвет">Чёрный</param>
-<param name="Технология печати">Струйная</param>
-<param name="Номер">№653</param>
-<param name="Ресурс">360</param>
-<param name="Коды">3YM75AE#BHK</param>
 <param name="Для бренда">HP</param>
 <param name="Оригинальность">Оригинал</param>
 </offer>
@@ -11101,32 +11010,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Для бренда">Dell</param>
 </offer>
 
-<offer id="CP13871380" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13871380</vendorCode>
-<name>Монитор Dell 27 Plus 4K Monitor-S2725QS (210-BQWM)</name>
-<price>157677</price>
-<picture>https://www.comportal.kz/upload/iblock/86a/69jcnclz7uoi22v6lfvliwlx07nk8ba8.JPG</picture>
-<vendor>Dell</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Монитор. Диагональ: 27. Максимальное разрешение: 3840x2160. Тип матрицы: IPS. Частота обновления: 120. Время отклика: 8. Порты: 2 HDMI ports (HDCP 1.4 & 2.3) (Supports up to UHD 3840 x 2160, 120 Hz, FRL, HDR, VRR as per specified in HDMI 2.1)/1 DisplayPort 1.4 (HDCP 1.4 & 2.3) port (Supports up to UHD 3840 x 2160, 120 Hz). Гарантия: 36 мес.]]></description>
-<param name="Тип">Монитор</param>
-<param name="Модель">S2725QS</param>
-<param name="Порты">2 HDMI ports (HDCP 1.4 &amp; 2.3) (Supports up to UHD 3840 x 2160, 120 Hz, FRL, HDR, VRR as per specified in HDMI 2.1)/1 DisplayPort 1.4 (HDCP 1.4 &amp; 2.3) port (Supports up to UHD 3840 x 2160, 120 Hz)</param>
-<param name="Тип матрицы">IPS</param>
-<param name="Гарантия">36 мес</param>
-<param name="Контрастность">1500:1</param>
-<param name="Яркость">350</param>
-<param name="Время отклика">8</param>
-<param name="Максимальное разрешение">3840x2160</param>
-<param name="Наличие динамиков">Speakers</param>
-<param name="Диагональ">27</param>
-<param name="Частота обновления">120</param>
-<param name="Коды">210-BQWM</param>
-<param name="Для бренда">Dell</param>
-</offer>
-
 <offer id="CP13870899" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13870899</vendorCode>
@@ -11822,6 +11705,23 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Стабилизатор (AVR)">есть</param>
 <param name="Гарантия">24 мес</param>
 <param name="Коды">BVX2200LI</param>
+<param name="Для бренда">APC</param>
+</offer>
+
+<offer id="CP13873206" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13873206</vendorCode>
+<name>ИБП APC BVX1600LI 230V, AVR, IEC Sockets (BVX1600LI)</name>
+<price>83242</price>
+<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
+<vendor>APC</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+ИБП. Гарантия: 12 мес. Для бренда: APC. Модель: BVX1600LI 230V, AVR, IEC Sockets. Коды: BVX1600LI.]]></description>
+<param name="Тип">ИБП</param>
+<param name="Гарантия">12 мес</param>
+<param name="Коды">BVX1600LI</param>
+<param name="Модель">BVX1600LI 230V, AVR, IEC Sockets</param>
 <param name="Для бренда">APC</param>
 </offer>
 
@@ -14413,6 +14313,23 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Для бренда">Dell</param>
 <param name="Модель">Pro 14 Plus PB14250</param>
 <param name="Коды">210-BPDK / BTO217_PB14250_EMEA</param>
+</offer>
+
+<offer id="CP13873203" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13873203</vendorCode>
+<name>Ноутбук HP ProBook 4 G1i 16 AI (D0UW2ET#BJA)</name>
+<price>690938</price>
+<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
+<vendor>HP</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Ноутбук. Модельная серия: ProBook 4 G1i 16 AI. Гарантия: 12 мес. Для бренда: HP. Модель: ProBook 4 G1i 16 AI. Коды: D0UW2ET#BJA.]]></description>
+<param name="Тип">Ноутбук</param>
+<param name="Гарантия">12 мес</param>
+<param name="Коды">D0UW2ET#BJA</param>
+<param name="Модель">ProBook 4 G1i 16 AI</param>
+<param name="Для бренда">HP</param>
 </offer>
 
 <offer id="CP13873061" available="true">
