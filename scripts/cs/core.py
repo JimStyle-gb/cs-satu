@@ -14,7 +14,7 @@ CS Core — shared final/raw orchestration layer.
 """
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 from datetime import datetime, timedelta
 from pathlib import Path
 from typing import Iterable, Sequence
@@ -2691,6 +2691,63 @@ def next_run_dom_at_hour(now: datetime, hour: int, doms: Sequence[int]) -> datet
     """
     return _meta_next_run_dom_at_hour(now, hour=hour, doms=tuple(doms or ()))
 
+
+def _category_unresolved_report_path(supplier: str) -> Path:
+    slug = re.sub(r"[^a-z0-9]+", "_", (supplier or "supplier").strip().lower()).strip("_") or "supplier"
+    return Path("docs/raw") / f"{slug}_unmapped_category_ids.txt"
+
+
+def _write_category_unresolved_report(path: Path, supplier: str, lines: Sequence[str]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    header = [
+        f"Поставщик: {supplier}",
+        f"Товаров без categoryId: {len(lines)}",
+        "",
+    ]
+    if lines:
+        data = "\n".join(header + list(lines)).rstrip() + "\n"
+    else:
+        data = "\n".join(header + ["# Все товары получили categoryId"]).rstrip() + "\n"
+    path.write_text(data, encoding="utf-8")
+
+
+def _resolve_offer_category_id(offer: "OfferOut", *, public_vendor: str) -> str:
+    name_full = normalize_offer_name(offer.name)
+    name_full = sanitize_mixed_text(name_full)
+    native_desc = fix_text(offer.native_desc)
+    native_desc = strip_service_kv_lines(native_desc)
+    vendor = pick_vendor(offer.vendor, name_full, offer.params, native_desc, public_vendor=public_vendor)
+    category_id = norm_ws(offer.category_id) or resolve_category_id(
+        oid=offer.oid,
+        name=name_full,
+        vendor=vendor,
+        params=offer.params,
+        native_desc=native_desc,
+    )
+    return norm_ws(category_id)
+
+
+def _split_offers_for_final(
+    offers: Sequence["OfferOut"],
+    *,
+    supplier: str,
+    public_vendor: str,
+) -> tuple[list["OfferOut"], list[str]]:
+    resolved: list[OfferOut] = []
+    unresolved_lines: list[str] = []
+
+    for offer in offers:
+        category_id = _resolve_offer_category_id(offer, public_vendor=public_vendor)
+        if category_id:
+            resolved.append(replace(offer, category_id=category_id))
+            continue
+
+        unresolved_lines.append(
+            f"{supplier} | {offer.oid} | {norm_ws(offer.name)} | categoryId не определён"
+        )
+
+    return resolved, unresolved_lines
+
 # CS: собирает полный XML фида (header + FEED_META + offers + footer)
 def write_cs_feed_raw(
     offers: Sequence["OfferOut"],
@@ -2731,8 +2788,20 @@ def write_cs_feed(
     currency_id: str = CURRENCY_ID_DEFAULT,
     param_priority: Sequence[str] | None = None,
 ) -> bool:
-    full = build_cs_feed_xml(
+    resolved_offers, unresolved_lines = _split_offers_for_final(
         offers,
+        supplier=supplier,
+        public_vendor=public_vendor,
+    )
+
+    _write_category_unresolved_report(
+        _category_unresolved_report_path(supplier),
+        supplier,
+        unresolved_lines,
+    )
+
+    full = build_cs_feed_xml(
+        resolved_offers,
         supplier=supplier,
         supplier_url=supplier_url,
         build_time=build_time,
