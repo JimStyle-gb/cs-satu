@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<yml_catalog date="2026-04-13 01:43:59">
+<yml_catalog date="2026-04-13 17:10:06">
 <shop><offers>
 <!--FEED_META
 Поставщик                                  | AkCent
 URL поставщика                             | https://ak-cent.kz/export/Exchange/article_nw2/Ware02224.xml
-Время сборки (Алматы)                      | 2026-04-13 01:43:59
+Время сборки (Алматы)                      | 2026-04-13 17:10:06
 Ближайшая сборка (Алматы)                  | 2026-04-14 01:00:00
-Сколько товаров у поставщика до фильтра    | 2057
-Сколько товаров у поставщика после фильтра | 180
-Сколько товаров есть в наличии (true)      | 180
+Сколько товаров у поставщика до фильтра    | 2063
+Сколько товаров у поставщика после фильтра | 184
+Сколько товаров есть в наличии (true)      | 184
 Сколько товаров нет в наличии (false)      | 0
 -->
 
@@ -326,6 +326,86 @@ URL поставщика                             | https://ak-cent.kz/export
 <param name="Модель">C13T27914022</param>
 <param name="Для устройства">Epson WorkForce WF-7620DTWF / Epson WorkForce WF-7610DWF / Epson WorkForce WF-7110DTW</param>
 <param name="Коды">C13T27914022</param>
+<param name="Оригинальность">Оригинал</param>
+</offer>
+
+<offer id="ACC13T40D140" available="true">
+<categoryId></categoryId>
+<vendorCode>ACC13T40D140</vendorCode>
+<name>Картридж Epson C13T40D140, UltraChrome XD2, чёрный (оригинал)</name>
+<price>56297</price>
+<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
+<vendor>Epson</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Оригинальный картридж Epson C13T40D140 Чёрного цвета для Epson SureColor SC-T3100 / Epson SureColor SC-T3100N / Epson SureColor SC-T5100 / Epson SureColor SC-T5100N.]]></description>
+<param name="Цвет">Чёрный</param>
+<param name="Тип">Картридж</param>
+<param name="Тип печати">Струйная</param>
+<param name="Для бренда">Epson</param>
+<param name="Модель">C13T40D140</param>
+<param name="Для устройства">Epson SureColor SC-T3100 / Epson SureColor SC-T3100N / Epson SureColor SC-T5100 / Epson SureColor SC-T5100N</param>
+<param name="Коды">C13T40D140</param>
+<param name="Оригинальность">Оригинал</param>
+</offer>
+
+<offer id="ACC13T40D240" available="true">
+<categoryId></categoryId>
+<vendorCode>ACC13T40D240</vendorCode>
+<name>Картридж Epson C13T40D240, UltraChrome XD2, голубой (оригинал)</name>
+<price>38973</price>
+<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
+<vendor>Epson</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Оригинальный картридж. Голубой картридж повышенной емкости (50 мл) (C13T40D240) Epson SureColor SC-T3100 C11CF11302A0 - Epson SureColor SC-T3100N (без стенда) C11CF11301A0 - Epson SureColor SC-T5100 C11CF12301A0 - Epson SureColor SC-T5100N (без стенда) C11CF12302A0]]></description>
+<param name="Цвет">Голубой</param>
+<param name="Тип">Картридж</param>
+<param name="Тип печати">Струйная</param>
+<param name="Для бренда">Epson</param>
+<param name="Модель">C13T40D240</param>
+<param name="Для устройства">Epson SureColor SC-T3100 / Epson SureColor SC-T3100N / Epson SureColor SC-T5100 / Epson SureColor SC-T5100N</param>
+<param name="Коды">C13T40D240</param>
+<param name="Оригинальность">Оригинал</param>
+</offer>
+
+<offer id="ACC13T40D34N" available="true">
+<categoryId></categoryId>
+<vendorCode>ACC13T40D34N</vendorCode>
+<name>Картридж Epson C13T40D34N, UltraChrome XD2, пурпурный (оригинал)</name>
+<price>38973</price>
+<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
+<vendor>Epson</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Оригинальный картридж Epson C13T40D34N Пурпурного цвета для Epson SureColor SC-T3100 / Epson SureColor SC-T3100N / Epson SureColor SC-T5100 / Epson SureColor SC-T5100N.]]></description>
+<param name="Цвет">Пурпурный</param>
+<param name="Тип">Картридж</param>
+<param name="Тип печати">Струйная</param>
+<param name="Для бренда">Epson</param>
+<param name="Модель">C13T40D34N</param>
+<param name="Для устройства">Epson SureColor SC-T3100 / Epson SureColor SC-T3100N / Epson SureColor SC-T5100 / Epson SureColor SC-T5100N</param>
+<param name="Коды">C13T40D34N</param>
+<param name="Оригинальность">Оригинал</param>
+</offer>
+
+<offer id="ACC13T40D440" available="true">
+<categoryId></categoryId>
+<vendorCode>ACC13T40D440</vendorCode>
+<name>Картридж Epson C13T40D440, UltraChrome XD2, жёлтый (оригинал)</name>
+<price>38973</price>
+<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
+<vendor>Epson</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Оригинальный картридж Epson C13T40D440 Жёлтого цвета для Epson SureColor SC-T3100 / Epson SureColor SC-T3100N / Epson SureColor SC-T5100 / Epson SureColor SC-T5100N.]]></description>
+<param name="Тип">Картридж</param>
+<param name="Тип печати">Струйная</param>
+<param name="Для бренда">Epson</param>
+<param name="Цвет">Жёлтый</param>
+<param name="Модель">C13T40D440</param>
+<param name="Для устройства">Epson SureColor SC-T3100 / Epson SureColor SC-T3100N / Epson SureColor SC-T5100 / Epson SureColor SC-T5100N</param>
+<param name="Коды">C13T40D440</param>
 <param name="Оригинальность">Оригинал</param>
 </offer>
 
@@ -2222,6 +2302,27 @@ LS500WH — это первый безламповый LASER WXGA-проекто
 <param name="Модель">Проектор универсальный Epson CO-W01</param>
 </offer>
 
+<offer id="ACV11HA86340" available="true">
+<categoryId></categoryId>
+<vendorCode>ACV11HA86340</vendorCode>
+<name>Проектор универсальный Epson CO-WX02</name>
+<price>213571</price>
+<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
+<vendor>Epson</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Доступный яркий WXGA проектор Технология: LCD: 3 х 0.59" P-Si TFT Разрешение: WXGA (1280х800) Яркость: 3000 ANSI lm Цветовая яркость: 3000 ANSI lm Зум 1,35х (цифровой) Передача изображения по беспроводной сети Wi-fi (опционально) Функция Quick Corner Возможность просмотра изображений напрямую с USB носителей USB Display 3-в-1 – передача изображения, звука и сигналов управления по USB кабелю Встроенный динамик 5 Вт Моментальное выключение Вес: 2,2 кг Технические характеристики Epson CO-WX02 Состав поставки Проектор Кабель питания 1,8 м Пульт ДУ Руководство пользователя Основные свойства Категория Для офиса и мобильных презентаций Для образования Варианты проекции крепление к потолку обратная фронтальная Используемая технология LCD:3 P-Si TFT ЖК дисплей, дюймы 0.59 Оригинальное разрешение WXGA (1280x800) Поддерживаемые разрешения VGA (640x480) SVGA (800x600) XGA (1024x768) SXGA1 (1152x864) WXGA (1280x800) SXGA2 (1280x960) SXGA3 (1280x1024) WXGA2 (1280x768) WXGA3 (1366x7]]></description>
+<param name="Тип">Проектор универсальный</param>
+<param name="Гарантия">12 мес.</param>
+<param name="Технология">LCD</param>
+<param name="Разрешение">WXGA (1280х800)</param>
+<param name="Яркость">3000 ANSI lm</param>
+<param name="Wi-Fi">(опционально) Функция Quick Corner Возможность просмотра изображений напрямую с</param>
+<param name="USB">Display 3-в-1 – передача изображения, звука и сигналов управления по</param>
+<param name="Вес">2.2 кг</param>
+<param name="Модель">Проектор универсальный Epson CO-WX02</param>
+</offer>
+
 <offer id="ACV11HB51042" available="true">
 <categoryId></categoryId>
 <vendorCode>ACV11HB51042</vendorCode>
@@ -3342,21 +3443,6 @@ LI4278 выводит процесс сканирования одномерны
 <param name="Тип">Шредеры офисные</param>
 <param name="Гарантия">24 мес.</param>
 <param name="Модель">Шредер Fellowes® AutoMax® 90M, минирезка, DIN P-4, 4х12 мм,автоподача 80 лст., 17 лтр., автореверс</param>
-</offer>
-
-<offer id="AC100017466" available="true">
-<categoryId></categoryId>
-<vendorCode>AC100017466</vendorCode>
-<name>Шредер Fellowes® Powershred® 15C shredder (cross cut) 230V EU</name>
-<price>71595</price>
-<picture>https://b2b.ak-cent.kz/upload/iblock/008/pv24gugow36bnlxtyp7qd7b3gedo8kat.png</picture>
-<vendor>Fellowes</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Уровень секретности (DIN 66399): P-4 степлерные скобы канцелярские скрепки пластиковые карты Тип резки: перекрестная Размеры фрагментов (мм): 4x40 Скорость уничтожения (мм/с): 40 Листов одна загрузка (шт): 12 Рабочий цикл (мин): 10 Емкость корзины (л): 19 Функции и возможности: Габариты (мм): 470x340x247]]></description>
-<param name="Тип">Шредеры офисные</param>
-<param name="Гарантия">12 мес.</param>
-<param name="Модель">Шредер Fellowes® Powershred® 15C shredder (cross cut) 230V EU</param>
 </offer>
 
 <offer id="AC4653101" available="true">
