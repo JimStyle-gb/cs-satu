@@ -2,7 +2,7 @@
 """
 Path: scripts/cs/description.py
 
-CS Description — общий сборщик HTML-описания.
+CS Description — общий сборщик HTML-описания в Satu-safe формате.
 
 Что делает:
 - собирает единый CS description-шаблон для всех поставщиков;
@@ -28,33 +28,34 @@ from .util import fix_mixed_cyr_lat
 # -----------------------------
 
 # Константы (вынесены из core без изменения)
-CS_HR_2PX = "<hr style=\"border:none; border-top:2px solid #E7D6B7; margin:12px 0;\" />"
+CS_HR_2PX = "<hr />"
 CS_PAY_BLOCK = (
-    "<!-- Оплата и доставка -->\n"
-    "<div style=\"font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;\">"
-    "<div style=\"background:#FFF6E5; border:1px solid #F1E2C6; padding:12px 14px; border-radius:0; text-align:left;\">"
-    "<h3 style=\"margin:0 0 8px; font-size:17px;\">Оплата</h3>"
-    "<ul style=\"margin:0; padding-left:18px;\">"
+    "<div>
+"
+    "<div style=\"text-align:left\">"
+    "<h3>Оплата</h3>"
+    "<ul style=\"padding-left:18px\">"
     "<li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li>"
-    "<li><strong>Удалённая оплата</strong> по <span style=\"color:#8b0000;\"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li>"
+    "<li><strong>Удалённая оплата</strong> по <span style=\"color:#8b0000\"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li>"
     "</ul>"
-    "<hr style=\"border:none; border-top:1px solid #E7D6B7; margin:12px 0;\" />"
-    "<h3 style=\"margin:0 0 8px; font-size:17px;\">Доставка по Алматы и Казахстану</h3>"
-    "<ul style=\"margin:0; padding-left:18px;\">"
+    "<hr />"
+    "<h3>Доставка по Алматы и Казахстану</h3>"
+    "<ul style=\"padding-left:18px\">"
     "<li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li>"
     "<li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li>"
     "<li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li>"
     "<li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li>"
     "</ul>"
-    "</div></div>"
+    "</div>
+"
+    "</div>"
 )
 CS_WA_DIV = (
-    "<div style=\"font-family: Cambria, 'Times New Roman', serif; line-height:1.5; color:#222; font-size:15px;\">"
-    "<p style=\"text-align:center; margin:0 0 12px;\">"
-    "<a href=\"https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0\" "
-    "style=\"display:inline-block; background:#27ae60; color:#ffffff; text-decoration:none; padding:11px 18px; "
-    "border-radius:12px; font-weight:700; box-shadow:0 2px 0 rgba(0,0,0,0.08);\">"
-    "&#128172; Написать в WhatsApp</a></p></div>"
+    "<div>
+"
+    "<p style=\"text-align:center\"><a href=\"https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0\">💬 Написать в WhatsApp</a></p>
+"
+    "</div>"
 )
 
 # Regex/константы
@@ -472,10 +473,8 @@ def build_description(
         w = CS_WA_DIV
 
     parts: list[str] = []
-    parts.append("<!-- Наименование товара -->")
     parts.append(f"<h3>{n_esc}</h3>")
 
-    parts.append("<!-- Описание -->")
     parts.append(desc_body)
 
     # Примечания (вынесены из "параметров-фраз", чтобы не засорять характеристики)
@@ -500,13 +499,14 @@ def build_description(
         if nn:
             parts.append(f"<p><strong>Примечание:</strong> " + "<br>".join(nn) + "</p>")
 
-    parts.append("<!-- WhatsApp -->")
     parts.append(hr_2px)
     parts.append(w)
     parts.append(hr_2px)
 
     if chars:
         parts.append(chars)
+
+    parts.append(CS_HR_2PX)
     parts.append(pay_block)
 
     inner = "\n".join([p for p in parts if p is not None and str(p).strip() != ""])
