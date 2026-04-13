@@ -149,7 +149,25 @@ def _resolve_exact(*, name_n: str, vendor_n: str, type_n: str, tech_n: str, hay:
         return GROUP_IDS["developer_units"]
     if _contains_any(hay, ["ремень переноса", "узел переноса", "вал переноса", "коротрон", "corona"]):
         return GROUP_IDS["transfer_units"]
-    if _contains_any(hay, ["ролик подачи", "ремкомплект", "палец отделения", "тормозная площадка", "площадка отделения"]):
+    if _contains_any(hay, [
+        "ролик подачи",
+        "ролики подачи",
+        "ремкомплект",
+        "палец отделения",
+        "пальцы отделения",
+        "тормозная площадка",
+        "площадка отделения",
+        "separation finger",
+        "separation fingers",
+        "pickup roller",
+        "pickup rollers",
+        "feed roller",
+        "feed rollers",
+        "separation roller",
+        "separation rollers",
+        "retard pad",
+        "separation pad",
+    ]):
         return GROUP_IDS["rollers_kits"]
     if _contains_any(hay, ["финишер", "лоток", "подставк", "степлер", "скрепк"]):
         return GROUP_IDS["finishers_trays_stands"]
