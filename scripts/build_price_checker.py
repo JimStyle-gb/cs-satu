@@ -19,14 +19,7 @@ PRICE_FILE = ROOT / "docs" / "Price.yml"
 RAW_DIR = ROOT / "docs" / "raw"
 REPORT_FILE = RAW_DIR / "price_checker_report.txt"
 LAST_SUCCESS_FILE = RAW_DIR / "price_checker_last_success.json"
-
-UNMAPPED_FILES = {
-    "AkCent": RAW_DIR / "akcent_unmapped_category_ids.txt",
-    "AlStyle": RAW_DIR / "alstyle_unmapped_category_ids.txt",
-    "ComPortal": RAW_DIR / "comportal_unmapped_category_ids.txt",
-    "CopyLine": RAW_DIR / "copyline_unmapped_category_ids.txt",
-    "VTT": RAW_DIR / "vtt_unmapped_category_ids.txt",
-}
+UNRESOLVED_FILE = RAW_DIR / "category_id_unresolved.txt"
 
 EXPECTED_SUPPLIERS = ("AkCent", "AlStyle", "ComPortal", "CopyLine", "VTT")
 
@@ -126,16 +119,36 @@ def load_xml_text(path: Path) -> str:
     return path.read_text(encoding="utf-8")
 
 
-def count_unmapped_lines(path: Path) -> int:
+def parse_unresolved_summary(path: Path) -> Dict[str, int]:
+    result = {name: 0 for name in EXPECTED_SUPPLIERS}
     if not path.exists():
-        return 0
-    count = 0
-    for line in path.read_text(encoding="utf-8", errors="ignore").splitlines():
-        s = line.strip()
-        if not s or s.startswith("#"):
+        return result
+
+    text = path.read_text(encoding="utf-8", errors="ignore")
+
+    for supplier in EXPECTED_SUPPLIERS:
+        block_re = re.compile(
+            rf"(?ms)^## START {re.escape(supplier)}\n(.*?)^## END {re.escape(supplier)}\s*$"
+        )
+        m = block_re.search(text)
+        if not m:
             continue
-        count += 1
-    return count
+        block = m.group(1)
+
+        m_cnt = re.search(r"Товаров без categoryId:\s*(\d+)", block)
+        if m_cnt:
+            result[supplier] = int(m_cnt.group(1))
+            continue
+
+        count = 0
+        for line in block.splitlines():
+            s = line.strip()
+            if not s or s.startswith("#") or s.startswith("Поставщик:") or s.startswith("Товаров без categoryId:"):
+                continue
+            count += 1
+        result[supplier] = count
+
+    return result
 
 
 def extract_offer_supplier(offer_id: str) -> str:
@@ -178,7 +191,7 @@ def collect_metrics(price_path: Path) -> Metrics:
     category_ids = {str(cat.get("id", "")).strip() for cat in categories.findall("category") if str(cat.get("id", "")).strip()}
 
     supplier_counts = {name: 0 for name in EXPECTED_SUPPLIERS}
-    excluded_by_supplier = {name: count_unmapped_lines(path) for name, path in UNMAPPED_FILES.items()}
+    excluded_by_supplier = parse_unresolved_summary(UNRESOLVED_FILE)
 
     offer_ids_seen: set[str] = set()
     vendor_codes_seen: set[str] = set()
@@ -429,7 +442,10 @@ def main() -> int:
     checked_at = now_almaty()
     status = "НЕУСПЕШНО"
     reason = ""
-    metrics = Metrics(supplier_counts={name: 0 for name in EXPECTED_SUPPLIERS}, excluded_unmapped_by_supplier={name: 0 for name in EXPECTED_SUPPLIERS})
+    metrics = Metrics(
+        supplier_counts={name: 0 for name in EXPECTED_SUPPLIERS},
+        excluded_unmapped_by_supplier={name: 0 for name in EXPECTED_SUPPLIERS},
+    )
 
     try:
         metrics = collect_metrics(PRICE_FILE)
