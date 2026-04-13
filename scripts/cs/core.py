@@ -2715,35 +2715,25 @@ def _write_category_unresolved_report(path: Path, supplier: str, lines: Sequence
         block_lines.append("# Все товары получили categoryId")
     block_lines.append(end_marker)
 
-    new_block = "
-".join(block_lines).rstrip() + "
-"
+    new_block = "\n".join(block_lines).rstrip() + "\n"
 
     current = path.read_text(encoding="utf-8") if path.exists() else ""
     block_re = re.compile(
-        rf"(?ms)^## START {re.escape(supplier)}
-.*?^## END {re.escape(supplier)}
-?"
+        rf"(?ms)^## START {re.escape(supplier)}\n.*?^## END {re.escape(supplier)}\n?"
     )
     current = block_re.sub("", current).strip()
 
-    header = "# Сводный отчёт по товарам без categoryId
-
-"
-    pieces = []
+    header = "# Сводный отчёт по товарам без categoryId\n\n"
+    pieces: list[str] = []
     if current:
         current = current.strip()
         if current.startswith("# Сводный отчёт по товарам без categoryId"):
-            current = re.sub(r"^# Сводный отчёт по товарам без categoryId
-*", "", current).strip()
+            current = re.sub(r"^# Сводный отчёт по товарам без categoryId\n*", "", current).strip()
         if current:
             pieces.append(current)
     pieces.append(new_block.strip())
 
-    data = header + "
-
-".join(pieces).rstrip() + "
-"
+    data = header + "\n\n".join(pieces).rstrip() + "\n"
     path.write_text(data, encoding="utf-8")
 
 
