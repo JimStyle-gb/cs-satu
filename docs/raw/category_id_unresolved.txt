@@ -1,0 +1,8 @@
+# Сводный отчёт по товарам без categoryId
+
+## START AkCent
+Поставщик: AkCent
+Товаров без categoryId: 0
+
+# Все товары получили categoryId
+## END AkCent
