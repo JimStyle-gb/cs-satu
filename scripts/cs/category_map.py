@@ -8,6 +8,7 @@ Path: scripts/cs/category_map.py
 
 from __future__ import annotations
 
+import os
 import re
 from pathlib import Path
 from typing import Any, Sequence
@@ -18,8 +19,9 @@ except Exception as exc:  # pragma: no cover
     raise SystemExit(f"Не установлен PyYAML: {exc}")
 
 CONFIG_FILE = Path(__file__).resolve().parent / "config" / "price_categories.yml"
-# unresolved-лог теперь ведёт shared core.py в один общий файл.
-# category_map.py только определяет categoryId и ничего отдельно не пишет.
+UNRESOLVED_REPORT_DEFAULT = "docs/raw/category_map_unresolved.txt"
+_ENABLE_UNRESOLVED_REPORT = (os.getenv("CS_CATEGORY_MAP_REPORT_UNRESOLVED", "1") or "1").strip() == "1"
+_UNRESOLVED_SEEN: set[str] = set()
 
 _RE_SPACES = re.compile(r"\s+")
 _RE_PUNCT = re.compile(r"[^\w#+./%-]+", re.U)
@@ -133,7 +135,16 @@ def _resolve_exact(*, name_n: str, vendor_n: str, type_n: str, tech_n: str, hay:
         return GROUP_IDS["inks"]
     if _contains_any(hay, ["девелопер", "developer", "тонер", "toner powder"]) and _contains_any(hay, ["банка", "туба", "bulk", "бутыль", "bottle", "bag"]):
         return GROUP_IDS["toners_developers"]
-    if _contains_any(hay, ["драм", "drum", "фотобарабан", "блок формирования изображения"]):
+    if _contains_any(hay, [
+        "драм",
+        "drum",
+        "фотобарабан",
+        "барабан",
+        "блок формирования изображения",
+        "комплект блока формирования изображений",
+        "image unit",
+        "imaging unit",
+    ]):
         return GROUP_IDS["drums_photodrums"]
     if _contains_any(hay, ["печатающ", "printhead", "print head", "головка"]):
         return GROUP_IDS["printheads"]
@@ -154,7 +165,10 @@ def _resolve_exact(*, name_n: str, vendor_n: str, type_n: str, tech_n: str, hay:
         "палец отделения",
         "пальцы отделения",
         "тормозная площадка",
+        "площадка тормозная",
         "площадка отделения",
+        "площадка отделени",
+        "держатель площадки тормозной",
         "separation finger",
         "separation fingers",
         "pickup roller",
@@ -191,11 +205,13 @@ def _resolve_exact(*, name_n: str, vendor_n: str, type_n: str, tech_n: str, hay:
         "экран на треноге",
         "экран механический",
         "проекционный экран",
+        "портативный экран",
         "моторизированный экран",
         "экран настенно потолочный",
         "настенно потолочный экран",
         "motorized screen",
         "tripod screen",
+        "portable screen",
         "projection screen",
         "projector screen",
     ]):
@@ -209,7 +225,7 @@ def _resolve_exact(*, name_n: str, vendor_n: str, type_n: str, tech_n: str, hay:
         return GROUP_IDS["interactive_panels"]
     if _contains_any(hay, ["интерактивная доска", "interactive board", "whiteboard"]):
         return GROUP_IDS["interactive_boards"]
-    if _contains_any(hay, ["ops", "кронштейн для панели", "стойка для панели", "модуль для панели"]):
+    if _contains_any(hay, ["интерактивная трибуна", "interactive podium", "ops", "кронштейн для панели", "стойка для панели", "модуль для панели"]):
         return GROUP_IDS["interactive_accessories"]
 
     # 5. Документы
@@ -225,11 +241,44 @@ def _resolve_exact(*, name_n: str, vendor_n: str, type_n: str, tech_n: str, hay:
     # 6. Компы
     if _contains_any(hay, ["ноутбук", "laptop", "notebook"]):
         return GROUP_IDS["laptops"]
-    if _contains_any(hay, ["монитор", "monitor"]) and not _contains_any(hay, ["панель", "interactive"]):
+    if _contains_any(hay, ["монитор", "monitor"]) and not _contains_any(hay, [
+        "интерактивная панель",
+        "interactive panel",
+        "интерактивный дисплей",
+        "interactive display",
+        "интерактивная доска",
+        "interactive board",
+    ]):
         return GROUP_IDS["monitors"]
     if _contains_any(hay, ["моноблок", "aio", "all in one pc"]):
         return GROUP_IDS["monoblocks"]
-    if _contains_any(hay, ["barebone", "mini pc", "nettop", "nuc", "системный блок", "desktop"]):
+    if _contains_any(hay, [
+        "barebone",
+        "mini pc",
+        "nettop",
+        "nuc",
+        "системный блок",
+        "desktop",
+        "настольный пк",
+        "настольный компьютер",
+        "компьютер",
+        "small form factor",
+        "sff",
+    ]):
+        return GROUP_IDS["desktops_barebone"]
+    if _contains_any(hay, ["tower", "micro"]) and _contains_any(hay, [
+        "dell",
+        "hp",
+        "lenovo",
+        "asus",
+        "acer",
+        "desktop",
+        "optiplex",
+        "prodesk",
+        "thinkcentre",
+        "компьютер",
+        "настольный пк",
+    ]):
         return GROUP_IDS["desktops_barebone"]
     if _contains_any(hay, ["workstation", "рабочая станция"]):
         return GROUP_IDS["workstations"]
@@ -293,7 +342,8 @@ def resolve_category_id(*, name: str, vendor: str = "", params: Sequence[tuple[s
     if fallback:
         return fallback
 
+    _append_unresolved_report(oid=oid, name=name, vendor=vendor, params=params, native_desc=native_desc)
     return ""
 
 
-__all__ = ["GROUP_IDS", "resolve_category_id"]
+__all__ = ["GROUP_IDS", "UNRESOLVED_REPORT_DEFAULT", "resolve_category_id"]
