@@ -14,8 +14,9 @@ name: Build_AlStyle
 on:
   workflow_dispatch:
   schedule:
-    # Алматы UTC+5 -> 02:00 local = 21:00 UTC предыдущего дня
-    - cron: "0 21 * * *"
+    # Алматы 23:30 local
+    - cron: "30 23 * * *"
+      timezone: "Asia/Almaty"
 
 permissions:
   contents: write
