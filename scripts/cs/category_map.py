@@ -165,7 +165,11 @@ def _resolve_exact(*, name_n: str, vendor_n: str, type_n: str, tech_n: str, hay:
         "палец отделения",
         "пальцы отделения",
         "тормозная площадка",
+        "площадка тормозная",
         "площадка отделения",
+        "площадка отделени",
+        "площадка отделени бумаги",
+        "держатель площадки тормозной",
         "separation finger",
         "separation fingers",
         "pickup roller",
@@ -202,11 +206,13 @@ def _resolve_exact(*, name_n: str, vendor_n: str, type_n: str, tech_n: str, hay:
         "экран на треноге",
         "экран механический",
         "проекционный экран",
+        "портативный экран",
         "моторизированный экран",
         "экран настенно потолочный",
         "настенно потолочный экран",
         "motorized screen",
         "tripod screen",
+        "portable screen",
         "projection screen",
         "projector screen",
     ]):
@@ -220,7 +226,14 @@ def _resolve_exact(*, name_n: str, vendor_n: str, type_n: str, tech_n: str, hay:
         return GROUP_IDS["interactive_panels"]
     if _contains_any(hay, ["интерактивная доска", "interactive board", "whiteboard"]):
         return GROUP_IDS["interactive_boards"]
-    if _contains_any(hay, ["ops", "кронштейн для панели", "стойка для панели", "модуль для панели"]):
+    if _contains_any(hay, [
+        "интерактивная трибуна",
+        "interactive podium",
+        "ops",
+        "кронштейн для панели",
+        "стойка для панели",
+        "модуль для панели",
+    ]):
         return GROUP_IDS["interactive_accessories"]
 
     # 5. Документы
