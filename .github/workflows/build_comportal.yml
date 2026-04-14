@@ -14,8 +14,9 @@ name: Build_ComPortal
 on:
   workflow_dispatch:
   schedule:
-    # Алматы UTC+5 -> 03:00 local = 22:00 UTC предыдущего дня
-    - cron: "0 22 * * *"
+    # Алматы 00:30 local
+    - cron: "30 0 * * *"
+      timezone: "Asia/Almaty"
 
 permissions:
   contents: write
