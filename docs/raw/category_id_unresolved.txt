@@ -1,12 +1,5 @@
 # Сводный отчёт по товарам без categoryId
 
-## START CopyLine
-Поставщик: CopyLine
-Товаров без categoryId: 0
-
-# Все товары получили categoryId
-## END CopyLine
-
 ## START AkCent
 Поставщик: AkCent
 Товаров без categoryId: 0
@@ -27,3 +20,10 @@
 
 # Все товары получили categoryId
 ## END ComPortal
+
+## START CopyLine
+Поставщик: CopyLine
+Товаров без categoryId: 0
+
+# Все товары получили categoryId
+## END CopyLine
