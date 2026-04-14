@@ -14,8 +14,9 @@ name: Build_CopyLine
 on:
   workflow_dispatch:
   schedule:
-    # Алматы UTC+5 -> 04:00 local = 23:00 UTC предыдущего дня
-    - cron: "0 23 1,10,20 * *"
+    # Алматы 01:30 local, дни не меняем
+    - cron: "30 1 1,10,20 * *"
+      timezone: "Asia/Almaty"
 
 permissions:
   contents: write
