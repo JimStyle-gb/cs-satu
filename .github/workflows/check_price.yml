@@ -3,7 +3,8 @@ name: Check_Price
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 3 * * *'
+    - cron: '30 5 * * *'
+      timezone: 'Asia/Almaty'
 
 env:
   TZ: Asia/Almaty
