@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<yml_catalog date="2026-04-14 21:57:00">
+<yml_catalog date="2026-04-15 01:31:19">
 <shop><offers>
 <!--FEED_META
 Поставщик                                  | ComPortal
 URL поставщика                             | https://www.comportal.kz/auth/documents/prices/yml-catalog.php
-Время сборки (Алматы)                      | 2026-04-14 21:57:00
+Время сборки (Алматы)                      | 2026-04-15 01:31:19
 Ближайшая сборка (Алматы)                  | 2026-04-15 03:00:00
-Сколько товаров у поставщика до фильтра    | 1164
-Сколько товаров у поставщика после фильтра | 580
-Сколько товаров есть в наличии (true)      | 580
+Сколько товаров у поставщика до фильтра    | 1167
+Сколько товаров у поставщика после фильтра | 581
+Сколько товаров есть в наличии (true)      | 581
 Сколько товаров нет в наличии (false)      | 0
 -->
 
@@ -9847,6 +9847,53 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Разрешение дисплея">1920x1200</param>
 <param name="Коды">90NB16J1-M00640</param>
 <param name="Для бренда">ASUS</param>
+</offer>
+
+<offer id="CP13871075" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13871075</vendorCode>
+<name>Ноутбук Dell XPS 15 9520 (210-BDVF-4)</name>
+<price>1524983</price>
+<picture>https://www.comportal.kz/upload/iblock/4f2/4dgibap6ix6p6q75rsw3g6g2g8n74d4m.JPG</picture>
+<vendor>Dell</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Ноутбук. Модельная серия: XPS 15 9520. Процессор: Intel 12700H Core i7 3,5. Оперативная память: 16 Gb / DDR5 / 4800. Накопитель: 1000 / M.2 PCIe SSD / 1 шт. Диагональ: 15,6. Разрешение: 3456x2160. ОС: Microsoft Windows 11 Pro 64. Видеокарта: nVidia RTX 3050 Ti 4 Gb. Wi‑Fi: AX211. Bluetooth: Bluetooth. Гарантия: 36 мес.]]></description>
+<param name="Тип">Ноутбук</param>
+<param name="Модель">XPS 15 9520</param>
+<param name="Объем жесткого диска">1000</param>
+<param name="Тип жесткого диска">M.2 PCIe SSD</param>
+<param name="Производитель процессора">Intel</param>
+<param name="Модель процессора">Core i7</param>
+<param name="Серия процессора">12700H</param>
+<param name="Частота процессора">3,5</param>
+<param name="Оперативная память">16 Gb</param>
+<param name="Частота оперативной памяти">4800</param>
+<param name="Количество слотов памяти">2</param>
+<param name="Занятые слоты памяти">2x8GB</param>
+<param name="Объем видеопамяти">4 Gb</param>
+<param name="Тип оперативной памяти">DDR5</param>
+<param name="Тип привода">No ODD</param>
+<param name="Количество дисков">1</param>
+<param name="Размер дисплея">15,6</param>
+<param name="Дополнительные характеристики">Touch</param>
+<param name="Тип матрицы">OLED</param>
+<param name="Производитель чипсета видеокарты">nVidia</param>
+<param name="Марка чипсета видеокарты">GeForce</param>
+<param name="Модель чипсета видеокарты">RTX 3050 Ti</param>
+<param name="Производитель операционной системы">Microsoft</param>
+<param name="Операционная система">Windows 11</param>
+<param name="Версия операционной системы">Pro</param>
+<param name="Битность операционной системы">64</param>
+<param name="Цвет">Серый</param>
+<param name="Bluetooth">Bluetooth</param>
+<param name="Wi-Fi">AX211</param>
+<param name="Адаптер">130W AC Adapter</param>
+<param name="Аккумулятор">6 cell 86Whr</param>
+<param name="Гарантия">36 мес</param>
+<param name="Разрешение дисплея">3456x2160</param>
+<param name="Коды">210-BDVF-4</param>
+<param name="Для бренда">Dell</param>
 </offer>
 
 <offer id="CP13871076" available="true">
