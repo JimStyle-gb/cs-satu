@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<yml_catalog date="2026-04-14 12:22:02">
+<yml_catalog date="2026-04-14 16:50:21">
 <shop><offers>
 <!--FEED_META
 Поставщик                                  | AkCent
 URL поставщика                             | https://ak-cent.kz/export/Exchange/article_nw2/Ware02224.xml
-Время сборки (Алматы)                      | 2026-04-14 12:22:02
+Время сборки (Алматы)                      | 2026-04-14 16:50:21
 Ближайшая сборка (Алматы)                  | 2026-04-15 01:00:00
-Сколько товаров у поставщика до фильтра    | 2057
+Сколько товаров у поставщика до фильтра    | 2051
 Сколько товаров у поставщика после фильтра | 183
 Сколько товаров есть в наличии (true)      | 183
 Сколько товаров нет в наличии (false)      | 0
@@ -1996,7 +1996,7 @@ URL поставщика                             | https://ak-cent.kz/export
 <categoryId>102</categoryId>
 <vendorCode>ACC11CJ67412</vendorCode>
 <name>МФУ Epson L3250 фабрика печати. Wi-Fi</name>
-<price>112900</price>
+<price>102900</price>
 <picture>https://b2b.ak-cent.kz/upload/iblock/358/lxtmcj0imiles090hfyrgv2ks9sybtum.jpg</picture>
 <vendor>Epson</vendor>
 <currencyId>KZT</currencyId>

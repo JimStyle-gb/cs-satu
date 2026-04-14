@@ -1,12 +1,5 @@
 # Сводный отчёт по товарам без categoryId
 
-## START AkCent
-Поставщик: AkCent
-Товаров без categoryId: 0
-
-# Все товары получили categoryId
-## END AkCent
-
 ## START AlStyle
 Поставщик: AlStyle
 Товаров без categoryId: 4
@@ -30,3 +23,10 @@ AlStyle | AS414835 | Интерактивная трибуна MAXHUB SL22MC | c
 
 # Все товары получили categoryId
 ## END CopyLine
+
+## START AkCent
+Поставщик: AkCent
+Товаров без categoryId: 0
+
+# Все товары получили categoryId
+## END AkCent
