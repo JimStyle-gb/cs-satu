@@ -24,12 +24,6 @@ ComPortal | CP13873004 | Компьютер Dell Tower Plus EBT2250 (210-BPDZ_EB
 ## END ComPortal
 
 
-## START AlStyle
-Поставщик: AlStyle
-Товаров без categoryId: 0
-
-# Все товары получили categoryId
-## END AlStyle
 
 ## START AkCent
 Поставщик: AkCent
@@ -37,3 +31,13 @@ ComPortal | CP13873004 | Компьютер Dell Tower Plus EBT2250 (210-BPDZ_EB
 
 # Все товары получили categoryId
 ## END AkCent
+
+## START AlStyle
+Поставщик: AlStyle
+Товаров без categoryId: 4
+
+AlStyle | AS265536 | Площадка отделени бумаги Xerox 108R01473 (оригинал) | categoryId не определён
+AlStyle | AS360863 | Держатель площадки тормозной Xerox 019N01135 (оригинал) | categoryId не определён
+AlStyle | AS408209 | Портативный экран XG DLS-OT221-125 (87"49"), Ø - 100", Раб. поверхность 221x125 см., 16:9 | categoryId не определён
+AlStyle | AS414835 | Интерактивная трибуна MAXHUB SL22MC | categoryId не определён
+## END AlStyle
