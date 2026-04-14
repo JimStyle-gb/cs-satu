@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<yml_catalog date="2026-04-14 12:26:12">
+<yml_catalog date="2026-04-14 16:58:28">
 <shop><offers>
 <!--FEED_META
 Поставщик                                  | ComPortal
 URL поставщика                             | https://www.comportal.kz/auth/documents/prices/yml-catalog.php
-Время сборки (Алматы)                      | 2026-04-14 12:26:12
+Время сборки (Алматы)                      | 2026-04-14 16:58:28
 Ближайшая сборка (Алматы)                  | 2026-04-15 03:00:00
-Сколько товаров у поставщика до фильтра    | 1169
-Сколько товаров у поставщика после фильтра | 583
-Сколько товаров есть в наличии (true)      | 583
+Сколько товаров у поставщика до фильтра    | 1165
+Сколько товаров у поставщика после фильтра | 580
+Сколько товаров есть в наличии (true)      | 580
 Сколько товаров нет в наличии (false)      | 0
 -->
 
@@ -313,54 +313,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Монитор">27</param>
 <param name="Коды">A0ZF4EA#BJA</param>
 <param name="Для бренда">HP</param>
-</offer>
-
-<offer id="CP13872548" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13872548</vendorCode>
-<name>Моноблок Dell Pro 24 All-in-One QC24250 (210-BPNS_BTO155_QC24250_EMEA)</name>
-<price>783781</price>
-<picture>https://www.comportal.kz/upload/iblock/69a/v5tgejdlvttc0uu8yijt5coivb2m3ee9.jpg</picture>
-<vendor>Dell</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Моноблок. Процессор: Intel 265 Core Ultra 7 2,4. Оперативная память: 16 Gb / DDR5 / 5600. Накопитель: 512 / SSD / 1 шт. Разрешение: 1920x1080. ОС: Microsoft Windows 11 Pro 64. Видеокарта: Intel Arc Xe 256 Mb. Wi‑Fi: AX211. Bluetooth: Bluetooth. Гарантия: 36 мес.]]></description>
-<param name="Тип">Моноблок</param>
-<param name="Модель">Pro 24 All-in-One QC24250</param>
-<param name="Объем жесткого диска">512</param>
-<param name="Тип жесткого диска">SSD</param>
-<param name="Производитель процессора">Intel</param>
-<param name="Модель процессора">Core Ultra 7</param>
-<param name="Серия процессора">265</param>
-<param name="Частота процессора">2,4</param>
-<param name="Сетевая карта (скорость передачи)">10/100/1000</param>
-<param name="Оперативная память">16 Gb</param>
-<param name="Частота оперативной памяти">5600</param>
-<param name="Объем видеопамяти">256 Mb</param>
-<param name="Тип оперативной памяти">DDR5</param>
-<param name="Блок питания">ATX 160W</param>
-<param name="Тип привода">No ODD</param>
-<param name="Количество дисков">1</param>
-<param name="Дополнительные характеристики">All-in-One, Touchscreen, Height Adjustable Stand, TPM, ENERGY STAR Qualified, FHD HDR Camera, NPU 13 TOPS</param>
-<param name="Производитель чипсета видеокарты">Intel</param>
-<param name="Марка чипсета видеокарты">Graphics</param>
-<param name="Модель чипсета видеокарты">Arc Xe</param>
-<param name="Производитель операционной системы">Microsoft</param>
-<param name="Операционная система">Windows 11</param>
-<param name="Версия операционной системы">Pro</param>
-<param name="Битность операционной системы">64</param>
-<param name="Цвет">Серый</param>
-<param name="Bluetooth">Bluetooth</param>
-<param name="Wi-Fi">AX211</param>
-<param name="Гарантия">36 мес</param>
-<param name="Аксессуары">Keyboard (QWERTY) + Optical Mouse</param>
-<param name="Максимальное разрешение">1920x1080</param>
-<param name="Клавиатура">Dell Pro Keyboard - KM5221W - ru (QWERTY) - Black (Беспроводная)</param>
-<param name="Манипулятор">Mouse included with Keyboard (Мышь беспроводная, в комплекте с клавиатурой)</param>
-<param name="Тип дисплея">Full HD</param>
-<param name="Монитор">23.8&amp;quot;, Touch, FHD</param>
-<param name="Для бренда">Dell</param>
-<param name="Коды">210-BPNS_BTO155_QC24250_EMEA</param>
 </offer>
 
 <offer id="CP13872771" available="true">
@@ -2217,30 +2169,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Наличие картриджа (тонера) в комплекте">Полный</param>
 <param name="Нагрузка">100 000</param>
 <param name="Коды">J8H61A#B19</param>
-<param name="Для бренда">HP</param>
-</offer>
-
-<offer id="CP10358738" available="true">
-<categoryId></categoryId>
-<vendorCode>CP10358738</vendorCode>
-<name>Принтер HP LaserJet Enterprise M507dn (1PV87A#B19)</name>
-<price>221846</price>
-<picture>https://www.comportal.kz/upload/iblock/bcd/l3gswvacfydwgxxyy8xd1jtqw3u6zqvr.jpg</picture>
-<vendor>HP</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Принтер. Формат печати: A4. Разрешение: 1200x1200. Скорость печати ч/б: 43. Порты: USB LAN. Технология печати: Лазерная. Гарантия: 12 мес.]]></description>
-<param name="Тип">Принтер</param>
-<param name="Модель">LaserJet Enterprise M507dn</param>
-<param name="Гарантия">12 мес</param>
-<param name="Разрешение">1200x1200</param>
-<param name="Формат печати">A4</param>
-<param name="Скорость печати ч/б">43</param>
-<param name="Технология печати">Лазерная</param>
-<param name="Порты">USB LAN</param>
-<param name="Наличие картриджа (тонера) в комплекте">Полный</param>
-<param name="Нагрузка">150 000</param>
-<param name="Коды">1PV87A#B19</param>
 <param name="Для бренда">HP</param>
 </offer>
 
@@ -12018,23 +11946,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Для бренда">Dell</param>
 <param name="Модель">Pro 14 PC14250</param>
 <param name="Коды">210-BQHF / BTO120_PC14250_EMEA</param>
-</offer>
-
-<offer id="CP13873179" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13873179</vendorCode>
-<name>Ноутбук ASUS Zenbook A16 / UX3607OA-SQ013W (90NB17W1-M003T0)</name>
-<price>896505</price>
-<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
-<vendor>ASUS</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Ноутбук. Гарантия: 12 мес. Для бренда: ASUS. Модель: Zenbook A16 / UX3607OA-SQ013W. Коды: 90NB17W1-M003T0.]]></description>
-<param name="Тип">Ноутбук</param>
-<param name="Гарантия">12 мес</param>
-<param name="Коды">90NB17W1-M003T0</param>
-<param name="Модель">Zenbook A16 / UX3607OA-SQ013W</param>
-<param name="Для бренда">ASUS</param>
 </offer>
 
 <offer id="CP13873203" available="true">

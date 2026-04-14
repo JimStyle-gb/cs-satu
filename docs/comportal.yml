@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<yml_catalog date="2026-04-14 12:26:12">
+<yml_catalog date="2026-04-14 16:58:28">
 <shop><offers>
 <!--FEED_META
 Поставщик                                  | ComPortal
 URL поставщика                             | https://www.comportal.kz/auth/documents/prices/yml-catalog.php
-Время сборки (Алматы)                      | 2026-04-14 12:26:12
+Время сборки (Алматы)                      | 2026-04-14 16:58:28
 Ближайшая сборка (Алматы)                  | 2026-04-15 03:00:00
-Сколько товаров у поставщика до фильтра    | 1169
-Сколько товаров у поставщика после фильтра | 583
-Сколько товаров есть в наличии (true)      | 583
+Сколько товаров у поставщика до фильтра    | 1165
+Сколько товаров у поставщика после фильтра | 580
+Сколько товаров есть в наличии (true)      | 580
 Сколько товаров нет в наличии (false)      | 0
 -->
 
@@ -404,67 +404,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Частота оперативной памяти">5600</param>
 <param name="Частота процессора">3,4</param>
 <keywords>HP, Моноблок HP EliteStudio 8 AiO G1i 27 (A0ZF4EA#BJA), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
-</offer>
-
-<offer id="CP13872548" available="true">
-<categoryId>405</categoryId>
-<vendorCode>CP13872548</vendorCode>
-<name>Моноблок Dell Pro 24 All-in-One QC24250 (210-BPNS_BTO155_QC24250_EMEA)</name>
-<price>850900</price>
-<picture>https://www.comportal.kz/upload/iblock/69a/v5tgejdlvttc0uu8yijt5coivb2m3ee9.jpg</picture>
-<vendor>Dell</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-<h3>Моноблок Dell Pro 24 All-in-One QC24250 (210-BPNS_BTO155_QC24250_EMEA)</h3>
-<p>Моноблок. Процессор: Intel 265 Core Ultra 7 2,4. Оперативная память: 16 Gb / DDR5 / 5600. Накопитель: 512 / SSD / 1 шт. Разрешение: 1920x1080. ОС: Microsoft Windows 11 Pro 64. Видеокарта: Intel Arc Xe 256 Mb. Wi‑Fi: AX211. Bluetooth: Bluetooth. Гарантия: 36 мес.</p>
-<hr />
-<p style="text-align:center"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;amp;text&amp;amp;type=phone_number&amp;amp;app_absent=0">💬 Написать в WhatsApp</a></p>
-<hr />
-<h3>Характеристики</h3>
-<ul><li><strong>Bluetooth:</strong> Bluetooth</li><li><strong>Wi-Fi:</strong> AX211</li><li><strong>Аксессуары:</strong> Keyboard (QWERTY) + Optical Mouse</li><li><strong>Битность операционной системы:</strong> 64</li><li><strong>Блок питания:</strong> ATX 160W</li><li><strong>Версия операционной системы:</strong> Pro</li><li><strong>Гарантия:</strong> 36 мес</li><li><strong>Для бренда:</strong> Dell</li><li><strong>Дополнительные характеристики:</strong> All-in-One, Touchscreen, Height Adjustable Stand, TPM, ENERGY STAR Qualified, FHD HDR Camera, NPU 13 TOPS</li><li><strong>Клавиатура:</strong> Dell Pro Keyboard - KM5221W - ru (QWERTY) - Black (Беспроводная)</li><li><strong>Коды:</strong> 210-BPNS_BTO155_QC24250_EMEA</li><li><strong>Количество дисков:</strong> 1</li><li><strong>Максимальное разрешение:</strong> 1920x1080</li><li><strong>Манипулятор:</strong> Mouse included with Keyboard (Мышь беспроводная, в комплекте с клавиатурой)</li><li><strong>Марка чипсета видеокарты:</strong> Graphics</li><li><strong>Модель:</strong> Pro 24 All-in-One QC24250</li><li><strong>Модель процессора:</strong> Core Ultra 7</li><li><strong>Модель чипсета видеокарты:</strong> Arc Xe</li><li><strong>Монитор:</strong> 23.8&amp;quot;, Touch, FHD</li><li><strong>Объем видеопамяти:</strong> 256 Mb</li><li><strong>Объем жесткого диска:</strong> 512</li><li><strong>Оперативная память:</strong> 16 Gb</li><li><strong>Операционная система:</strong> Windows 11</li><li><strong>Производитель операционной системы:</strong> Microsoft</li><li><strong>Производитель процессора:</strong> Intel</li><li><strong>Производитель чипсета видеокарты:</strong> Intel</li><li><strong>Серия процессора:</strong> 265</li><li><strong>Сетевая карта (скорость передачи):</strong> 10/100/1000</li><li><strong>Тип:</strong> Моноблок</li><li><strong>Тип дисплея:</strong> Full HD</li><li><strong>Тип жесткого диска:</strong> SSD</li><li><strong>Тип оперативной памяти:</strong> DDR5</li><li><strong>Тип привода:</strong> No ODD</li><li><strong>Цвет:</strong> Серый</li><li><strong>Частота оперативной памяти:</strong> 5600</li><li><strong>Частота процессора:</strong> 2,4</li></ul>
-<hr />
-<h3>Оплата</h3>
-<ul><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul>
-<hr />
-<h3>Доставка по Алматы и Казахстану</h3>
-<ul><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul>]]></description>
-<param name="Bluetooth">Bluetooth</param>
-<param name="Wi-Fi">AX211</param>
-<param name="Аксессуары">Keyboard (QWERTY) + Optical Mouse</param>
-<param name="Битность операционной системы">64</param>
-<param name="Блок питания">ATX 160W</param>
-<param name="Версия операционной системы">Pro</param>
-<param name="Гарантия">36 мес</param>
-<param name="Для бренда">Dell</param>
-<param name="Дополнительные характеристики">All-in-One, Touchscreen, Height Adjustable Stand, TPM, ENERGY STAR Qualified, FHD HDR Camera, NPU 13 TOPS</param>
-<param name="Клавиатура">Dell Pro Keyboard - KM5221W - ru (QWERTY) - Black (Беспроводная)</param>
-<param name="Коды">210-BPNS_BTO155_QC24250_EMEA</param>
-<param name="Количество дисков">1</param>
-<param name="Максимальное разрешение">1920x1080</param>
-<param name="Манипулятор">Mouse included with Keyboard (Мышь беспроводная, в комплекте с клавиатурой)</param>
-<param name="Марка чипсета видеокарты">Graphics</param>
-<param name="Модель">Pro 24 All-in-One QC24250</param>
-<param name="Модель процессора">Core Ultra 7</param>
-<param name="Модель чипсета видеокарты">Arc Xe</param>
-<param name="Монитор">23.8&amp;quot;, Touch, FHD</param>
-<param name="Объем видеопамяти">256 Mb</param>
-<param name="Объем жесткого диска">512</param>
-<param name="Оперативная память">16 Gb</param>
-<param name="Операционная система">Windows 11</param>
-<param name="Производитель операционной системы">Microsoft</param>
-<param name="Производитель процессора">Intel</param>
-<param name="Производитель чипсета видеокарты">Intel</param>
-<param name="Серия процессора">265</param>
-<param name="Сетевая карта (скорость передачи)">10/100/1000</param>
-<param name="Тип">Моноблок</param>
-<param name="Тип дисплея">Full HD</param>
-<param name="Тип жесткого диска">SSD</param>
-<param name="Тип оперативной памяти">DDR5</param>
-<param name="Тип привода">No ODD</param>
-<param name="Цвет">Серый</param>
-<param name="Частота оперативной памяти">5600</param>
-<param name="Частота процессора">2,4</param>
-<keywords>Dell, Моноблок Dell Pro 24 All-in-One QC24250 (210-BPNS_BTO155_QC24250_EMEA), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP13872771" available="true">
@@ -3336,43 +3275,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Тип">Принтер</param>
 <param name="Формат печати">A4</param>
 <keywords>HP, Принтер HP LaserJet Pro M501dn (J8H61A#B19), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
-</offer>
-
-<offer id="CP10358738" available="true">
-<categoryId>101</categoryId>
-<vendorCode>CP10358738</vendorCode>
-<name>Принтер HP LaserJet Enterprise M507dn (1PV87A#B19)</name>
-<price>250900</price>
-<picture>https://www.comportal.kz/upload/iblock/bcd/l3gswvacfydwgxxyy8xd1jtqw3u6zqvr.jpg</picture>
-<vendor>HP</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-<h3>Принтер HP LaserJet Enterprise M507dn (1PV87A#B19)</h3>
-<p>Принтер. Формат печати: A4. Разрешение: 1200x1200. Скорость печати ч/б: 43. Порты: USB LAN. Технология печати: Лазерная. Гарантия: 12 мес.</p>
-<hr />
-<p style="text-align:center"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;amp;text&amp;amp;type=phone_number&amp;amp;app_absent=0">💬 Написать в WhatsApp</a></p>
-<hr />
-<h3>Характеристики</h3>
-<ul><li><strong>Гарантия:</strong> 12 мес</li><li><strong>Для бренда:</strong> HP</li><li><strong>Коды:</strong> 1PV87A#B19</li><li><strong>Модель:</strong> LaserJet Enterprise M507dn</li><li><strong>Нагрузка:</strong> 150 000</li><li><strong>Наличие картриджа (тонера) в комплекте:</strong> Полный</li><li><strong>Порты:</strong> USB LAN</li><li><strong>Разрешение:</strong> 1200x1200</li><li><strong>Скорость печати ч/б:</strong> 43</li><li><strong>Технология печати:</strong> Лазерная</li><li><strong>Тип:</strong> Принтер</li><li><strong>Формат печати:</strong> A4</li></ul>
-<hr />
-<h3>Оплата</h3>
-<ul><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul>
-<hr />
-<h3>Доставка по Алматы и Казахстану</h3>
-<ul><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul>]]></description>
-<param name="Гарантия">12 мес</param>
-<param name="Для бренда">HP</param>
-<param name="Коды">1PV87A#B19</param>
-<param name="Модель">LaserJet Enterprise M507dn</param>
-<param name="Нагрузка">150 000</param>
-<param name="Наличие картриджа (тонера) в комплекте">Полный</param>
-<param name="Порты">USB LAN</param>
-<param name="Разрешение">1200x1200</param>
-<param name="Скорость печати ч/б">43</param>
-<param name="Технология печати">Лазерная</param>
-<param name="Тип">Принтер</param>
-<param name="Формат печати">A4</param>
-<keywords>HP, Принтер HP LaserJet Enterprise M507dn (1PV87A#B19), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP10578844" available="true">
@@ -18024,36 +17926,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Модель">Pro 14 PC14250</param>
 <param name="Тип">Ноутбук</param>
 <keywords>Dell, Ноутбук Dell Pro 14 PC14250 (210-BQHF / BTO120_PC14250_EMEA), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
-</offer>
-
-<offer id="CP13873179" available="true">
-<categoryId>601</categoryId>
-<vendorCode>CP13873179</vendorCode>
-<name>Ноутбук ASUS Zenbook A16 / UX3607OA-SQ013W (90NB17W1-M003T0)</name>
-<price>967900</price>
-<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
-<vendor>ASUS</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-<h3>Ноутбук ASUS Zenbook A16 / UX3607OA-SQ013W (90NB17W1-M003T0)</h3>
-<p>Ноутбук. Гарантия: 12 мес. Для бренда: ASUS. Модель: Zenbook A16 / UX3607OA-SQ013W. Коды: 90NB17W1-M003T0.</p>
-<hr />
-<p style="text-align:center"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;amp;text&amp;amp;type=phone_number&amp;amp;app_absent=0">💬 Написать в WhatsApp</a></p>
-<hr />
-<h3>Характеристики</h3>
-<ul><li><strong>Гарантия:</strong> 12 мес</li><li><strong>Для бренда:</strong> ASUS</li><li><strong>Коды:</strong> 90NB17W1-M003T0</li><li><strong>Модель:</strong> Zenbook A16 / UX3607OA-SQ013W</li><li><strong>Тип:</strong> Ноутбук</li></ul>
-<hr />
-<h3>Оплата</h3>
-<ul><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul>
-<hr />
-<h3>Доставка по Алматы и Казахстану</h3>
-<ul><li><em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em></li><li><em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em></li><li><em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em></li><li><em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em></li></ul>]]></description>
-<param name="Гарантия">12 мес</param>
-<param name="Для бренда">ASUS</param>
-<param name="Коды">90NB17W1-M003T0</param>
-<param name="Модель">Zenbook A16 / UX3607OA-SQ013W</param>
-<param name="Тип">Ноутбук</param>
-<keywords>ASUS, Ноутбук ASUS Zenbook A16 / UX3607OA-SQ013W (90NB17W1-M003T0), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP13873203" available="true">

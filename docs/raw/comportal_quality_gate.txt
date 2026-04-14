@@ -13,13 +13,13 @@ freeze_current_as_baseline: no
 # yes = текущие cosmetic-хвосты сохранены как baseline-снимок
 critical_count: 0
 # Сколько найдено критичных проблем
-cosmetic_total_count: 92
+cosmetic_total_count: 91
 # Общее число некритичных проблем
-cosmetic_offer_count: 92
+cosmetic_offer_count: 91
 # В скольких товарах есть cosmetic-проблемы
-known_cosmetic_count: 92
+known_cosmetic_count: 91
 # Сколько cosmetic-проблем уже известны по baseline
-known_cosmetic_offer_count: 92
+known_cosmetic_offer_count: 91
 # В скольких товарах есть уже известные cosmetic-проблемы
 new_cosmetic_count: 0
 # Сколько найдено новых cosmetic-проблем
@@ -123,7 +123,6 @@ CP13873167 | placeholder_picture | Требует ручной проверки 
 CP13873168 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13873169 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13873170 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
-CP13873179 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13873203 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13873206 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 
@@ -220,6 +219,5 @@ CP13873167 | placeholder_picture | Требует ручной проверки 
 CP13873168 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13873169 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13873170 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
-CP13873179 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13873203 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13873206 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
