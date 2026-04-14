@@ -3,8 +3,9 @@ name: Build_Price
 on:
   workflow_dispatch:
   schedule:
-    - cron: '30 4 * * *'
-      timezone: 'Asia/Almaty'
+    # Алматы 04:30 local
+    - cron: "30 4 * * *"
+      timezone: "Asia/Almaty"
 
 jobs:
   build-price:
