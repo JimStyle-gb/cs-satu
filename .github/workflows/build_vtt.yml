@@ -14,8 +14,9 @@ name: Build_VTT
 on:
   workflow_dispatch:
   schedule:
-    # Алматы UTC+5 -> 05:00 local = 00:00 UTC
-    - cron: "0 0 1,10,20 * *"
+    # Алматы 02:30 local, дни не меняем
+    - cron: "30 2 1,10,20 * *"
+      timezone: "Asia/Almaty"
 
 permissions:
   contents: write
