@@ -1,12 +1,5 @@
 # Сводный отчёт по товарам без categoryId
 
-## START AkCent
-Поставщик: AkCent
-Товаров без categoryId: 0
-
-# Все товары получили categoryId
-## END AkCent
-
 ## START AlStyle
 Поставщик: AlStyle
 Товаров без categoryId: 6
@@ -41,3 +34,10 @@ ComPortal | CP13873031 | Компьютер Dell Pro Tower QCT1250 (210-BPRW_BTO
 ComPortal | CP13873003 | Компьютер Dell Tower Plus EBT2250 (210-BPDZ_EBT2250_ARL_127) | categoryId не определён
 ComPortal | CP13873004 | Компьютер Dell Tower Plus EBT2250 (210-BPDZ_EBT2250_ARL_128) | categoryId не определён
 ## END ComPortal
+
+## START AkCent
+Поставщик: AkCent
+Товаров без categoryId: 0
+
+# Все товары получили categoryId
+## END AkCent

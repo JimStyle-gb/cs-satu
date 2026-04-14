@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<yml_catalog date="2026-04-14 02:02:03">
+<yml_catalog date="2026-04-14 11:42:41">
 <shop><offers>
 <!--FEED_META
 Поставщик                                  | AkCent
 URL поставщика                             | https://ak-cent.kz/export/Exchange/article_nw2/Ware02224.xml
-Время сборки (Алматы)                      | 2026-04-14 02:02:03
+Время сборки (Алматы)                      | 2026-04-14 11:42:41
 Ближайшая сборка (Алматы)                  | 2026-04-15 01:00:00
-Сколько товаров у поставщика до фильтра    | 2061
-Сколько товаров у поставщика после фильтра | 184
-Сколько товаров есть в наличии (true)      | 184
+Сколько товаров у поставщика до фильтра    | 2057
+Сколько товаров у поставщика после фильтра | 183
+Сколько товаров есть в наличии (true)      | 183
 Сколько товаров нет в наличии (false)      | 0
 -->
 
@@ -50,25 +50,6 @@ URL поставщика                             | https://ak-cent.kz/export
 <param name="Для бренда">Epson</param>
 <param name="Модель">C12C890191</param>
 <param name="Коды">C12C890191</param>
-<param name="Оригинальность">Оригинал</param>
-</offer>
-
-<offer id="ACC12C934591" available="true">
-<categoryId></categoryId>
-<vendorCode>ACC12C934591</vendorCode>
-<name>Ёмкость для отработанных чернил Epson C12C934591, WF-78XX/ET-166XX Maintenance Box (оригинал)</name>
-<price>16544</price>
-<picture>https://b2b.ak-cent.kz/upload/iblock/245/g5dm2vx8ypcll0npk4ae89s9od8448oo.jpg</picture>
-<vendor>Epson</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Оригинальная ёмкость для отработанных чернил Epson C12C934591 для WF-78XX/ET-166XX Maintenance Box. Контейнер предназначен для сбора отработанных чернил и заменяется после уведомления принтера.]]></description>
-<param name="Коды">C12C934591</param>
-<param name="Гарантия">3 мес.</param>
-<param name="Тип">Ёмкость для отработанных чернил</param>
-<param name="Тип печати">Струйная</param>
-<param name="Для бренда">Epson</param>
-<param name="Модель">C12C934591</param>
 <param name="Оригинальность">Оригинал</param>
 </offer>
 
@@ -334,7 +315,7 @@ URL поставщика                             | https://ak-cent.kz/export
 <vendorCode>ACC13T40D140</vendorCode>
 <name>Картридж Epson C13T40D140, UltraChrome XD2, чёрный (оригинал)</name>
 <price>56297</price>
-<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
+<picture>https://b2b.ak-cent.kz/upload/iblock/1be/kbmgx69ifrh2v8f9bx486rkzp5tki8h7.jpg</picture>
 <vendor>Epson</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
@@ -354,7 +335,7 @@ URL поставщика                             | https://ak-cent.kz/export
 <vendorCode>ACC13T40D240</vendorCode>
 <name>Картридж Epson C13T40D240, UltraChrome XD2, голубой (оригинал)</name>
 <price>38973</price>
-<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
+<picture>https://b2b.ak-cent.kz/upload/iblock/0ce/w9qa3jwmjsck3c54ehu1ony9bsm8luz0.jpg</picture>
 <vendor>Epson</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
@@ -374,7 +355,7 @@ URL поставщика                             | https://ak-cent.kz/export
 <vendorCode>ACC13T40D34N</vendorCode>
 <name>Картридж Epson C13T40D34N, UltraChrome XD2, пурпурный (оригинал)</name>
 <price>38973</price>
-<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
+<picture>https://b2b.ak-cent.kz/upload/iblock/3a0/6c7sl4blrwmypfoa1v0uglqixutj7xe8.jpg</picture>
 <vendor>Epson</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
@@ -394,7 +375,7 @@ URL поставщика                             | https://ak-cent.kz/export
 <vendorCode>ACC13T40D440</vendorCode>
 <name>Картридж Epson C13T40D440, UltraChrome XD2, жёлтый (оригинал)</name>
 <price>38973</price>
-<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
+<picture>https://b2b.ak-cent.kz/upload/iblock/134/gj92y6ngwgx4a2mk8vguo42xjl555jea.jpg</picture>
 <vendor>Epson</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
@@ -2307,7 +2288,7 @@ LS500WH — это первый безламповый LASER WXGA-проекто
 <vendorCode>ACV11HA86340</vendorCode>
 <name>Проектор универсальный Epson CO-WX02</name>
 <price>213571</price>
-<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
+<picture>https://b2b.ak-cent.kz/upload/iblock/784/2zlzx4940r10d71q1trtp1doktrz3ohd.jpg</picture>
 <vendor>Epson</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
