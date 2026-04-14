@@ -127,7 +127,6 @@ jobs:
         with:
           name: vtt-index
           path: |
-            docs/raw/category_id_unresolved.txt
             docs/debug/vtt_shards/index.json
             docs/debug/vtt_shards/index_summary.json
           if-no-files-found: error
