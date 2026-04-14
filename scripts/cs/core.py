@@ -29,10 +29,10 @@ _RE_DIM_SEP = re.compile(r"(?:[xх×*/]|\bto\b)")  # 10x20, 10×20, 10х20, 10/2
 from decimal import Decimal, InvalidOperation, ROUND_HALF_UP
 
 from .keywords import build_keywords, CS_KEYWORDS_MAX_LEN
-from .description import build_description, build_chars_block
+from .description import build_description
 from .pricing import compute_price, CS_PRICE_TIERS
 from .category_map import resolve_category_id
-from .meta import now_almaty, next_run_at_hour, next_run_dom_at_hour as _meta_next_run_dom_at_hour
+from .meta import now_almaty, next_run_at_hour
 from .validators import validate_cs_yml
 from .util import norm_ws, safe_int, _truncate_text
 from .writer import (
@@ -2643,16 +2643,6 @@ def _build_param_summary(params_sorted: Sequence[tuple[str, str]]) -> str:
     # "Тип: ...; Модель: ...; ..."
     return "; ".join(f"{k}: {v}" for k, v in picked).strip()
 
-def _cs_chars_block_html(params: list[tuple[str, str]]) -> str:
-    """HTML-блок характеристик. Если параметров нет — выводим заглушку."""
-    if not params:
-        return '<h3>Характеристики</h3><p>Характеристики уточняются.</p>'
-    # стандартный список
-    items = ''.join([f'<li><b>{xml_escape(k)}:</b> {xml_escape(v)}</li>' for k, v in params if k and v])
-    if not items:
-        return '<h3>Характеристики</h3><p>Характеристики уточняются.</p>'
-    return f'<h3>Характеристики</h3><ul>{items}</ul>'
-
 def get_public_vendor(supplier: str | None = None) -> str:
     """
     Публичный fallback-вендор для финального YML.
@@ -2681,16 +2671,6 @@ def get_public_vendor(supplier: str | None = None) -> str:
     if any(token and token in raw_cf for token in reserved if token not in {"cs"}):
         return "CS"
     return raw
-
-def next_run_dom_at_hour(now: datetime, hour: int, doms: Sequence[int]) -> datetime:
-    """
-    Back-compat shim.
-
-    DOM-расписание живёт в cs.meta; shared core только проксирует старый импорт,
-    чтобы не ломать существующие вызовы.
-    """
-    return _meta_next_run_dom_at_hour(now, hour=hour, doms=tuple(doms or ()))
-
 
 def _category_unresolved_report_path(supplier: str) -> Path:
     _ = supplier
@@ -3057,7 +3037,6 @@ class OfferOut:
         # Core не чистит, не нормализует и не перестраивает параметры под поставщика.
         params = [(sanitize_mixed_text(k), sanitize_mixed_text(v)) for (k, v) in (self.params or [])]
         params_sorted = sort_params(params, priority=list(param_priority or []))
-        chars_html = _cs_chars_block_html(params_sorted)
         notes: list[str] = []
 
         # CS: лимитируем <name> (умно для NVPrint)
@@ -3168,9 +3147,3 @@ class OfferOut:
         )
         return out
 
-# Валидирует готовый CS-фид (страховка: если что-то сломалось — падаем сборкой)
-def _cs_build_description(*args, **kwargs):
-    return build_description(*args, **kwargs)
-
-def _cs_build_chars_block(*args, **kwargs):
-    return build_chars_block(*args, **kwargs)
