@@ -19,13 +19,11 @@ DELIVERY_ITEMS = [
     '<em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em>',
 ]
 
-
 def _clean_text(value: Any) -> str:
     if value is None:
         return ""
     text = str(value).strip()
     return " ".join(text.split())
-
 
 def _coalesce(*values: Any) -> str:
     for value in values:
@@ -34,14 +32,11 @@ def _coalesce(*values: Any) -> str:
             return text
     return ""
 
-
 def _escape_text(value: Any) -> str:
     return escape(_clean_text(value), quote=True)
 
-
 def _escape_attr(value: Any) -> str:
     return escape(_clean_text(value), quote=True)
-
 
 def _iter_characteristics(raw: Any) -> list[tuple[str, str]]:
     items: list[tuple[str, str]] = []
@@ -82,11 +77,9 @@ def _iter_characteristics(raw: Any) -> list[tuple[str, str]]:
         items.append(("Характеристика", text))
     return items
 
-
 def _render_list(items: Iterable[str]) -> str:
     body = "".join(f"<li>{item}</li>" for item in items if _clean_text(item))
     return f"<ul>{body}</ul>" if body else ""
-
 
 def _render_characteristics(items: list[tuple[str, str]]) -> str:
     if not items:
@@ -97,7 +90,6 @@ def _render_characteristics(items: list[tuple[str, str]]) -> str:
     )
     return f"<h3>Характеристики</h3>\n<ul>{body}</ul>"
 
-
 # Совместимость с shared core.
 def build_chars_block(*args: Any, **kwargs: Any) -> str:
     raw = kwargs.get("characteristics", kwargs.get("params", kwargs.get("specs", kwargs.get("features"))))
@@ -105,14 +97,11 @@ def build_chars_block(*args: Any, **kwargs: Any) -> str:
         raw = args[0]
     return _render_characteristics(_iter_characteristics(raw))
 
-
 def build_characteristics_block(*args: Any, **kwargs: Any) -> str:
     return build_chars_block(*args, **kwargs)
 
-
 def render_chars_block(*args: Any, **kwargs: Any) -> str:
     return build_chars_block(*args, **kwargs)
-
 
 def _render_description(name: str, main_text: str, characteristics: Any = None) -> str:
     safe_name = _escape_text(name)
@@ -150,7 +139,6 @@ def _render_description(name: str, main_text: str, characteristics: Any = None) 
 
     return "\n".join(part for part in parts if part)
 
-
 # Совместимость с разными вызовами из shared core.
 def build_description(*args: Any, **kwargs: Any) -> str:
     name = _coalesce(
@@ -174,18 +162,3 @@ def build_description(*args: Any, **kwargs: Any) -> str:
     )
     return _render_description(name=name, main_text=main_text, characteristics=characteristics)
 
-
-def render_description(*args: Any, **kwargs: Any) -> str:
-    return build_description(*args, **kwargs)
-
-
-def build_offer_description(*args: Any, **kwargs: Any) -> str:
-    return build_description(*args, **kwargs)
-
-
-def build_product_description(*args: Any, **kwargs: Any) -> str:
-    return build_description(*args, **kwargs)
-
-
-def compose_description(*args: Any, **kwargs: Any) -> str:
-    return build_description(*args, **kwargs)
