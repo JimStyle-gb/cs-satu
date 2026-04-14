@@ -1,30 +1,5 @@
 # Сводный отчёт по товарам без categoryId
 
-## START ComPortal
-Поставщик: ComPortal
-Товаров без categoryId: 17
-
-ComPortal | CP13870159 | Барабан HP CF364A (CF364A) | categoryId не определён
-ComPortal | CP13870161 | Барабан HP CF359A (CF359A) | categoryId не определён
-ComPortal | CP13870163 | Барабан HP CF365A (CF365A) | categoryId не определён
-ComPortal | CP13870165 | Барабан HP CF358A (CF358A) | categoryId не определён
-ComPortal | CP13870510 | Барабан HP CF232A (CF232A) | categoryId не определён
-ComPortal | CP13870156 | Барабан Canon C-EXV49 CYM (8528B003AA) | categoryId не определён
-ComPortal | CP13873021 | Компьютер Dell Pro Micro QCM1250 (210-BPQB_BTO003_QCM1250_EMEA) | categoryId не определён
-ComPortal | CP13873023 | Компьютер Dell Pro Micro QCM1250 (210-BPPV_BTO106_QCM1250_EMEA) | categoryId не определён
-ComPortal | CP13873025 | Компьютер Dell Pro Micro QCM1250 (210-BPPV_BTO107_QCM1250_EMEA) | categoryId не определён
-ComPortal | CP13873026 | Компьютер Dell Pro Tower QCT1250 (210-BPRW_BTO107_QCT1250_EMEA) | categoryId не определён
-ComPortal | CP13873027 | Компьютер Dell Pro Max Tower T2 FCT2250 (210-BPSN_BTO103_FCT2250_EMEA) | categoryId не определён
-ComPortal | CP13873028 | Компьютер Dell Pro Max Tower T2 FCT2250 (210-BPSN_BTO113_FCT2250_EMEA) | categoryId не определён
-ComPortal | CP13873029 | Компьютер Dell Pro Max Tower T2 FCT2250 (210-BPSN_BTO109_FCT2250_EMEA) | categoryId не определён
-ComPortal | CP13873030 | Компьютер Dell Pro Max Tower T2 FCT2250 (210-BPSN_BTO112_FCT2250_EMEA) | categoryId не определён
-ComPortal | CP13873031 | Компьютер Dell Pro Tower QCT1250 (210-BPRW_BTO110_QCT1250_EMEA) | categoryId не определён
-ComPortal | CP13873003 | Компьютер Dell Tower Plus EBT2250 (210-BPDZ_EBT2250_ARL_127) | categoryId не определён
-ComPortal | CP13873004 | Компьютер Dell Tower Plus EBT2250 (210-BPDZ_EBT2250_ARL_128) | categoryId не определён
-## END ComPortal
-
-
-
 ## START AkCent
 Поставщик: AkCent
 Товаров без categoryId: 0
@@ -41,3 +16,10 @@ AlStyle | AS360863 | Держатель площадки тормозной Xero
 AlStyle | AS408209 | Портативный экран XG DLS-OT221-125 (87"49"), Ø - 100", Раб. поверхность 221x125 см., 16:9 | categoryId не определён
 AlStyle | AS414835 | Интерактивная трибуна MAXHUB SL22MC | categoryId не определён
 ## END AlStyle
+
+## START ComPortal
+Поставщик: ComPortal
+Товаров без categoryId: 0
+
+# Все товары получили categoryId
+## END ComPortal
