@@ -1,0 +1,67 @@
+{
+  "build_time": "14 апреля 2026 г. 23:20:44",
+  "total": 7318,
+  "available_true": 6662,
+  "available_false": 656,
+  "price100": 491,
+  "placeholder": 562,
+  "empty_category": 0,
+  "unknown_satu": 0,
+  "excluded_unmapped_total": 0,
+  "duplicate_offer_id_groups": 0,
+  "duplicate_vendorcode_groups": 0,
+  "excluded_unmapped_by_supplier": {
+    "AkCent": 0,
+    "AlStyle": 0,
+    "ComPortal": 0,
+    "CopyLine": 0,
+    "VTT": 0
+  },
+  "supplier_summary": {
+    "AkCent": {
+      "total": 182,
+      "available": 182,
+      "unavailable": 0,
+      "price100": 0,
+      "placeholder": 7,
+      "excluded_no_categoryid": 0,
+      "no_satu_category": 0
+    },
+    "AlStyle": {
+      "total": 2228,
+      "available": 1572,
+      "unavailable": 656,
+      "price100": 238,
+      "placeholder": 16,
+      "excluded_no_categoryid": 0,
+      "no_satu_category": 0
+    },
+    "ComPortal": {
+      "total": 580,
+      "available": 580,
+      "unavailable": 0,
+      "price100": 0,
+      "placeholder": 91,
+      "excluded_no_categoryid": 0,
+      "no_satu_category": 0
+    },
+    "CopyLine": {
+      "total": 1220,
+      "available": 1220,
+      "unavailable": 0,
+      "price100": 26,
+      "placeholder": 0,
+      "excluded_no_categoryid": 0,
+      "no_satu_category": 0
+    },
+    "VTT": {
+      "total": 3108,
+      "available": 3108,
+      "unavailable": 0,
+      "price100": 227,
+      "placeholder": 448,
+      "excluded_no_categoryid": 0,
+      "no_satu_category": 0
+    }
+  }
+}
