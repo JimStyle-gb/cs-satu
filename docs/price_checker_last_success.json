@@ -1,9 +1,9 @@
 {
-  "build_time": "14 апреля 2026 г. 23:20:44",
-  "total": 7318,
-  "available_true": 6662,
+  "build_time": "15 апреля 2026 г. 07:03:56",
+  "total": 7319,
+  "available_true": 6663,
   "available_false": 656,
-  "price100": 491,
+  "price100": 499,
   "placeholder": 562,
   "empty_category": 0,
   "unknown_satu": 0,
@@ -37,8 +37,8 @@
       "no_satu_category": 0
     },
     "ComPortal": {
-      "total": 580,
-      "available": 580,
+      "total": 581,
+      "available": 581,
       "unavailable": 0,
       "price100": 0,
       "placeholder": 91,
@@ -58,7 +58,7 @@
       "total": 3108,
       "available": 3108,
       "unavailable": 0,
-      "price100": 227,
+      "price100": 235,
       "placeholder": 448,
       "excluded_no_categoryid": 0,
       "no_satu_category": 0
