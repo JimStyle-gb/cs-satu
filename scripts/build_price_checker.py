@@ -575,50 +575,52 @@ def build_telegram_summary_html(status: str, reason: str, metrics: Metrics, base
     top_excluded = build_top_suppliers(metrics.excluded_unmapped_by_supplier)
     satu_mapping_status = "УСПЕШНО" if metrics.unknown_satu == 0 else "НЕУСПЕШНО"
 
-    def b(text: str) -> str:
-        return f"<b>{html.escape(text)}</b>"
+    def esc(text: str) -> str:
+        return html.escape(text)
+
+    def field(label: str, value: str) -> str:
+        return f"<b>{esc(label)}</b> {esc(value)}"
 
     lines = [
-        f"{icon} <b>Price — {html.escape(status)}</b>",
-        f"<b>Время проверки:</b> ",
-        b(fmt_dt(checked_at)),
-        f"<b>Время сборки Price:</b> ",
-        b(metrics.build_time or '-'),
+        f"{icon} <b>Price — {esc(status)}</b>",
         "",
-        f"<b>Товаров в Price:</b> {b(f'{metrics.total} {fmt_delta(baseline.total if baseline else None, metrics.total)}')}",
-        f"<b>Есть в наличии:</b> {b(f'{metrics.available_true} {fmt_delta(baseline.available_true if baseline else None, metrics.available_true)}')}",
-        f"<b>Нет в наличии:</b> {b(f'{metrics.available_false} {fmt_delta(baseline.available_false if baseline else None, metrics.available_false)}')}",
+        field("Время проверки:", fmt_dt(checked_at)),
+        field("Время сборки Price:", metrics.build_time or '-'),
         "",
-        f"<b>С ценой 100:</b> {b(f'{metrics.price100} {fmt_delta(baseline.price100 if baseline else None, metrics.price100)}')}",
-        f"<b>С заглушкой фото:</b> {b(f'{metrics.placeholder} {fmt_delta(baseline.placeholder if baseline else None, metrics.placeholder)}')}",
-        f"<b>Без categoryId:</b> {b(str(metrics.empty_category))}",
-        f"<b>Без категории Satu:</b> {b(str(metrics.unknown_satu))}",
-        f"<b>Не вошло в final без categoryId:</b> {b(f'{metrics.excluded_unmapped_total} {fmt_delta(baseline.excluded_unmapped_total if baseline else None, metrics.excluded_unmapped_total)}')}",
+        field("Товаров в Price:", f"{metrics.total} {fmt_delta(baseline.total if baseline else None, metrics.total)}"),
+        field("Есть в наличии:", f"{metrics.available_true} {fmt_delta(baseline.available_true if baseline else None, metrics.available_true)}"),
+        field("Нет в наличии:", f"{metrics.available_false} {fmt_delta(baseline.available_false if baseline else None, metrics.available_false)}"),
+        "",
+        field("С ценой 100:", f"{metrics.price100} {fmt_delta(baseline.price100 if baseline else None, metrics.price100)}"),
+        field("С заглушкой фото:", f"{metrics.placeholder} {fmt_delta(baseline.placeholder if baseline else None, metrics.placeholder)}"),
+        field("Без categoryId:", str(metrics.empty_category)),
+        field("Без категории Satu:", str(metrics.unknown_satu)),
+        field("Не вошло в final без categoryId:", f"{metrics.excluded_unmapped_total} {fmt_delta(baseline.excluded_unmapped_total if baseline else None, metrics.excluded_unmapped_total)}"),
         "",
         "<b>Проблемные хвосты по поставщикам</b>",
         "",
         "<b>Цена 100:</b>",
     ]
     if top_price100 == 'нет':
-        lines.append(b('нет'))
+        lines.append('нет')
     else:
-        lines.extend(b(item) for item in top_price100.split(', '))
+        lines.extend(esc(item) for item in top_price100.split(', '))
     lines.extend([
         "",
         "<b>Заглушка фото:</b>",
     ])
     if top_placeholder == 'нет':
-        lines.append(b('нет'))
+        lines.append('нет')
     else:
-        lines.extend(b(item) for item in top_placeholder.split(', '))
+        lines.extend(esc(item) for item in top_placeholder.split(', '))
     lines.extend([
         "",
-        f"<b>Не вошло в final без categoryId:</b> {b(top_excluded)}",
+        field("Не вошло в final без categoryId:", top_excluded),
         "",
-        f"<b>Привязка к категориям Satu:</b> {b(satu_mapping_status)}",
-        f"<b>Статус проверки Price:</b> {b(status)}",
+        field("Привязка к категориям Satu:", satu_mapping_status),
+        field("Статус проверки Price:", status),
         "",
-        f"<b>Причина:</b> {b(reason)}",
+        field("Причина:", reason),
     ])
     return "\n".join(lines).strip() + "\n"
 
@@ -818,9 +820,9 @@ def main() -> int:
     details_text = build_failure_details(reason, checked_at)
     telegram_text = (
         f"❌ <b>Price — НЕУСПЕШНО</b>\n\n"
-        f"<b>Время проверки:</b> <b>{html.escape(fmt_dt(checked_at))}</b>\n\n"
-        f"<b>Причина:</b> <b>{html.escape(reason)}</b>\n\n"
-        f"<b>Статус проверки Price:</b> <b>НЕУСПЕШНО</b>\n"
+        f"<b>Время проверки:</b> {html.escape(fmt_dt(checked_at))}\n"
+        f"<b>Причина:</b> {html.escape(reason)}\n"
+        f"<b>Статус проверки Price:</b> НЕУСПЕШНО\n"
     )
     write_reports(summary_text, details_text)
     try:
