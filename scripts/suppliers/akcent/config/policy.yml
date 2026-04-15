@@ -12,8 +12,9 @@
 schema_version: 2
 supplier: AkCent
 timezone: Asia/Almaty
-next_run_hour_local: 1
-schedule_hour_almaty: 1
+next_run_hour_local: 22
+schedule_hour_almaty: 22
+schedule_minute_almaty: 30
 id_prefix: AC
 placeholder_picture: https://placehold.co/800x800/png?text=No+Photo
 
