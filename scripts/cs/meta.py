@@ -33,7 +33,7 @@ def _last_day_of_month(year: int, month: int) -> int:
     first_next = datetime(first_next.year, first_next.month, 1, tzinfo=ALMATY_TZ)
     return (first_next - timedelta(days=1)).day
 
-def _candidate_dom(year: int, month: int, day: int, hour: int, minute: int) -> datetime | None:
+def _candidate_dom(year: int, month: int, day: int, hour: int, minute: int = 0) -> datetime | None:
     if day < 1 or day > _last_day_of_month(year, month):
         return None
     return datetime(year, month, day, hour, minute, 0, tzinfo=ALMATY_TZ)
@@ -46,23 +46,27 @@ def now_almaty() -> datetime:
     """Текущее timezone-aware время в Алматы."""
     return datetime.now(tz=ALMATY_TZ)
 
-def next_run_at_hour(build_time: datetime, *, hour: int, minute: int = 0) -> datetime:
-    """Следующая daily-сборка в Алматы на заданный час и минуту."""
+def next_run_at_time(build_time: datetime, *, hour: int, minute: int = 0) -> datetime:
+    """Следующая daily-сборка в Алматы на заданные час и минуту."""
     bt = _as_almaty(build_time)
     target = bt.replace(hour=int(hour), minute=int(minute), second=0, microsecond=0)
     if target <= bt:
         target = target + timedelta(days=1)
     return target
 
-def next_run_dom_at_hour(now: datetime, hour: int, doms: tuple[int, ...] | list[int], minute: int = 0) -> datetime:
-    """Следующая сборка в Алматы для расписания по дням месяца (например 1/10/20) с учётом минуты."""
+def next_run_at_hour(build_time: datetime, *, hour: int) -> datetime:
+    """Back-compat shim: daily-сборка в Алматы на заданный час, минута = 00."""
+    return next_run_at_time(build_time, hour=hour, minute=0)
+
+def next_run_dom_at_time(now: datetime, hour: int, minute: int, doms: tuple[int, ...] | list[int]) -> datetime:
+    """Следующая сборка в Алматы для расписания по дням месяца с часом и минутой."""
     current = _as_almaty(now)
     hour = int(hour)
     minute = int(minute)
     doms_sorted = sorted({int(d) for d in doms if 1 <= int(d) <= 31})
 
     if not doms_sorted:
-        return next_run_at_hour(current, hour=hour, minute=minute)
+        return next_run_at_time(current, hour=hour, minute=minute)
 
     for day in doms_sorted:
         cand = _candidate_dom(current.year, current.month, day, hour, minute)
@@ -81,3 +85,7 @@ def next_run_dom_at_hour(now: datetime, hour: int, doms: tuple[int, ...] | list[
             return cand
 
     return datetime(year, month, 1, hour, minute, 0, tzinfo=ALMATY_TZ)
+
+def next_run_dom_at_hour(now: datetime, hour: int, doms: tuple[int, ...] | list[int]) -> datetime:
+    """Back-compat shim: расписание по дням месяца на заданный час, минута = 00."""
+    return next_run_dom_at_time(now, hour=hour, minute=0, doms=doms)
