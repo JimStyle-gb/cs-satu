@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<yml_catalog date="2026-04-15 09:27:54">
+<yml_catalog date="2026-04-15 19:40:20">
 <shop><offers>
 <!--FEED_META
 Поставщик                                  | VTT
 URL поставщика                             | https://b2b.vtt.ru/catalog/
-Время сборки (Алматы)                      | 2026-04-15 09:27:54
+Время сборки (Алматы)                      | 2026-04-15 19:40:20
 Ближайшая сборка (Алматы)                  | 2026-04-20 02:30:00
 Сколько товаров у поставщика до фильтра    | 3113
 Сколько товаров у поставщика после фильтра | 3108
@@ -1051,7 +1051,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <categoryId></categoryId>
 <vendorCode>VT106R03488</vendorCode>
 <name>Тонер-картридж Xerox Phaser 6510/ WC 6515 (оригинал)</name>
-<price>149900</price>
+<price>100</price>
 <picture>https://b2b.vtt.ru/images/106R03488.jpg</picture>
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
@@ -1312,7 +1312,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <categoryId></categoryId>
 <vendorCode>VT108R01419</vendorCode>
 <name>Фотобарабан Xerox Phaser 6510/ W (оригинал)</name>
-<price>107900</price>
+<price>100</price>
 <picture>https://b2b.vtt.ru/images/108R01419.jpg</picture>
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
@@ -6063,18 +6063,18 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <offer id="VT1502091002" available="true">
 <categoryId></categoryId>
 <vendorCode>VT1502091002</vendorCode>
-<name>Картридж 913A для HP PW 352dw/377dw/Pro477dw/452dw F6T77AE (оригинал)</name>
-<price>72900</price>
+<name>Картридж 913A для HP PW 352dw/377dw/Pro477dw/452dw F6T77AE, C, 1502091002 (оригинал)</name>
+<price>100</price>
 <picture>https://b2b.vtt.ru/images/1502091002.jpg</picture>
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж 913A для HP PW 352dw/377dw/Pro477dw/452dw F6T77AE; технология печати — Струйная.]]></description>
+Оригинальный картридж 913A для HP PW 352dw/377dw/Pro477dw/452dw F6T77AE, C, 1502091002; совместимость — HP PW 352dw/377dw/Pro477dw/452dw, C, 1502091002; технология печати — Струйная.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Технология печати">Струйная</param>
 <param name="Для бренда">HP</param>
 <param name="Партномер">F6T77AE</param>
-<param name="Совместимость">HP PW 352dw/377dw/Pro477dw/452dw</param>
+<param name="Совместимость">HP PW 352dw/377dw/Pro477dw/452dw, C, 1502091002</param>
 <param name="Коды расходников">913A</param>
 <param name="Оригинальность">Оригинал</param>
 </offer>
@@ -11814,7 +11814,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <categoryId></categoryId>
 <vendorCode>VT1T02P10NL0</vendorCode>
 <name>Тонер-картридж TK-6115 для Kyocera M4125idn/M4132idn (оригинал)</name>
-<price>90900</price>
+<price>100</price>
 <picture>https://b2b.vtt.ru/images/1T02P10NL0.jpg</picture>
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
@@ -11827,7 +11827,6 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <param name="Партномер">TK-6115</param>
 <param name="Совместимость">Kyocera M4125idn/M4132idn</param>
 <param name="Ресурс">15K</param>
-<param name="Коды расходников">1T02P10NL0</param>
 <param name="Оригинальность">Оригинал</param>
 </offer>
 
@@ -11873,7 +11872,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <categoryId></categoryId>
 <vendorCode>VT1T02P3BNL0</vendorCode>
 <name>Тонер-картридж TK-8115M Kyocera Ecosys M8124/M813 (оригинал)</name>
-<price>56900</price>
+<price>100</price>
 <picture>https://b2b.vtt.ru/images/1T02P3BNL0.jpg</picture>
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
@@ -11885,7 +11884,6 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <param name="Цвет">Пурпурный</param>
 <param name="Партномер">TK-8115M</param>
 <param name="Ресурс">6K</param>
-<param name="Коды расходников">1T02P3BNL0</param>
 <param name="Оригинальность">Оригинал</param>
 </offer>
 
@@ -11893,7 +11891,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <categoryId></categoryId>
 <vendorCode>VT1T02P3CNL0</vendorCode>
 <name>Тонер-картридж TK-8115C Kyocera Ecosys M8124/M813 (оригинал)</name>
-<price>56900</price>
+<price>100</price>
 <picture>https://b2b.vtt.ru/images/1T02P3CNL0.jpg</picture>
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
@@ -11905,7 +11903,6 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <param name="Цвет">Голубой</param>
 <param name="Партномер">TK-8115C</param>
 <param name="Ресурс">6K</param>
-<param name="Коды расходников">1T02P3CNL0</param>
 <param name="Оригинальность">Оригинал</param>
 </offer>
 
@@ -12337,7 +12334,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <categoryId></categoryId>
 <vendorCode>VT1T02YPBNL0</vendorCode>
 <name>Тонер-катридж Kyocera TK-8365M для TASKalfa 2554ci (оригинал)</name>
-<price>100</price>
+<price>75900</price>
 <picture>https://b2b.vtt.ru/images/1T02YPBNL0.jpg</picture>
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
@@ -12350,6 +12347,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <param name="Партномер">TK-8365M</param>
 <param name="Совместимость">Kyocera TASKalfa 2554ci</param>
 <param name="Ресурс">12000</param>
+<param name="Коды расходников">1T02YPBNL0</param>
 <param name="Оригинальность">Оригинал</param>
 </offer>
 
@@ -14543,19 +14541,19 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <offer id="VT22012191" available="true">
 <categoryId></categoryId>
 <vendorCode>VT22012191</vendorCode>
-<name>Картридж 711 для HP DJ T120/T520, 29мл пурпурный CZ131A, 22012191 (оригинал)</name>
-<price>100</price>
+<name>Картридж 711 для HP DJ T120/T520, 29мл пурпурный CZ131A (оригинал)</name>
+<price>32900</price>
 <picture>https://b2b.vtt.ru/images/22012191.jpg</picture>
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж 711 для HP DJ T120/T520, 29мл пурпурный CZ131A, 22012191; совместимость — HP DJ T120/T520, 29мл пурпурный, 22012191; ресурс — 29 мл; технология печати — Струйная.]]></description>
+Оригинальный картридж 711 для HP DJ T120/T520, 29мл пурпурный CZ131A; ресурс — 29 мл; технология печати — Струйная.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Технология печати">Струйная</param>
 <param name="Для бренда">HP</param>
 <param name="Цвет">Пурпурный</param>
 <param name="Партномер">CZ131A</param>
-<param name="Совместимость">HP DJ T120/T520, 29мл пурпурный, 22012191</param>
+<param name="Совместимость">HP DJ T120/T</param>
 <param name="Ресурс">29 мл</param>
 <param name="Оригинальность">Оригинал</param>
 </offer>
@@ -17304,7 +17302,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <categoryId></categoryId>
 <vendorCode>VT302P393021</vendorCode>
 <name>302P393021/302P393020 Блок проявки DV-8115C Kyocera M8124cidn/M8130cidn (Голубой) (оригинал)</name>
-<price>100</price>
+<price>142900</price>
 <picture>https://placehold.co/800x800/png?text=No+Photo</picture>
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
@@ -19160,7 +19158,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <categoryId></categoryId>
 <vendorCode>VT408010</vendorCode>
 <name>Принт-картридж SP150HE Ricoh SP150/SP150w/SP150SU/SP150SUw (оригинал)</name>
-<price>18900</price>
+<price>100</price>
 <picture>https://b2b.vtt.ru/images/408010.jpg</picture>
 <vendor>Ricoh</vendor>
 <currencyId>KZT</currencyId>
@@ -33714,13 +33712,13 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <offer id="VT989698906" available="true">
 <categoryId></categoryId>
 <vendorCode>VT989698906</vendorCode>
-<name>Картридж TK-895M Kyocera FS-C8020MFP/C8025MFP/C8520MFP/C8525MFP (оригинал)</name>
-<price>60900</price>
+<name>Картридж TK-895M Kyocera FS-C8020MFP/C8025MFP/C8520MFP/C8525MFP, 6К малиновый 1T02K0BNL0, 989698906 (оригинал)</name>
+<price>100</price>
 <picture>https://b2b.vtt.ru/images/989698906.jpg</picture>
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж TK-895M Kyocera FS-C8020MFP/C8025MFP/C8520MFP/C8525MFP; цвет — Пурпурный; ресурс — 6K; технология печати — Лазерная.]]></description>
+Оригинальный картридж TK-895M Kyocera FS-C8020MFP/C8025MFP/C8520MFP/C8525MFP, 6К малиновый 1T02K0BNL0, 989698906; цвет — Пурпурный; ресурс — 6K; технология печати — Лазерная.]]></description>
 <param name="Тип">Картридж</param>
 <param name="Технология печати">Лазерная</param>
 <param name="Для бренда">Kyocera</param>
@@ -36542,7 +36540,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <categoryId></categoryId>
 <vendorCode>VT9899991979</vendorCode>
 <name>Тонер-картридж Hi-Black (HB-006R01731) для Xerox B1022/B1025 (совместимый)</name>
-<price>26900</price>
+<price>14900</price>
 <picture>https://b2b.vtt.ru/images/9899991979.jpg</picture>
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
@@ -57187,7 +57185,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <categoryId></categoryId>
 <vendorCode>VTDV-3100</vendorCode>
 <name>DV-3100 Блок проявки (Тех.упаковка) Kyocera FS-2100/4100/4200/4300DN (совместимый)</name>
-<price>44900</price>
+<price>47900</price>
 <picture>https://placehold.co/800x800/png?text=No+Photo</picture>
 <vendor>Kyocera</vendor>
 <currencyId>KZT</currencyId>
@@ -63023,7 +63021,7 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <categoryId></categoryId>
 <vendorCode>VTW2210A</vendorCode>
 <name>Картридж лазерный HP 207A для HP M255/MFP M282/M283 (оригинал)</name>
-<price>100</price>
+<price>56900</price>
 <picture>https://b2b.vtt.ru/images/W2210A.jpg</picture>
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>

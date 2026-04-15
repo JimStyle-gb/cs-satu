@@ -1,20 +1,5 @@
 # Сводный отчёт по товарам без categoryId
 
-## START VTT
-Поставщик: VTT
-Товаров без categoryId: 0
-
-# Все товары получили categoryId
-## END VTT
-
-
-
-
-
-
-
-
-
 ## START AkCent
 Поставщик: AkCent
 Товаров без categoryId: 0
@@ -42,3 +27,10 @@
 
 # Все товары получили categoryId
 ## END CopyLine
+
+## START VTT
+Поставщик: VTT
+Товаров без categoryId: 0
+
+# Все товары получили categoryId
+## END VTT
