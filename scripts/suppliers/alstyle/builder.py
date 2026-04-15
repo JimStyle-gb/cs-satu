@@ -1008,6 +1008,11 @@ def build_offer(
 
     price_in = normalize_price_in(src.purchase_price_text, src.price_text)
 
+    # Временно исключаем позиции AlStyle с ценой ровно 9999999
+    # (пока нет авторизации на продажу этих товаров).
+    if price_in == 9_999_999:
+        return None, False
+
     # ВАЖНО:
     # если desc_extract осознанно обнулил body как чистый spec/inline-spec блок,
     # нельзя откатываться к исходному desc_src, иначе техблок снова протечёт в raw/final.
