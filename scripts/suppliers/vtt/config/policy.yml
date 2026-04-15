@@ -10,6 +10,10 @@
 # - не строит offers;
 # - не подменяет builder/source/quality_gate.
 supplier: vtt
+timezone: Asia/Almaty
+next_run_hour_local: 2
+schedule_hour_almaty: 2
+schedule_minute_almaty: 30
 id_prefix: VT
 source_kind: html_site_parsing
 source_of_truth_for_params: page_params_first
