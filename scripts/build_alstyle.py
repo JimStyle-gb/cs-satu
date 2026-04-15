@@ -21,7 +21,7 @@ from typing import Any
 import yaml
 
 from cs.core import write_cs_feed, write_cs_feed_raw
-from cs.meta import next_run_at_hour, now_almaty
+from cs.meta import next_run_at_time, now_almaty
 from cs.qg_report import QualityGateResult, coerce_quality_gate_result
 
 from suppliers.alstyle.builder import build_offers
@@ -79,8 +79,11 @@ def _resolve_hour(policy_cfg: dict[str, Any]) -> int:
     return _safe_int(
         policy_cfg.get("schedule_hour_almaty")
         or policy_cfg.get("next_run_hour_local"),
-        2,
+        23,
     )
+
+def _resolve_minute(policy_cfg: dict[str, Any]) -> int:
+    return _safe_int(policy_cfg.get("schedule_minute_almaty"), 30)
 
 def _resolve_placeholder(policy_cfg: dict[str, Any]) -> str:
     return (
@@ -173,8 +176,9 @@ def main() -> int:
 
     supplier_name = str(policy_cfg.get("supplier") or "AlStyle").strip() or "AlStyle"
     hour = _resolve_hour(policy_cfg)
+    minute = _resolve_minute(policy_cfg)
     build_time = now_almaty()
-    next_run = next_run_at_hour(build_time, hour=hour)
+    next_run = next_run_at_time(build_time, hour=hour, minute=minute)
 
     placeholder_picture = _resolve_placeholder(policy_cfg)
     vendor_blacklist = _resolve_vendor_blacklist(policy_cfg)
