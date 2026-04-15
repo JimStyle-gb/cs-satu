@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<yml_catalog date="2026-04-15 18:18:14">
+<yml_catalog date="2026-04-16 01:14:47">
 <shop><offers>
 <!--FEED_META
 Поставщик                                  | ComPortal
 URL поставщика                             | https://www.comportal.kz/auth/documents/prices/yml-catalog.php
-Время сборки (Алматы)                      | 2026-04-15 18:18:14
-Ближайшая сборка (Алматы)                  | 2026-04-16 00:30:00
-Сколько товаров у поставщика до фильтра    | 1164
-Сколько товаров у поставщика после фильтра | 595
-Сколько товаров есть в наличии (true)      | 595
+Время сборки (Алматы)                      | 2026-04-16 01:14:47
+Ближайшая сборка (Алматы)                  | 2026-04-17 00:30:00
+Сколько товаров у поставщика до фильтра    | 1169
+Сколько товаров у поставщика после фильтра | 599
+Сколько товаров есть в наличии (true)      | 599
 Сколько товаров нет в наличии (false)      | 0
 -->
 
@@ -1361,6 +1361,32 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Для бренда">HP</param>
 </offer>
 
+<offer id="CP13834337" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13834337</vendorCode>
+<name>МФУ Canon I-SENSYS MF461DW (5951C020AA)</name>
+<price>240750</price>
+<picture>https://www.comportal.kz/upload/iblock/2d1/73e1mzhrcfztcswpu6qqfhbjj2m0z86t.JPG</picture>
+<vendor>Canon</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+МФУ. Формат печати: A4. Разрешение: 1200x1200. Скорость печати ч/б: 36. Порты: USB LAN WiFI. Технология печати: Лазерная. Гарантия: 12 мес.]]></description>
+<param name="Тип">МФУ</param>
+<param name="Модель">I-SENSYS MF461DW</param>
+<param name="Гарантия">12 мес</param>
+<param name="Разрешение">1200x1200</param>
+<param name="Формат печати">A4</param>
+<param name="Скорость печати ч/б">36</param>
+<param name="Технология печати">Лазерная</param>
+<param name="Порты">USB LAN WiFI</param>
+<param name="Функция">принтер сканер копир</param>
+<param name="Наличие картриджа (тонера) в комплекте">Стартовый</param>
+<param name="Нагрузка">80 000</param>
+<param name="Емкость 4-го лотка">550</param>
+<param name="Коды">5951C020AA</param>
+<param name="Для бренда">Canon</param>
+</offer>
+
 <offer id="CP13839973" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13839973</vendorCode>
@@ -1873,6 +1899,23 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Жесткий диск">6Gb</param>
 <param name="Коды">6QN36A#B19</param>
 <param name="Для бренда">HP</param>
+</offer>
+
+<offer id="CP13872950" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13872950</vendorCode>
+<name>МФУ Canon imageRUNNER C3326i (5965C005)</name>
+<price>746648</price>
+<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
+<vendor>Canon</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+МФУ. Гарантия: 12 мес. Для бренда: Canon. Модель: imageRUNNER C3326i. Коды: 5965C005.]]></description>
+<param name="Тип">МФУ</param>
+<param name="Гарантия">12 мес</param>
+<param name="Коды">5965C005</param>
+<param name="Модель">imageRUNNER C3326i</param>
+<param name="Для бренда">Canon</param>
 </offer>
 
 <offer id="CP10740881" available="true">
@@ -2688,6 +2731,29 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Функции">принтер</param>
 <param name="Коды">6246C003</param>
 <param name="Для бренда">Canon</param>
+</offer>
+
+<offer id="CP13870348" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13870348</vendorCode>
+<name>Плоттер HP DesignJet T230 24 (5HB07D#B19)</name>
+<price>248830</price>
+<picture>https://www.comportal.kz/upload/iblock/43e/1uap8lkkgs2hcli5v0tkqssr3d5z1ejv.jpg</picture>
+<vendor>HP</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Широкоформатный принтер. Формат печати: A1. Разрешение: 2400x1200. Скорость печати ч/б: 35. Порты: Gigabit Ethernet (1000Base-T), высокоскоростной порт USB 2.0, Wi-Fi 802.11a b/g n, Wi-Fi Direct. Технология печати: Струйная. Гарантия: 12 мес.]]></description>
+<param name="Тип">Широкоформатный принтер</param>
+<param name="Модель">DesignJet T230 24</param>
+<param name="Порты">Gigabit Ethernet (1000Base-T), высокоскоростной порт USB 2.0, Wi-Fi 802.11a b/g n, Wi-Fi Direct</param>
+<param name="Гарантия">12 мес</param>
+<param name="Технология печати">Струйная</param>
+<param name="Разрешение">2400x1200</param>
+<param name="Формат печати">A1</param>
+<param name="Скорость печати ч/б">35</param>
+<param name="Функции">принтер</param>
+<param name="Коды">5HB07D#B19</param>
+<param name="Для бренда">HP</param>
 </offer>
 
 <offer id="CP13870436" available="true">
@@ -7523,6 +7589,35 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Для бренда">Acer</param>
 </offer>
 
+<offer id="CP13871695" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13871695</vendorCode>
+<name>Монитор Acer Nitro VG270Ebmiix (UM.HV0EE.E06)</name>
+<price>58897</price>
+<picture>https://www.comportal.kz/upload/iblock/e0f/5imduu0kjt04hf7p5ozoguwf09mgoqyg.JPG</picture>
+<vendor>Acer</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Монитор. Модельная серия: Nitro VG270Ebmiix. Диагональ: 27. Максимальное разрешение: 1920x1080. Тип матрицы: IPS. Частота обновления: 100. Время отклика: 4. Порты: 1xVGA/2xHDMI(1.4)/ Audio In Out. Гарантия: 24 мес.]]></description>
+<param name="Тип">Монитор</param>
+<param name="Модель">Nitro VG270Ebmiix</param>
+<param name="Порты">1xVGA/2xHDMI(1.4)/ Audio In Out</param>
+<param name="Тип матрицы">IPS</param>
+<param name="Цвет">Чёрный</param>
+<param name="Гарантия">24 мес</param>
+<param name="Контрастность">1000:1</param>
+<param name="Яркость">250</param>
+<param name="Время отклика">4</param>
+<param name="Максимальное разрешение">1920x1080</param>
+<param name="Наличие динамиков">2Wx2</param>
+<param name="Углы обзора (вертикальный/горизонтальный)">178/178</param>
+<param name="Размер Pix">0,31</param>
+<param name="Диагональ">27</param>
+<param name="Частота обновления">100</param>
+<param name="Коды">UM.HV0EE.E06</param>
+<param name="Для бренда">Acer</param>
+</offer>
+
 <offer id="CP13871701" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13871701</vendorCode>
@@ -8446,6 +8541,51 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Разрешение дисплея">1920x1080</param>
 <param name="Для бренда">Dell</param>
 <param name="Коды">210-BGLW-N3404PVNB3530EMEA01_UBU</param>
+</offer>
+
+<offer id="CP13867051" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13867051</vendorCode>
+<name>Ноутбук Dell Latitude 7330 (210-BDRU-3)</name>
+<price>615993</price>
+<picture>https://www.comportal.kz/upload/iblock/4b1/3ymvis5i4sz2sr2ricqwebjnsakgd706.JPG</picture>
+<vendor>Dell</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Ноутбук. Модельная серия: Latitude 7330. Процессор: Intel 1235U Core i5 1,3. Оперативная память: 8 Gb / DDR4 / 3200. Накопитель: 512 / M.2 PCIe SSD / 1 шт. Диагональ: 13,3. Разрешение: 1920x1080. ОС: Ubuntu 20.04. Видеокарта: Intel Iris Xe 256 Mb. Wi‑Fi: AX211. Bluetooth: Bluetooth. Камера: Webcam. Гарантия: 36 мес.]]></description>
+<param name="Тип">Ноутбук</param>
+<param name="Модель">Latitude 7330</param>
+<param name="Объем жесткого диска">512</param>
+<param name="Тип жесткого диска">M.2 PCIe SSD</param>
+<param name="Производитель процессора">Intel</param>
+<param name="Модель процессора">Core i5</param>
+<param name="Серия процессора">1235U</param>
+<param name="Частота процессора">1,3</param>
+<param name="Оперативная память">8 Gb</param>
+<param name="Частота оперативной памяти">3200</param>
+<param name="Количество слотов памяти">2</param>
+<param name="Занятые слоты памяти">1</param>
+<param name="Объем видеопамяти">256 Mb</param>
+<param name="Тип оперативной памяти">DDR4</param>
+<param name="Тип привода">No ODD</param>
+<param name="Количество дисков">1</param>
+<param name="Размер дисплея">13,3</param>
+<param name="Тип матрицы">FHD</param>
+<param name="Производитель чипсета видеокарты">Intel</param>
+<param name="Марка чипсета видеокарты">Graphics</param>
+<param name="Модель чипсета видеокарты">Iris Xe</param>
+<param name="Операционная система">Ubuntu</param>
+<param name="Версия операционной системы">20.04</param>
+<param name="Цвет">Чёрный</param>
+<param name="Bluetooth">Bluetooth</param>
+<param name="Wi-Fi">AX211</param>
+<param name="Адаптер">65W AC Adapter</param>
+<param name="Аккумулятор">4-cell 58W HR</param>
+<param name="Гарантия">36 мес</param>
+<param name="Камера">Webcam</param>
+<param name="Разрешение дисплея">1920x1080</param>
+<param name="Коды">210-BDRU-3</param>
+<param name="Для бренда">Dell</param>
 </offer>
 
 <offer id="CP13867052" available="true">
@@ -12162,23 +12302,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Для бренда">Dell</param>
 <param name="Модель">Pro 14 PC14250</param>
 <param name="Коды">210-BQHF / BTO120_PC14250_EMEA</param>
-</offer>
-
-<offer id="CP13873185" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13873185</vendorCode>
-<name>Ноутбук ASUS TUF Gaming F16 / FX608JHI-TU217 (90NR0NA1-M00BK0)</name>
-<price>582942</price>
-<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
-<vendor>ASUS</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Ноутбук. Гарантия: 12 мес. Для бренда: ASUS. Модель: TUF Gaming F16 / FX608JHI-TU217. Коды: 90NR0NA1-M00BK0.]]></description>
-<param name="Тип">Ноутбук</param>
-<param name="Гарантия">12 мес</param>
-<param name="Коды">90NR0NA1-M00BK0</param>
-<param name="Модель">TUF Gaming F16 / FX608JHI-TU217</param>
-<param name="Для бренда">ASUS</param>
 </offer>
 
 <offer id="CP13873203" available="true">
