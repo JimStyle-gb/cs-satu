@@ -14,10 +14,10 @@ PAYMENT_ITEMS = [
 ]
 
 DELIVERY_ITEMS = [
-    '<em><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</em>',
-    '<em><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</em>',
-    '<em><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</em>',
-    '<em><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</em>',
+    '<strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!',
+    '<strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней',
+    '<strong>ОТПРАВИМ</strong> товар любой курьерской компанией!',
+    '<strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»',
 ]
 
 DISPLAY_KEY_MAP = {
@@ -310,7 +310,7 @@ def _build_characteristics_items(characteristics: list[tuple[str, str]], limit: 
 
 def _render_text_list(items: Iterable[str]) -> str:
     body = "".join(f"<li>{item}</li>" for item in items if _clean_text(item))
-    return f'<ul style="margin:0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;">{body}</ul>' if body else ""
+    return f'<ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;">{body}</ul>' if body else ""
 
 
 def _render_characteristics(items: list[tuple[str, str]]) -> str:
@@ -320,7 +320,7 @@ def _render_characteristics(items: list[tuple[str, str]]) -> str:
         f"<li><strong>{_escape_text(key)}:</strong> {_escape_text(value)}</li>"
         for key, value in items
     )
-    return f"<h3>Характеристики</h3>\n<ul>{body}</ul>"
+    return f'<h3 style="margin:14px 0 8px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Характеристики</h3>\n<ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;">{body}</ul>'
 
 
 def build_chars_block(*args: Any, **kwargs: Any) -> str:
@@ -333,13 +333,12 @@ def build_chars_block(*args: Any, **kwargs: Any) -> str:
 
 def _render_whatsapp_block() -> str:
     return (
-        '<div style="text-align:center;margin:8px 0 6px 0;">\n'
+        '<div style="text-align:center;margin:10px 0 8px 0;">\n'
         '  <div class="ck-alert ck-alert_theme_green">\n'
-        '    <div style="padding:4px 8px;">\n'
+        '    <div style="padding:4px 10px;font-family:inherit;">\n'
         '      <span class="ck-alert__title"></span>\n'
-        '      <p style="margin:0 0 4px 0;"><strong>Есть вопросы по товару?</strong></p>\n'
-        '      <p style="margin:0 0 4px 0;">Напишите нам в WhatsApp, чтобы уточнить наличие, сроки поставки и комплектацию.</p>\n'
-        f'      <p style="margin:0;"><a href="{_escape_attr(WHATSAPP_URL)}"><strong>💬 НАПИСАТЬ В WHATSAPP</strong></a></p>\n'
+        '      <p style="margin:0 0 6px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>Просьба отправлять запросы на WhatsApp!</strong></p>\n'
+        f'      <p style="margin:0;font-size:14px;line-height:1.5;font-family:inherit;"><a href="{_escape_attr(WHATSAPP_URL)}" style="display:inline-block;padding:6px 12px;border:1px solid #146737;border-radius:6px;color:#146737;text-decoration:none;background:#FFFFFF;font-family:inherit;"><strong>💬 НАПИСАТЬ В WHATSAPP</strong></a></p>\n'
         '    </div>\n'
         '  </div>\n'
         '</div>'
@@ -350,13 +349,13 @@ def _render_payment_delivery_block() -> str:
     payment_html = _render_text_list(PAYMENT_ITEMS)
     delivery_html = _render_text_list(DELIVERY_ITEMS)
     return (
-        '<div class="ck-alert ck-alert_theme_orange" style="margin:6px 0 0 0;">\n'
-        '  <div style="padding:4px 8px;">\n'
+        '<div class="ck-alert ck-alert_theme_orange" style="margin:8px 0 0 0;">\n'
+        '  <div style="padding:4px 10px;font-family:inherit;">\n'
         '    <span class="ck-alert__title"></span>\n'
-        '    <h3 style="text-align:left;margin:0 0 6px 0;">Оплата</h3>\n'
+        '    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Оплата</h3>\n'
         f'    {payment_html}\n'
         '    <hr style="border:none;height:1px;background:#E7D6B7;margin:8px 0;" />\n'
-        '    <h3 style="text-align:left;margin:0 0 6px 0;">Доставка по Алматы и Казахстану</h3>\n'
+        '    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Доставка по Алматы и Казахстану</h3>\n'
         f'    {delivery_html}\n'
         '  </div>\n'
         '</div>'
@@ -369,14 +368,14 @@ def _render_description(name: str, main_text: str, characteristics: Any = None) 
     intro = _build_intro(title, main_text, chars_raw)
     bullets = _build_fact_bullets(chars_raw)
 
-    parts: list[str] = [f"<h3>{_escape_text(title)}</h3>"]
+    parts: list[str] = [f'<div style="font-family:Verdana, Tahoma, Arial, sans-serif;color:#2F2F2F;">\n<h3 style="margin:0 0 10px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">{_escape_text(title)}</h3>']
     if intro:
-        parts.append(f"<p>{_escape_text(intro)}</p>")
+        parts.append(f'<p style="margin:0 0 10px 0;font-size:14px;line-height:1.5;font-family:inherit;">{_escape_text(intro)}</p>')
 
     if bullets:
-        parts.append("<h3>Преимущества модели</h3>")
+        parts.append('<h3 style="margin:14px 0 8px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Преимущества модели</h3>')
         bullet_html = "".join(f"<li>{_escape_text(item)}</li>" for item in bullets)
-        parts.append(f"<ul>{bullet_html}</ul>")
+        parts.append(f'<ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;">{bullet_html}</ul>')
 
     chars_html = _render_characteristics(chars_items)
     if chars_html:
@@ -384,6 +383,7 @@ def _render_description(name: str, main_text: str, characteristics: Any = None) 
 
     parts.append(_render_whatsapp_block())
     parts.append(_render_payment_delivery_block())
+    parts.append("</div>")
     return "\n\n".join(part for part in parts if part)
 
 
