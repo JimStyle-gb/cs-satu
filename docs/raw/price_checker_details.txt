@@ -1,6 +1,6 @@
 ПОДРОБНЫЙ ОТЧЁТ PRICE CHECKER
-Сформирован: 15 апреля 2026 г. 17:27:02
-Время сборки Price: 15 апреля 2026 г. 17:23:31
+Сформирован: 15 апреля 2026 г. 19:44:06
+Время сборки Price: 15 апреля 2026 г. 19:43:25
 Итоговый статус: ТРЕБУЕТ ВНИМАНИЯ
 Причина: У поставщика AlStyle количество товаров изменилось сильнее допустимого порога.
 
@@ -8,11 +8,11 @@
 СВОДКА
 ======================================================================
 Всего товаров в Price: 7094
-В наличии: 6603
-Нет в наличии: 491
+В наличии: 6598
+Нет в наличии: 496
 
-С ценой 100: 265
-С заглушкой фото: 564
+С ценой 100: 269
+С заглушкой фото: 565
 Без categoryId в Price: 0
 Без категории Satu: 0
 Не вошло в final без categoryId: 0
@@ -26,10 +26,10 @@
 СВОДКА ПО ПОСТАВЩИКАМ
 ======================================================================
 AkCent | всего=180 | в наличии=180 | нет в наличии=0 | цена 100=0 | заглушка фото=7 | не вошло в final без categoryId=0 | без категории Satu=0
-AlStyle | всего=1991 | в наличии=1500 | нет в наличии=491 | цена 100=4 | заглушка фото=8 | не вошло в final без categoryId=0 | без категории Satu=0
-ComPortal | всего=595 | в наличии=595 | нет в наличии=0 | цена 100=0 | заглушка фото=101 | не вошло в final без categoryId=0 | без категории Satu=0
+AlStyle | всего=1991 | в наличии=1495 | нет в наличии=496 | цена 100=4 | заглушка фото=8 | не вошло в final без categoryId=0 | без категории Satu=0
+ComPortal | всего=595 | в наличии=595 | нет в наличии=0 | цена 100=0 | заглушка фото=102 | не вошло в final без categoryId=0 | без категории Satu=0
 CopyLine | всего=1220 | в наличии=1220 | нет в наличии=0 | цена 100=26 | заглушка фото=0 | не вошло в final без categoryId=0 | без категории Satu=0
-VTT | всего=3108 | в наличии=3108 | нет в наличии=0 | цена 100=235 | заглушка фото=448 | не вошло в final без categoryId=0 | без категории Satu=0
+VTT | всего=3108 | в наличии=3108 | нет в наличии=0 | цена 100=239 | заглушка фото=448 | не вошло в final без categoryId=0 | без категории Satu=0
 
 ======================================================================
 НЕ ВОШЛИ В FINAL ИЗ-ЗА ОТСУТСТВИЯ CATEGORYID
@@ -89,12 +89,14 @@ VTT | price_100 | id=VT106R02773 | vendorCode=VT106R02773 | categoryId=101 | pri
 VTT | price_100 | id=VT106R02774 | vendorCode=VT106R02774 | categoryId=101 | price=100 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Рефил Phaser 3020/ WC 3025, 1,5K (O) (оригинал)
 VTT | price_100 | id=VT106R03482 | vendorCode=VT106R03482 | categoryId=101 | price=100 | picture=https://b2b.vtt.ru/images/106R03482.jpg | name=Тонер-картридж Xerox Phaser 6510/ W (оригинал)
 VTT | price_100 | id=VT106R03484 | vendorCode=VT106R03484 | categoryId=101 | price=100 | picture=https://b2b.vtt.ru/images/106R03484.jpg | name=Тонер-картридж Xerox Phaser 6510/WC 6515 (оригинал)
+VTT | price_100 | id=VT106R03488 | vendorCode=VT106R03488 | categoryId=101 | price=100 | picture=https://b2b.vtt.ru/images/106R03488.jpg | name=Тонер-картридж Xerox Phaser 6510/ WC 6515 (оригинал)
 VTT | price_100 | id=VT106R03583 | vendorCode=VT106R03583 | categoryId=101 | price=100 | picture=https://b2b.vtt.ru/images/106R03583.jpg | name=Тонер-картридж XEROX VL B400/B405 (оригинал)
 VTT | price_100 | id=VT106R03747 | vendorCode=VT106R03747 | categoryId=102 | price=100 | picture=https://b2b.vtt.ru/images/106R03747.jpg | name=Тонер-картридж XEROX VersaLink C7020/7025/7030 (оригинал)
 VTT | price_100 | id=VT106R03943 | vendorCode=VT106R03943 | categoryId=101 | price=100 | picture=https://b2b.vtt.ru/images/106R03943.jpg | name=Тонер-картридж XEROX VL B600/B605/B610/B615 (оригинал)
 VTT | price_100 | id=VT108R01416 | vendorCode=VT108R01416 | categoryId=101 | price=100 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Картридж для отработанного тонера Phaser 6510/ WC 6515/ VL C500/505/600 (оригинал)
 VTT | price_100 | id=VT108R01417 | vendorCode=VT108R01417 | categoryId=105 | price=100 | picture=https://b2b.vtt.ru/images/108R01417.jpg | name=Фотобарабан Xerox Phaser 6510/ W (оригинал)
 VTT | price_100 | id=VT108R01418 | vendorCode=VT108R01418 | categoryId=105 | price=100 | picture=https://b2b.vtt.ru/images/108R01418.jpg | name=Фотобарабан Xerox Phaser 6510/ W (оригинал)
+VTT | price_100 | id=VT108R01419 | vendorCode=VT108R01419 | categoryId=105 | price=100 | picture=https://b2b.vtt.ru/images/108R01419.jpg | name=Фотобарабан Xerox Phaser 6510/ W (оригинал)
 VTT | price_100 | id=VT108R01420 | vendorCode=VT108R01420 | categoryId=105 | price=100 | picture=https://b2b.vtt.ru/images/108R01420.jpg | name=Фотобарабан Xerox Phaser 6510/ W (оригинал)
 VTT | price_100 | id=VT115R00128 | vendorCode=VT115R00128 | categoryId=101 | price=100 | picture=https://placehold.co/800x800/png?text=No+Photo | name=115R00128 Контейнер для отработанного тонера Xerox VL C7020/7025/7030 (оригинал)
 VTT | price_100 | id=VT1241C002 | vendorCode=VT1241C002 | categoryId=101 | price=100 | picture=https://b2b.vtt.ru/images/1241C002.jpg | name=Тонер-картридж 045 C Canon LBP610, Color iC MF630 (оригинал)
@@ -107,6 +109,7 @@ VTT | price_100 | id=VT150122108 | vendorCode=VT150122108 | categoryId=102 | pri
 VTT | price_100 | id=VT150122110 | vendorCode=VT150122110 | categoryId=102 | price=100 | picture=https://b2b.vtt.ru/images/150122110.jpg | name=Картридж Epson Stylus SX230/235W/SX420W/SX425W/BX305F C13T12924011/C13T12924012, C, 150122110 (оригинал)
 VTT | price_100 | id=VT1501609463 | vendorCode=VT1501609463 | categoryId=103 | price=100 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Чернила Canon GI-490M PIXMA G1400/2400/3400, 70мл пурпурные 0665C001, 1501609463 (оригинал)
 VTT | price_100 | id=VT1501609464 | vendorCode=VT1501609464 | categoryId=103 | price=100 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Чернила Canon GI-490Y PIXMA G1400/2400/3400, 70мл жёлтые 0666C001, 1501609464 (оригинал)
+VTT | price_100 | id=VT1502091002 | vendorCode=VT1502091002 | categoryId=102 | price=100 | picture=https://b2b.vtt.ru/images/1502091002.jpg | name=Картридж 913A для HP PW 352dw/377dw/Pro477dw/452dw F6T77AE, C, 1502091002 (оригинал)
 VTT | price_100 | id=VT1502091004 | vendorCode=VT1502091004 | categoryId=102 | price=100 | picture=https://b2b.vtt.ru/images/1502091004.jpg | name=Картридж 913A для HP PW 352dw/377dw/Pro477dw/452dw F6T79AE, Y, 1502091004 (оригинал)
 VTT | price_100 | id=VT150209207 | vendorCode=VT150209207 | categoryId=102 | price=100 | picture=https://b2b.vtt.ru/images/150209207.jpg | name=Картридж 46 для HP DJ 2020/2520, 0,75К CZ638AE, Color, 150209207 (оригинал)
 VTT | price_100 | id=VT150215931 | vendorCode=VT150215931 | categoryId=102 | price=100 | picture=https://b2b.vtt.ru/images/150215931.jpg | name=Картридж 121 для HP DJ F4283/D2563, 165стр. CC643HE, Color, 150215931 (оригинал)
@@ -116,8 +119,11 @@ VTT | price_100 | id=VT1T02ND0NL0 | vendorCode=VT1T02ND0NL0 | categoryId=101 | p
 VTT | price_100 | id=VT1T02NDANL1 | vendorCode=VT1T02NDANL1 | categoryId=101 | price=100 | picture=https://b2b.vtt.ru/images/1T02NDANL1.jpg | name=Тонер-картридж TK-8515Y Kyocera 5052ci/6052ci (оригинал)
 VTT | price_100 | id=VT1T02NDBNL1 | vendorCode=VT1T02NDBNL1 | categoryId=101 | price=100 | picture=https://b2b.vtt.ru/images/1T02NDBNL1.jpg | name=Тонер-картридж TK-8515M Kyocera 5052ci/6052ci (оригинал)
 VTT | price_100 | id=VT1T02NDCNL1 | vendorCode=VT1T02NDCNL1 | categoryId=101 | price=100 | picture=https://b2b.vtt.ru/images/1T02NDCNL1.jpg | name=Тонер-картридж TK-8515C Kyocera 5052ci/6052ci (оригинал)
+VTT | price_100 | id=VT1T02P10NL0 | vendorCode=VT1T02P10NL0 | categoryId=101 | price=100 | picture=https://b2b.vtt.ru/images/1T02P10NL0.jpg | name=Тонер-картридж TK-6115 для Kyocera M4125idn/M4132idn (оригинал)
 VTT | price_100 | id=VT1T02P30NL0 | vendorCode=VT1T02P30NL0 | categoryId=101 | price=100 | picture=https://b2b.vtt.ru/images/1T02P30NL0.jpg | name=Тонер-картридж TK-8115K Kyocera Ecosys M8124 (оригинал)
 VTT | price_100 | id=VT1T02P3ANL0 | vendorCode=VT1T02P3ANL0 | categoryId=101 | price=100 | picture=https://b2b.vtt.ru/images/1T02P3ANL0.jpg | name=Тонер-картридж TK-8115Y Kyocera Ecosys M8124/M813 (оригинал)
+VTT | price_100 | id=VT1T02P3BNL0 | vendorCode=VT1T02P3BNL0 | categoryId=101 | price=100 | picture=https://b2b.vtt.ru/images/1T02P3BNL0.jpg | name=Тонер-картридж TK-8115M Kyocera Ecosys M8124/M813 (оригинал)
+VTT | price_100 | id=VT1T02P3CNL0 | vendorCode=VT1T02P3CNL0 | categoryId=101 | price=100 | picture=https://b2b.vtt.ru/images/1T02P3CNL0.jpg | name=Тонер-картридж TK-8115C Kyocera Ecosys M8124/M813 (оригинал)
 VTT | price_100 | id=VT1T02R7ANL0 | vendorCode=VT1T02R7ANL0 | categoryId=101 | price=100 | picture=https://b2b.vtt.ru/images/1T02R7ANL0.jpg | name=Тонер-картридж TK-5240Y Kyocera Mita P5026cdn/cdw, M5526cdn/cdw (оригинал)
 VTT | price_100 | id=VT1T02R7CNL0 | vendorCode=VT1T02R7CNL0 | categoryId=101 | price=100 | picture=https://b2b.vtt.ru/images/1T02R7CNL0.jpg | name=Тонер-картридж TK-5240C Kyocera Mita P5026cdn/cdw, M5526cdn/cdw (оригинал)
 VTT | price_100 | id=VT1T02R90NL0 | vendorCode=VT1T02R90NL0 | categoryId=101 | price=100 | picture=https://b2b.vtt.ru/images/1T02R90NL0.jpg | name=Тонер-картридж TK-5230K Kyocera P5021/M5521 (оригинал)
@@ -131,13 +137,11 @@ VTT | price_100 | id=VT1T02TVBNL0 | vendorCode=VT1T02TVBNL0 | categoryId=101 | p
 VTT | price_100 | id=VT1T02TVCNL0 | vendorCode=VT1T02TVCNL0 | categoryId=101 | price=100 | picture=https://b2b.vtt.ru/images/1T02TVCNL0.jpg | name=Тонер-картридж TK-5270C Kyocera P6230cdn/M6230cidn/M6630 (оригинал)
 VTT | price_100 | id=VT1T02YP0NL0 | vendorCode=VT1T02YP0NL0 | categoryId=101 | price=100 | picture=https://b2b.vtt.ru/images/1T02YP0NL0.jpg | name=Тонер-катридж Kyocera TK-8365K для TASKalfa 2554ci (оригинал)
 VTT | price_100 | id=VT1T02YPANL0 | vendorCode=VT1T02YPANL0 | categoryId=101 | price=100 | picture=https://b2b.vtt.ru/images/1T02YPANL0.jpg | name=Тонер-катридж Kyocera TK-8365Y для TASKalfa 2554ci (оригинал)
-VTT | price_100 | id=VT1T02YPBNL0 | vendorCode=VT1T02YPBNL0 | categoryId=101 | price=100 | picture=https://b2b.vtt.ru/images/1T02YPBNL0.jpg | name=Тонер-катридж Kyocera TK-8365M для TASKalfa 2554ci (оригинал)
 VTT | price_100 | id=VT1T02YPCNL0 | vendorCode=VT1T02YPCNL0 | categoryId=101 | price=100 | picture=https://b2b.vtt.ru/images/1T02YPCNL0.jpg | name=Тонер-катридж Kyocera TK-8365C для TASKalfa 2554ci (оригинал)
 VTT | price_100 | id=VT1VV21AE | vendorCode=VT1VV21AE | categoryId=103 | price=100 | picture=https://b2b.vtt.ru/images/1VV21AE.jpg | name=Чернила GT53XL для HP Smart Tank 6000стр/135мл чёрные (оригинал)
 VTT | price_100 | id=VT2200C002 | vendorCode=VT2200C002 | categoryId=101 | price=100 | picture=https://b2b.vtt.ru/images/2200C002.jpg | name=Картридж 052H для Canon MF421dw/MF426dw/MF428x/MF429x (оригинал)
 VTT | price_100 | id=VT2201215 | vendorCode=VT2201215 | categoryId=102 | price=100 | picture=https://b2b.vtt.ru/images/2201215.jpg | name=Картридж 711 для HP DJ T120/T520, 80мл чёрный CZ133A, 2201215 (оригинал)
 VTT | price_100 | id=VT2201219 | vendorCode=VT2201219 | categoryId=102 | price=100 | picture=https://b2b.vtt.ru/images/2201219.jpg | name=Картридж 711 для HP DJ T120/T520, 38мл черный CZ129A, 2201219 (оригинал)
-VTT | price_100 | id=VT22012191 | vendorCode=VT22012191 | categoryId=102 | price=100 | picture=https://b2b.vtt.ru/images/22012191.jpg | name=Картридж 711 для HP DJ T120/T520, 29мл пурпурный CZ131A, 22012191 (оригинал)
 VTT | price_100 | id=VT2884C001 | vendorCode=VT2884C001 | categoryId=102 | price=100 | picture=https://b2b.vtt.ru/images/2884C001.jpg | name=Картридж PFI-120MBK Canon TM-200/205/300/305, 130 мл matte (оригинал)
 VTT | price_100 | id=VT2885C001 | vendorCode=VT2885C001 | categoryId=102 | price=100 | picture=https://b2b.vtt.ru/images/2885C001.jpg | name=Картридж PFI-120BK Canon TM-200/205/300 (оригинал)
 VTT | price_100 | id=VT2889C001 | vendorCode=VT2889C001 | categoryId=102 | price=100 | picture=https://b2b.vtt.ru/images/2889C001.jpg | name=Картридж PFI-320MBK Canon TM-200/205/300/305, 300 мл matte (оригинал)
@@ -158,7 +162,6 @@ VTT | price_100 | id=VT302L793050 | vendorCode=VT302L793050 | categoryId=105 | p
 VTT | price_100 | id=VT302NP93044 | vendorCode=VT302NP93044 | categoryId=202 | price=100 | picture=https://b2b.vtt.ru/images/302NP93044.jpg | name=302NP93044/DV-8325C Блок проявки Kyocera TASKalfa 2551ci (Голубой) (оригинал)
 VTT | price_100 | id=VT302NP93064 | vendorCode=VT302NP93064 | categoryId=202 | price=100 | picture=https://b2b.vtt.ru/images/302NP93064.jpg | name=302NP93064/DV-8325M Блок проявки Kyocera TASKalfa 2551ci (Пурпурный) (оригинал)
 VTT | price_100 | id=VT302NR93150 | vendorCode=VT302NR93150 | categoryId=101 | price=100 | picture=https://placehold.co/800x800/png?text=No+Photo | name=302NR93150/WT-5140 Бункер отработанного тонера Kyocera P6130/P7040/M6030/P6035 (оригинал)
-VTT | price_100 | id=VT302P393021 | vendorCode=VT302P393021 | categoryId=202 | price=100 | picture=https://placehold.co/800x800/png?text=No+Photo | name=302P393021/302P393020 Блок проявки DV-8115C Kyocera M8124cidn/M8130cidn (Голубой) (оригинал)
 VTT | price_100 | id=VT302P393031 | vendorCode=VT302P393031 | categoryId=202 | price=100 | picture=https://placehold.co/800x800/png?text=No+Photo | name=302P393031/302P393030 Блок проявки DV-8115K Kyocera M8124cidn/M8130cidn (Чёрный) (оригинал)
 VTT | price_100 | id=VT302P393041 | vendorCode=VT302P393041 | categoryId=202 | price=100 | picture=https://b2b.vtt.ru/images/302P393041.jpg | name=302P393041/302P393040 Блок проявки DV-8115M Kyocera M8124cidn/M8130cidn (Пурпурный) (оригинал)
 VTT | price_100 | id=VT302P393051 | vendorCode=VT302P393051 | categoryId=202 | price=100 | picture=https://placehold.co/800x800/png?text=No+Photo | name=302P393051/302P393050 Блок проявки DV-8115Y Kyocera M8124cidn/M8130cidn (Желтый) (оригинал)
@@ -178,6 +181,7 @@ VTT | price_100 | id=VT401080122 | vendorCode=VT401080122 | categoryId=101 | pri
 VTT | price_100 | id=VT4010804 | vendorCode=VT4010804 | categoryId=101 | price=100 | picture=https://b2b.vtt.ru/images/4010804.jpg | name=Картридж TK-475 Kyocera FS-6025MFP/B/6030MFP/6525MFP/6530MFP, 15К 1T02K30NL0, 4010804 (оригинал)
 VTT | price_100 | id=VT407246 | vendorCode=VT407246 | categoryId=101 | price=100 | picture=https://b2b.vtt.ru/images/407246.jpg | name=LE Принт-картридж SP311HE Ricoh SP311/325 (оригинал)
 VTT | price_100 | id=VT407999 | vendorCode=VT407999 | categoryId=101 | price=100 | picture=https://b2b.vtt.ru/images/407999.jpg | name=LE Принт-картридж SP201E Ricoh серии SP220 (оригинал)
+VTT | price_100 | id=VT408010 | vendorCode=VT408010 | categoryId=101 | price=100 | picture=https://b2b.vtt.ru/images/408010.jpg | name=Принт-картридж SP150HE Ricoh SP150/SP150w/SP150SU/SP150SUw (оригинал)
 VTT | price_100 | id=VT410060309 | vendorCode=VT410060309 | categoryId=202 | price=100 | picture=https://b2b.vtt.ru/images/410060309.jpg | name=DV-1140/302MK93010 Блок проявки Kyocera FS-1035MFP/1135MFP, 410060309 (оригинал)
 VTT | price_100 | id=VT41006031015 | vendorCode=VT41006031015 | categoryId=101 | price=100 | picture=https://b2b.vtt.ru/images/41006031015.jpg | name=Тонер-картридж Kyocera TASKalfa 406ci TK-5215С, 15K, С, 41006031015 (оригинал)
 VTT | price_100 | id=VT41006031017 | vendorCode=VT41006031017 | categoryId=101 | price=100 | picture=https://b2b.vtt.ru/images/41006031017.jpg | name=Тонер-картридж Kyocera TASKalfa 406ci TK-5215Y, 15K, Y, 41006031017 (оригинал)
@@ -228,6 +232,7 @@ VTT | price_100 | id=VT98968046 | vendorCode=VT98968046 | categoryId=101 | price
 VTT | price_100 | id=VT98968047 | vendorCode=VT98968047 | categoryId=101 | price=100 | picture=https://b2b.vtt.ru/images/98968047.jpg | name=Тонер-картридж Xerox WC 7120/7125/7220/7225, 15К жёлтый 006R01462, 98968047 (оригинал)
 VTT | price_100 | id=VT98968048 | vendorCode=VT98968048 | categoryId=101 | price=100 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Контейнер отработанного тонера Xerox WC7120 (33K) 008R13089, 98968048 (оригинал)
 VTT | price_100 | id=VT989698905 | vendorCode=VT989698905 | categoryId=101 | price=100 | picture=https://b2b.vtt.ru/images/989698905.jpg | name=Картридж TK-895C Kyocera FS-C8020MFP/C8025MFP/C8520MFP/C8525MFP, 6К голубой 1T02K0CNL0, 989698905 (оригинал)
+VTT | price_100 | id=VT989698906 | vendorCode=VT989698906 | categoryId=101 | price=100 | picture=https://b2b.vtt.ru/images/989698906.jpg | name=Картридж TK-895M Kyocera FS-C8020MFP/C8025MFP/C8520MFP/C8525MFP, 6К малиновый 1T02K0BNL0, 989698906 (оригинал)
 VTT | price_100 | id=VT989698907 | vendorCode=VT989698907 | categoryId=101 | price=100 | picture=https://b2b.vtt.ru/images/989698907.jpg | name=Картридж TK-895Y Kyocera FS-C8020MFP/C8025MFP/C8520MFP/C8525MFP, 6К жёлтый 1T02K0ANL0, 989698907 (оригинал)
 VTT | price_100 | id=VT989698909 | vendorCode=VT989698909 | categoryId=101 | price=100 | picture=https://b2b.vtt.ru/images/989698909.jpg | name=Картридж TK-4105 Kyocera TASKalfa 1800/2200/1801/2201, 15К 1T02NG0NL0, 989698909 (оригинал)
 VTT | price_100 | id=VT989698931 | vendorCode=VT989698931 | categoryId=202 | price=100 | picture=https://placehold.co/800x800/png?text=No+Photo | name=DV-350/302J193010/302LW93010 Блок проявки Kyocera FS-3920DN/3040MFP/3140MFP/3540MFP, 989698931 (оригинал)
@@ -302,7 +307,6 @@ VTT | price_100 | id=VTSHARP82 | vendorCode=VTSHARP82 | categoryId=108 | price=1
 VTT | price_100 | id=VTW1106A | vendorCode=VTW1106A | categoryId=101 | price=100 | picture=https://b2b.vtt.ru/images/W1106A.jpg | name=Картридж 106А для HP Laser 107a/r/135a/HP Laser 107a/137fnw (оригинал)
 VTT | price_100 | id=VTW2032X | vendorCode=VTW2032X | categoryId=101 | price=100 | picture=https://b2b.vtt.ru/images/W2032X.jpg | name=Тонер-картридж 415X для HP LJ M454/MFP (оригинал)
 VTT | price_100 | id=VTW2072A | vendorCode=VTW2072A | categoryId=101 | price=100 | picture=https://b2b.vtt.ru/images/W2072A.jpg | name=Картридж 117 для HP Laser 150/MFP 178/179 (оригинал)
-VTT | price_100 | id=VTW2210A | vendorCode=VTW2210A | categoryId=101 | price=100 | picture=https://b2b.vtt.ru/images/W2210A.jpg | name=Картридж лазерный HP 207A для HP M255/MFP M282/M283 (оригинал)
 VTT | price_100 | id=VTW2210X | vendorCode=VTW2210X | categoryId=101 | price=100 | picture=https://b2b.vtt.ru/images/W2210X.jpg | name=Картридж лазерный HP 207X для HP M255/MFP M282/M283 (оригинал)
 VTT | price_100 | id=VTZ7Y68A | vendorCode=VTZ7Y68A | categoryId=202 | price=100 | picture=https://b2b.vtt.ru/images/Z7Y68A.jpg | name=Z7Y68A/JC96-12504A Блок проявки HP CLJ E87640/E87650/E87660 (оригинал)
 VTT | price_100 | id=VTZ7Y69A | vendorCode=VTZ7Y69A | categoryId=202 | price=100 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Z7Y69A/JC96-12503A Блок проявки HP CLJ E87640/E87650/E87660 (оригинал)
@@ -384,6 +388,7 @@ ComPortal | placeholder_photo | id=CP13873237 | vendorCode=CP13873237 | category
 ComPortal | placeholder_photo | id=CP13873238 | vendorCode=CP13873238 | categoryId=602 | price=66900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Монитор Dell Pro 22 Adjustable Stand Monitor - E2225HSM (210-BRDT)
 ComPortal | placeholder_photo | id=CP13873239 | vendorCode=CP13873239 | categoryId=602 | price=89900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Монитор Dell Pro 27 Monitor E2725HM, 68.60 cm (27.0") (210-BRDQ)
 ComPortal | placeholder_photo | id=CP13873241 | vendorCode=CP13873241 | categoryId=602 | price=74900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Монитор Dell SE2425HG (210-BSNR)
+ComPortal | placeholder_photo | id=CP13873253 | vendorCode=CP13873253 | categoryId=602 | price=234900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Монитор Dell Pro Hub Conferencing Monitor - P2726DEB (210-BVHR)
 ComPortal | placeholder_photo | id=CP13872581 | vendorCode=CP13872581 | categoryId=601 | price=841900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Ноутбук ASUS ROG Strix G16 / G615JHR-S5039 (90NR0LL1-M001B0)
 ComPortal | placeholder_photo | id=CP13872585 | vendorCode=CP13872585 | categoryId=601 | price=474900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Ноутбук ASUS ExpertBook / P1403CVA-S61790X (90NX0871-M022V0)
 ComPortal | placeholder_photo | id=CP13872591 | vendorCode=CP13872591 | categoryId=601 | price=522900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Ноутбук ASUS ExpertBook / P1503CVA-S72536X (90NX0881-M02Y90)
@@ -417,6 +422,7 @@ ComPortal | placeholder_photo | id=CP13873167 | vendorCode=CP13873167 | category
 ComPortal | placeholder_photo | id=CP13873168 | vendorCode=CP13873168 | categoryId=601 | price=1047900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Ноутбук Dell Pro 14 PC14250 (210-BQHF / BTO108_PC14250_EMEA)
 ComPortal | placeholder_photo | id=CP13873169 | vendorCode=CP13873169 | categoryId=601 | price=933900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Ноутбук Dell Pro 14 PC14250 (210-BQHF / BTO121_PC14250_EMEA)
 ComPortal | placeholder_photo | id=CP13873170 | vendorCode=CP13873170 | categoryId=601 | price=764900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Ноутбук Dell Pro 14 PC14250 (210-BQHF / BTO120_PC14250_EMEA)
+ComPortal | placeholder_photo | id=CP13873185 | vendorCode=CP13873185 | categoryId=601 | price=636900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Ноутбук ASUS TUF Gaming F16 / FX608JHI-TU217 (90NR0NA1-M00BK0)
 ComPortal | placeholder_photo | id=CP13873203 | vendorCode=CP13873203 | categoryId=601 | price=748900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Ноутбук HP ProBook 4 G1i 16 AI (D0UW2ET#BJA)
 ComPortal | placeholder_photo | id=CP13873244 | vendorCode=CP13873244 | categoryId=601 | price=716900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Ноутбук Dell Pro 14 Plus PB14250 (BTO105_PB14250_EMEA_210-BPDL)
 ComPortal | placeholder_photo | id=CP13873245 | vendorCode=CP13873245 | categoryId=601 | price=599900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Ноутбук Dell Pro 16 PC16250 (BTO105_PC16250_EMEA_210-BQHB)
@@ -427,7 +433,6 @@ ComPortal | placeholder_photo | id=CP13870174 | vendorCode=CP13870174 | category
 ComPortal | placeholder_photo | id=CP10420608 | vendorCode=CP10420608 | categoryId=701 | price=2598900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=ИБП APC SRT8KRMXLI (SRT8KRMXLI)
 ComPortal | placeholder_photo | id=CP13873206 | vendorCode=CP13873206 | categoryId=701 | price=96900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=ИБП APC BVX1600LI 230V, AVR, IEC Sockets (BVX1600LI)
 ComPortal | placeholder_photo | id=CP13872827 | vendorCode=CP13872827 | categoryId=401 | price=95900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Проектор Acer QF23s (MR.JXC11.005)
-ComPortal | placeholder_photo | id=CP13872829 | vendorCode=CP13872829 | categoryId=401 | price=263900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Проектор Acer X1328WHn (MR.JX211.001)
 ComPortal | placeholder_photo | id=CP13872831 | vendorCode=CP13872831 | categoryId=401 | price=246900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Проектор Acer X139 (MR.JX611.00Z)
 VTT | placeholder_photo | id=VT013R00676 | vendorCode=VT013R00676 | categoryId=105 | price=100 | picture=https://placehold.co/800x800/png?text=No+Photo | name=013R00676/013R00674 Модуль фоторецептора Xerox Versant 80/180/2100 (оригинал)
 VTT | placeholder_photo | id=VT10111574 | vendorCode=VT10111574 | categoryId=105 | price=100 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Барабан C-EXV50 Canon IR1435/1435i/1435iF, 35,5K 9437B002AA, 10111574 (оригинал)
@@ -579,7 +584,7 @@ VTT | placeholder_photo | id=VT302NR93041 | vendorCode=VT302NR93041 | categoryId
 VTT | placeholder_photo | id=VT302NR93051 | vendorCode=VT302NR93051 | categoryId=202 | price=74900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=302NR93051/302NR93052 Блок проявки DV-5140C Kyocera P6130/M6030/M6530 (оригинал)
 VTT | placeholder_photo | id=VT302NR93150 | vendorCode=VT302NR93150 | categoryId=101 | price=100 | picture=https://placehold.co/800x800/png?text=No+Photo | name=302NR93150/WT-5140 Бункер отработанного тонера Kyocera P6130/P7040/M6030/P6035 (оригинал)
 VTT | placeholder_photo | id=VT302P193020 | vendorCode=VT302P193020 | categoryId=202 | price=65900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=302P193020/DV-6115 Блок проявки (тех. упак.) Kyocera Ecosys M4125idn/M4132idn (совместимый)
-VTT | placeholder_photo | id=VT302P393021 | vendorCode=VT302P393021 | categoryId=202 | price=100 | picture=https://placehold.co/800x800/png?text=No+Photo | name=302P393021/302P393020 Блок проявки DV-8115C Kyocera M8124cidn/M8130cidn (Голубой) (оригинал)
+VTT | placeholder_photo | id=VT302P393021 | vendorCode=VT302P393021 | categoryId=202 | price=160900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=302P393021/302P393020 Блок проявки DV-8115C Kyocera M8124cidn/M8130cidn (Голубой) (оригинал)
 VTT | placeholder_photo | id=VT302P393031 | vendorCode=VT302P393031 | categoryId=202 | price=100 | picture=https://placehold.co/800x800/png?text=No+Photo | name=302P393031/302P393030 Блок проявки DV-8115K Kyocera M8124cidn/M8130cidn (Чёрный) (оригинал)
 VTT | placeholder_photo | id=VT302P393051 | vendorCode=VT302P393051 | categoryId=202 | price=100 | picture=https://placehold.co/800x800/png?text=No+Photo | name=302P393051/302P393050 Блок проявки DV-8115Y Kyocera M8124cidn/M8130cidn (Желтый) (оригинал)
 VTT | placeholder_photo | id=VT302P393060 | vendorCode=VT302P393060 | categoryId=105 | price=142900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=302P393060/DK-8115 Драм-юнит Kyocera M8124cidn/M8130cidn (оригинал)
@@ -612,8 +617,7 @@ VTT | placeholder_photo | id=VT8JM73A | vendorCode=VT8JM73A | categoryId=202 | p
 VTT | placeholder_photo | id=VT948K21190 | vendorCode=VT948K21190 | categoryId=202 | price=100 | picture=https://placehold.co/800x800/png?text=No+Photo | name=848K65678/948K21190/848K65673 Блок проявки Xerox WC7556/7830 (CMYK) (оригинал)
 VTT | placeholder_photo | id=VT98010821 | vendorCode=VT98010821 | categoryId=105 | price=13900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Драм-юнит Hi-Black (HB-DK-1248) для Kyocera PA2001/PA2001W/MA2001/MA2001W (совместимый)
 VTT | placeholder_photo | id=VT9842710211 | vendorCode=VT9842710211 | categoryId=101 | price=65900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Барабан 500Z Lexmark MX310/410/510/610 50F0ZA0/50F0Z00 (оригинал)
-VTT | placeholder_photo | id=VT989030625 | vendorCode=VT989030625 | categoryId=101 | price=21900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Тонер-картридж Hi-Black (HB-MX315GT) для Sharp MXM266N/316N/356N (совместимый)
-... показаны первые 300 строк, всего записей: 564
+... показаны первые 300 строк, всего записей: 565
 
 ======================================================================
 ДУБЛИ OFFER ID
@@ -629,13 +633,13 @@ VTT | placeholder_photo | id=VT989030625 | vendorCode=VT989030625 | categoryId=1
 ПОСТАВЩИКИ С НАИБОЛЬШИМ КОЛИЧЕСТВОМ ПРОБЛЕМ
 ======================================================================
 Цена 100:
-- VTT: 235
+- VTT: 239
 - CopyLine: 26
 - AlStyle: 4
 
 Заглушка фото:
 - VTT: 448
-- ComPortal: 101
+- ComPortal: 102
 - AlStyle: 8
 - AkCent: 7
 
