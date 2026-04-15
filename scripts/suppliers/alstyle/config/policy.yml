@@ -12,9 +12,10 @@
 schema_version: 2
 supplier: AlStyle
 timezone: Asia/Almaty
-# Новое единое расписание проекта: AlStyle запускается ежедневно в 02:00 по Алматы.
-next_run_hour_local: 2
-schedule_hour_almaty: 2
+# Новое единое расписание проекта: AlStyle запускается ежедневно в 23:30 по Алматы.
+next_run_hour_local: 23
+schedule_hour_almaty: 23
+schedule_minute_almaty: 30
 id_prefix: AS
 placeholder_picture: https://placehold.co/800x800/png?text=No+Photo
 
