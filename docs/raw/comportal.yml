@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<yml_catalog date="2026-04-15 13:23:50">
+<yml_catalog date="2026-04-15 18:18:14">
 <shop><offers>
 <!--FEED_META
 Поставщик                                  | ComPortal
 URL поставщика                             | https://www.comportal.kz/auth/documents/prices/yml-catalog.php
-Время сборки (Алматы)                      | 2026-04-15 13:23:50
+Время сборки (Алматы)                      | 2026-04-15 18:18:14
 Ближайшая сборка (Алматы)                  | 2026-04-16 00:30:00
-Сколько товаров у поставщика до фильтра    | 1168
+Сколько товаров у поставщика до фильтра    | 1164
 Сколько товаров у поставщика после фильтра | 595
 Сколько товаров есть в наличии (true)      | 595
 Сколько товаров нет в наличии (false)      | 0
@@ -1016,31 +1016,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Манипулятор">Dell MS116 Optical Mouse</param>
 <param name="Для бренда">Dell</param>
 <param name="Коды">210-BPSN_BTO108_FCT2250_EMEA</param>
-</offer>
-
-<offer id="CP10309390" available="true">
-<categoryId></categoryId>
-<vendorCode>CP10309390</vendorCode>
-<name>МФУ Canon i-SENSYS MF3010 (5252B034)</name>
-<price>151759</price>
-<picture>https://www.comportal.kz/upload/iblock/100/1006ff52a299d360b0727f98f571bc63.jpg</picture>
-<vendor>Canon</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-МФУ. Формат печати: A4. Разрешение: 600x600. Скорость печати ч/б: 18. Порты: USB. Технология печати: Лазерная. Гарантия: 12 мес.]]></description>
-<param name="Тип">МФУ</param>
-<param name="Модель">i-SENSYS MF3010</param>
-<param name="Гарантия">12 мес</param>
-<param name="Разрешение">600x600</param>
-<param name="Формат печати">A4</param>
-<param name="Скорость печати ч/б">18</param>
-<param name="Технология печати">Лазерная</param>
-<param name="Порты">USB</param>
-<param name="Функция">принтер сканер копир</param>
-<param name="Наличие картриджа (тонера) в комплекте">Стартовый</param>
-<param name="Нагрузка">8 000</param>
-<param name="Коды">5252B034</param>
-<param name="Для бренда">Canon</param>
 </offer>
 
 <offer id="CP10791135" available="true">
@@ -6512,6 +6487,33 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Для бренда">Acer</param>
 </offer>
 
+<offer id="CP13863652" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13863652</vendorCode>
+<name>Монитор Dell AW3225QF (210-BLLV)</name>
+<price>556234</price>
+<picture>https://www.comportal.kz/upload/iblock/eac/nf4oxo26h2af9hjzpzkf3vz0bh7akv20.JPG</picture>
+<vendor>Dell</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Монитор. Диагональ: 32. Максимальное разрешение: 3840x2160. Тип матрицы: OLED. Частота обновления: 240. Время отклика: 1. Порты: 1 x DP 1.4 /2 x HDMI 2.1/1 x USB 3.2 Gen 1 (5 Gbps) Type-B/2 x USB 3.2 Gen 1 (5 Gbps) Type-A/1 x USB 3.2 Gen 1 (5 Gbps) Type-C/1 x USB 3.2 Gen 1 (5 Gbps) Type-A. Гарантия: 36 мес.]]></description>
+<param name="Тип">Монитор</param>
+<param name="Модель">AW3225QF</param>
+<param name="Порты">1 x DP 1.4 /2 x HDMI 2.1/1 x USB 3.2 Gen 1 (5 Gbps) Type-B/2 x USB 3.2 Gen 1 (5 Gbps) Type-A/1 x USB 3.2 Gen 1 (5 Gbps) Type-C/1 x USB 3.2 Gen 1 (5 Gbps) Type-A</param>
+<param name="Тип матрицы">OLED</param>
+<param name="Гарантия">36 мес</param>
+<param name="Контрастность">100000000:1</param>
+<param name="Яркость">1 000</param>
+<param name="Время отклика">1</param>
+<param name="Максимальное разрешение">3840x2160</param>
+<param name="Углы обзора (вертикальный/горизонтальный)">178/178</param>
+<param name="Размер Pix">140</param>
+<param name="Диагональ">32</param>
+<param name="Частота обновления">240</param>
+<param name="Коды">210-BLLV</param>
+<param name="Для бренда">Dell</param>
+</offer>
+
 <offer id="CP13863653" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13863653</vendorCode>
@@ -7235,6 +7237,32 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Для бренда">Dell</param>
 </offer>
 
+<offer id="CP13870642" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13870642</vendorCode>
+<name>Монитор Dell UltraSharp 27 4K Thunderbolt Hub Monitor - U2725QE (210-BQTL)</name>
+<price>355954</price>
+<picture>https://www.comportal.kz/upload/iblock/b10/4gh5db9qjk0wucwwzhkeb2o1fr082sy6.JPG</picture>
+<vendor>Dell</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Монитор. Диагональ: 27. Максимальное разрешение: 3840x2160. Тип матрицы: IPS. Частота обновления: 120. Время отклика: 8. Порты: 1 DisplayPort 1.4 port with DSC support (DRR for Microsoft Windows) 1 DisplayPort 1.4 port out 1 HDMI port (Supports up to UHD 3840 x 2160 120Hz FRL, VRR as per specified in HDMI2.1) 1 Thunderbolt 4 upstream port (DP1.4 (HDCP 2.2) with DSC support, PD: 140 W EPR , 2/4 Lanes switching) 1 Thunderbolt 4 downstream port (Downstream, Daisy Chain, 15 W) 1 USB-C (USB 10Gbps KVM) upstream port 1 Analog 2.0 audio line out port (3.5 mm jack) 4 USB Type-A ports 10Gbps 1 RJ45 Ethernet port, 2.5GbE. Гарантия: 36 мес.]]></description>
+<param name="Тип">Монитор</param>
+<param name="Модель">UltraSharp 27 4K Thunderbolt Hub Monitor - U2725QE</param>
+<param name="Порты">1 DisplayPort 1.4 port with DSC support (DRR for Microsoft Windows) 1 DisplayPort 1.4 port out 1 HDMI port (Supports up to UHD 3840 x 2160 120Hz FRL, VRR as per specified in HDMI2.1) 1 Thunderbolt 4 upstream port (DP1.4 (HDCP 2.2) with DSC support, PD: 140 W EPR , 2/4 Lanes switching) 1 Thunderbolt 4 downstream port (Downstream, Daisy Chain, 15 W) 1 USB-C (USB 10Gbps KVM) upstream port 1 Analog 2.0 audio line out port (3.5 mm jack) 4 USB Type-A ports 10Gbps 1 RJ45 Ethernet port, 2.5GbE</param>
+<param name="Тип матрицы">IPS</param>
+<param name="Гарантия">36 мес</param>
+<param name="Контрастность">3000:1</param>
+<param name="Яркость">600</param>
+<param name="Время отклика">8</param>
+<param name="Максимальное разрешение">3840x2160</param>
+<param name="Углы обзора (вертикальный/горизонтальный)">178/178</param>
+<param name="Диагональ">27</param>
+<param name="Частота обновления">120</param>
+<param name="Коды">210-BQTL</param>
+<param name="Для бренда">Dell</param>
+</offer>
+
 <offer id="CP13870644" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13870644</vendorCode>
@@ -7710,34 +7738,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Частота обновления">160</param>
 <param name="Коды">UM.JX3EE.301</param>
 <param name="Для бренда">Acer</param>
-</offer>
-
-<offer id="CP13871828" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13871828</vendorCode>
-<name>Монитор Dell U4021QW (210-AYJF)</name>
-<price>804336</price>
-<picture>https://www.comportal.kz/upload/iblock/2bb/o7r31vv8o0zogiaf3pwxfkhic6dwemiy.JPG</picture>
-<vendor>Dell</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Монитор. Диагональ: 39,7. Максимальное разрешение: 5120x2160. Тип матрицы: IPS. Частота обновления: 60. Время отклика: 8. Порты: 2 x HDMI (HDCP 2.2)/DisplayPort (HDCP 2.2)/Thunderbolt 3/USB-C upstream (DisplayPort 1.4 mode power up to 90W)/USB-C 3.2 Gen 2 downstream (power up to 15W)/USB upstream (Type B)/4 x USB 3.2 Gen 2/USB 3.2 Gen 2 downstream with Battery Charging 1.2/Audio line-out Network (RJ-45). Гарантия: 36 мес.]]></description>
-<param name="Тип">Монитор</param>
-<param name="Модель">U4021QW</param>
-<param name="Порты">2 x HDMI (HDCP 2.2)/DisplayPort (HDCP 2.2)/Thunderbolt 3/USB-C upstream (DisplayPort 1.4 mode power up to 90W)/USB-C 3.2 Gen 2 downstream (power up to 15W)/USB upstream (Type B)/4 x USB 3.2 Gen 2/USB 3.2 Gen 2 downstream with Battery Charging 1.2/Audio line-out Network (RJ-45)</param>
-<param name="Тип матрицы">IPS</param>
-<param name="Цвет">Серый</param>
-<param name="Гарантия">36 мес</param>
-<param name="Контрастность">1000:1</param>
-<param name="Яркость">300</param>
-<param name="Время отклика">8</param>
-<param name="Максимальное разрешение">5120x2160</param>
-<param name="Углы обзора (вертикальный/горизонтальный)">178/178</param>
-<param name="Размер Pix">140</param>
-<param name="Диагональ">39,7</param>
-<param name="Частота обновления">60</param>
-<param name="Коды">210-AYJF</param>
-<param name="Для бренда">Dell</param>
 </offer>
 
 <offer id="CP13872125" available="true">
@@ -8246,6 +8246,23 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Для бренда">Dell</param>
 </offer>
 
+<offer id="CP13873253" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13873253</vendorCode>
+<name>Монитор Dell Pro Hub Conferencing Monitor - P2726DEB (210-BVHR)</name>
+<price>206535</price>
+<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
+<vendor>Dell</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Монитор. Гарантия: 60 мес. Для бренда: Dell. Модель: P2726DEB. Коды: 210-BVHR.]]></description>
+<param name="Тип">Монитор</param>
+<param name="Гарантия">60 мес</param>
+<param name="Коды">210-BVHR</param>
+<param name="Модель">P2726DEB</param>
+<param name="Для бренда">Dell</param>
+</offer>
+
 <offer id="CP13842525" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13842525</vendorCode>
@@ -8476,52 +8493,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Разрешение дисплея">1920x1200</param>
 <param name="Коды">210-BDBL-6</param>
 <param name="Для бренда">Dell</param>
-</offer>
-
-<offer id="CP13867135" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13867135</vendorCode>
-<name>Ноутбук ASUS B1502CVA-BQ0897X (90NX06X1-M01150)</name>
-<price>320925</price>
-<picture>https://www.comportal.kz/upload/iblock/a8b/2hn7j84as6ngow2ml7jp8ujeu0giobxi.JPG</picture>
-<vendor>ASUS</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Ноутбук. Процессор: Intel 1315U Core i3 1,2. Оперативная память: 8 Gb / DDR4 / 3200. Накопитель: 512 / PCIe NVMe SSD. Диагональ: 15,6. Разрешение: 1920x1080. ОС: Microsoft Windows 11 Pro 64. Видеокарта: Intel UHD 256 Mb. Wi‑Fi: 802.11ax. Bluetooth: Bluetooth 5.3. Камера: HD Camera. Гарантия: 12 мес.]]></description>
-<param name="Тип">Ноутбук</param>
-<param name="Модель">B1502CVA-BQ0897X</param>
-<param name="Объем жесткого диска">512</param>
-<param name="Тип жесткого диска">PCIe NVMe SSD</param>
-<param name="Производитель процессора">Intel</param>
-<param name="Модель процессора">Core i3</param>
-<param name="Серия процессора">1315U</param>
-<param name="Частота процессора">1,2</param>
-<param name="Оперативная память">8 Gb</param>
-<param name="Частота оперативной памяти">3200</param>
-<param name="Объем видеопамяти">256 Mb</param>
-<param name="Тип оперативной памяти">DDR4</param>
-<param name="Порты">1x USB 2.0 Type-A/1x USB 3.2 Gen 1 Type-A/1x USB 3.2 Gen 1 Type-C support power delivery/1x USB 3.2 Gen 2 Type-C support display power delivery/1x HDMI 1.4, up to 1920x1080p/60H1x 3.5mm Combo Audio Jack/1x RJ45 Gigabit Ethernet</param>
-<param name="Тип привода">No ODD</param>
-<param name="Размер дисплея">15,6</param>
-<param name="Дополнительные характеристики">FingerPrint</param>
-<param name="Тип матрицы">FHD</param>
-<param name="Производитель чипсета видеокарты">Intel</param>
-<param name="Марка чипсета видеокарты">Graphics</param>
-<param name="Модель чипсета видеокарты">UHD</param>
-<param name="Производитель операционной системы">Microsoft</param>
-<param name="Операционная система">Windows 11</param>
-<param name="Версия операционной системы">Pro</param>
-<param name="Битность операционной системы">64</param>
-<param name="Цвет">Чёрный</param>
-<param name="Bluetooth">Bluetooth 5.3</param>
-<param name="Wi-Fi">802.11ax</param>
-<param name="Адаптер">65W AC Adapter</param>
-<param name="Аккумулятор">3 Cell 42WHr</param>
-<param name="Гарантия">12 мес</param>
-<param name="Камера">HD Camera</param>
-<param name="Разрешение дисплея">1920x1080</param>
-<param name="Коды">90NX06X1-M01150</param>
-<param name="Для бренда">ASUS</param>
 </offer>
 
 <offer id="CP13867146" available="true">
@@ -12193,6 +12164,23 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Коды">210-BQHF / BTO120_PC14250_EMEA</param>
 </offer>
 
+<offer id="CP13873185" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13873185</vendorCode>
+<name>Ноутбук ASUS TUF Gaming F16 / FX608JHI-TU217 (90NR0NA1-M00BK0)</name>
+<price>582942</price>
+<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
+<vendor>ASUS</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Ноутбук. Гарантия: 12 мес. Для бренда: ASUS. Модель: TUF Gaming F16 / FX608JHI-TU217. Коды: 90NR0NA1-M00BK0.]]></description>
+<param name="Тип">Ноутбук</param>
+<param name="Гарантия">12 мес</param>
+<param name="Коды">90NR0NA1-M00BK0</param>
+<param name="Модель">TUF Gaming F16 / FX608JHI-TU217</param>
+<param name="Для бренда">ASUS</param>
+</offer>
+
 <offer id="CP13873203" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13873203</vendorCode>
@@ -14909,23 +14897,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Гарантия">12 мес</param>
 <param name="Коды">MR.JXC11.005</param>
 <param name="Модель">QF23s</param>
-<param name="Для бренда">Acer</param>
-</offer>
-
-<offer id="CP13872829" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13872829</vendorCode>
-<name>Проектор Acer X1328WHn (MR.JX211.001)</name>
-<price>234438</price>
-<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
-<vendor>Acer</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Проектор. Гарантия: 12 мес. Для бренда: Acer. Модель: X1328WHn. Коды: MR.JX211.001.]]></description>
-<param name="Тип">Проектор</param>
-<param name="Гарантия">12 мес</param>
-<param name="Коды">MR.JX211.001</param>
-<param name="Модель">X1328WHn</param>
 <param name="Для бренда">Acer</param>
 </offer>
 
