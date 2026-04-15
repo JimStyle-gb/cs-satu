@@ -348,10 +348,10 @@ def _render_payment_delivery_block() -> str:
     delivery_html = _render_text_list(DELIVERY_ITEMS)
     return (
         '<div style="margin:14px 0;padding:14px 16px;border:1px solid #E7D6B7;border-radius:10px;background:#FCF8F1;">\n'
-        '  <h3 style="margin:0 0 10px 0;">Оплата и доставка</h3>\n'
-        '  <p style="margin:0 0 8px 0;"><strong>Оплата:</strong></p>\n'
+        '  <h3 style="margin:0 0 10px 0;">Оплата</h3>\n'
         f'  {payment_html}\n'
-        '  <p style="margin:12px 0 8px 0;"><strong>Доставка:</strong></p>\n'
+        '  <hr style="border:none;border-top:2px solid #E7D6B7;margin:14px 0;" />\n'
+        '  <h3 style="margin:0 0 10px 0;">Доставка по Алматы и Казахстану</h3>\n'
         f'  {delivery_html}\n'
         '</div>'
     )
