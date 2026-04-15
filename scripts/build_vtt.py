@@ -30,7 +30,7 @@ from typing import Any
 import yaml
 
 from cs.core import OfferOut, get_public_vendor, write_cs_feed, write_cs_feed_raw
-from cs.meta import next_run_dom_at_hour, now_almaty
+from cs.meta import next_run_dom_at_time, now_almaty
 from suppliers.vtt.builder import build_offer_from_raw
 from suppliers.vtt.diagnostics import print_build_summary
 from suppliers.vtt.filtering import categories_from_cfg, prefixes_from_cfg
@@ -99,7 +99,14 @@ def _resolve_hour(policy_cfg: dict[str, Any], schema_cfg: dict[str, Any]) -> int
         policy_cfg.get("schedule_hour_almaty")
         or policy_cfg.get("next_run_hour_local")
         or schema_cfg.get("next_run_hour_local"),
-        5,
+        2,
+    )
+
+def _resolve_minute(policy_cfg: dict[str, Any], schema_cfg: dict[str, Any]) -> int:
+    return _safe_int(
+        policy_cfg.get("schedule_minute_almaty")
+        or schema_cfg.get("schedule_minute_almaty"),
+        30,
     )
 
 def _resolve_dom_list(policy_cfg: dict[str, Any], schema_cfg: dict[str, Any]) -> tuple[int, ...]:
@@ -508,12 +515,13 @@ def _run_merge(cfg_dir: Path, filter_cfg: dict[str, Any], schema_cfg: dict[str, 
     out_file, raw_out_file = _resolve_paths()
     output_encoding = _resolve_output_encoding(policy_cfg, schema_cfg)
     hour = _resolve_hour(policy_cfg, schema_cfg)
+    minute = _resolve_minute(policy_cfg, schema_cfg)
     dom = _resolve_dom_list(policy_cfg, schema_cfg)
     qg_cfg = _resolve_quality_gate(policy_cfg, schema_cfg)
     param_priority = _load_param_priority(policy_cfg, schema_cfg)
 
     build_time = now_almaty().replace(tzinfo=None)
-    next_run = next_run_dom_at_hour(build_time, hour=hour, doms=dom)
+    next_run = next_run_dom_at_time(build_time, hour=hour, minute=minute, doms=dom)
 
     offers, before = _load_shards()
     if not offers:
@@ -568,12 +576,13 @@ def _run_full(cfg_dir: Path, filter_cfg: dict[str, Any], schema_cfg: dict[str, A
     out_file, raw_out_file = _resolve_paths()
     output_encoding = _resolve_output_encoding(policy_cfg, schema_cfg)
     hour = _resolve_hour(policy_cfg, schema_cfg)
+    minute = _resolve_minute(policy_cfg, schema_cfg)
     dom = _resolve_dom_list(policy_cfg, schema_cfg)
     qg_cfg = _resolve_quality_gate(policy_cfg, schema_cfg)
     param_priority = _load_param_priority(policy_cfg, schema_cfg)
 
     build_time = now_almaty().replace(tzinfo=None)
-    next_run = next_run_dom_at_hour(build_time, hour=hour, doms=dom)
+    next_run = next_run_dom_at_time(build_time, hour=hour, minute=minute, doms=dom)
 
     full_index = _collect_index(cfg)
     before = len(full_index)
