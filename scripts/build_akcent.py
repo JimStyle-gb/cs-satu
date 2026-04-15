@@ -23,7 +23,7 @@ from typing import Any
 import yaml
 
 from cs.core import get_public_vendor, write_cs_feed, write_cs_feed_raw
-from cs.meta import next_run_at_hour, now_almaty
+from cs.meta import next_run_at_time, now_almaty
 from cs.qg_report import QualityGateResult, coerce_quality_gate_result, make_quality_gate_result
 from suppliers.akcent.builder import build_offers
 from suppliers.akcent.diagnostics import print_build_summary
@@ -236,9 +236,10 @@ def main() -> int:
     filter_cfg, schema_cfg, policy_cfg = _load_supplier_config(cfg_dir)
     supplier_name = str(policy_cfg.get("supplier") or "AkCent").strip() or "AkCent"
     encoding = str(policy_cfg.get("output_encoding") or "utf-8").strip() or "utf-8"
-    schedule_hour = _safe_int(policy_cfg.get("schedule_hour_almaty") or policy_cfg.get("next_run_hour_local"), 1)
+    schedule_hour = _safe_int(policy_cfg.get("schedule_hour_almaty") or policy_cfg.get("next_run_hour_local"), 22)
+    schedule_minute = _safe_int(policy_cfg.get("schedule_minute_almaty"), 30)
     build_time = now_almaty()
-    next_run = next_run_at_hour(build_time, hour=schedule_hour)
+    next_run = next_run_at_time(build_time, hour=schedule_hour, minute=schedule_minute)
     root = fetch_source_root(url)
     source_offers = list(iter_source_offers(root))
     before = len(source_offers)
