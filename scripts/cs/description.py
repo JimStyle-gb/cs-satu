@@ -310,7 +310,7 @@ def _build_characteristics_items(characteristics: list[tuple[str, str]], limit: 
 
 def _render_text_list(items: Iterable[str]) -> str:
     body = "".join(f"<li>{item}</li>" for item in items if _clean_text(item))
-    return f"<ul style="margin:0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;">{body}</ul>" if body else ""
+    return f'<ul style="margin:0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;">{body}</ul>' if body else ""
 
 
 def _render_characteristics(items: list[tuple[str, str]]) -> str:
