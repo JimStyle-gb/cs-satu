@@ -8,7 +8,6 @@ Path: scripts/cs/category_map.py
 
 from __future__ import annotations
 
-import os
 import re
 from pathlib import Path
 from typing import Any, Sequence
@@ -19,10 +18,6 @@ except Exception as exc:  # pragma: no cover
     raise SystemExit(f"Не установлен PyYAML: {exc}")
 
 CONFIG_FILE = Path(__file__).resolve().parent / "config" / "price_categories.yml"
-UNRESOLVED_REPORT_DEFAULT = "docs/raw/category_map_unresolved.txt"
-_ENABLE_UNRESOLVED_REPORT = (os.getenv("CS_CATEGORY_MAP_REPORT_UNRESOLVED", "1") or "1").strip() == "1"
-_UNRESOLVED_SEEN: set[str] = set()
-
 _RE_SPACES = re.compile(r"\s+")
 _RE_PUNCT = re.compile(r"[^\w#+./%-]+", re.U)
 
@@ -91,36 +86,6 @@ def _contains_any(text: str, fragments: Sequence[str]) -> bool:
 
 def _printer_brand_present(hay: str) -> bool:
     return any(f" {b} " in hay or b in hay for b in _PRINTER_BRANDS)
-
-
-def _append_unresolved_report(*, oid: str, name: str, vendor: str, params: Sequence[tuple[str, str]] | None, native_desc: str) -> None:
-    if not _ENABLE_UNRESOLVED_REPORT:
-        return
-    key = f"{oid.strip()}|{name.strip()}|{vendor.strip()}".casefold()
-    if key in _UNRESOLVED_SEEN:
-        return
-    _UNRESOLVED_SEEN.add(key)
-
-    path = Path(os.getenv("CS_CATEGORY_MAP_UNRESOLVED_REPORT", UNRESOLVED_REPORT_DEFAULT))
-    path.parent.mkdir(parents=True, exist_ok=True)
-    params_preview = "; ".join(
-        f"{(k or '').strip()}={(v or '').strip()}"
-        for k, v in (params or [])[:8]
-        if (k or "").strip() and (v or "").strip()
-    )
-    desc_preview = " ".join((native_desc or "").replace("\r", " ").replace("\n", " ").split())
-    if len(desc_preview) > 280:
-        desc_preview = desc_preview[:280] + "..."
-    lines = [
-        f"oid: {oid.strip()}",
-        f"name: {name.strip()}",
-        f"vendor: {vendor.strip()}",
-        f"params: {params_preview}",
-        f"desc: {desc_preview}",
-        "-" * 80,
-    ]
-    with path.open("a", encoding="utf-8") as fh:
-        fh.write("\n".join(lines) + "\n")
 
 
 def _resolve_exact(*, name_n: str, vendor_n: str, type_n: str, tech_n: str, hay: str) -> str:
@@ -350,8 +315,7 @@ def resolve_category_id(*, name: str, vendor: str = "", params: Sequence[tuple[s
     if fallback:
         return fallback
 
-    _append_unresolved_report(oid=oid, name=name, vendor=vendor, params=params, native_desc=native_desc)
     return ""
 
 
-__all__ = ["GROUP_IDS", "UNRESOLVED_REPORT_DEFAULT", "resolve_category_id"]
+__all__ = ["GROUP_IDS", "resolve_category_id"]
