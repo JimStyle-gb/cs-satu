@@ -14,9 +14,10 @@ supplier: CopyLine
 timezone: Asia/Almaty
 
 # Единое расписание проекта:
-# CopyLine запускается 1 / 10 / 20 числа в 04:00 по Алматы.
-next_run_hour_local: 4
-schedule_hour_almaty: 4
+# CopyLine запускается 1 / 10 / 20 числа в 01:30 по Алматы.
+next_run_hour_local: 1
+schedule_hour_almaty: 1
+schedule_minute_almaty: 30
 schedule_days_of_month:
   - 1
   - 10
