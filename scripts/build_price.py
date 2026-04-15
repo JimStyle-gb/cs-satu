@@ -358,7 +358,7 @@ def _write_audit_report(*, total_offers: int, total_categories: int, leaf_catego
 
 def _render_price_feed(*, offers: list[OfferInfo], feed_meta_blocks: list[str], total_categories: int, leaf_categories: int, mapped_leaf: int, status_counts: Counter[str], price_100: int, placeholder_count: int, satu_file_name: str, categories_xml: str) -> str:
     now = datetime.now(TZ)
-    next_run = (now + timedelta(days=1)).replace(hour=7, minute=0, second=0, microsecond=0)
+    next_run = (now + timedelta(days=1)).replace(hour=4, minute=30, second=0, microsecond=0)
     if next_run <= now:
         next_run += timedelta(days=1)
 
@@ -366,7 +366,7 @@ def _render_price_feed(*, offers: list[OfferInfo], feed_meta_blocks: list[str], 
         'Price',
         f'Время сборки (Алматы)                 | {now:%Y-%m-%d %H:%M:%S}',
         f'Ближайшая сборка (Алматы)             | {next_run:%Y-%m-%d %H:%M:%S}',
-        'Расписание (Алматы)                   | ежедневно в 07:00',
+        'Расписание (Алматы)                   | ежедневно в 04:30',
         f'Сколько поставщиков в Price           | {len(EXPECTED_SUPPLIERS)}',
         f'Порядок поставщиков                   | {", ".join(EXPECTED_SUPPLIERS)}',
         f'Сколько товаров в Price всего         | {len(offers)}',
