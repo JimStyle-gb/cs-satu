@@ -23,7 +23,7 @@ from typing import Any
 import yaml
 
 from cs.core import get_public_vendor, write_cs_feed, write_cs_feed_raw
-from cs.meta import next_run_dom_at_hour, now_almaty
+from cs.meta import next_run_dom_at_time, now_almaty
 
 from suppliers.copyline.builder import build_offers
 from suppliers.copyline.diagnostics import print_build_summary
@@ -135,12 +135,13 @@ def main() -> int:
 
     hour = _safe_int(
         policy_cfg.get("schedule_hour_almaty") or policy_cfg.get("next_run_hour_local"),
-        4,
+        1,
     )
+    minute = _safe_int(policy_cfg.get("schedule_minute_almaty"), 30)
     dom = _resolve_dom_list(policy_cfg)
 
     build_time = now_almaty().replace(tzinfo=None)
-    next_run = next_run_dom_at_hour(build_time, hour=hour, doms=dom)
+    next_run = next_run_dom_at_time(build_time, hour=hour, minute=minute, doms=dom)
 
     index = fetch_product_index()
     before = len(index)
