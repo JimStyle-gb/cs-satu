@@ -518,8 +518,6 @@ def evaluate(metrics: Metrics, baseline: Metrics | None) -> Tuple[str, str]:
 
 def build_summary_report(status: str, reason: str, metrics: Metrics, baseline: Metrics | None, checked_at: datetime) -> str:
     icon = {"УСПЕШНО": "✅", "ТРЕБУЕТ ВНИМАНИЯ": "⚠️", "НЕУСПЕШНО": "❌"}.get(status, "ℹ️")
-    baseline_supplier_summary = baseline.supplier_summary if baseline else {}
-
     top_price100 = build_top_suppliers({supplier: info.price100 for supplier, info in metrics.supplier_summary.items()})
     top_placeholder = build_top_suppliers({supplier: info.placeholder for supplier, info in metrics.supplier_summary.items()})
     top_excluded = build_top_suppliers(metrics.excluded_unmapped_by_supplier)
@@ -527,9 +525,10 @@ def build_summary_report(status: str, reason: str, metrics: Metrics, baseline: M
 
     lines = [
         f"{icon} Price — {status}",
-        "",
-        f"Время проверки: {fmt_dt(checked_at)}",
-        f"Время сборки Price: {metrics.build_time or '-'}",
+        "Время проверки: ",
+        fmt_dt(checked_at),
+        "Время сборки Price: ",
+        metrics.build_time or '-',
         "",
         f"Товаров в Price: {metrics.total} {fmt_delta(baseline.total if baseline else None, metrics.total)}",
         f"Есть в наличии: {metrics.available_true} {fmt_delta(baseline.available_true if baseline else None, metrics.available_true)}",
@@ -541,16 +540,31 @@ def build_summary_report(status: str, reason: str, metrics: Metrics, baseline: M
         f"Без категории Satu: {metrics.unknown_satu}",
         f"Не вошло в final без categoryId: {metrics.excluded_unmapped_total} {fmt_delta(baseline.excluded_unmapped_total if baseline else None, metrics.excluded_unmapped_total)}",
         "",
-        "Проблемные хвосты по поставщикам:",
-        f"- Цена 100: {top_price100}",
-        f"- Заглушка фото: {top_placeholder}",
-        f"- Не вошло в final без categoryId: {top_excluded}",
+        "Проблемные хвосты по поставщикам",
+        "",
+        "Цена 100:",
+    ]
+    if top_price100 == 'нет':
+        lines.append('нет')
+    else:
+        lines.extend(top_price100.split(', '))
+    lines.extend([
+        "",
+        "Заглушка фото:",
+    ])
+    if top_placeholder == 'нет':
+        lines.append('нет')
+    else:
+        lines.extend(top_placeholder.split(', '))
+    lines.extend([
+        "",
+        f"Не вошло в final без categoryId: {top_excluded}",
         "",
         f"Привязка к категориям Satu: {satu_mapping_status}",
         f"Статус проверки Price: {status}",
         "",
         f"Причина: {reason}",
-    ]
+    ])
     return "\n".join(lines).strip() + "\n"
 
 
@@ -566,30 +580,46 @@ def build_telegram_summary_html(status: str, reason: str, metrics: Metrics, base
 
     lines = [
         f"{icon} <b>Price — {html.escape(status)}</b>",
+        f"<b>Время проверки:</b> ",
+        b(fmt_dt(checked_at)),
+        f"<b>Время сборки Price:</b> ",
+        b(metrics.build_time or '-'),
         "",
-        f"{b('Время проверки:')} {b(fmt_dt(checked_at))}",
-        f"{b('Время сборки Price:')} {b(metrics.build_time or '-')}",
+        f"<b>Товаров в Price:</b> {b(f'{metrics.total} {fmt_delta(baseline.total if baseline else None, metrics.total)}')}",
+        f"<b>Есть в наличии:</b> {b(f'{metrics.available_true} {fmt_delta(baseline.available_true if baseline else None, metrics.available_true)}')}",
+        f"<b>Нет в наличии:</b> {b(f'{metrics.available_false} {fmt_delta(baseline.available_false if baseline else None, metrics.available_false)}')}",
         "",
-        f"{b('Товаров в Price:')} {b(f'{metrics.total} {fmt_delta(baseline.total if baseline else None, metrics.total)}')}",
-        f"{b('Есть в наличии:')} {b(f'{metrics.available_true} {fmt_delta(baseline.available_true if baseline else None, metrics.available_true)}')}",
-        f"{b('Нет в наличии:')} {b(f'{metrics.available_false} {fmt_delta(baseline.available_false if baseline else None, metrics.available_false)}')}",
+        f"<b>С ценой 100:</b> {b(f'{metrics.price100} {fmt_delta(baseline.price100 if baseline else None, metrics.price100)}')}",
+        f"<b>С заглушкой фото:</b> {b(f'{metrics.placeholder} {fmt_delta(baseline.placeholder if baseline else None, metrics.placeholder)}')}",
+        f"<b>Без categoryId:</b> {b(str(metrics.empty_category))}",
+        f"<b>Без категории Satu:</b> {b(str(metrics.unknown_satu))}",
+        f"<b>Не вошло в final без categoryId:</b> {b(f'{metrics.excluded_unmapped_total} {fmt_delta(baseline.excluded_unmapped_total if baseline else None, metrics.excluded_unmapped_total)}')}",
         "",
-        f"{b('С ценой 100:')} {b(f'{metrics.price100} {fmt_delta(baseline.price100 if baseline else None, metrics.price100)}')}",
-        f"{b('С заглушкой фото:')} {b(f'{metrics.placeholder} {fmt_delta(baseline.placeholder if baseline else None, metrics.placeholder)}')}",
-        f"{b('Без categoryId:')} {b(str(metrics.empty_category))}",
-        f"{b('Без категории Satu:')} {b(str(metrics.unknown_satu))}",
-        f"{b('Не вошло в final без categoryId:')} {b(f'{metrics.excluded_unmapped_total} {fmt_delta(baseline.excluded_unmapped_total if baseline else None, metrics.excluded_unmapped_total)}')}",
+        "<b>Проблемные хвосты по поставщикам</b>",
         "",
-        b('Проблемные хвосты по поставщикам'),
-        "",
-        b('Цена 100:'),
+        "<b>Цена 100:</b>",
     ]
-    for item in (top_price100.split(', ') if top_price100 and top_price100 != 'нет' else ['нет']):
-        lines.append(b(item))
-    lines.extend(["", b('Заглушка фото:')])
-    for item in (top_placeholder.split(', ') if top_placeholder and top_placeholder != 'нет' else ['нет']):
-        lines.append(b(item))
-    lines.extend(["", f"{b('Не вошло в final без categoryId:')} {b(top_excluded)}", "", f"{b('Привязка к категориям Satu:')} {b(satu_mapping_status)}", f"{b('Статус проверки Price:')} {b(status)}", "", f"{b('Причина:')} {b(reason)}"])
+    if top_price100 == 'нет':
+        lines.append(b('нет'))
+    else:
+        lines.extend(b(item) for item in top_price100.split(', '))
+    lines.extend([
+        "",
+        "<b>Заглушка фото:</b>",
+    ])
+    if top_placeholder == 'нет':
+        lines.append(b('нет'))
+    else:
+        lines.extend(b(item) for item in top_placeholder.split(', '))
+    lines.extend([
+        "",
+        f"<b>Не вошло в final без categoryId:</b> {b(top_excluded)}",
+        "",
+        f"<b>Привязка к категориям Satu:</b> {b(satu_mapping_status)}",
+        f"<b>Статус проверки Price:</b> {b(status)}",
+        "",
+        f"<b>Причина:</b> {b(reason)}",
+    ])
     return "\n".join(lines).strip() + "\n"
 
 
