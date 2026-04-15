@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<yml_catalog date="2026-04-15 08:04:09">
+<yml_catalog date="2026-04-15 13:23:50">
 <shop><offers>
 <!--FEED_META
 Поставщик                                  | ComPortal
 URL поставщика                             | https://www.comportal.kz/auth/documents/prices/yml-catalog.php
-Время сборки (Алматы)                      | 2026-04-15 08:04:09
+Время сборки (Алматы)                      | 2026-04-15 13:23:50
 Ближайшая сборка (Алматы)                  | 2026-04-16 00:30:00
-Сколько товаров у поставщика до фильтра    | 1167
-Сколько товаров у поставщика после фильтра | 581
-Сколько товаров есть в наличии (true)      | 581
+Сколько товаров у поставщика до фильтра    | 1168
+Сколько товаров у поставщика после фильтра | 595
+Сколько товаров есть в наличии (true)      | 595
 Сколько товаров нет в наличии (false)      | 0
 -->
 
@@ -1606,23 +1606,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Гарантия">12 мес</param>
 <param name="Коды">5252B004</param>
 <param name="Модель">i-SENSYS MF3010</param>
-<param name="Для бренда">Canon</param>
-</offer>
-
-<offer id="CP13873146" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13873146</vendorCode>
-<name>МФУ Canon i-SENSYS MF453dw (5161C007)</name>
-<price>186196</price>
-<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
-<vendor>Canon</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-МФУ. Гарантия: 12 мес. Для бренда: Canon. Модель: i-SENSYS MF453dw. Коды: 5161C007.]]></description>
-<param name="Тип">МФУ</param>
-<param name="Гарантия">12 мес</param>
-<param name="Коды">5161C007</param>
-<param name="Модель">i-SENSYS MF453dw</param>
 <param name="Для бренда">Canon</param>
 </offer>
 
@@ -3849,28 +3832,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Оригинальность">Оригинал</param>
 </offer>
 
-<offer id="CP10303149" available="true">
-<categoryId></categoryId>
-<vendorCode>CP10303149</vendorCode>
-<name>Картридж HP F6V17AE (F6V17AE) (оригинал)</name>
-<price>7150</price>
-<picture>https://www.comportal.kz/upload/iblock/f8b/pxfklszm3z1r728qa0u7gc4e4mngmpse.jpg</picture>
-<vendor>HP</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Оригинальный картридж HP F6V17AE коды — F6V17AE / №123; цвет — Чёрный; ресурс — 120; технология печати — Струйная.]]></description>
-<param name="Тип">Картридж</param>
-<param name="Модель">F6V17AE</param>
-<param name="Цвет">Чёрный</param>
-<param name="Технология печати">Струйная</param>
-<param name="Номер">№123</param>
-<param name="Объём">2</param>
-<param name="Ресурс">120</param>
-<param name="Коды">F6V17AE</param>
-<param name="Для бренда">HP</param>
-<param name="Оригинальность">Оригинал</param>
-</offer>
-
 <offer id="CP10303267" available="true">
 <categoryId></categoryId>
 <vendorCode>CP10303267</vendorCode>
@@ -4368,26 +4329,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Оригинальность">Оригинал</param>
 </offer>
 
-<offer id="CP11067541" available="true">
-<categoryId></categoryId>
-<vendorCode>CP11067541</vendorCode>
-<name>Картридж HP 305 (3YM61AE#UUQ) (оригинал)</name>
-<price>6312</price>
-<picture>https://www.comportal.kz/upload/iblock/9ca/rpzg49uapbbr29mov3t8k0fgmx5kyvev.JPG</picture>
-<vendor>HP</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Оригинальный картридж HP 305 код — 3YM61AE#UUQ; цвет — Чёрный; ресурс — 120; технология печати — Струйная.]]></description>
-<param name="Тип">Картридж</param>
-<param name="Модель">305</param>
-<param name="Цвет">Чёрный</param>
-<param name="Технология печати">Струйная</param>
-<param name="Ресурс">120</param>
-<param name="Коды">3YM61AE#UUQ</param>
-<param name="Для бренда">HP</param>
-<param name="Оригинальность">Оригинал</param>
-</offer>
-
 <offer id="CP11222714" available="true">
 <categoryId></categoryId>
 <vendorCode>CP11222714</vendorCode>
@@ -4780,6 +4721,25 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Объём">775</param>
 <param name="Коды">C1Q53A</param>
 <param name="Для бренда">HP</param>
+<param name="Оригинальность">Оригинал</param>
+</offer>
+
+<offer id="CP13869689" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13869689</vendorCode>
+<name>Печатающая головка Canon 0694C002 / CH-4 EMB (0694C002) (оригинал)</name>
+<price>9514</price>
+<picture>https://www.comportal.kz/upload/iblock/668/mqeuipu3pu89ovyc2daqqs7iddsqrvdq.jpg</picture>
+<vendor>Canon</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Оригинальный картридж Canon 0694C002 / CH-4 EMB код — 0694C002; цвет — Цветной; технология печати — Струйная.]]></description>
+<param name="Тип">Картридж</param>
+<param name="Модель">0694C002 / CH-4 EMB</param>
+<param name="Цвет">Цветной</param>
+<param name="Технология печати">Струйная</param>
+<param name="Коды">0694C002</param>
+<param name="Для бренда">Canon</param>
 <param name="Оригинальность">Оригинал</param>
 </offer>
 
@@ -6810,6 +6770,33 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Для бренда">Dell</param>
 </offer>
 
+<offer id="CP13866836" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13866836</vendorCode>
+<name>Монитор Dell Alienware Gaming AW2524HF (210-BJPH)</name>
+<price>318228</price>
+<picture>https://www.comportal.kz/upload/iblock/295/i22q5c4vf7pylhj5p1ve1p3gbwez4tvw.JPG</picture>
+<vendor>Dell</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Монитор. Диагональ: 24.5. Максимальное разрешение: 1920x1080. Тип матрицы: Full HD. Частота обновления: 500. Время отклика: 1. Порты: 1xHDMI 2.1/2xDisplayPort 1.4/1xUSB 3.2 Gen 1 upstream/2xUSB 3.2 Gen 1 downstream/2xUSB 3.2 Gen 1 downstream with Battery Charging 1.2. Гарантия: 36 мес.]]></description>
+<param name="Тип">Монитор</param>
+<param name="Модель">AW2524HF</param>
+<param name="Порты">1xHDMI 2.1/2xDisplayPort 1.4/1xUSB 3.2 Gen 1 upstream/2xUSB 3.2 Gen 1 downstream/2xUSB 3.2 Gen 1 downstream with Battery Charging 1.2</param>
+<param name="Тип матрицы">Full HD</param>
+<param name="Цвет">Чёрный</param>
+<param name="Гарантия">36 мес</param>
+<param name="Контрастность">1000:1</param>
+<param name="Яркость">400</param>
+<param name="Время отклика">1</param>
+<param name="Максимальное разрешение">1920x1080</param>
+<param name="Размер Pix">0,28</param>
+<param name="Диагональ">24.5</param>
+<param name="Частота обновления">500</param>
+<param name="Коды">210-BJPH</param>
+<param name="Для бренда">Dell</param>
+</offer>
+
 <offer id="CP13866838" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13866838</vendorCode>
@@ -6861,6 +6848,33 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Диагональ">27</param>
 <param name="Частота обновления">60</param>
 <param name="Коды">210-BFMZ</param>
+<param name="Для бренда">Dell</param>
+</offer>
+
+<offer id="CP13866842" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13866842</vendorCode>
+<name>Монитор Dell Pro 24 Plus P2425H (210-BMFF)</name>
+<price>89554</price>
+<picture>https://www.comportal.kz/upload/iblock/7c1/on0ej1inzuczbdngnshv9854xzm137j5.JPG</picture>
+<vendor>Dell</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Монитор. Диагональ: 23.8. Максимальное разрешение: 1920x1080. Тип матрицы: IPS. Частота обновления: 100. Время отклика: 5. Порты: 1x HDMI 1.4/1x DP 1.2/1x VGA/1x USB 3.2 Gen1 Type-B/3x USB 3.2 Gen1 Type-A/1x USB 3.2 Gen1 Type-C. Гарантия: 36 мес.]]></description>
+<param name="Тип">Монитор</param>
+<param name="Модель">P2425H</param>
+<param name="Порты">1x HDMI 1.4/1x DP 1.2/1x VGA/1x USB 3.2 Gen1 Type-B/3x USB 3.2 Gen1 Type-A/1x USB 3.2 Gen1 Type-C</param>
+<param name="Тип матрицы">IPS</param>
+<param name="Гарантия">36 мес</param>
+<param name="Контрастность">1500:1</param>
+<param name="Яркость">250</param>
+<param name="Время отклика">5</param>
+<param name="Максимальное разрешение">1920x1080</param>
+<param name="Углы обзора (вертикальный/горизонтальный)">178/178</param>
+<param name="Размер Pix">92</param>
+<param name="Диагональ">23.8</param>
+<param name="Частота обновления">100</param>
+<param name="Коды">210-BMFF</param>
 <param name="Для бренда">Dell</param>
 </offer>
 
@@ -7029,6 +7043,34 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Для бренда">Dell</param>
 </offer>
 
+<offer id="CP13866903" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13866903</vendorCode>
+<name>Монитор Dell P2424HEB / 24 Video Conferencing Monitor (210-BKVC)</name>
+<price>179205</price>
+<picture>https://www.comportal.kz/upload/iblock/300/5lvgeb9j63tivjd25lk03q4cb1c3ot9s.JPG</picture>
+<vendor>Dell</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Монитор. Диагональ: 23.8. Максимальное разрешение: 1920x1080. Тип матрицы: Full HD. Частота обновления: 60. Время отклика: 5. Порты: 1x HDMI (HDCP 1.4)/1x DP 1.2 (HDCP 1.4)/1x DP-out with MST/1x RJ45/1x 3.5mm combo headphone with microphone jack/1x USB 3.2 Gen1 Type-C (Alt mode with DP 1.2 upstream, up to 90W power delivery)/1x USB 3.2 Gen1 Type-B upstream/2x USB 3.2 Gen1 Type-A downstream/1x USB 3.2 Gen1 Type-C downstream with up to 15W power delivery/1x USB 3.2 Gen1 Type-A downstream with BC1.2 (2A max). Гарантия: 36 мес.]]></description>
+<param name="Тип">Монитор</param>
+<param name="Модель">P2424HEB</param>
+<param name="Порты">1x HDMI (HDCP 1.4)/1x DP 1.2 (HDCP 1.4)/1x DP-out with MST/1x RJ45/1x 3.5mm combo headphone with microphone jack/1x USB 3.2 Gen1 Type-C (Alt mode with DP 1.2 upstream, up to 90W power delivery)/1x USB 3.2 Gen1 Type-B upstream/2x USB 3.2 Gen1 Type-A downstream/1x USB 3.2 Gen1 Type-C downstream with up to 15W power delivery/1x USB 3.2 Gen1 Type-A downstream with BC1.2 (2A max)</param>
+<param name="Тип матрицы">Full HD</param>
+<param name="Цвет">Чёрный</param>
+<param name="Гарантия">36 мес</param>
+<param name="Контрастность">1000:1</param>
+<param name="Яркость">250</param>
+<param name="Время отклика">5</param>
+<param name="Максимальное разрешение">1920x1080</param>
+<param name="Углы обзора (вертикальный/горизонтальный)">178/178</param>
+<param name="Размер Pix">0,27</param>
+<param name="Диагональ">23.8</param>
+<param name="Частота обновления">60</param>
+<param name="Коды">210-BKVC</param>
+<param name="Для бренда">Dell</param>
+</offer>
+
 <offer id="CP13869983" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13869983</vendorCode>
@@ -7107,6 +7149,35 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Частота обновления">100</param>
 <param name="Коды">9D9A7AA#ABB</param>
 <param name="Для бренда">HP</param>
+</offer>
+
+<offer id="CP13870486" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13870486</vendorCode>
+<name>Монитор Dell P2225H (210-BMHD)</name>
+<price>78634</price>
+<picture>https://www.comportal.kz/upload/iblock/edb/l6y6qafg1lsnwyr2xzrccf323mfkkci6.jpg</picture>
+<vendor>Dell</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Монитор. Диагональ: 21,5. Максимальное разрешение: 1920x1080. Тип матрицы: IPS. Частота обновления: 100. Время отклика: 5. Порты: 1x DP 1.2; 1x HDMI 1.4; 1 x VGA; 1x USB 3.2 Gen1 Type-B; 3x USB 3.2 Gen1 Type-A; 1x USB 3.2 Gen1 Type-C (15W). Гарантия: 36 мес.]]></description>
+<param name="Тип">Монитор</param>
+<param name="Модель">P2225H</param>
+<param name="Порты">1x DP 1.2; 1x HDMI 1.4; 1 x VGA; 1x USB 3.2 Gen1 Type-B; 3x USB 3.2 Gen1 Type-A; 1x USB 3.2 Gen1 Type-C (15W)</param>
+<param name="Тип матрицы">IPS</param>
+<param name="Цвет">Серый</param>
+<param name="Гарантия">36 мес</param>
+<param name="Контрастность">1500:1</param>
+<param name="Яркость">250</param>
+<param name="Время отклика">5</param>
+<param name="Максимальное разрешение">1920x1080</param>
+<param name="Углы обзора (вертикальный/горизонтальный)">178/178</param>
+<param name="Размер Pix">102</param>
+<param name="Размер видимой точки">0,25</param>
+<param name="Диагональ">21,5</param>
+<param name="Частота обновления">100</param>
+<param name="Коды">210-BMHD</param>
+<param name="Для бренда">Dell</param>
 </offer>
 
 <offer id="CP13870489" available="true">
@@ -7343,6 +7414,31 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Частота обновления">165</param>
 <param name="Коды">AK2B3AA#ABB</param>
 <param name="Для бренда">HP</param>
+</offer>
+
+<offer id="CP13871253" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13871253</vendorCode>
+<name>Монитор Dell Pro 32 Plus 4K USB-C Hub Monitor - P3225QE, 80.0cm (31.5") (210-BQZY)</name>
+<price>319244</price>
+<picture>https://www.comportal.kz/upload/iblock/6da/mvkhugy0em4ngpogpynjjeajqtv8l887.JPG</picture>
+<vendor>Dell</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Монитор. Диагональ: 31.5. Максимальное разрешение: 3840x2160. Тип матрицы: IPS. Частота обновления: 100. Время отклика: 5. Порты: 1 HDMI port (HDCP2.3) (supports up to UHD 3840 x 2160 100 Hz FRL as per specified in HDMI 2.1)/1 Display Port 1.4 (HDCP2.3)(Support up to 3840 x 2160 100Hz)/1 USB-C 5Gbps upstream port (DisplayPort 1.4 Alternate mode, Power Delivery up to 90W)/1 USB-C 5Gbps downstream port/3 USB 5Gbps Type-A downstream ports/1 RJ45 Ethernet port, 1GbE. Гарантия: 36 мес.]]></description>
+<param name="Тип">Монитор</param>
+<param name="Модель">P3225QE</param>
+<param name="Порты">1 HDMI port (HDCP2.3) (supports up to UHD 3840 x 2160 100 Hz FRL as per specified in HDMI 2.1)/1 Display Port 1.4 (HDCP2.3)(Support up to 3840 x 2160 100Hz)/1 USB-C 5Gbps upstream port (DisplayPort 1.4 Alternate mode, Power Delivery up to 90W)/1 USB-C 5Gbps downstream port/3 USB 5Gbps Type-A downstream ports/1 RJ45 Ethernet port, 1GbE</param>
+<param name="Тип матрицы">IPS</param>
+<param name="Гарантия">36 мес</param>
+<param name="Контрастность">1500:1</param>
+<param name="Яркость">350</param>
+<param name="Время отклика">5</param>
+<param name="Максимальное разрешение">3840x2160</param>
+<param name="Диагональ">31.5</param>
+<param name="Частота обновления">100</param>
+<param name="Коды">210-BQZY</param>
+<param name="Для бренда">Dell</param>
 </offer>
 
 <offer id="CP13871379" available="true">
@@ -8045,6 +8141,108 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Гарантия">36 мес</param>
 <param name="Коды">210-BSRL</param>
 <param name="Модель">S2725DC</param>
+<param name="Для бренда">Dell</param>
+</offer>
+
+<offer id="CP13873232" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13873232</vendorCode>
+<name>Монитор Dell AW2725DF (210-BLHH)</name>
+<price>404316</price>
+<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
+<vendor>Dell</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Монитор. Гарантия: 36 мес. Для бренда: Dell. Модель: AW2725DF. Коды: 210-BLHH.]]></description>
+<param name="Тип">Монитор</param>
+<param name="Гарантия">36 мес</param>
+<param name="Коды">210-BLHH</param>
+<param name="Модель">AW2725DF</param>
+<param name="Для бренда">Dell</param>
+</offer>
+
+<offer id="CP13873236" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13873236</vendorCode>
+<name>Монитор Dell Pro 14 Plus Portable Monitor - P1425 (210-BQTB)</name>
+<price>158173</price>
+<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
+<vendor>Dell</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Монитор. Диагональ: 14. Гарантия: 36 мес. Для бренда: Dell. Модель: P1425. Коды: 210-BQTB.]]></description>
+<param name="Тип">Монитор</param>
+<param name="Гарантия">36 мес</param>
+<param name="Коды">210-BQTB</param>
+<param name="Модель">P1425</param>
+<param name="Для бренда">Dell</param>
+</offer>
+
+<offer id="CP13873237" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13873237</vendorCode>
+<name>Монитор Dell Pro 24 Adjustable Stand Monitor - E2425HSM (210-BRDV)</name>
+<price>66861</price>
+<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
+<vendor>Dell</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Монитор. Диагональ: 24. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro 24 Adjustable Stand Monitor - E2425HSM. Коды: 210-BRDV.]]></description>
+<param name="Тип">Монитор</param>
+<param name="Гарантия">36 мес</param>
+<param name="Коды">210-BRDV</param>
+<param name="Модель">Pro 24 Adjustable Stand Monitor - E2425HSM</param>
+<param name="Для бренда">Dell</param>
+</offer>
+
+<offer id="CP13873238" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13873238</vendorCode>
+<name>Монитор Dell Pro 22 Adjustable Stand Monitor - E2225HSM (210-BRDT)</name>
+<price>57380</price>
+<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
+<vendor>Dell</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Монитор. Диагональ: 22. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro 22 Adjustable Stand Monitor - E2225HSM. Коды: 210-BRDT.]]></description>
+<param name="Тип">Монитор</param>
+<param name="Гарантия">36 мес</param>
+<param name="Коды">210-BRDT</param>
+<param name="Модель">Pro 22 Adjustable Stand Monitor - E2225HSM</param>
+<param name="Для бренда">Dell</param>
+</offer>
+
+<offer id="CP13873239" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13873239</vendorCode>
+<name>Монитор Dell Pro 27 Monitor E2725HM, 68.60 cm (27.0") (210-BRDQ)</name>
+<price>76371</price>
+<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
+<vendor>Dell</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Монитор. Модельная серия: Pro 27 Monitor E2725HM. Диагональ: 27.0. Гарантия: 36 мес.]]></description>
+<param name="Тип">Монитор</param>
+<param name="Гарантия">36 мес</param>
+<param name="Коды">210-BRDQ</param>
+<param name="Модель">Pro 27 Monitor E2725HM</param>
+<param name="Для бренда">Dell</param>
+</offer>
+
+<offer id="CP13873241" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13873241</vendorCode>
+<name>Монитор Dell SE2425HG (210-BSNR)</name>
+<price>64882</price>
+<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
+<vendor>Dell</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Монитор. Гарантия: 36 мес. Для бренда: Dell. Модель: SE2425HG. Коды: 210-BSNR.]]></description>
+<param name="Тип">Монитор</param>
+<param name="Гарантия">36 мес</param>
+<param name="Коды">210-BSNR</param>
+<param name="Модель">SE2425HG</param>
 <param name="Для бренда">Dell</param>
 </offer>
 
@@ -12010,6 +12208,91 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Коды">D0UW2ET#BJA</param>
 <param name="Модель">ProBook 4 G1i 16 AI</param>
 <param name="Для бренда">HP</param>
+</offer>
+
+<offer id="CP13873244" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13873244</vendorCode>
+<name>Ноутбук Dell Pro 14 Plus PB14250 (BTO105_PB14250_EMEA_210-BPDL)</name>
+<price>659645</price>
+<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
+<vendor>Dell</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Ноутбук. Модельная серия: Pro 14 Plus PB14250. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro 14 Plus PB14250. Коды: BTO105_PB14250_EMEA_210-BPDL.]]></description>
+<param name="Тип">Ноутбук</param>
+<param name="Гарантия">36 мес</param>
+<param name="Для бренда">Dell</param>
+<param name="Модель">Pro 14 Plus PB14250</param>
+<param name="Коды">BTO105_PB14250_EMEA_210-BPDL</param>
+</offer>
+
+<offer id="CP13873245" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13873245</vendorCode>
+<name>Ноутбук Dell Pro 16 PC16250 (BTO105_PC16250_EMEA_210-BQHB)</name>
+<price>547966</price>
+<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
+<vendor>Dell</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Ноутбук. Модельная серия: Pro 16 PC16250. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro 16 PC16250. Коды: BTO105_PC16250_EMEA_210-BQHB.]]></description>
+<param name="Тип">Ноутбук</param>
+<param name="Гарантия">36 мес</param>
+<param name="Для бренда">Dell</param>
+<param name="Модель">Pro 16 PC16250</param>
+<param name="Коды">BTO105_PC16250_EMEA_210-BQHB</param>
+</offer>
+
+<offer id="CP13873246" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13873246</vendorCode>
+<name>Ноутбук Dell Pro 16 PC16250 (BTO120_PC16250_EMEA_210-BQHB)</name>
+<price>598895</price>
+<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
+<vendor>Dell</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Ноутбук. Модельная серия: Pro 16 PC16250. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro 16 PC16250. Коды: BTO120_PC16250_EMEA_210-BQHB.]]></description>
+<param name="Тип">Ноутбук</param>
+<param name="Гарантия">36 мес</param>
+<param name="Для бренда">Dell</param>
+<param name="Модель">Pro 16 PC16250</param>
+<param name="Коды">BTO120_PC16250_EMEA_210-BQHB</param>
+</offer>
+
+<offer id="CP13873247" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13873247</vendorCode>
+<name>Ноутбук Dell Pro 14 Plus PB14250 (210-BPDK / BTO217_PB14250_EMEA)</name>
+<price>925621</price>
+<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
+<vendor>Dell</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Ноутбук. Модельная серия: Pro 14 Plus PB14250. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro 14 Plus PB14250. Коды: 210-BPDK / BTO217_PB14250_EMEA.]]></description>
+<param name="Тип">Ноутбук</param>
+<param name="Гарантия">36 мес</param>
+<param name="Для бренда">Dell</param>
+<param name="Модель">Pro 14 Plus PB14250</param>
+<param name="Коды">210-BPDK / BTO217_PB14250_EMEA</param>
+</offer>
+
+<offer id="CP13873248" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13873248</vendorCode>
+<name>Ноутбук Dell Pro 14 Plus (PB14250) (210-BPDK_3 / BTO211_PB14250_EMEA)</name>
+<price>720093</price>
+<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
+<vendor>Dell</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Ноутбук. Модельная серия: Pro 14 Plus. Гарантия: 36 мес. Для бренда: Dell. Модель: Pro 14 Plus. Коды: 210-BPDK_3 / BTO211_PB14250_EMEA.]]></description>
+<param name="Тип">Ноутбук</param>
+<param name="Гарантия">36 мес</param>
+<param name="Для бренда">Dell</param>
+<param name="Модель">Pro 14 Plus</param>
+<param name="Коды">210-BPDK_3 / BTO211_PB14250_EMEA</param>
 </offer>
 
 <offer id="CP13870156" available="true">
