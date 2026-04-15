@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import annotations
 
+import html
 import json
 import os
 import re
@@ -18,9 +19,9 @@ ROOT = Path(__file__).resolve().parents[1]
 PRICE_FILE = ROOT / "docs" / "Price.yml"
 DOCS_DIR = ROOT / "docs"
 RAW_DIR = DOCS_DIR / "raw"
-SUMMARY_REPORT_FILE = DOCS_DIR / "price_checker_report.txt"
+SUMMARY_REPORT_FILE = RAW_DIR / "price_checker_report.txt"
 DETAILS_REPORT_FILE = RAW_DIR / "price_checker_details.txt"
-LAST_SUCCESS_FILE = DOCS_DIR / "price_checker_last_success.json"
+LAST_SUCCESS_FILE = RAW_DIR / "price_checker_last_success.json"
 UNRESOLVED_FILE = RAW_DIR / "category_id_unresolved.txt"
 
 EXPECTED_SUPPLIERS = ("AkCent", "AlStyle", "ComPortal", "CopyLine", "VTT")
@@ -553,6 +554,45 @@ def build_summary_report(status: str, reason: str, metrics: Metrics, baseline: M
     return "\n".join(lines).strip() + "\n"
 
 
+def build_telegram_summary_html(status: str, reason: str, metrics: Metrics, baseline: Metrics | None, checked_at: datetime) -> str:
+    icon = {"УСПЕШНО": "✅", "ТРЕБУЕТ ВНИМАНИЯ": "⚠️", "НЕУСПЕШНО": "❌"}.get(status, "ℹ️")
+    top_price100 = build_top_suppliers({supplier: info.price100 for supplier, info in metrics.supplier_summary.items()})
+    top_placeholder = build_top_suppliers({supplier: info.placeholder for supplier, info in metrics.supplier_summary.items()})
+    top_excluded = build_top_suppliers(metrics.excluded_unmapped_by_supplier)
+    satu_mapping_status = "УСПЕШНО" if metrics.unknown_satu == 0 else "НЕУСПЕШНО"
+
+    def b(text: str) -> str:
+        return f"<b>{html.escape(text)}</b>"
+
+    lines = [
+        f"{icon} <b>Price — {html.escape(status)}</b>",
+        "",
+        f"{b('Время проверки:')} {b(fmt_dt(checked_at))}",
+        f"{b('Время сборки Price:')} {b(metrics.build_time or '-')}",
+        "",
+        f"{b('Товаров в Price:')} {b(f'{metrics.total} {fmt_delta(baseline.total if baseline else None, metrics.total)}')}",
+        f"{b('Есть в наличии:')} {b(f'{metrics.available_true} {fmt_delta(baseline.available_true if baseline else None, metrics.available_true)}')}",
+        f"{b('Нет в наличии:')} {b(f'{metrics.available_false} {fmt_delta(baseline.available_false if baseline else None, metrics.available_false)}')}",
+        "",
+        f"{b('С ценой 100:')} {b(f'{metrics.price100} {fmt_delta(baseline.price100 if baseline else None, metrics.price100)}')}",
+        f"{b('С заглушкой фото:')} {b(f'{metrics.placeholder} {fmt_delta(baseline.placeholder if baseline else None, metrics.placeholder)}')}",
+        f"{b('Без categoryId:')} {b(str(metrics.empty_category))}",
+        f"{b('Без категории Satu:')} {b(str(metrics.unknown_satu))}",
+        f"{b('Не вошло в final без categoryId:')} {b(f'{metrics.excluded_unmapped_total} {fmt_delta(baseline.excluded_unmapped_total if baseline else None, metrics.excluded_unmapped_total)}')}",
+        "",
+        b('Проблемные хвосты по поставщикам'),
+        "",
+        b('Цена 100:'),
+    ]
+    for item in (top_price100.split(', ') if top_price100 and top_price100 != 'нет' else ['нет']):
+        lines.append(b(item))
+    lines.extend(["", b('Заглушка фото:')])
+    for item in (top_placeholder.split(', ') if top_placeholder and top_placeholder != 'нет' else ['нет']):
+        lines.append(b(item))
+    lines.extend(["", f"{b('Не вошло в final без categoryId:')} {b(top_excluded)}", "", f"{b('Привязка к категориям Satu:')} {b(satu_mapping_status)}", f"{b('Статус проверки Price:')} {b(status)}", "", f"{b('Причина:')} {b(reason)}"])
+    return "\n".join(lines).strip() + "\n"
+
+
 def build_supplier_summary_lines(metrics: Metrics) -> List[str]:
     lines: List[str] = []
     for supplier in EXPECTED_SUPPLIERS:
@@ -685,6 +725,7 @@ def send_telegram(text: str) -> None:
         "chat_id": chat_id,
         "text": text,
         "disable_web_page_preview": "true",
+        "parse_mode": "HTML",
     }).encode("utf-8")
     req = urllib.request.Request(url, data=data, method="POST")
     with urllib.request.urlopen(req, timeout=30) as resp:
@@ -724,9 +765,10 @@ def main() -> int:
         status, reason = evaluate(metrics, baseline)
         summary_text = build_summary_report(status, reason, metrics, baseline, checked_at)
         details_text = build_details_report(status, reason, metrics, checked_at)
+        telegram_text = build_telegram_summary_html(status, reason, metrics, baseline, checked_at)
         write_reports(summary_text, details_text)
         try:
-            send_telegram(summary_text)
+            send_telegram(telegram_text)
         except Exception:
             pass
         if status == "УСПЕШНО":
@@ -744,9 +786,15 @@ def main() -> int:
 
     summary_text = build_failure_summary(reason, checked_at)
     details_text = build_failure_details(reason, checked_at)
+    telegram_text = (
+        f"❌ <b>Price — НЕУСПЕШНО</b>\n\n"
+        f"<b>Время проверки:</b> <b>{html.escape(fmt_dt(checked_at))}</b>\n\n"
+        f"<b>Причина:</b> <b>{html.escape(reason)}</b>\n\n"
+        f"<b>Статус проверки Price:</b> <b>НЕУСПЕШНО</b>\n"
+    )
     write_reports(summary_text, details_text)
     try:
-        send_telegram(summary_text)
+        send_telegram(telegram_text)
     except Exception:
         pass
     return 1
