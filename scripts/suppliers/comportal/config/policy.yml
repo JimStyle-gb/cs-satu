@@ -14,9 +14,10 @@ supplier: ComPortal
 timezone: Asia/Almaty
 
 # Единое расписание проекта:
-# AkCent 01:00 -> AlStyle 02:00 -> ComPortal 03:00 -> CopyLine 04:00 -> VTT 05:00
-next_run_hour_local: 3
-schedule_hour_almaty: 3
+# AkCent 22:30 -> AlStyle 23:30 -> ComPortal 00:30 -> CopyLine 01:30 -> VTT 02:30
+next_run_hour_local: 0
+schedule_hour_almaty: 0
+schedule_minute_almaty: 30
 
 id_prefix: CP
 placeholder_picture: https://placehold.co/800x800/png?text=No+Photo
@@ -63,4 +64,4 @@ quality_gate:
 notes:
   - ComPortal supplier-layer должен сам отдавать clean raw без supplier-specific правок в core.
   - baseline_file приведён к каноническому имени quality_gate_baseline.yml.
-  - next_run_hour_local и schedule_hour_almaty зафиксированы на 03:00 по Алматы.
+  - next_run_hour_local / schedule_hour_almaty / schedule_minute_almaty зафиксированы на 00:30 по Алматы.
