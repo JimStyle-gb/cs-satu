@@ -97,11 +97,6 @@ def build_chars_block(*args: Any, **kwargs: Any) -> str:
         raw = args[0]
     return _render_characteristics(_iter_characteristics(raw))
 
-def build_characteristics_block(*args: Any, **kwargs: Any) -> str:
-    return build_chars_block(*args, **kwargs)
-
-def render_chars_block(*args: Any, **kwargs: Any) -> str:
-    return build_chars_block(*args, **kwargs)
 
 def _render_description(name: str, main_text: str, characteristics: Any = None) -> str:
     safe_name = _escape_text(name)
