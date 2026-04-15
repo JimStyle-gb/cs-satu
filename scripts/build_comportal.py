@@ -21,7 +21,7 @@ from typing import Any
 import yaml
 
 from cs.core import write_cs_feed, write_cs_feed_raw
-from cs.meta import next_run_at_hour, now_almaty
+from cs.meta import next_run_at_time, now_almaty
 from cs.qg_report import QualityGateResult, coerce_quality_gate_result, make_quality_gate_result
 from suppliers.comportal.builder import build_offers
 from suppliers.comportal.diagnostics import (
@@ -88,7 +88,15 @@ def _resolve_hour(policy_cfg: dict[str, Any], schema_cfg: dict[str, Any]) -> int
         policy_cfg.get("schedule_hour_almaty")
         or policy_cfg.get("next_run_hour_local")
         or schema_cfg.get("next_run_hour_local"),
-        3,
+        0,
+    )
+
+def _resolve_minute(policy_cfg: dict[str, Any], schema_cfg: dict[str, Any]) -> int:
+    """Определить минуту следующего запуска по Алматы."""
+    return _safe_int(
+        policy_cfg.get("schedule_minute_almaty")
+        or schema_cfg.get("schedule_minute_almaty"),
+        30,
     )
 
 def _resolve_placeholder(schema_cfg: dict[str, Any]) -> str:
@@ -198,8 +206,9 @@ def main() -> int:
 
     supplier_name = str(policy_cfg.get("supplier") or schema_cfg.get("supplier") or "ComPortal").strip() or "ComPortal"
     hour = _resolve_hour(policy_cfg, schema_cfg)
+    minute = _resolve_minute(policy_cfg, schema_cfg)
     build_time = now_almaty()
-    next_run = next_run_at_hour(build_time, hour=hour)
+    next_run = next_run_at_time(build_time, hour=hour, minute=minute)
 
     placeholder_picture = _resolve_placeholder(schema_cfg)
     vendor_blacklist = _resolve_vendor_blacklist(schema_cfg)
