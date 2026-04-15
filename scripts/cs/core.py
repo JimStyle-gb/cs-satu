@@ -902,26 +902,6 @@ def extract_color_from_name(name: str) -> str:
         return "Цветной"
     return found[0]
 
-def apply_color_from_name(params: Sequence[tuple[str, str]], name: str) -> list[tuple[str, str]]:
-    # CS: если в имени явно указан цвет — перезаписываем param "Цвет"; если param отсутствует — добавляем
-    color = extract_color_from_name(name)
-    base_params = list(params or [])
-    if not color:
-        return base_params
-    out: list[tuple[str, str]] = []
-    found = False
-    for k, v in base_params:
-        kk = norm_ws(k)
-        vv = sanitize_mixed_text(norm_ws(v))
-        if kk.casefold().replace("ё", "е") == "цвет":
-            out.append(("Цвет", color))
-            found = True
-        else:
-            out.append((kk, vv))
-    if not found:
-        out.append(("Цвет", color))
-    return out
-
 def normalize_color_value(raw: str) -> str:
     # CS: нормализация значения цвета (из params/описания) → каноническая форма
     s = norm_ws(raw)
@@ -1047,14 +1027,6 @@ _RE_MIXED_HYPHEN_A1_CYR = re.compile(r"\b([A-Za-z]\d{1,3})[\-–—]([А-Яа-я
 _RE_MIXED_SLASH_LAT_CYR = re.compile(r"([A-Za-z]{1,}[A-Za-z0-9]*)/([Ѐ-ӿ]{2,})")
 _RE_MIXED_SLASH_CYR_LAT = re.compile(r"([Ѐ-ӿ]{2,})/([A-Za-z]{1,}[A-Za-z0-9]*)")
 
-def normalize_mixed_hyphen(s: str) -> str:
-    t = s or ""
-    if not t:
-        return t
-    # Начиная с v061 не удаляем дефис между LAT/CYR:
-    # LCD-дисплей, LED-индикаторы, SNMP-карты, Android-приставка и т.п.
-    return t
-
 _RE_MIXED_SLASH_LAT_CYR_RE_MIXED_SLASH_LAT_CYR = re.compile(r"([A-Za-z]{1,}[A-Za-z0-9]*)/([Ѐ-ӿ]{2,})")
 _RE_MIXED_SLASH_CYR_LAT = re.compile(r"([Ѐ-ӿ]{2,})/([A-Za-z]{1,}[A-Za-z0-9]*)")
 
@@ -1096,53 +1068,6 @@ def _char_script(ch: str) -> str | None:
     if _CYR_CHAR_RE.match(ch):
         return "CYR"
     return None
-
-def normalize_mixed_slash_scripts(s: str) -> str:
-    t = s or ""
-    if "/" not in t:
-        return t
-    chars = list(t)
-    n = len(chars)
-
-    def find_script_left(i: int) -> str | None:
-        j = i - 1
-        while j >= 0:
-            ch = chars[j]
-            sc = _char_script(ch)
-            if sc:
-                return sc
-            # пропускаем цифры/точки/дефисы/пробелы
-            j -= 1
-        return None
-
-    def find_script_right(i: int) -> str | None:
-        j = i + 1
-        while j < n:
-            ch = chars[j]
-            sc = _char_script(ch)
-            if sc:
-                return sc
-            j += 1
-        return None
-
-    changed = False
-    for i, ch in enumerate(chars):
-        if ch != "/":
-            continue
-        ls = find_script_left(i)
-        rs = find_script_right(i)
-        if ls and rs and ls != rs:
-            chars[i] = " "
-            changed = True
-    if not changed:
-        return t
-    out = "".join(chars)
-    out = re.sub(r"\s{2,}", " ", out).strip()
-    return out
-
-def fix_jk_token(s: str) -> str:
-    # "ЖK" -> "ЖК"
-    return re.sub(r"Ж[КKk]", "ЖК", s or "")
 
 def sanitize_mixed_text(s: str) -> str:
     t = fix_mixed_cyr_lat(s)
@@ -1598,50 +1523,6 @@ def clean_params(
 
 # --- Backward-safe shims: supplier-specific param rules больше не живут в shared core. ---
 
-def _ac_compact_barcode_support(params: list[tuple[str, str]]) -> list[tuple[str, str]]:
-    """
-    Back-compat shim.
-
-    Shared core больше не склеивает AkCent barcode-параметры.
-    Если поставщику нужна такая читабельная сборка, это обязанность supplier-layer.
-    """
-    return list(params or [])
-
-def _ac_drop_barcode_params(params: list[tuple[str, str]]) -> list[tuple[str, str]]:
-    """
-    Back-compat shim.
-
-    Shared core больше не удаляет AkCent-specific barcode-ключи.
-    Любая такая очистка должна происходить в supplier raw.
-    """
-    return list(params or [])
-
-def apply_supplier_param_rules(params: Sequence[tuple[str, str]], oid: str, name: str) -> list[tuple[str, str]]:
-    """
-    Shared-only post-rules для params.
-
-    Важно:
-    - shared core не ветвится по поставщику и не знает AC/CL/VT/AS;
-    - supplier-specific переименования, drop-правила и очистка живут только в supplier-layer;
-    - функция оставлена с прежней сигнатурой только для backward compatibility.
-    """
-    _ = oid
-    _ = name
-
-    out: list[tuple[str, str]] = []
-    for k, v in params or []:
-        kk = norm_ws(k)
-        vv = sanitize_mixed_text(norm_ws(v))
-        if not kk or not vv:
-            continue
-
-        # Глобально: не выводим служебный "Артикул" как характеристику.
-        if kk.casefold().replace("ё", "е") == "артикул":
-            continue
-
-        out.append((kk, vv))
-    return out
-
 def sort_params(params: Sequence[tuple[str, str]], priority: Sequence[str] | None = None) -> list[tuple[str, str]]:
     pr = [norm_ws(x) for x in (priority or []) if norm_ws(x)]
     pr_map = {p.casefold(): i for i, p in enumerate(pr)}
@@ -1654,126 +1535,12 @@ def sort_params(params: Sequence[tuple[str, str]], priority: Sequence[str] | Non
     return sorted(list(params), key=key)
 
 # Пробует извлечь пары "Характеристика: значение" из HTML описания (если поставщик кладёт это в description)
-def enrich_params_from_desc(params: list[tuple[str, str]], desc_html: str) -> None:
-    if not desc_html:
-        return
-
-    # <li><strong>Ключ:</strong> Значение</li>
-    for m in re.finditer(r"<li>\s*<strong>([^<:]{1,80}):</strong>\s*([^<]{1,200})</li>", desc_html, flags=re.I):
-        k = norm_ws(m.group(1))
-        v = norm_ws(m.group(2))
-        if k and v:
-            # CS: артефакт парсинга вида 'Кол: во ...' -> 'Кол-во ...'
-            if k.casefold() == "кол" and v.lower().startswith("во"):
-                m2 = re.match(r"(?i)^во\s+(.+)$", v)
-                rest = norm_ws(m2.group(1)) if m2 else ""
-                if rest:
-                    if ":" in rest:
-                        k2, v2 = rest.split(":", 1)
-                        k2 = norm_ws(k2)
-                        v2 = norm_ws(v2)
-                        if k2 and v2:
-                            params.append((f"Кол-во {k2}", v2))
-                            continue
-                    params.append(("Кол-во", rest))
-                    continue
-            params.append((k, v))
 
 # Лёгкое обогащение характеристик из name/description (когда у поставщика params бедные)
 
 def _extract_color_from_name(name: str) -> str:
     """CS: совместимость со старым именем функции (цвет из name)."""
     return extract_color_from_name(name)
-
-def enrich_params_from_name_and_desc(params: list[tuple[str, str]], name: str, desc_text: str) -> None:
-    name = name or ""
-    desc_text = desc_text or ""
-    keys_cf = {norm_ws(k).casefold() for k, _ in (params or []) if k}
-
-    def _has(k: str) -> bool:
-        return (k or "").casefold() in keys_cf
-
-    hay = f"{name}\n{desc_text}"
-
-    # Тип (первое слово) — только если нет
-    if not _has("Тип"):
-        first = (name.split() or [""])[0].strip()
-        if first and len(first) <= 32 and not re.search(r"\d", first):
-            params.append(("Тип", first))
-            keys_cf.add("тип")
-    # CS: Совместимость НЕ создаём и НЕ обогащаем автоматически.
-    # Если поставщик не дал параметр совместимости — оставляем пусто (по просьбе пользователя).
-
-    # Ресурс
-    if not (_has("Ресурс") or _has("Ресурс, стр")):
-        m = re.search(r"(?i)\b(\d[\d\s\.,]{0,10}\d|\d{2,7})\s*(?:стр|страниц\w*|pages?)\b", hay)
-        if m:
-            num = re.sub(r"[^\d]", "", m.group(1))
-            if len(num) >= 2 and not re.fullmatch(r"0+", num):
-                params.append(("Ресурс", num))
-                keys_cf.add("ресурс")
-    # Цвет
-    # ВАЖНО: если цвет явно указан в НАЗВАНИИ — он приоритетнее параметров (исправляем конфликт).
-    # CS: чистим мусорные значения ("сервисам", "сертифицированном", "серии" и т.п.) и нормализуем допустимые.
-    _bad_color_re = re.compile(r"(?i)\b(сервис\w*|сертифиц\w*|сертификац\w*|сер(?:ии|ий|ия))\b")
-    for i in range(len(params) - 1, -1, -1):
-        k, v = params[i]
-        if norm_ws(k).casefold() == "цвет":
-            vv_raw = norm_ws(v)
-            vv_cf = vv_raw.casefold().replace("ё", "е")
-            if vv_cf in {"сердцевина", "по одному на каждый цвет", "комбинированный"} or _bad_color_re.search(vv_raw):
-                del params[i]
-                keys_cf.discard("цвет")
-                continue
-            vv_norm = normalize_color_value(vv_raw)
-            if vv_norm:
-                params[i] = ("Цвет", vv_norm)
-            elif len(vv_raw) > 24 and " " in vv_raw:
-                # CS: длинные фразы обычно не цвет
-                del params[i]
-                keys_cf.discard("цвет")
-
-    color_from_name = _extract_color_from_name(name)
-    if color_from_name:
-        # обновляем существующий "Цвет" (если был) или добавляем
-        updated = False
-        for i, (k, v) in enumerate(list(params)):
-            if norm_ws(k).casefold() == "цвет":
-                if norm_ws(v).casefold() != norm_ws(color_from_name).casefold():
-                    params[i] = ("Цвет", color_from_name)
-                updated = True
-                break
-        if not updated:
-            params.append(("Цвет", color_from_name))
-        keys_cf.add("цвет")
-    else:
-        # Если цвета в названии нет — можно попробовать вытащить из имени+описания
-        if not _has("Цвет"):
-            m = re.search(
-                r"(?i)\b("
-                r"cmyk|cmy|cmy\s*\+\s*bk|bk\s*\+\s*cmy|bk[,/ ]*c[,/ ]*m[,/ ]*y|c[,/ ]*m[,/ ]*y[,/ ]*bk|"
-                r"black|bk|cyan|magenta|yellow|gray|grey|red|light\s*grey|light\s*gray|lgy|chroma\s*optim(?:ize|iser|izer)|"
-                r"черн(?:ый|ая|ое|ые|ого|ому|ым|ыми|ых)|"
-                r"сер(?:ый|ая|ое|ые|ого|ому|ым|ыми|ых)|"
-                r"ж[её]лт(?:ый|ая|ое|ые|ого|ому|ым|ыми|ых)|"
-                r"голуб(?:ой|ая|ое|ые|ого|ому|ым|ыми|ых)|"
-                r"пурпур(?:ный|ная|ное|ные|ного|ному|ным|ными|ных)|"
-                r"син(?:ий|яя|ее|ие|его|ему|им|ими|их)|"
-                r"красн(?:ый|ая|ое|ые|ого|ому|ым|ыми|ых)|"
-                r"зел[её]н(?:ый|ая|ое|ые|ого|ому|ым|ыми|ых)|"
-                r"бел(?:ый|ая|ое|ые|ого|ому|ым|ыми|ых)|"
-                r"серебрян(?:ый|ая|ое|ые|ого|ому|ым|ыми|ых)|"
-                r"прозрачн(?:ый|ая|ое|ые|ого|ому|ым|ыми|ых)|"
-                r"фиолетов(?:ый|ая|ое|ые|ого|ому|ым|ыми|ых)|"
-                r"золот(?:ой|ая|ое|ые|ого|ому|ым|ыми|ых)"
-                r")\b",
-                hay,
-            )
-            if m:
-                canon = normalize_color_value(m.group(0))
-                if canon:
-                    params.append(("Цвет", canon))
-                    keys_cf.add("цвет")
 
 # Делает текст описания "без странностей" (убираем лишние пробелы)
 def fix_text(s: str) -> str:
@@ -2393,41 +2160,6 @@ def _clip_desc_plain(desc: str, *, max_chars: int = 1200) -> str:
         out = out + "…"
     return out
 
-def _build_desc_part(name: str, native_desc: str) -> str:
-    # CS: возвращает ТОЛЬКО тело описания (<p>...</p>), без <h3> (заголовок строится выше шаблоном)
-    d = fix_text(native_desc)
-    if not d:
-        return ""
-
-    # Если в нативном описании есть технические/основные характеристики или табличные данные,
-    # не дублируем это в описании (единый CS-блок характеристик будет ниже).
-    if _native_has_specs_text(d):
-        ls = d.split("\n")
-        cut = None
-        for i, ln in enumerate(ls):
-            if "\t" in ln:
-                cut = i
-                break
-            if re.search(r"(?i)\b(технические\s+характеристики|основные\s+характеристики|характеристики)\b", ln):
-                cut = i
-                break
-        if cut is not None:
-            d = "\n".join(ls[:cut]).strip()
-
-    # CS: убираем повтор названия в начале и режем длинные простыни
-    d = _dedupe_desc_leading_name(d, name)
-    d = _clip_desc_plain(d, max_chars=int(os.getenv("CS_NATIVE_DESC_MAX_CHARS", "1200")))
-
-    # Если после чистки осталось только название — не выводим пустой <p> с дублем.
-    if _cmp_name_like_text(d) == _cmp_name_like_text(name):
-        d = ""
-
-    if not d:
-        return ""
-
-    d2 = xml_escape_text(d).replace("\n", "<br>")
-    return f"<p>{d2}</p>"
-
 def normalize_cdata_inner(inner: str) -> str:
     # Убираем мусорные пробелы/пустые строки внутри CDATA, без лишних ведущих/хвостовых переводов строк
     inner = (inner or "").strip()
@@ -2529,120 +2261,6 @@ def _is_sentence_like_param_name(k: str) -> bool:
 
     return False
 
-def split_params_for_chars(
-    params_sorted: Sequence[tuple[str, str]],
-) -> tuple[list[tuple[str, str]], list[str]]:
-    """Отделяет 'параметры-фразы' (дисклеймеры/примечания) от реальных характеристик."""
-    kept: list[tuple[str, str]] = []
-    notes_raw: list[str] = []
-
-    for k, v in (params_sorted or []):
-        kk = norm_ws(k)
-        vv = sanitize_mixed_text(norm_ws(v))
-        if not kk or not vv:
-            continue
-
-        # кривые обрывки значений типа '...:' — это не характеристика
-        if vv.endswith(":"):
-            vv2 = vv.rstrip(": ")
-            txt = f"{kk}: {vv2}" if vv2 else kk
-            txt = norm_ws(txt)
-            if len(txt) >= 18:
-                notes_raw.append(txt)
-            continue
-
-        # пустые/неинформативные значения (UX/SEO мусор)
-        vv_cf = vv.casefold()
-        if (len(vv) <= 28) and any(x in vv_cf for x in ("поэтому рекомендуем", "рекомендуем", "советуем", "рекоменд")):
-            # если нет цифр/единиц — выбрасываем (не переносим даже в примечание)
-            if not re.search(r"\d", vv):
-                continue
-
-        if _is_sentence_like_param_name(kk):
-            # обрывки/инструкции -> примечание, но слишком короткие куски выкидываем
-            text = kk
-            if vv and (vv.casefold() not in kk.casefold()):
-                text = f"{kk}: {vv}"
-            text = norm_ws(text)
-            if len(text) < 18:
-                continue
-            notes_raw.append(text)
-            continue
-
-        kept.append((kk, vv))
-
-    # uniq + limit
-    notes: list[str] = []
-    seen: set[str] = set()
-    for x in notes_raw:
-        x2 = norm_ws(x)
-        if not x2:
-            continue
-        cf = x2.casefold()
-        if cf in seen:
-            continue
-        seen.add(cf)
-        notes.append(x2)
-
-    return kept, notes[:2]
-
-def _build_param_summary(params_sorted: Sequence[tuple[str, str]]) -> str:
-    """
-    Короткая фраза из существующих param, если родного описания нет.
-    Ничего не выдумываем, берем только реальные значения.
-    """
-    # приоритетные поля (без габаритов/объемов и прочего шумного)
-    pri = [
-        "тип", "вид", "тип товара",
-        "производитель", "бренд", "марка",
-        "модель",
-        "совместимость",
-        "цвет",
-        "ресурс",
-        "формат",
-        "интерфейс",
-    ]
-    blacklist = {
-        "артикул", "штрихкод", "ean", "sku", "код",
-        "вес", "габариты", "габариты (шхгхв)", "ширина", "высота", "длина", "объём", "объем",
-    }
-    # собираем последние значения по ключу
-    buckets: dict[str, tuple[str, str]] = {}
-    for k, v in params_sorted or []:
-        kk = norm_ws(k).lower()
-        vv = sanitize_mixed_text(norm_ws(v))
-        if not kk or not vv:
-            continue
-        if kk in blacklist:
-            continue
-        # отсекаем "да/нет/есть" — в кратком абзаце это мусор
-        vv_l = vv.strip().lower()
-        if vv_l in {"да", "нет", "есть", "имеется", "-", "—"}:
-            continue
-        if len(vv) > 140:
-            continue
-        buckets[kk] = (k.strip(), vv.strip())
-
-    picked: list[tuple[str, str]] = []
-    for want in pri:
-        if want in buckets:
-            picked.append(buckets[want])
-        if len(picked) >= 3:
-            break
-
-    # fallback: первые 2 адекватных
-    if not picked:
-        for _, (k, v) in buckets.items():
-            picked.append((k, v))
-            if len(picked) >= 2:
-                break
-
-    if not picked:
-        return ""
-
-    # "Тип: ...; Модель: ...; ..."
-    return "; ".join(f"{k}: {v}" for k, v in picked).strip()
-
 def get_public_vendor(supplier: str | None = None) -> str:
     """
     Публичный fallback-вендор для финального YML.
@@ -2675,7 +2293,6 @@ def get_public_vendor(supplier: str | None = None) -> str:
 def _category_unresolved_report_path(supplier: str) -> Path:
     _ = supplier
     return Path("docs/raw/category_id_unresolved.txt")
-
 
 def _write_category_unresolved_report(path: Path, supplier: str, lines: Sequence[str]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -2716,7 +2333,6 @@ def _write_category_unresolved_report(path: Path, supplier: str, lines: Sequence
     data = header + "\n\n".join(pieces).rstrip() + "\n"
     path.write_text(data, encoding="utf-8")
 
-
 def _resolve_offer_category_id(offer: "OfferOut", *, public_vendor: str) -> str:
     name_full = normalize_offer_name(offer.name)
     name_full = sanitize_mixed_text(name_full)
@@ -2731,7 +2347,6 @@ def _resolve_offer_category_id(offer: "OfferOut", *, public_vendor: str) -> str:
         native_desc=native_desc,
     )
     return norm_ws(category_id)
-
 
 def _split_offers_for_final(
     offers: Sequence["OfferOut"],
@@ -3146,4 +2761,3 @@ class OfferOut:
             f"</offer>"
         )
         return out
-
