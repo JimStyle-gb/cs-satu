@@ -6,11 +6,12 @@ VTT filtering layer.
 
 Что делает:
 - держит supplier-layer правила фильтрации;
-- собирает стабильный filter_report для build summary;
+- нормализует URL/названия листинга;
+- собирает один канонический контракт filter-inputs для source/build слоя.
 
 Что не делает:
 - не строит final offers;
-- не переносит supplier-правила в shared core.
+- не держит legacy kwargs и лишние алиасы “на всякий случай”.
 """
 from __future__ import annotations
 
@@ -80,17 +81,21 @@ TITLE_LEAD_CODE_RE = re.compile(
     re.I,
 )
 ORIGINAL_MARK_RE = re.compile(
-    r"""(?<!\w)\((?:O|О|OEM)\)(?!\w)|\bоригинал(?:ьн(?:ый|ая|ое|ые))?\b""",
+    r"""(?<!\w)\((?:O|О|OEM)\)(?!\w)|оригинал(?:ьн(?:ый|ая|ое|ые))?""",
     re.I,
 )
-LEAD_MARK_RE = re.compile(r"""^(?:\((?:E|LE)\)|LE\b|E\b)\s*""", re.I)
+LEAD_MARK_RE = re.compile(r"""^(?:\((?:E|LE)\)|LE|E)\s*""", re.I)
 _MULTI_WS_RE = re.compile(r"\s+")
+_SPLIT_ENV_RE = re.compile(r"[\s,;|]+")
 
-def norm_ws(text: str) -> str:
-    return " ".join(str(text or "").replace("\xa0", " ").split()).strip()
 
 def safe_str(value: object) -> str:
     return str(value).strip() if value is not None else ""
+
+
+def norm_ws(text: str) -> str:
+    return " ".join(str(text or "").replace(" ", " ").split()).strip()
+
 
 def _norm_title_prefix(text: str) -> str:
     s = safe_str(text)
@@ -100,64 +105,35 @@ def _norm_title_prefix(text: str) -> str:
     s = _MULTI_WS_RE.sub(" ", s)
     return s.strip()
 
-def product_path_re(path: str) -> bool:
-    return bool(re.match(r"^/catalog/[^/?#]+/?$", path or "", re.I))
-
-def normalize_listing_url(url: str) -> str:
-    p = urlparse(url)
-    qs = parse_qs(p.query)
-    items: list[tuple[str, str]] = []
-    for key in sorted(qs):
-        for value in sorted(qs[key]):
-            items.append((key, value))
-    return urlunparse((p.scheme, p.netloc, p.path, "", urlencode(items, doseq=True), ""))
-
-def mk_category_url(base_url: str, code: str) -> str:
-    return urljoin(base_url, f"/catalog/?category={code}")
-
-def build_listing_url(base_url: str, category_code: str, page_no: int = 1) -> str:
-    base = safe_str(base_url).rstrip("/")
-    cat = safe_str(category_code)
-    if not base or not cat:
-        return base
-    if page_no <= 1:
-        return mk_category_url(base, cat)
-    return f"{mk_category_url(base, cat)}&PAGEN_1={int(page_no)}"
-
-def normalize_listing_title(title: str) -> str:
-    title = norm_ws(title)
-    title = ORIGINAL_MARK_RE.sub("", title)
-    title = TITLE_LEAD_CODE_RE.sub("", title)
-    while True:
-        new_title = LEAD_MARK_RE.sub("", title).strip(" ,.-")
-        if new_title == title:
-            break
-        title = new_title
-    return norm_ws(title).strip(" ,.-")
 
 def _read_yaml(path: Path) -> dict[str, Any]:
-    if not path.exists():
-        return {}
-    if yaml is None:
+    if not path.exists() or yaml is None:
         return {}
     try:
         return yaml.safe_load(path.read_text(encoding="utf-8")) or {}
     except Exception:
         return {}
 
+
 def load_filter_cfg(cfg_path: str | Path | None) -> dict[str, Any]:
     if not cfg_path:
         return {}
     return _read_yaml(Path(cfg_path))
 
-def load_filter_config(path: str | Path) -> dict[str, Any]:
-    return load_filter_cfg(path)
 
 def _split_env_list(raw: str | None) -> list[str]:
     if not raw:
         return []
-    parts = re.split(r"[\s,;|]+", str(raw).strip())
-    return [p.strip() for p in parts if p and p.strip()]
+    return [part.strip() for part in _SPLIT_ENV_RE.split(str(raw).strip()) if part and part.strip()]
+
+
+def _first_non_empty(*values: str | None) -> str:
+    for value in values:
+        s = safe_str(value)
+        if s:
+            return s
+    return ""
+
 
 def categories_from_cfg(cfg: dict[str, Any] | None) -> list[str]:
     vals = (cfg or {}).get("category_codes")
@@ -166,6 +142,7 @@ def categories_from_cfg(cfg: dict[str, Any] | None) -> list[str]:
         if out:
             return out
     return list(DEFAULT_CATEGORY_CODES)
+
 
 def prefixes_from_cfg(cfg: dict[str, Any] | None) -> list[str]:
     vals = (cfg or {}).get("allowed_title_prefixes")
@@ -180,26 +157,57 @@ def prefixes_from_cfg(cfg: dict[str, Any] | None) -> list[str]:
             return out
     return list(DEFAULT_ALLOWED_TITLE_PREFIXES)
 
+
+def product_path_re(path: str) -> bool:
+    return bool(re.match(r"^/catalog/[^/?#]+/?$", path or "", re.I))
+
+
+def normalize_listing_url(url: str) -> str:
+    p = urlparse(url)
+    qs = parse_qs(p.query)
+    items: list[tuple[str, str]] = []
+    for key in sorted(qs):
+        for value in sorted(qs[key]):
+            items.append((key, value))
+    return urlunparse((p.scheme, p.netloc, p.path, "", urlencode(items, doseq=True), ""))
+
+
+def mk_category_url(base_url: str, code: str) -> str:
+    return urljoin(base_url, f"/catalog/?category={code}")
+
+
+def normalize_listing_title(title: str) -> str:
+    title = norm_ws(title)
+    title = ORIGINAL_MARK_RE.sub("", title)
+    title = TITLE_LEAD_CODE_RE.sub("", title)
+    while True:
+        new_title = LEAD_MARK_RE.sub("", title).strip(" ,.-")
+        if new_title == title:
+            break
+        title = new_title
+    return norm_ws(title).strip(" ,.-")
+
+
 def title_allowed(title: str, allowed_prefixes: list[str] | tuple[str, ...] | set[str] | None) -> bool:
     prefixes = [safe_str(x) for x in (allowed_prefixes or []) if safe_str(x)]
     if not prefixes:
         return True
 
-    t = _norm_title_prefix(title)
-    if not t:
+    title_norm = _norm_title_prefix(title)
+    if not title_norm:
         return False
-    t_cf = t.casefold()
+    title_cf = title_norm.casefold()
 
     for prefix in prefixes:
-        p = _norm_title_prefix(prefix)
-        if not p:
-            continue
-        if t_cf.startswith(p.casefold()):
+        prefix_norm = _norm_title_prefix(prefix)
+        if prefix_norm and title_cf.startswith(prefix_norm.casefold()):
             return True
     return False
 
+
 def title_matches_allowed(title: str, prefixes: list[str]) -> bool:
     return title_allowed(title, prefixes)
+
 
 def url_allowed(url: str, category_codes: list[str] | tuple[str, ...] | set[str] | None) -> bool:
     codes = [safe_str(x) for x in (category_codes or []) if safe_str(x)]
@@ -215,22 +223,6 @@ def url_allowed(url: str, category_codes: list[str] | tuple[str, ...] | set[str]
             return True
     return False
 
-def filter_index_items(
-    items: list[dict[str, Any]],
-    *,
-    category_codes: list[str] | None = None,
-    allowed_title_prefixes: list[str] | None = None,
-) -> list[dict[str, Any]]:
-    out: list[dict[str, Any]] = []
-    for item in items or []:
-        title = safe_str(item.get("title"))
-        url = safe_str(item.get("url"))
-        if category_codes and not url_allowed(url, category_codes):
-            continue
-        if allowed_title_prefixes and not title_allowed(title, allowed_title_prefixes):
-            continue
-        out.append(item)
-    return out
 
 def resolve_filter_inputs(
     *,
@@ -241,11 +233,7 @@ def resolve_filter_inputs(
     category_codes_env: str | None = None,
     allowed_title_prefixes_env: str | None = None,
     env_category_codes: str | None = None,
-    env_allowed_title_prefixes: str | None = None,
     env_allowed_prefixes: str | None = None,
-    env_categories: str | None = None,
-    env_prefixes: str | None = None,
-    **legacy_kwargs: Any,
 ) -> tuple[list[str], list[str]]:
     cfg: dict[str, Any] = {}
     if cfg_path:
@@ -253,34 +241,20 @@ def resolve_filter_inputs(
     if filter_cfg:
         cfg.update(filter_cfg)
 
-    # Подбираем legacy имена, если прилетели через **kwargs.
-    env_category_codes = env_category_codes or safe_str(legacy_kwargs.get("env_category_codes"))
-    env_allowed_title_prefixes = env_allowed_title_prefixes or safe_str(legacy_kwargs.get("env_allowed_title_prefixes"))
-    env_allowed_prefixes = env_allowed_prefixes or safe_str(legacy_kwargs.get("env_allowed_prefixes"))
-    env_categories = env_categories or safe_str(legacy_kwargs.get("env_categories"))
-    env_prefixes = env_prefixes or safe_str(legacy_kwargs.get("env_prefixes"))
-    categories_env = categories_env or safe_str(legacy_kwargs.get("categories_env"))
-    prefixes_env = prefixes_env or safe_str(legacy_kwargs.get("prefixes_env"))
-    category_codes_env = category_codes_env or safe_str(legacy_kwargs.get("category_codes_env"))
-    allowed_title_prefixes_env = allowed_title_prefixes_env or safe_str(legacy_kwargs.get("allowed_title_prefixes_env"))
-
     categories = _split_env_list(
-        category_codes_env or categories_env or env_category_codes or env_categories
+        _first_non_empty(category_codes_env, categories_env, env_category_codes)
     )
     if not categories:
         categories = categories_from_cfg(cfg)
 
     prefixes = _split_env_list(
-        allowed_title_prefixes_env
-        or prefixes_env
-        or env_allowed_title_prefixes
-        or env_allowed_prefixes
-        or env_prefixes
+        _first_non_empty(allowed_title_prefixes_env, prefixes_env, env_allowed_prefixes)
     )
     if not prefixes:
         prefixes = prefixes_from_cfg(cfg)
 
     return categories, prefixes
+
 
 __all__ = [
     "DEFAULT_CATEGORY_CODES",
@@ -290,15 +264,12 @@ __all__ = [
     "product_path_re",
     "normalize_listing_url",
     "mk_category_url",
-    "build_listing_url",
     "normalize_listing_title",
     "load_filter_cfg",
-    "load_filter_config",
     "categories_from_cfg",
     "prefixes_from_cfg",
     "resolve_filter_inputs",
     "title_allowed",
     "title_matches_allowed",
     "url_allowed",
-    "filter_index_items",
 ]
