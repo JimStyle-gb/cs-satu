@@ -2215,6 +2215,19 @@ def normalize_pictures(pictures: Sequence[str]) -> list[str]:
         out.append(u)
     return out
 
+
+
+def _cs_limit_pictures_for_satu_xml(pictures: Sequence[str], max_count: int = 10) -> list[str]:
+    """Ограничивает только экспортируемые <picture> под лимит Satu.
+
+    ВАЖНО:
+    - не меняет исходные supplier/raw данные;
+    - применяется только в final XML;
+    - сначала нормализует и дедуплицирует фото, затем оставляет первые max_count.
+    """
+    pics = normalize_pictures(pictures or [])
+    return pics[:max_count]
+
 # Собирает keywords: бренд + полное имя + разбор имени на слова + города (в конце)
 
 # Собирает keywords: бренд + имя + ключи по доставке + города (компактно, без "простыни")
@@ -2698,7 +2711,7 @@ class OfferOut:
         # Любая такая очистка должна происходить только в RAW / supplier-layer.
 
         pics_xml = ""
-        pics = normalize_pictures(self.pictures or [])
+        pics = _cs_limit_pictures_for_satu_xml(self.pictures or [], 10)
         if not pics and CS_PICTURE_PLACEHOLDER_URL:
             pics = [CS_PICTURE_PLACEHOLDER_URL]
         for pp in pics:
