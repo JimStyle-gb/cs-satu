@@ -121,7 +121,15 @@ def _resolve_exact(*, name_n: str, vendor_n: str, type_n: str, tech_n: str, hay:
         return GROUP_IDS["fusers"]
     if _contains_any(hay, ["блок проявки", "developer unit", "магнитный вал блока проявки"]):
         return GROUP_IDS["developer_units"]
-    if _contains_any(hay, ["ремень переноса", "узел переноса", "вал переноса", "коротрон", "corona"]):
+    if _contains_any(hay, [
+        "ремень переноса",
+        "узел переноса",
+        "вал переноса",
+        "коротрон",
+        "corona",
+        "трансферный комплект",
+        "transfer kit",
+    ]):
         return GROUP_IDS["transfer_units"]
     if _contains_any(hay, [
         "ролик подачи",
