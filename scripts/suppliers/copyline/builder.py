@@ -268,7 +268,6 @@ def _source_originality_haystack(page: dict, name: str, params: Sequence[Tuple[s
     for key in (
         "title",
         "raw_desc",
-        "desc",
         "vendor",
         "model",
         "sku",
@@ -276,7 +275,7 @@ def _source_originality_haystack(page: dict, name: str, params: Sequence[Tuple[s
         chunks.append(safe_str(page.get(key)))
     for key, value in params:
         chunks.append(f"{safe_str(key)}: {safe_str(value)}")
-    for seq_key in ("raw_desc_pairs", "raw_table_params", "params"):
+    for seq_key in ("raw_desc_pairs", "raw_table_params"):
         for k, v in _coerce_pairs(page.get(seq_key) or []):
             chunks.append(f"{k}: {v}")
     return "\n".join(x for x in chunks if x)
@@ -558,23 +557,14 @@ def _apply_consumable_seo_intro(name: str, vendor: str, params: Sequence[Tuple[s
 
 # ----------------------------- resolve helpers -----------------------------
 
-def _resolve_source_channels(page: dict) -> tuple[str, list[Tuple[str, str]], list[Tuple[str, str]], list[Tuple[str, str]]]:
-    """
-    Собрать source-каналы с backward-safe совместимостью.
-
-    Возвращает:
-    - raw_desc
-    - raw_desc_pairs
-    - raw_table_params
-    - legacy_params
-    """
-    raw_desc = safe_str(page.get("raw_desc") or page.get("desc"))
+def _resolve_source_channels(page: dict) -> tuple[str, list[Tuple[str, str]], list[Tuple[str, str]]]:
+    """Собрать канонические source-каналы без legacy-слоя."""
+    raw_desc = safe_str(page.get("raw_desc"))
     raw_desc_pairs = _coerce_pairs(page.get("raw_desc_pairs") or [])
     raw_table_params = _coerce_pairs(page.get("raw_table_params") or [])
-    legacy_params = _coerce_pairs(page.get("params") or [])
-    return raw_desc, raw_desc_pairs, raw_table_params, legacy_params
+    return raw_desc, raw_desc_pairs, raw_table_params
 
-def _resolve_page_basics(page: dict, *, fallback_title: str) -> tuple[str, str, str, str, str, str, list[Tuple[str, str]]]:
+def _resolve_page_basics(page: dict, *, fallback_title: str) -> tuple[str, str, str, str, str, str, list[Tuple[str, str]], list[Tuple[str, str]]]:
     """
     Подготовить basics и развести text-for-data / text-for-display.
 
@@ -585,23 +575,22 @@ def _resolve_page_basics(page: dict, *, fallback_title: str) -> tuple[str, str, 
     - model
     - extract_desc
     - display_desc
-    - page_params_input
+    - raw_desc_pairs
+    - raw_table_params
     """
     sku = safe_str(page.get("sku"))
     source_title = safe_str(page.get("title") or fallback_title)
 
-    raw_desc, raw_desc_pairs, raw_table_params, legacy_params = _resolve_source_channels(page)
+    raw_desc, raw_desc_pairs, raw_table_params = _resolve_source_channels(page)
 
-    # Главный extractor должен видеть более полный текст, а не уже narrative-cleaned body.
+    # Главный extractor должен видеть более полный текст, а не narrative-cleaned body.
     extract_desc = _build_extract_desc(raw_desc)
 
-    # normalize.py пока ещё backward-safe и сам умеет clean_description внутри.
-    # Мы используем из него только basics, а не его `description`.
     basics = normalize_source_basics(
         title=source_title,
         sku=sku,
         description_text=extract_desc or raw_desc,
-        params=raw_table_params or raw_desc_pairs or legacy_params,
+        params=raw_table_params or raw_desc_pairs,
     )
     title = safe_str(basics.get("title") or source_title)
     vendor = safe_str(basics.get("vendor"))
@@ -610,11 +599,7 @@ def _resolve_page_basics(page: dict, *, fallback_title: str) -> tuple[str, str, 
     # display_desc — отдельный слой только для показа.
     display_desc = clean_description(raw_desc)
 
-    # Для текущего контракта params_page ещё нельзя передать provenance отдельно,
-    # поэтому аккуратно собираем input здесь, а не в source.py.
-    page_params_input = _merge_params(raw_table_params, raw_desc_pairs, legacy_params)
-
-    return sku, title, vendor, model, extract_desc, display_desc, page_params_input
+    return sku, title, vendor, model, extract_desc, display_desc, raw_desc_pairs, raw_table_params
 
 def _repair_model_param(params: Sequence[Tuple[str, str]], model: str) -> list[Tuple[str, str]]:
     """Подстраховать `Модель` лучшим кодом, если там слабое значение."""
@@ -674,7 +659,7 @@ def _resolve_available(_: dict) -> bool:
 
 def build_offer_from_page(page: dict, *, fallback_title: str = "") -> OfferOut | None:
     """Собрать raw OfferOut из page-payload."""
-    sku, title, vendor, model, extract_desc, display_desc, page_params_input = _resolve_page_basics(
+    sku, title, vendor, model, extract_desc, display_desc, raw_desc_pairs, raw_table_params = _resolve_page_basics(
         page,
         fallback_title=fallback_title,
     )
@@ -684,8 +669,9 @@ def build_offer_from_page(page: dict, *, fallback_title: str = "") -> OfferOut |
     # Главный extractor должен работать по text-for-data.
     page_params = extract_page_params(
         title=title,
-        description=extract_desc,
-        page_params=page_params_input,
+        extract_desc=extract_desc,
+        raw_desc_pairs=raw_desc_pairs,
+        raw_table_params=raw_table_params,
     )
 
     # Fill-missing слой тоже работает по text-for-data, а не по display narrative.
