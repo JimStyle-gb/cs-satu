@@ -67,7 +67,7 @@ def _decode_response_text(response: requests.Response) -> str:
             text = raw.decode(enc, errors="strict").lstrip("\ufeff").strip()
             if text:
                 return text
-        except Exception:
+        except (LookupError, UnicodeError, AttributeError):
             continue
 
     return raw.decode("utf-8", errors="replace").lstrip("\ufeff").strip()
@@ -106,11 +106,12 @@ def fetch_xml_text(
     """Скачать source YML/XML и надёжно отловить пустой/HTML/битый ответ."""
     auth = (login, password) if (login and password) else None
     last_response: requests.Response | None = None
+    total_attempts = max(1, retries)
 
     with requests.Session() as session:
         session.headers.update(DEFAULT_HEADERS)
 
-        for attempt in range(1, max(1, retries) + 1):
+        for attempt in range(1, total_attempts + 1):
             try:
                 response = session.get(url, timeout=timeout, auth=auth)
                 last_response = response
@@ -131,12 +132,12 @@ def fetch_xml_text(
                         )
                     return text
 
-                if attempt < max(1, retries):
+                if attempt < total_attempts:
                     time.sleep(retry_sleep)
                     continue
 
             except requests.RequestException as exc:
-                if attempt < max(1, retries):
+                if attempt < total_attempts:
                     time.sleep(retry_sleep)
                     continue
                 raise RuntimeError(
