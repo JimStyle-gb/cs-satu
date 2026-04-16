@@ -107,6 +107,7 @@ class Metrics:
     price100: int = 0
     placeholder: int = 0
     empty_category: int = 0
+    invalid_category: int = 0
     unknown_satu: int = 0
     excluded_unmapped_total: int = 0
     duplicate_offer_id_groups: int = 0
@@ -129,6 +130,7 @@ class Metrics:
             "price100": self.price100,
             "placeholder": self.placeholder,
             "empty_category": self.empty_category,
+            "invalid_category": self.invalid_category,
             "unknown_satu": self.unknown_satu,
             "excluded_unmapped_total": self.excluded_unmapped_total,
             "duplicate_offer_id_groups": self.duplicate_offer_id_groups,
@@ -151,6 +153,7 @@ class Metrics:
             price100=int(data.get("price100", 0)),
             placeholder=int(data.get("placeholder", 0)),
             empty_category=int(data.get("empty_category", 0)),
+            invalid_category=int(data.get("invalid_category", 0)),
             unknown_satu=int(data.get("unknown_satu", 0)),
             excluded_unmapped_total=int(data.get("excluded_unmapped_total", 0)),
             duplicate_offer_id_groups=int(data.get("duplicate_offer_id_groups", 0)),
@@ -340,7 +343,11 @@ def collect_metrics(price_path: Path) -> Metrics:
     if offers is None:
         raise ValueError("В Price отсутствует блок offers.")
 
-    category_ids = {str(cat.get("id", "")).strip() for cat in categories.findall("category") if str(cat.get("id", "")).strip()}
+    category_portal_ids = {
+        str(cat.get("id", "")).strip(): str(cat.get("portal_id", "")).strip()
+        for cat in categories.findall("category")
+        if str(cat.get("id", "")).strip()
+    }
 
     supplier_summary = {name: SupplierSummary() for name in EXPECTED_SUPPLIERS}
     excluded_by_supplier, excluded_details = parse_unresolved_blocks(UNRESOLVED_FILE)
@@ -359,6 +366,7 @@ def collect_metrics(price_path: Path) -> Metrics:
     price100 = 0
     placeholder = 0
     empty_category = 0
+    invalid_category = 0
     unknown_satu = 0
 
     for offer in offers.findall("offer"):
@@ -384,16 +392,14 @@ def collect_metrics(price_path: Path) -> Metrics:
             vendor_code_map.setdefault(entry.vendor_code, []).append(entry)
 
         cid = entry.category_id
-        if not cid or cid not in category_ids:
+        if not cid:
             empty_category += 1
+        elif cid not in category_portal_ids:
+            invalid_category += 1
 
-        has_satu_category = False
-        if cid:
-            cat = categories.find(f"category[@id='{cid}']")
-            if cat is not None and str(cat.get("portal_id", "")).strip():
-                has_satu_category = True
-        if entry.portal_category_id:
-            has_satu_category = True
+        has_satu_category = bool(entry.portal_category_id)
+        if cid and not has_satu_category:
+            has_satu_category = bool(category_portal_ids.get(cid, ""))
         if not has_satu_category:
             unknown_satu += 1
             no_satu_category_details.append(entry)
@@ -435,6 +441,7 @@ def collect_metrics(price_path: Path) -> Metrics:
         price100=price100,
         placeholder=placeholder,
         empty_category=empty_category,
+        invalid_category=invalid_category,
         unknown_satu=unknown_satu,
         excluded_unmapped_total=sum(excluded_by_supplier.values()),
         duplicate_offer_id_groups=len(duplicate_offer_groups),
@@ -461,7 +468,7 @@ def load_baseline() -> Metrics | None:
 
 
 def save_baseline(metrics: Metrics) -> None:
-    DOCS_DIR.mkdir(parents=True, exist_ok=True)
+    RAW_DIR.mkdir(parents=True, exist_ok=True)
     LAST_SUCCESS_FILE.write_text(
         json.dumps(metrics.to_json(), ensure_ascii=False, indent=2),
         encoding="utf-8",
@@ -471,6 +478,8 @@ def save_baseline(metrics: Metrics) -> None:
 def evaluate(metrics: Metrics, baseline: Metrics | None) -> Tuple[str, str]:
     if metrics.empty_category > 0:
         return "НЕУСПЕШНО", "В итоговом Price есть товары без categoryId."
+    if metrics.invalid_category > 0:
+        return "НЕУСПЕШНО", "В итоговом Price есть товары с categoryId, которого нет в списке categories."
     if metrics.unknown_satu > 0:
         return "НЕУСПЕШНО", "В итоговом Price есть товары без категории Satu."
     if metrics.duplicate_offer_id_groups > 0:
@@ -525,10 +534,8 @@ def build_summary_report(status: str, reason: str, metrics: Metrics, baseline: M
 
     lines = [
         f"{icon} Price — {status}",
-        "Время проверки: ",
-        fmt_dt(checked_at),
-        "Время сборки Price: ",
-        metrics.build_time or '-',
+        f"Время проверки: {fmt_dt(checked_at)}",
+        f"Время сборки Price: {metrics.build_time or '-'}",
         "",
         f"Товаров в Price: {metrics.total} {fmt_delta(baseline.total if baseline else None, metrics.total)}",
         f"Есть в наличии: {metrics.available_true} {fmt_delta(baseline.available_true if baseline else None, metrics.available_true)}",
@@ -537,6 +544,7 @@ def build_summary_report(status: str, reason: str, metrics: Metrics, baseline: M
         f"С ценой 100: {metrics.price100} {fmt_delta(baseline.price100 if baseline else None, metrics.price100)}",
         f"С заглушкой фото: {metrics.placeholder} {fmt_delta(baseline.placeholder if baseline else None, metrics.placeholder)}",
         f"Без categoryId: {metrics.empty_category}",
+        f"С невалидным categoryId: {metrics.invalid_category}",
         f"Без категории Satu: {metrics.unknown_satu}",
         f"Не вошло в final без categoryId: {metrics.excluded_unmapped_total} {fmt_delta(baseline.excluded_unmapped_total if baseline else None, metrics.excluded_unmapped_total)}",
         "",
@@ -594,6 +602,7 @@ def build_telegram_summary_html(status: str, reason: str, metrics: Metrics, base
         field("С ценой 100:", f"{metrics.price100} {fmt_delta(baseline.price100 if baseline else None, metrics.price100)}"),
         field("С заглушкой фото:", f"{metrics.placeholder} {fmt_delta(baseline.placeholder if baseline else None, metrics.placeholder)}"),
         field("Без categoryId:", str(metrics.empty_category)),
+        field("С невалидным categoryId:", str(metrics.invalid_category)),
         field("Без категории Satu:", str(metrics.unknown_satu)),
         field("Не вошло в final без categoryId:", f"{metrics.excluded_unmapped_total} {fmt_delta(baseline.excluded_unmapped_total if baseline else None, metrics.excluded_unmapped_total)}"),
         "",
@@ -683,6 +692,7 @@ def build_details_report(status: str, reason: str, metrics: Metrics, checked_at:
         f"С ценой 100: {metrics.price100}",
         f"С заглушкой фото: {metrics.placeholder}",
         f"Без categoryId в Price: {metrics.empty_category}",
+        f"С невалидным categoryId в Price: {metrics.invalid_category}",
         f"Без категории Satu: {metrics.unknown_satu}",
         f"Не вошло в final без categoryId: {metrics.excluded_unmapped_total}",
         "",
@@ -785,7 +795,7 @@ def build_failure_details(reason: str, checked_at: datetime) -> str:
         "Итоговый статус: НЕУСПЕШНО",
         f"Причина: {reason}",
         "",
-        "Подробные товарные секции не сформированы, потому что checker завершился с ошибкой до разбора Price.yml.",
+        "Подробные товарные секции не сформированы, потому что checker завершился с ошибкой до полного формирования отчёта.",
     ]).strip() + "\n"
 
 
