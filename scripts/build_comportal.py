@@ -36,6 +36,9 @@ from suppliers.comportal.filtering import filter_source_offers, parse_id_set
 from suppliers.comportal.quality_gate import run_quality_gate
 from suppliers.comportal.source import load_source_bundle
 
+SCRIPT_DIR = Path(__file__).resolve().parent
+PROJECT_ROOT = SCRIPT_DIR.parent
+
 BUILD_COMPORTAL_VERSION = "build_comportal_v8_qg_result_unified"
 COMPORTAL_URL_DEFAULT = "https://www.comportal.kz/auth/documents/prices/yml-catalog.php"
 COMPORTAL_OUT_DEFAULT = "docs/comportal.yml"
@@ -77,6 +80,14 @@ def _safe_int(value: Any, default: int) -> int:
         return int(value)
     except Exception:
         return default
+
+def _resolve_project_path(raw_value: str | None, default_rel: str) -> Path:
+    """Разрешить project-relative путь стабильно от scripts/, а не от cwd."""
+    value = str(raw_value or default_rel).strip() or default_rel
+    path = Path(value)
+    if path.is_absolute():
+        return path
+    return PROJECT_ROOT / path
 
 # -----------------------------
 # Config resolve helpers
@@ -134,10 +145,10 @@ def _resolve_quality_gate(policy_cfg: dict[str, Any], schema_cfg: dict[str, Any]
         or QUALITY_REPORT_DEFAULT
     )
 
-    qg["baseline_file"] = str(baseline)
-    qg["baseline_path"] = str(baseline)
-    qg["report_file"] = str(report)
-    qg["report_path"] = str(report)
+    qg["baseline_file"] = str(_resolve_project_path(str(baseline), QUALITY_BASELINE_DEFAULT))
+    qg["baseline_path"] = str(_resolve_project_path(str(baseline), QUALITY_BASELINE_DEFAULT))
+    qg["report_file"] = str(_resolve_project_path(str(report), QUALITY_REPORT_DEFAULT))
+    qg["report_path"] = str(_resolve_project_path(str(report), QUALITY_REPORT_DEFAULT))
     qg["max_new_cosmetic_offers"] = _safe_int(qg.get("max_new_cosmetic_offers"), 5)
     qg["max_new_cosmetic_issues"] = _safe_int(qg.get("max_new_cosmetic_issues"), 5)
     qg["freeze_current_as_baseline"] = bool(qg.get("freeze_current_as_baseline", False))
@@ -192,13 +203,13 @@ def _run_quality_gate(*, raw_out_file: str, cfg_dir: Path, qg: dict[str, Any]) -
 
 def main() -> int:
     """Запустить сборку поставщика ComPortal."""
-    cfg_dir = Path(os.getenv("COMPORTAL_CFG_DIR", CFG_DIR_DEFAULT))
+    cfg_dir = _resolve_project_path(os.getenv("COMPORTAL_CFG_DIR"), CFG_DIR_DEFAULT)
     filter_cfg, schema_cfg, policy_cfg = _load_supplier_config(cfg_dir)
 
     url = os.getenv("COMPORTAL_SOURCE_URL", COMPORTAL_URL_DEFAULT).strip() or COMPORTAL_URL_DEFAULT
-    out_file = os.getenv("COMPORTAL_OUT_FILE", COMPORTAL_OUT_DEFAULT).strip() or COMPORTAL_OUT_DEFAULT
-    raw_out_file = os.getenv("COMPORTAL_RAW_OUT_FILE", COMPORTAL_RAW_OUT_DEFAULT).strip() or COMPORTAL_RAW_OUT_DEFAULT
-    watch_report = os.getenv("COMPORTAL_WATCH_REPORT", WATCH_REPORT_DEFAULT).strip() or WATCH_REPORT_DEFAULT
+    out_file = str(_resolve_project_path(os.getenv("COMPORTAL_OUT_FILE"), COMPORTAL_OUT_DEFAULT))
+    raw_out_file = str(_resolve_project_path(os.getenv("COMPORTAL_RAW_OUT_FILE"), COMPORTAL_RAW_OUT_DEFAULT))
+    watch_report = str(_resolve_project_path(os.getenv("COMPORTAL_WATCH_REPORT"), WATCH_REPORT_DEFAULT))
 
     login = os.getenv("COMPORTAL_LOGIN", "").strip() or None
     password = os.getenv("COMPORTAL_PASSWORD", "").strip() or None
