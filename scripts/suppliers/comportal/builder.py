@@ -290,12 +290,13 @@ def _polish_model_param(params: list[ParamItem], *, clean_name: str, vendor: str
     better_model = _effective_public_model(pmap, clean_name=clean_name, vendor=vendor, ptype=ptype)
     current_model = _decode_text(pmap.get("Модель", ""))
     codes = _decode_text(pmap.get("Коды", ""))
+    title_code = _extract_title_tail_code(clean_name)
 
     if not better_model:
         return params
     if current_model and current_model.casefold() == better_model.casefold():
         return params
-    if not current_model or _is_code_like_value(current_model, codes=codes) or _NOISY_MODEL_RE.search(current_model) or (_extract_title_tail_code(clean_name) and _extract_title_tail_code(clean_name).casefold() in current_model.casefold()):
+    if not current_model or _is_code_like_value(current_model, codes=codes) or _NOISY_MODEL_RE.search(current_model) or (title_code and title_code.casefold() in current_model.casefold()):
         return _upsert_param(params, name="Модель", value=better_model, source="title")
     return params
 
