@@ -644,41 +644,30 @@ def _normalize_param_block(block: Sequence[Tuple[str, str]] | None) -> list[Tupl
 
 def _merge_raw_param_channels(
     *,
-    page_params: Sequence[Tuple[str, str]] | None = None,
     raw_desc_pairs: Sequence[Tuple[str, str]] | None = None,
     raw_table_params: Sequence[Tuple[str, str]] | None = None,
 ) -> list[Tuple[str, str]]:
-    """Собрать сырьевые param-каналы в одном месте без потери backward-safe совместимости.
+    """Собрать канонические сырьевые param-каналы CopyLine.
 
     Приоритет каналов задаётся порядком:
     1) raw_table_params — более структурный источник;
-    2) raw_desc_pairs — пары, поднятые из body;
-    3) page_params — legacy-канал, если builder/source ещё не разведены полностью.
+    2) raw_desc_pairs — пары, поднятые из body.
     """
     merged: list[Tuple[str, str]] = []
     merged.extend(_normalize_param_block(raw_table_params))
     merged.extend(_normalize_param_block(raw_desc_pairs))
-    merged.extend(_normalize_param_block(page_params))
     return merged
 
 def extract_page_params(
     *,
     title: str,
-    description: str = "",
-    extract_desc: str | None = None,
-    page_params: Sequence[Tuple[str, str]] | None = None,
+    extract_desc: str = "",
     raw_desc_pairs: Sequence[Tuple[str, str]] | None = None,
     raw_table_params: Sequence[Tuple[str, str]] | None = None,
 ) -> List[Tuple[str, str]]:
-    """Нормализовать page params и поднять supplier-полезные значения.
-
-    Поддерживает два режима:
-    - legacy: title + description + page_params;
-    - новый: title + extract_desc + raw_desc_pairs + raw_table_params.
-    """
-    text_body = safe_str(extract_desc) or safe_str(description)
+    """Нормализовать page params из канонических source-каналов CopyLine."""
+    text_body = safe_str(extract_desc)
     merged_page_params = _merge_raw_param_channels(
-        page_params=page_params,
         raw_desc_pairs=raw_desc_pairs,
         raw_table_params=raw_table_params,
     )
