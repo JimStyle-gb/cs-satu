@@ -368,41 +368,49 @@ def _cs_clean_compat_value(v: str) -> str:
     out = norm_ws(out)
     if not out:
         return ""
-    # безопасность по длине (дальше всё равно тримится до 260 в clean_params)
+    # безопасность по длине (дальше всё равно тримится до 255 в clean_params)
     if len(out) > 600:
         return ""
     return out
 
-def _cs_trim_compat_to_max(v: str, max_len: int = 260) -> str:
-    """Обрезает совместимость безопасно, не разрезая модель на середине.
-    Стараемся обрезать по последней запятой/точке с запятой/пробелу в пределах max_len,
-    затем удаляем возможные обрывки вида '/P1' на конце.
+def _cs_trim_compat_to_max(v: str, max_len: int = 255) -> str:
+    """Обрезает совместимость безопасно под лимит Satu 255 символов.
+    Режем только по безопасным разделителям списка моделей и, если список
+    был сокращён, стараемся добавить хвост ``и др.`` без выхода за лимит.
     """
-    s = (v or "").strip()
+    s = norm_ws(v).strip(" ,;/.-")
     if not s:
         return ""
     if len(s) <= max_len:
         return s
 
-    cut = s[:max_len]
-    # Предпочитаем резать по разделителю списка моделей
-    pos = cut.rfind(", ")
-    if pos >= 40:
-        cut = cut[:pos]
-    else:
-        pos = cut.rfind("; ")
+    budget = max(1, max_len - len(" и др."))
+    cut = s[:budget]
+
+    # Предпочитаем резать по разделителю списка моделей.
+    # Порог 40 символов сохраняем, чтобы не получить слишком короткий хвост.
+    for sep in (", ", "; ", " / ", "/", " "):
+        pos = cut.rfind(sep)
         if pos >= 40:
             cut = cut[:pos]
-        else:
-            pos = cut.rfind(" ")
-            if pos >= 40:
-                cut = cut[:pos]
+            break
 
     cut = cut.rstrip(" ,;/.-")
     # Удаляем короткий обрывок после '/', если он начинается с буквы и слишком короткий (например '/P1')
     cut = re.sub(r"/(?=[A-Za-zА-Яа-я])[A-Za-zА-Яа-я0-9]{1,2}$", "", cut).rstrip(" ,;/.-")
     # И короткий обрывок после запятой/пробела (например ', M1')
     cut = re.sub(r"(?:,|\s)+(?=[A-Za-zА-Яа-я])[A-Za-zА-Яа-я0-9]{1,2}$", "", cut).rstrip(" ,;/.-")
+
+    if not cut:
+        cut = s[:max_len].rstrip(" ,;/.-")
+        return cut
+
+    if len(cut) < len(s):
+        suffix = " и др."
+        if len(cut) + len(suffix) <= max_len:
+            cut = f"{cut}{suffix}"
+        else:
+            cut = cut[:max_len].rstrip(" ,;/.-")
     return cut
 
 def _cs_looks_like_device_models(s: str) -> bool:
@@ -1511,8 +1519,8 @@ def clean_params(
             v = _cs_merge_compat_values(vals)
             if not v:
                 continue
-            if len(v) > 260:
-                v = _cs_trim_compat_to_max(v, 260)
+            if len(v) > 255:
+                v = _cs_trim_compat_to_max(v, 255)
             if not v:
                 continue
             out.append((name, v))
