@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<yml_catalog date="2026-04-16 14:40:45">
+<yml_catalog date="2026-04-16 17:49:59">
 <shop><offers>
 <!--FEED_META
 Поставщик                                  | AkCent
 URL поставщика                             | https://ak-cent.kz/export/Exchange/article_nw2/Ware02224.xml
-Время сборки (Алматы)                      | 2026-04-16 14:40:45
+Время сборки (Алматы)                      | 2026-04-16 17:49:59
 Ближайшая сборка (Алматы)                  | 2026-04-16 22:30:00
-Сколько товаров у поставщика до фильтра    | 2051
-Сколько товаров у поставщика после фильтра | 177
-Сколько товаров есть в наличии (true)      | 177
+Сколько товаров у поставщика до фильтра    | 2047
+Сколько товаров у поставщика после фильтра | 176
+Сколько товаров есть в наличии (true)      | 176
 Сколько товаров нет в наличии (false)      | 0
 -->
 
@@ -387,27 +387,6 @@ URL поставщика                             | https://ak-cent.kz/export
 <param name="Модель">C13T40D440</param>
 <param name="Для устройства">Epson SureColor SC-T3100 / Epson SureColor SC-T3100N / Epson SureColor SC-T5100 / Epson SureColor SC-T5100N</param>
 <param name="Коды">C13T40D440</param>
-<param name="Оригинальность">Оригинал</param>
-</offer>
-
-<offer id="ACC13T41F34N" available="true">
-<categoryId></categoryId>
-<vendorCode>ACC13T41F34N</vendorCode>
-<name>Картридж Epson T3400N, UltraChrome XD2, пурпурный, 350 мл (оригинал)</name>
-<price>111871</price>
-<picture>https://b2b.ak-cent.kz/upload/iblock/e70/ha6pr3zmtf38bhrv50v66sjlwu4yo2qx.png</picture>
-<vendor>Epson</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Оригинальный картридж Epson T3400N Пурпурного цвета для SureColor SC-T3400 / SC-T3400N / SC-T3405 / SC-T3405N / SC-T5400 / SC-T5400M / SC-T5405. Ресурс: 350 мл.]]></description>
-<param name="Цвет">Пурпурный</param>
-<param name="Тип">Картридж</param>
-<param name="Тип печати">Струйная</param>
-<param name="Ресурс">350 мл</param>
-<param name="Для бренда">Epson</param>
-<param name="Для устройства">SureColor SC-T3400 / SC-T3400N / SC-T3405 / SC-T3405N / SC-T5400 / SC-T5400M / SC-T5405</param>
-<param name="Модель">T3400N</param>
-<param name="Коды">C13T41F34N</param>
 <param name="Оригинальность">Оригинал</param>
 </offer>
 

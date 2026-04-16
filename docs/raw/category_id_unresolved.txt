@@ -1,13 +1,5 @@
 # Сводный отчёт по товарам без categoryId
 
-## START AkCent
-Поставщик: AkCent
-Товаров без categoryId: 0
-
-# Все товары получили categoryId
-## END AkCent
-
-
 ## START VTT
 Поставщик: VTT
 Товаров без categoryId: 0
@@ -36,3 +28,10 @@ ComPortal | CP13870166 | Трансферный комплект HP CE516A (CE51
 
 # Все товары получили categoryId
 ## END CopyLine
+
+## START AkCent
+Поставщик: AkCent
+Товаров без categoryId: 0
+
+# Все товары получили categoryId
+## END AkCent
