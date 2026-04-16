@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<yml_catalog date="2026-04-16 18:42:07">
+<yml_catalog date="2026-04-16 19:54:29">
 <shop><offers>
 <!--FEED_META
 Поставщик                                  | ComPortal
 URL поставщика                             | https://www.comportal.kz/auth/documents/prices/yml-catalog.php
-Время сборки (Алматы)                      | 2026-04-16 18:42:07
+Время сборки (Алматы)                      | 2026-04-16 19:54:29
 Ближайшая сборка (Алматы)                  | 2026-04-17 00:30:00
 Сколько товаров у поставщика до фильтра    | 1181
-Сколько товаров у поставщика после фильтра | 623
-Сколько товаров есть в наличии (true)      | 623
+Сколько товаров у поставщика после фильтра | 624
+Сколько товаров есть в наличии (true)      | 624
 Сколько товаров нет в наличии (false)      | 0
 -->
 
@@ -29541,6 +29541,55 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Модель">Барабан HP CF358A</param>
 <param name="Тип">Расходный материал</param>
 <keywords>HP, Барабан HP CF358A (CF358A), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+</offer>
+
+<offer id="CP13870166" available="true">
+<categoryId>203</categoryId>
+<vendorCode>CP13870166</vendorCode>
+<name>Трансферный комплект HP CE516A (CE516A)</name>
+<price>214900</price>
+<picture>https://www.comportal.kz/upload/iblock/503/hdizvzicxlp638enym2i6d0wltnq6623.jpg</picture>
+<vendor>HP</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+<div style="font-family:Verdana, Tahoma, Arial, sans-serif;color:#2F2F2F;">
+<h3 style="margin:0 0 10px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Трансферный комплект HP CE516A (CE516A)</h3>
+
+<p style="margin:0 0 10px 0;font-size:14px;line-height:1.5;font-family:inherit;">расходный материал HP Трансферный комплект HP CE516A код — CE516A.</p>
+
+<h3 style="margin:14px 0 8px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Характеристики</h3>
+<ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Гарантия:</strong> 3 мес</li><li><strong>Бренд:</strong> HP</li><li><strong>Дополнительная информация:</strong> для LJ Enterprise 700 M775dn, M775f</li><li><strong>Коды:</strong> CE516A</li><li><strong>Модель:</strong> Трансферный комплект HP CE516A</li><li><strong>Тип:</strong> Расходный материал</li></ul>
+
+<div style="text-align:center;margin:10px 0 8px 0;">
+  <div class="ck-alert ck-alert_theme_green">
+    <div style="padding:4px 10px;font-family:inherit;">
+      <span class="ck-alert__title"></span>
+      <p style="margin:0 0 4px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>Просьба отправлять запросы на WhatsApp!</strong></p>
+      <p style="margin:0 0 6px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>+7 707 327-05-01</strong></p>
+      <p style="margin:0;font-size:14px;line-height:1.5;font-family:inherit;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block;padding:6px 12px;border:1px solid #146737;border-radius:6px;color:#146737;text-decoration:none;background:#FFFFFF;font-family:inherit;"><strong>💬 НАПИСАТЬ В WHATSAPP</strong></a></p>
+    </div>
+  </div>
+</div>
+
+<div class="ck-alert ck-alert_theme_orange" style="margin:8px 0 0 0;">
+  <div style="padding:4px 10px;font-family:inherit;">
+    <span class="ck-alert__title"></span>
+    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Оплата</h3>
+    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul>
+    <hr style="border:none;height:1px;background:#E7D6B7;margin:8px 0;" />
+    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Доставка по Алматы и Казахстану</h3>
+    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</li><li><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</li><li><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</li><li><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</li></ul>
+  </div>
+</div>
+
+</div>]]></description>
+<param name="Гарантия">3 мес</param>
+<param name="Для бренда">HP</param>
+<param name="Дополнительная информация">для LJ Enterprise 700 M775dn, M775f</param>
+<param name="Коды">CE516A</param>
+<param name="Модель">Трансферный комплект HP CE516A</param>
+<param name="Тип">Расходный материал</param>
+<keywords>HP, Трансферный комплект HP CE516A (CE516A), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP13870174" available="true">
