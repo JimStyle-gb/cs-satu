@@ -14,6 +14,7 @@ from collections import Counter
 from dataclasses import dataclass
 from datetime import datetime, timedelta
 from pathlib import Path
+import xml.etree.ElementTree as ET
 from typing import Any
 from zoneinfo import ZoneInfo
 
@@ -22,10 +23,12 @@ try:
 except Exception as exc:  # pragma: no cover
     raise SystemExit(f"Не установлен PyYAML: {exc}")
 
-BASE_DIR = Path('.')
+SCRIPT_FILE = Path(__file__).resolve()
+SCRIPTS_DIR = SCRIPT_FILE.parent
+BASE_DIR = SCRIPTS_DIR.parent
 DOCS_DIR = BASE_DIR / 'docs'
 RAW_DOCS_DIR = DOCS_DIR / 'raw'
-CONFIG_DIR = BASE_DIR / 'scripts' / 'cs' / 'config'
+CONFIG_DIR = SCRIPTS_DIR / 'cs' / 'config'
 
 OUTPUT_FILE = DOCS_DIR / 'Price.yml'
 UNMAPPED_FILE = RAW_DOCS_DIR / 'price_satu_unmapped_offers.txt'
@@ -238,10 +241,9 @@ def _inject_portal_category_id(block: str, portal_category_id: str) -> str:
     return re.sub(r'(<categoryId>.*?</categoryId>)', r'\1\n      <portal_category_id>' + portal_category_id + '</portal_category_id>', block, count=1, flags=re.S)
 
 
-def _load_offers(portal_registry: dict[str, dict[str, Any]], default_map: dict[str, str], overrides: list[dict[str, Any]]) -> tuple[list[OfferInfo], list[str], dict[str, int], Counter[str], int, int]:
+def _load_offers(default_map: dict[str, str], overrides: list[dict[str, Any]]) -> tuple[list[OfferInfo], list[str], Counter[str], int, int]:
     offers: list[OfferInfo] = []
     feed_meta_blocks: list[str] = []
-    supplier_after_counts: dict[str, int] = {}
     status_counts: Counter[str] = Counter()
     price_100 = 0
     placeholder_count = 0
@@ -254,9 +256,6 @@ def _load_offers(portal_registry: dict[str, dict[str, Any]], default_map: dict[s
         text = path.read_text(encoding='utf-8')
         meta_body = _extract_feed_meta_body(text, supplier_name)
         feed_meta_blocks.append(meta_body)
-        summary = _extract_supplier_summary(meta_body)
-        supplier_after_counts[supplier_name] = int(summary.get('Сколько товаров у поставщика после фильтра', '0') or 0)
-
         for block in _offer_blocks(text):
             offer_id = _extract_offer_id(block)
             category_id = _extract_tag(block, 'categoryId').strip()
@@ -305,7 +304,7 @@ def _load_offers(portal_registry: dict[str, dict[str, Any]], default_map: dict[s
 
     if missing_sources:
         raise FileNotFoundError('Не найдены final-файлы поставщиков: ' + ', '.join(missing_sources))
-    return offers, feed_meta_blocks, supplier_after_counts, status_counts, price_100, placeholder_count
+    return offers, feed_meta_blocks, status_counts, price_100, placeholder_count
 
 
 def _build_categories_xml(default_map: dict[str, str]) -> tuple[str, int, int, int]:
@@ -338,7 +337,7 @@ def _write_unmapped_report(unmapped: list[OfferInfo]) -> None:
     UNMAPPED_FILE.write_text('\n'.join(lines) + '\n', encoding='utf-8')
 
 
-def _write_audit_report(*, total_offers: int, total_categories: int, leaf_categories: int, mapped_leaf: int, default_mapped: int, override_mapped: int, unmapped_count: int, satu_file_name: str) -> None:
+def _write_audit_report(*, total_categories: int, leaf_categories: int, mapped_leaf: int, default_mapped: int, override_mapped: int, unmapped_count: int, satu_file_name: str) -> None:
     AUDIT_FILE.parent.mkdir(parents=True, exist_ok=True)
     now = datetime.now(TZ)
     lines = [
@@ -358,7 +357,7 @@ def _write_audit_report(*, total_offers: int, total_categories: int, leaf_catego
 
 def _render_price_feed(*, offers: list[OfferInfo], feed_meta_blocks: list[str], total_categories: int, leaf_categories: int, mapped_leaf: int, status_counts: Counter[str], price_100: int, placeholder_count: int, satu_file_name: str, categories_xml: str) -> str:
     now = datetime.now(TZ)
-    next_run = (now + timedelta(days=1)).replace(hour=4, minute=30, second=0, microsecond=0)
+    next_run = now.replace(hour=4, minute=30, second=0, microsecond=0)
     if next_run <= now:
         next_run += timedelta(days=1)
 
@@ -416,11 +415,18 @@ def _render_price_feed(*, offers: list[OfferInfo], feed_meta_blocks: list[str], 
     return '\n'.join(lines)
 
 
+def _validate_output_xml(path: Path) -> None:
+    try:
+        ET.parse(path)
+    except ET.ParseError as exc:
+        raise ValueError(f'Собранный Price.xml невалиден: {exc}') from exc
+
+
 def main() -> int:
     portal_registry = _build_portal_registry()
     default_map = _build_default_map(portal_registry)
     overrides = _build_overrides(portal_registry)
-    offers, feed_meta_blocks, _, status_counts, price_100, placeholder_count = _load_offers(portal_registry, default_map, overrides)
+    offers, feed_meta_blocks, status_counts, price_100, placeholder_count = _load_offers(default_map, overrides)
 
     offer_ids = [o.offer_id for o in offers]
     vendor_codes = [o.vendor_code for o in offers]
@@ -434,7 +440,6 @@ def main() -> int:
     satu_file_name = _find_current_satu_file()
     _write_unmapped_report(unmapped)
     _write_audit_report(
-        total_offers=len(offers),
         total_categories=total_categories,
         leaf_categories=leaf_categories,
         mapped_leaf=mapped_leaf,
@@ -460,6 +465,7 @@ def main() -> int:
         ),
         encoding='utf-8',
     )
+    _validate_output_xml(OUTPUT_FILE)
     print(f'[PRICE] OK: {OUTPUT_FILE.as_posix()}')
     return 0
 
