@@ -1,15 +1,15 @@
 ПОДРОБНЫЙ ОТЧЁТ PRICE CHECKER
-Сформирован: 15 апреля 2026 г. 20:46:41
-Время сборки Price: 15 апреля 2026 г. 20:24:19
+Сформирован: 16 апреля 2026 г. 08:50:33
+Время сборки Price: 16 апреля 2026 г. 05:05:19
 Итоговый статус: УСПЕШНО
 Причина: Критичных проблем не обнаружено.
 
 ======================================================================
 СВОДКА
 ======================================================================
-Всего товаров в Price: 7094
-В наличии: 6598
-Нет в наличии: 496
+Всего товаров в Price: 7100
+В наличии: 6602
+Нет в наличии: 498
 
 С ценой 100: 269
 С заглушкой фото: 565
@@ -26,8 +26,8 @@
 СВОДКА ПО ПОСТАВЩИКАМ
 ======================================================================
 AkCent | всего=180 | в наличии=180 | нет в наличии=0 | цена 100=0 | заглушка фото=7 | не вошло в final без categoryId=0 | без категории Satu=0
-AlStyle | всего=1991 | в наличии=1495 | нет в наличии=496 | цена 100=4 | заглушка фото=8 | не вошло в final без categoryId=0 | без категории Satu=0
-ComPortal | всего=595 | в наличии=595 | нет в наличии=0 | цена 100=0 | заглушка фото=102 | не вошло в final без categoryId=0 | без категории Satu=0
+AlStyle | всего=1993 | в наличии=1495 | нет в наличии=498 | цена 100=4 | заглушка фото=8 | не вошло в final без categoryId=0 | без категории Satu=0
+ComPortal | всего=599 | в наличии=599 | нет в наличии=0 | цена 100=0 | заглушка фото=102 | не вошло в final без categoryId=0 | без категории Satu=0
 CopyLine | всего=1220 | в наличии=1220 | нет в наличии=0 | цена 100=26 | заглушка фото=0 | не вошло в final без categoryId=0 | без категории Satu=0
 VTT | всего=3108 | в наличии=3108 | нет в наличии=0 | цена 100=239 | заглушка фото=448 | не вошло в final без categoryId=0 | без категории Satu=0
 
@@ -356,6 +356,7 @@ ComPortal | placeholder_photo | id=CP13873030 | vendorCode=CP13873030 | category
 ComPortal | placeholder_photo | id=CP13873031 | vendorCode=CP13873031 | categoryId=604 | price=648900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Компьютер Dell Pro Tower QCT1250 (210-BPRW_BTO110_QCT1250_EMEA)
 ComPortal | placeholder_photo | id=CP13873144 | vendorCode=CP13873144 | categoryId=101 | price=212900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=МФУ Canon i-SENSYS MF237W BUND(2 картриджа) (1418C170) (оригинал)
 ComPortal | placeholder_photo | id=CP13873145 | vendorCode=CP13873145 | categoryId=301 | price=153900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=МФУ Canon i-SENSYS MF3010 (5252B004)
+ComPortal | placeholder_photo | id=CP13872950 | vendorCode=CP13872950 | categoryId=301 | price=806900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=МФУ Canon imageRUNNER C3326i (5965C005)
 ComPortal | placeholder_photo | id=CP13872564 | vendorCode=CP13872564 | categoryId=101 | price=68900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Тонер Canon C-EXV 65 (5761C001) (оригинал)
 ComPortal | placeholder_photo | id=CP13872565 | vendorCode=CP13872565 | categoryId=101 | price=97900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Тонер Canon C-EXV 65 (5762C001) (оригинал)
 ComPortal | placeholder_photo | id=CP13872566 | vendorCode=CP13872566 | categoryId=101 | price=97900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Тонер Canon C-EXV 65 (5764C001) (оригинал)
@@ -422,7 +423,6 @@ ComPortal | placeholder_photo | id=CP13873167 | vendorCode=CP13873167 | category
 ComPortal | placeholder_photo | id=CP13873168 | vendorCode=CP13873168 | categoryId=601 | price=1047900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Ноутбук Dell Pro 14 PC14250 (210-BQHF / BTO108_PC14250_EMEA)
 ComPortal | placeholder_photo | id=CP13873169 | vendorCode=CP13873169 | categoryId=601 | price=933900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Ноутбук Dell Pro 14 PC14250 (210-BQHF / BTO121_PC14250_EMEA)
 ComPortal | placeholder_photo | id=CP13873170 | vendorCode=CP13873170 | categoryId=601 | price=764900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Ноутбук Dell Pro 14 PC14250 (210-BQHF / BTO120_PC14250_EMEA)
-ComPortal | placeholder_photo | id=CP13873185 | vendorCode=CP13873185 | categoryId=601 | price=636900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Ноутбук ASUS TUF Gaming F16 / FX608JHI-TU217 (90NR0NA1-M00BK0)
 ComPortal | placeholder_photo | id=CP13873203 | vendorCode=CP13873203 | categoryId=601 | price=748900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Ноутбук HP ProBook 4 G1i 16 AI (D0UW2ET#BJA)
 ComPortal | placeholder_photo | id=CP13873244 | vendorCode=CP13873244 | categoryId=601 | price=716900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Ноутбук Dell Pro 14 Plus PB14250 (BTO105_PB14250_EMEA_210-BPDL)
 ComPortal | placeholder_photo | id=CP13873245 | vendorCode=CP13873245 | categoryId=601 | price=599900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Ноутбук Dell Pro 16 PC16250 (BTO105_PC16250_EMEA_210-BQHB)
