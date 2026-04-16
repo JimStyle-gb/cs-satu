@@ -321,7 +321,7 @@ def _extract_picture_candidates(s: BeautifulSoup) -> List[str]:
     return out
 
 def parse_product_page(url: str) -> Optional[Dict[str, Any]]:
-    """Распарсить карточку товара в сырой payload с сохранением provenance."""
+    """Распарсить карточку товара в канонический raw payload supplier-layer."""
     data = http_get(url, tries=3)
     if not data:
         return None
@@ -361,10 +361,6 @@ def parse_product_page(url: str) -> Optional[Dict[str, Any]]:
     table = s.find("table")
     raw_table_params = _extract_table_pairs(table)
 
-    # Backward-safe legacy merge: старые builder/extractor слои пока ещё ждут единый params.
-    # Но теперь вместе с ним мы сохраняем отдельные каналы сырья.
-    legacy_params = _dedupe_pairs([*raw_desc_pairs, *raw_table_params])
-
     pictures = _extract_picture_candidates(s)
     price_raw = _parse_price_from_page(s)
     available = _parse_available_from_page(s)
@@ -373,10 +369,7 @@ def parse_product_page(url: str) -> Optional[Dict[str, Any]]:
         "sku": sku,
         "url": url,
         "title": title,
-        # Legacy keys
-        "desc": raw_desc,
-        "params": legacy_params,
-        # Provenance-preserving keys
+        # Канонические source-каналы
         "raw_desc": raw_desc,
         "raw_desc_pairs": raw_desc_pairs,
         "raw_table_params": raw_table_params,
