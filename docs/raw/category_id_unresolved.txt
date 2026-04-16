@@ -10,12 +10,6 @@
 
 
 
-## START CopyLine
-Поставщик: CopyLine
-Товаров без categoryId: 0
-
-# Все товары получили categoryId
-## END CopyLine
 
 
 
@@ -39,3 +33,10 @@
 
 ComPortal | CP13870166 | Трансферный комплект HP CE516A (CE516A) | categoryId не определён
 ## END ComPortal
+
+## START CopyLine
+Поставщик: CopyLine
+Товаров без categoryId: 0
+
+# Все товары получили categoryId
+## END CopyLine
