@@ -23,6 +23,7 @@ import os
 import threading
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from dataclasses import dataclass
 from datetime import datetime, timedelta
 from pathlib import Path
 from typing import Any
@@ -45,7 +46,7 @@ from suppliers.vtt.source import (
     parse_product_page_from_index,
 )
 
-BUILD_VTT_VERSION = "build_vtt_v15_rate_limit_guard"
+BUILD_VTT_VERSION = "build_vtt_v16_runtime_cleanup"
 SUPPLIER_NAME_DEFAULT = "VTT"
 OUT_FILE_DEFAULT = "docs/vtt.yml"
 RAW_OUT_FILE_DEFAULT = "docs/raw/vtt.yml"
@@ -63,6 +64,28 @@ ROOT = Path(__file__).resolve().parents[1]
 SHARDS_DIR = ROOT / "docs" / "debug" / "vtt_shards"
 INDEX_FILE = SHARDS_DIR / "index.json"
 
+
+@dataclass(frozen=True)
+class VTTRuntime:
+    supplier_name: str
+    id_prefix: str
+    out_file: str
+    raw_out_file: str
+    output_encoding: str
+    hour: int
+    minute: int
+    dom: tuple[int, ...]
+    qg_cfg: dict[str, Any]
+    param_priority: tuple[str, ...]
+
+
+@dataclass(frozen=True)
+class VTTShardSpec:
+    name: str
+    total: int
+    number: int
+
+
 # ----------------------------- config helpers -----------------------------
 
 def _read_yaml(path: Path) -> dict[str, Any]:
@@ -73,6 +96,7 @@ def _read_yaml(path: Path) -> dict[str, Any]:
     except Exception:
         return {}
 
+
 def _load_supplier_config(cfg_dir: Path) -> tuple[dict[str, Any], dict[str, Any], dict[str, Any]]:
     return (
         _read_yaml(cfg_dir / FILTER_FILE_DEFAULT),
@@ -80,11 +104,13 @@ def _load_supplier_config(cfg_dir: Path) -> tuple[dict[str, Any], dict[str, Any]
         _read_yaml(cfg_dir / POLICY_FILE_DEFAULT),
     )
 
+
 def _safe_int(value: Any, default: int) -> int:
     try:
         return int(value)
     except Exception:
         return default
+
 
 def _load_param_priority(policy_cfg: dict[str, Any], schema_cfg: dict[str, Any]) -> tuple[str, ...]:
     raw = (
@@ -94,6 +120,7 @@ def _load_param_priority(policy_cfg: dict[str, Any], schema_cfg: dict[str, Any])
     )
     return tuple(str(x).strip() for x in raw if str(x).strip())
 
+
 def _resolve_hour(policy_cfg: dict[str, Any], schema_cfg: dict[str, Any]) -> int:
     return _safe_int(
         policy_cfg.get("schedule_hour_almaty")
@@ -102,12 +129,14 @@ def _resolve_hour(policy_cfg: dict[str, Any], schema_cfg: dict[str, Any]) -> int
         2,
     )
 
+
 def _resolve_minute(policy_cfg: dict[str, Any], schema_cfg: dict[str, Any]) -> int:
     return _safe_int(
         policy_cfg.get("schedule_minute_almaty")
         or schema_cfg.get("schedule_minute_almaty"),
         30,
     )
+
 
 def _resolve_dom_list(policy_cfg: dict[str, Any], schema_cfg: dict[str, Any]) -> tuple[int, ...]:
     raw = policy_cfg.get("schedule_days_of_month") or schema_cfg.get("schedule_days_of_month") or [1, 10, 20]
@@ -119,15 +148,19 @@ def _resolve_dom_list(policy_cfg: dict[str, Any], schema_cfg: dict[str, Any]) ->
             pass
     return tuple(out or [1, 10, 20])
 
+
 def _resolve_supplier_name(policy_cfg: dict[str, Any], schema_cfg: dict[str, Any]) -> str:
     raw = str(policy_cfg.get("supplier") or schema_cfg.get("supplier") or SUPPLIER_NAME_DEFAULT).strip() or SUPPLIER_NAME_DEFAULT
     return "VTT" if raw.casefold() == "vtt" else raw
 
+
 def _resolve_id_prefix(policy_cfg: dict[str, Any], schema_cfg: dict[str, Any]) -> str:
     return str(policy_cfg.get("id_prefix") or schema_cfg.get("id_prefix") or VTT_ID_PREFIX_DEFAULT).strip() or VTT_ID_PREFIX_DEFAULT
 
+
 def _resolve_output_encoding(policy_cfg: dict[str, Any], schema_cfg: dict[str, Any]) -> str:
     return str(policy_cfg.get("output_encoding") or schema_cfg.get("encoding") or OUTPUT_ENCODING_DEFAULT).strip() or OUTPUT_ENCODING_DEFAULT
+
 
 # ------------------------------ qg helpers --------------------------------
 
@@ -169,11 +202,35 @@ def _resolve_quality_gate(policy_cfg: dict[str, Any], schema_cfg: dict[str, Any]
     qg["freeze_current_as_baseline"] = bool(qg.get("freeze_current_as_baseline", False))
     return qg
 
+
 def _resolve_paths() -> tuple[str, str]:
     return (
         os.getenv("VTT_OUT_FILE", os.getenv("OUT_FILE", OUT_FILE_DEFAULT)).strip() or OUT_FILE_DEFAULT,
         os.getenv("VTT_RAW_OUT_FILE", os.getenv("RAW_OUT_FILE", RAW_OUT_FILE_DEFAULT)).strip() or RAW_OUT_FILE_DEFAULT,
     )
+
+
+def _build_runtime(policy_cfg: dict[str, Any], schema_cfg: dict[str, Any]) -> VTTRuntime:
+    out_file, raw_out_file = _resolve_paths()
+    return VTTRuntime(
+        supplier_name=_resolve_supplier_name(policy_cfg, schema_cfg),
+        id_prefix=_resolve_id_prefix(policy_cfg, schema_cfg),
+        out_file=out_file,
+        raw_out_file=raw_out_file,
+        output_encoding=_resolve_output_encoding(policy_cfg, schema_cfg),
+        hour=_resolve_hour(policy_cfg, schema_cfg),
+        minute=_resolve_minute(policy_cfg, schema_cfg),
+        dom=_resolve_dom_list(policy_cfg, schema_cfg),
+        qg_cfg=_resolve_quality_gate(policy_cfg, schema_cfg),
+        param_priority=_load_param_priority(policy_cfg, schema_cfg),
+    )
+
+
+def _build_time_window(runtime: VTTRuntime) -> tuple[datetime, datetime]:
+    build_time = now_almaty().replace(tzinfo=None)
+    next_run = next_run_dom_at_time(build_time, hour=runtime.hour, minute=runtime.minute, doms=runtime.dom)
+    return build_time, next_run
+
 
 def _prepare_source_env(cfg_dir: Path, filter_cfg: dict[str, Any]) -> None:
     os.environ.setdefault("VTT_FILTER_CFG", str(cfg_dir / FILTER_FILE_DEFAULT))
@@ -199,6 +256,7 @@ def _prepare_source_env(cfg_dir: Path, filter_cfg: dict[str, Any]) -> None:
     for key, value in safe_defaults.items():
         os.environ.setdefault(key, value)
 
+
 def _resolve_effective_workers(cfg) -> int:
     requested = max(1, int(getattr(cfg, "max_workers", 1)))
     hard_cap = max(1, _safe_int(os.getenv("VTT_MAX_WORKERS_HARD_CAP") or "4", 4))
@@ -206,6 +264,7 @@ def _resolve_effective_workers(cfg) -> int:
     if effective < requested:
         log(f"[VTT] workers capped: requested={requested} effective={effective}")
     return effective
+
 
 def _maybe_stagger_shard_start() -> None:
     shard_no = max(0, _safe_int(os.getenv("VTT_SHARD_NO") or "0", 0))
@@ -215,6 +274,7 @@ def _maybe_stagger_shard_start() -> None:
         return
     log(f"[VTT] shard stagger: shard_no={shard_no} sleep={total_delay_s}s")
     time.sleep(total_delay_s)
+
 
 def _print_summary(
     *,
@@ -238,6 +298,16 @@ def _print_summary(
         availability_false=availability_false,
     )
 
+
+def _print_mode_summary(title: str, rows: list[tuple[str, Any]]) -> None:
+    print("=" * 72)
+    print(title)
+    print("=" * 72)
+    for key, value in rows:
+        print(f"{key}:", value)
+    print("=" * 72)
+
+
 def _offer_to_dict(offer: OfferOut) -> dict[str, Any]:
     return {
         "oid": str(offer.oid),
@@ -249,6 +319,7 @@ def _offer_to_dict(offer: OfferOut) -> dict[str, Any]:
         "params": [[str(k), str(v)] for k, v in (offer.params or [])],
         "native_desc": str(offer.native_desc or ""),
     }
+
 
 def _dict_to_offer(row: dict[str, Any]) -> OfferOut:
     return OfferOut(
@@ -262,9 +333,11 @@ def _dict_to_offer(row: dict[str, Any]) -> OfferOut:
         native_desc=str(row.get("native_desc", "")),
     )
 
+
 def _safe_write_json(path: Path, payload: dict[str, Any] | list[Any]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+
 
 def _login_or_raise(cfg):
     sess = make_session(cfg)
@@ -276,10 +349,12 @@ def _login_or_raise(cfg):
         raise RuntimeError(msg)
     return sess
 
+
 def _collect_index(cfg) -> list[dict[str, Any]]:
     deadline = datetime.utcnow() + timedelta(minutes=max(1.0, float(cfg.max_crawl_minutes)))
     sess = _login_or_raise(cfg)
     return [] if sess is None else collect_product_index(sess, cfg, list(cfg.categories), deadline)
+
 
 def _build_offers_for_index(cfg, index: list[dict[str, Any]], *, id_prefix: str) -> list[OfferOut]:
     deadline = datetime.utcnow() + timedelta(minutes=max(1.0, float(cfg.max_crawl_minutes)))
@@ -340,6 +415,7 @@ def _build_offers_for_index(cfg, index: list[dict[str, Any]], *, id_prefix: str)
     out_offers.sort(key=lambda o: o.oid)
     return out_offers
 
+
 def _run_quality_gate(*, raw_out_file: str, qg_cfg: dict[str, Any]):
     if not bool(qg_cfg.get("enabled", True)):
         class _QG:
@@ -363,45 +439,57 @@ def _run_quality_gate(*, raw_out_file: str, qg_cfg: dict[str, Any]):
         freeze_current_as_baseline=bool(qg_cfg.get("freeze_current_as_baseline", False)),
     )
 
+
 def _write_feeds(
     *,
     offers: list[OfferOut],
-    supplier_name: str,
+    runtime: VTTRuntime,
     supplier_url: str,
-    out_file: str,
-    raw_out_file: str,
     build_time,
     next_run,
     before: int,
-    encoding: str,
-    param_priority: tuple[str, ...],
 ) -> None:
     write_cs_feed_raw(
         offers,
-        supplier=supplier_name,
+        supplier=runtime.supplier_name,
         supplier_url=supplier_url,
-        out_file=raw_out_file,
+        out_file=runtime.raw_out_file,
         build_time=build_time,
         next_run=next_run,
         before=before,
-        encoding=encoding,
+        encoding=runtime.output_encoding,
         currency_id="KZT",
     )
     write_cs_feed(
         offers,
-        supplier=supplier_name,
+        supplier=runtime.supplier_name,
         supplier_url=supplier_url,
-        out_file=out_file,
+        out_file=runtime.out_file,
         build_time=build_time,
         next_run=next_run,
         before=before,
-        encoding=encoding,
-        public_vendor=get_public_vendor(supplier_name),
+        encoding=runtime.output_encoding,
+        public_vendor=get_public_vendor(runtime.supplier_name),
         currency_id="KZT",
-        param_priority=param_priority,
+        param_priority=runtime.param_priority,
     )
 
-def _run_index(cfg_dir: Path, filter_cfg: dict[str, Any], schema_cfg: dict[str, Any], policy_cfg: dict[str, Any]) -> int:
+
+def _resolve_shard_spec() -> VTTShardSpec:
+    return VTTShardSpec(
+        name=(os.getenv("VTT_SHARD_NAME") or "shard").strip() or "shard",
+        total=max(1, _safe_int((os.getenv("VTT_SHARD_TOTAL") or "5").strip() or "5", 5)),
+        number=max(0, _safe_int((os.getenv("VTT_SHARD_NO") or "0").strip() or "0", 0)),
+    )
+
+
+def _read_index_payload() -> dict[str, Any]:
+    if not INDEX_FILE.exists():
+        raise RuntimeError(f"VTT index file not found: {INDEX_FILE}")
+    return json.loads(INDEX_FILE.read_text(encoding="utf-8"))
+
+
+def _run_index(cfg_dir: Path, filter_cfg: dict[str, Any]) -> int:
     _prepare_source_env(cfg_dir, filter_cfg)
     cfg = cfg_from_env()
     index = _collect_index(cfg)
@@ -410,42 +498,37 @@ def _run_index(cfg_dir: Path, filter_cfg: dict[str, Any], schema_cfg: dict[str, 
     _safe_write_json(INDEX_FILE, {"categories": list(cfg.categories), "total": len(index), "index": index})
     _safe_write_json(SHARDS_DIR / "index_summary.json", {"total": len(index), "categories": list(cfg.categories)})
 
-    print("=" * 72)
-    print("[VTT] index summary")
-    print("=" * 72)
-    print("version:", BUILD_VTT_VERSION)
-    print("index_file:", INDEX_FILE)
-    print("total:", len(index))
-    print("categories:", ",".join(cfg.categories))
-    print("=" * 72)
+    _print_mode_summary(
+        "[VTT] index summary",
+        [
+            ("version", BUILD_VTT_VERSION),
+            ("index_file", INDEX_FILE),
+            ("total", len(index)),
+            ("categories", ",".join(cfg.categories)),
+        ],
+    )
     return 0
 
-def _run_shard_index(cfg_dir: Path, filter_cfg: dict[str, Any], schema_cfg: dict[str, Any], policy_cfg: dict[str, Any]) -> int:
+
+def _run_shard_index(cfg_dir: Path, filter_cfg: dict[str, Any], *, id_prefix: str) -> int:
     _prepare_source_env(cfg_dir, filter_cfg)
     _maybe_stagger_shard_start()
     cfg = cfg_from_env()
+    shard = _resolve_shard_spec()
 
-    shard_name = (os.getenv("VTT_SHARD_NAME") or "shard").strip() or "shard"
-    shard_total = max(1, int((os.getenv("VTT_SHARD_TOTAL") or "5").strip() or "5"))
-    shard_no = int((os.getenv("VTT_SHARD_NO") or "0").strip() or "0")
-    id_prefix = _resolve_id_prefix(policy_cfg, schema_cfg)
-
-    if not INDEX_FILE.exists():
-        raise RuntimeError(f"VTT index file not found: {INDEX_FILE}")
-
-    payload = json.loads(INDEX_FILE.read_text(encoding="utf-8"))
+    payload = _read_index_payload()
     full_index = list(payload.get("index") or [])
     before = len(full_index)
-    shard_index = [item for i, item in enumerate(full_index) if i % shard_total == shard_no]
+    shard_index = [item for i, item in enumerate(full_index) if i % shard.total == shard.number]
     offers = _build_offers_for_index(cfg, shard_index, id_prefix=id_prefix)
 
     SHARDS_DIR.mkdir(parents=True, exist_ok=True)
     _safe_write_json(
-        SHARDS_DIR / f"{shard_name}.json",
+        SHARDS_DIR / f"{shard.name}.json",
         {
-            "shard_name": shard_name,
-            "shard_no": shard_no,
-            "shard_total": shard_total,
+            "shard_name": shard.name,
+            "shard_no": shard.number,
+            "shard_total": shard.total,
             "before": before,
             "shard_input": len(shard_index),
             "after": len(offers),
@@ -453,30 +536,32 @@ def _run_shard_index(cfg_dir: Path, filter_cfg: dict[str, Any], schema_cfg: dict
         },
     )
     _safe_write_json(
-        SHARDS_DIR / f"{shard_name}_summary.json",
+        SHARDS_DIR / f"{shard.name}_summary.json",
         {
-            "shard_name": shard_name,
-            "shard_no": shard_no,
-            "shard_total": shard_total,
+            "shard_name": shard.name,
+            "shard_no": shard.number,
+            "shard_total": shard.total,
             "before": before,
             "shard_input": len(shard_index),
             "after": len(offers),
         },
     )
 
-    print("=" * 72)
-    print("[VTT] shard summary")
-    print("=" * 72)
-    print("version:", BUILD_VTT_VERSION)
-    print("shard_name:", shard_name)
-    print("shard_no:", shard_no)
-    print("shard_total:", shard_total)
-    print("before:", before)
-    print("shard_input:", len(shard_index))
-    print("after:", len(offers))
-    print("json:", SHARDS_DIR / f"{shard_name}.json")
-    print("=" * 72)
+    _print_mode_summary(
+        "[VTT] shard summary",
+        [
+            ("version", BUILD_VTT_VERSION),
+            ("shard_name", shard.name),
+            ("shard_no", shard.number),
+            ("shard_total", shard.total),
+            ("before", before),
+            ("shard_input", len(shard_index)),
+            ("after", len(offers)),
+            ("json", SHARDS_DIR / f"{shard.name}.json"),
+        ],
+    )
     return 0
+
 
 def _load_shards() -> tuple[list[OfferOut], int]:
     offers: list[OfferOut] = []
@@ -507,21 +592,11 @@ def _load_shards() -> tuple[list[OfferOut], int]:
     offers.sort(key=lambda x: x.oid)
     return offers, before
 
-def _run_merge(cfg_dir: Path, filter_cfg: dict[str, Any], schema_cfg: dict[str, Any], policy_cfg: dict[str, Any]) -> int:
+
+def _run_merge(cfg_dir: Path, filter_cfg: dict[str, Any], runtime: VTTRuntime) -> int:
     _prepare_source_env(cfg_dir, filter_cfg)
     cfg = cfg_from_env()
-    supplier_name = _resolve_supplier_name(policy_cfg, schema_cfg)
-
-    out_file, raw_out_file = _resolve_paths()
-    output_encoding = _resolve_output_encoding(policy_cfg, schema_cfg)
-    hour = _resolve_hour(policy_cfg, schema_cfg)
-    minute = _resolve_minute(policy_cfg, schema_cfg)
-    dom = _resolve_dom_list(policy_cfg, schema_cfg)
-    qg_cfg = _resolve_quality_gate(policy_cfg, schema_cfg)
-    param_priority = _load_param_priority(policy_cfg, schema_cfg)
-
-    build_time = now_almaty().replace(tzinfo=None)
-    next_run = next_run_dom_at_time(build_time, hour=hour, minute=minute, doms=dom)
+    build_time, next_run = _build_time_window(runtime)
 
     offers, before = _load_shards()
     if not offers:
@@ -529,19 +604,15 @@ def _run_merge(cfg_dir: Path, filter_cfg: dict[str, Any], schema_cfg: dict[str, 
 
     _write_feeds(
         offers=offers,
-        supplier_name=supplier_name,
+        runtime=runtime,
         supplier_url=cfg.start_url,
-        out_file=out_file,
-        raw_out_file=raw_out_file,
         build_time=build_time,
         next_run=next_run,
         before=before,
-        encoding=output_encoding,
-        param_priority=param_priority,
     )
 
-    qg = _run_quality_gate(raw_out_file=raw_out_file, qg_cfg=qg_cfg)
-    availability_true = sum(1 for o in offers if o.available)
+    qg = _run_quality_gate(raw_out_file=runtime.raw_out_file, qg_cfg=runtime.qg_cfg)
+    availability_true = sum(1 for offer in offers if offer.available)
     availability_false = len(offers) - availability_true
 
     _safe_write_json(
@@ -559,34 +630,23 @@ def _run_merge(cfg_dir: Path, filter_cfg: dict[str, Any], schema_cfg: dict[str, 
         version=BUILD_VTT_VERSION,
         before=before,
         after=len(offers),
-        raw_out_file=raw_out_file,
-        out_file=out_file,
+        raw_out_file=runtime.raw_out_file,
+        out_file=runtime.out_file,
         qg=qg,
         availability_true=availability_true,
         availability_false=availability_false,
     )
     return 0 if qg.ok else 1
 
-def _run_full(cfg_dir: Path, filter_cfg: dict[str, Any], schema_cfg: dict[str, Any], policy_cfg: dict[str, Any]) -> int:
+
+def _run_full(cfg_dir: Path, filter_cfg: dict[str, Any], runtime: VTTRuntime) -> int:
     _prepare_source_env(cfg_dir, filter_cfg)
     cfg = cfg_from_env()
-    supplier_name = _resolve_supplier_name(policy_cfg, schema_cfg)
-    id_prefix = _resolve_id_prefix(policy_cfg, schema_cfg)
-
-    out_file, raw_out_file = _resolve_paths()
-    output_encoding = _resolve_output_encoding(policy_cfg, schema_cfg)
-    hour = _resolve_hour(policy_cfg, schema_cfg)
-    minute = _resolve_minute(policy_cfg, schema_cfg)
-    dom = _resolve_dom_list(policy_cfg, schema_cfg)
-    qg_cfg = _resolve_quality_gate(policy_cfg, schema_cfg)
-    param_priority = _load_param_priority(policy_cfg, schema_cfg)
-
-    build_time = now_almaty().replace(tzinfo=None)
-    next_run = next_run_dom_at_time(build_time, hour=hour, minute=minute, doms=dom)
+    build_time, next_run = _build_time_window(runtime)
 
     full_index = _collect_index(cfg)
     before = len(full_index)
-    offers = _build_offers_for_index(cfg, full_index, id_prefix=id_prefix)
+    offers = _build_offers_for_index(cfg, full_index, id_prefix=runtime.id_prefix)
     after = len(offers)
 
     if not offers:
@@ -598,47 +658,46 @@ def _run_full(cfg_dir: Path, filter_cfg: dict[str, Any], schema_cfg: dict[str, A
 
     _write_feeds(
         offers=offers,
-        supplier_name=supplier_name,
+        runtime=runtime,
         supplier_url=cfg.start_url,
-        out_file=out_file,
-        raw_out_file=raw_out_file,
         build_time=build_time,
         next_run=next_run,
         before=before,
-        encoding=output_encoding,
-        param_priority=param_priority,
     )
 
-    qg = _run_quality_gate(raw_out_file=raw_out_file, qg_cfg=qg_cfg)
-    availability_true = sum(1 for o in offers if o.available)
+    qg = _run_quality_gate(raw_out_file=runtime.raw_out_file, qg_cfg=runtime.qg_cfg)
+    availability_true = sum(1 for offer in offers if offer.available)
     availability_false = after - availability_true
 
     _print_summary(
         version=BUILD_VTT_VERSION,
         before=before,
         after=after,
-        raw_out_file=raw_out_file,
-        out_file=out_file,
+        raw_out_file=runtime.raw_out_file,
+        out_file=runtime.out_file,
         qg=qg,
         availability_true=availability_true,
         availability_false=availability_false,
     )
     return 0 if qg.ok else 1
 
+
 # -------------------------------- entrypoint ------------------------------
 
 def main() -> int:
     cfg_dir = Path(os.getenv("VTT_CFG_DIR", CFG_DIR_DEFAULT))
     filter_cfg, schema_cfg, policy_cfg = _load_supplier_config(cfg_dir)
+    runtime = _build_runtime(policy_cfg, schema_cfg)
 
     mode = (os.getenv("VTT_BUILD_MODE") or "full").strip().lower()
     if mode == "index":
-        return _run_index(cfg_dir, filter_cfg, schema_cfg, policy_cfg)
+        return _run_index(cfg_dir, filter_cfg)
     if mode == "shard_index":
-        return _run_shard_index(cfg_dir, filter_cfg, schema_cfg, policy_cfg)
+        return _run_shard_index(cfg_dir, filter_cfg, id_prefix=runtime.id_prefix)
     if mode == "merge":
-        return _run_merge(cfg_dir, filter_cfg, schema_cfg, policy_cfg)
-    return _run_full(cfg_dir, filter_cfg, schema_cfg, policy_cfg)
+        return _run_merge(cfg_dir, filter_cfg, runtime)
+    return _run_full(cfg_dir, filter_cfg, runtime)
+
 
 if __name__ == "__main__":
     raise SystemExit(main())
