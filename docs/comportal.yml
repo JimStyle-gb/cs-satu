@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<yml_catalog date="2026-04-16 19:54:29">
+<yml_catalog date="2026-04-16 23:42:26">
 <shop><offers>
 <!--FEED_META
 Поставщик                                  | ComPortal
 URL поставщика                             | https://www.comportal.kz/auth/documents/prices/yml-catalog.php
-Время сборки (Алматы)                      | 2026-04-16 19:54:29
+Время сборки (Алматы)                      | 2026-04-16 23:42:26
 Ближайшая сборка (Алматы)                  | 2026-04-17 00:30:00
-Сколько товаров у поставщика до фильтра    | 1181
-Сколько товаров у поставщика после фильтра | 624
-Сколько товаров есть в наличии (true)      | 624
+Сколько товаров у поставщика до фильтра    | 1186
+Сколько товаров у поставщика после фильтра | 628
+Сколько товаров есть в наличии (true)      | 628
 Сколько товаров нет в наличии (false)      | 0
 -->
 
@@ -4055,6 +4055,54 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Формат печати">A4</param>
 <param name="Функция">Принтер-Сканер(АПД-150с.)-Копир-Факс</param>
 <keywords>HP, МФУ HP Color LaserJet Enterprise Flow MFP 6800zf (6QN36A#B19), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+</offer>
+
+<offer id="CP13872950" available="true">
+<categoryId>301</categoryId>
+<vendorCode>CP13872950</vendorCode>
+<name>МФУ Canon imageRUNNER C3326i (5965C005)</name>
+<price>806900</price>
+<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
+<vendor>Canon</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+<div style="font-family:Verdana, Tahoma, Arial, sans-serif;color:#2F2F2F;">
+<h3 style="margin:0 0 10px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">МФУ Canon imageRUNNER C3326i (5965C005)</h3>
+
+<p style="margin:0 0 10px 0;font-size:14px;line-height:1.5;font-family:inherit;">МФУ. Гарантия: 12 мес. Для бренда: Canon. Модель: imageRUNNER C3326i. Коды: 5965C005.</p>
+
+<h3 style="margin:14px 0 8px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Характеристики</h3>
+<ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Гарантия:</strong> 12 мес</li><li><strong>Бренд:</strong> Canon</li><li><strong>Коды:</strong> 5965C005</li><li><strong>Модель:</strong> imageRUNNER C3326i</li><li><strong>Тип:</strong> МФУ</li></ul>
+
+<div style="text-align:center;margin:10px 0 8px 0;">
+  <div class="ck-alert ck-alert_theme_green">
+    <div style="padding:4px 10px;font-family:inherit;">
+      <span class="ck-alert__title"></span>
+      <p style="margin:0 0 4px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>Просьба отправлять запросы на WhatsApp!</strong></p>
+      <p style="margin:0 0 6px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>+7 707 327-05-01</strong></p>
+      <p style="margin:0;font-size:14px;line-height:1.5;font-family:inherit;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block;padding:6px 12px;border:1px solid #146737;border-radius:6px;color:#146737;text-decoration:none;background:#FFFFFF;font-family:inherit;"><strong>💬 НАПИСАТЬ В WHATSAPP</strong></a></p>
+    </div>
+  </div>
+</div>
+
+<div class="ck-alert ck-alert_theme_orange" style="margin:8px 0 0 0;">
+  <div style="padding:4px 10px;font-family:inherit;">
+    <span class="ck-alert__title"></span>
+    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Оплата</h3>
+    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul>
+    <hr style="border:none;height:1px;background:#E7D6B7;margin:8px 0;" />
+    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Доставка по Алматы и Казахстану</h3>
+    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</li><li><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</li><li><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</li><li><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</li></ul>
+  </div>
+</div>
+
+</div>]]></description>
+<param name="Гарантия">12 мес</param>
+<param name="Для бренда">Canon</param>
+<param name="Коды">5965C005</param>
+<param name="Модель">imageRUNNER C3326i</param>
+<param name="Тип">МФУ</param>
+<keywords>Canon, МФУ Canon imageRUNNER C3326i (5965C005), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP10740881" available="true">
@@ -19680,6 +19728,67 @@ URL поставщика                             | https://www.comportal.kz/
 <keywords>Dell, Монитор Dell 27 Plus 4K USB-C Monitor-S2725QC (210-BQWS), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
+<offer id="CP13871380" available="true">
+<categoryId>602</categoryId>
+<vendorCode>CP13871380</vendorCode>
+<name>Монитор Dell 27 Plus 4K Monitor-S2725QS (210-BQWM)</name>
+<price>178900</price>
+<picture>https://www.comportal.kz/upload/iblock/86a/69jcnclz7uoi22v6lfvliwlx07nk8ba8.JPG</picture>
+<vendor>Dell</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+<div style="font-family:Verdana, Tahoma, Arial, sans-serif;color:#2F2F2F;">
+<h3 style="margin:0 0 10px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Монитор Dell 27 Plus 4K Monitor-S2725QS (210-BQWM)</h3>
+
+<p style="margin:0 0 10px 0;font-size:14px;line-height:1.5;font-family:inherit;">Монитор. Диагональ: 27. Максимальное разрешение: 3840x2160. Тип матрицы: IPS. Частота обновления: 120. Время отклика: 8. Порты: 2 HDMI ports (HDCP 1.4 &amp; 2.3) (Supports up to UHD 3840 x 2160, 120 Hz, FRL, HDR, VRR as per specified in HDMI 2.1)/1 DisplayPort 1.4 (HDCP 1.4 &amp; 2.3) port (Supports up to UHD 3840 x 2160, 120 Hz). Гарантия: 36 мес.</p>
+
+<h3 style="margin:14px 0 8px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Преимущества модели</h3>
+
+<ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li>Диагональ экрана 27</li><li>Гарантия 36 мес</li></ul>
+
+<h3 style="margin:14px 0 8px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Характеристики</h3>
+<ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Время отклика:</strong> 8</li><li><strong>Гарантия:</strong> 36 мес</li><li><strong>Диагональ:</strong> 27</li><li><strong>Бренд:</strong> Dell</li><li><strong>Коды:</strong> 210-BQWM</li><li><strong>Контрастность:</strong> 1500:1</li><li><strong>Максимальное разрешение:</strong> 3840x2160</li><li><strong>Модель:</strong> S2725QS</li><li><strong>Наличие динамиков:</strong> Speakers</li><li><strong>Порты:</strong> 2 HDMI ports (HDCP 1.4 &amp; 2.3) (Supports up to UHD 3840 x 2160, 120 Hz, FRL, HDR, VRR as per specified in HDMI 2.1)/1 DisplayPort 1.4 (HDCP 1.4 &amp; 2.3) port (Supports up to UHD 3840 x 2160, 120 Hz)</li><li><strong>Тип:</strong> Монитор</li><li><strong>Тип матрицы:</strong> IPS</li></ul>
+
+<div style="text-align:center;margin:10px 0 8px 0;">
+  <div class="ck-alert ck-alert_theme_green">
+    <div style="padding:4px 10px;font-family:inherit;">
+      <span class="ck-alert__title"></span>
+      <p style="margin:0 0 4px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>Просьба отправлять запросы на WhatsApp!</strong></p>
+      <p style="margin:0 0 6px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>+7 707 327-05-01</strong></p>
+      <p style="margin:0;font-size:14px;line-height:1.5;font-family:inherit;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block;padding:6px 12px;border:1px solid #146737;border-radius:6px;color:#146737;text-decoration:none;background:#FFFFFF;font-family:inherit;"><strong>💬 НАПИСАТЬ В WHATSAPP</strong></a></p>
+    </div>
+  </div>
+</div>
+
+<div class="ck-alert ck-alert_theme_orange" style="margin:8px 0 0 0;">
+  <div style="padding:4px 10px;font-family:inherit;">
+    <span class="ck-alert__title"></span>
+    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Оплата</h3>
+    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul>
+    <hr style="border:none;height:1px;background:#E7D6B7;margin:8px 0;" />
+    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Доставка по Алматы и Казахстану</h3>
+    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</li><li><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</li><li><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</li><li><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</li></ul>
+  </div>
+</div>
+
+</div>]]></description>
+<param name="Время отклика">8</param>
+<param name="Гарантия">36 мес</param>
+<param name="Диагональ">27</param>
+<param name="Для бренда">Dell</param>
+<param name="Коды">210-BQWM</param>
+<param name="Контрастность">1500:1</param>
+<param name="Максимальное разрешение">3840x2160</param>
+<param name="Модель">S2725QS</param>
+<param name="Наличие динамиков">Speakers</param>
+<param name="Порты">2 HDMI ports (HDCP 1.4 &amp; 2.3) (Supports up to UHD 3840 x 2160, 120 Hz, FRL, HDR, VRR as per specified in HDMI 2.1)/1 DisplayPort 1.4 (HDCP 1.4 &amp; 2.3) port (Supports up to UHD 3840 x 2160, 120 Hz)</param>
+<param name="Тип">Монитор</param>
+<param name="Тип матрицы">IPS</param>
+<param name="Частота обновления">120</param>
+<param name="Яркость">350</param>
+<keywords>Dell, Монитор Dell 27 Plus 4K Monitor-S2725QS (210-BQWM), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+</offer>
+
 <offer id="CP13871694" available="true">
 <categoryId>602</categoryId>
 <vendorCode>CP13871694</vendorCode>
@@ -21690,6 +21799,88 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Модель">P2726DEB</param>
 <param name="Тип">Монитор</param>
 <keywords>Dell, Монитор Dell Pro Hub Conferencing Monitor - P2726DEB (210-BVHR), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+</offer>
+
+<offer id="CP13834771" available="true">
+<categoryId>601</categoryId>
+<vendorCode>CP13834771</vendorCode>
+<name>Ноутбук Acer PH3D15-71-99NY Predator Helios 3D 15 SpatialLabs Edition (NH.QLWER.002)</name>
+<price>1827900</price>
+<picture>https://www.comportal.kz/upload/iblock/2e0/2e08368624f0be0662e9b1ddc52400d4.JPG</picture>
+<vendor>Acer</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+<div style="font-family:Verdana, Tahoma, Arial, sans-serif;color:#2F2F2F;">
+<h3 style="margin:0 0 10px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Ноутбук Acer PH3D15-71-99NY Predator Helios 3D 15 SpatialLabs Edition (NH.QLWER.002)</h3>
+
+<p style="margin:0 0 10px 0;font-size:14px;line-height:1.5;font-family:inherit;">Ноутбук. Процессор: Intel 13900HX Core i9 1,6. Оперативная память: 32 Gb / DDR5 / 5600. Накопитель: 2048 / PCIe NVMe SSD / 2 шт. Диагональ: 15,6. Разрешение: 3840x2160. ОС: Без операционной системы. Видеокарта: nVidia RTX 4080 12 Gb. Wi‑Fi: 802.11 a b/g n/ac ax. Bluetooth: Bluetooth 5.1. Камера: HD Camera. Гарантия: 12 мес.</p>
+
+<h3 style="margin:14px 0 8px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Преимущества модели</h3>
+
+<ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li>Оперативная память 32 Gb</li><li>Операционная система Без операционной системы</li><li>Поддержка Wi-Fi 802.11 a b/g n/ac ax</li><li>Поддержка Bluetooth 5.1</li></ul>
+
+<h3 style="margin:14px 0 8px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Характеристики</h3>
+<ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Bluetooth:</strong> Bluetooth 5.1</li><li><strong>Wi-Fi:</strong> 802.11 a b/g n/ac ax</li><li><strong>Адаптер:</strong> 330W AC Adapter</li><li><strong>Аккумулятор:</strong> 4-Cell 90Wh</li><li><strong>Гарантия:</strong> 12 мес</li><li><strong>Бренд:</strong> Acer</li><li><strong>Дополнительные характеристики:</strong> RGB Micro SD card reader</li><li><strong>Занятые слоты памяти:</strong> 2x16GB</li><li><strong>Камера:</strong> HD Camera</li><li><strong>Коды:</strong> NH.QLWER.002</li><li><strong>Количество дисков:</strong> 2</li><li><strong>Количество слотов памяти:</strong> 2</li></ul>
+
+<div style="text-align:center;margin:10px 0 8px 0;">
+  <div class="ck-alert ck-alert_theme_green">
+    <div style="padding:4px 10px;font-family:inherit;">
+      <span class="ck-alert__title"></span>
+      <p style="margin:0 0 4px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>Просьба отправлять запросы на WhatsApp!</strong></p>
+      <p style="margin:0 0 6px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>+7 707 327-05-01</strong></p>
+      <p style="margin:0;font-size:14px;line-height:1.5;font-family:inherit;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block;padding:6px 12px;border:1px solid #146737;border-radius:6px;color:#146737;text-decoration:none;background:#FFFFFF;font-family:inherit;"><strong>💬 НАПИСАТЬ В WHATSAPP</strong></a></p>
+    </div>
+  </div>
+</div>
+
+<div class="ck-alert ck-alert_theme_orange" style="margin:8px 0 0 0;">
+  <div style="padding:4px 10px;font-family:inherit;">
+    <span class="ck-alert__title"></span>
+    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Оплата</h3>
+    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul>
+    <hr style="border:none;height:1px;background:#E7D6B7;margin:8px 0;" />
+    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Доставка по Алматы и Казахстану</h3>
+    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</li><li><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</li><li><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</li><li><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</li></ul>
+  </div>
+</div>
+
+</div>]]></description>
+<param name="Bluetooth">Bluetooth 5.1</param>
+<param name="Wi-Fi">802.11 a b/g n/ac ax</param>
+<param name="Адаптер">330W AC Adapter</param>
+<param name="Аккумулятор">4-Cell 90Wh</param>
+<param name="Гарантия">12 мес</param>
+<param name="Для бренда">Acer</param>
+<param name="Дополнительные характеристики">RGB Micro SD card reader</param>
+<param name="Занятые слоты памяти">2x16GB</param>
+<param name="Камера">HD Camera</param>
+<param name="Коды">NH.QLWER.002</param>
+<param name="Количество дисков">2</param>
+<param name="Количество слотов памяти">2</param>
+<param name="Марка чипсета видеокарты">GeForce</param>
+<param name="Модель">PH3D15-71-99NY Predator Helios 3D 15 SpatialLabs Edition</param>
+<param name="Модель процессора">Core i9</param>
+<param name="Модель чипсета видеокарты">RTX 4080</param>
+<param name="Объем видеопамяти">12 Gb</param>
+<param name="Объем жесткого диска">2048</param>
+<param name="Оперативная память">32 Gb</param>
+<param name="Операционная система">Без операционной системы</param>
+<param name="Порты">1xUSB 3.2 Gen 2/1xDisplayPort over USB-C/1xThunderbolt 4/1xUSB charging 5 V; 3 A/1xDC-in port 20 V; 65 W/1xEthernet (RJ-45) port/1xHDMI 2.1 port with HDCP support/1x3.5 mm headphone speaker jack, supporting headsets with built-in microphone/1xUSB-A 3.2 Gen 1/1xUSB-A 3.2 Gen 2</param>
+<param name="Производитель процессора">Intel</param>
+<param name="Производитель чипсета видеокарты">nVidia</param>
+<param name="Размер дисплея">15,6</param>
+<param name="Разрешение дисплея">3840x2160</param>
+<param name="Серия процессора">13900HX</param>
+<param name="Сетевая карта (скорость передачи)">10/100/1000</param>
+<param name="Тип">Ноутбук</param>
+<param name="Тип жесткого диска">PCIe NVMe SSD</param>
+<param name="Тип матрицы">UHD IPS</param>
+<param name="Тип оперативной памяти">DDR5</param>
+<param name="Тип привода">No ODD</param>
+<param name="Цвет">Чёрный</param>
+<param name="Частота оперативной памяти">5600</param>
+<param name="Частота процессора">1,6</param>
+<keywords>Acer, Ноутбук Acer PH3D15-71-99NY Predator Helios 3D 15 SpatialLabs Edition (NH.QLWER.002), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP13842525" available="true">
@@ -35519,6 +35710,65 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Тип">Проектор</param>
 <param name="Яркость">4 000</param>
 <keywords>Acer, Проектор Acer L812 (MR.JUZ11.001), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+</offer>
+
+<offer id="CP13871689" available="true">
+<categoryId>401</categoryId>
+<vendorCode>CP13871689</vendorCode>
+<name>Проектор Acer H6830BD (MR.JVK11.001)</name>
+<price>581900</price>
+<picture>https://www.comportal.kz/upload/iblock/445/vzdsc1hmmpi079i8lzfrn362t7yz2saa.jpg</picture>
+<vendor>Acer</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+<div style="font-family:Verdana, Tahoma, Arial, sans-serif;color:#2F2F2F;">
+<h3 style="margin:0 0 10px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Проектор Acer H6830BD (MR.JVK11.001)</h3>
+
+<p style="margin:0 0 10px 0;font-size:14px;line-height:1.5;font-family:inherit;">Проектор. Разрешение: 3840 x 2160. Порты: USB/2XHDMI/ 3.5 мм (mini-Jack). Гарантия: 12 мес.</p>
+
+<h3 style="margin:14px 0 8px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Преимущества модели</h3>
+
+<ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li>Разрешение 3840 x 2160</li><li>Гарантия 12 мес</li></ul>
+
+<h3 style="margin:14px 0 8px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Характеристики</h3>
+<ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Гарантия:</strong> 12 мес</li><li><strong>Бренд:</strong> Acer</li><li><strong>Коды:</strong> MR.JVK11.001</li><li><strong>Контрастность:</strong> 20000:1</li><li><strong>Модель:</strong> H6830BD</li><li><strong>Мощность лампы:</strong> 240</li><li><strong>Порты:</strong> USB/2XHDMI/ 3.5 мм (mini-Jack)</li><li><strong>Разрешение:</strong> 3840 x 2160</li><li><strong>Ресурс лампы:</strong> 10 000</li><li><strong>Технология:</strong> DLP</li><li><strong>Тип:</strong> Проектор</li><li><strong>Яркость:</strong> 3 800</li></ul>
+
+<div style="text-align:center;margin:10px 0 8px 0;">
+  <div class="ck-alert ck-alert_theme_green">
+    <div style="padding:4px 10px;font-family:inherit;">
+      <span class="ck-alert__title"></span>
+      <p style="margin:0 0 4px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>Просьба отправлять запросы на WhatsApp!</strong></p>
+      <p style="margin:0 0 6px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>+7 707 327-05-01</strong></p>
+      <p style="margin:0;font-size:14px;line-height:1.5;font-family:inherit;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block;padding:6px 12px;border:1px solid #146737;border-radius:6px;color:#146737;text-decoration:none;background:#FFFFFF;font-family:inherit;"><strong>💬 НАПИСАТЬ В WHATSAPP</strong></a></p>
+    </div>
+  </div>
+</div>
+
+<div class="ck-alert ck-alert_theme_orange" style="margin:8px 0 0 0;">
+  <div style="padding:4px 10px;font-family:inherit;">
+    <span class="ck-alert__title"></span>
+    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Оплата</h3>
+    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul>
+    <hr style="border:none;height:1px;background:#E7D6B7;margin:8px 0;" />
+    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Доставка по Алматы и Казахстану</h3>
+    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</li><li><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</li><li><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</li><li><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</li></ul>
+  </div>
+</div>
+
+</div>]]></description>
+<param name="Гарантия">12 мес</param>
+<param name="Для бренда">Acer</param>
+<param name="Коды">MR.JVK11.001</param>
+<param name="Контрастность">20000:1</param>
+<param name="Модель">H6830BD</param>
+<param name="Мощность лампы">240</param>
+<param name="Порты">USB/2XHDMI/ 3.5 мм (mini-Jack)</param>
+<param name="Разрешение">3840 x 2160</param>
+<param name="Ресурс лампы">10 000</param>
+<param name="Технология">DLP</param>
+<param name="Тип">Проектор</param>
+<param name="Яркость">3 800</param>
+<keywords>Acer, Проектор Acer H6830BD (MR.JVK11.001), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP13872827" available="true">
