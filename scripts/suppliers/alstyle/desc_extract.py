@@ -938,8 +938,3 @@ def extract_desc_body_and_spec_pairs(desc_src: str, schema: dict[str, Any]) -> t
         out.append(best_resource)
 
     return body_text, out
-
-def extract_desc_spec_pairs(desc_src: str, schema: dict[str, Any]) -> list[tuple[str, str]]:
-    # Backward-compatible wrapper для старого builder.py.
-    _body, pairs = extract_desc_body_and_spec_pairs(desc_src, schema)
-    return pairs
