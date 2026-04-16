@@ -17,8 +17,6 @@ from __future__ import annotations
 import re
 from typing import Sequence
 
-from cs.util import safe_int as _safe_int_shared
-
 # ----------------------------- constants / regex -----------------------------
 
 CATEGORY_TYPE_MAP: dict[str, str] = {
@@ -153,9 +151,6 @@ ORIGINAL_MARK_RE = re.compile(r"(?<!\w)\((?:O|О|OEM)\)(?!\w)|\bоригинал
 DUPLICATE_LEAD_RE = re.compile(r"^([A-Z0-9][A-Z0-9\-./]{2,})\s*,\s*\1\b", re.I)
 RES_RE = re.compile(r"(?<!\d)(\d+(?:[.,]\d+)?)\s*([kк]|ml|мл|l|л)\b", re.I)
 _VENDOR_SUFFIX_RE = re.compile(r"(?iu)\b(?:gmbh|co\.?ltd|inc\.?|corp\.?|limited|ltd\.?)\b")
-_BOOL_TRUE = {"true", "1", "yes", "y", "да", "in stock", "available"}
-_BOOL_FALSE = {"false", "0", "no", "n", "нет", "out of stock", "unavailable"}
-
 # ----------------------------- basic helpers -----------------------------
 
 def safe_str(x: object) -> str:
@@ -332,18 +327,6 @@ def clean_title(title: str) -> str:
             title = head
     return _restore_brand_tokens(norm_ws(title))
 
-def normalize_name(name: str) -> str:
-    """Канонический alias под общий supplier-template."""
-    return normalize_title(name)
-
-def append_original_suffix(title: str, original: bool) -> str:
-    title = norm_ws(title)
-    if not original:
-        return title
-    if "оригинал" in title.casefold():
-        return title
-    return f"{title} (оригинал)"
-
 # ----------------------------- code / model / oid -----------------------------
 
 def first_code(text: str) -> str:
@@ -516,79 +499,6 @@ def build_extract_description(*, title: str, description_text: str) -> str:
         return ""
     return s[:6000]
 
-def normalize_source_basics(
-    *,
-    title: str,
-    sku: str,
-    description_text: str,
-    params: Sequence[tuple[str, str]] | None = None,
-) -> dict:
-    """Вернуть базовую нормализацию для builder/source."""
-    norm_title = normalize_title(title)
-    extract_desc = build_extract_description(title=norm_title, description_text=description_text)
-    vendor = detect_vendor(title=norm_title, description=extract_desc or description_text, params=params)
-    model = detect_model(title=norm_title, description=extract_desc or description_text, sku=sku)
-    return {
-        "title": norm_title,
-        "vendor": vendor,
-        "model": model,
-        "extract_desc": extract_desc,
-        "description": extract_desc,
-    }
-
-# ----------------------------- common-template aliases -----------------------------
-
-def normalize_vendor(
-    vendor: str,
-    *,
-    name: str = "",
-    params: Sequence[tuple[str, str]] | None = None,
-    description_text: str = "",
-    vendor_blacklist: set[str] | None = None,
-    fallback_vendor: str = "",
-) -> str:
-    """Канонический alias под общий supplier-template."""
-    vendor_blacklist = vendor_blacklist or set()
-    direct = canon_vendor(vendor)
-    if direct and direct.casefold() not in vendor_blacklist:
-        return direct
-
-    guessed = detect_vendor(title=name, description=description_text, params=params or [])
-    if guessed and guessed.casefold() not in vendor_blacklist:
-        return guessed
-
-    fallback = canon_vendor(fallback_vendor)
-    if fallback and fallback.casefold() not in vendor_blacklist:
-        return fallback
-    return ""
-
-def normalize_model(
-    name: str,
-    params: Sequence[tuple[str, str]] | None = None,
-    *,
-    description_text: str = "",
-    sku: str = "",
-) -> str:
-    """Канонический alias под общий supplier-template."""
-    return detect_model(title=name, description=description_text, sku=sku)
-
-def normalize_price_in(price_text: str = "", *, fallback_text: str = "") -> int | None:
-    """Мягкая нормализация входной цены."""
-    price_in = _safe_int_shared(price_text)
-    if price_in is not None:
-        return price_in
-    return _safe_int_shared(fallback_text)
-
-def normalize_available(available_attr: str = "", available_tag: str = "", active: str = "") -> bool:
-    """Общий bool-normalizer; для VTT policy всё равно always_true_available=true."""
-    for raw in (available_attr, available_tag, active):
-        s = norm_ws(raw).casefold()
-        if s in _BOOL_TRUE:
-            return True
-        if s in _BOOL_FALSE:
-            return False
-    return False
-
 __all__ = [
     "CATEGORY_TYPE_MAP",
     "TECH_BY_CATEGORY",
@@ -605,22 +515,15 @@ __all__ = [
     "is_original",
     "clean_title",
     "normalize_title",
-    "normalize_name",
-    "append_original_suffix",
     "make_oid",
     "build_offer_oid",
     "guess_vendor",
     "detect_vendor",
     "detect_model",
-    "normalize_vendor",
-    "normalize_model",
-    "normalize_price_in",
-    "normalize_available",
     "infer_type",
     "infer_tech",
     "infer_color_from_title",
     "norm_color",
     "format_resource_value",
     "build_extract_description",
-    "normalize_source_basics",
 ]
