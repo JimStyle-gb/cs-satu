@@ -1,12 +1,5 @@
 # Сводный отчёт по товарам без categoryId
 
-## START AlStyle
-Поставщик: AlStyle
-Товаров без categoryId: 0
-
-# Все товары получили categoryId
-## END AlStyle
-
 ## START ComPortal
 Поставщик: ComPortal
 Товаров без categoryId: 0
@@ -34,3 +27,10 @@
 
 # Все товары получили categoryId
 ## END VTT
+
+## START AlStyle
+Поставщик: AlStyle
+Товаров без categoryId: 0
+
+# Все товары получили categoryId
+## END AlStyle
