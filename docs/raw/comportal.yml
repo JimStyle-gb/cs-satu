@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<yml_catalog date="2026-04-16 01:14:47">
+<yml_catalog date="2026-04-16 16:12:44">
 <shop><offers>
 <!--FEED_META
 Поставщик                                  | ComPortal
 URL поставщика                             | https://www.comportal.kz/auth/documents/prices/yml-catalog.php
-Время сборки (Алматы)                      | 2026-04-16 01:14:47
+Время сборки (Алматы)                      | 2026-04-16 16:12:44
 Ближайшая сборка (Алматы)                  | 2026-04-17 00:30:00
-Сколько товаров у поставщика до фильтра    | 1169
-Сколько товаров у поставщика после фильтра | 599
-Сколько товаров есть в наличии (true)      | 599
+Сколько товаров у поставщика до фильтра    | 1193
+Сколько товаров у поставщика после фильтра | 625
+Сколько товаров есть в наличии (true)      | 625
 Сколько товаров нет в наличии (false)      | 0
 -->
 
@@ -671,45 +671,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Коды">210-BKVT_N2016VDT3030MTEMEA01</param>
 </offer>
 
-<offer id="CP13870591" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13870591</vendorCode>
-<name>Компьютер ASUS G22CH-1470KF0020 (90PF03T2-M00TC0 / 1)</name>
-<price>1017135</price>
-<picture>https://www.comportal.kz/upload/iblock/3c3/sfngjurx3k8gb5wysxozdanz8z2pz4a0.jpg</picture>
-<vendor>ASUS</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Настольный ПК. Процессор: Intel 14700KF Core i7 3,4. Оперативная память: 16 Gb / DDR5 / 4800. Накопитель: 1000 / M.2 PCIe SSD / 1 шт. ОС: Без операционной системы. Видеокарта: nVidia RTX 4070 12 Gb. Гарантия: 12 мес.]]></description>
-<param name="Тип">Настольный ПК</param>
-<param name="Модель">G22CH-1470KF0020</param>
-<param name="Объем жесткого диска">1000</param>
-<param name="Тип жесткого диска">M.2 PCIe SSD</param>
-<param name="Производитель процессора">Intel</param>
-<param name="Модель процессора">Core i7</param>
-<param name="Серия процессора">14700KF</param>
-<param name="Частота процессора">3,4</param>
-<param name="Сетевая карта (скорость передачи)">10/25GbE</param>
-<param name="Оперативная память">16 Gb</param>
-<param name="Частота оперативной памяти">4800</param>
-<param name="Объем видеопамяти">12 Gb</param>
-<param name="Тип оперативной памяти">DDR5</param>
-<param name="Блок питания">АТХ 600W</param>
-<param name="Порты">1x RJ45 Gigabit Ethernet/1x HDMI 2.0a/3 x Audio jacks/2x USB 2.0 Type-A/2x USB 3.2 Gen 1 Type-A/1x 3.5mm combo audio jack/1x USB 3.2 Gen 2 Type-C/2x USB 3.2 Gen 2 Type-A</param>
-<param name="Тип привода">No ODD</param>
-<param name="Количество дисков">1</param>
-<param name="Производитель чипсета видеокарты">nVidia</param>
-<param name="Марка чипсета видеокарты">GeForce</param>
-<param name="Модель чипсета видеокарты">RTX 4070</param>
-<param name="Операционная система">Без операционной системы</param>
-<param name="Гарантия">12 мес</param>
-<param name="Тип кейса">SFF</param>
-<param name="Клавиатура">Without keyboard</param>
-<param name="Манипулятор">Without mouse</param>
-<param name="Для бренда">ASUS</param>
-<param name="Коды">90PF03T2-M00TC0 / 1</param>
-</offer>
-
 <offer id="CP13871813" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13871813</vendorCode>
@@ -932,6 +893,23 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Для бренда">Dell</param>
 <param name="Модель">Pro Tower QCT1250</param>
 <param name="Коды">210-BPRW_BTO110_QCT1250_EMEA</param>
+</offer>
+
+<offer id="CP13873258" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13873258</vendorCode>
+<name>Компьютер HP Pro Tower 400 G9 (9H762ET#BJA)</name>
+<price>512374</price>
+<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
+<vendor>HP</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Настольный ПК. Модельная серия: Pro Tower 400. Гарантия: 60 мес. Для бренда: HP. Модель: Pro Tower 400. Коды: 9H762ET#BJA.]]></description>
+<param name="Тип">Настольный ПК</param>
+<param name="Гарантия">60 мес</param>
+<param name="Коды">9H762ET#BJA</param>
+<param name="Модель">Pro Tower 400</param>
+<param name="Для бренда">HP</param>
 </offer>
 
 <offer id="CP13871817" available="true">
@@ -1337,56 +1315,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Для бренда">HP</param>
 </offer>
 
-<offer id="CP13816464" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13816464</vendorCode>
-<name>МФУ HP LaserJet Enterprise M430f (3PZ55A#B19)</name>
-<price>256201</price>
-<picture>https://www.comportal.kz/upload/iblock/2a2/panykxnaffbczzk04kvtfyy00l6956w1.jpg</picture>
-<vendor>HP</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-МФУ. Формат печати: A4. Разрешение: 1200x1200. Скорость печати ч/б: 38. Технология печати: Лазерная. Гарантия: 12 мес.]]></description>
-<param name="Тип">МФУ</param>
-<param name="Модель">LaserJet Enterprise M430f</param>
-<param name="Гарантия">12 мес</param>
-<param name="Разрешение">1200x1200</param>
-<param name="Формат печати">A4</param>
-<param name="Скорость печати ч/б">38</param>
-<param name="Технология печати">Лазерная</param>
-<param name="Функция">Принтер-Сканер(АПД-50с.)-Копир-Факс</param>
-<param name="Наличие картриджа (тонера) в комплекте">Стартовый</param>
-<param name="Нагрузка">100 000</param>
-<param name="Коды">3PZ55A#B19</param>
-<param name="Для бренда">HP</param>
-</offer>
-
-<offer id="CP13834337" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13834337</vendorCode>
-<name>МФУ Canon I-SENSYS MF461DW (5951C020AA)</name>
-<price>240750</price>
-<picture>https://www.comportal.kz/upload/iblock/2d1/73e1mzhrcfztcswpu6qqfhbjj2m0z86t.JPG</picture>
-<vendor>Canon</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-МФУ. Формат печати: A4. Разрешение: 1200x1200. Скорость печати ч/б: 36. Порты: USB LAN WiFI. Технология печати: Лазерная. Гарантия: 12 мес.]]></description>
-<param name="Тип">МФУ</param>
-<param name="Модель">I-SENSYS MF461DW</param>
-<param name="Гарантия">12 мес</param>
-<param name="Разрешение">1200x1200</param>
-<param name="Формат печати">A4</param>
-<param name="Скорость печати ч/б">36</param>
-<param name="Технология печати">Лазерная</param>
-<param name="Порты">USB LAN WiFI</param>
-<param name="Функция">принтер сканер копир</param>
-<param name="Наличие картриджа (тонера) в комплекте">Стартовый</param>
-<param name="Нагрузка">80 000</param>
-<param name="Емкость 4-го лотка">550</param>
-<param name="Коды">5951C020AA</param>
-<param name="Для бренда">Canon</param>
-</offer>
-
 <offer id="CP13839973" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13839973</vendorCode>
@@ -1511,44 +1439,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Для бренда">Canon</param>
 </offer>
 
-<offer id="CP13871540" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13871540</vendorCode>
-<name>Хранилище HPE HPE MSA 2062 16Gb FC SFF (R0Q80B)</name>
-<price>1909350</price>
-<picture>https://www.comportal.kz/upload/iblock/73e/5rk91hu2phujc5p5xmwhw0a1g9yv1ghp.JPG</picture>
-<vendor>HPE</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-МФУ. Гарантия: 12 мес. Для бренда: HPE. Модель: HPE MSA 2062 16Gb FC SFF. Коды: R0Q80B.]]></description>
-<param name="Тип">МФУ</param>
-<param name="Модель">HPE MSA 2062 16Gb FC SFF</param>
-<param name="Гарантия">12 мес</param>
-<param name="Интерфейс массива">Fibre Channel</param>
-<param name="Тип корпуса">Rack</param>
-<param name="Коды">R0Q80B</param>
-<param name="Для бренда">HPE</param>
-</offer>
-
-<offer id="CP13871542" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13871542</vendorCode>
-<name>Хранилище HPE HPE MSA 1060 12Gb SAS SFF (R0Q87B)</name>
-<price>1139460</price>
-<picture>https://www.comportal.kz/upload/iblock/e7c/v7bfdqmt9woycxcvstlv0zajhllrr5rn.JPG</picture>
-<vendor>HPE</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-МФУ. Гарантия: 12 мес. Для бренда: HPE. Модель: HPE MSA 1060 12Gb SAS SFF. Коды: R0Q87B.]]></description>
-<param name="Тип">МФУ</param>
-<param name="Модель">HPE MSA 1060 12Gb SAS SFF</param>
-<param name="Гарантия">12 мес</param>
-<param name="Интерфейс массива">SAS</param>
-<param name="Тип корпуса">Rack</param>
-<param name="Коды">R0Q87B</param>
-<param name="Для бренда">HPE</param>
-</offer>
-
 <offer id="CP13872105" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13872105</vendorCode>
@@ -1573,24 +1463,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Емкость 4-го лотка">100</param>
 <param name="Коды">9S186A#B19</param>
 <param name="Для бренда">HP</param>
-</offer>
-
-<offer id="CP13873144" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13873144</vendorCode>
-<name>МФУ Canon i-SENSYS MF237W BUND(2 картриджа) (1418C170) (оригинал)</name>
-<price>190332</price>
-<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
-<vendor>Canon</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Оригинальный мфу. Гарантия: 12 мес. Для бренда: Canon. Модель: i-SENSYS MF237W BUND(2 картриджа). Коды: 1418C170.]]></description>
-<param name="Тип">МФУ</param>
-<param name="Гарантия">12 мес</param>
-<param name="Коды">1418C170</param>
-<param name="Модель">i-SENSYS MF237W BUND(2 картриджа)</param>
-<param name="Для бренда">Canon</param>
-<param name="Оригинальность">Оригинал</param>
 </offer>
 
 <offer id="CP13873145" available="true">
@@ -1899,23 +1771,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Жесткий диск">6Gb</param>
 <param name="Коды">6QN36A#B19</param>
 <param name="Для бренда">HP</param>
-</offer>
-
-<offer id="CP13872950" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13872950</vendorCode>
-<name>МФУ Canon imageRUNNER C3326i (5965C005)</name>
-<price>746648</price>
-<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
-<vendor>Canon</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-МФУ. Гарантия: 12 мес. Для бренда: Canon. Модель: imageRUNNER C3326i. Коды: 5965C005.]]></description>
-<param name="Тип">МФУ</param>
-<param name="Гарантия">12 мес</param>
-<param name="Коды">5965C005</param>
-<param name="Модель">imageRUNNER C3326i</param>
-<param name="Для бренда">Canon</param>
 </offer>
 
 <offer id="CP10740881" available="true">
@@ -2515,6 +2370,31 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Для бренда">HP</param>
 </offer>
 
+<offer id="CP10834918" available="true">
+<categoryId></categoryId>
+<vendorCode>CP10834918</vendorCode>
+<name>Принтер HP Color Laser 150a (4ZB94A#B19)</name>
+<price>113913</price>
+<picture>https://www.comportal.kz/upload/iblock/be5/dyjp4fldusx7ooiemz0xl17zx0oaeg29.JPG</picture>
+<vendor>HP</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Принтер. Формат печати: A4. Разрешение: 600x600. Скорость печати ч/б: 18. Скорость печати цветной: 4. Порты: USB. Технология печати: Лазерная. Гарантия: 12 мес.]]></description>
+<param name="Тип">Принтер</param>
+<param name="Модель">Color Laser 150a</param>
+<param name="Гарантия">12 мес</param>
+<param name="Разрешение">600x600</param>
+<param name="Формат печати">A4</param>
+<param name="Скорость печати ч/б">18</param>
+<param name="Технология печати">Лазерная</param>
+<param name="Порты">USB</param>
+<param name="Скорость печати цветной">4</param>
+<param name="Наличие картриджа (тонера) в комплекте">Стартовый</param>
+<param name="Нагрузка">20 000</param>
+<param name="Коды">4ZB94A#B19</param>
+<param name="Для бренда">HP</param>
+</offer>
+
 <offer id="CP13843628" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13843628</vendorCode>
@@ -2733,29 +2613,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Для бренда">Canon</param>
 </offer>
 
-<offer id="CP13870348" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13870348</vendorCode>
-<name>Плоттер HP DesignJet T230 24 (5HB07D#B19)</name>
-<price>248830</price>
-<picture>https://www.comportal.kz/upload/iblock/43e/1uap8lkkgs2hcli5v0tkqssr3d5z1ejv.jpg</picture>
-<vendor>HP</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Широкоформатный принтер. Формат печати: A1. Разрешение: 2400x1200. Скорость печати ч/б: 35. Порты: Gigabit Ethernet (1000Base-T), высокоскоростной порт USB 2.0, Wi-Fi 802.11a b/g n, Wi-Fi Direct. Технология печати: Струйная. Гарантия: 12 мес.]]></description>
-<param name="Тип">Широкоформатный принтер</param>
-<param name="Модель">DesignJet T230 24</param>
-<param name="Порты">Gigabit Ethernet (1000Base-T), высокоскоростной порт USB 2.0, Wi-Fi 802.11a b/g n, Wi-Fi Direct</param>
-<param name="Гарантия">12 мес</param>
-<param name="Технология печати">Струйная</param>
-<param name="Разрешение">2400x1200</param>
-<param name="Формат печати">A1</param>
-<param name="Скорость печати ч/б">35</param>
-<param name="Функции">принтер</param>
-<param name="Коды">5HB07D#B19</param>
-<param name="Для бренда">HP</param>
-</offer>
-
 <offer id="CP13870436" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13870436</vendorCode>
@@ -2833,6 +2690,26 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Технология печати">Лазерная</param>
 <param name="Ресурс">1 600</param>
 <param name="Коды">CE285A</param>
+<param name="Для бренда">HP</param>
+<param name="Оригинальность">Оригинал</param>
+</offer>
+
+<offer id="CP10302301" available="true">
+<categoryId></categoryId>
+<vendorCode>CP10302301</vendorCode>
+<name>Картридж HP CE285AF (2 шт.) (CE285AF) (оригинал)</name>
+<price>85505</price>
+<picture>https://www.comportal.kz/upload/iblock/fc1/fc132913b24a672c3e6e3fe6230c18ca.jpg</picture>
+<vendor>HP</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Оригинальный картридж HP CE285AF (2 шт.) код — CE285AF; цвет — Чёрный; ресурс — 1 600; технология печати — Лазерная.]]></description>
+<param name="Тип">Картридж</param>
+<param name="Модель">CE285AF (2 шт.)</param>
+<param name="Цвет">Чёрный</param>
+<param name="Технология печати">Лазерная</param>
+<param name="Ресурс">1 600</param>
+<param name="Коды">CE285AF</param>
 <param name="Для бренда">HP</param>
 <param name="Оригинальность">Оригинал</param>
 </offer>
@@ -2917,6 +2794,45 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Оригинальность">Оригинал</param>
 </offer>
 
+<offer id="CP10310243" available="true">
+<categoryId></categoryId>
+<vendorCode>CP10310243</vendorCode>
+<name>Картридж HP CF283AF (оригинал)</name>
+<price>81316</price>
+<picture>https://www.comportal.kz/upload/iblock/f6c/mwff5dp4twn7ju3ufbut379xw2xq351p.jpg</picture>
+<vendor>HP</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Оригинальный картридж HP CF283AF цвет — Чёрный; ресурс — 1 500; технология печати — Лазерная.]]></description>
+<param name="Тип">Картридж</param>
+<param name="Модель">CF283AF</param>
+<param name="Цвет">Чёрный</param>
+<param name="Технология печати">Лазерная</param>
+<param name="Ресурс">1 500</param>
+<param name="Для бренда">HP</param>
+<param name="Оригинальность">Оригинал</param>
+</offer>
+
+<offer id="CP10313432" available="true">
+<categoryId></categoryId>
+<vendorCode>CP10313432</vendorCode>
+<name>Картридж HP W1106A / 106A (W1106A) (оригинал)</name>
+<price>27903</price>
+<picture>https://www.comportal.kz/upload/iblock/b53/e1x8g5lzymn5qedsw2ztzrfk5fq440u5.jpg</picture>
+<vendor>HP</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Оригинальный картридж HP W1106A / 106A код — W1106A; цвет — Чёрный; ресурс — 1 000; технология печати — Лазерная.]]></description>
+<param name="Тип">Картридж</param>
+<param name="Модель">W1106A / 106A</param>
+<param name="Цвет">Чёрный</param>
+<param name="Технология печати">Лазерная</param>
+<param name="Ресурс">1 000</param>
+<param name="Коды">W1106A</param>
+<param name="Для бренда">HP</param>
+<param name="Оригинальность">Оригинал</param>
+</offer>
+
 <offer id="CP10314067" available="true">
 <categoryId></categoryId>
 <vendorCode>CP10314067</vendorCode>
@@ -2973,6 +2889,46 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Технология печати">Лазерная</param>
 <param name="Ресурс">2 500</param>
 <param name="Коды">Q2612A</param>
+<param name="Для бренда">HP</param>
+<param name="Оригинальность">Оригинал</param>
+</offer>
+
+<offer id="CP10323104" available="true">
+<categoryId></categoryId>
+<vendorCode>CP10323104</vendorCode>
+<name>Картридж HP CF540A (CF540A) (оригинал)</name>
+<price>37624</price>
+<picture>https://www.comportal.kz/upload/iblock/a01/a012d80cf0f9519b93906423f6b5cce1.jpg</picture>
+<vendor>HP</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Оригинальный картридж HP CF540A код — CF540A; цвет — Чёрный; ресурс — 1 400; технология печати — Лазерная.]]></description>
+<param name="Тип">Картридж</param>
+<param name="Модель">CF540A</param>
+<param name="Цвет">Чёрный</param>
+<param name="Технология печати">Лазерная</param>
+<param name="Ресурс">1 400</param>
+<param name="Коды">CF540A</param>
+<param name="Для бренда">HP</param>
+<param name="Оригинальность">Оригинал</param>
+</offer>
+
+<offer id="CP10323958" available="true">
+<categoryId></categoryId>
+<vendorCode>CP10323958</vendorCode>
+<name>Картридж HP CF541A (CF541A) (оригинал)</name>
+<price>42300</price>
+<picture>https://www.comportal.kz/upload/iblock/fb2/fb2ee0224dc4fd1aaed07c4cdff17cfb.jpg</picture>
+<vendor>HP</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Оригинальный картридж HP CF541A код — CF541A; цвет — Голубой; ресурс — 1 300; технология печати — Лазерная.]]></description>
+<param name="Тип">Картридж</param>
+<param name="Модель">CF541A</param>
+<param name="Цвет">Голубой</param>
+<param name="Технология печати">Лазерная</param>
+<param name="Ресурс">1 300</param>
+<param name="Коды">CF541A</param>
 <param name="Для бренда">HP</param>
 <param name="Оригинальность">Оригинал</param>
 </offer>
@@ -3037,6 +2993,26 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Оригинальность">Оригинал</param>
 </offer>
 
+<offer id="CP10328090" available="true">
+<categoryId></categoryId>
+<vendorCode>CP10328090</vendorCode>
+<name>Картридж HP CE740A (CE740A) (оригинал)</name>
+<price>94244</price>
+<picture>https://www.comportal.kz/upload/iblock/66b/kt0vkimf4n3zpwed3d00wwincyvafnoy.JPG</picture>
+<vendor>HP</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Оригинальный картридж HP CE740A код — CE740A; цвет — Чёрный; ресурс — 7 000; технология печати — Лазерная.]]></description>
+<param name="Тип">Картридж</param>
+<param name="Модель">CE740A</param>
+<param name="Цвет">Чёрный</param>
+<param name="Технология печати">Лазерная</param>
+<param name="Ресурс">7 000</param>
+<param name="Коды">CE740A</param>
+<param name="Для бренда">HP</param>
+<param name="Оригинальность">Оригинал</param>
+</offer>
+
 <offer id="CP10328094" available="true">
 <categoryId></categoryId>
 <vendorCode>CP10328094</vendorCode>
@@ -3073,6 +3049,46 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Технология печати">Лазерная</param>
 <param name="Ресурс">20 000</param>
 <param name="Коды">W9103MC</param>
+<param name="Для бренда">HP</param>
+<param name="Оригинальность">Оригинал</param>
+</offer>
+
+<offer id="CP10330615" available="true">
+<categoryId></categoryId>
+<vendorCode>CP10330615</vendorCode>
+<name>Картридж HP CF410A (CF410A) (оригинал)</name>
+<price>56668</price>
+<picture>https://www.comportal.kz/upload/iblock/51a/ti7u3wkyw50nm6rwba0ywj79pkpejy63.jpg</picture>
+<vendor>HP</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Оригинальный картридж HP CF410A код — CF410A; цвет — Чёрный; ресурс — 2 300; технология печати — Лазерная.]]></description>
+<param name="Тип">Картридж</param>
+<param name="Модель">CF410A</param>
+<param name="Цвет">Чёрный</param>
+<param name="Технология печати">Лазерная</param>
+<param name="Ресурс">2 300</param>
+<param name="Коды">CF410A</param>
+<param name="Для бренда">HP</param>
+<param name="Оригинальность">Оригинал</param>
+</offer>
+
+<offer id="CP10331515" available="true">
+<categoryId></categoryId>
+<vendorCode>CP10331515</vendorCode>
+<name>Картридж HP CF411A (CF411A) (оригинал)</name>
+<price>73174</price>
+<picture>https://www.comportal.kz/upload/iblock/e84/inltjgkmgeqxgjdz012l9jzbq3y3ll7v.jpg</picture>
+<vendor>HP</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Оригинальный картридж HP CF411A код — CF411A; цвет — Голубой; ресурс — 2 300; технология печати — Лазерная.]]></description>
+<param name="Тип">Картридж</param>
+<param name="Модель">CF411A</param>
+<param name="Цвет">Голубой</param>
+<param name="Технология печати">Лазерная</param>
+<param name="Ресурс">2 300</param>
+<param name="Коды">CF411A</param>
 <param name="Для бренда">HP</param>
 <param name="Оригинальность">Оригинал</param>
 </offer>
@@ -3157,6 +3173,46 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Оригинальность">Оригинал</param>
 </offer>
 
+<offer id="CP10381469" available="true">
+<categoryId></categoryId>
+<vendorCode>CP10381469</vendorCode>
+<name>Картридж HP CF412A (CF412A) (оригинал)</name>
+<price>73174</price>
+<picture>https://www.comportal.kz/upload/iblock/44b/a6dj2oy3gand9bvff6uzwd8oiocfoies.jpg</picture>
+<vendor>HP</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Оригинальный картридж HP CF412A код — CF412A; цвет — Жёлтый; ресурс — 2 300; технология печати — Лазерная.]]></description>
+<param name="Тип">Картридж</param>
+<param name="Модель">CF412A</param>
+<param name="Цвет">Жёлтый</param>
+<param name="Технология печати">Лазерная</param>
+<param name="Ресурс">2 300</param>
+<param name="Коды">CF412A</param>
+<param name="Для бренда">HP</param>
+<param name="Оригинальность">Оригинал</param>
+</offer>
+
+<offer id="CP10385037" available="true">
+<categoryId></categoryId>
+<vendorCode>CP10385037</vendorCode>
+<name>Картридж HP CF413A (CF413A) (оригинал)</name>
+<price>73174</price>
+<picture>https://www.comportal.kz/upload/iblock/ad8/ljmcn1f525wpkn39dbmqmzotk4kn9h3e.jpg</picture>
+<vendor>HP</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Оригинальный картридж HP CF413A код — CF413A; цвет — Пурпурный; ресурс — 2 300; технология печати — Лазерная.]]></description>
+<param name="Тип">Картридж</param>
+<param name="Модель">CF413A</param>
+<param name="Цвет">Пурпурный</param>
+<param name="Технология печати">Лазерная</param>
+<param name="Ресурс">2 300</param>
+<param name="Коды">CF413A</param>
+<param name="Для бренда">HP</param>
+<param name="Оригинальность">Оригинал</param>
+</offer>
+
 <offer id="CP10496860" available="true">
 <categoryId></categoryId>
 <vendorCode>CP10496860</vendorCode>
@@ -3173,6 +3229,26 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Технология печати">Лазерная</param>
 <param name="Ресурс">6 000</param>
 <param name="Коды">CE402A</param>
+<param name="Для бренда">HP</param>
+<param name="Оригинальность">Оригинал</param>
+</offer>
+
+<offer id="CP10720848" available="true">
+<categoryId></categoryId>
+<vendorCode>CP10720848</vendorCode>
+<name>Картридж HP W2030A / 415A (W2030A) (оригинал)</name>
+<price>46970</price>
+<picture>https://www.comportal.kz/upload/iblock/bfc/lq62f72mn3ncuso12jrq2da6sgvf3j0p.jpg</picture>
+<vendor>HP</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Оригинальный картридж HP W2030A / 415A код — W2030A; цвет — Чёрный; ресурс — 2 400; технология печати — Лазерная.]]></description>
+<param name="Тип">Картридж</param>
+<param name="Модель">W2030A / 415A</param>
+<param name="Цвет">Чёрный</param>
+<param name="Технология печати">Лазерная</param>
+<param name="Ресурс">2 400</param>
+<param name="Коды">W2030A</param>
 <param name="Для бренда">HP</param>
 <param name="Оригинальность">Оригинал</param>
 </offer>
@@ -3217,6 +3293,106 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Оригинальность">Оригинал</param>
 </offer>
 
+<offer id="CP10720851" available="true">
+<categoryId></categoryId>
+<vendorCode>CP10720851</vendorCode>
+<name>Картридж HP W2033A / 415A (W2033A) (оригинал)</name>
+<price>60857</price>
+<picture>https://www.comportal.kz/upload/iblock/204/6biu7yhjhoi3m1750ftznp3bc0f5z7sz.jpg</picture>
+<vendor>HP</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Оригинальный картридж HP W2033A / 415A код — W2033A; цвет — Пурпурный; ресурс — 2 100; технология печати — Лазерная.]]></description>
+<param name="Тип">Картридж</param>
+<param name="Модель">W2033A / 415A</param>
+<param name="Цвет">Пурпурный</param>
+<param name="Технология печати">Лазерная</param>
+<param name="Ресурс">2 100</param>
+<param name="Коды">W2033A</param>
+<param name="Для бренда">HP</param>
+<param name="Оригинальность">Оригинал</param>
+</offer>
+
+<offer id="CP10782666" available="true">
+<categoryId></categoryId>
+<vendorCode>CP10782666</vendorCode>
+<name>Картридж HP 207A (W2210A) (оригинал)</name>
+<price>36618</price>
+<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
+<vendor>HP</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Оригинальный картридж HP 207A код — W2210A; цвет — Чёрный; ресурс — 1 350; технология печати — Лазерная.]]></description>
+<param name="Тип">Картридж</param>
+<param name="Модель">207A</param>
+<param name="Цвет">Чёрный</param>
+<param name="Технология печати">Лазерная</param>
+<param name="Ресурс">1 350</param>
+<param name="Коды">W2210A</param>
+<param name="Для бренда">HP</param>
+<param name="Оригинальность">Оригинал</param>
+</offer>
+
+<offer id="CP10782667" available="true">
+<categoryId></categoryId>
+<vendorCode>CP10782667</vendorCode>
+<name>Картридж HP 207A (W2211A) (оригинал)</name>
+<price>43017</price>
+<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
+<vendor>HP</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Оригинальный картридж HP 207A код — W2211A; цвет — Голубой; ресурс — 1 250; технология печати — Лазерная.]]></description>
+<param name="Тип">Картридж</param>
+<param name="Модель">207A</param>
+<param name="Цвет">Голубой</param>
+<param name="Технология печати">Лазерная</param>
+<param name="Ресурс">1 250</param>
+<param name="Коды">W2211A</param>
+<param name="Для бренда">HP</param>
+<param name="Оригинальность">Оригинал</param>
+</offer>
+
+<offer id="CP10782668" available="true">
+<categoryId></categoryId>
+<vendorCode>CP10782668</vendorCode>
+<name>Картридж HP 207A (W2212A) (оригинал)</name>
+<price>43017</price>
+<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
+<vendor>HP</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Оригинальный картридж HP 207A код — W2212A; цвет — Жёлтый; ресурс — 1 250; технология печати — Лазерная.]]></description>
+<param name="Тип">Картридж</param>
+<param name="Модель">207A</param>
+<param name="Цвет">Жёлтый</param>
+<param name="Технология печати">Лазерная</param>
+<param name="Ресурс">1 250</param>
+<param name="Коды">W2212A</param>
+<param name="Для бренда">HP</param>
+<param name="Оригинальность">Оригинал</param>
+</offer>
+
+<offer id="CP10782669" available="true">
+<categoryId></categoryId>
+<vendorCode>CP10782669</vendorCode>
+<name>Картридж HP 207A (W2213A) (оригинал)</name>
+<price>43017</price>
+<picture>https://www.comportal.kz/upload/iblock/8ab/32n5afbt6l9jzr99hcqldhqpnwraj9pm.png</picture>
+<vendor>HP</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Оригинальный картридж HP 207A код — W2213A; цвет — Пурпурный; ресурс — 1 250; технология печати — Лазерная.]]></description>
+<param name="Тип">Картридж</param>
+<param name="Модель">207A</param>
+<param name="Цвет">Пурпурный</param>
+<param name="Технология печати">Лазерная</param>
+<param name="Ресурс">1 250</param>
+<param name="Коды">W2213A</param>
+<param name="Для бренда">HP</param>
+<param name="Оригинальность">Оригинал</param>
+</offer>
+
 <offer id="CP11337741" available="true">
 <categoryId></categoryId>
 <vendorCode>CP11337741</vendorCode>
@@ -3233,6 +3409,66 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Технология печати">Лазерная</param>
 <param name="Ресурс">2 450</param>
 <param name="Коды">W2211X</param>
+<param name="Для бренда">HP</param>
+<param name="Оригинальность">Оригинал</param>
+</offer>
+
+<offer id="CP11337742" available="true">
+<categoryId></categoryId>
+<vendorCode>CP11337742</vendorCode>
+<name>Картридж HP 207X (W2212X) (оригинал)</name>
+<price>58425</price>
+<picture>https://www.comportal.kz/upload/iblock/7dc/jxqo4e2jz7rgggmwe2d5lek00xnzyop1.JPG</picture>
+<vendor>HP</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Оригинальный картридж HP 207X код — W2212X; цвет — Жёлтый; ресурс — 2 450; технология печати — Лазерная.]]></description>
+<param name="Тип">Картридж</param>
+<param name="Модель">207X</param>
+<param name="Цвет">Жёлтый</param>
+<param name="Технология печати">Лазерная</param>
+<param name="Ресурс">2 450</param>
+<param name="Коды">W2212X</param>
+<param name="Для бренда">HP</param>
+<param name="Оригинальность">Оригинал</param>
+</offer>
+
+<offer id="CP11337743" available="true">
+<categoryId></categoryId>
+<vendorCode>CP11337743</vendorCode>
+<name>Картридж HP 207X (W2213X) (оригинал)</name>
+<price>58131</price>
+<picture>https://www.comportal.kz/upload/iblock/bc6/g0ilf20jnjguufu4exy3ixc2tbrd4dpl.jpg</picture>
+<vendor>HP</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Оригинальный картридж HP 207X код — W2213X; цвет — Пурпурный; ресурс — 2 450; технология печати — Лазерная.]]></description>
+<param name="Тип">Картридж</param>
+<param name="Модель">207X</param>
+<param name="Цвет">Пурпурный</param>
+<param name="Технология печати">Лазерная</param>
+<param name="Ресурс">2 450</param>
+<param name="Коды">W2213X</param>
+<param name="Для бренда">HP</param>
+<param name="Оригинальность">Оригинал</param>
+</offer>
+
+<offer id="CP11337744" available="true">
+<categoryId></categoryId>
+<vendorCode>CP11337744</vendorCode>
+<name>Картридж HP 207X (W2210X) (оригинал)</name>
+<price>55474</price>
+<picture>https://www.comportal.kz/upload/iblock/a80/5pd9zecrhtt602c3j22tdlqy3ozbxfim.JPG</picture>
+<vendor>HP</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Оригинальный картридж HP 207X код — W2210X; цвет — Чёрный; ресурс — 3 150; технология печати — Лазерная.]]></description>
+<param name="Тип">Картридж</param>
+<param name="Модель">207X</param>
+<param name="Цвет">Чёрный</param>
+<param name="Технология печати">Лазерная</param>
+<param name="Ресурс">3 150</param>
+<param name="Коды">W2210X</param>
 <param name="Для бренда">HP</param>
 <param name="Оригинальность">Оригинал</param>
 </offer>
@@ -3274,6 +3510,46 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Ресурс">6 000</param>
 <param name="Коды">4937C001</param>
 <param name="Для бренда">Canon</param>
+<param name="Оригинальность">Оригинал</param>
+</offer>
+
+<offer id="CP12994973" available="true">
+<categoryId></categoryId>
+<vendorCode>CP12994973</vendorCode>
+<name>Картридж HP 335X (W1335X) (оригинал)</name>
+<price>27484</price>
+<picture>https://www.comportal.kz/upload/iblock/026/8f59nlk8yx3ufxmo4qtv9nhuuqm6inkk.JPG</picture>
+<vendor>HP</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Оригинальный картридж HP 335X код — W1335X; цвет — Чёрный; ресурс — 13 700; технология печати — Лазерная.]]></description>
+<param name="Тип">Картридж</param>
+<param name="Модель">335X</param>
+<param name="Цвет">Чёрный</param>
+<param name="Технология печати">Лазерная</param>
+<param name="Ресурс">13 700</param>
+<param name="Коды">W1335X</param>
+<param name="Для бренда">HP</param>
+<param name="Оригинальность">Оригинал</param>
+</offer>
+
+<offer id="CP13135303" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13135303</vendorCode>
+<name>Картридж HP 147X (W1470X) (оригинал)</name>
+<price>179132</price>
+<picture>https://www.comportal.kz/upload/iblock/c6a/lj8e25d8dqlh3lvojidmeinph5a0k6xi.JPG</picture>
+<vendor>HP</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Оригинальный картридж HP 147X код — W1470X; цвет — Чёрный; ресурс — 25 200; технология печати — Лазерная.]]></description>
+<param name="Тип">Картридж</param>
+<param name="Модель">147X</param>
+<param name="Цвет">Чёрный</param>
+<param name="Технология печати">Лазерная</param>
+<param name="Ресурс">25 200</param>
+<param name="Коды">W1470X</param>
+<param name="Для бренда">HP</param>
 <param name="Оригинальность">Оригинал</param>
 </offer>
 
@@ -3333,6 +3609,27 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Ресурс">1 250</param>
 <param name="Коды">5101C002</param>
 <param name="Для бренда">Canon</param>
+<param name="Оригинальность">Оригинал</param>
+</offer>
+
+<offer id="CP13817729" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13817729</vendorCode>
+<name>Картридж HP W1470YC (W1470YC) (оригинал)</name>
+<price>246788</price>
+<picture>https://www.comportal.kz/upload/iblock/f1b/kguddn7u0xs1s5vrv0ejogyiwygq8s2n.JPG</picture>
+<vendor>HP</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Оригинальный картридж HP W1470YC код — W1470YC; цвет — Чёрный; ресурс — 42 000; технология печати — Лазерная.]]></description>
+<param name="Тип">Картридж</param>
+<param name="Модель">W1470YC</param>
+<param name="Цвет">Чёрный</param>
+<param name="Гарантия">12 мес</param>
+<param name="Технология печати">Лазерная</param>
+<param name="Ресурс">42 000</param>
+<param name="Коды">W1470YC</param>
+<param name="Для бренда">HP</param>
 <param name="Оригинальность">Оригинал</param>
 </offer>
 
@@ -3635,6 +3932,66 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Оригинальность">Оригинал</param>
 </offer>
 
+<offer id="CP13871261" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13871261</vendorCode>
+<name>Картридж HP 938e EvoMore Cyan Original Ink Cartridge (4S6X9PE) (оригинал)</name>
+<price>23565</price>
+<picture>https://www.comportal.kz/upload/iblock/b58/q7dz6gqcqo9qxm29vy20yeuljuv8umga.jpg</picture>
+<vendor>HP</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Оригинальный картридж HP 938e EvoMore Cyan Original Ink Cartridge код — 4S6X9PE; цвет — Голубой; ресурс — 1 650; технология печати — Лазерная.]]></description>
+<param name="Тип">Картридж</param>
+<param name="Модель">938e EvoMore Cyan Original Ink Cartridge</param>
+<param name="Цвет">Голубой</param>
+<param name="Технология печати">Лазерная</param>
+<param name="Ресурс">1 650</param>
+<param name="Коды">4S6X9PE</param>
+<param name="Для бренда">HP</param>
+<param name="Оригинальность">Оригинал</param>
+</offer>
+
+<offer id="CP13871540" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13871540</vendorCode>
+<name>Хранилище HPE HPE MSA 2062 16Gb FC SFF (R0Q80B) (оригинал)</name>
+<price>1909350</price>
+<picture>https://www.comportal.kz/upload/iblock/73e/5rk91hu2phujc5p5xmwhw0a1g9yv1ghp.JPG</picture>
+<vendor>HPE</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Оригинальный картридж HPE HPE MSA 2062 16Gb FC SFF код — R0Q80B.]]></description>
+<param name="Тип">Картридж</param>
+<param name="Модель">HPE MSA 2062 16Gb FC SFF</param>
+<param name="Гарантия">12 мес</param>
+<param name="Интерфейс массива">Fibre Channel</param>
+<param name="Тип корпуса">Rack</param>
+<param name="Коды">R0Q80B</param>
+<param name="Для бренда">HPE</param>
+<param name="Оригинальность">Оригинал</param>
+</offer>
+
+<offer id="CP13871542" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13871542</vendorCode>
+<name>Хранилище HPE HPE MSA 1060 12Gb SAS SFF (R0Q87B) (оригинал)</name>
+<price>1139460</price>
+<picture>https://www.comportal.kz/upload/iblock/e7c/v7bfdqmt9woycxcvstlv0zajhllrr5rn.JPG</picture>
+<vendor>HPE</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Оригинальный картридж HPE HPE MSA 1060 12Gb SAS SFF код — R0Q87B.]]></description>
+<param name="Тип">Картридж</param>
+<param name="Модель">HPE MSA 1060 12Gb SAS SFF</param>
+<param name="Гарантия">12 мес</param>
+<param name="Интерфейс массива">SAS</param>
+<param name="Тип корпуса">Rack</param>
+<param name="Коды">R0Q87B</param>
+<param name="Для бренда">HPE</param>
+<param name="Оригинальность">Оригинал</param>
+</offer>
+
 <offer id="CP13871836" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13871836</vendorCode>
@@ -3739,6 +4096,23 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Тип">Картридж</param>
 <param name="Коды">5763C001</param>
 <param name="Модель">Тонер Canon C-EXV 65</param>
+<param name="Для бренда">Canon</param>
+<param name="Оригинальность">Оригинал</param>
+</offer>
+
+<offer id="CP13873256" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13873256</vendorCode>
+<name>Картридж Canon 737 (9435B002) (оригинал)</name>
+<price>11325</price>
+<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
+<vendor>Canon</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Оригинальный картридж Canon 737 код — 9435B002.]]></description>
+<param name="Тип">Картридж</param>
+<param name="Коды">9435B002</param>
+<param name="Модель">737</param>
 <param name="Для бренда">Canon</param>
 <param name="Оригинальность">Оригинал</param>
 </offer>
@@ -4495,6 +4869,27 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Оригинальность">Оригинал</param>
 </offer>
 
+<offer id="CP13162714" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13162714</vendorCode>
+<name>Картридж HP LaserJet 136X (W1360X) (оригинал)</name>
+<price>43176</price>
+<picture>https://www.comportal.kz/upload/iblock/5ec/rgmrlc51lfz89lyf7w3hfnhj3o6ys1ur.JPG</picture>
+<vendor>HP</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Оригинальный картридж HP LaserJet 136X коды — W1360X / №136; цвет — Чёрный; объём — 2 600; технология печати — Лазерная.]]></description>
+<param name="Тип">Картридж</param>
+<param name="Модель">LaserJet 136X</param>
+<param name="Цвет">Чёрный</param>
+<param name="Технология печати">Лазерная</param>
+<param name="Номер">№136</param>
+<param name="Объём">2 600</param>
+<param name="Коды">W1360X</param>
+<param name="Для бренда">HP</param>
+<param name="Оригинальность">Оригинал</param>
+</offer>
+
 <offer id="CP13760826" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13760826</vendorCode>
@@ -4616,6 +5011,27 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Номер">№865</param>
 <param name="Объём">500</param>
 <param name="Коды">3ED83A</param>
+<param name="Для бренда">HP</param>
+<param name="Оригинальность">Оригинал</param>
+</offer>
+
+<offer id="CP13816869" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13816869</vendorCode>
+<name>Картридж HP PageWide XL (3ED84A) (оригинал)</name>
+<price>86160</price>
+<picture>https://www.comportal.kz/upload/iblock/6a1/6a17fbcce17a62a777af55f1f1c11ac3.JPG</picture>
+<vendor>HP</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Оригинальный картридж HP PageWide XL коды — 3ED84A / №865; цвет — Жёлтый; объём — 500; технология печати — Струйная.]]></description>
+<param name="Тип">Картридж</param>
+<param name="Модель">PageWide XL</param>
+<param name="Цвет">Жёлтый</param>
+<param name="Технология печати">Струйная</param>
+<param name="Номер">№865</param>
+<param name="Объём">500</param>
+<param name="Коды">3ED84A</param>
 <param name="Для бренда">HP</param>
 <param name="Оригинальность">Оригинал</param>
 </offer>
@@ -4983,6 +5399,116 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Номер">№711</param>
 <param name="Объём">80</param>
 <param name="Коды">CZ133A</param>
+<param name="Для бренда">HP</param>
+<param name="Оригинальность">Оригинал</param>
+</offer>
+
+<offer id="CP10304574" available="true">
+<categoryId></categoryId>
+<vendorCode>CP10304574</vendorCode>
+<name>Картридж HP C9373A (C9373A) (оригинал)</name>
+<price>45815</price>
+<picture>https://www.comportal.kz/upload/iblock/7b1/7ymrbvn93w21xla5g9j3s8tdrtqqxefd.JPG</picture>
+<vendor>HP</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Оригинальный картридж HP C9373A коды — C9373A / №72; цвет — Жёлтый; ресурс — 600; технология печати — Струйная.]]></description>
+<param name="Тип">Картридж</param>
+<param name="Модель">C9373A</param>
+<param name="Цвет">Жёлтый</param>
+<param name="Технология печати">Струйная</param>
+<param name="Номер">№72</param>
+<param name="Объём">130</param>
+<param name="Ресурс">600</param>
+<param name="Коды">C9373A</param>
+<param name="Для бренда">HP</param>
+<param name="Оригинальность">Оригинал</param>
+</offer>
+
+<offer id="CP10305015" available="true">
+<categoryId></categoryId>
+<vendorCode>CP10305015</vendorCode>
+<name>Картридж HP C9403A (C9403A) (оригинал)</name>
+<price>43638</price>
+<picture>https://www.comportal.kz/upload/iblock/5f7/c32qu780een2hlt8ncq5y49tuyodfmjs.jpg</picture>
+<vendor>HP</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Оригинальный картридж HP C9403A коды — C9403A / №72; цвет — Чёрный; ресурс — 5 000; технология печати — Струйная.]]></description>
+<param name="Тип">Картридж</param>
+<param name="Модель">C9403A</param>
+<param name="Цвет">Чёрный</param>
+<param name="Технология печати">Струйная</param>
+<param name="Номер">№72</param>
+<param name="Объём">130</param>
+<param name="Ресурс">5 000</param>
+<param name="Коды">C9403A</param>
+<param name="Для бренда">HP</param>
+<param name="Оригинальность">Оригинал</param>
+</offer>
+
+<offer id="CP10305694" available="true">
+<categoryId></categoryId>
+<vendorCode>CP10305694</vendorCode>
+<name>Картридж HP C9370A (C9370A) (оригинал)</name>
+<price>42964</price>
+<picture>https://www.comportal.kz/upload/iblock/fbc/6ze8jwuzvbkndib16l3b5bwkkg6nmmui.jpg</picture>
+<vendor>HP</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Оригинальный картридж HP C9370A коды — C9370A / №72; цвет — Чёрный; ресурс — 600; технология печати — Струйная.]]></description>
+<param name="Тип">Картридж</param>
+<param name="Модель">C9370A</param>
+<param name="Цвет">Чёрный</param>
+<param name="Технология печати">Струйная</param>
+<param name="Номер">№72</param>
+<param name="Объём">130</param>
+<param name="Ресурс">600</param>
+<param name="Коды">C9370A</param>
+<param name="Для бренда">HP</param>
+<param name="Оригинальность">Оригинал</param>
+</offer>
+
+<offer id="CP10308265" available="true">
+<categoryId></categoryId>
+<vendorCode>CP10308265</vendorCode>
+<name>Картридж HP C9374A (C9374A) (оригинал)</name>
+<price>45815</price>
+<picture>https://www.comportal.kz/upload/iblock/677/iyohuo8x5dbygayg3l447ye6ojug2xx2.jpg</picture>
+<vendor>HP</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Оригинальный картридж HP C9374A коды — C9374A / №72; цвет — Серый; ресурс — 5 000; технология печати — Струйная.]]></description>
+<param name="Тип">Картридж</param>
+<param name="Модель">C9374A</param>
+<param name="Цвет">Серый</param>
+<param name="Технология печати">Струйная</param>
+<param name="Номер">№72</param>
+<param name="Объём">130</param>
+<param name="Ресурс">5 000</param>
+<param name="Коды">C9374A</param>
+<param name="Для бренда">HP</param>
+<param name="Оригинальность">Оригинал</param>
+</offer>
+
+<offer id="CP10316417" available="true">
+<categoryId></categoryId>
+<vendorCode>CP10316417</vendorCode>
+<name>Картридж HP C9371A (C9371A) (оригинал)</name>
+<price>44953</price>
+<picture>https://www.comportal.kz/upload/iblock/70d/yutu24lv0130al8c3bgsmrlcrh9n24x7.jpg</picture>
+<vendor>HP</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Оригинальный картридж HP C9371A коды — C9371A / №72; цвет — Голубой; ресурс — 600; технология печати — Струйная.]]></description>
+<param name="Тип">Картридж</param>
+<param name="Модель">C9371A</param>
+<param name="Цвет">Голубой</param>
+<param name="Технология печати">Струйная</param>
+<param name="Номер">№72</param>
+<param name="Объём">130</param>
+<param name="Ресурс">600</param>
+<param name="Коды">C9371A</param>
 <param name="Для бренда">HP</param>
 <param name="Оригинальность">Оригинал</param>
 </offer>
@@ -6946,34 +7472,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Для бренда">Dell</param>
 </offer>
 
-<offer id="CP13866844" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13866844</vendorCode>
-<name>Монитор Dell S2425HS (210-BMHH)</name>
-<price>77695</price>
-<picture>https://www.comportal.kz/upload/iblock/f0b/q2pirlj6ru0txy2dmjh89atqlcow0qm0.JPG</picture>
-<vendor>Dell</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Монитор. Диагональ: 23.8. Максимальное разрешение: 1920x1080. Тип матрицы: IPS. Частота обновления: 100. Время отклика: 8. Порты: 2 x HDMI (HDCP 1.4). Гарантия: 36 мес.]]></description>
-<param name="Тип">Монитор</param>
-<param name="Модель">S2425HS</param>
-<param name="Порты">2 x HDMI (HDCP 1.4)</param>
-<param name="Тип матрицы">IPS</param>
-<param name="Гарантия">36 мес</param>
-<param name="Контрастность">1500:1</param>
-<param name="Яркость">250</param>
-<param name="Время отклика">8</param>
-<param name="Максимальное разрешение">1920x1080</param>
-<param name="Наличие динамиков">2</param>
-<param name="Углы обзора (вертикальный/горизонтальный)">178/178</param>
-<param name="Размер Pix">93</param>
-<param name="Диагональ">23.8</param>
-<param name="Частота обновления">100</param>
-<param name="Коды">210-BMHH</param>
-<param name="Для бренда">Dell</param>
-</offer>
-
 <offer id="CP13866845" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13866845</vendorCode>
@@ -7918,7 +8416,7 @@ URL поставщика                             | https://www.comportal.kz/
 <categoryId></categoryId>
 <vendorCode>CP13872351</vendorCode>
 <name>Монитор Dell Alienware 27 4K Dual-Resolution Gaming Monitor - AW2725QF (210-BNHT)</name>
-<price>282785</price>
+<price>274031</price>
 <picture>https://www.comportal.kz/upload/iblock/1d0/kk68aajfymigk10cnleq6o10d74pj7a4.JPG</picture>
 <vendor>Dell</vendor>
 <currencyId>KZT</currencyId>
@@ -11215,52 +11713,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Коды">BTO128_MC16250_EMEA_210-BPVR</param>
 </offer>
 
-<offer id="CP13872132" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13872132</vendorCode>
-<name>Мобильная рабочая станция Dell Pro Max 16 / 16XE MC16250 (BTO127_MC16250_EMEA_210-BPVR)</name>
-<price>1328088</price>
-<picture>https://www.comportal.kz/upload/iblock/e5f/jsvqhih7t21ozkbzg5iizcaztc8m916y.JPG</picture>
-<vendor>Dell</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Ноутбук. Модельная серия: Pro Max 16. Процессор: Intel 265H Core Ultra 7 2,2. Оперативная память: 64 Gb / DDR5 / 6400. Накопитель: 1000 / SSD / 1 шт. Диагональ: 16. Разрешение: 1920x1200. ОС: Microsoft Windows 11 Pro. Видеокарта: nVidia RTX PRO 1000 Blackwel 8 Gb. Wi‑Fi: BE201. Bluetooth: Bluetooth 5.4. Камера: FHD HDR IR Camera. Гарантия: 36 мес.]]></description>
-<param name="Тип">Ноутбук</param>
-<param name="Модель">Pro Max 16</param>
-<param name="Объем жесткого диска">1000</param>
-<param name="Тип жесткого диска">SSD</param>
-<param name="Производитель процессора">Intel</param>
-<param name="Модель процессора">Core Ultra 7</param>
-<param name="Серия процессора">265H</param>
-<param name="Частота процессора">2,2</param>
-<param name="Оперативная память">64 Gb</param>
-<param name="Частота оперативной памяти">6400</param>
-<param name="Количество слотов памяти">2</param>
-<param name="Занятые слоты памяти">2x32GB</param>
-<param name="Объем видеопамяти">8 Gb</param>
-<param name="Тип оперативной памяти">DDR5</param>
-<param name="Тип привода">No ODD</param>
-<param name="Количество дисков">1</param>
-<param name="Размер дисплея">16</param>
-<param name="Дополнительные характеристики">Palmrest with Finger Print Reader + Control Vaul 3+</param>
-<param name="Тип матрицы">FHD+</param>
-<param name="Производитель чипсета видеокарты">nVidia</param>
-<param name="Марка чипсета видеокарты">GeForce</param>
-<param name="Модель чипсета видеокарты">RTX PRO 1000 Blackwel</param>
-<param name="Производитель операционной системы">Microsoft</param>
-<param name="Операционная система">Windows 11</param>
-<param name="Версия операционной системы">Pro</param>
-<param name="Bluetooth">Bluetooth 5.4</param>
-<param name="Wi-Fi">BE201</param>
-<param name="Адаптер">130W Type-C Adapter</param>
-<param name="Аккумулятор">6 cell 96Whr</param>
-<param name="Гарантия">36 мес</param>
-<param name="Камера">FHD HDR IR Camera</param>
-<param name="Разрешение дисплея">1920x1200</param>
-<param name="Для бренда">Dell</param>
-<param name="Коды">BTO127_MC16250_EMEA_210-BPVR</param>
-</offer>
-
 <offer id="CP13872133" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13872133</vendorCode>
@@ -12491,6 +12943,24 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Для бренда">HP</param>
 </offer>
 
+<offer id="CP13870166" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13870166</vendorCode>
+<name>Трансферный комплект HP CE516A (CE516A)</name>
+<price>191608</price>
+<picture>https://www.comportal.kz/upload/iblock/503/hdizvzicxlp638enym2i6d0wltnq6623.jpg</picture>
+<vendor>HP</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+расходный материал HP Трансферный комплект HP CE516A код — CE516A.]]></description>
+<param name="Тип">Расходный материал</param>
+<param name="Модель">Трансферный комплект HP CE516A</param>
+<param name="Дополнительная информация">для LJ Enterprise 700 M775dn, M775f</param>
+<param name="Гарантия">3 мес</param>
+<param name="Коды">CE516A</param>
+<param name="Для бренда">HP</param>
+</offer>
+
 <offer id="CP13870174" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13870174</vendorCode>
@@ -12612,6 +13082,23 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Для бренда">HP</param>
 </offer>
 
+<offer id="CP13870512" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13870512</vendorCode>
+<name>Барабан HP CF219A (CF219A)</name>
+<price>45901</price>
+<picture>https://www.comportal.kz/upload/iblock/73d/ylawg02584ow7u7cd9y1qt1j0a4rm6hi.jpg</picture>
+<vendor>HP</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+расходный материал HP Барабан HP CF219A код — CF219A.]]></description>
+<param name="Тип">Расходный материал</param>
+<param name="Модель">Барабан HP CF219A</param>
+<param name="Дополнительная информация">для M102a M102w</param>
+<param name="Коды">CF219A</param>
+<param name="Для бренда">HP</param>
+</offer>
+
 <offer id="CP13870526" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13870526</vendorCode>
@@ -12627,23 +13114,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Дополнительная информация">для imagePROGRAF TX-2000/3000/4000/TM-200/205</param>
 <param name="Коды">2352C001</param>
 <param name="Для бренда">Canon</param>
-<param name="Оригинальность">Оригинал</param>
-</offer>
-
-<offer id="CP13870876" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13870876</vendorCode>
-<name>Блок сбора тонера HP LaserJet Black Toner Collection Unit (527F9A) (оригинал)</name>
-<price>24715</price>
-<picture>https://www.comportal.kz/upload/iblock/55d/2b7io13950e8j8roafl7cb22c7r0knao.jpg</picture>
-<vendor>HP</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Оригинальный расходный материал HP LaserJet Black Toner Collection Unit код — 527F9A.]]></description>
-<param name="Тип">Расходный материал</param>
-<param name="Модель">LaserJet Black Toner Collection Unit</param>
-<param name="Коды">527F9A</param>
-<param name="Для бренда">HP</param>
 <param name="Оригинальность">Оригинал</param>
 </offer>
 
