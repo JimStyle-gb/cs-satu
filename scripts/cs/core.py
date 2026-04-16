@@ -856,7 +856,7 @@ def _shorten_smart_name(name: str, params: list[tuple[str, str]], max_len: int) 
 
 # Лимиты (по умолчанию):
 # - <name> держим коротким и читаемым (150 по решению пользователя)
-CS_NAME_MAX_LEN = int((os.getenv("CS_NAME_MAX_LEN", "150") or "150").strip() or "150")
+CS_NAME_MAX_LEN = int((os.getenv("CS_NAME_MAX_LEN", "110") or "110").strip() or "110")
 
 CS_COMPAT_CLEAN_YIELD_PACK = (os.getenv("CS_COMPAT_CLEAN_YIELD_PACK", "1") or "1").strip().lower() not in ("0", "false", "no")
 CS_COMPAT_CLEAN_PAPER_OS_DIM = (os.getenv("CS_COMPAT_CLEAN_PAPER_OS_DIM", "1") or "1").strip().lower() not in ("0", "false", "no")
