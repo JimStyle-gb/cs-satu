@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<yml_catalog date="2026-04-16 16:12:44">
+<yml_catalog date="2026-04-16 17:52:24">
 <shop><offers>
 <!--FEED_META
 Поставщик                                  | ComPortal
 URL поставщика                             | https://www.comportal.kz/auth/documents/prices/yml-catalog.php
-Время сборки (Алматы)                      | 2026-04-16 16:12:44
+Время сборки (Алматы)                      | 2026-04-16 17:52:24
 Ближайшая сборка (Алматы)                  | 2026-04-17 00:30:00
-Сколько товаров у поставщика до фильтра    | 1193
-Сколько товаров у поставщика после фильтра | 625
-Сколько товаров есть в наличии (true)      | 625
+Сколько товаров у поставщика до фильтра    | 1182
+Сколько товаров у поставщика после фильтра | 624
+Сколько товаров есть в наличии (true)      | 624
 Сколько товаров нет в наличии (false)      | 0
 -->
 
@@ -11526,52 +11526,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Камера">FHD Camera</param>
 <param name="Разрешение дисплея">1920x1200</param>
 <param name="Коды">AD2M1ET#BJA</param>
-<param name="Для бренда">HP</param>
-</offer>
-
-<offer id="CP13872114" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13872114</vendorCode>
-<name>Ноутбук HP EliteBook 8 G1i (AD4H2ET#BJA)</name>
-<price>549810</price>
-<picture>https://www.comportal.kz/upload/iblock/d0a/8mqproykguj1m1jncvv2mpciwvl3stlv.jpg</picture>
-<vendor>HP</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Ноутбук. Модельная серия: EliteBook 8 G1i. Процессор: Intel 225U Core Ultra 5 1,5. Оперативная память: 16 Gb / DDR5 / 5600. Накопитель: 1024 / PCIe NVMe SSD / 1 шт. Диагональ: 14. Разрешение: 1920x1200. ОС: Microsoft Windows 11 Pro 64. Видеокарта: AMD 256 Mb. Wi‑Fi: AX211. Bluetooth: Bluetooth 5.3. Камера: FHD IR Camera. Гарантия: 36 мес.]]></description>
-<param name="Тип">Ноутбук</param>
-<param name="Модель">EliteBook 8 G1i</param>
-<param name="Объем жесткого диска">1024</param>
-<param name="Тип жесткого диска">PCIe NVMe SSD</param>
-<param name="Производитель процессора">Intel</param>
-<param name="Модель процессора">Core Ultra 5</param>
-<param name="Серия процессора">225U</param>
-<param name="Частота процессора">1,5</param>
-<param name="Оперативная память">16 Gb</param>
-<param name="Частота оперативной памяти">5600</param>
-<param name="Количество слотов памяти">2</param>
-<param name="Занятые слоты памяти">1</param>
-<param name="Объем видеопамяти">256 Mb</param>
-<param name="Тип оперативной памяти">DDR5</param>
-<param name="Тип привода">No ODD</param>
-<param name="Количество дисков">1</param>
-<param name="Размер дисплея">14</param>
-<param name="Тип матрицы">WUXGA</param>
-<param name="Производитель чипсета видеокарты">AMD</param>
-<param name="Марка чипсета видеокарты">Graphics</param>
-<param name="Производитель операционной системы">Microsoft</param>
-<param name="Операционная система">Windows 11</param>
-<param name="Версия операционной системы">Pro</param>
-<param name="Битность операционной системы">64</param>
-<param name="Цвет">Серый</param>
-<param name="Bluetooth">Bluetooth 5.3</param>
-<param name="Wi-Fi">AX211</param>
-<param name="Адаптер">65W AC Adapter</param>
-<param name="Аккумулятор">3 Cell 62WHr</param>
-<param name="Гарантия">36 мес</param>
-<param name="Камера">FHD IR Camera</param>
-<param name="Разрешение дисплея">1920x1200</param>
-<param name="Коды">AD4H2ET#BJA</param>
 <param name="Для бренда">HP</param>
 </offer>
 

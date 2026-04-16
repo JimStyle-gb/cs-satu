@@ -8,12 +8,6 @@
 ## END VTT
 
 
-## START ComPortal
-Поставщик: ComPortal
-Товаров без categoryId: 1
-
-ComPortal | CP13870166 | Трансферный комплект HP CE516A (CE516A) | categoryId не определён
-## END ComPortal
 
 ## START AlStyle
 Поставщик: AlStyle
@@ -35,3 +29,10 @@ ComPortal | CP13870166 | Трансферный комплект HP CE516A (CE51
 
 # Все товары получили categoryId
 ## END AkCent
+
+## START ComPortal
+Поставщик: ComPortal
+Товаров без categoryId: 1
+
+ComPortal | CP13870166 | Трансферный комплект HP CE516A (CE516A) | categoryId не определён
+## END ComPortal
