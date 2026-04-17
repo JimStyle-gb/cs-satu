@@ -33,6 +33,8 @@ _VENDOR_CANON_MAP = {
     "hewlett-packard": "HP",
     "hp inc.": "HP",
     "hp europe": "HP",
+    "xg": "X-Game",
+    "x-game": "X-Game",
 }
 
 _NAME_VENDOR_PATTERNS: list[tuple[str, str]] = [
@@ -48,6 +50,8 @@ _NAME_VENDOR_PATTERNS: list[tuple[str, str]] = [
     (r"\bTP-?Link\b", "TP-Link"),
     (r"\bHewlett[\- ]Packard\b", "HP"),
     (r"\bHP\b", "HP"),
+    (r"\bX-?Game\b", "X-Game"),
+    (r"\bXG\b", "X-Game"),
 ]
 
 def _clean_spaces(text: str) -> str:
