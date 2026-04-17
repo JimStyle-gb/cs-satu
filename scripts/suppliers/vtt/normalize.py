@@ -238,6 +238,10 @@ def canon_vendor(vendor: str) -> str:
         "hi-чёрный": "Hi-Black",
         "hi черный": "Hi-Black",
         "hi-черный": "Hi-Black",
+        "triumph-adler": "TA Triumph-Adler",
+        "triumph adler": "TA Triumph-Adler",
+        "ta triumph-adler": "TA Triumph-Adler",
+        "ta triumph adler": "TA Triumph-Adler",
     }
     return mapping.get(low, v)
 
@@ -249,7 +253,7 @@ def _first_vendor_from_text(texts: Sequence[str]) -> str:
     hay = _restore_brand_tokens(_protect_brand_tokens(hay))
 
     m = re.search(
-        r"(?:^|\b)(?:для|for)\s+(HP|Canon|Xerox|Kyocera|Brother|Epson|Pantum|Ricoh|Lexmark|Samsung|OKI|RISO|Panasonic|Toshiba|Hi-Black)\b",
+        r"(?:^|\b)(?:для|for)\s+(HP|Canon|Xerox|Kyocera|Brother|Epson|Pantum|Ricoh|Lexmark|Samsung|OKI|RISO|Panasonic|Toshiba|Hi-Black|TA\s+Triumph-Adler|Triumph-Adler)\b",
         hay,
         flags=re.I,
     )
