@@ -1686,8 +1686,11 @@ class OfferOut:
             v_src = norm_ws(v)
             if not k_src or not v_src:
                 continue
-            if k_src.casefold() == "совместимость":
+            key_cf = k_src.casefold()
+            if key_cf == "совместимость":
                 v_src = _cs_trim_compat_for_satu_param(v_src, 255)
+            elif key_cf == "порты":
+                v_src = _truncate_text(v_src, 255)
             kk = xml_escape_attr(k_src)
             vv = xml_escape_text(v_src)
             if not kk or not vv:
