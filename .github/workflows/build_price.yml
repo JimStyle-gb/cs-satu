@@ -68,6 +68,7 @@ jobs:
 
           import importlib.util
           import py_compile
+          import sys
           from pathlib import Path
 
           root = Path.cwd()
@@ -90,6 +91,7 @@ jobs:
           spec = importlib.util.spec_from_file_location('build_price_smoke', build_file)
           module = importlib.util.module_from_spec(spec)
           assert spec.loader is not None
+          sys.modules[spec.name] = module
           spec.loader.exec_module(module)
 
           print('Scoped smoke test OK: build_price.py + price config files')
