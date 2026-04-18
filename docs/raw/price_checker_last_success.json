@@ -1,10 +1,10 @@
 {
-  "build_time": "17 апреля 2026 г. 07:13:41",
-  "total": 7124,
-  "available_true": 6612,
+  "build_time": "18 апреля 2026 г. 05:03:12",
+  "total": 7121,
+  "available_true": 6609,
   "available_false": 512,
   "price100": 248,
-  "placeholder": 572,
+  "placeholder": 573,
   "empty_category": 0,
   "invalid_category": 0,
   "unknown_satu": 0,
@@ -20,11 +20,11 @@
   },
   "supplier_summary": {
     "AkCent": {
-      "total": 176,
-      "available": 176,
+      "total": 174,
+      "available": 174,
       "unavailable": 0,
       "price100": 0,
-      "placeholder": 8,
+      "placeholder": 7,
       "excluded_no_categoryid": 0,
       "no_satu_category": 0
     },
@@ -38,11 +38,11 @@
       "no_satu_category": 0
     },
     "ComPortal": {
-      "total": 628,
-      "available": 628,
+      "total": 627,
+      "available": 627,
       "unavailable": 0,
       "price100": 0,
-      "placeholder": 106,
+      "placeholder": 108,
       "excluded_no_categoryid": 0,
       "no_satu_category": 0
     },
