@@ -1,300 +1,371 @@
-# supplier-feeds
+# CS-шаблон Satu.kz — supplier-feeds
 
-Единый шаблон выгрузок для Satu.kz под несколько поставщиков.
+## Назначение проекта
 
-## Что это за проект
+Этот репозиторий собирает supplier-фиды и итоговый `Price.yml` для Satu.kz.
 
-Проект собирает и поддерживает товарные YML-выгрузки по схеме:
+Главная идея проекта:
 
-`supplier-layer -> shared core -> Price -> checker`
+- каждый supplier-layer должен отдавать максимально чистый `raw`
+- shared core должен делать только общие post-processing правила
+- итоговый `Price.yml` агрегирует всех поставщиков
+- checker проверяет итоговую выгрузку и пишет отчёты
 
-Где:
-- каждый supplier-layer готовит максимально чистый `raw`;
-- shared core применяет только общие правила для всех поставщиков;
-- `Price` собирает итоговую общую выгрузку;
-- `checker` проверяет итоговый `Price.yml`, пишет отчёты и отправляет Telegram-статус.
-
-Главный принцип проекта:
-- supplier-specific логика живёт только в `scripts/suppliers/<supplier>/...`
-- shared-логика живёт только в `scripts/cs/...`
-
-Core не должен лечить уникальные косяки одного поставщика.
-Supplier-layer не должен хранить общие правила Satu.
+Проект должен быть переносимым: архив репозитория должен позволять поднять сборку в другой среде без потери структуры и логики.
 
 ---
 
 ## Актуальные поставщики
 
-Сейчас в проекте используются:
-- AlStyle
-- AkCent
-- CopyLine
-- ComPortal
-- VTT
+Текущая рабочая картина проекта:
 
-`Price` собирается из финальных выгрузок этих поставщиков.
+- **AkCent**
+- **AlStyle**
+- **CopyLine**
+- **ComPortal**
+- **VTT**
 
----
-
-## Ключевые результаты сборки
-
-### Raw supplier feed
-Путь:
-- `docs/raw/<supplier>.yml`
-
-Это результат supplier-layer до общего финального слоя.
-
-### Final supplier feed
-Путь:
-- `docs/<supplier>.yml`
-
-Это supplier raw после shared core.
-
-### Общий Price
-Путь:
-- `docs/Price.yml`
-
-Это главный итоговый YML для импорта в Satu.
-
-### Checker reports
-Пути:
-- `docs/raw/price_checker_report.txt`
-- `docs/raw/price_checker_details.txt`
-- `docs/raw/price_checker_last_success.json`
+`NVPrint` в текущей картине не считается актуальным активным поставщиком.
 
 ---
 
-## Структура проекта
+## Архитектурный принцип
 
-### `scripts/`
-Вся логика проекта.
+### 1. Supplier-layer
 
-### `scripts/cs/`
-Общий shared-layer.
+Каждый supplier-package живёт в:
 
-Основные роли:
-- `core.py` — общий final/export слой
-- `writer.py` — запись YML, header/footer, FEED_META
-- `validators.py` — общие проверки final feed
-- `pricing.py` — единые правила цены
-- `meta.py` — время/следующий запуск/Алматы
-- `description.py` — общий builder описаний
-- `category_map.py` — общий resolver внутренних категорий
-- `qg_report.py` — единый формат quality gate reports
-- `util.py` — общие helper-функции
+`script/suppliers/<supplier>/`
 
-### `scripts/suppliers/<supplier>/`
-Supplier-layer конкретного поставщика.
+И отвечает за:
 
-Ожидаемые роли файлов:
-- `source.py` — загрузка / чтение источника
-- `filtering.py` — supplier-specific фильтрация
-- `normalize.py` — supplier-specific нормализация
-- `params.py` — сбор и чистка параметров
-- `desc_clean.py` / `desc_extract.py` — работа с описанием
-- `pictures.py` — картинки
-- `builder.py` — orchestration supplier raw offer
-- `models.py` — typed DTO / dataclasses
-- `quality_gate.py` — supplier-level quality checks
-- `diagnostics.py` — supplier diagnostics / summaries
+- получение source-данных
+- supplier-specific filtering
+- supplier-specific normalize
+- params / compat / pictures / description extraction
+- build raw offers
+- supplier quality gate
 
-### `docs/`
-Финальные выгрузки и `Price.yml`.
+### 2. Shared core
 
-### `docs/raw/`
-Raw supplier feeds, quality gate reports, checker reports и техническая диагностика.
+Общий слой живёт в:
 
-### `.github/workflows/`
-GitHub Actions workflows для build/check процессов.
+`script/cs/`
 
-### `data/portal/satu/`
-Исходные данные для portal-category mapping.
+И отвечает только за общую логику:
 
----
+- category resolve
+- final export
+- общие safety-ограничения Satu
+- общие validators
+- общая pricing/meta/writer-логика
 
-## Основные правила проекта
+### 3. Price
 
-### 1. Shared core — только общий слой
-В core допустимы только общие правила, одинаковые для всех поставщиков.
+Файл:
 
-Примеры того, что допустимо в core:
-- final clamp имени для Satu
-- лимит картинок только в final XML
-- trim `Совместимость` только на XML-export
-- общая валидация final feed
-- общий category resolve
-- общий writer / FEED_META / validation
+`docs/Price.yml`
 
-Примеры того, чего в core быть не должно:
-- supplier-specific remap
-- supplier-specific vendor fixes
-- supplier-specific cleanup description/params
-- supplier-specific business-policy
+Это главный итоговый агрегированный YML для импорта в Satu.
 
-### 2. Raw должен быть максимально чистым
-Supplier-layer должен по максимуму отдавать уже чистый `raw`.
-Final core не должен превращаться в место, где исправляются уникальные supplier-ошибки.
+### 4. Checker
 
-### 3. Price — главный конечный артефакт
-Именно `docs/Price.yml` считается главным продуктом проекта.
-Все промежуточные supplier final feeds существуют ради него.
+Файл:
 
-### 4. Checker — это диагностика, а не бизнес-логика
-`build_price_checker.py` должен только проверять, сравнивать baseline, писать отчёты и слать уведомления.
+`script/build_price_checker.py`
 
-### 5. FEED_META не трогать без явной причины
-FEED_META — часть стабильной структуры проекта.
-Менять его нужно только осознанно.
+Проверяет итоговый `Price.yml`, считает статистику, пишет отчёты и используется как контроль итоговой выгрузки.
 
 ---
 
-## Текущие workflow-расписания (по файлам workflows)
+## Главные правила проекта
 
-Алматы, Asia/Almaty:
-- AkCent — 22:30 ежедневно
-- AlStyle — 23:30 ежедневно
-- ComPortal — 00:30 ежедневно
-- CopyLine — 01:30 в дни `1,10,20`
-- VTT — 02:30 в дни `1,10,20`
-- Price — 04:30 ежедневно
-- Check_Price — 05:30 ежедневно
+### Shared core не должен:
+- лечить supplier-specific косяки одного поставщика
+- хранить vendor-specific hacks, если их надо чинить в supplier-layer
+- раздуваться под исторические костыли без необходимости
 
-Если расписание меняется, его нужно синхронно поддерживать:
-- в workflow-файлах
-- в мета-логике, если она пишет next run / FEED_META
+### Supplier-layer должен:
+- максимально очищать raw до передачи в shared layer
+- хранить supplier-specific policy и нормализацию внутри supplier package
+- не тащить общие Satu-правила в свою логику
+
+### Final-слой должен:
+- соблюдать лимиты Satu
+- валидно собирать XML/YML
+- не ломать структуру товара
+- резать только final export значения, если правило относится именно к финальной выгрузке
 
 ---
 
-## Важные пути
+## Структура репозитория
 
-### Build scripts
-- `scripts/build_alstyle.py`
+### Важные папки
+
+- `.github/workflows/` — workflow сборок
+- `scripts/` — основная логика
+- `scripts/cs/` — shared core
+- `scripts/suppliers/` — supplier packages
+- `data/` — конфиги, вспомогательные данные, portal categories и т.д.
+- `docs/` — итоговые final YML
+- `docs/raw/` — raw supplier YML, отчёты, quality gate, checker outputs
+
+### Важные файлы
+
 - `scripts/build_akcent.py`
+- `scripts/build_alstyle.py`
 - `scripts/build_copyline.py`
 - `scripts/build_comportal.py`
 - `scripts/build_vtt.py`
 - `scripts/build_price.py`
 - `scripts/build_price_checker.py`
+- `requirements.txt`
 
-### Final outputs
-- `docs/alstyle.yml`
-- `docs/akcent.yml`
-- `docs/copyline.yml`
-- `docs/comportal.yml`
-- `docs/vtt.yml`
+---
+
+## Что за что отвечает
+
+### `scripts/build_<supplier>.py`
+Orchestrator конкретного поставщика:
+- запускает supplier pipeline
+- пишет raw
+- прогоняет final layer
+- запускает quality gate
+
+### `scripts/build_price.py`
+Собирает итоговый `Price.yml` из final supplier feeds.
+
+### `scripts/build_price_checker.py`
+Проверяет итоговый `Price.yml`, строит summary/details отчёты и baseline comparison.
+
+### `scripts/cs/core.py`
+Главный shared final/export слой.
+
+### `scripts/cs/category_map.py`
+Общий category resolver.
+
+### `scripts/cs/writer.py`
+Пишет общий YML/XML-выход.
+
+### `scripts/cs/meta.py`
+Служебная meta-логика и расчёты next run.
+
+### `scripts/cs/pricing.py`
+Общая логика цены.
+
+### `scripts/cs/validators.py`
+Общие final validators.
+
+---
+
+## Supplier status по состоянию freeze
+
+### AlStyle
+Один из самых зрелых supplier-packages. Используется как один из эталонов supplier-layer.
+
+### AkCent
+Рабочий supplier, но исторически имел перегруженный orchestrator. Текущий baseline очищен и упрощён.
+
+### CopyLine
+Рабочий supplier, но раньше имел переходный dual-contract между source / builder / params. Чистка была направлена на унификацию контрактов.
+
+### ComPortal
+По структуре один из самых аккуратных пакетов. Основные хвосты обычно в данных, а не в архитектуре.
+
+### VTT
+Самый тяжёлый supplier-package. Здесь больше всего риска по complexity, orchestration и source-layer.
+
+---
+
+## Что уже доведено в проекте
+
+К текущему freeze проект уже прошёл через такие ключевые шаги:
+
+- очистка legacy и мусорных файлов
+- выравнивание Price/check workflows
+- исправление `build_price.py`
+- санитарная чистка `scripts/cs/core.py`
+- унификация CopyLine contract-layer
+- разгрузка VTT orchestration / filtering / normalize слоя
+- упрощение `build_akcent.py`
+- санитарная чистка AlStyle и ComPortal
+- исправление `build_price_checker.py`
+- добавление `requirements.txt`
+- обновление `README`
+
+---
+
+## Что важно помнить про Satu
+
+### Главный итоговый файл
+Главный файл для импорта:
 - `docs/Price.yml`
 
-### Raw outputs
-- `docs/raw/alstyle.yml`
-- `docs/raw/akcent.yml`
-- `docs/raw/copyline.yml`
-- `docs/raw/comportal.yml`
-- `docs/raw/vtt.yml`
+### Что критично для Satu
+- валидный XML/YML
+- корректные бренды
+- корректные характеристики
+- отсутствие длинных параметров, нарушающих лимиты
+- корректные `categoryId`
+- аккуратный final export
 
-### Price technical outputs
-- `docs/raw/category_id_unresolved.txt`
-- `docs/raw/price_satu_unmapped_offers.txt`
-- `docs/raw/price_satu_portal_audit.txt`
-- `docs/raw/price_checker_report.txt`
-- `docs/raw/price_checker_details.txt`
-- `docs/raw/price_checker_last_success.json`
+### Что уже закреплено в логике проекта
+- финальный слой режет опасные длинные значения в final
+- category mapping централизован
+- supplier-specific normalizations должны жить в supplier layer
+- Price checker нужен как контроль, а не как замена сборке
 
 ---
 
 ## Локальный запуск
 
-Запускать из корня репозитория.
+### 1. Установка окружения
 
-### Supplier builds
 ```bash
-python scripts/build_alstyle.py
+python -m venv .venv
+```
+
+Windows:
+
+```bash
+.venv\Scripts\activate
+```
+
+### 2. Установка зависимостей
+
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Компиляционная проверка
+
+```bash
+python -m compileall -q scripts
+```
+
+---
+
+## Основной порядок запусков
+
+Полный порядок:
+
+```bash
 python scripts/build_akcent.py
+python scripts/build_alstyle.py
 python scripts/build_copyline.py
 python scripts/build_comportal.py
 python scripts/build_vtt.py
-```
-
-### Price
-```bash
 python scripts/build_price.py
-```
-
-### Checker
-```bash
 python scripts/build_price_checker.py
 ```
 
----
+Минимальный порядок при последних критичных правках Price/final-слоя:
 
-## Переменные окружения и секреты
-
-### ComPortal
-- `COMPORTAL_LOGIN`
-- `COMPORTAL_PASSWORD`
-
-### VTT
-- `VTT_LOGIN`
-- `VTT_PASSWORD`
-
-### Telegram checker
-- `TELEGRAM_BOT_TOKEN`
-- `TELEGRAM_CHAT_ID`
-
-### Общие
-- `TZ=Asia/Almaty`
+```bash
+python scripts/build_akcent.py
+python scripts/build_alstyle.py
+python scripts/build_comportal.py
+python scripts/build_price.py
+```
 
 ---
 
-## Зависимости
+## Что считать успешным результатом
 
-Проект ориентирован на Python 3.11.
+Проект считается в рабочем состоянии, если:
 
-Основные внешние пакеты:
-- `requests`
-- `beautifulsoup4`
-- `lxml`
-- `PyYAML`
-- `python-dateutil`
-- `openpyxl`
-
-Если в репозитории есть `requirements.txt`, workflows ставят зависимости из него.
-Если файла нет, workflows используют fallback-установку этих пакетов напрямую.
+- `scripts/` компилируется без ошибок
+- supplier builds не падают
+- `docs/Price.yml` собирается
+- `docs/Price.yml` валиден
+- `scripts/build_price_checker.py` отрабатывает
+- `docs/raw/price_checker_report.txt` формируется
 
 ---
 
-## Что нельзя делать без причины
+## Freeze / восстановление проекта
 
-- нельзя переносить supplier-specific логику в `scripts/cs/core.py`
-- нельзя руками править `docs/*.yml` и `docs/raw/*.yml` как постоянное решение
-- нельзя ломать FEED_META ради косметики
-- нельзя лечить supplier data общими костылями в core
-- нельзя обновлять quality gate baseline без осознанного решения
+Чтобы считать проект действительно завершённым и переносимым, в архиве должны быть:
+
+- последний рабочий архив репозитория
+- последний рабочий `Price.yml`
+- этот `README.md`
+- `requirements.txt`
+
+Рекомендуемый состав freeze-папки:
+
+```text
+CS_SATU_FINAL_FREEZE/
+├── repo_last_working.zip
+├── Price_last_working.yml
+├── README.md
+├── requirements.txt
+└── notes/
+```
+
+### Минимум для восстановления
+1. Распаковать архив
+2. Установить зависимости
+3. Запустить supplier builds
+4. Запустить `build_price.py`
+5. Запустить `build_price_checker.py`
 
 ---
 
-## Что считается хорошим состоянием проекта
+## Что не надо делать без причины
 
-Проект в хорошем состоянии, когда:
-- supplier raw максимально чистый;
-- final feeds валидны;
-- `Price.yml` собирается без дублей и дыр;
-- checker пишет понятный отчёт;
-- supplier-specific логика остаётся в supplier-layer;
-- shared core остаётся только общим слоем.
+- не трогать `robots.txt`, если нет реальной проблемы индексации
+- не менять пагинацию без конкретной причины
+- не плодить пустые разделы сайта
+- не включать пустые новости/статьи/баннеры ради вида
+- не тащить supplier-specific hacks обратно в shared core
+- не переписывать рабочий pipeline без нужды
 
 ---
 
-## Быстрая handoff-выжимка
+## Практический принцип развития проекта
 
-Если новый чат или новый человек продолжает работу по проекту, базовая модель такая:
+Правильный порядок развития:
 
-1. Сначала supplier-layer готовит raw.
-2. Потом shared core делает только общие post-processing шаги.
-3. Потом `build_price.py` собирает общий `Price.yml`.
-4. Потом `build_price_checker.py` проверяет итог и пишет отчёты.
+1. Чистый импорт без ошибок
+2. Сильные карточки и данные
+3. Уровень магазина, успешные заказы, отзывы
+4. Управляемый ProSale
+5. SEO-контент и статьи
+6. Масштабирование сильных категорий
 
-Главный ориентир по архитектуре:
-- supplier-specific только в `scripts/suppliers/...`
-- shared только в `scripts/cs/...`
-- `Price.yml` — главный итоговый артефакт
-- checker — только диагностика и контроль качества
+Главная цель — не “настроить всё подряд”, а добиться:
+- чистого Price
+- сильной конверсии
+- роста доверия
+- управляемой аналитики
+
+---
+
+## Связанный проект: рабочий кабинет Satu
+
+Этот репозиторий связан с рабочим кабинетом Satu.
+
+Текущий общий вывод по кабинету:
+- база уже собрана
+- техника и индексация находятся на хорошем уровне
+- основной потенциал роста дальше лежит в:
+  - карточках товаров
+  - успешных заказах и отзывах
+  - конверсии
+  - управляемом ProSale
+  - SEO-контенте
+
+То есть дальнейший рост зависит уже не столько от структуры репо, сколько от качества данных и работы магазина в Satu.
+
+---
+
+## Итог
+
+Текущий freeze этого репозитория можно считать рабочей стабильной базой для проекта CS-шаблон Satu.kz.
+
+Основная логика проекта:
+
+`supplier-layer -> shared core -> Price -> checker`
+
+Именно так проект должен восприниматься и восстанавливаться в будущем.
