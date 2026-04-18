@@ -1459,6 +1459,8 @@ def normalize_vendor(v: str) -> str:
         v = "Brother"
     elif v_cf.startswith("europrint"):
         v = "Europrint"
+    elif v_cf in {"xg", "x-game"}:
+        v = "X-Game"
     # унификация Konica Minolta
     if "konica" in v_cf and "minolta" in v_cf:
         v = "Konica Minolta"
@@ -1487,6 +1489,20 @@ def normalize_vendor(v: str) -> str:
             if all(p in canon_set for p in parts2):
                 out = parts2[0]
     return out
+
+# Satu import compatibility: часть brand/vendor токенов портал может не принимать как
+# справочник производителей. Для таких токенов в final-XML бренд не публикуем как
+# vendor/brand-param, чтобы не ломать импорт, при этом name/description сохраняются.
+_SATU_UNSUPPORTED_VENDOR_CASEFOLD = {"astergo"}
+_SATU_BRAND_PARAM_NAMES = {"для бренда", "бренд", "производитель"}
+
+def _normalize_vendor_for_satu_xml(v: str) -> str:
+    s = normalize_vendor(v)
+    if not s:
+        return ""
+    if s.casefold() in _SATU_UNSUPPORTED_VENDOR_CASEFOLD:
+        return ""
+    return s
 
 # Пытается определить бренд (vendor) по vendor_src / name / params / description (если пусто — public_vendor)
 
@@ -1637,6 +1653,7 @@ class OfferOut:
         # Core НЕ переносит характеристики из description в params и не enrich'ит их из desc/name.
         native_desc = strip_service_kv_lines(native_desc)
         vendor = pick_vendor(self.vendor, name_full, self.params, native_desc, public_vendor=public_vendor)
+        vendor_xml = _normalize_vendor_for_satu_xml(vendor)
         price_final = compute_price(self.price)
 
         # categoryId — это общая Satu-таксономия проекта, поэтому резолвится в shared-слое.
@@ -1687,9 +1704,13 @@ class OfferOut:
             if not k_src or not v_src:
                 continue
             key_cf = k_src.casefold()
-            if key_cf == "совместимость":
+            if key_cf in _SATU_BRAND_PARAM_NAMES:
+                v_src = _normalize_vendor_for_satu_xml(v_src)
+                if not v_src:
+                    continue
+            elif key_cf == "совместимость":
                 v_src = _cs_trim_compat_for_satu_param(v_src, 255)
-            elif key_cf == "порты":
+            else:
                 v_src = _truncate_text(v_src, 255)
             kk = xml_escape_attr(k_src)
             vv = xml_escape_text(v_src)
@@ -1700,6 +1721,7 @@ class OfferOut:
         # Core не знает поставщиков и не меняет availability.
         # RAW обязан отдать уже правильное available для конкретного supplier-layer.
         avail_effective = bool(self.available)
+        vendor_xml_line = f"<vendor>{xml_escape_text(vendor_xml)}</vendor>\n" if vendor_xml else ""
 
         out = (
             f"<offer id=\"{xml_escape_attr(self.oid)}\" available=\"{bool_to_xml(bool(avail_effective))}\">\n"
@@ -1708,7 +1730,7 @@ class OfferOut:
             f"<name>{xml_escape_text(name_short)}</name>\n"
             f"<price>{int(price_final)}</price>"
             f"{pics_xml}\n"
-            f"<vendor>{xml_escape_text(vendor)}</vendor>\n"
+            f"{vendor_xml_line}"
             f"<currencyId>{xml_escape_text(currency_id)}</currencyId>\n"
             f"<description><![CDATA[\n{desc_cdata}]]></description>"
             f"{params_xml}\n"
