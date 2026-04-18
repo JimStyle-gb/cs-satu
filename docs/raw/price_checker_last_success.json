@@ -1,10 +1,10 @@
 {
-  "build_time": "18 апреля 2026 г. 05:03:12",
-  "total": 7121,
-  "available_true": 6609,
-  "available_false": 512,
+  "build_time": "18 апреля 2026 г. 14:21:41",
+  "total": 7122,
+  "available_true": 6605,
+  "available_false": 517,
   "price100": 248,
-  "placeholder": 573,
+  "placeholder": 571,
   "empty_category": 0,
   "invalid_category": 0,
   "unknown_satu": 0,
@@ -29,11 +29,11 @@
       "no_satu_category": 0
     },
     "AlStyle": {
-      "total": 1992,
-      "available": 1480,
-      "unavailable": 512,
+      "total": 1993,
+      "available": 1476,
+      "unavailable": 517,
       "price100": 4,
-      "placeholder": 10,
+      "placeholder": 8,
       "excluded_no_categoryid": 0,
       "no_satu_category": 0
     },

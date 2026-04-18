@@ -1,18 +1,18 @@
 ПОДРОБНЫЙ ОТЧЁТ PRICE CHECKER
-Сформирован: 18 апреля 2026 г. 08:33:57
-Время сборки Price: 18 апреля 2026 г. 05:03:12
+Сформирован: 18 апреля 2026 г. 14:22:55
+Время сборки Price: 18 апреля 2026 г. 14:21:41
 Итоговый статус: УСПЕШНО
 Причина: Критичных проблем не обнаружено.
 
 ======================================================================
 СВОДКА
 ======================================================================
-Всего товаров в Price: 7121
-В наличии: 6609
-Нет в наличии: 512
+Всего товаров в Price: 7122
+В наличии: 6605
+Нет в наличии: 517
 
 С ценой 100: 248
-С заглушкой фото: 573
+С заглушкой фото: 571
 Без categoryId в Price: 0
 С невалидным categoryId в Price: 0
 Без категории Satu: 0
@@ -27,7 +27,7 @@
 СВОДКА ПО ПОСТАВЩИКАМ
 ======================================================================
 AkCent | всего=174 | в наличии=174 | нет в наличии=0 | цена 100=0 | заглушка фото=7 | не вошло в final без categoryId=0 | без категории Satu=0
-AlStyle | всего=1992 | в наличии=1480 | нет в наличии=512 | цена 100=4 | заглушка фото=10 | не вошло в final без categoryId=0 | без категории Satu=0
+AlStyle | всего=1993 | в наличии=1476 | нет в наличии=517 | цена 100=4 | заглушка фото=8 | не вошло в final без categoryId=0 | без категории Satu=0
 ComPortal | всего=627 | в наличии=627 | нет в наличии=0 | цена 100=0 | заглушка фото=108 | не вошло в final без categoryId=0 | без категории Satu=0
 CopyLine | всего=1220 | в наличии=1220 | нет в наличии=0 | цена 100=26 | заглушка фото=0 | не вошло в final без categoryId=0 | без категории Satu=0
 VTT | всего=3108 | в наличии=3108 | нет в наличии=0 | цена 100=218 | заглушка фото=448 | не вошло в final без categoryId=0 | без категории Satu=0
@@ -304,7 +304,7 @@ AkCent | placeholder_photo | id=ACC13T913B00 | vendorCode=ACC13T913B00 | categor
 AkCent | placeholder_photo | id=ACC11CL41411 | vendorCode=ACC11CL41411 | categoryId=301 | price=216900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=МФУ Epson L4360 фабрика печати
 AkCent | placeholder_photo | id=ACC11CJ62404 | vendorCode=ACC11CJ62404 | categoryId=301 | price=304900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=МФУ Epson L6260 фабрика печати, Wi-Fi
 AkCent | placeholder_photo | id=AC4680101 | vendorCode=AC4680101 | categoryId=504 | price=245900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Шредер Fellowes® AUTOMAX 150C SHREDDER (CROSS CUT) 230V EU
-AlStyle | placeholder_photo | id=AS406006 | vendorCode=AS406006 | categoryId=602 | price=3443900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Источник бесперебойного питания CyberPower HSTP3T30KE
+AlStyle | placeholder_photo | id=AS406006 | vendorCode=AS406006 | categoryId=602 | price=3932900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Источник бесперебойного питания CyberPower HSTP3T30KE
 AlStyle | placeholder_photo | id=AS416336 | vendorCode=AS416336 | categoryId=602 | price=175900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Монитор Xiaomi Mini LED Gaming Monitor G Pro 27Qi 2026 27"
 AlStyle | placeholder_photo | id=AS417829 | vendorCode=AS417829 | categoryId=701 | price=702900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Источник бесперебойного питания APC Easy UPS SRVL1KRIRK
 AlStyle | placeholder_photo | id=AS420184 | vendorCode=AS420184 | categoryId=101 | price=60900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Тонер-картридж стандартной емкости Lexmark 77L91C0 (голубой) (оригинал)
@@ -312,8 +312,6 @@ AlStyle | placeholder_photo | id=AS420185 | vendorCode=AS420185 | categoryId=101
 AlStyle | placeholder_photo | id=AS420186 | vendorCode=AS420186 | categoryId=101 | price=60900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Тонер-картридж стандартной емкости Lexmark 77L91M0 (малиновый) (оригинал)
 AlStyle | placeholder_photo | id=AS420187 | vendorCode=AS420187 | categoryId=101 | price=60900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Тонер-картридж стандартной емкости Lexmark 77L91Y0 (жёлтый) (оригинал)
 AlStyle | placeholder_photo | id=AS420712 | vendorCode=AS420712 | categoryId=602 | price=51900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Монитор Xiaomi Monitor A24i 2026
-AlStyle | placeholder_photo | id=AS421284 | vendorCode=AS421284 | categoryId=601 | price=771900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Ноутбук Gigabyte Gaming A16 FHD+ 165Hz Ryzen 7 260 16GB 512GB RTX5060 DOS
-AlStyle | placeholder_photo | id=AS421285 | vendorCode=AS421285 | categoryId=601 | price=778900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Ноутбук Gigabyte Gaming A16 FHD+ 165Hz Ryzen 7 260 16GB 512GB RTX5050 DOS
 ComPortal | placeholder_photo | id=CP13872771 | vendorCode=CP13872771 | categoryId=603 | price=221900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Моноблок AIWA PF2402-D 8-256 (PF2402-D 8-256)
 ComPortal | placeholder_photo | id=CP13872772 | vendorCode=CP13872772 | categoryId=603 | price=239900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Моноблок AIWA PF2402-K 8-512 (PF2402-K 8-512)
 ComPortal | placeholder_photo | id=CP13872773 | vendorCode=CP13872773 | categoryId=603 | price=258900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Моноблок AIWA PF2702-K 16-512 (PF2702-K 16-512)
@@ -597,7 +595,9 @@ VTT | placeholder_photo | id=VT797026754 | vendorCode=VT797026754 | categoryId=1
 VTT | placeholder_photo | id=VT797026755 | vendorCode=VT797026755 | categoryId=101 | price=15900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Тонер-картридж Hi-Black (HB-006R04369) для Xerox C310/C315 (совместимый)
 VTT | placeholder_photo | id=VT797026756 | vendorCode=VT797026756 | categoryId=101 | price=15900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Тонер-картридж Hi-Black (HB-006R04370) для Xerox C310/C315 (совместимый)
 VTT | placeholder_photo | id=VT797026757 | vendorCode=VT797026757 | categoryId=101 | price=15900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Тонер-картридж Hi-Black (HB-006R04371) для Xerox C310/C315 (совместимый)
-... показаны первые 300 строк, всего записей: 573
+VTT | placeholder_photo | id=VT888896 | vendorCode=VT888896 | categoryId=102 | price=160900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Картридж PFI-207MBK для Canon iPF680/685/780/785, 300ml матовый (оригинал)
+VTT | placeholder_photo | id=VT8JM70A | vendorCode=VT8JM70A | categoryId=202 | price=71900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=8JM70A/8JM70-67001 Блок проявки HP CLJ Managed E78223/E78228/E78323/E78325/E78330 (оригинал)
+... показаны первые 300 строк, всего записей: 571
 
 ======================================================================
 ДУБЛИ OFFER ID
@@ -620,7 +620,7 @@ VTT | placeholder_photo | id=VT797026757 | vendorCode=VT797026757 | categoryId=1
 Заглушка фото:
 - VTT: 448
 - ComPortal: 108
-- AlStyle: 10
+- AlStyle: 8
 - AkCent: 7
 
 Не вошло в final без categoryId:
