@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<yml_catalog date="2026-04-18 01:09:51">
+<yml_catalog date="2026-04-18 14:19:53">
 <shop><offers>
 <!--FEED_META
 Поставщик                                  | ComPortal
 URL поставщика                             | https://www.comportal.kz/auth/documents/prices/yml-catalog.php
-Время сборки (Алматы)                      | 2026-04-18 01:09:51
+Время сборки (Алматы)                      | 2026-04-18 14:19:53
 Ближайшая сборка (Алматы)                  | 2026-04-19 00:30:00
 Сколько товаров у поставщика до фильтра    | 1183
 Сколько товаров у поставщика после фильтра | 627
@@ -33234,7 +33234,6 @@ URL поставщика                             | https://www.comportal.kz/
 <name>ИБП Astergo AST.UPS.ORT1000IB1U (AST.UPS.ORT1000IB1U)</name>
 <price>247900</price>
 <picture>https://www.comportal.kz/upload/iblock/396/p67kg64qdse2ipag7bw29igr40ivozuj.jpg</picture>
-<vendor>Astergo</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
 <div style="font-family:Verdana, Tahoma, Arial, sans-serif;color:#2F2F2F;">
@@ -33270,7 +33269,6 @@ URL поставщика                             | https://www.comportal.kz/
 </div>]]></description>
 <param name="Выходные соединения">3хС13</param>
 <param name="Гарантия">12 мес</param>
-<param name="Для бренда">Astergo</param>
 <param name="Интерфейс">USB, слот для SNMP\WEB- карты</param>
 <param name="Коды">AST.UPS.ORT1000IB1U</param>
 <param name="Модель">AST.UPS.ORT1000IB1U</param>
@@ -33287,7 +33285,6 @@ URL поставщика                             | https://www.comportal.kz/
 <name>ИБП Astergo AST.UPS.LRT800VS2U (AST.UPS.LRT800VS2U)</name>
 <price>167900</price>
 <picture>https://www.comportal.kz/upload/iblock/828/xxyykh83i4k46fxb29n3elu6z5903pu2.jpg</picture>
-<vendor>Astergo</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
 <div style="font-family:Verdana, Tahoma, Arial, sans-serif;color:#2F2F2F;">
@@ -33323,7 +33320,6 @@ URL поставщика                             | https://www.comportal.kz/
 </div>]]></description>
 <param name="Выходные соединения">8хС13</param>
 <param name="Гарантия">12 мес</param>
-<param name="Для бренда">Astergo</param>
 <param name="Дополнительная информация">нутренние акб 2х12Вх7Ач</param>
 <param name="Интерфейс">RS-232, USB, EPO, SNMP Slot</param>
 <param name="Коды">AST.UPS.LRT800VS2U</param>
@@ -33341,7 +33337,6 @@ URL поставщика                             | https://www.comportal.kz/
 <name>ИБП Astergo AST.UPS.LRT1100VS2U (AST.UPS.LRT1100VS2U)</name>
 <price>196900</price>
 <picture>https://www.comportal.kz/upload/iblock/056/hddvwbs37qha99uaz6cxxwc41yy8q8yu.jpg</picture>
-<vendor>Astergo</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
 <div style="font-family:Verdana, Tahoma, Arial, sans-serif;color:#2F2F2F;">
@@ -33377,7 +33372,6 @@ URL поставщика                             | https://www.comportal.kz/
 </div>]]></description>
 <param name="Выходные соединения">8хС13</param>
 <param name="Гарантия">12 мес</param>
-<param name="Для бренда">Astergo</param>
 <param name="Дополнительная информация">внутренние акб 2х12Вх9Ач</param>
 <param name="Интерфейс">RS-232, USB, EPO, SNMP Slot</param>
 <param name="Коды">AST.UPS.LRT1100VS2U</param>
@@ -33395,7 +33389,6 @@ URL поставщика                             | https://www.comportal.kz/
 <name>ИБП Astergo AST.UPS.LRT2000VS2U (AST.UPS.LRT2000VS2U)</name>
 <price>252900</price>
 <picture>https://www.comportal.kz/upload/iblock/628/d17p2jjq0g92ayik44j84p0z29vtqk07.jpg</picture>
-<vendor>Astergo</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
 <div style="font-family:Verdana, Tahoma, Arial, sans-serif;color:#2F2F2F;">
@@ -33431,7 +33424,6 @@ URL поставщика                             | https://www.comportal.kz/
 </div>]]></description>
 <param name="Выходные соединения">8хС13</param>
 <param name="Гарантия">12 мес</param>
-<param name="Для бренда">Astergo</param>
 <param name="Дополнительная информация">внутренние акб 4х12Вх9Ач</param>
 <param name="Интерфейс">RS-232, USB, EPO, SNMP Slot</param>
 <param name="Коды">AST.UPS.LRT2000VS2U</param>
@@ -33449,7 +33441,6 @@ URL поставщика                             | https://www.comportal.kz/
 <name>ИБП Astergo AST.UPS.LRT3000VS2U (AST.UPS.LRT3000VS2U)</name>
 <price>309900</price>
 <picture>https://www.comportal.kz/upload/iblock/58d/q55d4kq6jryaylngerbm5f4u4zeu7oo2.jpg</picture>
-<vendor>Astergo</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
 <div style="font-family:Verdana, Tahoma, Arial, sans-serif;color:#2F2F2F;">
@@ -33485,7 +33476,6 @@ URL поставщика                             | https://www.comportal.kz/
 </div>]]></description>
 <param name="Выходные соединения">8хС13, 1xC19</param>
 <param name="Гарантия">12 мес</param>
-<param name="Для бренда">Astergo</param>
 <param name="Дополнительная информация">внутренние акб 6х12Вх9Ач</param>
 <param name="Интерфейс">RS-232, USB, EPO, SNMP Slot</param>
 <param name="Коды">AST.UPS.LRT3000VS2U</param>
@@ -33503,7 +33493,6 @@ URL поставщика                             | https://www.comportal.kz/
 <name>ИБП Astergo AST.UPS.PGO2000LCD2U (AST.UPS.PGO2000LCD2U)</name>
 <price>287900</price>
 <picture>https://www.comportal.kz/upload/iblock/ad5/5dc0qelw1csmyui6v3rty87nsmqlafu9.jpg</picture>
-<vendor>Astergo</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
 <div style="font-family:Verdana, Tahoma, Arial, sans-serif;color:#2F2F2F;">
@@ -33539,7 +33528,6 @@ URL поставщика                             | https://www.comportal.kz/
 </div>]]></description>
 <param name="Выходные соединения">8хС13</param>
 <param name="Гарантия">12 мес</param>
-<param name="Для бренда">Astergo</param>
 <param name="Дополнительная информация">внутренние акб 4х12Вх9Ач</param>
 <param name="Интерфейс">RS-232, USB, EPO, SNMP Slot</param>
 <param name="Коды">AST.UPS.PGO2000LCD2U</param>
@@ -33557,7 +33545,6 @@ URL поставщика                             | https://www.comportal.kz/
 <name>ИБП Astergo AST.UPS.PGO3000LCD2U (AST.UPS.PGO3000LCD2U)</name>
 <price>352900</price>
 <picture>https://www.comportal.kz/upload/iblock/987/avxzqkumndl20ih45x7cvyne4pdrwabd.jpg</picture>
-<vendor>Astergo</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
 <div style="font-family:Verdana, Tahoma, Arial, sans-serif;color:#2F2F2F;">
@@ -33593,7 +33580,6 @@ URL поставщика                             | https://www.comportal.kz/
 </div>]]></description>
 <param name="Выходные соединения">8хС13, 1хС19</param>
 <param name="Гарантия">12 мес</param>
-<param name="Для бренда">Astergo</param>
 <param name="Дополнительная информация">внутренние акб 6х12Вх9Ач</param>
 <param name="Интерфейс">RS-232, USB, EPO, SNMP Slot</param>
 <param name="Коды">AST.UPS.PGO3000LCD2U</param>
@@ -33611,7 +33597,6 @@ URL поставщика                             | https://www.comportal.kz/
 <name>ИБП Astergo AST.UPS.PGO6KLCD2U (AST.UPS.PGO6KLCD2U)</name>
 <price>523900</price>
 <picture>https://www.comportal.kz/upload/iblock/986/jk1nlybg73ucwc0pz1wj1p0l3uejex1y.jpg</picture>
-<vendor>Astergo</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
 <div style="font-family:Verdana, Tahoma, Arial, sans-serif;color:#2F2F2F;">
@@ -33646,7 +33631,6 @@ URL поставщика                             | https://www.comportal.kz/
 
 </div>]]></description>
 <param name="Гарантия">12 мес</param>
-<param name="Для бренда">Astergo</param>
 <param name="Дополнительная информация">без АКБ совместим с модулем АКБ DC-шина 192В (AST.UPS.PGOBP2U192V7 и AST.UPS.PGOBP2U192V9), DC-шина 240В (AST.UPS.PGOBP3U240V7 или AST.UPS.PGOBP3U240V9)</param>
 <param name="Интерфейс">RS-232, USB, EPO, SNMP Slot</param>
 <param name="Коды">AST.UPS.PGO6KLCD2U</param>
@@ -33664,7 +33648,6 @@ URL поставщика                             | https://www.comportal.kz/
 <name>ИБП Astergo AST.UPS.PGO10KLCD2U (AST.UPS.PGO10KLCD2U)</name>
 <price>636900</price>
 <picture>https://www.comportal.kz/upload/iblock/eb8/jhxt3w037avmsnzf0or12281ld2xloti.jpg</picture>
-<vendor>Astergo</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
 <div style="font-family:Verdana, Tahoma, Arial, sans-serif;color:#2F2F2F;">
@@ -33699,7 +33682,6 @@ URL поставщика                             | https://www.comportal.kz/
 
 </div>]]></description>
 <param name="Гарантия">12 мес</param>
-<param name="Для бренда">Astergo</param>
 <param name="Дополнительная информация">без АКБ DC-шина 192В, совместим с модулем АКБ AST.UPS.PGOBP2U192V9 или AST.UPS.PGOBP3U240V9</param>
 <param name="Интерфейс">RS-232, USB, EPO, SNMP Slot</param>
 <param name="Коды">AST.UPS.PGO10KLCD2U</param>
@@ -33717,7 +33699,6 @@ URL поставщика                             | https://www.comportal.kz/
 <name>ИБП Astergo AST.UPS.PGOT1000 (AST.UPS.PGOT1000)</name>
 <price>178900</price>
 <picture>https://www.comportal.kz/upload/iblock/ceb/k13m4ubuzfcen1pp0ng94w7q20cy797a.png</picture>
-<vendor>Astergo</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
 <div style="font-family:Verdana, Tahoma, Arial, sans-serif;color:#2F2F2F;">
@@ -33753,7 +33734,6 @@ URL поставщика                             | https://www.comportal.kz/
 </div>]]></description>
 <param name="Выходные соединения">4хС13</param>
 <param name="Гарантия">12 мес</param>
-<param name="Для бренда">Astergo</param>
 <param name="Интерфейс">RS-232, USB, EPO, SNMP Slot</param>
 <param name="Коды">AST.UPS.PGOT1000</param>
 <param name="Модель">AST.UPS.PGOT1000</param>
@@ -33770,7 +33750,6 @@ URL поставщика                             | https://www.comportal.kz/
 <name>ИБП Astergo AST.UPS.PGOT2000 (AST.UPS.PGOT2000)</name>
 <price>259900</price>
 <picture>https://www.comportal.kz/upload/iblock/2ff/7vqkgn6g4zkliuqj1qr2mmnc14stfnur.png</picture>
-<vendor>Astergo</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
 <div style="font-family:Verdana, Tahoma, Arial, sans-serif;color:#2F2F2F;">
@@ -33806,7 +33785,6 @@ URL поставщика                             | https://www.comportal.kz/
 </div>]]></description>
 <param name="Выходные соединения">8хС13</param>
 <param name="Гарантия">12 мес</param>
-<param name="Для бренда">Astergo</param>
 <param name="Интерфейс">RS-232, USB, EPO, SNMP Slot</param>
 <param name="Коды">AST.UPS.PGOT2000</param>
 <param name="Модель">AST.UPS.PGOT2000</param>
@@ -33823,7 +33801,6 @@ URL поставщика                             | https://www.comportal.kz/
 <name>ИБП Astergo AST.UPS.PGOT3000 (AST.UPS.PGOT3000)</name>
 <price>316900</price>
 <picture>https://www.comportal.kz/upload/iblock/c2f/860ckzelmozm6eon99k7nwtu7becaw9b.png</picture>
-<vendor>Astergo</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
 <div style="font-family:Verdana, Tahoma, Arial, sans-serif;color:#2F2F2F;">
@@ -33859,7 +33836,6 @@ URL поставщика                             | https://www.comportal.kz/
 </div>]]></description>
 <param name="Выходные соединения">8хС13, 1хС19</param>
 <param name="Гарантия">12 мес</param>
-<param name="Для бренда">Astergo</param>
 <param name="Интерфейс">RS-232, USB, EPO, SNMP Slot</param>
 <param name="Коды">AST.UPS.PGOT3000</param>
 <param name="Модель">AST.UPS.PGOT3000</param>
@@ -33876,7 +33852,6 @@ URL поставщика                             | https://www.comportal.kz/
 <name>ИБП Astergo AST.UPS.PGOT6KS (AST.UPS.PGOT6KS)</name>
 <price>575900</price>
 <picture>https://www.comportal.kz/upload/iblock/ea3/3gijfxlcim8b0jxzlde9fel5n7f6je4g.png</picture>
-<vendor>Astergo</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
 <div style="font-family:Verdana, Tahoma, Arial, sans-serif;color:#2F2F2F;">
@@ -33912,7 +33887,6 @@ URL поставщика                             | https://www.comportal.kz/
 </div>]]></description>
 <param name="Выходные соединения">клеммный терминал</param>
 <param name="Гарантия">12 мес</param>
-<param name="Для бренда">Astergo</param>
 <param name="Интерфейс">RS-232, USB, EPO, SNMP Slot</param>
 <param name="Коды">AST.UPS.PGOT6KS</param>
 <param name="Модель">AST.UPS.PGOT6KS</param>
@@ -33929,7 +33903,6 @@ URL поставщика                             | https://www.comportal.kz/
 <name>ИБП Astergo AST.UPS.PGOT10KS (AST.UPS.PGOT10KS)</name>
 <price>745900</price>
 <picture>https://www.comportal.kz/upload/iblock/0cf/pzf7vdmp022ex4wssxltbv8pzu16x85q.png</picture>
-<vendor>Astergo</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
 <div style="font-family:Verdana, Tahoma, Arial, sans-serif;color:#2F2F2F;">
@@ -33965,7 +33938,6 @@ URL поставщика                             | https://www.comportal.kz/
 </div>]]></description>
 <param name="Выходные соединения">клеммный терминал</param>
 <param name="Гарантия">12 мес</param>
-<param name="Для бренда">Astergo</param>
 <param name="Интерфейс">RS-232, USB, EPO, SNMP Slot</param>
 <param name="Коды">AST.UPS.PGOT10KS</param>
 <param name="Модель">AST.UPS.PGOT10KS</param>
@@ -33982,7 +33954,6 @@ URL поставщика                             | https://www.comportal.kz/
 <name>ИБП Astergo AST.UPS.LA1500USB8I (AST.UPS.LA1500USB8I)</name>
 <price>176900</price>
 <picture>https://www.comportal.kz/upload/iblock/f93/2tnhmwyl5fth7eajt1borozne3kp27mk.jpg</picture>
-<vendor>Astergo</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
 <div style="font-family:Verdana, Tahoma, Arial, sans-serif;color:#2F2F2F;">
@@ -34018,7 +33989,6 @@ URL поставщика                             | https://www.comportal.kz/
 </div>]]></description>
 <param name="Выходные соединения">8*С13</param>
 <param name="Гарантия">12 мес</param>
-<param name="Для бренда">Astergo</param>
 <param name="Интерфейс">LCD с Bluetooth, порты зарядки USB (5V 3A, Type C USB A), порт управления USB B</param>
 <param name="Коды">AST.UPS.LA1500USB8I</param>
 <param name="Модель">AST.UPS.LA1500USB8I</param>
@@ -35455,7 +35425,6 @@ URL поставщика                             | https://www.comportal.kz/
 <name>Дополнительная батарея Astergo AST.UPS.PGOBP3U240V7 (AST.UPS.PGOBP3U240V7)</name>
 <price>325900</price>
 <picture>https://www.comportal.kz/upload/iblock/36a/l0q3odtctd6i59qxk6pg25j895kox17p.jpg</picture>
-<vendor>Astergo</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
 <div style="font-family:Verdana, Tahoma, Arial, sans-serif;color:#2F2F2F;">
@@ -35490,7 +35459,6 @@ URL поставщика                             | https://www.comportal.kz/
 
 </div>]]></description>
 <param name="Гарантия">12 мес</param>
-<param name="Для бренда">Astergo</param>
 <param name="Дополнительная информация">6кВт,10кВт ИБП AST.UPS.PGO6KLCD2U, AST.UPS.PGO10KLCD2</param>
 <param name="Коды">AST.UPS.PGOBP3U240V7</param>
 <param name="Модель">Дополнительная батарея Astergo AST.UPS.PGOBP3U240V7</param>
@@ -35504,7 +35472,6 @@ URL поставщика                             | https://www.comportal.kz/
 <name>Дополнительная батарея Astergo AST.UPS.PGOBP3U240V9 (AST.UPS.PGOBP3U240V9)</name>
 <price>394900</price>
 <picture>https://www.comportal.kz/upload/iblock/b42/ahusyyr84wcn72ivb62g9h6tfikz4lvg.jpg</picture>
-<vendor>Astergo</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
 <div style="font-family:Verdana, Tahoma, Arial, sans-serif;color:#2F2F2F;">
@@ -35539,7 +35506,6 @@ URL поставщика                             | https://www.comportal.kz/
 
 </div>]]></description>
 <param name="Гарантия">12 мес</param>
-<param name="Для бренда">Astergo</param>
 <param name="Дополнительная информация">6кВт,10кВт ИБП AST.UPS.PGO6KLCD2U, AST.UPS.PGO10KLCD2</param>
 <param name="Коды">AST.UPS.PGOBP3U240V9</param>
 <param name="Модель">Дополнительная батарея Astergo AST.UPS.PGOBP3U240V9</param>
