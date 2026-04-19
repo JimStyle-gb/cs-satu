@@ -55,12 +55,12 @@ def _safe_price_int(v) -> int | None:
 # Public API
 # -----------------------------
 
-def compute_price(price_in: int | None) -> int:
+def compute_price(price_in: int | None) -> int | None:
     p = _safe_price_int(price_in)
     if p is None or p <= 100:
-        return 100
+        return None
     if p >= 9_000_000:
-        return 100
+        return None
 
     add = 60_000
     for lo, hi, tier_add in CS_PRICE_TIERS:
@@ -72,9 +72,9 @@ def compute_price(price_in: int | None) -> int:
     out = (raw // 1000) * 1000 + 900
 
     if out >= 9_000_000:
-        return 100
+        return None
     if out <= 100:
-        return 100
+        return None
     return out
 
 
