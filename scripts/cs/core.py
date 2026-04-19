@@ -1718,17 +1718,27 @@ class OfferOut:
                 continue
             params_xml += f'\n<param name="{kk}">{vv}</param>'
 
-        # Core не знает поставщиков и не меняет availability.
-        # RAW обязан отдать уже правильное available для конкретного supplier-layer.
+        # Core не знает поставщиков и не меняет supplier-specific availability.
+        # Исключение только общее CS-правило: если финальной цены нет, не ставим <price>100</price>,
+        # а публикуем offer как готовый к отправке через in_stock="true".
         avail_effective = bool(self.available)
         vendor_xml_line = f"<vendor>{xml_escape_text(vendor_xml)}</vendor>\n" if vendor_xml else ""
 
+        offer_attrs = [f'id="{xml_escape_attr(self.oid)}"']
+        price_xml = ""
+        if price_final is None:
+            offer_attrs.append('available="true"')
+            offer_attrs.append('in_stock="true"')
+        else:
+            offer_attrs.append(f'available="{bool_to_xml(bool(avail_effective))}"')
+            price_xml = f"<price>{int(price_final)}</price>"
+
         out = (
-            f"<offer id=\"{xml_escape_attr(self.oid)}\" available=\"{bool_to_xml(bool(avail_effective))}\">\n"
+            f"<offer {' '.join(offer_attrs)}>\n"
             f"<categoryId>{xml_escape_text(category_id)}</categoryId>\n"
             f"<vendorCode>{xml_escape_text(self.oid)}</vendorCode>\n"
             f"<name>{xml_escape_text(name_short)}</name>\n"
-            f"<price>{int(price_final)}</price>"
+            f"{price_xml}"
             f"{pics_xml}\n"
             f"{vendor_xml_line}"
             f"<currencyId>{xml_escape_text(currency_id)}</currencyId>\n"
