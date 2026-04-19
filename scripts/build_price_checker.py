@@ -542,7 +542,7 @@ def build_summary_report(status: str, reason: str, metrics: Metrics, baseline: M
         f"Есть в наличии: {metrics.available_true} {fmt_delta(baseline.available_true if baseline else None, metrics.available_true)}",
         f"Нет в наличии: {metrics.available_false} {fmt_delta(baseline.available_false if baseline else None, metrics.available_false)}",
         "",
-        f"Готово к отправке без цены: {metrics.ready_to_ship_no_price} {fmt_delta(baseline.ready_to_ship_no_price if baseline else None, metrics.ready_to_ship_no_price)}",
+        f"Товары без цены: {metrics.ready_to_ship_no_price} {fmt_delta(baseline.ready_to_ship_no_price if baseline else None, metrics.ready_to_ship_no_price)}",
         f"С заглушкой фото: {metrics.placeholder} {fmt_delta(baseline.placeholder if baseline else None, metrics.placeholder)}",
         f"Без categoryId: {metrics.empty_category}",
         f"С невалидным categoryId: {metrics.invalid_category}",
@@ -551,7 +551,7 @@ def build_summary_report(status: str, reason: str, metrics: Metrics, baseline: M
         "",
         "Проблемные хвосты по поставщикам",
         "",
-        "Готово к отправке без цены:",
+        "Товары без цены:",
     ]
     if top_ready_to_ship_no_price == 'нет':
         lines.append('нет')
@@ -600,7 +600,7 @@ def build_telegram_summary_html(status: str, reason: str, metrics: Metrics, base
         field("Есть в наличии:", f"{metrics.available_true} {fmt_delta(baseline.available_true if baseline else None, metrics.available_true)}"),
         field("Нет в наличии:", f"{metrics.available_false} {fmt_delta(baseline.available_false if baseline else None, metrics.available_false)}"),
         "",
-        field("Готово к отправке без цены:", f"{metrics.ready_to_ship_no_price} {fmt_delta(baseline.ready_to_ship_no_price if baseline else None, metrics.ready_to_ship_no_price)}"),
+        field("Товары без цены:", f"{metrics.ready_to_ship_no_price} {fmt_delta(baseline.ready_to_ship_no_price if baseline else None, metrics.ready_to_ship_no_price)}"),
         field("С заглушкой фото:", f"{metrics.placeholder} {fmt_delta(baseline.placeholder if baseline else None, metrics.placeholder)}"),
         field("Без categoryId:", str(metrics.empty_category)),
         field("С невалидным categoryId:", str(metrics.invalid_category)),
@@ -609,7 +609,7 @@ def build_telegram_summary_html(status: str, reason: str, metrics: Metrics, base
         "",
         "<b>Проблемные хвосты по поставщикам</b>",
         "",
-        "<b>Готово к отправке без цены:</b>",
+        "<b>Товары без цены:</b>",
     ]
     if top_ready_to_ship_no_price == 'нет':
         lines.append('нет')
@@ -641,7 +641,7 @@ def build_supplier_summary_lines(metrics: Metrics) -> List[str]:
         info = metrics.supplier_summary.get(supplier, SupplierSummary())
         lines.append(
             f"{supplier} | всего={info.total} | в наличии={info.available} | нет в наличии={info.unavailable} "
-            f"| готово к отправке без цены={info.ready_to_ship_no_price} | заглушка фото={info.placeholder} "
+            f"| без цены={info.ready_to_ship_no_price} | заглушка фото={info.placeholder} "
             f"| не вошло в final без categoryId={info.excluded_no_categoryid} | без категории Satu={info.no_satu_category}"
         )
     return lines or ["нет"]
@@ -649,10 +649,10 @@ def build_supplier_summary_lines(metrics: Metrics) -> List[str]:
 
 def build_top_problem_lines(metrics: Metrics) -> List[str]:
     blocks = []
-    blocks.append("Готово к отправке без цены:")
+    blocks.append("Товары без цены:")
     for supplier, count in sorted(((s, i.ready_to_ship_no_price) for s, i in metrics.supplier_summary.items() if i.ready_to_ship_no_price > 0), key=lambda x: (-x[1], x[0]))[:5]:
         blocks.append(f"- {supplier}: {count}")
-    if blocks[-1] == "Готово к отправке без цены:":
+    if blocks[-1] == "Товары без цены:":
         blocks.append("нет")
 
     blocks.append("")
@@ -690,7 +690,7 @@ def build_details_report(status: str, reason: str, metrics: Metrics, checked_at:
         f"В наличии: {metrics.available_true}",
         f"Нет в наличии: {metrics.available_false}",
         "",
-        f"Готово к отправке без цены: {metrics.ready_to_ship_no_price}",
+        f"Товары без цены: {metrics.ready_to_ship_no_price}",
         f"С заглушкой фото: {metrics.placeholder}",
         f"Без categoryId в Price: {metrics.empty_category}",
         f"С невалидным categoryId в Price: {metrics.invalid_category}",
@@ -718,7 +718,7 @@ def build_details_report(status: str, reason: str, metrics: Metrics, checked_at:
             limit_lines([format_entry_line(entry, "no_satu_category") for entry in metrics.no_satu_category_details], DETAIL_LIMIT_CRITICAL) or ["нет"],
         ),
         (
-            "ТОВАРЫ ГОТОВЫ К ОТПРАВКЕ БЕЗ ЦЕНЫ",
+            "ТОВАРЫ БЕЗ ЦЕНЫ",
             limit_lines([format_entry_line(entry, "ready_to_ship_no_price") for entry in metrics.ready_to_ship_no_price_details], DETAIL_LIMIT_DEFAULT) or ["нет"],
         ),
         (
