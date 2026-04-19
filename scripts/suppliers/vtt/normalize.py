@@ -238,10 +238,10 @@ def canon_vendor(vendor: str) -> str:
         "hi-чёрный": "Hi-Black",
         "hi черный": "Hi-Black",
         "hi-черный": "Hi-Black",
-        "triumph-adler": "TA Triumph-Adler",
-        "triumph adler": "TA Triumph-Adler",
-        "ta triumph-adler": "TA Triumph-Adler",
-        "ta triumph adler": "TA Triumph-Adler",
+        "triumph-adler": "Triumph-Adler",
+        "triumph adler": "Triumph-Adler",
+        "ta triumph-adler": "Triumph-Adler",
+        "ta triumph adler": "Triumph-Adler",
     }
     return mapping.get(low, v)
 
