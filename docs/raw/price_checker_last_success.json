@@ -1,8 +1,8 @@
 {
-  "build_time": "18 апреля 2026 г. 14:21:41",
+  "build_time": "19 апреля 2026 г. 04:59:34",
   "total": 7122,
-  "available_true": 6605,
-  "available_false": 517,
+  "available_true": 6603,
+  "available_false": 519,
   "price100": 248,
   "placeholder": 571,
   "empty_category": 0,
@@ -30,8 +30,8 @@
     },
     "AlStyle": {
       "total": 1993,
-      "available": 1476,
-      "unavailable": 517,
+      "available": 1474,
+      "unavailable": 519,
       "price100": 4,
       "placeholder": 8,
       "excluded_no_categoryid": 0,
