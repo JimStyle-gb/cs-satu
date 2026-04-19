@@ -18,7 +18,7 @@ from __future__ import annotations
 
 import re
 
-from cs.core import OfferOut, compute_price
+from cs.core import OfferOut
 
 from .compat import (
     ALT_PART_TAIL_RE,
@@ -841,8 +841,8 @@ def build_offer_from_raw(raw: dict, *, id_prefix: str = "VT", placeholder_pictur
         resource,
     )
 
-    raw_price = int(raw.get("price_rub_raw") or 0)
-    price = compute_price(raw_price)
+    raw_price = raw.get("price_rub_raw")
+    price = int(raw_price) if raw_price not in (None, "", 0, "0") else None
 
     pictures = collect_picture_urls(
         [safe_str(x) for x in (raw.get("pictures") or []) if safe_str(x)],
