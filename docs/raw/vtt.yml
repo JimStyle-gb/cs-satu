@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<yml_catalog date="2026-04-19 21:59:46">
+<yml_catalog date="2026-04-20 04:04:23">
 <shop><offers>
 <!--FEED_META
 Поставщик                                  | VTT
 URL поставщика                             | https://b2b.vtt.ru/catalog/
-Время сборки (Алматы)                      | 2026-04-19 21:59:46
-Ближайшая сборка (Алматы)                  | 2026-04-20 02:30:00
+Время сборки (Алматы)                      | 2026-04-20 04:04:23
+Ближайшая сборка (Алматы)                  | 2026-05-01 02:30:00
 Сколько товаров у поставщика до фильтра    | 3114
 Сколько товаров у поставщика после фильтра | 3109
 Сколько товаров есть в наличии (true)      | 3109
@@ -50130,16 +50130,16 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <name>Тонер-картридж CK8350K для Triumph-Adler 2508ci (CET) Чёрный, 370г, 25000 стр. (совместимый)</name>
 <price>20853</price>
 <picture>https://b2b.vtt.ru/images/CET141871.jpg</picture>
-<vendor>TA Triumph-Adler</vendor>
+<vendor>Triumph-Adler</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый тонер-картридж CK8350K для Triumph-Adler 2508ci (CET) Чёрный, 370г, 25000 стр.; партномер — CET141871; совместимость — TA Triumph-Adler Triumph-Adler 2508ci (CET) Чёрный, 370г, 25000 стр; технология печати — Лазерная.]]></description>
+Совместимый тонер-картридж CK8350K для Triumph-Adler 2508ci (CET) Чёрный, 370г, 25000 стр.; партномер — CET141871; технология печати — Лазерная.]]></description>
 <param name="Тип">Тонер-картридж</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Для бренда">TA Triumph-Adler</param>
+<param name="Для бренда">Triumph-Adler</param>
 <param name="Цвет">Чёрный</param>
 <param name="Партномер">CET141871</param>
-<param name="Совместимость">TA Triumph-Adler Triumph-Adler 2508ci (CET) Чёрный, 370г, 25000 стр</param>
+<param name="Совместимость">Triumph-Adler 2508ci (CET) Чёрный, 370г, 25000 стр</param>
 <param name="Ресурс">25000</param>
 <param name="Коды расходников">CK8350K</param>
 <param name="Оригинальность">Совместимый</param>
@@ -50151,16 +50151,16 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <name>Тонер-картридж CK8350C для Triumph-Adler 2508ci (CET) Голубой, 160г, 12000 стр. (совместимый)</name>
 <price>17870</price>
 <picture>https://b2b.vtt.ru/images/CET141872.jpg</picture>
-<vendor>TA Triumph-Adler</vendor>
+<vendor>Triumph-Adler</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый тонер-картридж CK8350C для Triumph-Adler 2508ci (CET) Голубой, 160г, 12000 стр.; партномер — CET141872; совместимость — TA Triumph-Adler Triumph-Adler 2508ci (CET) Голубой, 160г, 12000 стр; технология печати — Лазерная.]]></description>
+Совместимый тонер-картридж CK8350C для Triumph-Adler 2508ci (CET) Голубой, 160г, 12000 стр.; партномер — CET141872; технология печати — Лазерная.]]></description>
 <param name="Тип">Тонер-картридж</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Для бренда">TA Triumph-Adler</param>
+<param name="Для бренда">Triumph-Adler</param>
 <param name="Цвет">Голубой</param>
 <param name="Партномер">CET141872</param>
-<param name="Совместимость">TA Triumph-Adler Triumph-Adler 2508ci (CET) Голубой, 160г, 12000 стр</param>
+<param name="Совместимость">Triumph-Adler 2508ci (CET) Голубой, 160г, 12000 стр</param>
 <param name="Ресурс">12000</param>
 <param name="Коды расходников">CK8350C</param>
 <param name="Оригинальность">Совместимый</param>
@@ -50172,16 +50172,16 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <name>Тонер-картридж CK8350M для Triumph-Adler 2508ci (CET) Пурпурный, 160г, 12000 стр. (совместимый)</name>
 <price>17870</price>
 <picture>https://b2b.vtt.ru/images/CET141873.jpg</picture>
-<vendor>TA Triumph-Adler</vendor>
+<vendor>Triumph-Adler</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый тонер-картридж CK8350M для Triumph-Adler 2508ci (CET) Пурпурный, 160г, 12000 стр.; партномер — CET141873; совместимость — TA Triumph-Adler Triumph-Adler 2508ci (CET) Пурпурный, 160г, 12000 стр; технология печати — Лазерная.]]></description>
+Совместимый тонер-картридж CK8350M для Triumph-Adler 2508ci (CET) Пурпурный, 160г, 12000 стр.; партномер — CET141873; технология печати — Лазерная.]]></description>
 <param name="Тип">Тонер-картридж</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Для бренда">TA Triumph-Adler</param>
+<param name="Для бренда">Triumph-Adler</param>
 <param name="Цвет">Пурпурный</param>
 <param name="Партномер">CET141873</param>
-<param name="Совместимость">TA Triumph-Adler Triumph-Adler 2508ci (CET) Пурпурный, 160г, 12000 стр</param>
+<param name="Совместимость">Triumph-Adler 2508ci (CET) Пурпурный, 160г, 12000 стр</param>
 <param name="Ресурс">12000</param>
 <param name="Коды расходников">CK8350M</param>
 <param name="Оригинальность">Совместимый</param>
@@ -50193,16 +50193,16 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <name>Тонер-картридж CK8350Y для Triumph-Adler 2508ci (CET) Желтый, 160г, 12000 стр. (совместимый)</name>
 <price>17870</price>
 <picture>https://b2b.vtt.ru/images/CET141874.jpg</picture>
-<vendor>TA Triumph-Adler</vendor>
+<vendor>Triumph-Adler</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый тонер-картридж CK8350Y для Triumph-Adler 2508ci (CET) Желтый, 160г, 12000 стр.; партномер — CET141874; совместимость — TA Triumph-Adler Triumph-Adler 2508ci (CET) Желтый, 160г, 12000 стр; технология печати — Лазерная.]]></description>
+Совместимый тонер-картридж CK8350Y для Triumph-Adler 2508ci (CET) Желтый, 160г, 12000 стр.; партномер — CET141874; технология печати — Лазерная.]]></description>
 <param name="Тип">Тонер-картридж</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Для бренда">TA Triumph-Adler</param>
+<param name="Для бренда">Triumph-Adler</param>
 <param name="Цвет">Желтый</param>
 <param name="Партномер">CET141874</param>
-<param name="Совместимость">TA Triumph-Adler Triumph-Adler 2508ci (CET) Желтый, 160г, 12000 стр</param>
+<param name="Совместимость">Triumph-Adler 2508ci (CET) Желтый, 160г, 12000 стр</param>
 <param name="Ресурс">12000</param>
 <param name="Коды расходников">CK8350Y</param>
 <param name="Оригинальность">Совместимый</param>
@@ -50214,16 +50214,16 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <name>Тонер-картридж CK8350K для Triumph-Adler 2508ci (CET) Чёрный, 500г, 40000 стр. (совместимый)</name>
 <price>24324</price>
 <picture>https://b2b.vtt.ru/images/CET141875.jpg</picture>
-<vendor>TA Triumph-Adler</vendor>
+<vendor>Triumph-Adler</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый тонер-картридж CK8350K для Triumph-Adler 2508ci (CET) Чёрный, 500г, 40000 стр.; партномер — CET141875; совместимость — TA Triumph-Adler Triumph-Adler 2508ci (CET) Чёрный, 500г, 40000 стр; технология печати — Лазерная.]]></description>
+Совместимый тонер-картридж CK8350K для Triumph-Adler 2508ci (CET) Чёрный, 500г, 40000 стр.; партномер — CET141875; технология печати — Лазерная.]]></description>
 <param name="Тип">Тонер-картридж</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Для бренда">TA Triumph-Adler</param>
+<param name="Для бренда">Triumph-Adler</param>
 <param name="Цвет">Чёрный</param>
 <param name="Партномер">CET141875</param>
-<param name="Совместимость">TA Triumph-Adler Triumph-Adler 2508ci (CET) Чёрный, 500г, 40000 стр</param>
+<param name="Совместимость">Triumph-Adler 2508ci (CET) Чёрный, 500г, 40000 стр</param>
 <param name="Ресурс">40000</param>
 <param name="Коды расходников">CK8350K</param>
 <param name="Оригинальность">Совместимый</param>
@@ -50235,16 +50235,16 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <name>Тонер-картридж CK8350C для Triumph-Adler 2508ci (CET) Голубой, 220г, 20000 стр. (совместимый)</name>
 <price>22342</price>
 <picture>https://b2b.vtt.ru/images/CET141876.jpg</picture>
-<vendor>TA Triumph-Adler</vendor>
+<vendor>Triumph-Adler</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый тонер-картридж CK8350C для Triumph-Adler 2508ci (CET) Голубой, 220г, 20000 стр.; партномер — CET141876; совместимость — TA Triumph-Adler Triumph-Adler 2508ci (CET) Голубой, 220г, 20000 стр; технология печати — Лазерная.]]></description>
+Совместимый тонер-картридж CK8350C для Triumph-Adler 2508ci (CET) Голубой, 220г, 20000 стр.; партномер — CET141876; технология печати — Лазерная.]]></description>
 <param name="Тип">Тонер-картридж</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Для бренда">TA Triumph-Adler</param>
+<param name="Для бренда">Triumph-Adler</param>
 <param name="Цвет">Голубой</param>
 <param name="Партномер">CET141876</param>
-<param name="Совместимость">TA Triumph-Adler Triumph-Adler 2508ci (CET) Голубой, 220г, 20000 стр</param>
+<param name="Совместимость">Triumph-Adler 2508ci (CET) Голубой, 220г, 20000 стр</param>
 <param name="Ресурс">20000</param>
 <param name="Коды расходников">CK8350C</param>
 <param name="Оригинальность">Совместимый</param>
@@ -50256,16 +50256,16 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <name>Тонер-картридж CK8350M для Triumph-Adler 2508ci (CET) Пурпурный, 220г, 20000 стр. (совместимый)</name>
 <price>22342</price>
 <picture>https://b2b.vtt.ru/images/CET141877.jpg</picture>
-<vendor>TA Triumph-Adler</vendor>
+<vendor>Triumph-Adler</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый тонер-картридж CK8350M для Triumph-Adler 2508ci (CET) Пурпурный, 220г, 20000 стр.; партномер — CET141877; совместимость — TA Triumph-Adler Triumph-Adler 2508ci (CET) Пурпурный, 220г, 20000 стр; технология печати — Лазерная.]]></description>
+Совместимый тонер-картридж CK8350M для Triumph-Adler 2508ci (CET) Пурпурный, 220г, 20000 стр.; партномер — CET141877; технология печати — Лазерная.]]></description>
 <param name="Тип">Тонер-картридж</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Для бренда">TA Triumph-Adler</param>
+<param name="Для бренда">Triumph-Adler</param>
 <param name="Цвет">Пурпурный</param>
 <param name="Партномер">CET141877</param>
-<param name="Совместимость">TA Triumph-Adler Triumph-Adler 2508ci (CET) Пурпурный, 220г, 20000 стр</param>
+<param name="Совместимость">Triumph-Adler 2508ci (CET) Пурпурный, 220г, 20000 стр</param>
 <param name="Ресурс">20000</param>
 <param name="Коды расходников">CK8350M</param>
 <param name="Оригинальность">Совместимый</param>
@@ -50277,16 +50277,16 @@ URL поставщика                             | https://b2b.vtt.ru/catalo
 <name>Тонер-картридж CK8350Y для Triumph-Adler 2508ci (CET) Желтый, 220г, 20000 стр. (совместимый)</name>
 <price>22342</price>
 <picture>https://b2b.vtt.ru/images/CET141878.jpg</picture>
-<vendor>TA Triumph-Adler</vendor>
+<vendor>Triumph-Adler</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Совместимый тонер-картридж CK8350Y для Triumph-Adler 2508ci (CET) Желтый, 220г, 20000 стр.; партномер — CET141878; совместимость — TA Triumph-Adler Triumph-Adler 2508ci (CET) Желтый, 220г, 20000 стр; технология печати — Лазерная.]]></description>
+Совместимый тонер-картридж CK8350Y для Triumph-Adler 2508ci (CET) Желтый, 220г, 20000 стр.; партномер — CET141878; технология печати — Лазерная.]]></description>
 <param name="Тип">Тонер-картридж</param>
 <param name="Технология печати">Лазерная</param>
-<param name="Для бренда">TA Triumph-Adler</param>
+<param name="Для бренда">Triumph-Adler</param>
 <param name="Цвет">Желтый</param>
 <param name="Партномер">CET141878</param>
-<param name="Совместимость">TA Triumph-Adler Triumph-Adler 2508ci (CET) Желтый, 220г, 20000 стр</param>
+<param name="Совместимость">Triumph-Adler 2508ci (CET) Желтый, 220г, 20000 стр</param>
 <param name="Ресурс">20000</param>
 <param name="Коды расходников">CK8350Y</param>
 <param name="Оригинальность">Совместимый</param>
