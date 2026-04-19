@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<yml_catalog date="2026-04-19 00:14:29">
+<yml_catalog date="2026-04-19 20:36:40">
 <shop><offers>
 <!--FEED_META
 Поставщик                                  | AlStyle
 URL поставщика                             | https://al-style.kz/upload/catalog_export/al_style_catalog.php
-Время сборки (Алматы)                      | 2026-04-19 00:14:29
+Время сборки (Алматы)                      | 2026-04-19 20:36:40
 Ближайшая сборка (Алматы)                  | 2026-04-19 23:30:00
 Сколько товаров у поставщика до фильтра    | 16864
 Сколько товаров у поставщика после фильтра | 1993
-Сколько товаров есть в наличии (true)      | 1474
-Сколько товаров нет в наличии (false)      | 519
+Сколько товаров есть в наличии (true)      | 1473
+Сколько товаров нет в наличии (false)      | 520
 -->
 
 <offer id="AS113695" available="true">
@@ -5967,7 +5967,7 @@ URL поставщика                             | https://al-style.kz/uploa
 <param name="Объём">0.02376</param>
 </offer>
 
-<offer id="AS18931" available="false">
+<offer id="AS18931" available="true">
 <categoryId></categoryId>
 <vendorCode>AS18931</vendorCode>
 <name>Кабель сетевой SHIP D135-P Cat.5e UTP 30В PVC</name>
@@ -10681,7 +10681,7 @@ CyberPower OLS2000E - эта серия высокопроизводительн
 <param name="Оригинальность">Оригинал</param>
 </offer>
 
-<offer id="AS266714" available="true">
+<offer id="AS266714" available="false">
 <categoryId></categoryId>
 <vendorCode>AS266714</vendorCode>
 <name>Тонер-картридж экстра повышенной емкости Xerox 006R04404 (оригинал)</name>
@@ -10956,7 +10956,7 @@ CyberPower OLS2000E - эта серия высокопроизводительн
 <param name="Совместимость">Xerox VersaLink B7135</param>
 </offer>
 
-<offer id="AS266861" available="true">
+<offer id="AS266861" available="false">
 <categoryId></categoryId>
 <vendorCode>AS266861</vendorCode>
 <name>Тонер-картридж Xerox 006R01819 (оригинал)</name>
@@ -11274,7 +11274,7 @@ CyberPower OLS2000E - эта серия высокопроизводительн
 <param name="Оригинальность">Оригинал</param>
 </offer>
 
-<offer id="AS266932" available="true">
+<offer id="AS266932" available="false">
 <categoryId></categoryId>
 <vendorCode>AS266932</vendorCode>
 <name>Фотобарабан Xerox 013R00688 (оригинал)</name>
@@ -44177,7 +44177,7 @@ Sysform LM-360N — ламинатор Sysform LM-360N — это професс
 <param name="Объём">0.1637055</param>
 </offer>
 
-<offer id="AS419385" available="false">
+<offer id="AS419385" available="true">
 <categoryId></categoryId>
 <vendorCode>AS419385</vendorCode>
 <name>Цветное лазерное МФУ Canon I-S MF664CDW</name>
