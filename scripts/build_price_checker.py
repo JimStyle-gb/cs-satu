@@ -31,8 +31,8 @@ DETAIL_LIMIT_CRITICAL = 1000
 
 WARN_TOTAL_DELTA_PCT = 5.0
 WARN_SUPPLIER_DELTA_PCT = 10.0
-WARN_PRICE100_DELTA_ABS = 50
-WARN_PRICE100_DELTA_PCT = 10.0
+WARN_READY_TO_SHIP_NO_PRICE_DELTA_ABS = 50
+WARN_READY_TO_SHIP_NO_PRICE_DELTA_PCT = 10.0
 WARN_PLACEHOLDER_DELTA_ABS = 50
 WARN_PLACEHOLDER_DELTA_PCT = 10.0
 WARN_FALSE_DELTA_PCT = 20.0
@@ -55,6 +55,7 @@ class OfferEntry:
     category_id: str = ""
     portal_category_id: str = ""
     price: str = ""
+    in_stock: bool = False
     picture: str = ""
 
 
@@ -63,7 +64,7 @@ class SupplierSummary:
     total: int = 0
     available: int = 0
     unavailable: int = 0
-    price100: int = 0
+    ready_to_ship_no_price: int = 0
     placeholder: int = 0
     excluded_no_categoryid: int = 0
     no_satu_category: int = 0
@@ -73,7 +74,7 @@ class SupplierSummary:
             "total": self.total,
             "available": self.available,
             "unavailable": self.unavailable,
-            "price100": self.price100,
+            "ready_to_ship_no_price": self.ready_to_ship_no_price,
             "placeholder": self.placeholder,
             "excluded_no_categoryid": self.excluded_no_categoryid,
             "no_satu_category": self.no_satu_category,
@@ -85,7 +86,7 @@ class SupplierSummary:
             total=int(data.get("total", 0)),
             available=int(data.get("available", 0)),
             unavailable=int(data.get("unavailable", 0)),
-            price100=int(data.get("price100", 0)),
+            ready_to_ship_no_price=int(data.get("ready_to_ship_no_price", data.get("price100", 0))),
             placeholder=int(data.get("placeholder", 0)),
             excluded_no_categoryid=int(data.get("excluded_no_categoryid", 0)),
             no_satu_category=int(data.get("no_satu_category", 0)),
@@ -104,7 +105,7 @@ class Metrics:
     total: int = 0
     available_true: int = 0
     available_false: int = 0
-    price100: int = 0
+    ready_to_ship_no_price: int = 0
     placeholder: int = 0
     empty_category: int = 0
     invalid_category: int = 0
@@ -116,7 +117,7 @@ class Metrics:
     excluded_unmapped_by_supplier: Dict[str, int] = field(default_factory=dict)
     excluded_details: List[str] = field(default_factory=list)
     no_satu_category_details: List[OfferEntry] = field(default_factory=list)
-    price100_details: List[OfferEntry] = field(default_factory=list)
+    ready_to_ship_no_price_details: List[OfferEntry] = field(default_factory=list)
     placeholder_details: List[OfferEntry] = field(default_factory=list)
     duplicate_offer_id_details: List[DuplicateGroup] = field(default_factory=list)
     duplicate_vendorcode_details: List[DuplicateGroup] = field(default_factory=list)
@@ -127,7 +128,7 @@ class Metrics:
             "total": self.total,
             "available_true": self.available_true,
             "available_false": self.available_false,
-            "price100": self.price100,
+            "ready_to_ship_no_price": self.ready_to_ship_no_price,
             "placeholder": self.placeholder,
             "empty_category": self.empty_category,
             "invalid_category": self.invalid_category,
@@ -150,7 +151,7 @@ class Metrics:
             total=int(data.get("total", 0)),
             available_true=int(data.get("available_true", 0)),
             available_false=int(data.get("available_false", 0)),
-            price100=int(data.get("price100", 0)),
+            ready_to_ship_no_price=int(data.get("ready_to_ship_no_price", data.get("price100", 0))),
             placeholder=int(data.get("placeholder", 0)),
             empty_category=int(data.get("empty_category", 0)),
             invalid_category=int(data.get("invalid_category", 0)),
@@ -241,6 +242,7 @@ def make_offer_entry(offer: ET.Element, supplier_hint: str = "") -> OfferEntry:
         category_id=(offer.findtext("categoryId") or "").strip(),
         portal_category_id=(offer.findtext("portal_category_id") or "").strip(),
         price=(offer.findtext("price") or "").strip(),
+        in_stock=str(offer.get("in_stock", "")).strip().lower() == "true",
         picture=next(((pic.text or "").strip() for pic in offer.findall("picture") if (pic.text or "").strip()), ""),
     )
 
@@ -304,6 +306,8 @@ def format_entry_line(entry: OfferEntry, issue: str) -> str:
         parts.append(f"portal_category_id={entry.portal_category_id}")
     if entry.price:
         parts.append(f"price={entry.price}")
+    if entry.in_stock:
+        parts.append("in_stock=true")
     if entry.picture:
         parts.append(f"picture={entry.picture}")
     parts.append(f"name={entry.name or '-'}")
@@ -357,13 +361,13 @@ def collect_metrics(price_path: Path) -> Metrics:
     offer_id_map: Dict[str, List[OfferEntry]] = {}
     vendor_code_map: Dict[str, List[OfferEntry]] = {}
     no_satu_category_details: List[OfferEntry] = []
-    price100_details: List[OfferEntry] = []
+    ready_to_ship_no_price_details: List[OfferEntry] = []
     placeholder_details: List[OfferEntry] = []
 
     total = 0
     available_true = 0
     available_false = 0
-    price100 = 0
+    ready_to_ship_no_price = 0
     placeholder = 0
     empty_category = 0
     invalid_category = 0
@@ -406,14 +410,11 @@ def collect_metrics(price_path: Path) -> Metrics:
             if supplier:
                 supplier_summary[supplier].no_satu_category += 1
 
-        try:
-            if int(float(entry.price or "0")) == 100:
-                price100 += 1
-                price100_details.append(entry)
-                if supplier:
-                    supplier_summary[supplier].price100 += 1
-        except Exception:
-            pass
+        if not entry.price and entry.in_stock:
+            ready_to_ship_no_price += 1
+            ready_to_ship_no_price_details.append(entry)
+            if supplier:
+                supplier_summary[supplier].ready_to_ship_no_price += 1
 
         pictures = [(pic.text or "").strip() for pic in offer.findall("picture") if (pic.text or "").strip()]
         if any(pic == PLACEHOLDER_URL for pic in pictures):
@@ -438,7 +439,7 @@ def collect_metrics(price_path: Path) -> Metrics:
         total=total,
         available_true=available_true,
         available_false=available_false,
-        price100=price100,
+        ready_to_ship_no_price=ready_to_ship_no_price,
         placeholder=placeholder,
         empty_category=empty_category,
         invalid_category=invalid_category,
@@ -450,7 +451,7 @@ def collect_metrics(price_path: Path) -> Metrics:
         excluded_unmapped_by_supplier=excluded_by_supplier,
         excluded_details=excluded_details,
         no_satu_category_details=no_satu_category_details,
-        price100_details=price100_details,
+        ready_to_ship_no_price_details=ready_to_ship_no_price_details,
         placeholder_details=placeholder_details,
         duplicate_offer_id_details=duplicate_offer_groups,
         duplicate_vendorcode_details=duplicate_vendorcode_groups,
@@ -513,8 +514,8 @@ def evaluate(metrics: Metrics, baseline: Metrics | None) -> Tuple[str, str]:
         if pct_change(old_total, new_total) > WARN_SUPPLIER_DELTA_PCT:
             return "ТРЕБУЕТ ВНИМАНИЯ", f"У поставщика {supplier} количество товаров изменилось сильнее допустимого порога."
 
-    if has_warn_abs_pct(baseline.price100, metrics.price100, WARN_PRICE100_DELTA_ABS, WARN_PRICE100_DELTA_PCT):
-        return "ТРЕБУЕТ ВНИМАНИЯ", "Слишком сильно выросло количество товаров с ценой 100."
+    if has_warn_abs_pct(baseline.ready_to_ship_no_price, metrics.ready_to_ship_no_price, WARN_READY_TO_SHIP_NO_PRICE_DELTA_ABS, WARN_READY_TO_SHIP_NO_PRICE_DELTA_PCT):
+        return "ТРЕБУЕТ ВНИМАНИЯ", "Слишком сильно выросло количество товаров, готовых к отправке без цены."
 
     if has_warn_abs_pct(baseline.placeholder, metrics.placeholder, WARN_PLACEHOLDER_DELTA_ABS, WARN_PLACEHOLDER_DELTA_PCT):
         return "ТРЕБУЕТ ВНИМАНИЯ", "Слишком сильно выросло количество товаров с заглушкой фото."
@@ -527,7 +528,7 @@ def evaluate(metrics: Metrics, baseline: Metrics | None) -> Tuple[str, str]:
 
 def build_summary_report(status: str, reason: str, metrics: Metrics, baseline: Metrics | None, checked_at: datetime) -> str:
     icon = {"УСПЕШНО": "✅", "ТРЕБУЕТ ВНИМАНИЯ": "⚠️", "НЕУСПЕШНО": "❌"}.get(status, "ℹ️")
-    top_price100 = build_top_suppliers({supplier: info.price100 for supplier, info in metrics.supplier_summary.items()})
+    top_ready_to_ship_no_price = build_top_suppliers({supplier: info.ready_to_ship_no_price for supplier, info in metrics.supplier_summary.items()})
     top_placeholder = build_top_suppliers({supplier: info.placeholder for supplier, info in metrics.supplier_summary.items()})
     top_excluded = build_top_suppliers(metrics.excluded_unmapped_by_supplier)
     satu_mapping_status = "УСПЕШНО" if metrics.unknown_satu == 0 else "НЕУСПЕШНО"
@@ -541,7 +542,7 @@ def build_summary_report(status: str, reason: str, metrics: Metrics, baseline: M
         f"Есть в наличии: {metrics.available_true} {fmt_delta(baseline.available_true if baseline else None, metrics.available_true)}",
         f"Нет в наличии: {metrics.available_false} {fmt_delta(baseline.available_false if baseline else None, metrics.available_false)}",
         "",
-        f"С ценой 100: {metrics.price100} {fmt_delta(baseline.price100 if baseline else None, metrics.price100)}",
+        f"Готово к отправке без цены: {metrics.ready_to_ship_no_price} {fmt_delta(baseline.ready_to_ship_no_price if baseline else None, metrics.ready_to_ship_no_price)}",
         f"С заглушкой фото: {metrics.placeholder} {fmt_delta(baseline.placeholder if baseline else None, metrics.placeholder)}",
         f"Без categoryId: {metrics.empty_category}",
         f"С невалидным categoryId: {metrics.invalid_category}",
@@ -550,12 +551,12 @@ def build_summary_report(status: str, reason: str, metrics: Metrics, baseline: M
         "",
         "Проблемные хвосты по поставщикам",
         "",
-        "Цена 100:",
+        "Готово к отправке без цены:",
     ]
-    if top_price100 == 'нет':
+    if top_ready_to_ship_no_price == 'нет':
         lines.append('нет')
     else:
-        lines.extend(top_price100.split(', '))
+        lines.extend(top_ready_to_ship_no_price.split(', '))
     lines.extend([
         "",
         "Заглушка фото:",
@@ -578,7 +579,7 @@ def build_summary_report(status: str, reason: str, metrics: Metrics, baseline: M
 
 def build_telegram_summary_html(status: str, reason: str, metrics: Metrics, baseline: Metrics | None, checked_at: datetime) -> str:
     icon = {"УСПЕШНО": "✅", "ТРЕБУЕТ ВНИМАНИЯ": "⚠️", "НЕУСПЕШНО": "❌"}.get(status, "ℹ️")
-    top_price100 = build_top_suppliers({supplier: info.price100 for supplier, info in metrics.supplier_summary.items()})
+    top_ready_to_ship_no_price = build_top_suppliers({supplier: info.ready_to_ship_no_price for supplier, info in metrics.supplier_summary.items()})
     top_placeholder = build_top_suppliers({supplier: info.placeholder for supplier, info in metrics.supplier_summary.items()})
     top_excluded = build_top_suppliers(metrics.excluded_unmapped_by_supplier)
     satu_mapping_status = "УСПЕШНО" if metrics.unknown_satu == 0 else "НЕУСПЕШНО"
@@ -599,7 +600,7 @@ def build_telegram_summary_html(status: str, reason: str, metrics: Metrics, base
         field("Есть в наличии:", f"{metrics.available_true} {fmt_delta(baseline.available_true if baseline else None, metrics.available_true)}"),
         field("Нет в наличии:", f"{metrics.available_false} {fmt_delta(baseline.available_false if baseline else None, metrics.available_false)}"),
         "",
-        field("С ценой 100:", f"{metrics.price100} {fmt_delta(baseline.price100 if baseline else None, metrics.price100)}"),
+        field("Готово к отправке без цены:", f"{metrics.ready_to_ship_no_price} {fmt_delta(baseline.ready_to_ship_no_price if baseline else None, metrics.ready_to_ship_no_price)}"),
         field("С заглушкой фото:", f"{metrics.placeholder} {fmt_delta(baseline.placeholder if baseline else None, metrics.placeholder)}"),
         field("Без categoryId:", str(metrics.empty_category)),
         field("С невалидным categoryId:", str(metrics.invalid_category)),
@@ -608,12 +609,12 @@ def build_telegram_summary_html(status: str, reason: str, metrics: Metrics, base
         "",
         "<b>Проблемные хвосты по поставщикам</b>",
         "",
-        "<b>Цена 100:</b>",
+        "<b>Готово к отправке без цены:</b>",
     ]
-    if top_price100 == 'нет':
+    if top_ready_to_ship_no_price == 'нет':
         lines.append('нет')
     else:
-        lines.extend(esc(item) for item in top_price100.split(', '))
+        lines.extend(esc(item) for item in top_ready_to_ship_no_price.split(', '))
     lines.extend([
         "",
         "<b>Заглушка фото:</b>",
@@ -640,7 +641,7 @@ def build_supplier_summary_lines(metrics: Metrics) -> List[str]:
         info = metrics.supplier_summary.get(supplier, SupplierSummary())
         lines.append(
             f"{supplier} | всего={info.total} | в наличии={info.available} | нет в наличии={info.unavailable} "
-            f"| цена 100={info.price100} | заглушка фото={info.placeholder} "
+            f"| готово к отправке без цены={info.ready_to_ship_no_price} | заглушка фото={info.placeholder} "
             f"| не вошло в final без categoryId={info.excluded_no_categoryid} | без категории Satu={info.no_satu_category}"
         )
     return lines or ["нет"]
@@ -648,10 +649,10 @@ def build_supplier_summary_lines(metrics: Metrics) -> List[str]:
 
 def build_top_problem_lines(metrics: Metrics) -> List[str]:
     blocks = []
-    blocks.append("Цена 100:")
-    for supplier, count in sorted(((s, i.price100) for s, i in metrics.supplier_summary.items() if i.price100 > 0), key=lambda x: (-x[1], x[0]))[:5]:
+    blocks.append("Готово к отправке без цены:")
+    for supplier, count in sorted(((s, i.ready_to_ship_no_price) for s, i in metrics.supplier_summary.items() if i.ready_to_ship_no_price > 0), key=lambda x: (-x[1], x[0]))[:5]:
         blocks.append(f"- {supplier}: {count}")
-    if blocks[-1] == "Цена 100:":
+    if blocks[-1] == "Готово к отправке без цены:":
         blocks.append("нет")
 
     blocks.append("")
@@ -689,7 +690,7 @@ def build_details_report(status: str, reason: str, metrics: Metrics, checked_at:
         f"В наличии: {metrics.available_true}",
         f"Нет в наличии: {metrics.available_false}",
         "",
-        f"С ценой 100: {metrics.price100}",
+        f"Готово к отправке без цены: {metrics.ready_to_ship_no_price}",
         f"С заглушкой фото: {metrics.placeholder}",
         f"Без categoryId в Price: {metrics.empty_category}",
         f"С невалидным categoryId в Price: {metrics.invalid_category}",
@@ -717,8 +718,8 @@ def build_details_report(status: str, reason: str, metrics: Metrics, checked_at:
             limit_lines([format_entry_line(entry, "no_satu_category") for entry in metrics.no_satu_category_details], DETAIL_LIMIT_CRITICAL) or ["нет"],
         ),
         (
-            "ТОВАРЫ С ЦЕНОЙ 100",
-            limit_lines([format_entry_line(entry, "price_100") for entry in metrics.price100_details], DETAIL_LIMIT_DEFAULT) or ["нет"],
+            "ТОВАРЫ ГОТОВЫ К ОТПРАВКЕ БЕЗ ЦЕНЫ",
+            limit_lines([format_entry_line(entry, "ready_to_ship_no_price") for entry in metrics.ready_to_ship_no_price_details], DETAIL_LIMIT_DEFAULT) or ["нет"],
         ),
         (
             "ТОВАРЫ С ЗАГЛУШКОЙ ФОТО",
