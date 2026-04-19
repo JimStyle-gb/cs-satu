@@ -13,13 +13,13 @@ freeze_current_as_baseline: no
 # yes = текущие cosmetic-хвосты сохранены как baseline-снимок
 critical_count: 0
 # Сколько найдено критичных проблем
-cosmetic_total_count: 108
+cosmetic_total_count: 107
 # Общее число некритичных проблем
-cosmetic_offer_count: 108
+cosmetic_offer_count: 107
 # В скольких товарах есть cosmetic-проблемы
-known_cosmetic_count: 108
+known_cosmetic_count: 107
 # Сколько cosmetic-проблем уже известны по baseline
-known_cosmetic_offer_count: 108
+known_cosmetic_offer_count: 107
 # В скольких товарах есть уже известные cosmetic-проблемы
 new_cosmetic_count: 0
 # Сколько найдено новых cosmetic-проблем
@@ -141,7 +141,6 @@ CP13873248 | placeholder_picture | Требует ручной проверки 
 CP13873253 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13873256 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13873258 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
-CP13873261 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 
 NEW COSMETIC:
 # Ошибок в этой секции нет
@@ -254,4 +253,3 @@ CP13873248 | placeholder_picture | Требует ручной проверки 
 CP13873253 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13873256 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13873258 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
-CP13873261 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo

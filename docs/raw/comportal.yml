@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<yml_catalog date="2026-04-19 00:59:21">
+<yml_catalog date="2026-04-19 20:39:21">
 <shop><offers>
 <!--FEED_META
 Поставщик                                  | ComPortal
 URL поставщика                             | https://www.comportal.kz/auth/documents/prices/yml-catalog.php
-Время сборки (Алматы)                      | 2026-04-19 00:59:21
+Время сборки (Алматы)                      | 2026-04-19 20:39:21
 Ближайшая сборка (Алматы)                  | 2026-04-20 00:30:00
-Сколько товаров у поставщика до фильтра    | 1182
-Сколько товаров у поставщика после фильтра | 627
-Сколько товаров есть в наличии (true)      | 627
+Сколько товаров у поставщика до фильтра    | 1181
+Сколько товаров у поставщика после фильтра | 626
+Сколько товаров есть в наличии (true)      | 626
 Сколько товаров нет в наличии (false)      | 0
 -->
 
@@ -1453,23 +1453,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Коды">5161C007</param>
 <param name="Модель">i-SENSYS MF453dw</param>
 <param name="Для бренда">Canon</param>
-</offer>
-
-<offer id="CP13873261" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13873261</vendorCode>
-<name>МФУ Canon i-SENSYS MF237W (1418С030)</name>
-<price>217450</price>
-<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
-<vendor>Canon</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-МФУ. Гарантия: 12 мес. Для бренда: Canon. Модель: i-SENSYS MF237W. Коды: 1418С030.]]></description>
-<param name="Тип">МФУ</param>
-<param name="Гарантия">12 мес</param>
-<param name="Для бренда">Canon</param>
-<param name="Модель">i-SENSYS MF237W</param>
-<param name="Коды">1418С030</param>
 </offer>
 
 <offer id="CP10416791" available="true">
