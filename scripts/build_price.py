@@ -245,7 +245,7 @@ def _load_offers(default_map: dict[str, str], overrides: list[dict[str, Any]]) -
     offers: list[OfferInfo] = []
     feed_meta_blocks: list[str] = []
     status_counts: Counter[str] = Counter()
-    price_100 = 0
+    ready_to_ship_no_price = 0
     placeholder_count = 0
     missing_sources: list[str] = []
 
@@ -270,8 +270,9 @@ def _load_offers(default_map: dict[str, str], overrides: list[dict[str, Any]]) -
             params = _parse_params(block)
             available = _extract_available(block)
 
-            if price == '100':
-                price_100 += 1
+            is_ready_to_ship = ' in_stock="true"' in block
+            if not price and is_ready_to_ship:
+                ready_to_ship_no_price += 1
             if any(p == PLACEHOLDER_PICTURE for p in pictures):
                 placeholder_count += 1
 
@@ -304,7 +305,7 @@ def _load_offers(default_map: dict[str, str], overrides: list[dict[str, Any]]) -
 
     if missing_sources:
         raise FileNotFoundError('Не найдены final-файлы поставщиков: ' + ', '.join(missing_sources))
-    return offers, feed_meta_blocks, status_counts, price_100, placeholder_count
+    return offers, feed_meta_blocks, status_counts, ready_to_ship_no_price, placeholder_count
 
 
 def _build_categories_xml(default_map: dict[str, str]) -> tuple[str, int, int, int]:
@@ -355,7 +356,7 @@ def _write_audit_report(*, total_categories: int, leaf_categories: int, mapped_l
     AUDIT_FILE.write_text('\n'.join(lines) + '\n', encoding='utf-8')
 
 
-def _render_price_feed(*, offers: list[OfferInfo], feed_meta_blocks: list[str], total_categories: int, leaf_categories: int, mapped_leaf: int, status_counts: Counter[str], price_100: int, placeholder_count: int, satu_file_name: str, categories_xml: str) -> str:
+def _render_price_feed(*, offers: list[OfferInfo], feed_meta_blocks: list[str], total_categories: int, leaf_categories: int, mapped_leaf: int, status_counts: Counter[str], ready_to_ship_no_price: int, placeholder_count: int, satu_file_name: str, categories_xml: str) -> str:
     now = datetime.now(TZ)
     next_run = now.replace(hour=4, minute=30, second=0, microsecond=0)
     if next_run <= now:
@@ -371,7 +372,7 @@ def _render_price_feed(*, offers: list[OfferInfo], feed_meta_blocks: list[str], 
         f'Сколько товаров в Price всего         | {len(offers)}',
         f'Сколько товаров есть в наличии (true) | {status_counts["true"]}',
         f'Сколько товаров нет в наличии (false) | {status_counts["false"]}',
-        f'Сколько товаров с ценой 100           | {price_100}',
+        f'Сколько товаров готово к отправке без цены | {ready_to_ship_no_price}',
         f'Сколько товаров с заглушкой фото      | {placeholder_count}',
         'Сколько товаров без categoryId        | 0',
         f'Сколько дублей offer id               | {len(offers) - len({o.offer_id for o in offers})}',
@@ -426,7 +427,7 @@ def main() -> int:
     portal_registry = _build_portal_registry()
     default_map = _build_default_map(portal_registry)
     overrides = _build_overrides(portal_registry)
-    offers, feed_meta_blocks, status_counts, price_100, placeholder_count = _load_offers(default_map, overrides)
+    offers, feed_meta_blocks, status_counts, ready_to_ship_no_price, placeholder_count = _load_offers(default_map, overrides)
 
     offer_ids = [o.offer_id for o in offers]
     vendor_codes = [o.vendor_code for o in offers]
@@ -458,7 +459,7 @@ def main() -> int:
             leaf_categories=leaf_categories,
             mapped_leaf=mapped_leaf,
             status_counts=status_counts,
-            price_100=price_100,
+            ready_to_ship_no_price=ready_to_ship_no_price,
             placeholder_count=placeholder_count,
             satu_file_name=satu_file_name,
             categories_xml=categories_xml,
