@@ -34,6 +34,15 @@ OUTPUT_FILE = DOCS_DIR / 'Price.yml'
 UNMAPPED_FILE = RAW_DOCS_DIR / 'price_satu_unmapped_offers.txt'
 AUDIT_FILE = RAW_DOCS_DIR / 'price_satu_portal_audit.txt'
 
+XML_MIRROR_SOURCES = [
+    DOCS_DIR / 'akcent.yml',
+    DOCS_DIR / 'alstyle.yml',
+    DOCS_DIR / 'comportal.yml',
+    DOCS_DIR / 'copyline.yml',
+    DOCS_DIR / 'vtt.yml',
+    OUTPUT_FILE,
+]
+
 PRICE_CATEGORIES_FILE = CONFIG_DIR / 'price_categories.yml'
 SATU_PORTAL_CATEGORIES_FILE = CONFIG_DIR / 'satu_portal_categories.yml'
 PRICE_PORTAL_MAP_FILE = CONFIG_DIR / 'price_portal_map.yml'
@@ -372,7 +381,7 @@ def _render_price_feed(*, offers: list[OfferInfo], feed_meta_blocks: list[str], 
         f'Сколько товаров в Price всего         | {len(offers)}',
         f'Сколько товаров есть в наличии (true) | {status_counts["true"]}',
         f'Сколько товаров нет в наличии (false) | {status_counts["false"]}',
-        f'Сколько товаров без цены                | {ready_to_ship_no_price}',
+        f'Сколько товаров готово к отправке без цены | {ready_to_ship_no_price}',
         f'Сколько товаров с заглушкой фото      | {placeholder_count}',
         'Сколько товаров без categoryId        | 0',
         f'Сколько дублей offer id               | {len(offers) - len({o.offer_id for o in offers})}',
@@ -414,6 +423,18 @@ def _render_price_feed(*, offers: list[OfferInfo], feed_meta_blocks: list[str], 
         lines.append('')
     lines.extend(['    </offers>', '  </shop>', '</yml_catalog>', ''])
     return '\n'.join(lines)
+
+
+def _write_xml_mirrors() -> list[Path]:
+    written: list[Path] = []
+    for yml_path in XML_MIRROR_SOURCES:
+        if not yml_path.exists():
+            raise FileNotFoundError(f'Не найден файл для XML-копии: {yml_path.as_posix()}')
+        xml_path = yml_path.with_suffix('.xml')
+        xml_path.write_text(yml_path.read_text(encoding='utf-8'), encoding='utf-8')
+        _validate_output_xml(xml_path)
+        written.append(xml_path)
+    return written
 
 
 def _validate_output_xml(path: Path) -> None:
@@ -467,7 +488,9 @@ def main() -> int:
         encoding='utf-8',
     )
     _validate_output_xml(OUTPUT_FILE)
+    xml_mirrors = _write_xml_mirrors()
     print(f'[PRICE] OK: {OUTPUT_FILE.as_posix()}')
+    print('[PRICE] XML mirrors: ' + ', '.join(path.name for path in xml_mirrors))
     return 0
 
 
