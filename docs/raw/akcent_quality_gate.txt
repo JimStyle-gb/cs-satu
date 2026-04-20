@@ -5,9 +5,9 @@ enforce: true
 # true = quality gate реально валит сборку
 supplier: akcent
 # Поставщик, для которого построен отчёт
-report_file: /home/runner/work/supplier-feeds/supplier-feeds/docs/raw/akcent_quality_gate.txt
+report_file: /home/runner/work/cs-satu/cs-satu/docs/raw/akcent_quality_gate.txt
 # Куда записан этот отчёт
-baseline_file: /home/runner/work/supplier-feeds/supplier-feeds/scripts/suppliers/akcent/config/quality_gate_baseline.yml
+baseline_file: /home/runner/work/cs-satu/cs-satu/scripts/suppliers/akcent/config/quality_gate_baseline.yml
 # Базовый файл для сравнения известных cosmetic-проблем
 freeze_current_as_baseline: no
 # yes = текущие cosmetic-хвосты сохранены как baseline-снимок
