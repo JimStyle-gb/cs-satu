@@ -1,4 +1,4 @@
-# supplier-feeds
+# cs-satu
 # Основные зависимости проекта для локального запуска и GitHub Actions.
 # Python 3.11
 
