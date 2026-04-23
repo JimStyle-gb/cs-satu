@@ -13,13 +13,13 @@ freeze_current_as_baseline: no
 # yes = текущие cosmetic-хвосты сохранены как baseline-снимок
 critical_count: 0
 # Сколько найдено критичных проблем
-cosmetic_total_count: 111
+cosmetic_total_count: 109
 # Общее число некритичных проблем
-cosmetic_offer_count: 111
+cosmetic_offer_count: 109
 # В скольких товарах есть cosmetic-проблемы
-known_cosmetic_count: 111
+known_cosmetic_count: 109
 # Сколько cosmetic-проблем уже известны по baseline
-known_cosmetic_offer_count: 111
+known_cosmetic_offer_count: 109
 # В скольких товарах есть уже известные cosmetic-проблемы
 new_cosmetic_count: 0
 # Сколько найдено новых cosmetic-проблем
@@ -34,7 +34,6 @@ CRITICAL:
 # Ошибок в этой секции нет
 
 COSMETIC TOTAL:
-CP10397103 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP10420608 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP10782666 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP10782667 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
@@ -59,7 +58,6 @@ CP13872617 | placeholder_picture | Требует ручной проверки 
 CP13872623 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13872628 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13872652 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
-CP13872662 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13872682 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13872763 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13872771 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
@@ -116,7 +114,6 @@ CP13873054 | placeholder_picture | Требует ручной проверки 
 CP13873058 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13873061 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13873102 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
-CP13873137 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13873145 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13873166 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13873167 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
@@ -145,12 +142,12 @@ CP13873279 | placeholder_picture | Требует ручной проверки 
 CP13873280 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13873295 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13873296 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
+CP13873310 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 
 NEW COSMETIC:
 # Ошибок в этой секции нет
 
 KNOWN COSMETIC:
-CP10397103 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP10420608 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP10782666 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP10782667 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
@@ -175,7 +172,6 @@ CP13872617 | placeholder_picture | Требует ручной проверки 
 CP13872623 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13872628 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13872652 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
-CP13872662 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13872682 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13872763 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13872771 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
@@ -232,7 +228,6 @@ CP13873054 | placeholder_picture | Требует ручной проверки 
 CP13873058 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13873061 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13873102 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
-CP13873137 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13873145 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13873166 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13873167 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
@@ -261,3 +256,4 @@ CP13873279 | placeholder_picture | Требует ручной проверки 
 CP13873280 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13873295 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
 CP13873296 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
+CP13873310 | placeholder_picture | Требует ручной проверки | https://placehold.co/800x800/png?text=No+Photo
