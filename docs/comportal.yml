@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<yml_catalog date="2026-04-24 01:31:52">
+<yml_catalog date="2026-04-25 01:07:13">
 <shop><offers>
 <!--FEED_META
 Поставщик                                  | ComPortal
 URL поставщика                             | https://www.comportal.kz/auth/documents/prices/yml-catalog.php
-Время сборки (Алматы)                      | 2026-04-24 01:31:52
-Ближайшая сборка (Алматы)                  | 2026-04-25 00:30:00
-Сколько товаров у поставщика до фильтра    | 1175
-Сколько товаров у поставщика после фильтра | 635
-Сколько товаров есть в наличии (true)      | 635
+Время сборки (Алматы)                      | 2026-04-25 01:07:13
+Ближайшая сборка (Алматы)                  | 2026-04-26 00:30:00
+Сколько товаров у поставщика до фильтра    | 1168
+Сколько товаров у поставщика после фильтра | 627
+Сколько товаров есть в наличии (true)      | 627
 Сколько товаров нет в наличии (false)      | 0
 -->
 
@@ -2983,126 +2983,6 @@ URL поставщика                             | https://www.comportal.kz/
 <keywords>HP, МФУ HP LaserJet Pro 3103fdn (3G631A#B19), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
-<offer id="CP13816464" available="true">
-<categoryId>101</categoryId>
-<vendorCode>CP13816464</vendorCode>
-<name>МФУ HP LaserJet Enterprise M430f (3PZ55A#B19)</name>
-<price>279900</price>
-<picture>https://www.comportal.kz/upload/iblock/2a2/panykxnaffbczzk04kvtfyy00l6956w1.jpg</picture>
-<vendor>HP</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-<div style="font-family:Verdana, Tahoma, Arial, sans-serif;color:#2F2F2F;">
-<h3 style="margin:0 0 10px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">МФУ HP LaserJet Enterprise M430f (3PZ55A#B19)</h3>
-
-<p style="margin:0 0 10px 0;font-size:14px;line-height:1.5;font-family:inherit;">МФУ. Формат печати: A4. Разрешение: 1200x1200. Скорость печати ч/б: 38. Технология печати: Лазерная. Гарантия: 12 мес.</p>
-
-<h3 style="margin:14px 0 8px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Преимущества модели</h3>
-
-<ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li>Разрешение 1200x1200</li><li>Гарантия 12 мес</li></ul>
-
-<h3 style="margin:14px 0 8px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Характеристики</h3>
-<ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Гарантия:</strong> 12 мес</li><li><strong>Бренд:</strong> HP</li><li><strong>Коды:</strong> 3PZ55A#B19</li><li><strong>Модель:</strong> LaserJet Enterprise M430f</li><li><strong>Нагрузка:</strong> 100 000</li><li><strong>Наличие картриджа (тонера) в комплекте:</strong> Стартовый</li><li><strong>Разрешение:</strong> 1200x1200</li><li><strong>Скорость печати ч/б:</strong> 38</li><li><strong>Технология печати:</strong> Лазерная</li><li><strong>Тип:</strong> МФУ</li><li><strong>Формат печати:</strong> A4</li><li><strong>Функция:</strong> Принтер-Сканер(АПД-50с.)-Копир-Факс</li></ul>
-
-<div style="text-align:center;margin:10px 0 8px 0;">
-  <div class="ck-alert ck-alert_theme_green">
-    <div style="padding:4px 10px;font-family:inherit;">
-      <span class="ck-alert__title"></span>
-      <p style="margin:0 0 4px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>Просьба отправлять запросы на WhatsApp!</strong></p>
-      <p style="margin:0 0 6px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>+7 707 327-05-01</strong></p>
-      <p style="margin:0;font-size:14px;line-height:1.5;font-family:inherit;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block;padding:6px 12px;border:1px solid #146737;border-radius:6px;color:#146737;text-decoration:none;background:#FFFFFF;font-family:inherit;"><strong>💬 НАПИСАТЬ В WHATSAPP</strong></a></p>
-    </div>
-  </div>
-</div>
-
-<div class="ck-alert ck-alert_theme_orange" style="margin:8px 0 0 0;">
-  <div style="padding:4px 10px;font-family:inherit;">
-    <span class="ck-alert__title"></span>
-    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Оплата</h3>
-    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul>
-    <hr style="border:none;height:1px;background:#E7D6B7;margin:8px 0;" />
-    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Доставка по Алматы и Казахстану</h3>
-    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</li><li><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</li><li><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</li><li><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</li></ul>
-  </div>
-</div>
-
-</div>]]></description>
-<param name="Гарантия">12 мес</param>
-<param name="Для бренда">HP</param>
-<param name="Коды">3PZ55A#B19</param>
-<param name="Модель">LaserJet Enterprise M430f</param>
-<param name="Нагрузка">100 000</param>
-<param name="Наличие картриджа (тонера) в комплекте">Стартовый</param>
-<param name="Разрешение">1200x1200</param>
-<param name="Скорость печати ч/б">38</param>
-<param name="Технология печати">Лазерная</param>
-<param name="Тип">МФУ</param>
-<param name="Формат печати">A4</param>
-<param name="Функция">Принтер-Сканер(АПД-50с.)-Копир-Факс</param>
-<keywords>HP, МФУ HP LaserJet Enterprise M430f (3PZ55A#B19), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
-</offer>
-
-<offer id="CP13834336" available="true">
-<categoryId>101</categoryId>
-<vendorCode>CP13834336</vendorCode>
-<name>МФУ Canon i-SENSYS MF463dw (5951C008AA)</name>
-<price>222900</price>
-<picture>https://www.comportal.kz/upload/iblock/390/2nfu71ivarw81gnd8jp4rhlwlmr5c3gf.JPG</picture>
-<vendor>Canon</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-<div style="font-family:Verdana, Tahoma, Arial, sans-serif;color:#2F2F2F;">
-<h3 style="margin:0 0 10px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">МФУ Canon i-SENSYS MF463dw (5951C008AA)</h3>
-
-<p style="margin:0 0 10px 0;font-size:14px;line-height:1.5;font-family:inherit;">МФУ. Формат печати: A4. Разрешение: 1200x1200. Скорость печати ч/б: 40. Порты: USB LAN WiFI. Технология печати: Лазерная. Гарантия: 12 мес.</p>
-
-<h3 style="margin:14px 0 8px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Преимущества модели</h3>
-
-<ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li>Разрешение 1200x1200</li><li>Гарантия 12 мес</li></ul>
-
-<h3 style="margin:14px 0 8px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Характеристики</h3>
-<ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Гарантия:</strong> 12 мес</li><li><strong>Бренд:</strong> Canon</li><li><strong>Емкость 4-го лотка:</strong> 550</li><li><strong>Коды:</strong> 5951C008AA</li><li><strong>Модель:</strong> i-SENSYS MF463dw</li><li><strong>Нагрузка:</strong> 80 000</li><li><strong>Наличие картриджа (тонера) в комплекте:</strong> Стартовый</li><li><strong>Порты:</strong> USB LAN WiFI</li><li><strong>Разрешение:</strong> 1200x1200</li><li><strong>Скорость печати ч/б:</strong> 40</li><li><strong>Технология печати:</strong> Лазерная</li><li><strong>Тип:</strong> МФУ</li></ul>
-
-<div style="text-align:center;margin:10px 0 8px 0;">
-  <div class="ck-alert ck-alert_theme_green">
-    <div style="padding:4px 10px;font-family:inherit;">
-      <span class="ck-alert__title"></span>
-      <p style="margin:0 0 4px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>Просьба отправлять запросы на WhatsApp!</strong></p>
-      <p style="margin:0 0 6px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>+7 707 327-05-01</strong></p>
-      <p style="margin:0;font-size:14px;line-height:1.5;font-family:inherit;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block;padding:6px 12px;border:1px solid #146737;border-radius:6px;color:#146737;text-decoration:none;background:#FFFFFF;font-family:inherit;"><strong>💬 НАПИСАТЬ В WHATSAPP</strong></a></p>
-    </div>
-  </div>
-</div>
-
-<div class="ck-alert ck-alert_theme_orange" style="margin:8px 0 0 0;">
-  <div style="padding:4px 10px;font-family:inherit;">
-    <span class="ck-alert__title"></span>
-    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Оплата</h3>
-    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul>
-    <hr style="border:none;height:1px;background:#E7D6B7;margin:8px 0;" />
-    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Доставка по Алматы и Казахстану</h3>
-    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</li><li><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</li><li><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</li><li><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</li></ul>
-  </div>
-</div>
-
-</div>]]></description>
-<param name="Гарантия">12 мес</param>
-<param name="Для бренда">Canon</param>
-<param name="Емкость 4-го лотка">550</param>
-<param name="Коды">5951C008AA</param>
-<param name="Модель">i-SENSYS MF463dw</param>
-<param name="Нагрузка">80 000</param>
-<param name="Наличие картриджа (тонера) в комплекте">Стартовый</param>
-<param name="Порты">USB LAN WiFI</param>
-<param name="Разрешение">1200x1200</param>
-<param name="Скорость печати ч/б">40</param>
-<param name="Технология печати">Лазерная</param>
-<param name="Тип">МФУ</param>
-<param name="Формат печати">A4</param>
-<param name="Функция">Принтер-Сканер(АПД-50с.)-Копир</param>
-<keywords>Canon, МФУ Canon i-SENSYS MF463dw (5951C008AA), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
-</offer>
-
 <offer id="CP13839973" available="true">
 <categoryId>101</categoryId>
 <vendorCode>CP13839973</vendorCode>
@@ -3400,106 +3280,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Формат печати">A4</param>
 <param name="Функция">принтер сканер копир</param>
 <keywords>Canon, МФУ Canon i-SENSYS MF287dw (6354C009), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
-</offer>
-
-<offer id="CP13871540" available="true">
-<categoryId>301</categoryId>
-<vendorCode>CP13871540</vendorCode>
-<name>Хранилище HPE HPE MSA 2062 16Gb FC SFF (R0Q80B)</name>
-<price>1981900</price>
-<picture>https://www.comportal.kz/upload/iblock/73e/5rk91hu2phujc5p5xmwhw0a1g9yv1ghp.JPG</picture>
-<vendor>HPE</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-<div style="font-family:Verdana, Tahoma, Arial, sans-serif;color:#2F2F2F;">
-<h3 style="margin:0 0 10px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Хранилище HPE HPE MSA 2062 16Gb FC SFF (R0Q80B)</h3>
-
-<p style="margin:0 0 10px 0;font-size:14px;line-height:1.5;font-family:inherit;">МФУ. Гарантия: 12 мес. Для бренда: HPE. Модель: HPE MSA 2062 16Gb FC SFF. Коды: R0Q80B.</p>
-
-<h3 style="margin:14px 0 8px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Характеристики</h3>
-<ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Гарантия:</strong> 12 мес</li><li><strong>Бренд:</strong> HPE</li><li><strong>Интерфейс массива:</strong> Fibre Channel</li><li><strong>Коды:</strong> R0Q80B</li><li><strong>Модель:</strong> HPE MSA 2062 16Gb FC SFF</li><li><strong>Тип:</strong> МФУ</li><li><strong>Тип корпуса:</strong> Rack</li></ul>
-
-<div style="text-align:center;margin:10px 0 8px 0;">
-  <div class="ck-alert ck-alert_theme_green">
-    <div style="padding:4px 10px;font-family:inherit;">
-      <span class="ck-alert__title"></span>
-      <p style="margin:0 0 4px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>Просьба отправлять запросы на WhatsApp!</strong></p>
-      <p style="margin:0 0 6px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>+7 707 327-05-01</strong></p>
-      <p style="margin:0;font-size:14px;line-height:1.5;font-family:inherit;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block;padding:6px 12px;border:1px solid #146737;border-radius:6px;color:#146737;text-decoration:none;background:#FFFFFF;font-family:inherit;"><strong>💬 НАПИСАТЬ В WHATSAPP</strong></a></p>
-    </div>
-  </div>
-</div>
-
-<div class="ck-alert ck-alert_theme_orange" style="margin:8px 0 0 0;">
-  <div style="padding:4px 10px;font-family:inherit;">
-    <span class="ck-alert__title"></span>
-    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Оплата</h3>
-    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul>
-    <hr style="border:none;height:1px;background:#E7D6B7;margin:8px 0;" />
-    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Доставка по Алматы и Казахстану</h3>
-    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</li><li><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</li><li><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</li><li><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</li></ul>
-  </div>
-</div>
-
-</div>]]></description>
-<param name="Гарантия">12 мес</param>
-<param name="Для бренда">HPE</param>
-<param name="Интерфейс массива">Fibre Channel</param>
-<param name="Коды">R0Q80B</param>
-<param name="Модель">HPE MSA 2062 16Gb FC SFF</param>
-<param name="Тип">МФУ</param>
-<param name="Тип корпуса">Rack</param>
-<keywords>HPE, Хранилище HPE HPE MSA 2062 16Gb FC SFF (R0Q80B), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
-</offer>
-
-<offer id="CP13871542" available="true">
-<categoryId>301</categoryId>
-<vendorCode>CP13871542</vendorCode>
-<name>Хранилище HPE HPE MSA 1060 12Gb SAS SFF (R0Q87B)</name>
-<price>1195900</price>
-<picture>https://www.comportal.kz/upload/iblock/e7c/v7bfdqmt9woycxcvstlv0zajhllrr5rn.JPG</picture>
-<vendor>HPE</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-<div style="font-family:Verdana, Tahoma, Arial, sans-serif;color:#2F2F2F;">
-<h3 style="margin:0 0 10px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Хранилище HPE HPE MSA 1060 12Gb SAS SFF (R0Q87B)</h3>
-
-<p style="margin:0 0 10px 0;font-size:14px;line-height:1.5;font-family:inherit;">МФУ. Гарантия: 12 мес. Для бренда: HPE. Модель: HPE MSA 1060 12Gb SAS SFF. Коды: R0Q87B.</p>
-
-<h3 style="margin:14px 0 8px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Характеристики</h3>
-<ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Гарантия:</strong> 12 мес</li><li><strong>Бренд:</strong> HPE</li><li><strong>Интерфейс массива:</strong> SAS</li><li><strong>Коды:</strong> R0Q87B</li><li><strong>Модель:</strong> HPE MSA 1060 12Gb SAS SFF</li><li><strong>Тип:</strong> МФУ</li><li><strong>Тип корпуса:</strong> Rack</li></ul>
-
-<div style="text-align:center;margin:10px 0 8px 0;">
-  <div class="ck-alert ck-alert_theme_green">
-    <div style="padding:4px 10px;font-family:inherit;">
-      <span class="ck-alert__title"></span>
-      <p style="margin:0 0 4px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>Просьба отправлять запросы на WhatsApp!</strong></p>
-      <p style="margin:0 0 6px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>+7 707 327-05-01</strong></p>
-      <p style="margin:0;font-size:14px;line-height:1.5;font-family:inherit;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block;padding:6px 12px;border:1px solid #146737;border-radius:6px;color:#146737;text-decoration:none;background:#FFFFFF;font-family:inherit;"><strong>💬 НАПИСАТЬ В WHATSAPP</strong></a></p>
-    </div>
-  </div>
-</div>
-
-<div class="ck-alert ck-alert_theme_orange" style="margin:8px 0 0 0;">
-  <div style="padding:4px 10px;font-family:inherit;">
-    <span class="ck-alert__title"></span>
-    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Оплата</h3>
-    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul>
-    <hr style="border:none;height:1px;background:#E7D6B7;margin:8px 0;" />
-    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Доставка по Алматы и Казахстану</h3>
-    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</li><li><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</li><li><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</li><li><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</li></ul>
-  </div>
-</div>
-
-</div>]]></description>
-<param name="Гарантия">12 мес</param>
-<param name="Для бренда">HPE</param>
-<param name="Интерфейс массива">SAS</param>
-<param name="Коды">R0Q87B</param>
-<param name="Модель">HPE MSA 1060 12Gb SAS SFF</param>
-<param name="Тип">МФУ</param>
-<param name="Тип корпуса">Rack</param>
-<keywords>HPE, Хранилище HPE HPE MSA 1060 12Gb SAS SFF (R0Q87B), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP13872105" available="true">
@@ -4102,68 +3882,6 @@ URL поставщика                             | https://www.comportal.kz/
 <keywords>HP, МФУ HP LaserJet 5800dn (6QN29A#B19), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
-<offer id="CP13864621" available="true">
-<categoryId>101</categoryId>
-<vendorCode>CP13864621</vendorCode>
-<name>МФУ HP Color LaserJet 5800zf (58R10A#B19)</name>
-<price>1364900</price>
-<picture>https://www.comportal.kz/upload/iblock/b3b/ia7o01v9f10t79howpyl05hva9962lbc.JPG</picture>
-<vendor>HP</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-<div style="font-family:Verdana, Tahoma, Arial, sans-serif;color:#2F2F2F;">
-<h3 style="margin:0 0 10px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">МФУ HP Color LaserJet 5800zf (58R10A#B19)</h3>
-
-<p style="margin:0 0 10px 0;font-size:14px;line-height:1.5;font-family:inherit;">МФУ. Формат печати: A4. Разрешение: 1200x1200. Скорость печати ч/б: 43. Скорость печати цветной: 43. Порты: USB LAN. Технология печати: Лазерная. Гарантия: 12 мес.</p>
-
-<h3 style="margin:14px 0 8px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Преимущества модели</h3>
-
-<ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li>Разрешение 1200x1200</li><li>Гарантия 12 мес</li></ul>
-
-<h3 style="margin:14px 0 8px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Характеристики</h3>
-<ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Гарантия:</strong> 12 мес</li><li><strong>Бренд:</strong> HP</li><li><strong>Жесткий диск:</strong> 500Gb</li><li><strong>Коды:</strong> 58R10A#B19</li><li><strong>Модель:</strong> Color LaserJet 5800zf</li><li><strong>Нагрузка:</strong> 10 000</li><li><strong>Наличие картриджа (тонера) в комплекте:</strong> Полный</li><li><strong>Порты:</strong> USB LAN</li><li><strong>Разрешение:</strong> 1200x1200</li><li><strong>Скорость печати цветной:</strong> 43</li><li><strong>Скорость печати ч/б:</strong> 43</li><li><strong>Технология печати:</strong> Лазерная</li></ul>
-
-<div style="text-align:center;margin:10px 0 8px 0;">
-  <div class="ck-alert ck-alert_theme_green">
-    <div style="padding:4px 10px;font-family:inherit;">
-      <span class="ck-alert__title"></span>
-      <p style="margin:0 0 4px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>Просьба отправлять запросы на WhatsApp!</strong></p>
-      <p style="margin:0 0 6px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>+7 707 327-05-01</strong></p>
-      <p style="margin:0;font-size:14px;line-height:1.5;font-family:inherit;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block;padding:6px 12px;border:1px solid #146737;border-radius:6px;color:#146737;text-decoration:none;background:#FFFFFF;font-family:inherit;"><strong>💬 НАПИСАТЬ В WHATSAPP</strong></a></p>
-    </div>
-  </div>
-</div>
-
-<div class="ck-alert ck-alert_theme_orange" style="margin:8px 0 0 0;">
-  <div style="padding:4px 10px;font-family:inherit;">
-    <span class="ck-alert__title"></span>
-    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Оплата</h3>
-    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul>
-    <hr style="border:none;height:1px;background:#E7D6B7;margin:8px 0;" />
-    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Доставка по Алматы и Казахстану</h3>
-    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</li><li><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</li><li><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</li><li><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</li></ul>
-  </div>
-</div>
-
-</div>]]></description>
-<param name="Гарантия">12 мес</param>
-<param name="Для бренда">HP</param>
-<param name="Жесткий диск">500Gb</param>
-<param name="Коды">58R10A#B19</param>
-<param name="Модель">Color LaserJet 5800zf</param>
-<param name="Нагрузка">10 000</param>
-<param name="Наличие картриджа (тонера) в комплекте">Полный</param>
-<param name="Порты">USB LAN</param>
-<param name="Разрешение">1200x1200</param>
-<param name="Скорость печати цветной">43</param>
-<param name="Скорость печати ч/б">43</param>
-<param name="Технология печати">Лазерная</param>
-<param name="Тип">МФУ</param>
-<param name="Формат печати">A4</param>
-<param name="Функция">Принтер-Сканер(АПД-100с.)-Копир-Факс</param>
-<keywords>HP, МФУ HP Color LaserJet 5800zf (58R10A#B19), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
-</offer>
-
 <offer id="CP13866859" available="true">
 <categoryId>101</categoryId>
 <vendorCode>CP13866859</vendorCode>
@@ -4574,6 +4292,63 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Тип сканера">планшетный</param>
 <param name="Формат файлов">A4</param>
 <keywords>HP, Сканер HP ScanJet Pro 3600 f1 (20G06A#B19), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+</offer>
+
+<offer id="CP13869969" available="true">
+<categoryId>304</categoryId>
+<vendorCode>CP13869969</vendorCode>
+<name>Сканер Canon DOCUMENT SCANNER DR-S350NW (6897C009AA)</name>
+<price>458900</price>
+<picture>https://www.comportal.kz/upload/iblock/066/76z741tf2lx3l0a2v36c29h1tdmhqke6.jpg</picture>
+<vendor>Canon</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+<div style="font-family:Verdana, Tahoma, Arial, sans-serif;color:#2F2F2F;">
+<h3 style="margin:0 0 10px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Сканер Canon DOCUMENT SCANNER DR-S350NW (6897C009AA)</h3>
+
+<p style="margin:0 0 10px 0;font-size:14px;line-height:1.5;font-family:inherit;">Сканер. Разрешение: 600. Гарантия: 12 мес. Для бренда: Canon. Модель: DOCUMENT SCANNER DR-S350NW. Коды: 6897C009AA.</p>
+
+<h3 style="margin:14px 0 8px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Преимущества модели</h3>
+
+<ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li>Разрешение 600</li><li>Гарантия 12 мес</li></ul>
+
+<h3 style="margin:14px 0 8px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Характеристики</h3>
+<ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Гарантия:</strong> 12 мес</li><li><strong>Бренд:</strong> Canon</li><li><strong>Дополнительная информация:</strong> USB: USB 3.2/Ethernet: 10Base-T / 100Base-TX / 1000Base-T Wi-Fi: 802.11a,b,g,n,ac USB-хост: USB 2.0 типа A (только для NFC-считывателя)</li><li><strong>Коды:</strong> 6897C009AA</li><li><strong>Модель:</strong> DOCUMENT SCANNER DR-S350NW</li><li><strong>Разрешение:</strong> 600</li><li><strong>Скорость сканирования:</strong> 50</li><li><strong>Тип:</strong> Сканер</li><li><strong>Тип сканера:</strong> полистовая подача</li><li><strong>Формат файлов:</strong> A4</li></ul>
+
+<div style="text-align:center;margin:10px 0 8px 0;">
+  <div class="ck-alert ck-alert_theme_green">
+    <div style="padding:4px 10px;font-family:inherit;">
+      <span class="ck-alert__title"></span>
+      <p style="margin:0 0 4px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>Просьба отправлять запросы на WhatsApp!</strong></p>
+      <p style="margin:0 0 6px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>+7 707 327-05-01</strong></p>
+      <p style="margin:0;font-size:14px;line-height:1.5;font-family:inherit;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block;padding:6px 12px;border:1px solid #146737;border-radius:6px;color:#146737;text-decoration:none;background:#FFFFFF;font-family:inherit;"><strong>💬 НАПИСАТЬ В WHATSAPP</strong></a></p>
+    </div>
+  </div>
+</div>
+
+<div class="ck-alert ck-alert_theme_orange" style="margin:8px 0 0 0;">
+  <div style="padding:4px 10px;font-family:inherit;">
+    <span class="ck-alert__title"></span>
+    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Оплата</h3>
+    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul>
+    <hr style="border:none;height:1px;background:#E7D6B7;margin:8px 0;" />
+    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Доставка по Алматы и Казахстану</h3>
+    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</li><li><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</li><li><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</li><li><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</li></ul>
+  </div>
+</div>
+
+</div>]]></description>
+<param name="Гарантия">12 мес</param>
+<param name="Для бренда">Canon</param>
+<param name="Дополнительная информация">USB: USB 3.2/Ethernet: 10Base-T / 100Base-TX / 1000Base-T Wi-Fi: 802.11a,b,g,n,ac USB-хост: USB 2.0 типа A (только для NFC-считывателя)</param>
+<param name="Коды">6897C009AA</param>
+<param name="Модель">DOCUMENT SCANNER DR-S350NW</param>
+<param name="Разрешение">600</param>
+<param name="Скорость сканирования">50</param>
+<param name="Тип">Сканер</param>
+<param name="Тип сканера">полистовая подача</param>
+<param name="Формат файлов">A4</param>
+<keywords>Canon, Сканер Canon DOCUMENT SCANNER DR-S350NW (6897C009AA), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP13870846" available="true">
@@ -6503,6 +6278,57 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Тип">Картридж</param>
 <param name="Цвет">Чёрный</param>
 <keywords>HP, Картридж HP CE285A (CE285A) (оригинал), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+</offer>
+
+<offer id="CP10301553" available="true">
+<categoryId>101</categoryId>
+<vendorCode>CP10301553</vendorCode>
+<name>Картридж HP CF217A (CF217A) (оригинал)</name>
+<price>46900</price>
+<picture>https://www.comportal.kz/upload/iblock/d3f/rubu7tuie28pt27mp726jfilnbvq6uwl.jpg</picture>
+<vendor>HP</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+<div style="font-family:Verdana, Tahoma, Arial, sans-serif;color:#2F2F2F;">
+<h3 style="margin:0 0 10px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Картридж HP CF217A (CF217A) (оригинал)</h3>
+
+<p style="margin:0 0 10px 0;font-size:14px;line-height:1.5;font-family:inherit;">Оригинальный картридж HP CF217A код — CF217A; цвет — Чёрный; ресурс — 1 600; технология печати — Лазерная.</p>
+
+<h3 style="margin:14px 0 8px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Характеристики</h3>
+<ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Бренд:</strong> HP</li><li><strong>Коды:</strong> CF217A</li><li><strong>Модель:</strong> CF217A</li><li><strong>Оригинальность:</strong> Оригинал</li><li><strong>Ресурс:</strong> 1 600</li><li><strong>Технология печати:</strong> Лазерная</li><li><strong>Тип:</strong> Картридж</li><li><strong>Цвет:</strong> Чёрный</li></ul>
+
+<div style="text-align:center;margin:10px 0 8px 0;">
+  <div class="ck-alert ck-alert_theme_green">
+    <div style="padding:4px 10px;font-family:inherit;">
+      <span class="ck-alert__title"></span>
+      <p style="margin:0 0 4px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>Просьба отправлять запросы на WhatsApp!</strong></p>
+      <p style="margin:0 0 6px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>+7 707 327-05-01</strong></p>
+      <p style="margin:0;font-size:14px;line-height:1.5;font-family:inherit;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block;padding:6px 12px;border:1px solid #146737;border-radius:6px;color:#146737;text-decoration:none;background:#FFFFFF;font-family:inherit;"><strong>💬 НАПИСАТЬ В WHATSAPP</strong></a></p>
+    </div>
+  </div>
+</div>
+
+<div class="ck-alert ck-alert_theme_orange" style="margin:8px 0 0 0;">
+  <div style="padding:4px 10px;font-family:inherit;">
+    <span class="ck-alert__title"></span>
+    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Оплата</h3>
+    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul>
+    <hr style="border:none;height:1px;background:#E7D6B7;margin:8px 0;" />
+    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Доставка по Алматы и Казахстану</h3>
+    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</li><li><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</li><li><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</li><li><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</li></ul>
+  </div>
+</div>
+
+</div>]]></description>
+<param name="Для бренда">HP</param>
+<param name="Коды">CF217A</param>
+<param name="Модель">CF217A</param>
+<param name="Оригинальность">Оригинал</param>
+<param name="Ресурс">1 600</param>
+<param name="Технология печати">Лазерная</param>
+<param name="Тип">Картридж</param>
+<param name="Цвет">Чёрный</param>
+<keywords>HP, Картридж HP CF217A (CF217A) (оригинал), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP10302301" available="true">
@@ -9664,6 +9490,108 @@ URL поставщика                             | https://www.comportal.kz/
 <keywords>HP, Картридж HP 938e EvoMore Cyan Original Ink Cartridge (4S6X9PE) (оригинал), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
+<offer id="CP13871540" available="true">
+<categoryId>101</categoryId>
+<vendorCode>CP13871540</vendorCode>
+<name>Хранилище HPE HPE MSA 2062 16Gb FC SFF (R0Q80B) (оригинал)</name>
+<price>1981900</price>
+<picture>https://www.comportal.kz/upload/iblock/73e/5rk91hu2phujc5p5xmwhw0a1g9yv1ghp.JPG</picture>
+<vendor>HPE</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+<div style="font-family:Verdana, Tahoma, Arial, sans-serif;color:#2F2F2F;">
+<h3 style="margin:0 0 10px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Хранилище HPE HPE MSA 2062 16Gb FC SFF (R0Q80B) (оригинал)</h3>
+
+<p style="margin:0 0 10px 0;font-size:14px;line-height:1.5;font-family:inherit;">Оригинальный картридж HPE HPE MSA 2062 16Gb FC SFF код — R0Q80B.</p>
+
+<h3 style="margin:14px 0 8px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Характеристики</h3>
+<ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Гарантия:</strong> 12 мес</li><li><strong>Бренд:</strong> HPE</li><li><strong>Интерфейс массива:</strong> Fibre Channel</li><li><strong>Коды:</strong> R0Q80B</li><li><strong>Модель:</strong> HPE MSA 2062 16Gb FC SFF</li><li><strong>Оригинальность:</strong> Оригинал</li><li><strong>Тип:</strong> Картридж</li><li><strong>Тип корпуса:</strong> Rack</li></ul>
+
+<div style="text-align:center;margin:10px 0 8px 0;">
+  <div class="ck-alert ck-alert_theme_green">
+    <div style="padding:4px 10px;font-family:inherit;">
+      <span class="ck-alert__title"></span>
+      <p style="margin:0 0 4px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>Просьба отправлять запросы на WhatsApp!</strong></p>
+      <p style="margin:0 0 6px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>+7 707 327-05-01</strong></p>
+      <p style="margin:0;font-size:14px;line-height:1.5;font-family:inherit;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block;padding:6px 12px;border:1px solid #146737;border-radius:6px;color:#146737;text-decoration:none;background:#FFFFFF;font-family:inherit;"><strong>💬 НАПИСАТЬ В WHATSAPP</strong></a></p>
+    </div>
+  </div>
+</div>
+
+<div class="ck-alert ck-alert_theme_orange" style="margin:8px 0 0 0;">
+  <div style="padding:4px 10px;font-family:inherit;">
+    <span class="ck-alert__title"></span>
+    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Оплата</h3>
+    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul>
+    <hr style="border:none;height:1px;background:#E7D6B7;margin:8px 0;" />
+    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Доставка по Алматы и Казахстану</h3>
+    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</li><li><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</li><li><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</li><li><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</li></ul>
+  </div>
+</div>
+
+</div>]]></description>
+<param name="Гарантия">12 мес</param>
+<param name="Для бренда">HPE</param>
+<param name="Интерфейс массива">Fibre Channel</param>
+<param name="Коды">R0Q80B</param>
+<param name="Модель">HPE MSA 2062 16Gb FC SFF</param>
+<param name="Оригинальность">Оригинал</param>
+<param name="Тип">Картридж</param>
+<param name="Тип корпуса">Rack</param>
+<keywords>HPE, Хранилище HPE HPE MSA 2062 16Gb FC SFF (R0Q80B) (оригинал), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+</offer>
+
+<offer id="CP13871542" available="true">
+<categoryId>101</categoryId>
+<vendorCode>CP13871542</vendorCode>
+<name>Хранилище HPE HPE MSA 1060 12Gb SAS SFF (R0Q87B) (оригинал)</name>
+<price>1195900</price>
+<picture>https://www.comportal.kz/upload/iblock/e7c/v7bfdqmt9woycxcvstlv0zajhllrr5rn.JPG</picture>
+<vendor>HPE</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+<div style="font-family:Verdana, Tahoma, Arial, sans-serif;color:#2F2F2F;">
+<h3 style="margin:0 0 10px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Хранилище HPE HPE MSA 1060 12Gb SAS SFF (R0Q87B) (оригинал)</h3>
+
+<p style="margin:0 0 10px 0;font-size:14px;line-height:1.5;font-family:inherit;">Оригинальный картридж HPE HPE MSA 1060 12Gb SAS SFF код — R0Q87B.</p>
+
+<h3 style="margin:14px 0 8px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Характеристики</h3>
+<ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Гарантия:</strong> 12 мес</li><li><strong>Бренд:</strong> HPE</li><li><strong>Интерфейс массива:</strong> SAS</li><li><strong>Коды:</strong> R0Q87B</li><li><strong>Модель:</strong> HPE MSA 1060 12Gb SAS SFF</li><li><strong>Оригинальность:</strong> Оригинал</li><li><strong>Тип:</strong> Картридж</li><li><strong>Тип корпуса:</strong> Rack</li></ul>
+
+<div style="text-align:center;margin:10px 0 8px 0;">
+  <div class="ck-alert ck-alert_theme_green">
+    <div style="padding:4px 10px;font-family:inherit;">
+      <span class="ck-alert__title"></span>
+      <p style="margin:0 0 4px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>Просьба отправлять запросы на WhatsApp!</strong></p>
+      <p style="margin:0 0 6px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>+7 707 327-05-01</strong></p>
+      <p style="margin:0;font-size:14px;line-height:1.5;font-family:inherit;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block;padding:6px 12px;border:1px solid #146737;border-radius:6px;color:#146737;text-decoration:none;background:#FFFFFF;font-family:inherit;"><strong>💬 НАПИСАТЬ В WHATSAPP</strong></a></p>
+    </div>
+  </div>
+</div>
+
+<div class="ck-alert ck-alert_theme_orange" style="margin:8px 0 0 0;">
+  <div style="padding:4px 10px;font-family:inherit;">
+    <span class="ck-alert__title"></span>
+    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Оплата</h3>
+    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul>
+    <hr style="border:none;height:1px;background:#E7D6B7;margin:8px 0;" />
+    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Доставка по Алматы и Казахстану</h3>
+    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</li><li><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</li><li><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</li><li><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</li></ul>
+  </div>
+</div>
+
+</div>]]></description>
+<param name="Гарантия">12 мес</param>
+<param name="Для бренда">HPE</param>
+<param name="Интерфейс массива">SAS</param>
+<param name="Коды">R0Q87B</param>
+<param name="Модель">HPE MSA 1060 12Gb SAS SFF</param>
+<param name="Оригинальность">Оригинал</param>
+<param name="Тип">Картридж</param>
+<param name="Тип корпуса">Rack</param>
+<keywords>HPE, Хранилище HPE HPE MSA 1060 12Gb SAS SFF (R0Q87B) (оригинал), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+</offer>
+
 <offer id="CP13871836" available="true">
 <categoryId>101</categoryId>
 <vendorCode>CP13871836</vendorCode>
@@ -12411,54 +12339,6 @@ URL поставщика                             | https://www.comportal.kz/
 <keywords>HP, Картридж HP 3YM74AE (3YM74AE#BHK) (оригинал), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
-<offer id="CP13842679" available="true">
-<categoryId>101</categoryId>
-<vendorCode>CP13842679</vendorCode>
-<name>Печатающая головка HP 729 DesignJet Printhead Replacement Kit (F9J81A) (оригинал)</name>
-<price>264900</price>
-<picture>https://www.comportal.kz/upload/iblock/b8e/b8e51a269d79b68f51de87e15ee80823.JPG</picture>
-<vendor>HP</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-<div style="font-family:Verdana, Tahoma, Arial, sans-serif;color:#2F2F2F;">
-<h3 style="margin:0 0 10px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Печатающая головка HP 729 DesignJet Printhead Replacement Kit (F9J81A) (оригинал)</h3>
-
-<p style="margin:0 0 10px 0;font-size:14px;line-height:1.5;font-family:inherit;">Оригинальный картридж HP 729 DesignJet Printhead Replacement Kit код — F9J81A.</p>
-
-<h3 style="margin:14px 0 8px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Характеристики</h3>
-<ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Бренд:</strong> HP</li><li><strong>Коды:</strong> F9J81A</li><li><strong>Модель:</strong> 729 DesignJet Printhead Replacement Kit</li><li><strong>Оригинальность:</strong> Оригинал</li><li><strong>Тип:</strong> Картридж</li></ul>
-
-<div style="text-align:center;margin:10px 0 8px 0;">
-  <div class="ck-alert ck-alert_theme_green">
-    <div style="padding:4px 10px;font-family:inherit;">
-      <span class="ck-alert__title"></span>
-      <p style="margin:0 0 4px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>Просьба отправлять запросы на WhatsApp!</strong></p>
-      <p style="margin:0 0 6px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>+7 707 327-05-01</strong></p>
-      <p style="margin:0;font-size:14px;line-height:1.5;font-family:inherit;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block;padding:6px 12px;border:1px solid #146737;border-radius:6px;color:#146737;text-decoration:none;background:#FFFFFF;font-family:inherit;"><strong>💬 НАПИСАТЬ В WHATSAPP</strong></a></p>
-    </div>
-  </div>
-</div>
-
-<div class="ck-alert ck-alert_theme_orange" style="margin:8px 0 0 0;">
-  <div style="padding:4px 10px;font-family:inherit;">
-    <span class="ck-alert__title"></span>
-    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Оплата</h3>
-    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul>
-    <hr style="border:none;height:1px;background:#E7D6B7;margin:8px 0;" />
-    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Доставка по Алматы и Казахстану</h3>
-    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</li><li><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</li><li><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</li><li><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</li></ul>
-  </div>
-</div>
-
-</div>]]></description>
-<param name="Для бренда">HP</param>
-<param name="Коды">F9J81A</param>
-<param name="Модель">729 DesignJet Printhead Replacement Kit</param>
-<param name="Оригинальность">Оригинал</param>
-<param name="Тип">Картридж</param>
-<keywords>HP, Печатающая головка HP 729 DesignJet Printhead Replacement Kit (F9J81A) (оригинал), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
-</offer>
-
 <offer id="CP13848726" available="true">
 <categoryId>102</categoryId>
 <vendorCode>CP13848726</vendorCode>
@@ -12767,58 +12647,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Тип">Картридж</param>
 <param name="Цвет">Голубой</param>
 <keywords>HP, Картридж HP M0J90AE (M0J90AE) (оригинал), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
-</offer>
-
-<offer id="CP13870240" available="true">
-<categoryId>102</categoryId>
-<vendorCode>CP13870240</vendorCode>
-<name>Картридж HP M0J94AE (M0J94AE) (оригинал)</name>
-<price>137900</price>
-<picture>https://www.comportal.kz/upload/iblock/cd1/lva41jauh7tuhifhx03cp0dii02g7d9a.jpeg</picture>
-<vendor>HP</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-<div style="font-family:Verdana, Tahoma, Arial, sans-serif;color:#2F2F2F;">
-<h3 style="margin:0 0 10px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Картридж HP M0J94AE (M0J94AE) (оригинал)</h3>
-
-<p style="margin:0 0 10px 0;font-size:14px;line-height:1.5;font-family:inherit;">Оригинальный картридж HP M0J94AE коды — M0J94AE / №991; цвет — Пурпурный; ресурс — 16 000; технология печати — Струйная.</p>
-
-<h3 style="margin:14px 0 8px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Характеристики</h3>
-<ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Бренд:</strong> HP</li><li><strong>Коды:</strong> M0J94AE</li><li><strong>Модель:</strong> M0J94AE</li><li><strong>Номер:</strong> №991</li><li><strong>Оригинальность:</strong> Оригинал</li><li><strong>Ресурс:</strong> 16 000</li><li><strong>Технология печати:</strong> Струйная</li><li><strong>Тип:</strong> Картридж</li><li><strong>Цвет:</strong> Пурпурный</li></ul>
-
-<div style="text-align:center;margin:10px 0 8px 0;">
-  <div class="ck-alert ck-alert_theme_green">
-    <div style="padding:4px 10px;font-family:inherit;">
-      <span class="ck-alert__title"></span>
-      <p style="margin:0 0 4px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>Просьба отправлять запросы на WhatsApp!</strong></p>
-      <p style="margin:0 0 6px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>+7 707 327-05-01</strong></p>
-      <p style="margin:0;font-size:14px;line-height:1.5;font-family:inherit;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block;padding:6px 12px;border:1px solid #146737;border-radius:6px;color:#146737;text-decoration:none;background:#FFFFFF;font-family:inherit;"><strong>💬 НАПИСАТЬ В WHATSAPP</strong></a></p>
-    </div>
-  </div>
-</div>
-
-<div class="ck-alert ck-alert_theme_orange" style="margin:8px 0 0 0;">
-  <div style="padding:4px 10px;font-family:inherit;">
-    <span class="ck-alert__title"></span>
-    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Оплата</h3>
-    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul>
-    <hr style="border:none;height:1px;background:#E7D6B7;margin:8px 0;" />
-    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Доставка по Алматы и Казахстану</h3>
-    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</li><li><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</li><li><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</li><li><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</li></ul>
-  </div>
-</div>
-
-</div>]]></description>
-<param name="Для бренда">HP</param>
-<param name="Коды">M0J94AE</param>
-<param name="Модель">M0J94AE</param>
-<param name="Номер">№991</param>
-<param name="Оригинальность">Оригинал</param>
-<param name="Ресурс">16 000</param>
-<param name="Технология печати">Струйная</param>
-<param name="Тип">Картридж</param>
-<param name="Цвет">Пурпурный</param>
-<keywords>HP, Картридж HP M0J94AE (M0J94AE) (оригинал), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP13870401" available="true">
@@ -20734,68 +20562,6 @@ URL поставщика                             | https://www.comportal.kz/
 <keywords>Acer, Монитор Acer Vero RS272G0bpamix (UM.HR2EE.026), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
-<offer id="CP13871708" available="true">
-<categoryId>602</categoryId>
-<vendorCode>CP13871708</vendorCode>
-<name>Монитор Acer KA272Gbip (UM.HX2EE.G05)</name>
-<price>62900</price>
-<picture>https://www.comportal.kz/upload/iblock/299/oizb9frr1x314rf1ebe8h0k4wmtch3u2.jpg</picture>
-<vendor>Acer</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-<div style="font-family:Verdana, Tahoma, Arial, sans-serif;color:#2F2F2F;">
-<h3 style="margin:0 0 10px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Монитор Acer KA272Gbip (UM.HX2EE.G05)</h3>
-
-<p style="margin:0 0 10px 0;font-size:14px;line-height:1.5;font-family:inherit;">Монитор. Диагональ: 27. Максимальное разрешение: 1920x1080. Тип матрицы: IPS. Частота обновления: 120. Время отклика: 1. Порты: 1xHDMI(2.0) + 1xDP(1.4). Гарантия: 12 мес.</p>
-
-<h3 style="margin:14px 0 8px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Преимущества модели</h3>
-
-<ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li>Диагональ экрана 27</li><li>Гарантия 12 мес</li></ul>
-
-<h3 style="margin:14px 0 8px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Характеристики</h3>
-<ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Время отклика:</strong> 1</li><li><strong>Гарантия:</strong> 12 мес</li><li><strong>Диагональ:</strong> 27</li><li><strong>Бренд:</strong> Acer</li><li><strong>Коды:</strong> UM.HX2EE.G05</li><li><strong>Контрастность:</strong> 1500:1</li><li><strong>Максимальное разрешение:</strong> 1920x1080</li><li><strong>Модель:</strong> KA272Gbip</li><li><strong>Порты:</strong> 1xHDMI(2.0) + 1xDP(1.4)</li><li><strong>Тип:</strong> Монитор</li><li><strong>Тип матрицы:</strong> IPS</li><li><strong>Углы обзора (вертикальный/горизонтальный):</strong> 178/178</li></ul>
-
-<div style="text-align:center;margin:10px 0 8px 0;">
-  <div class="ck-alert ck-alert_theme_green">
-    <div style="padding:4px 10px;font-family:inherit;">
-      <span class="ck-alert__title"></span>
-      <p style="margin:0 0 4px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>Просьба отправлять запросы на WhatsApp!</strong></p>
-      <p style="margin:0 0 6px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>+7 707 327-05-01</strong></p>
-      <p style="margin:0;font-size:14px;line-height:1.5;font-family:inherit;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block;padding:6px 12px;border:1px solid #146737;border-radius:6px;color:#146737;text-decoration:none;background:#FFFFFF;font-family:inherit;"><strong>💬 НАПИСАТЬ В WHATSAPP</strong></a></p>
-    </div>
-  </div>
-</div>
-
-<div class="ck-alert ck-alert_theme_orange" style="margin:8px 0 0 0;">
-  <div style="padding:4px 10px;font-family:inherit;">
-    <span class="ck-alert__title"></span>
-    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Оплата</h3>
-    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul>
-    <hr style="border:none;height:1px;background:#E7D6B7;margin:8px 0;" />
-    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Доставка по Алматы и Казахстану</h3>
-    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</li><li><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</li><li><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</li><li><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</li></ul>
-  </div>
-</div>
-
-</div>]]></description>
-<param name="Время отклика">1</param>
-<param name="Гарантия">12 мес</param>
-<param name="Диагональ">27</param>
-<param name="Для бренда">Acer</param>
-<param name="Коды">UM.HX2EE.G05</param>
-<param name="Контрастность">1500:1</param>
-<param name="Максимальное разрешение">1920x1080</param>
-<param name="Модель">KA272Gbip</param>
-<param name="Порты">1xHDMI(2.0) + 1xDP(1.4)</param>
-<param name="Тип">Монитор</param>
-<param name="Тип матрицы">IPS</param>
-<param name="Углы обзора (вертикальный/горизонтальный)">178/178</param>
-<param name="Цвет">Чёрный</param>
-<param name="Частота обновления">120</param>
-<param name="Яркость">250</param>
-<keywords>Acer, Монитор Acer KA272Gbip (UM.HX2EE.G05), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
-</offer>
-
 <offer id="CP13871710" available="true">
 <categoryId>602</categoryId>
 <vendorCode>CP13871710</vendorCode>
@@ -21291,66 +21057,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Частота обновления">120</param>
 <param name="Яркость">400</param>
 <keywords>HP, Монитор HP Series 7 Pro / 734pm (8K157UT#ABB), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
-</offer>
-
-<offer id="CP13872198" available="true">
-<categoryId>602</categoryId>
-<vendorCode>CP13872198</vendorCode>
-<name>Монитор HP S5 Pro 527pu (9E0G5AA#ABB)</name>
-<price>161900</price>
-<picture>https://www.comportal.kz/upload/iblock/3d3/yqzp78i88c7yf46t0gu1lsp2fdh1knfl.JPG</picture>
-<vendor>HP</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-<div style="font-family:Verdana, Tahoma, Arial, sans-serif;color:#2F2F2F;">
-<h3 style="margin:0 0 10px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Монитор HP S5 Pro 527pu (9E0G5AA#ABB)</h3>
-
-<p style="margin:0 0 10px 0;font-size:14px;line-height:1.5;font-family:inherit;">Монитор. Модельная серия: S5 Pro 527pu. Диагональ: 27. Максимальное разрешение: 2560x1440. Тип матрицы: IPS. Частота обновления: 100. Время отклика: 1. Порты: HDMI DisplayPort. Гарантия: 36 мес.</p>
-
-<h3 style="margin:14px 0 8px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Преимущества модели</h3>
-
-<ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li>Диагональ экрана 27</li><li>Гарантия 36 мес</li></ul>
-
-<h3 style="margin:14px 0 8px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Характеристики</h3>
-<ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Время отклика:</strong> 1</li><li><strong>Гарантия:</strong> 36 мес</li><li><strong>Диагональ:</strong> 27</li><li><strong>Бренд:</strong> HP</li><li><strong>Коды:</strong> 9E0G5AA#ABB</li><li><strong>Контрастность:</strong> 1300:1</li><li><strong>Максимальное разрешение:</strong> 2560x1440</li><li><strong>Модель:</strong> S5 Pro 527pu</li><li><strong>Порты:</strong> HDMI DisplayPort</li><li><strong>Тип:</strong> Монитор</li><li><strong>Тип матрицы:</strong> IPS</li><li><strong>Частота обновления:</strong> 100</li></ul>
-
-<div style="text-align:center;margin:10px 0 8px 0;">
-  <div class="ck-alert ck-alert_theme_green">
-    <div style="padding:4px 10px;font-family:inherit;">
-      <span class="ck-alert__title"></span>
-      <p style="margin:0 0 4px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>Просьба отправлять запросы на WhatsApp!</strong></p>
-      <p style="margin:0 0 6px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>+7 707 327-05-01</strong></p>
-      <p style="margin:0;font-size:14px;line-height:1.5;font-family:inherit;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block;padding:6px 12px;border:1px solid #146737;border-radius:6px;color:#146737;text-decoration:none;background:#FFFFFF;font-family:inherit;"><strong>💬 НАПИСАТЬ В WHATSAPP</strong></a></p>
-    </div>
-  </div>
-</div>
-
-<div class="ck-alert ck-alert_theme_orange" style="margin:8px 0 0 0;">
-  <div style="padding:4px 10px;font-family:inherit;">
-    <span class="ck-alert__title"></span>
-    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Оплата</h3>
-    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul>
-    <hr style="border:none;height:1px;background:#E7D6B7;margin:8px 0;" />
-    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Доставка по Алматы и Казахстану</h3>
-    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</li><li><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</li><li><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</li><li><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</li></ul>
-  </div>
-</div>
-
-</div>]]></description>
-<param name="Время отклика">1</param>
-<param name="Гарантия">36 мес</param>
-<param name="Диагональ">27</param>
-<param name="Для бренда">HP</param>
-<param name="Коды">9E0G5AA#ABB</param>
-<param name="Контрастность">1300:1</param>
-<param name="Максимальное разрешение">2560x1440</param>
-<param name="Модель">S5 Pro 527pu</param>
-<param name="Порты">HDMI DisplayPort</param>
-<param name="Тип">Монитор</param>
-<param name="Тип матрицы">IPS</param>
-<param name="Частота обновления">100</param>
-<param name="Яркость">350</param>
-<keywords>HP, Монитор HP S5 Pro 527pu (9E0G5AA#ABB), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP13872351" available="true">
@@ -23742,92 +23448,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Частота процессора">1,4</param>
 <param name="Языковая версия операционной системы">Многоязычная</param>
 <keywords>Dell, Ноутбук Dell Latitude 7650 (210-BLQN_3), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
-</offer>
-
-<offer id="CP13869291" available="true">
-<categoryId>601</categoryId>
-<vendorCode>CP13869291</vendorCode>
-<name>Ноутбук Dell Vostro 3530 (210-BGLW-N1605QVNB3530EMEA01_UBU)</name>
-<price>367900</price>
-<picture>https://www.comportal.kz/upload/iblock/f59/cyxujiop9sd1p3mf8rj1yxf4mxl389w9.JPG</picture>
-<vendor>Dell</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-<div style="font-family:Verdana, Tahoma, Arial, sans-serif;color:#2F2F2F;">
-<h3 style="margin:0 0 10px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Ноутбук Dell Vostro 3530 (210-BGLW-N1605QVNB3530EMEA01_UBU)</h3>
-
-<p style="margin:0 0 10px 0;font-size:14px;line-height:1.5;font-family:inherit;">Ноутбук. Модельная серия: Vostro 3530. Процессор: Intel 1355U Core i7 1,7. Оперативная память: 16 Gb / DDR4 / 2666. Накопитель: 512 / PCIe NVMe SSD / 1 шт. Диагональ: 15,6. Разрешение: 1920x1080. ОС: Ubuntu 22.04 64. Видеокарта: Intel Intel Iris Xe 256 Mb. Wi‑Fi: 802.11ac. Bluetooth: Bluetooth 5.0. Камера: FHD Camera. Гарантия: 12 мес.</p>
-
-<h3 style="margin:14px 0 8px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Преимущества модели</h3>
-
-<ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li>Оперативная память 16 Gb</li><li>Операционная система Ubuntu</li><li>Поддержка Wi-Fi 802.11ac</li><li>Поддержка Bluetooth 5.0</li></ul>
-
-<h3 style="margin:14px 0 8px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Характеристики</h3>
-<ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Bluetooth:</strong> Bluetooth 5.0</li><li><strong>Wi-Fi:</strong> 802.11ac</li><li><strong>Адаптер:</strong> 65W AC Adapter</li><li><strong>Аккумулятор:</strong> 4-cell 54W HR</li><li><strong>Битность операционной системы:</strong> 64</li><li><strong>Версия операционной системы:</strong> 22.04</li><li><strong>Гарантия:</strong> 12 мес</li><li><strong>Бренд:</strong> Dell</li><li><strong>Дополнительные характеристики:</strong> Non-Backlit Keyboard</li><li><strong>Занятые слоты памяти:</strong> 2x8GB</li><li><strong>Камера:</strong> FHD Camera</li><li><strong>Коды:</strong> 210-BGLW-N1605QVNB3530EMEA01_UBU</li></ul>
-
-<div style="text-align:center;margin:10px 0 8px 0;">
-  <div class="ck-alert ck-alert_theme_green">
-    <div style="padding:4px 10px;font-family:inherit;">
-      <span class="ck-alert__title"></span>
-      <p style="margin:0 0 4px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>Просьба отправлять запросы на WhatsApp!</strong></p>
-      <p style="margin:0 0 6px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>+7 707 327-05-01</strong></p>
-      <p style="margin:0;font-size:14px;line-height:1.5;font-family:inherit;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block;padding:6px 12px;border:1px solid #146737;border-radius:6px;color:#146737;text-decoration:none;background:#FFFFFF;font-family:inherit;"><strong>💬 НАПИСАТЬ В WHATSAPP</strong></a></p>
-    </div>
-  </div>
-</div>
-
-<div class="ck-alert ck-alert_theme_orange" style="margin:8px 0 0 0;">
-  <div style="padding:4px 10px;font-family:inherit;">
-    <span class="ck-alert__title"></span>
-    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Оплата</h3>
-    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul>
-    <hr style="border:none;height:1px;background:#E7D6B7;margin:8px 0;" />
-    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Доставка по Алматы и Казахстану</h3>
-    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</li><li><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</li><li><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</li><li><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</li></ul>
-  </div>
-</div>
-
-</div>]]></description>
-<param name="Bluetooth">Bluetooth 5.0</param>
-<param name="Wi-Fi">802.11ac</param>
-<param name="Адаптер">65W AC Adapter</param>
-<param name="Аккумулятор">4-cell 54W HR</param>
-<param name="Битность операционной системы">64</param>
-<param name="Версия операционной системы">22.04</param>
-<param name="Гарантия">12 мес</param>
-<param name="Для бренда">Dell</param>
-<param name="Дополнительные характеристики">Non-Backlit Keyboard</param>
-<param name="Занятые слоты памяти">2x8GB</param>
-<param name="Камера">FHD Camera</param>
-<param name="Коды">210-BGLW-N1605QVNB3530EMEA01_UBU</param>
-<param name="Количество дисков">1</param>
-<param name="Количество портов USB">3</param>
-<param name="Количество слотов памяти">2</param>
-<param name="Марка чипсета видеокарты">Graphics</param>
-<param name="Модель">Vostro 3530</param>
-<param name="Модель процессора">Core i7</param>
-<param name="Модель чипсета видеокарты">Intel Iris Xe</param>
-<param name="Объем видеопамяти">256 Mb</param>
-<param name="Объем жесткого диска">512</param>
-<param name="Оперативная память">16 Gb</param>
-<param name="Операционная система">Ubuntu</param>
-<param name="Порты">1x HDMI; 2x USB-A; 1x USB-C; 1x SD slot; 1xRJ-45</param>
-<param name="Производитель процессора">Intel</param>
-<param name="Производитель чипсета видеокарты">Intel</param>
-<param name="Размер дисплея">15,6</param>
-<param name="Разрешение дисплея">1920x1080</param>
-<param name="Серия процессора">1355U</param>
-<param name="Сетевая карта (скорость передачи)">10/100/1000</param>
-<param name="Скорость вращения шпинделя">Read Intensive</param>
-<param name="Тип">Ноутбук</param>
-<param name="Тип жесткого диска">PCIe NVMe SSD</param>
-<param name="Тип матрицы">FHD</param>
-<param name="Тип оперативной памяти">DDR4</param>
-<param name="Тип привода">No ODD</param>
-<param name="Цвет">Чёрный</param>
-<param name="Частота оперативной памяти">2666</param>
-<param name="Частота процессора">1,7</param>
-<keywords>Dell, Ноутбук Dell Vostro 3530 (210-BGLW-N1605QVNB3530EMEA01_UBU), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP13869655" available="true">
@@ -31674,63 +31294,6 @@ URL поставщика                             | https://www.comportal.kz/
 <keywords>Eaton, ИБП Eaton 9SX 1500i Rack2U (9SX1500IR), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
-<offer id="CP13817039" available="true">
-<categoryId>701</categoryId>
-<vendorCode>CP13817039</vendorCode>
-<name>ИБП APC BX1600MI-GR (BX1600MI-GR)</name>
-<price>92900</price>
-<picture>https://www.comportal.kz/upload/iblock/7f7/73g7v6a9yl3r8iltrnxovo0sppwp8jnn.jpg</picture>
-<vendor>APC</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-<div style="font-family:Verdana, Tahoma, Arial, sans-serif;color:#2F2F2F;">
-<h3 style="margin:0 0 10px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">ИБП APC BX1600MI-GR (BX1600MI-GR)</h3>
-
-<p style="margin:0 0 10px 0;font-size:14px;line-height:1.5;font-family:inherit;">ИБП. Мощность: 1 600 VA / 900 W. Форм-фактор: Tower. Стабилизатор (AVR): есть. Время работы при 100% нагрузке, мин: 0,6. Выходные соединения: (4) Schuko CEE 7 (Батарейное резервное питание). Гарантия: 24 мес.</p>
-
-<h3 style="margin:14px 0 8px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Характеристики</h3>
-<ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Выходные соединения:</strong> (4) Schuko CEE 7 (Батарейное резервное питание)</li><li><strong>Гарантия:</strong> 24 мес</li><li><strong>Диапазон входного напряжения:</strong> 140-300</li><li><strong>Бренд:</strong> APC</li><li><strong>Интерфейс:</strong> Schuko</li><li><strong>Коды:</strong> BX1600MI-GR</li><li><strong>Модель:</strong> BX1600MI-GR</li><li><strong>Мощность (VA):</strong> 1 600</li><li><strong>Мощность (W):</strong> 900</li><li><strong>ПО:</strong> есть</li><li><strong>Стабилизатор (AVR):</strong> есть</li><li><strong>Тип:</strong> ИБП</li></ul>
-
-<div style="text-align:center;margin:10px 0 8px 0;">
-  <div class="ck-alert ck-alert_theme_green">
-    <div style="padding:4px 10px;font-family:inherit;">
-      <span class="ck-alert__title"></span>
-      <p style="margin:0 0 4px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>Просьба отправлять запросы на WhatsApp!</strong></p>
-      <p style="margin:0 0 6px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>+7 707 327-05-01</strong></p>
-      <p style="margin:0;font-size:14px;line-height:1.5;font-family:inherit;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block;padding:6px 12px;border:1px solid #146737;border-radius:6px;color:#146737;text-decoration:none;background:#FFFFFF;font-family:inherit;"><strong>💬 НАПИСАТЬ В WHATSAPP</strong></a></p>
-    </div>
-  </div>
-</div>
-
-<div class="ck-alert ck-alert_theme_orange" style="margin:8px 0 0 0;">
-  <div style="padding:4px 10px;font-family:inherit;">
-    <span class="ck-alert__title"></span>
-    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Оплата</h3>
-    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul>
-    <hr style="border:none;height:1px;background:#E7D6B7;margin:8px 0;" />
-    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Доставка по Алматы и Казахстану</h3>
-    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</li><li><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</li><li><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</li><li><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</li></ul>
-  </div>
-</div>
-
-</div>]]></description>
-<param name="Выходные соединения">(4) Schuko CEE 7 (Батарейное резервное питание)</param>
-<param name="Гарантия">24 мес</param>
-<param name="Диапазон входного напряжения">140-300</param>
-<param name="Для бренда">APC</param>
-<param name="Интерфейс">Schuko</param>
-<param name="Коды">BX1600MI-GR</param>
-<param name="Модель">BX1600MI-GR</param>
-<param name="Мощность (VA)">1 600</param>
-<param name="Мощность (W)">900</param>
-<param name="ПО">есть</param>
-<param name="Стабилизатор (AVR)">есть</param>
-<param name="Тип">ИБП</param>
-<param name="Типовая продолжительность работы при 100% нагрузке, мин">0,6</param>
-<param name="Форм-фактор">Tower</param>
-<keywords>APC, ИБП APC BX1600MI-GR (BX1600MI-GR), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
-</offer>
-
 <offer id="CP13819517" available="true">
 <categoryId>701</categoryId>
 <vendorCode>CP13819517</vendorCode>
@@ -32230,59 +31793,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Типовая продолжительность работы при 100% нагрузке, мин">4,02</param>
 <param name="Форм-фактор">Rackmount</param>
 <keywords>APC, ИБП APC SRV2KRIRK SRV RM with RailKit (SRV2KRIRK), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
-</offer>
-
-<offer id="CP13835250" available="true">
-<categoryId>701</categoryId>
-<vendorCode>CP13835250</vendorCode>
-<name>ИБП APC SRV10KRIRK SRV RM with RailKit, External Battery Pack (SRV10KRIRK)</name>
-<price>1052900</price>
-<picture>https://www.comportal.kz/upload/iblock/f62/f98rjzv2omz18diiug2on7x346c987zo.JPG</picture>
-<vendor>APC</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-<div style="font-family:Verdana, Tahoma, Arial, sans-serif;color:#2F2F2F;">
-<h3 style="margin:0 0 10px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">ИБП APC SRV10KRIRK SRV RM with RailKit, External Battery Pack (SRV10KRIRK)</h3>
-
-<p style="margin:0 0 10px 0;font-size:14px;line-height:1.5;font-family:inherit;">ИБП. Мощность: 10 000 VA / 10 000 W. Форм-фактор: Rackmount. Время работы при 100% нагрузке, мин: 2,52. Гарантия: 24 мес.</p>
-
-<h3 style="margin:14px 0 8px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Характеристики</h3>
-<ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Гарантия:</strong> 24 мес</li><li><strong>Бренд:</strong> APC</li><li><strong>Дополнительная информация:</strong> 1 USB cable/1 RS-232 configuration cable/2 rack mounting brackets/2 rack mounting support rails/1 external battery pack/1 battery cable user manual</li><li><strong>Коды:</strong> SRV10KRIRK</li><li><strong>Модель:</strong> SRV10KRIRK SRV RM with RailKit, External Battery Pack</li><li><strong>Мощность (VA):</strong> 10 000</li><li><strong>Мощность (W):</strong> 10 000</li><li><strong>Тип:</strong> ИБП</li><li><strong>Типовая продолжительность работы при 100% нагрузке, мин:</strong> 2,52</li><li><strong>Форм-фактор:</strong> Rackmount</li></ul>
-
-<div style="text-align:center;margin:10px 0 8px 0;">
-  <div class="ck-alert ck-alert_theme_green">
-    <div style="padding:4px 10px;font-family:inherit;">
-      <span class="ck-alert__title"></span>
-      <p style="margin:0 0 4px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>Просьба отправлять запросы на WhatsApp!</strong></p>
-      <p style="margin:0 0 6px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>+7 707 327-05-01</strong></p>
-      <p style="margin:0;font-size:14px;line-height:1.5;font-family:inherit;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block;padding:6px 12px;border:1px solid #146737;border-radius:6px;color:#146737;text-decoration:none;background:#FFFFFF;font-family:inherit;"><strong>💬 НАПИСАТЬ В WHATSAPP</strong></a></p>
-    </div>
-  </div>
-</div>
-
-<div class="ck-alert ck-alert_theme_orange" style="margin:8px 0 0 0;">
-  <div style="padding:4px 10px;font-family:inherit;">
-    <span class="ck-alert__title"></span>
-    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Оплата</h3>
-    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul>
-    <hr style="border:none;height:1px;background:#E7D6B7;margin:8px 0;" />
-    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Доставка по Алматы и Казахстану</h3>
-    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</li><li><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</li><li><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</li><li><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</li></ul>
-  </div>
-</div>
-
-</div>]]></description>
-<param name="Гарантия">24 мес</param>
-<param name="Для бренда">APC</param>
-<param name="Дополнительная информация">1 USB cable/1 RS-232 configuration cable/2 rack mounting brackets/2 rack mounting support rails/1 external battery pack/1 battery cable user manual</param>
-<param name="Коды">SRV10KRIRK</param>
-<param name="Модель">SRV10KRIRK SRV RM with RailKit, External Battery Pack</param>
-<param name="Мощность (VA)">10 000</param>
-<param name="Мощность (W)">10 000</param>
-<param name="Тип">ИБП</param>
-<param name="Типовая продолжительность работы при 100% нагрузке, мин">2,52</param>
-<param name="Форм-фактор">Rackmount</param>
-<keywords>APC, ИБП APC SRV10KRIRK SRV RM with RailKit External Battery Pack (SRV10KRIRK), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP13835253" available="true">

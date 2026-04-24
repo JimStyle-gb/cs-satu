@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<yml_catalog date="2026-04-24 01:31:52">
+<yml_catalog date="2026-04-25 01:07:13">
 <shop><offers>
 <!--FEED_META
 Поставщик                                  | ComPortal
 URL поставщика                             | https://www.comportal.kz/auth/documents/prices/yml-catalog.php
-Время сборки (Алматы)                      | 2026-04-24 01:31:52
-Ближайшая сборка (Алматы)                  | 2026-04-25 00:30:00
-Сколько товаров у поставщика до фильтра    | 1175
-Сколько товаров у поставщика после фильтра | 635
-Сколько товаров есть в наличии (true)      | 635
+Время сборки (Алматы)                      | 2026-04-25 01:07:13
+Ближайшая сборка (Алматы)                  | 2026-04-26 00:30:00
+Сколько товаров у поставщика до фильтра    | 1168
+Сколько товаров у поставщика после фильтра | 627
+Сколько товаров есть в наличии (true)      | 627
 Сколько товаров нет в наличии (false)      | 0
 -->
 
@@ -1325,56 +1325,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Для бренда">HP</param>
 </offer>
 
-<offer id="CP13816464" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13816464</vendorCode>
-<name>МФУ HP LaserJet Enterprise M430f (3PZ55A#B19)</name>
-<price>249816</price>
-<picture>https://www.comportal.kz/upload/iblock/2a2/panykxnaffbczzk04kvtfyy00l6956w1.jpg</picture>
-<vendor>HP</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-МФУ. Формат печати: A4. Разрешение: 1200x1200. Скорость печати ч/б: 38. Технология печати: Лазерная. Гарантия: 12 мес.]]></description>
-<param name="Тип">МФУ</param>
-<param name="Модель">LaserJet Enterprise M430f</param>
-<param name="Гарантия">12 мес</param>
-<param name="Разрешение">1200x1200</param>
-<param name="Формат печати">A4</param>
-<param name="Скорость печати ч/б">38</param>
-<param name="Технология печати">Лазерная</param>
-<param name="Функция">Принтер-Сканер(АПД-50с.)-Копир-Факс</param>
-<param name="Наличие картриджа (тонера) в комплекте">Стартовый</param>
-<param name="Нагрузка">100 000</param>
-<param name="Коды">3PZ55A#B19</param>
-<param name="Для бренда">HP</param>
-</offer>
-
-<offer id="CP13834336" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13834336</vendorCode>
-<name>МФУ Canon i-SENSYS MF463dw (5951C008AA)</name>
-<price>199059</price>
-<picture>https://www.comportal.kz/upload/iblock/390/2nfu71ivarw81gnd8jp4rhlwlmr5c3gf.JPG</picture>
-<vendor>Canon</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-МФУ. Формат печати: A4. Разрешение: 1200x1200. Скорость печати ч/б: 40. Порты: USB LAN WiFI. Технология печати: Лазерная. Гарантия: 12 мес.]]></description>
-<param name="Тип">МФУ</param>
-<param name="Модель">i-SENSYS MF463dw</param>
-<param name="Гарантия">12 мес</param>
-<param name="Разрешение">1200x1200</param>
-<param name="Формат печати">A4</param>
-<param name="Скорость печати ч/б">40</param>
-<param name="Технология печати">Лазерная</param>
-<param name="Порты">USB LAN WiFI</param>
-<param name="Функция">Принтер-Сканер(АПД-50с.)-Копир</param>
-<param name="Наличие картриджа (тонера) в комплекте">Стартовый</param>
-<param name="Нагрузка">80 000</param>
-<param name="Емкость 4-го лотка">550</param>
-<param name="Коды">5951C008AA</param>
-<param name="Для бренда">Canon</param>
-</offer>
-
 <offer id="CP13839973" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13839973</vendorCode>
@@ -1497,44 +1447,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Наличие картриджа (тонера) в комплекте">Стартовый</param>
 <param name="Коды">6354C009</param>
 <param name="Для бренда">Canon</param>
-</offer>
-
-<offer id="CP13871540" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13871540</vendorCode>
-<name>Хранилище HPE HPE MSA 2062 16Gb FC SFF (R0Q80B)</name>
-<price>1861765</price>
-<picture>https://www.comportal.kz/upload/iblock/73e/5rk91hu2phujc5p5xmwhw0a1g9yv1ghp.JPG</picture>
-<vendor>HPE</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-МФУ. Гарантия: 12 мес. Для бренда: HPE. Модель: HPE MSA 2062 16Gb FC SFF. Коды: R0Q80B.]]></description>
-<param name="Тип">МФУ</param>
-<param name="Модель">HPE MSA 2062 16Gb FC SFF</param>
-<param name="Гарантия">12 мес</param>
-<param name="Интерфейс массива">Fibre Channel</param>
-<param name="Тип корпуса">Rack</param>
-<param name="Коды">R0Q80B</param>
-<param name="Для бренда">HPE</param>
-</offer>
-
-<offer id="CP13871542" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13871542</vendorCode>
-<name>Хранилище HPE HPE MSA 1060 12Gb SAS SFF (R0Q87B)</name>
-<price>1111062</price>
-<picture>https://www.comportal.kz/upload/iblock/e7c/v7bfdqmt9woycxcvstlv0zajhllrr5rn.JPG</picture>
-<vendor>HPE</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-МФУ. Гарантия: 12 мес. Для бренда: HPE. Модель: HPE MSA 1060 12Gb SAS SFF. Коды: R0Q87B.]]></description>
-<param name="Тип">МФУ</param>
-<param name="Модель">HPE MSA 1060 12Gb SAS SFF</param>
-<param name="Гарантия">12 мес</param>
-<param name="Интерфейс массива">SAS</param>
-<param name="Тип корпуса">Rack</param>
-<param name="Коды">R0Q87B</param>
-<param name="Для бренда">HPE</param>
 </offer>
 
 <offer id="CP13872105" available="true">
@@ -1791,33 +1703,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Для бренда">HP</param>
 </offer>
 
-<offer id="CP13864621" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13864621</vendorCode>
-<name>МФУ HP Color LaserJet 5800zf (58R10A#B19)</name>
-<price>1273181</price>
-<picture>https://www.comportal.kz/upload/iblock/b3b/ia7o01v9f10t79howpyl05hva9962lbc.JPG</picture>
-<vendor>HP</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-МФУ. Формат печати: A4. Разрешение: 1200x1200. Скорость печати ч/б: 43. Скорость печати цветной: 43. Порты: USB LAN. Технология печати: Лазерная. Гарантия: 12 мес.]]></description>
-<param name="Тип">МФУ</param>
-<param name="Модель">Color LaserJet 5800zf</param>
-<param name="Гарантия">12 мес</param>
-<param name="Разрешение">1200x1200</param>
-<param name="Формат печати">A4</param>
-<param name="Скорость печати ч/б">43</param>
-<param name="Технология печати">Лазерная</param>
-<param name="Порты">USB LAN</param>
-<param name="Скорость печати цветной">43</param>
-<param name="Функция">Принтер-Сканер(АПД-100с.)-Копир-Факс</param>
-<param name="Наличие картриджа (тонера) в комплекте">Полный</param>
-<param name="Нагрузка">10 000</param>
-<param name="Жесткий диск">500Gb</param>
-<param name="Коды">58R10A#B19</param>
-<param name="Для бренда">HP</param>
-</offer>
-
 <offer id="CP13866859" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13866859</vendorCode>
@@ -1983,6 +1868,28 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Разрядность">24</param>
 <param name="Коды">20G06A#B19</param>
 <param name="Для бренда">HP</param>
+</offer>
+
+<offer id="CP13869969" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13869969</vendorCode>
+<name>Сканер Canon DOCUMENT SCANNER DR-S350NW (6897C009AA)</name>
+<price>416728</price>
+<picture>https://www.comportal.kz/upload/iblock/066/76z741tf2lx3l0a2v36c29h1tdmhqke6.jpg</picture>
+<vendor>Canon</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Сканер. Разрешение: 600. Гарантия: 12 мес. Для бренда: Canon. Модель: DOCUMENT SCANNER DR-S350NW. Коды: 6897C009AA.]]></description>
+<param name="Тип">Сканер</param>
+<param name="Модель">DOCUMENT SCANNER DR-S350NW</param>
+<param name="Дополнительная информация">USB: USB 3.2/Ethernet: 10Base-T / 100Base-TX / 1000Base-T Wi-Fi: 802.11a,b,g,n,ac USB-хост: USB 2.0 типа A (только для NFC-считывателя)</param>
+<param name="Гарантия">12 мес</param>
+<param name="Разрешение">600</param>
+<param name="Скорость сканирования">50</param>
+<param name="Тип сканера">полистовая подача</param>
+<param name="Формат файлов">A4</param>
+<param name="Коды">6897C009AA</param>
+<param name="Для бренда">Canon</param>
 </offer>
 
 <offer id="CP13870846" available="true">
@@ -2763,6 +2670,26 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Технология печати">Лазерная</param>
 <param name="Ресурс">1 600</param>
 <param name="Коды">CE285A</param>
+<param name="Для бренда">HP</param>
+<param name="Оригинальность">Оригинал</param>
+</offer>
+
+<offer id="CP10301553" available="true">
+<categoryId></categoryId>
+<vendorCode>CP10301553</vendorCode>
+<name>Картридж HP CF217A (CF217A) (оригинал)</name>
+<price>39757</price>
+<picture>https://www.comportal.kz/upload/iblock/d3f/rubu7tuie28pt27mp726jfilnbvq6uwl.jpg</picture>
+<vendor>HP</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Оригинальный картридж HP CF217A код — CF217A; цвет — Чёрный; ресурс — 1 600; технология печати — Лазерная.]]></description>
+<param name="Тип">Картридж</param>
+<param name="Модель">CF217A</param>
+<param name="Цвет">Чёрный</param>
+<param name="Технология печати">Лазерная</param>
+<param name="Ресурс">1 600</param>
+<param name="Коды">CF217A</param>
 <param name="Для бренда">HP</param>
 <param name="Оригинальность">Оригинал</param>
 </offer>
@@ -4004,6 +3931,46 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Оригинальность">Оригинал</param>
 </offer>
 
+<offer id="CP13871540" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13871540</vendorCode>
+<name>Хранилище HPE HPE MSA 2062 16Gb FC SFF (R0Q80B) (оригинал)</name>
+<price>1861765</price>
+<picture>https://www.comportal.kz/upload/iblock/73e/5rk91hu2phujc5p5xmwhw0a1g9yv1ghp.JPG</picture>
+<vendor>HPE</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Оригинальный картридж HPE HPE MSA 2062 16Gb FC SFF код — R0Q80B.]]></description>
+<param name="Тип">Картридж</param>
+<param name="Модель">HPE MSA 2062 16Gb FC SFF</param>
+<param name="Гарантия">12 мес</param>
+<param name="Интерфейс массива">Fibre Channel</param>
+<param name="Тип корпуса">Rack</param>
+<param name="Коды">R0Q80B</param>
+<param name="Для бренда">HPE</param>
+<param name="Оригинальность">Оригинал</param>
+</offer>
+
+<offer id="CP13871542" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13871542</vendorCode>
+<name>Хранилище HPE HPE MSA 1060 12Gb SAS SFF (R0Q87B) (оригинал)</name>
+<price>1111062</price>
+<picture>https://www.comportal.kz/upload/iblock/e7c/v7bfdqmt9woycxcvstlv0zajhllrr5rn.JPG</picture>
+<vendor>HPE</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Оригинальный картридж HPE HPE MSA 1060 12Gb SAS SFF код — R0Q87B.]]></description>
+<param name="Тип">Картридж</param>
+<param name="Модель">HPE MSA 1060 12Gb SAS SFF</param>
+<param name="Гарантия">12 мес</param>
+<param name="Интерфейс массива">SAS</param>
+<param name="Тип корпуса">Rack</param>
+<param name="Коды">R0Q87B</param>
+<param name="Для бренда">HPE</param>
+<param name="Оригинальность">Оригинал</param>
+</offer>
+
 <offer id="CP13871836" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13871836</vendorCode>
@@ -5108,23 +5075,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Оригинальность">Оригинал</param>
 </offer>
 
-<offer id="CP13842679" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13842679</vendorCode>
-<name>Печатающая головка HP 729 DesignJet Printhead Replacement Kit (F9J81A) (оригинал)</name>
-<price>234741</price>
-<picture>https://www.comportal.kz/upload/iblock/b8e/b8e51a269d79b68f51de87e15ee80823.JPG</picture>
-<vendor>HP</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Оригинальный картридж HP 729 DesignJet Printhead Replacement Kit код — F9J81A.]]></description>
-<param name="Тип">Картридж</param>
-<param name="Модель">729 DesignJet Printhead Replacement Kit</param>
-<param name="Коды">F9J81A</param>
-<param name="Для бренда">HP</param>
-<param name="Оригинальность">Оригинал</param>
-</offer>
-
 <offer id="CP13848726" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13848726</vendorCode>
@@ -5245,27 +5195,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Номер">№991</param>
 <param name="Ресурс">16 000</param>
 <param name="Коды">M0J90AE</param>
-<param name="Для бренда">HP</param>
-<param name="Оригинальность">Оригинал</param>
-</offer>
-
-<offer id="CP13870240" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13870240</vendorCode>
-<name>Картридж HP M0J94AE (M0J94AE) (оригинал)</name>
-<price>121028</price>
-<picture>https://www.comportal.kz/upload/iblock/cd1/lva41jauh7tuhifhx03cp0dii02g7d9a.jpeg</picture>
-<vendor>HP</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Оригинальный картридж HP M0J94AE коды — M0J94AE / №991; цвет — Пурпурный; ресурс — 16 000; технология печати — Струйная.]]></description>
-<param name="Тип">Картридж</param>
-<param name="Модель">M0J94AE</param>
-<param name="Цвет">Пурпурный</param>
-<param name="Технология печати">Струйная</param>
-<param name="Номер">№991</param>
-<param name="Ресурс">16 000</param>
-<param name="Коды">M0J94AE</param>
 <param name="Для бренда">HP</param>
 <param name="Оригинальность">Оригинал</param>
 </offer>
@@ -8514,33 +8443,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Для бренда">Acer</param>
 </offer>
 
-<offer id="CP13871708" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13871708</vendorCode>
-<name>Монитор Acer KA272Gbip (UM.HX2EE.G05)</name>
-<price>53467</price>
-<picture>https://www.comportal.kz/upload/iblock/299/oizb9frr1x314rf1ebe8h0k4wmtch3u2.jpg</picture>
-<vendor>Acer</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Монитор. Диагональ: 27. Максимальное разрешение: 1920x1080. Тип матрицы: IPS. Частота обновления: 120. Время отклика: 1. Порты: 1xHDMI(2.0) + 1xDP(1.4). Гарантия: 12 мес.]]></description>
-<param name="Тип">Монитор</param>
-<param name="Модель">KA272Gbip</param>
-<param name="Порты">1xHDMI(2.0) + 1xDP(1.4)</param>
-<param name="Тип матрицы">IPS</param>
-<param name="Цвет">Чёрный</param>
-<param name="Гарантия">12 мес</param>
-<param name="Контрастность">1500:1</param>
-<param name="Яркость">250</param>
-<param name="Время отклика">1</param>
-<param name="Максимальное разрешение">1920x1080</param>
-<param name="Углы обзора (вертикальный/горизонтальный)">178/178</param>
-<param name="Диагональ">27</param>
-<param name="Частота обновления">120</param>
-<param name="Коды">UM.HX2EE.G05</param>
-<param name="Для бренда">Acer</param>
-</offer>
-
 <offer id="CP13871710" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13871710</vendorCode>
@@ -8755,31 +8657,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Диагональ">34</param>
 <param name="Частота обновления">120</param>
 <param name="Коды">8K157UT#ABB</param>
-<param name="Для бренда">HP</param>
-</offer>
-
-<offer id="CP13872198" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13872198</vendorCode>
-<name>Монитор HP S5 Pro 527pu (9E0G5AA#ABB)</name>
-<price>144207</price>
-<picture>https://www.comportal.kz/upload/iblock/3d3/yqzp78i88c7yf46t0gu1lsp2fdh1knfl.JPG</picture>
-<vendor>HP</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Монитор. Модельная серия: S5 Pro 527pu. Диагональ: 27. Максимальное разрешение: 2560x1440. Тип матрицы: IPS. Частота обновления: 100. Время отклика: 1. Порты: HDMI DisplayPort. Гарантия: 36 мес.]]></description>
-<param name="Тип">Монитор</param>
-<param name="Модель">S5 Pro 527pu</param>
-<param name="Порты">HDMI DisplayPort</param>
-<param name="Тип матрицы">IPS</param>
-<param name="Гарантия">36 мес</param>
-<param name="Контрастность">1300:1</param>
-<param name="Яркость">350</param>
-<param name="Время отклика">1</param>
-<param name="Максимальное разрешение">2560x1440</param>
-<param name="Диагональ">27</param>
-<param name="Частота обновления">100</param>
-<param name="Коды">9E0G5AA#ABB</param>
 <param name="Для бренда">HP</param>
 </offer>
 
@@ -9864,57 +9741,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Разрешение дисплея">1920x1200</param>
 <param name="Для бренда">Dell</param>
 <param name="Коды">210-BLQN_3</param>
-</offer>
-
-<offer id="CP13869291" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13869291</vendorCode>
-<name>Ноутбук Dell Vostro 3530 (210-BGLW-N1605QVNB3530EMEA01_UBU)</name>
-<price>329068</price>
-<picture>https://www.comportal.kz/upload/iblock/f59/cyxujiop9sd1p3mf8rj1yxf4mxl389w9.JPG</picture>
-<vendor>Dell</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Ноутбук. Модельная серия: Vostro 3530. Процессор: Intel 1355U Core i7 1,7. Оперативная память: 16 Gb / DDR4 / 2666. Накопитель: 512 / PCIe NVMe SSD / 1 шт. Диагональ: 15,6. Разрешение: 1920x1080. ОС: Ubuntu 22.04 64. Видеокарта: Intel Intel Iris Xe 256 Mb. Wi‑Fi: 802.11ac. Bluetooth: Bluetooth 5.0. Камера: FHD Camera. Гарантия: 12 мес.]]></description>
-<param name="Тип">Ноутбук</param>
-<param name="Модель">Vostro 3530</param>
-<param name="Объем жесткого диска">512</param>
-<param name="Скорость вращения шпинделя">Read Intensive</param>
-<param name="Тип жесткого диска">PCIe NVMe SSD</param>
-<param name="Производитель процессора">Intel</param>
-<param name="Модель процессора">Core i7</param>
-<param name="Серия процессора">1355U</param>
-<param name="Частота процессора">1,7</param>
-<param name="Сетевая карта (скорость передачи)">10/100/1000</param>
-<param name="Количество портов USB">3</param>
-<param name="Оперативная память">16 Gb</param>
-<param name="Частота оперативной памяти">2666</param>
-<param name="Количество слотов памяти">2</param>
-<param name="Занятые слоты памяти">2x8GB</param>
-<param name="Объем видеопамяти">256 Mb</param>
-<param name="Тип оперативной памяти">DDR4</param>
-<param name="Порты">1x HDMI; 2x USB-A; 1x USB-C; 1x SD slot; 1xRJ-45</param>
-<param name="Тип привода">No ODD</param>
-<param name="Количество дисков">1</param>
-<param name="Размер дисплея">15,6</param>
-<param name="Дополнительные характеристики">Non-Backlit Keyboard</param>
-<param name="Тип матрицы">FHD</param>
-<param name="Производитель чипсета видеокарты">Intel</param>
-<param name="Марка чипсета видеокарты">Graphics</param>
-<param name="Модель чипсета видеокарты">Intel Iris Xe</param>
-<param name="Операционная система">Ubuntu</param>
-<param name="Версия операционной системы">22.04</param>
-<param name="Битность операционной системы">64</param>
-<param name="Цвет">Чёрный</param>
-<param name="Bluetooth">Bluetooth 5.0</param>
-<param name="Wi-Fi">802.11ac</param>
-<param name="Адаптер">65W AC Adapter</param>
-<param name="Аккумулятор">4-cell 54W HR</param>
-<param name="Гарантия">12 мес</param>
-<param name="Камера">FHD Camera</param>
-<param name="Разрешение дисплея">1920x1080</param>
-<param name="Для бренда">Dell</param>
-<param name="Коды">210-BGLW-N1605QVNB3530EMEA01_UBU</param>
 </offer>
 
 <offer id="CP13869655" available="true">
@@ -13767,32 +13593,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Для бренда">Eaton</param>
 </offer>
 
-<offer id="CP13817039" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13817039</vendorCode>
-<name>ИБП APC BX1600MI-GR (BX1600MI-GR)</name>
-<price>79252</price>
-<picture>https://www.comportal.kz/upload/iblock/7f7/73g7v6a9yl3r8iltrnxovo0sppwp8jnn.jpg</picture>
-<vendor>APC</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-ИБП. Мощность: 1 600 VA / 900 W. Форм-фактор: Tower. Стабилизатор (AVR): есть. Время работы при 100% нагрузке, мин: 0,6. Выходные соединения: (4) Schuko CEE 7 (Батарейное резервное питание). Гарантия: 24 мес.]]></description>
-<param name="Тип">ИБП</param>
-<param name="Модель">BX1600MI-GR</param>
-<param name="Интерфейс">Schuko</param>
-<param name="Выходные соединения">(4) Schuko CEE 7 (Батарейное резервное питание)</param>
-<param name="Мощность (VA)">1 600</param>
-<param name="Мощность (W)">900</param>
-<param name="Типовая продолжительность работы при 100% нагрузке, мин">0,6</param>
-<param name="Форм-фактор">Tower</param>
-<param name="Стабилизатор (AVR)">есть</param>
-<param name="ПО">есть</param>
-<param name="Гарантия">24 мес</param>
-<param name="Диапазон входного напряжения">140-300</param>
-<param name="Коды">BX1600MI-GR</param>
-<param name="Для бренда">APC</param>
-</offer>
-
 <offer id="CP13819517" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13819517</vendorCode>
@@ -14012,28 +13812,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Форм-фактор">Rackmount</param>
 <param name="Гарантия">24 мес</param>
 <param name="Коды">SRV2KRIRK</param>
-<param name="Для бренда">APC</param>
-</offer>
-
-<offer id="CP13835250" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13835250</vendorCode>
-<name>ИБП APC SRV10KRIRK SRV RM with RailKit, External Battery Pack (SRV10KRIRK)</name>
-<price>978058</price>
-<picture>https://www.comportal.kz/upload/iblock/f62/f98rjzv2omz18diiug2on7x346c987zo.JPG</picture>
-<vendor>APC</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-ИБП. Мощность: 10 000 VA / 10 000 W. Форм-фактор: Rackmount. Время работы при 100% нагрузке, мин: 2,52. Гарантия: 24 мес.]]></description>
-<param name="Тип">ИБП</param>
-<param name="Модель">SRV10KRIRK SRV RM with RailKit, External Battery Pack</param>
-<param name="Дополнительная информация">1 USB cable/1 RS-232 configuration cable/2 rack mounting brackets/2 rack mounting support rails/1 external battery pack/1 battery cable user manual</param>
-<param name="Мощность (VA)">10 000</param>
-<param name="Мощность (W)">10 000</param>
-<param name="Типовая продолжительность работы при 100% нагрузке, мин">2,52</param>
-<param name="Форм-фактор">Rackmount</param>
-<param name="Гарантия">24 мес</param>
-<param name="Коды">SRV10KRIRK</param>
 <param name="Для бренда">APC</param>
 </offer>
 
