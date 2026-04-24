@@ -1,8 +1,8 @@
 {
-  "build_time": "23 апреля 2026 г. 05:08:21",
-  "total": 7136,
-  "available_true": 6593,
-  "available_false": 543,
+  "build_time": "24 апреля 2026 г. 05:08:11",
+  "total": 7131,
+  "available_true": 6586,
+  "available_false": 545,
   "ready_to_ship_no_price": 237,
   "placeholder": 575,
   "empty_category": 0,
@@ -29,20 +29,20 @@
       "no_satu_category": 0
     },
     "AlStyle": {
-      "total": 1999,
-      "available": 1456,
-      "unavailable": 543,
+      "total": 2000,
+      "available": 1455,
+      "unavailable": 545,
       "ready_to_ship_no_price": 4,
-      "placeholder": 8,
+      "placeholder": 10,
       "excluded_no_categoryid": 0,
       "no_satu_category": 0
     },
     "ComPortal": {
-      "total": 641,
-      "available": 641,
+      "total": 635,
+      "available": 635,
       "unavailable": 0,
       "ready_to_ship_no_price": 0,
-      "placeholder": 111,
+      "placeholder": 109,
       "excluded_no_categoryid": 0,
       "no_satu_category": 0
     },
