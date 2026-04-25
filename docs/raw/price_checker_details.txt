@@ -1,18 +1,18 @@
 ПОДРОБНЫЙ ОТЧЁТ PRICE CHECKER
-Сформирован: 24 апреля 2026 г. 08:55:52
-Время сборки Price: 24 апреля 2026 г. 05:08:11
+Сформирован: 25 апреля 2026 г. 08:37:36
+Время сборки Price: 25 апреля 2026 г. 05:02:29
 Итоговый статус: УСПЕШНО
 Причина: Критичных проблем не обнаружено.
 
 ======================================================================
 СВОДКА
 ======================================================================
-Всего товаров в Price: 7131
-В наличии: 6586
+Всего товаров в Price: 7122
+В наличии: 6577
 Нет в наличии: 545
 
 Товары без цены: 237
-С заглушкой фото: 575
+С заглушкой фото: 573
 Без categoryId в Price: 0
 С невалидным categoryId в Price: 0
 Без категории Satu: 0
@@ -26,9 +26,9 @@
 ======================================================================
 СВОДКА ПО ПОСТАВЩИКАМ
 ======================================================================
-AkCent | всего=167 | в наличии=167 | нет в наличии=0 | без цены=0 | заглушка фото=8 | не вошло в final без categoryId=0 | без категории Satu=0
-AlStyle | всего=2000 | в наличии=1455 | нет в наличии=545 | без цены=4 | заглушка фото=10 | не вошло в final без categoryId=0 | без категории Satu=0
-ComPortal | всего=635 | в наличии=635 | нет в наличии=0 | без цены=0 | заглушка фото=109 | не вошло в final без categoryId=0 | без категории Satu=0
+AkCent | всего=168 | в наличии=168 | нет в наличии=0 | без цены=0 | заглушка фото=7 | не вошло в final без categoryId=0 | без категории Satu=0
+AlStyle | всего=1998 | в наличии=1453 | нет в наличии=545 | без цены=4 | заглушка фото=9 | не вошло в final без categoryId=0 | без категории Satu=0
+ComPortal | всего=627 | в наличии=627 | нет в наличии=0 | без цены=0 | заглушка фото=109 | не вошло в final без categoryId=0 | без категории Satu=0
 CopyLine | всего=1220 | в наличии=1220 | нет в наличии=0 | без цены=26 | заглушка фото=0 | не вошло в final без categoryId=0 | без категории Satu=0
 VTT | всего=3109 | в наличии=3109 | нет в наличии=0 | без цены=207 | заглушка фото=448 | не вошло в final без categoryId=0 | без категории Satu=0
 
@@ -286,16 +286,14 @@ VTT | ready_to_ship_no_price | id=VTZ7Y73A | vendorCode=VTZ7Y73A | categoryId=20
 ======================================================================
 ТОВАРЫ С ЗАГЛУШКОЙ ФОТО
 ======================================================================
-AkCent | placeholder_photo | id=ACC13T913200 | vendorCode=ACC13T913200 | categoryId=102 | price=77900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Картридж Epson C13T913200 (оригинал)
-AkCent | placeholder_photo | id=ACC13T913400 | vendorCode=ACC13T913400 | categoryId=102 | price=77900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Картридж Epson C13T913400 (оригинал)
-AkCent | placeholder_photo | id=ACC13T913500 | vendorCode=ACC13T913500 | categoryId=102 | price=77900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Картридж Epson C13T913500 (оригинал)
-AkCent | placeholder_photo | id=ACC13T913B00 | vendorCode=ACC13T913B00 | categoryId=102 | price=77900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Картридж Epson C13T913B00 (оригинал)
-AkCent | placeholder_photo | id=ACC11CJ67414 | vendorCode=ACC11CJ67414 | categoryId=103 | price=109900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=МФУ Epson L3256 фабрика печати
-AkCent | placeholder_photo | id=ACC11CL41411 | vendorCode=ACC11CL41411 | categoryId=301 | price=212900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=МФУ Epson L4360 фабрика печати
-AkCent | placeholder_photo | id=ACC11CJ62404 | vendorCode=ACC11CJ62404 | categoryId=301 | price=299900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=МФУ Epson L6260 фабрика печати, Wi-Fi
-AkCent | placeholder_photo | id=AC4680101 | vendorCode=AC4680101 | categoryId=504 | price=241900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Шредер Fellowes® AUTOMAX 150C SHREDDER (CROSS CUT) 230V EU
+AkCent | placeholder_photo | id=ACC13T913200 | vendorCode=ACC13T913200 | categoryId=102 | price=78900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Картридж Epson C13T913200 (оригинал)
+AkCent | placeholder_photo | id=ACC13T913400 | vendorCode=ACC13T913400 | categoryId=102 | price=78900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Картридж Epson C13T913400 (оригинал)
+AkCent | placeholder_photo | id=ACC13T913500 | vendorCode=ACC13T913500 | categoryId=102 | price=78900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Картридж Epson C13T913500 (оригинал)
+AkCent | placeholder_photo | id=ACC13T913B00 | vendorCode=ACC13T913B00 | categoryId=102 | price=78900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Картридж Epson C13T913B00 (оригинал)
+AkCent | placeholder_photo | id=ACC11CL41411 | vendorCode=ACC11CL41411 | categoryId=301 | price=214900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=МФУ Epson L4360 фабрика печати
+AkCent | placeholder_photo | id=ACC11CJ62404 | vendorCode=ACC11CJ62404 | categoryId=301 | price=302900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=МФУ Epson L6260 фабрика печати, Wi-Fi
+AkCent | placeholder_photo | id=AC5050301 | vendorCode=AC5050301 | categoryId=205 | price=198900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Шредер Fellowes® Powershred® LX211 WHITE SHREDDER EU/UK
 AlStyle | placeholder_photo | id=AS406006 | vendorCode=AS406006 | categoryId=602 | price=3932900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Источник бесперебойного питания CyberPower HSTP3T30KE
-AlStyle | placeholder_photo | id=AS411022 | vendorCode=AS411022 | categoryId=106 | price=19900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Зап. Часть Печатающая головка Canon PRINTHEAD CH-41L EMB (4662C001AA) (оригинал)
 AlStyle | placeholder_photo | id=AS416336 | vendorCode=AS416336 | categoryId=602 | price=166900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Монитор Xiaomi Mini LED Gaming Monitor G Pro 27Qi 2026 27"
 AlStyle | placeholder_photo | id=AS417829 | vendorCode=AS417829 | categoryId=701 | price=702900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Источник бесперебойного питания APC Easy UPS SRVL1KRIRK
 AlStyle | placeholder_photo | id=AS420184 | vendorCode=AS420184 | categoryId=101 | price=60900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Тонер-картридж стандартной емкости Lexmark 77L91C0 (голубой) (оригинал)
@@ -586,7 +584,9 @@ VTT | placeholder_photo | id=VT5050604 | vendorCode=VT5050604 | categoryId=105 |
 VTT | placeholder_photo | id=VT53659847 | vendorCode=VT53659847 | categoryId=101 | price=22900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Заправочный комплект Pantum (TN-420X) для M6700/P3010 Bk, 6K, 2 тонера+ 1чип (оригинал)
 VTT | placeholder_photo | id=VT797026754 | vendorCode=VT797026754 | categoryId=101 | price=11900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Тонер-картридж Hi-Black (HB-006R04368) для Xerox C310/C315 (совместимый)
 VTT | placeholder_photo | id=VT797026755 | vendorCode=VT797026755 | categoryId=101 | price=10900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Тонер-картридж Hi-Black (HB-006R04369) для Xerox C310/C315 (совместимый)
-... показаны первые 300 строк, всего записей: 575
+VTT | placeholder_photo | id=VT797026756 | vendorCode=VT797026756 | categoryId=101 | price=10900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Тонер-картридж Hi-Black (HB-006R04370) для Xerox C310/C315 (совместимый)
+VTT | placeholder_photo | id=VT797026757 | vendorCode=VT797026757 | categoryId=101 | price=10900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Тонер-картридж Hi-Black (HB-006R04371) для Xerox C310/C315 (совместимый)
+... показаны первые 300 строк, всего записей: 573
 
 ======================================================================
 ДУБЛИ OFFER ID
@@ -609,8 +609,8 @@ VTT | placeholder_photo | id=VT797026755 | vendorCode=VT797026755 | categoryId=1
 Заглушка фото:
 - VTT: 448
 - ComPortal: 109
-- AlStyle: 10
-- AkCent: 8
+- AlStyle: 9
+- AkCent: 7
 
 Не вошло в final без categoryId:
 нет
