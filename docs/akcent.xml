@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<yml_catalog date="2026-04-24 23:05:40">
+<yml_catalog date="2026-04-25 23:04:34">
 <shop><offers>
 <!--FEED_META
 Поставщик                                  | AkCent
 URL поставщика                             | https://ak-cent.kz/export/Exchange/article_nw2/Ware02224.xml
-Время сборки (Алматы)                      | 2026-04-24 23:05:40
-Ближайшая сборка (Алматы)                  | 2026-04-25 22:30:00
-Сколько товаров у поставщика до фильтра    | 2040
+Время сборки (Алматы)                      | 2026-04-25 23:04:34
+Ближайшая сборка (Алматы)                  | 2026-04-26 22:30:00
+Сколько товаров у поставщика до фильтра    | 2038
 Сколько товаров у поставщика после фильтра | 168
 Сколько товаров есть в наличии (true)      | 168
 Сколько товаров нет в наличии (false)      | 0
@@ -918,7 +918,7 @@ URL поставщика                             | https://ak-cent.kz/export
 <vendorCode>ACC13T41F34N</vendorCode>
 <name>Картридж Epson T3400N, UltraChrome XD2, пурпурный, 350 мл (оригинал)</name>
 <price>126900</price>
-<picture>https://b2b.ak-cent.kz/upload/iblock/e70/ha6pr3zmtf38bhrv50v66sjlwu4yo2qx.png</picture>
+<picture>https://b2b.ak-cent.kz/upload/iblock/b8f/2y2bsbkydjefvj9dz82zd4fe9zpqxc88.png</picture>
 <vendor>Epson</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
@@ -1648,7 +1648,7 @@ URL поставщика                             | https://ak-cent.kz/export
 <vendorCode>ACC13T606B00</vendorCode>
 <name>Картридж Epson C13T606B00 (оригинал)</name>
 <price>96900</price>
-<picture>https://b2b.ak-cent.kz/upload/iblock/13f/4e003pi2n3p83pjenshmqjhzv915k6lk.jpg</picture>
+<picture>https://b2b.ak-cent.kz/upload/iblock/06c/5kmgsx62b090zb2hpdrwtyyppec0o2lz.jpg</picture>
 <vendor>Epson</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
@@ -3656,7 +3656,7 @@ URL поставщика                             | https://ak-cent.kz/export
 <vendorCode>AC7MD74A</vendorCode>
 <name>МФУ лазерное HP LaserJet M141w белый</name>
 <price>90900</price>
-<picture>https://b2b.ak-cent.kz/upload/iblock/428/qahlgkrz3gii3crq7wo50we2854hhzmw.jpg</picture>
+<picture>https://b2b.ak-cent.kz/upload/iblock/1ee/batb0w25t4132le63x2foqm443ol2qe2.jpg</picture>
 <vendor>SMART</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
@@ -3701,7 +3701,7 @@ URL поставщика                             | https://ak-cent.kz/export
 <vendorCode>AC3G631A</vendorCode>
 <name>МФУ лазерное HP LaserJet Pro 3103fdn белый</name>
 <price>166900</price>
-<picture>https://b2b.ak-cent.kz/upload/iblock/f02/ehjk4ia05chnm4a1dxf7uas8f2dgm6so.png</picture>
+<picture>https://b2b.ak-cent.kz/upload/iblock/cfd/zgmsx7om03m6ghkma01nzchdh7sigm9u.png</picture>
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
@@ -3746,7 +3746,7 @@ URL поставщика                             | https://ak-cent.kz/export
 <vendorCode>ACG3410</vendorCode>
 <name>МФУ струйное Canon Pixma G3410 Wi-Fi черный</name>
 <price>110900</price>
-<picture>https://b2b.ak-cent.kz/upload/iblock/796/ar0ccj2dgy25e3hx3131je7rcv32aezp.png</picture>
+<picture>https://b2b.ak-cent.kz/upload/iblock/28b/lhzc1qcsocxadoz6r6c2lxei227yjh12.png</picture>
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
@@ -3793,7 +3793,7 @@ URL поставщика                             | https://ak-cent.kz/export
 <vendorCode>ACG3430</vendorCode>
 <name>МФУ струйное Canon Pixma G3430 Wi-Fi черный</name>
 <price>120900</price>
-<picture>https://b2b.ak-cent.kz/upload/iblock/e3d/0ybc2vf0m0o2mth2ouxempenflt5bds1.png</picture>
+<picture>https://b2b.ak-cent.kz/upload/iblock/f6e/ux1zqpq1zdeltgpurkv3laobtimoc1c6.png</picture>
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
@@ -4183,7 +4183,7 @@ URL поставщика                             | https://ak-cent.kz/export
 <vendorCode>AC7MD68A</vendorCode>
 <name>Принтер лазерный HP LaserJet M111w белый</name>
 <price>71900</price>
-<picture>https://b2b.ak-cent.kz/upload/iblock/3b7/dnber119p460k8m63fvjj0g37zaqf5mz.jpg</picture>
+<picture>https://b2b.ak-cent.kz/upload/iblock/3ab/01kuiy9bv9rseaz0f4spwxfmst5ppakr.jpg</picture>
 <vendor>HP</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
@@ -7641,7 +7641,7 @@ URL поставщика                             | https://ak-cent.kz/export
 <vendorCode>AC5050301</vendorCode>
 <name>Шредер Fellowes® Powershred® LX211 WHITE SHREDDER EU/UK</name>
 <price>198900</price>
-<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
+<picture>https://b2b.ak-cent.kz/upload/iblock/4cc/w7vumhq7a3mx88lqk1d3l0lz68y06w4c.jpg</picture>
 <vendor>Fellowes</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
