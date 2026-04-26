@@ -29,12 +29,6 @@
 
 
 
-## START AlStyle
-Поставщик: AlStyle
-Товаров без categoryId: 0
-
-# Все товары получили categoryId
-## END AlStyle
 
 ## START ComPortal
 Поставщик: ComPortal
@@ -49,3 +43,10 @@
 
 # Все товары получили categoryId
 ## END AkCent
+
+## START AlStyle
+Поставщик: AlStyle
+Товаров без categoryId: 0
+
+# Все товары получили categoryId
+## END AlStyle
