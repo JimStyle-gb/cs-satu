@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<yml_catalog date="2026-04-26 23:05:49">
+<yml_catalog date="2026-04-27 23:49:34">
 <shop><offers>
 <!--FEED_META
 Поставщик                                  | AkCent
 URL поставщика                             | https://ak-cent.kz/export/Exchange/article_nw2/Ware02224.xml
-Время сборки (Алматы)                      | 2026-04-26 23:05:49
-Ближайшая сборка (Алматы)                  | 2026-04-27 22:30:00
-Сколько товаров у поставщика до фильтра    | 2036
-Сколько товаров у поставщика после фильтра | 168
-Сколько товаров есть в наличии (true)      | 168
+Время сборки (Алматы)                      | 2026-04-27 23:49:34
+Ближайшая сборка (Алматы)                  | 2026-04-28 22:30:00
+Сколько товаров у поставщика до фильтра    | 2012
+Сколько товаров у поставщика после фильтра | 166
+Сколько товаров есть в наличии (true)      | 166
 Сколько товаров нет в наличии (false)      | 0
 -->
 
@@ -2332,10 +2332,10 @@ URL поставщика                             | https://ak-cent.kz/export
 <div style="font-family:Verdana, Tahoma, Arial, sans-serif;color:#2F2F2F;">
 <h3 style="margin:0 0 10px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Картридж Epson C13T913500 (оригинал)</h3>
 
-<p style="margin:0 0 10px 0;font-size:14px;line-height:1.5;font-family:inherit;">Оригинальный картридж Epson C13T913500 для Epson SureColor SC-P5000.</p>
+<p style="margin:0 0 10px 0;font-size:14px;line-height:1.5;font-family:inherit;">Оригинальный картридж. картридж для: Epson SureColor SC-P5000 Epson SureColor SC-P5000 Spectro Epson SureColor SC-P5000V Epson SureColor SC-P5000V Spectro.</p>
 
 <h3 style="margin:14px 0 8px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Характеристики</h3>
-<ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Бренд:</strong> Epson</li><li><strong>Для устройства:</strong> Epson SureColor SC-P5000</li><li><strong>Коды:</strong> C13T913500</li><li><strong>Модель:</strong> C13T913500</li><li><strong>Оригинальность:</strong> Оригинал</li><li><strong>Тип:</strong> Картридж</li></ul>
+<ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Бренд:</strong> Epson</li><li><strong>Для устройства:</strong> Epson SureColor SC-P5000 / Epson SureColor SC-P5000V</li><li><strong>Коды:</strong> C13T913500</li><li><strong>Модель:</strong> C13T913500</li><li><strong>Оригинальность:</strong> Оригинал</li><li><strong>Тип:</strong> Картридж</li></ul>
 
 <div style="text-align:center;margin:10px 0 8px 0;">
   <div class="ck-alert ck-alert_theme_green">
@@ -2361,7 +2361,7 @@ URL поставщика                             | https://ak-cent.kz/export
 
 </div>]]></description>
 <param name="Для бренда">Epson</param>
-<param name="Для устройства">Epson SureColor SC-P5000</param>
+<param name="Для устройства">Epson SureColor SC-P5000 / Epson SureColor SC-P5000V</param>
 <param name="Коды">C13T913500</param>
 <param name="Модель">C13T913500</param>
 <param name="Оригинальность">Оригинал</param>
@@ -2372,19 +2372,19 @@ URL поставщика                             | https://ak-cent.kz/export
 <offer id="ACC13T913B00" available="true">
 <categoryId>102</categoryId>
 <vendorCode>ACC13T913B00</vendorCode>
-<name>Картридж Epson C13T913B00 (оригинал)</name>
+<name>Картридж Epson P5000V (оригинал)</name>
 <price>78900</price>
 <picture>https://placehold.co/800x800/png?text=No+Photo</picture>
 <vendor>Epson</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
 <div style="font-family:Verdana, Tahoma, Arial, sans-serif;color:#2F2F2F;">
-<h3 style="margin:0 0 10px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Картридж Epson C13T913B00 (оригинал)</h3>
+<h3 style="margin:0 0 10px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Картридж Epson P5000V (оригинал)</h3>
 
-<p style="margin:0 0 10px 0;font-size:14px;line-height:1.5;font-family:inherit;">Оригинальный картридж Epson C13T913B00 для Epson SureColor SC-P5000.</p>
+<p style="margin:0 0 10px 0;font-size:14px;line-height:1.5;font-family:inherit;">Оригинальный картридж. картридж для: Epson SureColor SC-P5000 Epson SureColor SC-P5000 Spectro Epson SureColor SC-P5000V Epson SureColor SC-P5000V Spectro.</p>
 
 <h3 style="margin:14px 0 8px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Характеристики</h3>
-<ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Бренд:</strong> Epson</li><li><strong>Для устройства:</strong> Epson SureColor SC-P5000</li><li><strong>Коды:</strong> C13T913B00</li><li><strong>Модель:</strong> C13T913B00</li><li><strong>Оригинальность:</strong> Оригинал</li><li><strong>Тип:</strong> Картридж</li></ul>
+<ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Гарантия:</strong> 12 мес.</li><li><strong>Бренд:</strong> Epson</li><li><strong>Для устройства:</strong> Epson SureColor SC-P5000 / Epson SureColor SC-P5000V</li><li><strong>Коды:</strong> C13T913B00</li><li><strong>Модель:</strong> P5000V</li><li><strong>Оригинальность:</strong> Оригинал</li><li><strong>Тип:</strong> Картридж</li></ul>
 
 <div style="text-align:center;margin:10px 0 8px 0;">
   <div class="ck-alert ck-alert_theme_green">
@@ -2409,13 +2409,14 @@ URL поставщика                             | https://ak-cent.kz/export
 </div>
 
 </div>]]></description>
+<param name="Гарантия">12 мес.</param>
 <param name="Для бренда">Epson</param>
-<param name="Для устройства">Epson SureColor SC-P5000</param>
+<param name="Для устройства">Epson SureColor SC-P5000 / Epson SureColor SC-P5000V</param>
 <param name="Коды">C13T913B00</param>
-<param name="Модель">C13T913B00</param>
+<param name="Модель">P5000V</param>
 <param name="Оригинальность">Оригинал</param>
 <param name="Тип">Картридж</param>
-<keywords>Epson, Картридж Epson C13T913B00 (оригинал), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+<keywords>Epson, Картридж Epson P5000V (оригинал), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="ACC13T965140" available="true">
@@ -3133,56 +3134,6 @@ URL поставщика                             | https://ak-cent.kz/export
 <keywords>Epson, МФУ Epson L3266 фабрика печати Wi-Fi, доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
-<offer id="ACC11CK59404" available="true">
-<categoryId>102</categoryId>
-<vendorCode>ACC11CK59404</vendorCode>
-<name>МФУ Epson L3550 фабрика печати, Wi-Fi</name>
-<price>148900</price>
-<picture>https://b2b.ak-cent.kz/upload/iblock/b9d/321g5ip06inw6yiu5kl36p2upvmxkihe.jpg</picture>
-<vendor>Epson</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-<div style="font-family:Verdana, Tahoma, Arial, sans-serif;color:#2F2F2F;">
-<h3 style="margin:0 0 10px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">МФУ Epson L3550 фабрика печати, Wi-Fi</h3>
-
-<p style="margin:0 0 10px 0;font-size:14px;line-height:1.5;font-family:inherit;">МФУ с чернильными емкостями для печати дома Высокоскоростной цветной принтер 3-в-1 формата A4 с поддержкой Wi-Fi Direct Печать, сканирование, копирование Поддержка Wi-Fi Direct Черный Благодаря отсутствию картриджей МФУ (принтер-копир-скан) с поддержкой Wi-Fi Direct подойдет тем, кому необходимо высокое качество при низкой себестоимости печати.</p>
-
-<h3 style="margin:14px 0 8px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Характеристики</h3>
-<ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Вес:</strong> 4,1 кг</li><li><strong>Габариты:</strong> 375 x 347 x 179</li><li><strong>Гарантия:</strong> 12 мес.</li><li><strong>Модель:</strong> поставляется с установленной печатающей головкой и не требует сложной настройки. Техника Метод печати PrecisionCore™ Print Head Конфигурация сопла 400 Сопла (черный), 128 Сопла (цвет) Минимальный размер капли 3,3 капли(ей)</li><li><strong>Технология:</strong> PrecisionCore Heat-Free, не использующая нагрев при печати, помогает экономить электроэнергию и деньги за счет меньшего количества деталей, подлежащих регулярной замене. В отличие от принтеров других производителей</li><li><strong>Тип:</strong> МФУ Дом</li><li><strong>Цвет:</strong> Black другие</li></ul>
-
-<div style="text-align:center;margin:10px 0 8px 0;">
-  <div class="ck-alert ck-alert_theme_green">
-    <div style="padding:4px 10px;font-family:inherit;">
-      <span class="ck-alert__title"></span>
-      <p style="margin:0 0 4px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>Просьба отправлять запросы на WhatsApp!</strong></p>
-      <p style="margin:0 0 6px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>+7 707 327-05-01</strong></p>
-      <p style="margin:0;font-size:14px;line-height:1.5;font-family:inherit;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block;padding:6px 12px;border:1px solid #146737;border-radius:6px;color:#146737;text-decoration:none;background:#FFFFFF;font-family:inherit;"><strong>💬 НАПИСАТЬ В WHATSAPP</strong></a></p>
-    </div>
-  </div>
-</div>
-
-<div class="ck-alert ck-alert_theme_orange" style="margin:8px 0 0 0;">
-  <div style="padding:4px 10px;font-family:inherit;">
-    <span class="ck-alert__title"></span>
-    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Оплата</h3>
-    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul>
-    <hr style="border:none;height:1px;background:#E7D6B7;margin:8px 0;" />
-    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Доставка по Алматы и Казахстану</h3>
-    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</li><li><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</li><li><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</li><li><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</li></ul>
-  </div>
-</div>
-
-</div>]]></description>
-<param name="Вес">4,1 кг</param>
-<param name="Габариты">375 x 347 x 179</param>
-<param name="Гарантия">12 мес.</param>
-<param name="Модель">поставляется с установленной печатающей головкой и не требует сложной настройки. Техника Метод печати PrecisionCore™ Print Head Конфигурация сопла 400 Сопла (черный), 128 Сопла (цвет) Минимальный размер капли 3,3 капли(ей)</param>
-<param name="Технология">PrecisionCore Heat-Free, не использующая нагрев при печати, помогает экономить электроэнергию и деньги за счет меньшего количества деталей, подлежащих регулярной замене. В отличие от принтеров других производителей</param>
-<param name="Тип">МФУ Дом</param>
-<param name="Цвет">Black другие</param>
-<keywords>Epson, МФУ Epson L3550 фабрика печати Wi-Fi, доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
-</offer>
-
 <offer id="ACC11CK58404" available="true">
 <categoryId>102</categoryId>
 <vendorCode>ACC11CK58404</vendorCode>
@@ -3292,7 +3243,7 @@ URL поставщика                             | https://ak-cent.kz/export
 </offer>
 
 <offer id="ACC11CL41411" available="true">
-<categoryId>301</categoryId>
+<categoryId>102</categoryId>
 <vendorCode>ACC11CL41411</vendorCode>
 <name>МФУ Epson L4360 фабрика печати</name>
 <price>214900</price>
@@ -3303,10 +3254,10 @@ URL поставщика                             | https://ak-cent.kz/export
 <div style="font-family:Verdana, Tahoma, Arial, sans-serif;color:#2F2F2F;">
 <h3 style="margin:0 0 10px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">МФУ Epson L4360 фабрика печати</h3>
 
-<p style="margin:0 0 10px 0;font-size:14px;line-height:1.5;font-family:inherit;">МФУ Epson L4360 фабрика печати — мфу дом.</p>
+<p style="margin:0 0 10px 0;font-size:14px;line-height:1.5;font-family:inherit;">Быстрый, надежный, универсальный принтер для бизнеса Двустороннее многофункциональное устройство 3-в-1 для цветной печати в формате A4 с Wi-Fi Direct, ЖК-экраном и Smart light Status для повышения удобства работы Быстрый, надежный, универсальный принтер для бизнеса PrecisionCore для высокоскоростной и качественной печати Smartlight Status для повышения удобства работы Автоматическая двусторонняя печать/сканиров.</p>
 
 <h3 style="margin:14px 0 8px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Характеристики</h3>
-<ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Гарантия:</strong> 12 мес.</li><li><strong>Модель:</strong> МФУ Epson L4360 фабрика печати</li><li><strong>Тип:</strong> МФУ Дом</li></ul>
+<ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Вес:</strong> 5,2 кг</li><li><strong>Габариты:</strong> 375 x 347 x 187</li><li><strong>Гарантия:</strong> 12 мес.</li><li><strong>Модель:</strong> МФУ Epson L4360 фабрика печати</li><li><strong>Технология:</strong> Precision Core обеспечивает высокое качество печати документов, а чернила с черным пигментом не выцветают. Smart light Status для повышения удобства работы</li><li><strong>Тип:</strong> МФУ Дом</li><li><strong>Цвет:</strong> Чёрный</li></ul>
 
 <div style="text-align:center;margin:10px 0 8px 0;">
   <div class="ck-alert ck-alert_theme_green">
@@ -3331,9 +3282,13 @@ URL поставщика                             | https://ak-cent.kz/export
 </div>
 
 </div>]]></description>
+<param name="Вес">5,2 кг</param>
+<param name="Габариты">375 x 347 x 187</param>
 <param name="Гарантия">12 мес.</param>
 <param name="Модель">МФУ Epson L4360 фабрика печати</param>
+<param name="Технология">Precision Core обеспечивает высокое качество печати документов, а чернила с черным пигментом не выцветают. Smart light Status для повышения удобства работы</param>
 <param name="Тип">МФУ Дом</param>
+<param name="Цвет">Чёрный</param>
 <keywords>Epson, МФУ Epson L4360 фабрика печати, доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
@@ -3651,6 +3606,57 @@ URL поставщика                             | https://ak-cent.kz/export
 <keywords>Epson, МФУ Epson M2120 (CIS) фабрика печати, доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
+<offer id="ACC11CG27405" available="true">
+<categoryId>102</categoryId>
+<vendorCode>ACC11CG27405</vendorCode>
+<name>МФУ Epson M2140 (CIS) фабрика печати</name>
+<price>180900</price>
+<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
+<vendor>Epson</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+<div style="font-family:Verdana, Tahoma, Arial, sans-serif;color:#2F2F2F;">
+<h3 style="margin:0 0 10px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">МФУ Epson M2140 (CIS) фабрика печати</h3>
+
+<p style="margin:0 0 10px 0;font-size:14px;line-height:1.5;font-family:inherit;">Компактное монохромное МФУ для малого офиса Компактное МФУ для сверхэкономичной печати черно-белых документов Принтер, сканер, копир. Формат А4 Рекордно низкая себестоимость печати благодаря использованию контейнеров с чернилами вместо картриджей Пигментные чернила Скорость печати до 39 стр.</p>
+
+<h3 style="margin:14px 0 8px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Характеристики</h3>
+<ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Гарантия:</strong> 12 мес.</li><li><strong>Интерфейсы:</strong> USB</li><li><strong>Модель:</strong> МФУ Epson M2140 (CIS) фабрика печати</li><li><strong>Разрешение печати, dpi:</strong> 5760 x 1440</li><li><strong>Разрешение сканера, dpi:</strong> 1200 x 2400</li><li><strong>Скорость печати (A4):</strong> 39</li><li><strong>Технология:</strong> печати Струйная Область применения Дл</li><li><strong>Тип:</strong> МФУ Дом</li></ul>
+
+<div style="text-align:center;margin:10px 0 8px 0;">
+  <div class="ck-alert ck-alert_theme_green">
+    <div style="padding:4px 10px;font-family:inherit;">
+      <span class="ck-alert__title"></span>
+      <p style="margin:0 0 4px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>Просьба отправлять запросы на WhatsApp!</strong></p>
+      <p style="margin:0 0 6px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>+7 707 327-05-01</strong></p>
+      <p style="margin:0;font-size:14px;line-height:1.5;font-family:inherit;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block;padding:6px 12px;border:1px solid #146737;border-radius:6px;color:#146737;text-decoration:none;background:#FFFFFF;font-family:inherit;"><strong>💬 НАПИСАТЬ В WHATSAPP</strong></a></p>
+    </div>
+  </div>
+</div>
+
+<div class="ck-alert ck-alert_theme_orange" style="margin:8px 0 0 0;">
+  <div style="padding:4px 10px;font-family:inherit;">
+    <span class="ck-alert__title"></span>
+    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Оплата</h3>
+    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul>
+    <hr style="border:none;height:1px;background:#E7D6B7;margin:8px 0;" />
+    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Доставка по Алматы и Казахстану</h3>
+    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</li><li><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</li><li><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</li><li><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</li></ul>
+  </div>
+</div>
+
+</div>]]></description>
+<param name="Гарантия">12 мес.</param>
+<param name="Интерфейсы">USB</param>
+<param name="Модель">МФУ Epson M2140 (CIS) фабрика печати</param>
+<param name="Разрешение печати, dpi">5760 x 1440</param>
+<param name="Разрешение сканера, dpi">1200 x 2400</param>
+<param name="Скорость печати (A4)">39</param>
+<param name="Технология">печати Струйная Область применения Дл</param>
+<param name="Тип">МФУ Дом</param>
+<keywords>Epson, МФУ Epson M2140 (CIS) фабрика печати, доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+</offer>
+
 <offer id="AC7MD74A" available="true">
 <categoryId>301</categoryId>
 <vendorCode>AC7MD74A</vendorCode>
@@ -3739,6 +3745,51 @@ URL поставщика                             | https://ak-cent.kz/export
 <param name="Гарантия">12 мес.</param>
 <param name="Модель">МФУ лазерное HP LaserJet Pro 3103fdn белый</param>
 <keywords>HP, МФУ лазерное HP LaserJet Pro 3103fdn белый, доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+</offer>
+
+<offer id="AC3G632A" available="true">
+<categoryId>301</categoryId>
+<vendorCode>AC3G632A</vendorCode>
+<name>МФУ лазерное HP LaserJet Pro 3103fdw белый</name>
+<price>175900</price>
+<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
+<vendor>HP</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+<div style="font-family:Verdana, Tahoma, Arial, sans-serif;color:#2F2F2F;">
+<h3 style="margin:0 0 10px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">МФУ лазерное HP LaserJet Pro 3103fdw белый</h3>
+
+<p style="margin:0 0 10px 0;font-size:14px;line-height:1.5;font-family:inherit;">МФУ лазерное HP LaserJet Pro MFP 3103fdw разработано для рабочих групп, обеспечивает профессиональную производительность, быструю высококачественную печать, сканирование и копирование - все это в компактном корпусе.</p>
+
+<h3 style="margin:14px 0 8px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Характеристики</h3>
+<ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Гарантия:</strong> 12 мес.</li><li><strong>Модель:</strong> МФУ лазерное HP LaserJet Pro 3103fdw белый</li></ul>
+
+<div style="text-align:center;margin:10px 0 8px 0;">
+  <div class="ck-alert ck-alert_theme_green">
+    <div style="padding:4px 10px;font-family:inherit;">
+      <span class="ck-alert__title"></span>
+      <p style="margin:0 0 4px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>Просьба отправлять запросы на WhatsApp!</strong></p>
+      <p style="margin:0 0 6px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>+7 707 327-05-01</strong></p>
+      <p style="margin:0;font-size:14px;line-height:1.5;font-family:inherit;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block;padding:6px 12px;border:1px solid #146737;border-radius:6px;color:#146737;text-decoration:none;background:#FFFFFF;font-family:inherit;"><strong>💬 НАПИСАТЬ В WHATSAPP</strong></a></p>
+    </div>
+  </div>
+</div>
+
+<div class="ck-alert ck-alert_theme_orange" style="margin:8px 0 0 0;">
+  <div style="padding:4px 10px;font-family:inherit;">
+    <span class="ck-alert__title"></span>
+    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Оплата</h3>
+    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul>
+    <hr style="border:none;height:1px;background:#E7D6B7;margin:8px 0;" />
+    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Доставка по Алматы и Казахстану</h3>
+    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</li><li><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</li><li><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</li><li><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</li></ul>
+  </div>
+</div>
+
+</div>]]></description>
+<param name="Гарантия">12 мес.</param>
+<param name="Модель">МФУ лазерное HP LaserJet Pro 3103fdw белый</param>
+<keywords>HP, МФУ лазерное HP LaserJet Pro 3103fdw белый, доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="ACG3410" available="true">
@@ -4559,7 +4610,7 @@ URL поставщика                             | https://ak-cent.kz/export
 <categoryId>401</categoryId>
 <vendorCode>ACV11HA84240</vendorCode>
 <name>Проектор для дома Epson CO-FD01</name>
-<price>361900</price>
+<price>267900</price>
 <picture>https://b2b.ak-cent.kz/upload/iblock/af1/97a1vgcpviwp02bosk7ef0jgjzxlqiiv.png</picture>
 <vendor>Epson</vendor>
 <currencyId>KZT</currencyId>
@@ -4609,7 +4660,7 @@ URL поставщика                             | https://ak-cent.kz/export
 <categoryId>401</categoryId>
 <vendorCode>ACV11HA84040</vendorCode>
 <name>Проектор для дома Epson CO-FH01</name>
-<price>361900</price>
+<price>286900</price>
 <picture>https://b2b.ak-cent.kz/upload/iblock/af1/97a1vgcpviwp02bosk7ef0jgjzxlqiiv.png</picture>
 <vendor>Epson</vendor>
 <currencyId>KZT</currencyId>
@@ -4726,7 +4777,7 @@ URL поставщика                             | https://ak-cent.kz/export
 <categoryId>401</categoryId>
 <vendorCode>ACV11HA86040</vendorCode>
 <name>Проектор универсальный Epson CO-W01</name>
-<price>237900</price>
+<price>217900</price>
 <picture>https://b2b.ak-cent.kz/upload/iblock/af1/97a1vgcpviwp02bosk7ef0jgjzxlqiiv.png</picture>
 <vendor>Epson</vendor>
 <currencyId>KZT</currencyId>
@@ -4772,7 +4823,7 @@ URL поставщика                             | https://ak-cent.kz/export
 <categoryId>401</categoryId>
 <vendorCode>ACV11HA86340</vendorCode>
 <name>Проектор универсальный Epson CO-WX02</name>
-<price>237900</price>
+<price>212900</price>
 <picture>https://b2b.ak-cent.kz/upload/iblock/784/2zlzx4940r10d71q1trtp1doktrz3ohd.jpg</picture>
 <vendor>Epson</vendor>
 <currencyId>KZT</currencyId>
@@ -4828,7 +4879,7 @@ URL поставщика                             | https://ak-cent.kz/export
 <categoryId>401</categoryId>
 <vendorCode>ACV11HB51042</vendorCode>
 <name>Проектор универсальный Epson EB-E24</name>
-<price>389900</price>
+<price>290900</price>
 <picture>https://b2b.ak-cent.kz/upload/iblock/1f3/0612v5losjub6yw05onlvslb671e5ibd.png</picture>
 <vendor>Epson</vendor>
 <currencyId>KZT</currencyId>
@@ -4878,83 +4929,11 @@ URL поставщика                             | https://ak-cent.kz/export
 <keywords>Epson, Проектор универсальный Epson EB-E24, доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
-<offer id="ACV11H973040" available="true">
-<categoryId>401</categoryId>
-<vendorCode>ACV11H973040</vendorCode>
-<name>Проектор универсальный Epson EB-W06</name>
-<price>366900</price>
-<picture>https://b2b.ak-cent.kz/upload/iblock/113/3unqv2ec5ip4mejf1vxjuuw1jzih2tto.png</picture>
-<vendor>Epson</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-<div style="font-family:Verdana, Tahoma, Arial, sans-serif;color:#2F2F2F;">
-<h3 style="margin:0 0 10px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Проектор универсальный Epson EB-W06</h3>
-
-<p style="margin:0 0 10px 0;font-size:14px;line-height:1.5;font-family:inherit;">Проектор Epson EB-W06 создавался с расчетом, чтобы установка и настройка были как можно более быстрыми. Набор функциональных возможностей проектора включает быструю коррекцию трапецеидальных искажений, долгий ресурс лампы и опциональную поддержку Wi-Fi, которая позволяет отображать контент с мобильных устройств с помощью приложения iProjection. Технология: LCD: 3 × 0.</p>
-
-<h3 style="margin:14px 0 8px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Преимущества модели</h3>
-
-<ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li>Разрешение 1280 x 800</li><li>Поддержка Wi-Fi Опция</li><li>Гарантия 24 мес.</li></ul>
-
-<h3 style="margin:14px 0 8px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Характеристики</h3>
-<ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>DisplayPort:</strong> Нет</li><li><strong>DVI-D:</strong> Нет</li><li><strong>Ethernet:</strong> Нет</li><li><strong>HDBaseT:</strong> Нет</li><li><strong>HDMI:</strong> Есть</li><li><strong>S-Video:</strong> Нет</li><li><strong>USB:</strong> Тип A и B</li><li><strong>VGA:</strong> 1</li><li><strong>Wi-Fi:</strong> Опция</li><li><strong>Вес:</strong> 2.5 кг</li><li><strong>Гарантия:</strong> 24 мес.</li><li><strong>Интерактивный:</strong> Нет</li></ul>
-
-<div style="text-align:center;margin:10px 0 8px 0;">
-  <div class="ck-alert ck-alert_theme_green">
-    <div style="padding:4px 10px;font-family:inherit;">
-      <span class="ck-alert__title"></span>
-      <p style="margin:0 0 4px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>Просьба отправлять запросы на WhatsApp!</strong></p>
-      <p style="margin:0 0 6px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>+7 707 327-05-01</strong></p>
-      <p style="margin:0;font-size:14px;line-height:1.5;font-family:inherit;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block;padding:6px 12px;border:1px solid #146737;border-radius:6px;color:#146737;text-decoration:none;background:#FFFFFF;font-family:inherit;"><strong>💬 НАПИСАТЬ В WHATSAPP</strong></a></p>
-    </div>
-  </div>
-</div>
-
-<div class="ck-alert ck-alert_theme_orange" style="margin:8px 0 0 0;">
-  <div style="padding:4px 10px;font-family:inherit;">
-    <span class="ck-alert__title"></span>
-    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Оплата</h3>
-    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul>
-    <hr style="border:none;height:1px;background:#E7D6B7;margin:8px 0;" />
-    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Доставка по Алматы и Казахстану</h3>
-    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</li><li><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</li><li><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</li><li><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</li></ul>
-  </div>
-</div>
-
-</div>]]></description>
-<param name="DisplayPort">Нет</param>
-<param name="DVI-D">Нет</param>
-<param name="Ethernet">Нет</param>
-<param name="HDBaseT">Нет</param>
-<param name="HDMI">Есть</param>
-<param name="S-Video">Нет</param>
-<param name="USB">Тип A и B</param>
-<param name="VGA">1</param>
-<param name="Wi-Fi">Опция</param>
-<param name="Вес">2.5 кг</param>
-<param name="Гарантия">24 мес.</param>
-<param name="Интерактивный">Нет</param>
-<param name="Коды">V12H005A01, V12H003B23, V12H003P13, V12H003P14, V13H134A32, V13H010L97</param>
-<param name="Контрастность">16 000 : 1</param>
-<param name="Модель">Проектор универсальный Epson EB-W06</param>
-<param name="Проекционный коэффициент (Throw ratio)">1 - 1.2</param>
-<param name="Разрешение">1280 x 800</param>
-<param name="Разрешение">Оригинальное</param>
-<param name="Срок службы лампы (норм./ эконом.) ч">6000/12000</param>
-<param name="Технология">3LCD</param>
-<param name="Тип">Проектор универсальный</param>
-<param name="Тип источника света">Ламповый источник света</param>
-<param name="Уровень шума (норм./эконом.) Дб">28</param>
-<param name="Яркость">3700 ANSI lm</param>
-<param name="Яркость (ANSI) лмн">3700</param>
-<keywords>Epson, Проектор универсальный Epson EB-W06, доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
-</offer>
-
 <offer id="ACV11H977040" available="true">
 <categoryId>401</categoryId>
 <vendorCode>ACV11H977040</vendorCode>
 <name>Проектор универсальный Epson EB-W51</name>
-<price>445900</price>
+<price>366900</price>
 <picture>https://b2b.ak-cent.kz/upload/iblock/e28/u3dfpp3gk98bu9rz5i6v9agrx6xcjkq7.jpg</picture>
 <vendor>Epson</vendor>
 <currencyId>KZT</currencyId>
@@ -6252,58 +6231,6 @@ URL поставщика                             | https://ak-cent.kz/export
 <keywords>Epson, Чернила Epson C13T06C44A жёлтый (оригинал), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
-<offer id="ACC13T07C14A" available="true">
-<categoryId>103</categoryId>
-<vendorCode>ACC13T07C14A</vendorCode>
-<name>Чернила Epson C13T07C14A, чёрный (оригинал)</name>
-<price>12900</price>
-<picture>https://b2b.ak-cent.kz/upload/iblock/507/np5ot8ocjpa3g6x2gp3j6rzlcyanvtvm.jpg</picture>
-<vendor>Epson</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-<div style="font-family:Verdana, Tahoma, Arial, sans-serif;color:#2F2F2F;">
-<h3 style="margin:0 0 10px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Чернила Epson C13T07C14A, чёрный (оригинал)</h3>
-
-<p style="margin:0 0 10px 0;font-size:14px;line-height:1.5;font-family:inherit;">Оригинальные чернила. Контейнер с черными пигментными чернилами.</p>
-
-<h3 style="margin:14px 0 8px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Характеристики</h3>
-<ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Гарантия:</strong> 3 мес.</li><li><strong>Бренд:</strong> Epson</li><li><strong>Для устройства:</strong> Epson L8160 / Epson L8180</li><li><strong>Коды:</strong> C13T07C14A</li><li><strong>Модель:</strong> C13T07C14A</li><li><strong>Оригинальность:</strong> Оригинал</li><li><strong>Тип:</strong> Чернила</li><li><strong>Тип печати:</strong> Струйная</li><li><strong>Цвет:</strong> Чёрный</li></ul>
-
-<div style="text-align:center;margin:10px 0 8px 0;">
-  <div class="ck-alert ck-alert_theme_green">
-    <div style="padding:4px 10px;font-family:inherit;">
-      <span class="ck-alert__title"></span>
-      <p style="margin:0 0 4px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>Просьба отправлять запросы на WhatsApp!</strong></p>
-      <p style="margin:0 0 6px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>+7 707 327-05-01</strong></p>
-      <p style="margin:0;font-size:14px;line-height:1.5;font-family:inherit;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block;padding:6px 12px;border:1px solid #146737;border-radius:6px;color:#146737;text-decoration:none;background:#FFFFFF;font-family:inherit;"><strong>💬 НАПИСАТЬ В WHATSAPP</strong></a></p>
-    </div>
-  </div>
-</div>
-
-<div class="ck-alert ck-alert_theme_orange" style="margin:8px 0 0 0;">
-  <div style="padding:4px 10px;font-family:inherit;">
-    <span class="ck-alert__title"></span>
-    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Оплата</h3>
-    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul>
-    <hr style="border:none;height:1px;background:#E7D6B7;margin:8px 0;" />
-    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Доставка по Алматы и Казахстану</h3>
-    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</li><li><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</li><li><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</li><li><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</li></ul>
-  </div>
-</div>
-
-</div>]]></description>
-<param name="Гарантия">3 мес.</param>
-<param name="Для бренда">Epson</param>
-<param name="Для устройства">Epson L8160 / Epson L8180</param>
-<param name="Коды">C13T07C14A</param>
-<param name="Модель">C13T07C14A</param>
-<param name="Оригинальность">Оригинал</param>
-<param name="Тип">Чернила</param>
-<param name="Тип печати">Струйная</param>
-<param name="Цвет">Чёрный</param>
-<keywords>Epson, Чернила Epson C13T07C14A чёрный (оригинал), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
-</offer>
-
 <offer id="ACC13T07D14A" available="true">
 <categoryId>103</categoryId>
 <vendorCode>ACC13T07D14A</vendorCode>
@@ -6458,58 +6385,6 @@ URL поставщика                             | https://ak-cent.kz/export
 <param name="Тип печати">Струйная</param>
 <param name="Цвет">Пурпурный</param>
 <keywords>Epson, Чернила Epson C13T07D34A пурпурный (оригинал), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
-</offer>
-
-<offer id="ACC13T07D44A" available="true">
-<categoryId>103</categoryId>
-<vendorCode>ACC13T07D44A</vendorCode>
-<name>Чернила Epson C13T07D44A, жёлтый (оригинал)</name>
-<price>12900</price>
-<picture>https://b2b.ak-cent.kz/upload/iblock/9b5/koysq8lm6yfauc7ysv1c6qwdu9175na1.jpg</picture>
-<vendor>Epson</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-<div style="font-family:Verdana, Tahoma, Arial, sans-serif;color:#2F2F2F;">
-<h3 style="margin:0 0 10px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Чернила Epson C13T07D44A, жёлтый (оригинал)</h3>
-
-<p style="margin:0 0 10px 0;font-size:14px;line-height:1.5;font-family:inherit;">Оригинальные чернила Epson C13T07D44A Жёлтого цвета для Epson L8160 / Epson L8180.</p>
-
-<h3 style="margin:14px 0 8px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Характеристики</h3>
-<ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Гарантия:</strong> 3 мес.</li><li><strong>Бренд:</strong> Epson</li><li><strong>Для устройства:</strong> Epson L8160 / Epson L8180</li><li><strong>Коды:</strong> C13T07D44A</li><li><strong>Модель:</strong> C13T07D44A</li><li><strong>Оригинальность:</strong> Оригинал</li><li><strong>Тип:</strong> Чернила</li><li><strong>Тип печати:</strong> Струйная</li><li><strong>Цвет:</strong> Жёлтый</li></ul>
-
-<div style="text-align:center;margin:10px 0 8px 0;">
-  <div class="ck-alert ck-alert_theme_green">
-    <div style="padding:4px 10px;font-family:inherit;">
-      <span class="ck-alert__title"></span>
-      <p style="margin:0 0 4px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>Просьба отправлять запросы на WhatsApp!</strong></p>
-      <p style="margin:0 0 6px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>+7 707 327-05-01</strong></p>
-      <p style="margin:0;font-size:14px;line-height:1.5;font-family:inherit;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block;padding:6px 12px;border:1px solid #146737;border-radius:6px;color:#146737;text-decoration:none;background:#FFFFFF;font-family:inherit;"><strong>💬 НАПИСАТЬ В WHATSAPP</strong></a></p>
-    </div>
-  </div>
-</div>
-
-<div class="ck-alert ck-alert_theme_orange" style="margin:8px 0 0 0;">
-  <div style="padding:4px 10px;font-family:inherit;">
-    <span class="ck-alert__title"></span>
-    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Оплата</h3>
-    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul>
-    <hr style="border:none;height:1px;background:#E7D6B7;margin:8px 0;" />
-    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Доставка по Алматы и Казахстану</h3>
-    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</li><li><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</li><li><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</li><li><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</li></ul>
-  </div>
-</div>
-
-</div>]]></description>
-<param name="Гарантия">3 мес.</param>
-<param name="Для бренда">Epson</param>
-<param name="Для устройства">Epson L8160 / Epson L8180</param>
-<param name="Коды">C13T07D44A</param>
-<param name="Модель">C13T07D44A</param>
-<param name="Оригинальность">Оригинал</param>
-<param name="Тип">Чернила</param>
-<param name="Тип печати">Струйная</param>
-<param name="Цвет">Жёлтый</param>
-<keywords>Epson, Чернила Epson C13T07D44A жёлтый (оригинал), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="ACC13T07D54A" available="true">
