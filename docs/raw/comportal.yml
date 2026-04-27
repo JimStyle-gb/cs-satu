@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<yml_catalog date="2026-04-27 01:03:25">
+<yml_catalog date="2026-04-28 01:39:34">
 <shop><offers>
 <!--FEED_META
 Поставщик                                  | ComPortal
 URL поставщика                             | https://www.comportal.kz/auth/documents/prices/yml-catalog.php
-Время сборки (Алматы)                      | 2026-04-27 01:03:25
-Ближайшая сборка (Алматы)                  | 2026-04-28 00:30:00
-Сколько товаров у поставщика до фильтра    | 1168
-Сколько товаров у поставщика после фильтра | 627
-Сколько товаров есть в наличии (true)      | 627
+Время сборки (Алматы)                      | 2026-04-28 01:39:34
+Ближайшая сборка (Алматы)                  | 2026-04-29 00:30:00
+Сколько товаров у поставщика до фильтра    | 1178
+Сколько товаров у поставщика после фильтра | 636
+Сколько товаров есть в наличии (true)      | 636
 Сколько товаров нет в наличии (false)      | 0
 -->
 
@@ -1325,6 +1325,32 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Для бренда">HP</param>
 </offer>
 
+<offer id="CP13834337" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13834337</vendorCode>
+<name>МФУ Canon I-SENSYS MF461DW (5951C020AA)</name>
+<price>234750</price>
+<picture>https://www.comportal.kz/upload/iblock/2d1/73e1mzhrcfztcswpu6qqfhbjj2m0z86t.JPG</picture>
+<vendor>Canon</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+МФУ. Формат печати: A4. Разрешение: 1200x1200. Скорость печати ч/б: 36. Порты: USB LAN WiFI. Технология печати: Лазерная. Гарантия: 12 мес.]]></description>
+<param name="Тип">МФУ</param>
+<param name="Модель">I-SENSYS MF461DW</param>
+<param name="Гарантия">12 мес</param>
+<param name="Разрешение">1200x1200</param>
+<param name="Формат печати">A4</param>
+<param name="Скорость печати ч/б">36</param>
+<param name="Технология печати">Лазерная</param>
+<param name="Порты">USB LAN WiFI</param>
+<param name="Функция">принтер сканер копир</param>
+<param name="Наличие картриджа (тонера) в комплекте">Стартовый</param>
+<param name="Нагрузка">80 000</param>
+<param name="Емкость 4-го лотка">550</param>
+<param name="Коды">5951C020AA</param>
+<param name="Для бренда">Canon</param>
+</offer>
+
 <offer id="CP13839973" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13839973</vendorCode>
@@ -1754,6 +1780,23 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Жесткий диск">6Gb</param>
 <param name="Коды">6QN36A#B19</param>
 <param name="Для бренда">HP</param>
+</offer>
+
+<offer id="CP13872950" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13872950</vendorCode>
+<name>МФУ Canon imageRUNNER C3326i (5965C005)</name>
+<price>728040</price>
+<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
+<vendor>Canon</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+МФУ. Гарантия: 12 мес. Для бренда: Canon. Модель: imageRUNNER C3326i. Коды: 5965C005.]]></description>
+<param name="Тип">МФУ</param>
+<param name="Гарантия">12 мес</param>
+<param name="Коды">5965C005</param>
+<param name="Модель">imageRUNNER C3326i</param>
+<param name="Для бренда">Canon</param>
 </offer>
 
 <offer id="CP10740881" available="true">
@@ -2593,6 +2636,29 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Для бренда">Canon</param>
 </offer>
 
+<offer id="CP13870348" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13870348</vendorCode>
+<name>Плоттер HP DesignJet T230 24 (5HB07D#B19)</name>
+<price>242628</price>
+<picture>https://www.comportal.kz/upload/iblock/43e/1uap8lkkgs2hcli5v0tkqssr3d5z1ejv.jpg</picture>
+<vendor>HP</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Широкоформатный принтер. Формат печати: A1. Разрешение: 2400x1200. Скорость печати ч/б: 35. Порты: Gigabit Ethernet (1000Base-T), высокоскоростной порт USB 2.0, Wi-Fi 802.11a b/g n, Wi-Fi Direct. Технология печати: Струйная. Гарантия: 12 мес.]]></description>
+<param name="Тип">Широкоформатный принтер</param>
+<param name="Модель">DesignJet T230 24</param>
+<param name="Порты">Gigabit Ethernet (1000Base-T), высокоскоростной порт USB 2.0, Wi-Fi 802.11a b/g n, Wi-Fi Direct</param>
+<param name="Гарантия">12 мес</param>
+<param name="Технология печати">Струйная</param>
+<param name="Разрешение">2400x1200</param>
+<param name="Формат печати">A1</param>
+<param name="Скорость печати ч/б">35</param>
+<param name="Функции">принтер</param>
+<param name="Коды">5HB07D#B19</param>
+<param name="Для бренда">HP</param>
+</offer>
+
 <offer id="CP13870436" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13870436</vendorCode>
@@ -3270,6 +3336,26 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Ресурс">2 100</param>
 <param name="Коды">W2033A</param>
 <param name="Для бренда">HP</param>
+<param name="Оригинальность">Оригинал</param>
+</offer>
+
+<offer id="CP10761112" available="true">
+<categoryId></categoryId>
+<vendorCode>CP10761112</vendorCode>
+<name>Картридж Canon 057 (3009C002) (оригинал)</name>
+<price>58997</price>
+<picture>https://www.comportal.kz/upload/iblock/7d5/0yyz4fxpq1h2fte0j26d1y2c1oohi1p1.jpg</picture>
+<vendor>Canon</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Оригинальный картридж Canon 057 код — 3009C002; цвет — Чёрный; ресурс — 3 100; технология печати — Лазерная.]]></description>
+<param name="Тип">Картридж</param>
+<param name="Модель">057</param>
+<param name="Цвет">Чёрный</param>
+<param name="Технология печати">Лазерная</param>
+<param name="Ресурс">3 100</param>
+<param name="Коды">3009C002</param>
+<param name="Для бренда">Canon</param>
 <param name="Оригинальность">Оригинал</param>
 </offer>
 
@@ -5075,6 +5161,23 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Оригинальность">Оригинал</param>
 </offer>
 
+<offer id="CP13842679" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13842679</vendorCode>
+<name>Печатающая головка HP 729 DesignJet Printhead Replacement Kit (F9J81A) (оригинал)</name>
+<price>234741</price>
+<picture>https://www.comportal.kz/upload/iblock/b8e/b8e51a269d79b68f51de87e15ee80823.JPG</picture>
+<vendor>HP</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Оригинальный картридж HP 729 DesignJet Printhead Replacement Kit код — F9J81A.]]></description>
+<param name="Тип">Картридж</param>
+<param name="Модель">729 DesignJet Printhead Replacement Kit</param>
+<param name="Коды">F9J81A</param>
+<param name="Для бренда">HP</param>
+<param name="Оригинальность">Оригинал</param>
+</offer>
+
 <offer id="CP13848726" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13848726</vendorCode>
@@ -6670,6 +6773,25 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Оригинальность">Оригинал</param>
 </offer>
 
+<offer id="CP13817611" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13817611</vendorCode>
+<name>Тонер Canon C-EXV 67 (5746C002) (оригинал)</name>
+<price>65261</price>
+<picture>https://www.comportal.kz/upload/iblock/f9c/3s4oemm7adepcclmkweqj2tyxauu43gr.JPG</picture>
+<vendor>Canon</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Оригинальный тонер Canon C-EXV 67 код — 5746C002; ресурс — 25 500.]]></description>
+<param name="Тип">Тонер</param>
+<param name="Модель">C-EXV 67</param>
+<param name="Дополнительная информация">черный</param>
+<param name="Ресурс">25 500</param>
+<param name="Коды">5746C002</param>
+<param name="Для бренда">Canon</param>
+<param name="Оригинальность">Оригинал</param>
+</offer>
+
 <offer id="CP13821643" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13821643</vendorCode>
@@ -7288,34 +7410,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Для бренда">Dell</param>
 </offer>
 
-<offer id="CP13863665" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13863665</vendorCode>
-<name>Монитор Dell U4025QW USB-C (210-BMDV)</name>
-<price>912783</price>
-<picture>https://www.comportal.kz/upload/iblock/7f3/osrvrfb5yv4hu51uck129j0yolsr3s37.JPG</picture>
-<vendor>Dell</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Монитор. Модельная серия: U4025QW USB-C. Диагональ: 39.7. Максимальное разрешение: 5120x2160. Тип матрицы: IPS. Частота обновления: 120. Время отклика: 8. Порты: 1 x HDMI/1 x DP 1.4/1 x Thunderbolt 4 downstream port/1 x Thunderbolt 4 (140 W)/1 x USB Type-C/4 x USB Type-A/1 x Audio line-out/1 x USB Type-A/2 x USB Type-C. Гарантия: 36 мес.]]></description>
-<param name="Тип">Монитор</param>
-<param name="Модель">U4025QW USB-C</param>
-<param name="Порты">1 x HDMI/1 x DP 1.4/1 x Thunderbolt 4 downstream port/1 x Thunderbolt 4 (140 W)/1 x USB Type-C/4 x USB Type-A/1 x Audio line-out/1 x USB Type-A/2 x USB Type-C</param>
-<param name="Тип матрицы">IPS</param>
-<param name="Гарантия">36 мес</param>
-<param name="Контрастность">2000:1</param>
-<param name="Яркость">600</param>
-<param name="Время отклика">8</param>
-<param name="Максимальное разрешение">5120x2160</param>
-<param name="Наличие динамиков">2</param>
-<param name="Углы обзора (вертикальный/горизонтальный)">178/178</param>
-<param name="Размер Pix">140</param>
-<param name="Диагональ">39.7</param>
-<param name="Частота обновления">120</param>
-<param name="Коды">210-BMDV</param>
-<param name="Для бренда">Dell</param>
-</offer>
-
 <offer id="CP13864728" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13864728</vendorCode>
@@ -7891,6 +7985,32 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Для бренда">Dell</param>
 </offer>
 
+<offer id="CP13870727" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13870727</vendorCode>
+<name>Монитор Dell Alienware 32 Gaming Monitor - AW3225DM (210-BQWN)</name>
+<price>150062</price>
+<picture>https://www.comportal.kz/upload/iblock/d84/lcjja7244dta3o90dpkjg8ai2yxurbua.JPG</picture>
+<vendor>Dell</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Монитор. Диагональ: 32. Максимальное разрешение: 2560x1440. Тип матрицы: VA. Частота обновления: 180. Время отклика: 1. Порты: 2 HDMI ports/1 DisplayPort 1.4/2 USB Type-A/1 USB Type-B. Гарантия: 36 мес.]]></description>
+<param name="Тип">Монитор</param>
+<param name="Модель">AW3225DM</param>
+<param name="Порты">2 HDMI ports/1 DisplayPort 1.4/2 USB Type-A/1 USB Type-B</param>
+<param name="Тип матрицы">VA</param>
+<param name="Цвет">Чёрный</param>
+<param name="Гарантия">36 мес</param>
+<param name="Контрастность">3000:1</param>
+<param name="Яркость">400</param>
+<param name="Время отклика">1</param>
+<param name="Максимальное разрешение">2560x1440</param>
+<param name="Диагональ">32</param>
+<param name="Частота обновления">180</param>
+<param name="Коды">210-BQWN</param>
+<param name="Для бренда">Dell</param>
+</offer>
+
 <offer id="CP13870728" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13870728</vendorCode>
@@ -7989,6 +8109,31 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Диагональ">27</param>
 <param name="Частота обновления">100</param>
 <param name="Коды">210-BRDL</param>
+<param name="Для бренда">Dell</param>
+</offer>
+
+<offer id="CP13870733" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13870733</vendorCode>
+<name>Монитор Dell Pro 27 Plus 4K USB-C Hub Monitor - P2725QE, 68.6cm (27.0") (210-BRDS)</name>
+<price>229083</price>
+<picture>https://www.comportal.kz/upload/iblock/207/l3nzdtv3uohiqeeeg56byh15sd1nuqvu.JPG</picture>
+<vendor>Dell</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Монитор. Диагональ: 27. Максимальное разрешение: 3840x2160. Тип матрицы: IPS. Частота обновления: 100. Время отклика: 5. Порты: 1 HDMI port (HDCP2.3) (supports up to UHD 3840 x 2160 100 Hz FRL as per specified in HDMI 2.1)/1 Display Port 1.4 (HDCP2.3)(Support up to 3840 x 2160 100Hz)/1 USB-C 5Gbps upstream port (DisplayPort 1.4 Alternate mode, Power Delivery up to 90W)/1 USB-C 5Gbps downstream port/3 USB 5Gbps Type-A downstream ports/1 RJ45 Ethernet port, 1GbE. Гарантия: 36 мес.]]></description>
+<param name="Тип">Монитор</param>
+<param name="Модель">P2725QE</param>
+<param name="Порты">1 HDMI port (HDCP2.3) (supports up to UHD 3840 x 2160 100 Hz FRL as per specified in HDMI 2.1)/1 Display Port 1.4 (HDCP2.3)(Support up to 3840 x 2160 100Hz)/1 USB-C 5Gbps upstream port (DisplayPort 1.4 Alternate mode, Power Delivery up to 90W)/1 USB-C 5Gbps downstream port/3 USB 5Gbps Type-A downstream ports/1 RJ45 Ethernet port, 1GbE</param>
+<param name="Тип матрицы">IPS</param>
+<param name="Гарантия">36 мес</param>
+<param name="Контрастность">1500:1</param>
+<param name="Яркость">350</param>
+<param name="Время отклика">5</param>
+<param name="Максимальное разрешение">3840x2160</param>
+<param name="Диагональ">27</param>
+<param name="Частота обновления">100</param>
+<param name="Коды">210-BRDS</param>
 <param name="Для бренда">Dell</param>
 </offer>
 
@@ -8734,6 +8879,31 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Для бренда">Dell</param>
 </offer>
 
+<offer id="CP13872355" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13872355</vendorCode>
+<name>Монитор Dell 24 Plus Monitor – S2425HSM (210-BSZD)</name>
+<price>75594</price>
+<picture>https://www.comportal.kz/upload/iblock/92e/e07uca2o6c83j5nrequ9fwmnqa6wmilq.jpg</picture>
+<vendor>Dell</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Монитор. Диагональ: 23.8. Максимальное разрешение: 1920x1080. Тип матрицы: IPS. Частота обновления: 100. Время отклика: 4. Порты: 2 x HDMI (HDCP1.4) ( Supports up to FHD 1920 x 1080 100Hz, as per specified in HDMI1.4). Гарантия: 36 мес.]]></description>
+<param name="Тип">Монитор</param>
+<param name="Модель">S2425HSM</param>
+<param name="Порты">2 x HDMI (HDCP1.4) ( Supports up to FHD 1920 x 1080 100Hz, as per specified in HDMI1.4)</param>
+<param name="Тип матрицы">IPS</param>
+<param name="Гарантия">36 мес</param>
+<param name="Контрастность">1500:1</param>
+<param name="Яркость">250</param>
+<param name="Время отклика">4</param>
+<param name="Максимальное разрешение">1920x1080</param>
+<param name="Диагональ">23.8</param>
+<param name="Частота обновления">100</param>
+<param name="Коды">210-BSZD</param>
+<param name="Для бренда">Dell</param>
+</offer>
+
 <offer id="CP13872356" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13872356</vendorCode>
@@ -8820,6 +8990,23 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Гарантия">36 мес</param>
 <param name="Коды">210-BSZF</param>
 <param name="Модель">S2725HSM</param>
+<param name="Для бренда">Dell</param>
+</offer>
+
+<offer id="CP13872686" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13872686</vendorCode>
+<name>Монитор Dell 27 Plus QHD Monitor - S2725DSM (210-BSVN)</name>
+<price>117253</price>
+<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
+<vendor>Dell</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Монитор. Диагональ: 27. Гарантия: 36 мес. Для бренда: Dell. Модель: S2725DSM. Коды: 210-BSVN.]]></description>
+<param name="Тип">Монитор</param>
+<param name="Гарантия">36 мес</param>
+<param name="Коды">210-BSVN</param>
+<param name="Модель">S2725DSM</param>
 <param name="Для бренда">Dell</param>
 </offer>
 

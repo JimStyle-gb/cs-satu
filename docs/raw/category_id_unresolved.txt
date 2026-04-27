@@ -33,12 +33,6 @@
 
 
 
-## START ComPortal
-Поставщик: ComPortal
-Товаров без categoryId: 0
-
-# Все товары получили categoryId
-## END ComPortal
 
 ## START AkCent
 Поставщик: AkCent
@@ -53,3 +47,10 @@
 
 # Все товары получили categoryId
 ## END AlStyle
+
+## START ComPortal
+Поставщик: ComPortal
+Товаров без categoryId: 0
+
+# Все товары получили categoryId
+## END ComPortal
