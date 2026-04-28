@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<yml_catalog date="2026-04-28 00:54:56">
+<yml_catalog date="2026-04-29 01:01:33">
 <shop><offers>
 <!--FEED_META
 Поставщик                                  | AlStyle
 URL поставщика                             | https://al-style.kz/upload/catalog_export/al_style_catalog.php
-Время сборки (Алматы)                      | 2026-04-28 00:54:56
-Ближайшая сборка (Алматы)                  | 2026-04-28 23:30:00
-Сколько товаров у поставщика до фильтра    | 16911
-Сколько товаров у поставщика после фильтра | 2002
-Сколько товаров есть в наличии (true)      | 1437
-Сколько товаров нет в наличии (false)      | 565
+Время сборки (Алматы)                      | 2026-04-29 01:01:33
+Ближайшая сборка (Алматы)                  | 2026-04-29 23:30:00
+Сколько товаров у поставщика до фильтра    | 16934
+Сколько товаров у поставщика после фильтра | 2000
+Сколько товаров есть в наличии (true)      | 1474
+Сколько товаров нет в наличии (false)      | 526
 -->
 
 <offer id="AS113695" available="true">
@@ -1180,7 +1180,7 @@ URL поставщика                             | https://al-style.kz/uploa
 <param name="Оригинальность">Оригинал</param>
 </offer>
 
-<offer id="AS12568" available="false">
+<offer id="AS12568" available="true">
 <categoryId></categoryId>
 <vendorCode>AS12568</vendorCode>
 <name>Источник бесперебойного питания SVC U-650-L</name>
@@ -1293,7 +1293,7 @@ URL поставщика                             | https://al-style.kz/uploa
 <param name="Объём">0.193842</param>
 </offer>
 
-<offer id="AS12574" available="false">
+<offer id="AS12574" available="true">
 <categoryId></categoryId>
 <vendorCode>AS12574</vendorCode>
 <name>Источник бесперебойного питания SVC PTS-10KL-LCD</name>
@@ -1666,7 +1666,7 @@ URL поставщика                             | https://al-style.kz/uploa
 <param name="Оригинальность">Совместимый</param>
 </offer>
 
-<offer id="AS13744" available="true">
+<offer id="AS13744" available="false">
 <categoryId></categoryId>
 <vendorCode>AS13744</vendorCode>
 <name>Картридж Europrint EPC-CE740A (совместимый)</name>
@@ -1692,7 +1692,7 @@ URL поставщика                             | https://al-style.kz/uploa
 <param name="Оригинальность">Совместимый</param>
 </offer>
 
-<offer id="AS13745" available="true">
+<offer id="AS13745" available="false">
 <categoryId></categoryId>
 <vendorCode>AS13745</vendorCode>
 <name>Картридж Europrint EPC-CE741A (совместимый)</name>
@@ -1933,7 +1933,7 @@ URL поставщика                             | https://al-style.kz/uploa
 <param name="Объём">0.36828</param>
 </offer>
 
-<offer id="AS14035" available="true">
+<offer id="AS14035" available="false">
 <categoryId></categoryId>
 <vendorCode>AS14035</vendorCode>
 <name>Источник бесперебойного питания SVC GT33-15KVA</name>
@@ -3801,6 +3801,31 @@ URL поставщика                             | https://al-style.kz/uploa
 <param name="Оригинальность">Совместимый</param>
 </offer>
 
+<offer id="AS17600" available="true">
+<categoryId></categoryId>
+<vendorCode>AS17600</vendorCode>
+<name>Картридж Colorfix CLF-MLT-D111S (совместимый)</name>
+<price>2185</price>
+<picture>https://img.al-style.kz/19350_1.jpg</picture>
+<picture>https://img.al-style.kz/19350_2.jpg</picture>
+<picture>https://img.al-style.kz/19350_3.jpg</picture>
+<vendor>Colorfix</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+Совместимый картридж Colorfix MLT-D111S для Samsung SL-M2020,2022,2070; цвет — Чёрный; ресурс — 1500; тип печати — Лазерная.]]></description>
+<param name="Вес">0.69</param>
+<param name="Гарантия">12 мес</param>
+<param name="Для принтеров">Samsung SL-M2020,2022,2070</param>
+<param name="Кол-во страниц при 5% заполнении А4">1500</param>
+<param name="Тип печати">Лазерная</param>
+<param name="Цвет">Чёрный</param>
+<param name="Объём">0.00388585</param>
+<param name="Модель">MLT-D111S</param>
+<param name="Совместимость">Samsung SL-M2020 / 2022 / 2070</param>
+<param name="Ресурс">1500 страниц</param>
+<param name="Оригинальность">Совместимый</param>
+</offer>
+
 <offer id="AS17602" available="true">
 <categoryId></categoryId>
 <vendorCode>AS17602</vendorCode>
@@ -4522,7 +4547,7 @@ URL поставщика                             | https://al-style.kz/uploa
 <param name="Оригинальность">Совместимый</param>
 </offer>
 
-<offer id="AS182009" available="false">
+<offer id="AS182009" available="true">
 <categoryId></categoryId>
 <vendorCode>AS182009</vendorCode>
 <name>Проектор Mi Laser Projector 150</name>
@@ -5110,7 +5135,7 @@ URL поставщика                             | https://al-style.kz/uploa
 <param name="Объём">0.085299375</param>
 </offer>
 
-<offer id="AS18300" available="false">
+<offer id="AS18300" available="true">
 <categoryId></categoryId>
 <vendorCode>AS18300</vendorCode>
 <name>Источник бесперебойного питания SVC PTL-3K-LCD</name>
@@ -5688,7 +5713,7 @@ URL поставщика                             | https://al-style.kz/uploa
 <param name="Объём">0.00137375</param>
 </offer>
 
-<offer id="AS185815" available="false">
+<offer id="AS185815" available="true">
 <categoryId></categoryId>
 <vendorCode>AS185815</vendorCode>
 <name>Аккумуляторная батарея SVC AV5-12/S 12В 5 Ач</name>
@@ -5712,7 +5737,7 @@ URL поставщика                             | https://al-style.kz/uploa
 <param name="Объём">0.000933504</param>
 </offer>
 
-<offer id="AS185831" available="false">
+<offer id="AS185831" available="true">
 <categoryId></categoryId>
 <vendorCode>AS185831</vendorCode>
 <name>Аккумуляторная батарея SVC AV-7.5-12/S 12В 7.5 Ач</name>
@@ -5736,7 +5761,7 @@ URL поставщика                             | https://al-style.kz/uploa
 <param name="Объём">0.00137375</param>
 </offer>
 
-<offer id="AS185832" available="false">
+<offer id="AS185832" available="true">
 <categoryId></categoryId>
 <vendorCode>AS185832</vendorCode>
 <name>Аккумуляторная батарея SVC AV9-12/S 12В 9 Ач</name>
@@ -5760,7 +5785,7 @@ URL поставщика                             | https://al-style.kz/uploa
 <param name="Объём">0.00137375</param>
 </offer>
 
-<offer id="AS185835" available="false">
+<offer id="AS185835" available="true">
 <categoryId></categoryId>
 <vendorCode>AS185835</vendorCode>
 <name>Аккумуляторная батарея SVC VP12-12/S 12В 12 Ач</name>
@@ -5784,7 +5809,7 @@ URL поставщика                             | https://al-style.kz/uploa
 <param name="Объём">0.00309375</param>
 </offer>
 
-<offer id="AS185836" available="false">
+<offer id="AS185836" available="true">
 <categoryId></categoryId>
 <vendorCode>AS185836</vendorCode>
 <name>Аккумуляторная батарея SVC VP1217/S 12В 17 Ач (181*77*167)</name>
@@ -5808,7 +5833,7 @@ URL поставщика                             | https://al-style.kz/uploa
 <param name="Объём">0.00356983</param>
 </offer>
 
-<offer id="AS186148" available="false">
+<offer id="AS186148" available="true">
 <categoryId></categoryId>
 <vendorCode>AS186148</vendorCode>
 <name>Аккумуляторная батарея SVC GL12100/S 12В 100 Ач (407*173*233)</name>
@@ -5885,7 +5910,7 @@ URL поставщика                             | https://al-style.kz/uploa
 <param name="Объём">0.008096</param>
 </offer>
 
-<offer id="AS188515" available="false">
+<offer id="AS188515" available="true">
 <categoryId></categoryId>
 <vendorCode>AS188515</vendorCode>
 <name>Аккумуляторная батарея SVC VP1265/S 12В 65 Ач (350*165*178)</name>
@@ -5909,7 +5934,7 @@ URL поставщика                             | https://al-style.kz/uploa
 <param name="Объём">0.015111</param>
 </offer>
 
-<offer id="AS188517" available="false">
+<offer id="AS188517" available="true">
 <categoryId></categoryId>
 <vendorCode>AS188517</vendorCode>
 <name>Аккумуляторная батарея SVC VP12200/S 12В 200 Ач (522*238*222)</name>
@@ -6207,7 +6232,7 @@ URL поставщика                             | https://al-style.kz/uploa
 <param name="Объём">0.002</param>
 </offer>
 
-<offer id="AS192222" available="false">
+<offer id="AS192222" available="true">
 <categoryId></categoryId>
 <vendorCode>AS192222</vendorCode>
 <name>Аккумуляторная батарея SVC GL1238/S 12В 38 Ач (197*165*170)</name>
@@ -7877,7 +7902,7 @@ URL поставщика                             | https://al-style.kz/uploa
 <param name="Оригинальность">Оригинал</param>
 </offer>
 
-<offer id="AS249164" available="false">
+<offer id="AS249164" available="true">
 <categoryId></categoryId>
 <vendorCode>AS249164</vendorCode>
 <name>Аккумуляторная батарея SVC PQ9-12/LP 12В 9 Ач</name>
@@ -8580,7 +8605,7 @@ Comix B2950 - Персональный переплетчик для созда�
 <param name="Объём">0.0032475</param>
 </offer>
 
-<offer id="AS256557" available="false">
+<offer id="AS256557" available="true">
 <categoryId></categoryId>
 <vendorCode>AS256557</vendorCode>
 <name>Аккумуляторная батарея SVC GL1226/S 12В 26 Ач (166*126*175)</name>
@@ -8603,7 +8628,7 @@ Comix B2950 - Персональный переплетчик для созда�
 <param name="Объём">0.00517824</param>
 </offer>
 
-<offer id="AS256560" available="false">
+<offer id="AS256560" available="true">
 <categoryId></categoryId>
 <vendorCode>AS256560</vendorCode>
 <name>Аккумуляторная батарея SVC GL1250/S 12В 50 Ач (230*138*215)</name>
@@ -8626,7 +8651,7 @@ Comix B2950 - Персональный переплетчик для созда�
 <param name="Объём">0.00997101</param>
 </offer>
 
-<offer id="AS256562" available="false">
+<offer id="AS256562" available="true">
 <categoryId></categoryId>
 <vendorCode>AS256562</vendorCode>
 <name>Аккумуляторная батарея SVC GL1280/S 12В 80 Ач (330*171*220)</name>
@@ -9713,7 +9738,7 @@ Comix B2950 - Персональный переплетчик для созда�
 <param name="Объём">0.1311</param>
 </offer>
 
-<offer id="AS266316" available="false">
+<offer id="AS266316" available="true">
 <categoryId></categoryId>
 <vendorCode>AS266316</vendorCode>
 <name>Картридж Europrint EPC-CF259A (совместимый)</name>
@@ -9915,7 +9940,7 @@ CyberPower OL6KERTHD гарантирует защиту питания для �
 <param name="Объём">0.2211</param>
 </offer>
 
-<offer id="AS266554" available="true">
+<offer id="AS266554" available="false">
 <categoryId></categoryId>
 <vendorCode>AS266554</vendorCode>
 <name>Батарейный блок CyberPower BPE144VL2U01</name>
@@ -10697,7 +10722,7 @@ CyberPower OLS2000E - эта серия высокопроизводительн
 <param name="Оригинальность">Оригинал</param>
 </offer>
 
-<offer id="AS266714" available="false">
+<offer id="AS266714" available="true">
 <categoryId></categoryId>
 <vendorCode>AS266714</vendorCode>
 <name>Тонер-картридж экстра повышенной емкости Xerox 006R04404 (оригинал)</name>
@@ -11290,7 +11315,7 @@ CyberPower OLS2000E - эта серия высокопроизводительн
 <param name="Оригинальность">Оригинал</param>
 </offer>
 
-<offer id="AS266932" available="false">
+<offer id="AS266932" available="true">
 <categoryId></categoryId>
 <vendorCode>AS266932</vendorCode>
 <name>Фотобарабан Xerox 013R00688 (оригинал)</name>
@@ -13923,14 +13948,14 @@ CyberPower BP48VP2U01EU Представляет собой внешний ба�
 <vendor>Xerox</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный тонер-картридж Xerox 106R03745 для Xerox VersaLink C7020 / C7025 / C7030; цвет — Чёрный; ресурс — 26 600 стандартных страниц в среднем.]]></description>
+Оригинальный тонер-картридж Xerox 106R03745 для Xerox VersaLink C7020 / C7025 / C7030; цвет — Чёрный; ресурс — 23 600 стандартных страниц в среднем.]]></description>
 <param name="Вес">0.9</param>
 <param name="Гарантия">12 мес</param>
 <param name="Объём">0.00702</param>
 <param name="Модель">106R03745</param>
 <param name="Цвет">Чёрный</param>
 <param name="Совместимость">Xerox VersaLink C7020 / C7025 / C7030</param>
-<param name="Ресурс">26 600 стандартных страниц в среднем</param>
+<param name="Ресурс">23 600 стандартных страниц в среднем</param>
 <param name="Оригинальность">Оригинал</param>
 </offer>
 
@@ -15518,7 +15543,7 @@ CyberPower BP48VP2U01EU Представляет собой внешний ба�
 <currencyId>KZT</currencyId>
 <description><![CDATA[
 Оригинальный фотобарабан Xerox 013R00663 для Xerox Color 550 / 560 / 570 / C60 / 70, PrimeLink С9065 / 70; цвет — Чёрный; ресурс — 190 000 стандартных страниц в среднем.]]></description>
-<param name="Вес">3.55</param>
+<param name="Вес">4</param>
 <param name="Гарантия">12 мес</param>
 <param name="Объём">0.01071</param>
 <param name="Модель">013R00663</param>
@@ -17069,7 +17094,7 @@ COMIX S340 это высококачественный шредер, котор�
 <param name="Объём">0.08874117</param>
 </offer>
 
-<offer id="AS368378" available="false">
+<offer id="AS368378" available="true">
 <categoryId></categoryId>
 <vendorCode>AS368378</vendorCode>
 <name>Аккумуляторная батарея SVC GL1265/S 12В 65 Ач (350*166*179)</name>
@@ -17747,7 +17772,7 @@ K45 Smart (автофокус, 950 ANSI, Full HD) Смарт-проектор н
 <param name="Объём">0.008178748</param>
 </offer>
 
-<offer id="AS383287" available="false">
+<offer id="AS383287" available="true">
 <categoryId></categoryId>
 <vendorCode>AS383287</vendorCode>
 <name>Аккумуляторная батарея Ritar RA12-100 12В 100 Ач</name>
@@ -17894,7 +17919,7 @@ K45 Smart (автофокус, 950 ANSI, Full HD) Смарт-проектор н
 <param name="Объём">0.034017</param>
 </offer>
 
-<offer id="AS384986" available="false">
+<offer id="AS384986" available="true">
 <categoryId></categoryId>
 <vendorCode>AS384986</vendorCode>
 <name>Аккумуляторная батарея SVC VP1220/S 12В 20 Ач (180*77*167)</name>
@@ -17915,7 +17940,7 @@ K45 Smart (автофокус, 950 ANSI, Full HD) Смарт-проектор н
 <param name="Объём">0.0034408</param>
 </offer>
 
-<offer id="AS384989" available="false">
+<offer id="AS384989" available="true">
 <categoryId></categoryId>
 <vendorCode>AS384989</vendorCode>
 <name>Аккумуляторная батарея SVC VP1226/S 12В 26 Ач (166*175*125)</name>
@@ -17937,7 +17962,7 @@ K45 Smart (автофокус, 950 ANSI, Full HD) Смарт-проектор н
 <param name="Объём">0.00517824</param>
 </offer>
 
-<offer id="AS384990" available="false">
+<offer id="AS384990" available="true">
 <categoryId></categoryId>
 <vendorCode>AS384990</vendorCode>
 <name>Аккумуляторная батарея SVC VP1233/S 12В 33 Ач (195*130*167)</name>
@@ -18023,7 +18048,7 @@ K45 Smart (автофокус, 950 ANSI, Full HD) Смарт-проектор н
 <param name="Объём">0.012780222</param>
 </offer>
 
-<offer id="AS384994" available="false">
+<offer id="AS384994" available="true">
 <categoryId></categoryId>
 <vendorCode>AS384994</vendorCode>
 <name>Аккумуляторная батарея SVC VP12100/N 12В 100 Ач (330*171*220)</name>
@@ -18087,7 +18112,7 @@ K45 Smart (автофокус, 950 ANSI, Full HD) Смарт-проектор н
 <param name="Оригинальность">Совместимый</param>
 </offer>
 
-<offer id="AS385306" available="false">
+<offer id="AS385306" available="true">
 <categoryId></categoryId>
 <vendorCode>AS385306</vendorCode>
 <name>Аккумуляторная батарея SVC FT12100/SL 12В 100 Ач (395*110*286)</name>
@@ -18724,7 +18749,7 @@ Keor SPE Tower — линейно-интерактивный источник б
 <param name="Объём">0.0408746</param>
 </offer>
 
-<offer id="AS385531" available="false">
+<offer id="AS385531" available="true">
 <categoryId></categoryId>
 <vendorCode>AS385531</vendorCode>
 <name>Аккумуляторная батарея SVC AV3.2-6/S 6В 3.2 Ач</name>
@@ -19331,7 +19356,7 @@ CyberPower BPE192VL2U01 - это расширенный аккумуляторн
 <param name="Объём">0.0614544</param>
 </offer>
 
-<offer id="AS387074" available="false">
+<offer id="AS387074" available="true">
 <categoryId></categoryId>
 <vendorCode>AS387074</vendorCode>
 <name>Аккумуляторная батарея Ritar RT1250 12В 5 Ач</name>
@@ -19353,7 +19378,7 @@ CyberPower BPE192VL2U01 - это расширенный аккумуляторн
 <param name="Объём">0.000880877</param>
 </offer>
 
-<offer id="AS387075" available="false">
+<offer id="AS387075" available="true">
 <categoryId></categoryId>
 <vendorCode>AS387075</vendorCode>
 <name>Аккумуляторная батарея Ritar RT12120 12В 12 Ач</name>
@@ -19417,7 +19442,7 @@ CyberPower BPE192VL2U01 - это расширенный аккумуляторн
 <param name="Объём">0.01061325</param>
 </offer>
 
-<offer id="AS387293" available="false">
+<offer id="AS387293" available="true">
 <categoryId></categoryId>
 <vendorCode>AS387293</vendorCode>
 <name>Аккумуляторная батарея Ritar HR12-380SW 12В 100Ач</name>
@@ -19704,7 +19729,7 @@ CyberPower BPE192VL2U01 - это расширенный аккумуляторн
 <param name="Оригинальность">Оригинал</param>
 </offer>
 
-<offer id="AS390438" available="false">
+<offer id="AS390438" available="true">
 <categoryId></categoryId>
 <vendorCode>AS390438</vendorCode>
 <name>Тонер-картридж экстра повышенной емкости Xerox 006R04730 (чёрный) (оригинал)</name>
@@ -19828,7 +19853,7 @@ CyberPower BPE192VL2U01 - это расширенный аккумуляторн
 <param name="Модель">097S05244</param>
 </offer>
 
-<offer id="AS390445" available="false">
+<offer id="AS390445" available="true">
 <categoryId></categoryId>
 <vendorCode>AS390445</vendorCode>
 <name>Монохромное МФУ Xerox VersaLink B415DN</name>
@@ -19859,7 +19884,7 @@ CyberPower BPE192VL2U01 - это расширенный аккумуляторн
 <param name="Объём">0.2151345</param>
 </offer>
 
-<offer id="AS390446" available="true">
+<offer id="AS390446" available="false">
 <categoryId></categoryId>
 <vendorCode>AS390446</vendorCode>
 <name>Тонер-картридж стандартной емкости Xerox 006R04677 (чёрный) (оригинал)</name>
@@ -20392,24 +20417,6 @@ Xiaomi Wireless All-in-One Inkjet Printer — это умное многофун
 <param name="Оригинальность">Оригинал</param>
 </offer>
 
-<offer id="AS391142" available="false">
-<categoryId></categoryId>
-<vendorCode>AS391142</vendorCode>
-<name>Проектор портативный Wanbo X2 Max</name>
-<price>88990</price>
-<picture>https://img.al-style.kz/57588_1.jpg</picture>
-<picture>https://img.al-style.kz/57588_2.jpg</picture>
-<picture>https://img.al-style.kz/57588_3.jpg</picture>
-<vendor>Wanbo</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Проектор Wanbo X2 Max это яркая и четкая картинка высокого качества. Модель поддерживает HD разрешение и обладает высокой яркостью. Лаконичный дизайн и минимум деталей позволяют использовать проектор в помещениях любого типа. Картинка получается четкой, а текст - разборчивым. Яркость цвета Яркость 450 ANSI люмен в сочетании с контрастностью 2000:1 позволяют добиться необыкновенной живости и сочности цветов, вызывая у зрителя эффект погружения. Благодаря этим особенностям просмотр видео возможен даже при свете. Проектор можно направить на любую удобную поверхность: стену, потолок или экран. ОС Android Благодаря наличию операционной системы Android играть и просматривать видео стало возможно без подключения других устройств. Диагональ проекции Соотношение сторон проекции 1.35 :1, поэтому в зависимо]]></description>
-<param name="Вес">2.225</param>
-<param name="Гарантия">12 мес</param>
-<param name="Состав">Металл, пластик, стекло</param>
-<param name="Объём">0.01261125</param>
-</offer>
-
 <offer id="AS391147" available="false">
 <categoryId></categoryId>
 <vendorCode>AS391147</vendorCode>
@@ -20919,7 +20926,7 @@ CyberPower PLT1500ELCDRT2U гарантирует защиту и резервн
 <param name="Объём">0.0691108</param>
 </offer>
 
-<offer id="AS392829" available="false">
+<offer id="AS392829" available="true">
 <categoryId></categoryId>
 <vendorCode>AS392829</vendorCode>
 <name>Источник бесперебойного питания CyberPower PLT3000ELCDRT2U</name>
@@ -21703,7 +21710,7 @@ CyberPower PLT3000ELCDRT2U гарантирует защиту и резервн
 <categoryId></categoryId>
 <vendorCode>AS393186</vendorCode>
 <name>Картридж Canon LBP CARTRIDGE 070 (оригинал)</name>
-<price>45945</price>
+<price>44600</price>
 <picture>https://img.al-style.kz/59645_1.jpg</picture>
 <picture>https://img.al-style.kz/59645_2.jpg</picture>
 <vendor>Canon</vendor>
@@ -21762,7 +21769,7 @@ CyberPower PLT3000ELCDRT2U гарантирует защиту и резервн
 <categoryId></categoryId>
 <vendorCode>AS393189</vendorCode>
 <name>Чернила Canon Ink Tank PFI-030 Black (оригинал)</name>
-<price>28570</price>
+<price>27500</price>
 <picture>https://img.al-style.kz/59648_1.jpg</picture>
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
@@ -21838,7 +21845,7 @@ CyberPower PLT3000ELCDRT2U гарантирует защиту и резервн
 <categoryId></categoryId>
 <vendorCode>AS393194</vendorCode>
 <name>Чернила Canon PFI-050 Black (оригинал)</name>
-<price>38000</price>
+<price>36600</price>
 <picture>https://img.al-style.kz/59653_1.jpg</picture>
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
@@ -21858,7 +21865,7 @@ CyberPower PLT3000ELCDRT2U гарантирует защиту и резервн
 <categoryId></categoryId>
 <vendorCode>AS393195</vendorCode>
 <name>Чернила Canon PFI-050 Cyan (оригинал)</name>
-<price>38000</price>
+<price>36600</price>
 <picture>https://img.al-style.kz/59654_1.jpg</picture>
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
@@ -21878,7 +21885,7 @@ CyberPower PLT3000ELCDRT2U гарантирует защиту и резервн
 <categoryId></categoryId>
 <vendorCode>AS393196</vendorCode>
 <name>Чернила Canon PFI-050 Magenta (оригинал)</name>
-<price>38000</price>
+<price>36600</price>
 <picture>https://img.al-style.kz/59655_1.jpg</picture>
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
@@ -21898,7 +21905,7 @@ CyberPower PLT3000ELCDRT2U гарантирует защиту и резервн
 <categoryId></categoryId>
 <vendorCode>AS393197</vendorCode>
 <name>Чернила Canon PFI-050 Yellow (оригинал)</name>
-<price>38000</price>
+<price>36600</price>
 <picture>https://img.al-style.kz/59656_1.jpg</picture>
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
@@ -21918,7 +21925,7 @@ CyberPower PLT3000ELCDRT2U гарантирует защиту и резервн
 <categoryId></categoryId>
 <vendorCode>AS393198</vendorCode>
 <name>Чернильный картридж Canon PFI-121 Magenta (оригинал)</name>
-<price>49201</price>
+<price>47800</price>
 <picture>https://img.al-style.kz/59657_1.jpg</picture>
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
@@ -22331,7 +22338,7 @@ CyberPower PLT3000ELCDRT2U гарантирует защиту и резервн
 <categoryId></categoryId>
 <vendorCode>AS393412</vendorCode>
 <name>Тонер-картридж Canon C-EXV 49 Black для IR ADVANCE C33xx C35xx 8524B002AA (оригинал)</name>
-<price>43655</price>
+<price>42400</price>
 <picture>https://img.al-style.kz/59876_1.jpg</picture>
 <picture>https://img.al-style.kz/59876_2.jpg</picture>
 <vendor>Canon</vendor>
@@ -22361,7 +22368,7 @@ CyberPower PLT3000ELCDRT2U гарантирует защиту и резервн
 <param name="Оригинальность">Оригинал</param>
 </offer>
 
-<offer id="AS393415" available="true">
+<offer id="AS393415" available="false">
 <categoryId></categoryId>
 <vendorCode>AS393415</vendorCode>
 <name>Тонер-картридж Canon C-EXV 49 MAGENTA для IR ADVANCE C33xx C35xx 8526B002AA (оригинал)</name>
@@ -22378,7 +22385,7 @@ CyberPower PLT3000ELCDRT2U гарантирует защиту и резервн
 <param name="Оригинальность">Оригинал</param>
 </offer>
 
-<offer id="AS393416" available="true">
+<offer id="AS393416" available="false">
 <categoryId></categoryId>
 <vendorCode>AS393416</vendorCode>
 <name>Тонер-картридж Canon C-EXV 49 YELLOW для IR ADVANCE C33xx C35xx 8527B002AA (оригинал)</name>
@@ -22399,7 +22406,7 @@ CyberPower PLT3000ELCDRT2U гарантирует защиту и резервн
 <categoryId></categoryId>
 <vendorCode>AS393417</vendorCode>
 <name>Тонер-картридж Canon C-EXV 54 Black для IR C3025 C3125 1394C002AA (оригинал)</name>
-<price>36872</price>
+<price>35800</price>
 <picture>https://img.al-style.kz/59881_1.jpg</picture>
 <picture>https://img.al-style.kz/59881_2.jpg</picture>
 <vendor>Canon</vendor>
@@ -22417,7 +22424,7 @@ CyberPower PLT3000ELCDRT2U гарантирует защиту и резервн
 <categoryId></categoryId>
 <vendorCode>AS393418</vendorCode>
 <name>Тонер-картридж Canon C-EXV 54 CYAN для IR C3025 C3125 1395C002AA (оригинал)</name>
-<price>52047</price>
+<price>50500</price>
 <picture>https://img.al-style.kz/59882_1.jpg</picture>
 <picture>https://img.al-style.kz/59882_2.jpg</picture>
 <vendor>Canon</vendor>
@@ -22435,7 +22442,7 @@ CyberPower PLT3000ELCDRT2U гарантирует защиту и резервн
 <categoryId></categoryId>
 <vendorCode>AS393419</vendorCode>
 <name>Тонер-картридж Canon C-EXV 54 MAGENTA для IR C3025 C3125 1396C002AA (оригинал)</name>
-<price>52047</price>
+<price>50700</price>
 <picture>https://img.al-style.kz/59883_1.jpg</picture>
 <picture>https://img.al-style.kz/59883_2.jpg</picture>
 <vendor>Canon</vendor>
@@ -22453,7 +22460,7 @@ CyberPower PLT3000ELCDRT2U гарантирует защиту и резервн
 <categoryId></categoryId>
 <vendorCode>AS393420</vendorCode>
 <name>Тонер-картридж Canon C-EXV 54 YELLOW для IR C3025 C3125 1397C002AA (оригинал)</name>
-<price>52047</price>
+<price>50500</price>
 <picture>https://img.al-style.kz/59884_1.jpg</picture>
 <picture>https://img.al-style.kz/59884_2.jpg</picture>
 <vendor>Canon</vendor>
@@ -22579,7 +22586,7 @@ CyberPower PLT3000ELCDRT2U гарантирует защиту и резервн
 <param name="Оригинальность">Оригинал</param>
 </offer>
 
-<offer id="AS393442" available="false">
+<offer id="AS393442" available="true">
 <categoryId></categoryId>
 <vendorCode>AS393442</vendorCode>
 <name>Тонер-картридж Canon C-EXV 65 CYAN для IR C3326 5762C001AA (оригинал)</name>
@@ -22598,7 +22605,7 @@ CyberPower PLT3000ELCDRT2U гарантирует защиту и резервн
 <param name="Оригинальность">Оригинал</param>
 </offer>
 
-<offer id="AS393443" available="false">
+<offer id="AS393443" available="true">
 <categoryId></categoryId>
 <vendorCode>AS393443</vendorCode>
 <name>Тонер-картридж Canon C-EXV 65 MAGENTA для IR C3326 5763C001AA (оригинал)</name>
@@ -22617,7 +22624,7 @@ CyberPower PLT3000ELCDRT2U гарантирует защиту и резервн
 <param name="Оригинальность">Оригинал</param>
 </offer>
 
-<offer id="AS393444" available="false">
+<offer id="AS393444" available="true">
 <categoryId></categoryId>
 <vendorCode>AS393444</vendorCode>
 <name>Тонер-картридж Canon C-EXV 65 YELLOW для IR C3326 5764C001AA (оригинал)</name>
@@ -22658,7 +22665,7 @@ CyberPower PLT3000ELCDRT2U гарантирует защиту и резервн
 <categoryId></categoryId>
 <vendorCode>AS393453</vendorCode>
 <name>Тонер-картридж Canon C-EXV 63 Black для IR 27xx 5142C002AA (оригинал)</name>
-<price>60748</price>
+<price>59000</price>
 <picture>https://img.al-style.kz/59914_1.jpg</picture>
 <picture>https://img.al-style.kz/59914_2.jpg</picture>
 <vendor>Canon</vendor>
@@ -23173,7 +23180,7 @@ CyberPower PLT3000ELCDRT2U гарантирует защиту и резервн
 <categoryId></categoryId>
 <vendorCode>AS393538</vendorCode>
 <name>Чернильный картридж Canon PFI-710 BK (оригинал)</name>
-<price>162300</price>
+<price>156100</price>
 <picture>https://img.al-style.kz/60000_1.jpg</picture>
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
@@ -23191,7 +23198,7 @@ CyberPower PLT3000ELCDRT2U гарантирует защиту и резервн
 <categoryId></categoryId>
 <vendorCode>AS393539</vendorCode>
 <name>Чернильный картридж Canon PFI-710 C (оригинал)</name>
-<price>162300</price>
+<price>156100</price>
 <picture>https://img.al-style.kz/60001_1.jpg</picture>
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
@@ -23209,7 +23216,7 @@ CyberPower PLT3000ELCDRT2U гарантирует защиту и резервн
 <categoryId></categoryId>
 <vendorCode>AS393540</vendorCode>
 <name>Чернильный картридж Canon PFI-710 M (оригинал)</name>
-<price>162300</price>
+<price>156100</price>
 <picture>https://img.al-style.kz/60002_1.jpg</picture>
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
@@ -23245,7 +23252,7 @@ CyberPower PLT3000ELCDRT2U гарантирует защиту и резервн
 <categoryId></categoryId>
 <vendorCode>AS393543</vendorCode>
 <name>Чернильный картридж Canon PFI-710 Y (оригинал)</name>
-<price>162300</price>
+<price>156100</price>
 <picture>https://img.al-style.kz/60005_1.jpg</picture>
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
@@ -23378,11 +23385,11 @@ CyberPower PLT3000ELCDRT2U гарантирует защиту и резервн
 <param name="Оригинальность">Оригинал</param>
 </offer>
 
-<offer id="AS393711" available="true">
+<offer id="AS393711" available="false">
 <categoryId></categoryId>
 <vendorCode>AS393711</vendorCode>
 <name>Зап. часть Печатающая головка Canon PRINTHEAD PF-06 (2352C001AA) (оригинал)</name>
-<price>263600</price>
+<price>253600</price>
 <picture>https://img.al-style.kz/60182_1.jpg</picture>
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
@@ -23418,7 +23425,7 @@ CyberPower PLT3000ELCDRT2U гарантирует защиту и резервн
 <categoryId></categoryId>
 <vendorCode>AS393715</vendorCode>
 <name>Чернила Canon Ink Tank PFI-120 Black (оригинал)</name>
-<price>43200</price>
+<price>39500</price>
 <picture>https://img.al-style.kz/60186_1.jpg</picture>
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
@@ -23436,7 +23443,7 @@ CyberPower PLT3000ELCDRT2U гарантирует защиту и резервн
 <categoryId></categoryId>
 <vendorCode>AS393716</vendorCode>
 <name>Чернила Canon Ink Tank PFI-120 Cyan (оригинал)</name>
-<price>43200</price>
+<price>41500</price>
 <picture>https://img.al-style.kz/60187_1.jpg</picture>
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
@@ -23454,7 +23461,7 @@ CyberPower PLT3000ELCDRT2U гарантирует защиту и резервн
 <categoryId></categoryId>
 <vendorCode>AS393717</vendorCode>
 <name>Чернила Canon Ink Tank PFI-120 Magenta (оригинал)</name>
-<price>43200</price>
+<price>41700</price>
 <picture>https://img.al-style.kz/60188_1.jpg</picture>
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
@@ -23472,7 +23479,7 @@ CyberPower PLT3000ELCDRT2U гарантирует защиту и резервн
 <categoryId></categoryId>
 <vendorCode>AS393718</vendorCode>
 <name>Чернила Canon Ink Tank PFI-120 Matte Black (оригинал)</name>
-<price>43200</price>
+<price>49000</price>
 <picture>https://img.al-style.kz/60189_1.jpg</picture>
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
@@ -23490,7 +23497,7 @@ CyberPower PLT3000ELCDRT2U гарантирует защиту и резервн
 <categoryId></categoryId>
 <vendorCode>AS393719</vendorCode>
 <name>Чернила Canon Ink Tank PFI-120 Yellow (оригинал)</name>
-<price>43200</price>
+<price>41500</price>
 <picture>https://img.al-style.kz/60190_1.jpg</picture>
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
@@ -23508,7 +23515,7 @@ CyberPower PLT3000ELCDRT2U гарантирует защиту и резервн
 <categoryId></categoryId>
 <vendorCode>AS393720</vendorCode>
 <name>Чернила Canon Ink Tank PFI-320 Black (оригинал)</name>
-<price>86600</price>
+<price>83600</price>
 <picture>https://img.al-style.kz/60191_1.jpg</picture>
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
@@ -23527,7 +23534,7 @@ CyberPower PLT3000ELCDRT2U гарантирует защиту и резервн
 <categoryId></categoryId>
 <vendorCode>AS393721</vendorCode>
 <name>Чернила Canon Ink Tank PFI-320 Cyan (оригинал)</name>
-<price>86600</price>
+<price>83900</price>
 <picture>https://img.al-style.kz/60192_1.jpg</picture>
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
@@ -23546,7 +23553,7 @@ CyberPower PLT3000ELCDRT2U гарантирует защиту и резервн
 <categoryId></categoryId>
 <vendorCode>AS393724</vendorCode>
 <name>Чернила Canon Ink Tank PFI-320 Magenta (оригинал)</name>
-<price>86600</price>
+<price>83300</price>
 <picture>https://img.al-style.kz/60195_1.jpg</picture>
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
@@ -23564,7 +23571,7 @@ CyberPower PLT3000ELCDRT2U гарантирует защиту и резервн
 <categoryId></categoryId>
 <vendorCode>AS393728</vendorCode>
 <name>Чернила Canon Ink Tank PFI-320 Matte Black (оригинал)</name>
-<price>86600</price>
+<price>85600</price>
 <picture>https://img.al-style.kz/60199_1.jpg</picture>
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
@@ -23600,7 +23607,7 @@ CyberPower PLT3000ELCDRT2U гарантирует защиту и резервн
 <categoryId></categoryId>
 <vendorCode>AS393877</vendorCode>
 <name>Чернила Canon Ink Tank PFI-320 Yellow (оригинал)</name>
-<price>86600</price>
+<price>84300</price>
 <picture>https://img.al-style.kz/60358_1.jpg</picture>
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
@@ -23900,7 +23907,7 @@ CyberPower PLT3000ELCDRT2U гарантирует защиту и резервн
 <param name="Объём">0.004896</param>
 </offer>
 
-<offer id="AS394232" available="false">
+<offer id="AS394232" available="true">
 <categoryId></categoryId>
 <vendorCode>AS394232</vendorCode>
 <name>Аккумуляторная батарея Ritar RA12-65 12В 65 Ач</name>
@@ -24184,11 +24191,11 @@ CyberPower PLT3000ELCDRT2U гарантирует защиту и резервн
 <param name="Совместимость">Canon ImagePROGRAF TC-20 / Canon ImagePROGRAF TC-20M / Canon ImagePROGRAF TM-240</param>
 </offer>
 
-<offer id="AS396189" available="false">
+<offer id="AS396189" available="true">
 <categoryId></categoryId>
 <vendorCode>AS396189</vendorCode>
 <name>Блок барабана Canon DRUM UNIT C-EXV 49 8528B003AA (оригинал)</name>
-<price>136490</price>
+<price>114300</price>
 <picture>https://img.al-style.kz/60898_1.jpg</picture>
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
@@ -24391,7 +24398,7 @@ CyberPower PLT3000ELCDRT2U гарантирует защиту и резервн
 <param name="Объём">0.0000735</param>
 </offer>
 
-<offer id="AS396358" available="true">
+<offer id="AS396358" available="false">
 <categoryId></categoryId>
 <vendorCode>AS396358</vendorCode>
 <name>Кабель сетевой Legrand Cat.6 F/UTP LSZH</name>
@@ -24697,7 +24704,7 @@ CyberPower PLT3000ELCDRT2U гарантирует защиту и резервн
 <categoryId></categoryId>
 <vendorCode>AS396505</vendorCode>
 <name>Чернильный картридж Canon PFI-340 Magenta (оригинал)</name>
-<price>74633</price>
+<price>72500</price>
 <picture>https://img.al-style.kz/61191_1.jpg</picture>
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
@@ -26008,7 +26015,7 @@ Schneider Electric Easy UPS SRVS2KRIRK высококачественный он
 <categoryId></categoryId>
 <vendorCode>AS396797</vendorCode>
 <name>Источник бесперебойного питания APC Back-UPS BX950MI-GR</name>
-<price>66420</price>
+<price>70202</price>
 <picture>https://img.al-style.kz/61377_1.jpg</picture>
 <picture>https://img.al-style.kz/61377_2.jpg</picture>
 <picture>https://img.al-style.kz/61377_3.jpg</picture>
@@ -26097,7 +26104,7 @@ Schneider Electric Easy UPS SRVS2KRIRK высококачественный он
 <param name="Объём">0.0348</param>
 </offer>
 
-<offer id="AS396804" available="true">
+<offer id="AS396804" available="false">
 <categoryId></categoryId>
 <vendorCode>AS396804</vendorCode>
 <name>Источник бесперебойного питания APC Easy UPS BVX700LI-GR</name>
@@ -26420,7 +26427,7 @@ Schneider Electric Easy UPS SRVS2KRIRK высококачественный он
 <param name="Объём">0.03390702</param>
 </offer>
 
-<offer id="AS397093" available="false">
+<offer id="AS397093" available="true">
 <categoryId></categoryId>
 <vendorCode>AS397093</vendorCode>
 <name>Монитор Samsung 27” Odyssey G6 Smart LS27BG650EIXCI</name>
@@ -27884,7 +27891,7 @@ EATON 9SX11KiRT Высокопроизводительный онлайн-ИБП
 <categoryId></categoryId>
 <vendorCode>AS398123</vendorCode>
 <name>Чернильный картридж Canon PFI-740 Matte Black (оригинал)</name>
-<price>162300</price>
+<price>156000</price>
 <picture>https://img.al-style.kz/62720_1.jpg</picture>
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
@@ -27904,7 +27911,7 @@ EATON 9SX11KiRT Высокопроизводительный онлайн-ИБП
 <categoryId></categoryId>
 <vendorCode>AS398125</vendorCode>
 <name>Чернильный картридж Canon PFI-740 Black (оригинал)</name>
-<price>162300</price>
+<price>156000</price>
 <picture>https://img.al-style.kz/62722_1.jpg</picture>
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
@@ -27924,7 +27931,7 @@ EATON 9SX11KiRT Высокопроизводительный онлайн-ИБП
 <categoryId></categoryId>
 <vendorCode>AS398126</vendorCode>
 <name>Чернильный картридж Canon PFI-740 Cyan (оригинал)</name>
-<price>162300</price>
+<price>156100</price>
 <picture>https://img.al-style.kz/62723_1.jpg</picture>
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
@@ -27944,7 +27951,7 @@ EATON 9SX11KiRT Высокопроизводительный онлайн-ИБП
 <categoryId></categoryId>
 <vendorCode>AS398127</vendorCode>
 <name>Чернильный картридж Canon PFI-740 Magenta (оригинал)</name>
-<price>162300</price>
+<price>156100</price>
 <picture>https://img.al-style.kz/62725_1.jpg</picture>
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
@@ -27993,7 +28000,7 @@ EATON 9SX11KiRT Высокопроизводительный онлайн-ИБП
 <categoryId></categoryId>
 <vendorCode>AS398130</vendorCode>
 <name>Чернильный картридж Canon PFI-740 Yellow (оригинал)</name>
-<price>162300</price>
+<price>156000</price>
 <picture>https://img.al-style.kz/62728_1.jpg</picture>
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
@@ -28264,7 +28271,7 @@ EATON 9SX11KiRT Высокопроизводительный онлайн-ИБП
 <categoryId></categoryId>
 <vendorCode>AS398693</vendorCode>
 <name>Тонер-картридж Canon TONER T07 CYAN 3642C001AA (оригинал)</name>
-<price>147130</price>
+<price>142900</price>
 <picture>https://img.al-style.kz/63299_1.jpg</picture>
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
@@ -28284,7 +28291,7 @@ EATON 9SX11KiRT Высокопроизводительный онлайн-ИБП
 <categoryId></categoryId>
 <vendorCode>AS398694</vendorCode>
 <name>Тонер-картридж Canon TONER T07 BLACK 3641C001AA (оригинал)</name>
-<price>89851</price>
+<price>87300</price>
 <picture>https://img.al-style.kz/63300_1.jpg</picture>
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
@@ -28304,7 +28311,7 @@ EATON 9SX11KiRT Высокопроизводительный онлайн-ИБП
 <categoryId></categoryId>
 <vendorCode>AS398695</vendorCode>
 <name>Тонер-картридж Canon TONER T07 MAGENTA 3643C001AA (оригинал)</name>
-<price>147048</price>
+<price>142900</price>
 <picture>https://img.al-style.kz/63301_1.jpg</picture>
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
@@ -28324,7 +28331,7 @@ EATON 9SX11KiRT Высокопроизводительный онлайн-ИБП
 <categoryId></categoryId>
 <vendorCode>AS398696</vendorCode>
 <name>Тонер-картридж Canon TONER T07 YELLOW 3644C001AA (оригинал)</name>
-<price>153710</price>
+<price>149300</price>
 <picture>https://img.al-style.kz/63302_1.jpg</picture>
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
@@ -28396,7 +28403,7 @@ EATON 9SX11KiRT Высокопроизводительный онлайн-ИБП
 <param name="Объём">0.02774475</param>
 </offer>
 
-<offer id="AS398784" available="true">
+<offer id="AS398784" available="false">
 <categoryId></categoryId>
 <vendorCode>AS398784</vendorCode>
 <name>Источник бесперебойного питания APC Smart-UPS SMT3000RMI2UC</name>
@@ -28820,7 +28827,7 @@ EATON 9SX11KiRT Высокопроизводительный онлайн-ИБП
 <param name="Объём">0.0013248</param>
 </offer>
 
-<offer id="AS399574" available="false">
+<offer id="AS399574" available="true">
 <categoryId></categoryId>
 <vendorCode>AS399574</vendorCode>
 <name>Аккумуляторная батарея Ritar RA12-33 12В 33 Ач</name>
@@ -29274,7 +29281,7 @@ EATON 9SX11KiRT Высокопроизводительный онлайн-ИБП
 <param name="Объём">0.792288</param>
 </offer>
 
-<offer id="AS399973" available="false">
+<offer id="AS399973" available="true">
 <categoryId></categoryId>
 <vendorCode>AS399973</vendorCode>
 <name>Картридж Europrint EPC-W1335X (совместимый)</name>
@@ -29504,7 +29511,7 @@ EATON 9SX11KiRT Высокопроизводительный онлайн-ИБП
 <categoryId></categoryId>
 <vendorCode>AS400056</vendorCode>
 <name>Картридж Canon CARTRIDGE 067 Magenta (оригинал)</name>
-<price>39312</price>
+<price>38300</price>
 <picture>https://img.al-style.kz/64356_1.jpg</picture>
 <picture>https://img.al-style.kz/64356_2.jpg</picture>
 <vendor>Canon</vendor>
@@ -29523,7 +29530,7 @@ EATON 9SX11KiRT Высокопроизводительный онлайн-ИБП
 <categoryId></categoryId>
 <vendorCode>AS400057</vendorCode>
 <name>Картридж Canon CARTRIDGE 067 Cyan (оригинал)</name>
-<price>39312</price>
+<price>38200</price>
 <picture>https://img.al-style.kz/64357_1.jpg</picture>
 <picture>https://img.al-style.kz/64357_2.jpg</picture>
 <vendor>Canon</vendor>
@@ -29623,7 +29630,7 @@ EATON 9SX11KiRT Высокопроизводительный онлайн-ИБП
 <categoryId></categoryId>
 <vendorCode>AS400132</vendorCode>
 <name>Тонер-картридж Canon TONER T03 BLACK 2725C001 (оригинал)</name>
-<price>174064</price>
+<price>169100</price>
 <picture>https://img.al-style.kz/64433_1.jpg</picture>
 <picture>https://img.al-style.kz/64433_2.jpg</picture>
 <vendor>Canon</vendor>
@@ -29948,7 +29955,7 @@ EATON 9SX11KiRT Высокопроизводительный онлайн-ИБП
 <categoryId></categoryId>
 <vendorCode>AS400325</vendorCode>
 <name>Картридж Canon LBP CARTRIDGE 071 (оригинал)</name>
-<price>28229</price>
+<price>27400</price>
 <picture>https://img.al-style.kz/64645_1.jpg</picture>
 <picture>https://img.al-style.kz/64645_2.jpg</picture>
 <vendor>Canon</vendor>
@@ -30877,7 +30884,7 @@ XG 86TDFMAX148128- это современная интерактивная па
 <param name="Объём">0.576</param>
 </offer>
 
-<offer id="AS401141" available="false">
+<offer id="AS401141" available="true">
 <categoryId></categoryId>
 <vendorCode>AS401141</vendorCode>
 <name>Интерактивная доска (панель) Dahua 86" DHI-LPH86-MC480-U</name>
@@ -33614,7 +33621,7 @@ Cyborg 15 ДИЗАЙН ОТ КОНЦЕПТ-ХУДОЖНИКА ПОЛА ЧЕПТ�
 <param name="Оригинальность">Совместимый</param>
 </offer>
 
-<offer id="AS405275" available="false">
+<offer id="AS405275" available="true">
 <categoryId></categoryId>
 <vendorCode>AS405275</vendorCode>
 <name>Зап. часть Печатающая головка Canon PRINTHEAD COLOR CH-40 EMB (3430C001AB) (оригинал)</name>
@@ -33686,7 +33693,7 @@ Cyborg 15 ДИЗАЙН ОТ КОНЦЕПТ-ХУДОЖНИКА ПОЛА ЧЕПТ�
 <param name="Объём">0.052224</param>
 </offer>
 
-<offer id="AS405300" available="false">
+<offer id="AS405300" available="true">
 <categoryId></categoryId>
 <vendorCode>AS405300</vendorCode>
 <name>Монитор Samsung 27" ViewFinity S6 LS27D604UAIXCI</name>
@@ -34231,7 +34238,7 @@ Cyborg 15 ДИЗАЙН ОТ КОНЦЕПТ-ХУДОЖНИКА ПОЛА ЧЕПТ�
 <param name="Оригинальность">Оригинал</param>
 </offer>
 
-<offer id="AS405408" available="false">
+<offer id="AS405408" available="true">
 <categoryId></categoryId>
 <vendorCode>AS405408</vendorCode>
 <name>Источник бесперебойного питания APC Back-UPS BK500EI</name>
@@ -37109,7 +37116,7 @@ Wanbo Vali 1 — портативный смарт‑проектор Full HD К
 <param name="Оригинальность">Совместимый</param>
 </offer>
 
-<offer id="AS410598" available="true">
+<offer id="AS410598" available="false">
 <categoryId></categoryId>
 <vendorCode>AS410598</vendorCode>
 <name>Тонер-картридж CET TN-321C (CET7263) (совместимый)</name>
@@ -38974,7 +38981,7 @@ Wanbo Vali 1 — портативный смарт‑проектор Full HD К
 <param name="Применение">технологии антибликового покрытия и низкого уровня отражения обеспечивает более приятные впечатления от просмотра, уменьшая отвлечение от экрана даже в условиях недостаточного освещения.</param>
 </offer>
 
-<offer id="AS412463" available="false">
+<offer id="AS412463" available="true">
 <categoryId></categoryId>
 <vendorCode>AS412463</vendorCode>
 <name>Монитор 27" LG 27GS60QC-B</name>
@@ -41259,7 +41266,7 @@ Wanbo Mozart 1 Pro NEW 2025 — обновлённая версия легенд
 <param name="Объём">0.02501</param>
 </offer>
 
-<offer id="AS416357" available="false">
+<offer id="AS416357" available="true">
 <categoryId></categoryId>
 <vendorCode>AS416357</vendorCode>
 <name>Аккумуляторная батарея Ritar RA12-80S 12В 80 Ач</name>
@@ -42090,7 +42097,9 @@ Sysform LM-360N — ламинатор Sysform LM-360N — это професс
 <vendorCode>AS417829</vendorCode>
 <name>Источник бесперебойного питания APC Easy UPS SRVL1KRIRK</name>
 <price>646748</price>
-<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
+<picture>https://img.al-style.kz/85045_1.jpg</picture>
+<picture>https://img.al-style.kz/85045_2.jpg</picture>
+<picture>https://img.al-style.kz/85045_3.jpg</picture>
 <vendor>APC</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
@@ -42270,35 +42279,6 @@ Sysform LM-360N — ламинатор Sysform LM-360N — это професс
 <param name="Операционная система">DOS</param>
 <param name="Объём">0.0147735</param>
 <param name="Цвет">Eclipse Gray</param>
-</offer>
-
-<offer id="AS417936" available="false">
-<categoryId></categoryId>
-<vendorCode>AS417936</vendorCode>
-<name>Ноутбук ASUS Vivobook 17 X1704VA-AU1017 17,3" FHD 60Hz Core 5 120U 16GB 512GB DOS</name>
-<price>350047</price>
-<picture>https://img.al-style.kz/85110_1.jpg</picture>
-<picture>https://img.al-style.kz/85110_2.jpg</picture>
-<picture>https://img.al-style.kz/85110_3.jpg</picture>
-<vendor>ASUS</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Ноутбук ASUS Vivobook 17 X1704VA-AU1017 17.3" FHD 60Hz Intel Core 5 120U 16GB 512GB DOS (90NB13X2-M00J00) Большой экран. Лёгкий корпус. Универсальный. Ультралёгкий ноутбук с экраном 17.3″ FHD, процессором Intel Core 5 120U и 16 ГБ DDR5 памяти. Идеален для учебы, работы и мультимедиа. Ключевые]]></description>
-<param name="Вес">4.71</param>
-<param name="Гарантия">12 мес</param>
-<param name="Частота обновления экрана">60 Гц</param>
-<param name="Тип матрицы экрана">IPS</param>
-<param name="Диагональ экрана">17</param>
-<param name="Разрешение экрана">1920x1080</param>
-<param name="Процессор">Core 5 120U</param>
-<param name="Тип ноутбука">Базовый ноутбук</param>
-<param name="Тип оперативной памяти">DDR5</param>
-<param name="Объем накопителя">512 Гб</param>
-<param name="Тип накопителя">SSD</param>
-<param name="Видеокарта">Intel UHD Graphics</param>
-<param name="Операционная система">DOS</param>
-<param name="Объём">0.010209875</param>
-<param name="Цвет">Quiet Blue</param>
 </offer>
 
 <offer id="AS417938" available="true">
@@ -42506,7 +42486,7 @@ Sysform LM-360N — ламинатор Sysform LM-360N — это професс
 <vendor>ASUS</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Ноутбук ASUS Vivobook 14 M1407GA-LY030 14" FHD+ 60Hz AMD AI 7 445 16GB 1TB DOS (90NB1702-M001F0) Компактный и производительный ноутбук с 14" экраном ASUS Vivobook 14 сочетает качественный IPS-дисплей 16:10, процессор AMD Ryzen™ AI 7 445 с NPU до 50 TOPS, лёгкий корпус и достаточный объём памяти — идеально для учёбы, работы и мультимедиа. Ключевые]]></description>
+Ноутбук ASUS Vivobook 14 M1407GA-LY030 14" FHD+ IPS 60Hz Ryzen AI 7 445 16GB 1TB Radeon Graphics DOS Gold Стильный и компактный ноутбук с AI-процессором для работы, учебы и повседневных задач. ASUS Vivobook 14 — это лёгкий 14″ ноутбук с современным процессором AMD Ryzen AI 7 445 и встроенным нейронным ускорителем. Подходит для офисной работы, мультимедиа и мобильного использования, обеспечивая баланс производительности и автономности. Ключевые]]></description>
 <param name="Вес">1.46</param>
 <param name="Гарантия">12 мес</param>
 <param name="Частота обновления экрана">60 Гц</param>
@@ -42645,37 +42625,6 @@ Sysform LM-360N — ламинатор Sysform LM-360N — это професс
 <param name="Цвет">Jade Black</param>
 </offer>
 
-<offer id="AS418270" available="false">
-<categoryId></categoryId>
-<vendorCode>AS418270</vendorCode>
-<name>Ноутбук ASUS V16 V3607VM-RP121 16" FHD+ 144Hz Core 7 240H 16GB 512GB RTX5060 DOS</name>
-<price>644361</price>
-<picture>https://img.al-style.kz/85443_1.jpg</picture>
-<picture>https://img.al-style.kz/85443_2.jpg</picture>
-<picture>https://img.al-style.kz/85443_3.jpg</picture>
-<vendor>ASUS</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Ноутбук ASUS V16 V3607VM-RP121 16" WUXGA 144Hz Core i7-240H 16GB 512GB NVIDIA GeForce RTX 5060 DOS (90NB16K1-M009Z0) Современный универсальный ноутбук с дискретной графикой для игр, работы и учёбы. ASUS V16 сочетает высокую производительность, экран формата 16:10 и видеокарту нового поколения, оставаясь лёгким и надёжным устройством для повседневного использования. Ключевые]]></description>
-<param name="Вес">1.95</param>
-<param name="Гарантия">12 мес</param>
-<param name="Частота обновления экрана">240 Гц</param>
-<param name="Тип матрицы экрана">IPS</param>
-<param name="Диагональ экрана">16</param>
-<param name="Разрешение экрана">1920х1200</param>
-<param name="Процессор">Intel Core 7 240H</param>
-<param name="Тип ноутбука">Игровой ноутбук</param>
-<param name="Тип оперативной памяти">DDR5</param>
-<param name="Объем накопителя">512 Гб</param>
-<param name="Тип накопителя">SSD</param>
-<param name="Видеокарта">Nvidia GeForce RTX5060</param>
-<param name="Объем видеопамяти">8 Гб</param>
-<param name="Операционная система">DOS</param>
-<param name="Объем оперативной памяти">16 ГБ</param>
-<param name="Объём">0.001611</param>
-<param name="Цвет">Matte Black</param>
-</offer>
-
 <offer id="AS418271" available="true">
 <categoryId></categoryId>
 <vendorCode>AS418271</vendorCode>
@@ -42710,7 +42659,7 @@ Sysform LM-360N — ламинатор Sysform LM-360N — это професс
 <categoryId></categoryId>
 <vendorCode>AS418347</vendorCode>
 <name>Ноутбук Gigabyte AERO X16 16" QHD+ 165Hz Ryzen AI 7 350 32GB 1TB NVIDIA GeForce RTX 5070 Windows 11</name>
-<price>1054515</price>
+<price>990545</price>
 <picture>https://img.al-style.kz/85546_1.jpg</picture>
 <picture>https://img.al-style.kz/85546_2.jpg</picture>
 <picture>https://img.al-style.kz/85546_3.jpg</picture>
@@ -42944,7 +42893,7 @@ Sysform LM-360N — ламинатор Sysform LM-360N — это професс
 <categoryId></categoryId>
 <vendorCode>AS418648</vendorCode>
 <name>Картридж Canon CARTRIDGE 064 Magenta (оригинал)</name>
-<price>89140</price>
+<price>86500</price>
 <picture>https://img.al-style.kz/85803_1.jpg</picture>
 <picture>https://img.al-style.kz/85803_2.jpg</picture>
 <vendor>Canon</vendor>
@@ -44586,6 +44535,8 @@ Sysform LM-360N — ламинатор Sysform LM-360N — это професс
 <name>Монохромное лазерное МФУ Canon imageRUNNER 2224 II</name>
 <price>420189</price>
 <picture>https://img.al-style.kz/87719_1.jpg</picture>
+<picture>https://img.al-style.kz/87719_2.jpg</picture>
+<picture>https://img.al-style.kz/87719_3.jpg</picture>
 <vendor>Canon</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
@@ -44595,7 +44546,7 @@ Sysform LM-360N — ламинатор Sysform LM-360N — это професс
 <param name="Объём">0.337995</param>
 </offer>
 
-<offer id="AS420488" available="true">
+<offer id="AS420488" available="false">
 <categoryId></categoryId>
 <vendorCode>AS420488</vendorCode>
 <name>Монохромное лазерное МФУ Canon imageRUNNER 2224N II</name>
@@ -45126,7 +45077,7 @@ Wanbo Vali 1 Pro — современный портативный проект�
 <param name="Цвет">Nano Black</param>
 </offer>
 
-<offer id="AS420946" available="true">
+<offer id="AS420946" available="false">
 <categoryId></categoryId>
 <vendorCode>AS420946</vendorCode>
 <name>Ноутбук ASUS Zenbook S 14 UX5406AA-QJ045W 14" FHD+ 60Hz Core Ultra 9 386H 32GB 1TB Win 11</name>
@@ -45185,7 +45136,7 @@ Wanbo Vali 1 Pro — современный портативный проект�
 <param name="Объём">0.0025997</param>
 </offer>
 
-<offer id="AS420949" available="false">
+<offer id="AS420949" available="true">
 <categoryId></categoryId>
 <vendorCode>AS420949</vendorCode>
 <name>Ноутбук ASUS TUF Gaming F17 FX707VJB-HX098 17,3" FHD 144Hz Core 5 210H 16GB 512GB RTX3050 DOS</name>
@@ -45238,11 +45189,28 @@ Wanbo Vali 1 Pro — современный портативный проект�
 <vendorCode>AS421040</vendorCode>
 <name>Источник бесперебойного питания APC Easy UPS SRV1KI-E</name>
 <price>170384</price>
-<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
-<vendor></vendor>
+<picture>https://img.al-style.kz/88278_1.jpg</picture>
+<picture>https://img.al-style.kz/88278_2.jpg</picture>
+<picture>https://img.al-style.kz/88278_3.jpg</picture>
+<vendor>APC</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
 Высококачественный онлайн-ИБП с двойным преобразованием, предназначенный для обеспечения необходимой защиты электропитания даже в самых нестабильных условиях . ЭКОЛОГИЧНЫЙ режим/Зеленый режим • Режим энергосбережения, в котором диапазон регулирования входного напряжения может быть установлен/изменен с помощью ЖК-дисплея. Упрощенный мониторинг и управление • USB и последовательные порты для управления ИБП с помощью PowerChute Интеллектуальное управление батареей • Увеличивает производительность, срок службы и надежность батареи благодаря интеллектуальной точной зарядке с температурной компенсацией]]></description>
+<param name="Вес">11</param>
+<param name="Гарантия">24 мес</param>
+<param name="Время полной зарядки">4 ч</param>
+<param name="Тип ИБП">Онлайн</param>
+<param name="Время переключения режимов">0 мс</param>
+<param name="Длина кабеля">1,5 м</param>
+<param name="Форма выходного сигнала">Синусоида</param>
+<param name="Рабочий диапазон температур">от 0 до 40 °С</param>
+<param name="Состав">Металл, пластик</param>
+<param name="Рабочая влажность">0-95% (без конденсации)</param>
+<param name="Цвет">Чёрный</param>
+<param name="Номинальное входное напряжение">230 В</param>
+<param name="Выходная частота">50/60 ±3Гц</param>
+<param name="Лицевая панель">ЖК-дисплей</param>
+<param name="Объём">0.031008</param>
 </offer>
 
 <offer id="AS421046" available="true">
@@ -45250,11 +45218,28 @@ Wanbo Vali 1 Pro — современный портативный проект�
 <vendorCode>AS421046</vendorCode>
 <name>Источник бесперебойного питания APC Easy UPS SRV3KI-E</name>
 <price>386480</price>
-<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
-<vendor></vendor>
+<picture>https://img.al-style.kz/88284_1.jpg</picture>
+<picture>https://img.al-style.kz/88284_2.jpg</picture>
+<picture>https://img.al-style.kz/88284_3.jpg</picture>
+<vendor>APC</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
 Высококачественный онлайн-ИБП с двойным преобразованием, предназначенный для обеспечения необходимой защиты электропитания даже в самых нестабильных условиях электропитания. В комплект поставки входит: 1 IEC 60320 C19 to Schuko силовой кабель 1 IEC 60320 C13 to C14 силовой кабель 1 USB кабель 1 Кабель для конфигурирования через порт RS-232 руководство по эксплуатации]]></description>
+<param name="Вес">28.52</param>
+<param name="Гарантия">24 мес</param>
+<param name="Время полной зарядки">4 ч</param>
+<param name="Тип ИБП">Онлайн</param>
+<param name="Время переключения режимов">0 мс</param>
+<param name="Длина кабеля">1,5 м</param>
+<param name="Форма выходного сигнала">Синусоида</param>
+<param name="Рабочий диапазон температур">от 0 до 40 °С</param>
+<param name="Состав">Металл, пластик</param>
+<param name="Рабочая влажность">0-95% (без конденсации)</param>
+<param name="Цвет">Чёрный</param>
+<param name="Номинальное входное напряжение">230 В</param>
+<param name="Выходная частота">50/60 ±3Гц</param>
+<param name="Лицевая панель">ЖК-дисплей</param>
+<param name="Объём">0.093024</param>
 </offer>
 
 <offer id="AS421284" available="true">
@@ -45460,11 +45445,33 @@ Wanbo Vali 1 Pro — современный портативный проект�
 <vendorCode>AS421572</vendorCode>
 <name>Источник бесперебойного питания APC Easy UPS SRV2KRILRK-E</name>
 <price>594954</price>
-<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
-<vendor></vendor>
+<picture>https://img.al-style.kz/88848_1.jpg</picture>
+<picture>https://img.al-style.kz/88848_2.jpg</picture>
+<picture>https://img.al-style.kz/88848_3.jpg</picture>
+<vendor>APC</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
 ИБП APC Easy UPS предназначен для ИТ-специалистов и сетевых администраторов с целью обеспечения непрерывности работы бизнеса. Данный онлайн-ИБП мощностью 2000 ВА с двойным преобразованием в форм-факторе 4U для установки в стойку обеспечивает чистую синусоиду и увеличенное время автономной работы для поддержки критически важного оборудования при перебоях электропитания. Модель SRV оснащена входом IEC 320 C20 и 4 выходами IEC 320 C13. Онлайн-ИБП имеет слот для интеллектуальной карты, поддерживающий установку опциональной сетевой карты управления (AP9544, SRVSMB001, VGL9601I), что позволяет осуществлять мониторинг и управление ИБП по сети. ИБП может подключаться к платформе EcoStruxure IT или к сторонним централизованным системам управления. Встроенный автоматический и ручной байпас обеспечивает бесперебойное питание нагрузки даже в случае обнаружения внутренней неисправности или ошибки в работе ИБП. На ИБП и встроенную свинцово-кислотную батарею предоставляется гарантия 2 года. Устройство идеально подходит для небольших дата-центров, производственных объектов, серверных помещений, систем хранения данных, телекоммуникаций и ИТ-инфраструктуры в сфере здравоохранения.]]></description>
+<param name="Вес">65.28</param>
+<param name="Гарантия">24 мес</param>
+<param name="Время полной зарядки">4 ч</param>
+<param name="Мощность (Вт)">2000ВА / 1800Вт</param>
+<param name="Тип ИБП">Онлайн</param>
+<param name="Время переключения режимов">0 мс</param>
+<param name="Длина кабеля">1,5 м</param>
+<param name="Форма выходного сигнала">Синусоида</param>
+<param name="Автоматическое включение">Есть</param>
+<param name="Вход">230 В</param>
+<param name="Выход">230В</param>
+<param name="Рабочий диапазон температур">от 0 до 40 °С</param>
+<param name="Состав">Металл, пластик</param>
+<param name="Рабочая влажность">0-90% (без конденсации)</param>
+<param name="Цвет">Чёрный</param>
+<param name="Количество и тип выходных разъёмов">4 x IEC C13</param>
+<param name="Лицевая панель">ЖК-дисплей</param>
+<param name="Высота в монтажной стойке">2U</param>
+<param name="Комплект отгрузки">SRVPM2KRIL-E - 1шт, SRV72RLBP-9A-1шт, SRVRK1-2 шт</param>
+<param name="Объём">0.2016</param>
 </offer>
 
 <offer id="AS421589" available="true">
@@ -45472,11 +45479,30 @@ Wanbo Vali 1 Pro — современный портативный проект�
 <vendorCode>AS421589</vendorCode>
 <name>Источник бесперебойного питания APC Easy UPS SRV2KI-E</name>
 <price>284896</price>
-<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
-<vendor></vendor>
+<picture>https://img.al-style.kz/88865_1.jpg</picture>
+<picture>https://img.al-style.kz/88865_2.jpg</picture>
+<picture>https://img.al-style.kz/88865_3.jpg</picture>
+<vendor>APC</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
 Высококачественный онлайн-ИБП с двойным преобразованием, предназначенный для обеспечения необходимой защиты электропитания даже в самых нестабильных условиях . ЭКОЛОГИЧНЫЙ режим/Зеленый режим • Режим энергосбережения, в котором диапазон регулирования входного напряжения может быть установлен/изменен с помощью ЖК-дисплея. Упрощенный мониторинг и управление • USB и последовательные порты для управления ИБП с помощью PowerChute Интеллектуальное управление батареей • Увеличивает производительность, срок службы и надежность батареи благодаря интеллектуальной точной зарядке с температурной компенсацией]]></description>
+<param name="Вес">19</param>
+<param name="Гарантия">24 мес</param>
+<param name="Время полной зарядки">4 ч</param>
+<param name="Мощность (Вт)">2000ВА / 1800Вт</param>
+<param name="Тип ИБП">Онлайн</param>
+<param name="Время переключения режимов">0 мс</param>
+<param name="Длина кабеля">1,5 м</param>
+<param name="Форма выходного сигнала">Синусоида</param>
+<param name="Рабочий диапазон температур">от 0 до 40 °С</param>
+<param name="Состав">Металл, пластик</param>
+<param name="Рабочая влажность">0-95% (без конденсации)</param>
+<param name="Цвет">Чёрный</param>
+<param name="Номинальное входное напряжение">230 В</param>
+<param name="Выходная частота">50/60 ±3Гц</param>
+<param name="Количество и тип выходных разъёмов">4 x IEC C13</param>
+<param name="Лицевая панель">ЖК-дисплей</param>
+<param name="Объём">0.045792</param>
 </offer>
 
 <offer id="AS421594" available="true">
@@ -45484,11 +45510,31 @@ Wanbo Vali 1 Pro — современный портативный проект�
 <vendorCode>AS421594</vendorCode>
 <name>Источник бесперебойного питания APC Easy UPS SRV2KRIRK-E</name>
 <price>317840</price>
-<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
-<vendor></vendor>
+<picture>https://img.al-style.kz/88870_1.jpg</picture>
+<picture>https://img.al-style.kz/88870_2.jpg</picture>
+<picture>https://img.al-style.kz/88870_3.jpg</picture>
+<vendor>APC</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
 APC Easy UPS SRV2KRIRK высококачественный онлайн-ИБП с двойным преобразованием, предназначенный для обеспечения необходимой защиты электропитания даже в самых нестабильных условиях электропитания. В комплект поставки входит: 1 IEC 60320 C19 to Schuko силовой кабель 1 IEC 60320 C13 to C14 силовой кабель 1 USB кабель 1 Кабель для конфигурирования через порт RS-232 1 Кронштейны для монтажа в аппаратурные стойки 1 Направляющие для монтажа в аппаратурные стойки руководство по эксплуатации]]></description>
+<param name="Вес">24.64</param>
+<param name="Гарантия">24 мес</param>
+<param name="Время полной зарядки">4 ч</param>
+<param name="Тип ИБП">Онлайн</param>
+<param name="Время переключения режимов">0 мс</param>
+<param name="Длина кабеля">1,5 м</param>
+<param name="Форма выходного сигнала">Синусоида</param>
+<param name="Автоматическое включение">Есть</param>
+<param name="Вход">230 В</param>
+<param name="Выход">230В</param>
+<param name="Рабочий диапазон температур">от 0 до 40 °С</param>
+<param name="Состав">Металл, пластик</param>
+<param name="Рабочая влажность">0-90% (без конденсации)</param>
+<param name="Цвет">Чёрный</param>
+<param name="Количество и тип выходных разъёмов">4 x IEC C13</param>
+<param name="Лицевая панель">ЖК-дисплей</param>
+<param name="Высота в монтажной стойке">2U</param>
+<param name="Объём">0.08393</param>
 </offer>
 
 <offer id="AS421596" available="true">
@@ -45497,10 +45543,29 @@ APC Easy UPS SRV2KRIRK высококачественный онлайн-ИБП 
 <name>Источник бесперебойного питания APC Easy UPS SRV3KRIRK-E</name>
 <price>398958</price>
 <picture>https://placehold.co/800x800/png?text=No+Photo</picture>
-<vendor></vendor>
+<vendor>APC</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
 APC Easy UPS SRV3KRIRK высококачественный онлайн-ИБП с двойным преобразованием, предназначенный для обеспечения необходимой защиты электропитания даже в самых нестабильных условиях электропитания.]]></description>
+<param name="Вес">33.64</param>
+<param name="Гарантия">24 мес</param>
+<param name="Время полной зарядки">4 ч</param>
+<param name="Мощность (Вт)">3000ВА / 2700Вт</param>
+<param name="Ёмкость батареи">12В/9Ач х 6</param>
+<param name="Тип ИБП">Онлайн</param>
+<param name="Время переключения режимов">0 мс</param>
+<param name="Форма выходного сигнала">Синусоида</param>
+<param name="Автоматическое включение">Есть</param>
+<param name="Вход">230 В</param>
+<param name="Выход">230В</param>
+<param name="Рабочий диапазон температур">от 0 до 40 °С</param>
+<param name="Состав">Металл, пластик</param>
+<param name="Рабочая влажность">0-90% (без конденсации)</param>
+<param name="Цвет">Чёрный</param>
+<param name="Лицевая панель">ЖК-дисплей</param>
+<param name="Высота в монтажной стойке">2U</param>
+<param name="Комплект отгрузки">SRV3KRI-E -1шт, SRVRK1-1шт</param>
+<param name="Объём">0.10318824</param>
 </offer>
 
 <offer id="AS421691" available="true">
@@ -45804,7 +45869,7 @@ APC Easy UPS SRV3KRIRK высококачественный онлайн-ИБП 
 <param name="Оригинальность">Оригинал</param>
 </offer>
 
-<offer id="AS61147" available="false">
+<offer id="AS61147" available="true">
 <categoryId></categoryId>
 <vendorCode>AS61147</vendorCode>
 <name>Тонер-картридж стандартной емкости Xerox 006R01756 (малиновый) (оригинал)</name>
