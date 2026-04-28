@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<yml_catalog date="2026-04-27 01:03:25">
+<yml_catalog date="2026-04-28 01:39:34">
 <shop><offers>
 <!--FEED_META
 Поставщик                                  | ComPortal
 URL поставщика                             | https://www.comportal.kz/auth/documents/prices/yml-catalog.php
-Время сборки (Алматы)                      | 2026-04-27 01:03:25
-Ближайшая сборка (Алматы)                  | 2026-04-28 00:30:00
-Сколько товаров у поставщика до фильтра    | 1168
-Сколько товаров у поставщика после фильтра | 627
-Сколько товаров есть в наличии (true)      | 627
+Время сборки (Алматы)                      | 2026-04-28 01:39:34
+Ближайшая сборка (Алматы)                  | 2026-04-29 00:30:00
+Сколько товаров у поставщика до фильтра    | 1178
+Сколько товаров у поставщика после фильтра | 636
+Сколько товаров есть в наличии (true)      | 636
 Сколько товаров нет в наличии (false)      | 0
 -->
 
@@ -2983,6 +2983,67 @@ URL поставщика                             | https://www.comportal.kz/
 <keywords>HP, МФУ HP LaserJet Pro 3103fdn (3G631A#B19), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
+<offer id="CP13834337" available="true">
+<categoryId>101</categoryId>
+<vendorCode>CP13834337</vendorCode>
+<name>МФУ Canon I-SENSYS MF461DW (5951C020AA)</name>
+<price>264900</price>
+<picture>https://www.comportal.kz/upload/iblock/2d1/73e1mzhrcfztcswpu6qqfhbjj2m0z86t.JPG</picture>
+<vendor>Canon</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+<div style="font-family:Verdana, Tahoma, Arial, sans-serif;color:#2F2F2F;">
+<h3 style="margin:0 0 10px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">МФУ Canon I-SENSYS MF461DW (5951C020AA)</h3>
+
+<p style="margin:0 0 10px 0;font-size:14px;line-height:1.5;font-family:inherit;">МФУ. Формат печати: A4. Разрешение: 1200x1200. Скорость печати ч/б: 36. Порты: USB LAN WiFI. Технология печати: Лазерная. Гарантия: 12 мес.</p>
+
+<h3 style="margin:14px 0 8px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Преимущества модели</h3>
+
+<ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li>Разрешение 1200x1200</li><li>Гарантия 12 мес</li></ul>
+
+<h3 style="margin:14px 0 8px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Характеристики</h3>
+<ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Гарантия:</strong> 12 мес</li><li><strong>Бренд:</strong> Canon</li><li><strong>Емкость 4-го лотка:</strong> 550</li><li><strong>Коды:</strong> 5951C020AA</li><li><strong>Модель:</strong> I-SENSYS MF461DW</li><li><strong>Нагрузка:</strong> 80 000</li><li><strong>Наличие картриджа (тонера) в комплекте:</strong> Стартовый</li><li><strong>Порты:</strong> USB LAN WiFI</li><li><strong>Разрешение:</strong> 1200x1200</li><li><strong>Скорость печати ч/б:</strong> 36</li><li><strong>Технология печати:</strong> Лазерная</li><li><strong>Тип:</strong> МФУ</li></ul>
+
+<div style="text-align:center;margin:10px 0 8px 0;">
+  <div class="ck-alert ck-alert_theme_green">
+    <div style="padding:4px 10px;font-family:inherit;">
+      <span class="ck-alert__title"></span>
+      <p style="margin:0 0 4px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>Просьба отправлять запросы на WhatsApp!</strong></p>
+      <p style="margin:0 0 6px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>+7 707 327-05-01</strong></p>
+      <p style="margin:0;font-size:14px;line-height:1.5;font-family:inherit;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block;padding:6px 12px;border:1px solid #146737;border-radius:6px;color:#146737;text-decoration:none;background:#FFFFFF;font-family:inherit;"><strong>💬 НАПИСАТЬ В WHATSAPP</strong></a></p>
+    </div>
+  </div>
+</div>
+
+<div class="ck-alert ck-alert_theme_orange" style="margin:8px 0 0 0;">
+  <div style="padding:4px 10px;font-family:inherit;">
+    <span class="ck-alert__title"></span>
+    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Оплата</h3>
+    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul>
+    <hr style="border:none;height:1px;background:#E7D6B7;margin:8px 0;" />
+    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Доставка по Алматы и Казахстану</h3>
+    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</li><li><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</li><li><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</li><li><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</li></ul>
+  </div>
+</div>
+
+</div>]]></description>
+<param name="Гарантия">12 мес</param>
+<param name="Для бренда">Canon</param>
+<param name="Емкость 4-го лотка">550</param>
+<param name="Коды">5951C020AA</param>
+<param name="Модель">I-SENSYS MF461DW</param>
+<param name="Нагрузка">80 000</param>
+<param name="Наличие картриджа (тонера) в комплекте">Стартовый</param>
+<param name="Порты">USB LAN WiFI</param>
+<param name="Разрешение">1200x1200</param>
+<param name="Скорость печати ч/б">36</param>
+<param name="Технология печати">Лазерная</param>
+<param name="Тип">МФУ</param>
+<param name="Формат печати">A4</param>
+<param name="Функция">принтер сканер копир</param>
+<keywords>Canon, МФУ Canon I-SENSYS MF461DW (5951C020AA), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+</offer>
+
 <offer id="CP13839973" available="true">
 <categoryId>101</categoryId>
 <vendorCode>CP13839973</vendorCode>
@@ -4003,6 +4064,54 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Формат печати">A4</param>
 <param name="Функция">Принтер-Сканер(АПД-150с.)-Копир-Факс</param>
 <keywords>HP, МФУ HP Color LaserJet Enterprise Flow MFP 6800zf (6QN36A#B19), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+</offer>
+
+<offer id="CP13872950" available="true">
+<categoryId>301</categoryId>
+<vendorCode>CP13872950</vendorCode>
+<name>МФУ Canon imageRUNNER C3326i (5965C005)</name>
+<price>787900</price>
+<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
+<vendor>Canon</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+<div style="font-family:Verdana, Tahoma, Arial, sans-serif;color:#2F2F2F;">
+<h3 style="margin:0 0 10px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">МФУ Canon imageRUNNER C3326i (5965C005)</h3>
+
+<p style="margin:0 0 10px 0;font-size:14px;line-height:1.5;font-family:inherit;">МФУ. Гарантия: 12 мес. Для бренда: Canon. Модель: imageRUNNER C3326i. Коды: 5965C005.</p>
+
+<h3 style="margin:14px 0 8px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Характеристики</h3>
+<ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Гарантия:</strong> 12 мес</li><li><strong>Бренд:</strong> Canon</li><li><strong>Коды:</strong> 5965C005</li><li><strong>Модель:</strong> imageRUNNER C3326i</li><li><strong>Тип:</strong> МФУ</li></ul>
+
+<div style="text-align:center;margin:10px 0 8px 0;">
+  <div class="ck-alert ck-alert_theme_green">
+    <div style="padding:4px 10px;font-family:inherit;">
+      <span class="ck-alert__title"></span>
+      <p style="margin:0 0 4px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>Просьба отправлять запросы на WhatsApp!</strong></p>
+      <p style="margin:0 0 6px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>+7 707 327-05-01</strong></p>
+      <p style="margin:0;font-size:14px;line-height:1.5;font-family:inherit;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block;padding:6px 12px;border:1px solid #146737;border-radius:6px;color:#146737;text-decoration:none;background:#FFFFFF;font-family:inherit;"><strong>💬 НАПИСАТЬ В WHATSAPP</strong></a></p>
+    </div>
+  </div>
+</div>
+
+<div class="ck-alert ck-alert_theme_orange" style="margin:8px 0 0 0;">
+  <div style="padding:4px 10px;font-family:inherit;">
+    <span class="ck-alert__title"></span>
+    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Оплата</h3>
+    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul>
+    <hr style="border:none;height:1px;background:#E7D6B7;margin:8px 0;" />
+    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Доставка по Алматы и Казахстану</h3>
+    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</li><li><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</li><li><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</li><li><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</li></ul>
+  </div>
+</div>
+
+</div>]]></description>
+<param name="Гарантия">12 мес</param>
+<param name="Для бренда">Canon</param>
+<param name="Коды">5965C005</param>
+<param name="Модель">imageRUNNER C3326i</param>
+<param name="Тип">МФУ</param>
+<keywords>Canon, МФУ Canon imageRUNNER C3326i (5965C005), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP10740881" available="true">
@@ -6063,6 +6172,64 @@ URL поставщика                             | https://www.comportal.kz/
 <keywords>Canon, Плоттер Canon imagePROGRAF TM-350 (6246C003), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
+<offer id="CP13870348" available="true">
+<categoryId>303</categoryId>
+<vendorCode>CP13870348</vendorCode>
+<name>Плоттер HP DesignJet T230 24 (5HB07D#B19)</name>
+<price>272900</price>
+<picture>https://www.comportal.kz/upload/iblock/43e/1uap8lkkgs2hcli5v0tkqssr3d5z1ejv.jpg</picture>
+<vendor>HP</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+<div style="font-family:Verdana, Tahoma, Arial, sans-serif;color:#2F2F2F;">
+<h3 style="margin:0 0 10px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Плоттер HP DesignJet T230 24 (5HB07D#B19)</h3>
+
+<p style="margin:0 0 10px 0;font-size:14px;line-height:1.5;font-family:inherit;">Широкоформатный принтер. Формат печати: A1. Разрешение: 2400x1200. Скорость печати ч/б: 35. Порты: Gigabit Ethernet (1000Base-T), высокоскоростной порт USB 2.0, Wi-Fi 802.11a b/g n, Wi-Fi Direct. Технология печати: Струйная. Гарантия: 12 мес.</p>
+
+<h3 style="margin:14px 0 8px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Преимущества модели</h3>
+
+<ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li>Разрешение 2400x1200</li><li>Гарантия 12 мес</li></ul>
+
+<h3 style="margin:14px 0 8px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Характеристики</h3>
+<ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Гарантия:</strong> 12 мес</li><li><strong>Бренд:</strong> HP</li><li><strong>Коды:</strong> 5HB07D#B19</li><li><strong>Модель:</strong> DesignJet T230 24</li><li><strong>Порты:</strong> Gigabit Ethernet (1000Base-T), высокоскоростной порт USB 2.0, Wi-Fi 802.11a b/g n, Wi-Fi Direct</li><li><strong>Разрешение:</strong> 2400x1200</li><li><strong>Скорость печати ч/б:</strong> 35</li><li><strong>Технология печати:</strong> Струйная</li><li><strong>Тип:</strong> Широкоформатный принтер</li><li><strong>Формат печати:</strong> A1</li><li><strong>Функции:</strong> принтер</li></ul>
+
+<div style="text-align:center;margin:10px 0 8px 0;">
+  <div class="ck-alert ck-alert_theme_green">
+    <div style="padding:4px 10px;font-family:inherit;">
+      <span class="ck-alert__title"></span>
+      <p style="margin:0 0 4px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>Просьба отправлять запросы на WhatsApp!</strong></p>
+      <p style="margin:0 0 6px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>+7 707 327-05-01</strong></p>
+      <p style="margin:0;font-size:14px;line-height:1.5;font-family:inherit;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block;padding:6px 12px;border:1px solid #146737;border-radius:6px;color:#146737;text-decoration:none;background:#FFFFFF;font-family:inherit;"><strong>💬 НАПИСАТЬ В WHATSAPP</strong></a></p>
+    </div>
+  </div>
+</div>
+
+<div class="ck-alert ck-alert_theme_orange" style="margin:8px 0 0 0;">
+  <div style="padding:4px 10px;font-family:inherit;">
+    <span class="ck-alert__title"></span>
+    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Оплата</h3>
+    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul>
+    <hr style="border:none;height:1px;background:#E7D6B7;margin:8px 0;" />
+    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Доставка по Алматы и Казахстану</h3>
+    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</li><li><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</li><li><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</li><li><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</li></ul>
+  </div>
+</div>
+
+</div>]]></description>
+<param name="Гарантия">12 мес</param>
+<param name="Для бренда">HP</param>
+<param name="Коды">5HB07D#B19</param>
+<param name="Модель">DesignJet T230 24</param>
+<param name="Порты">Gigabit Ethernet (1000Base-T), высокоскоростной порт USB 2.0, Wi-Fi 802.11a b/g n, Wi-Fi Direct</param>
+<param name="Разрешение">2400x1200</param>
+<param name="Скорость печати ч/б">35</param>
+<param name="Технология печати">Струйная</param>
+<param name="Тип">Широкоформатный принтер</param>
+<param name="Формат печати">A1</param>
+<param name="Функции">принтер</param>
+<keywords>HP, Плоттер HP DesignJet T230 24 (5HB07D#B19), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+</offer>
+
 <offer id="CP13870436" available="true">
 <categoryId>303</categoryId>
 <vendorCode>CP13870436</vendorCode>
@@ -7807,6 +7974,57 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Тип">Картридж</param>
 <param name="Цвет">Пурпурный</param>
 <keywords>HP, Картридж HP W2033A / 415A (W2033A) (оригинал), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+</offer>
+
+<offer id="CP10761112" available="true">
+<categoryId>101</categoryId>
+<vendorCode>CP10761112</vendorCode>
+<name>Картридж Canon 057 (3009C002) (оригинал)</name>
+<price>68900</price>
+<picture>https://www.comportal.kz/upload/iblock/7d5/0yyz4fxpq1h2fte0j26d1y2c1oohi1p1.jpg</picture>
+<vendor>Canon</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+<div style="font-family:Verdana, Tahoma, Arial, sans-serif;color:#2F2F2F;">
+<h3 style="margin:0 0 10px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Картридж Canon 057 (3009C002) (оригинал)</h3>
+
+<p style="margin:0 0 10px 0;font-size:14px;line-height:1.5;font-family:inherit;">Оригинальный картридж Canon 057 код — 3009C002; цвет — Чёрный; ресурс — 3 100; технология печати — Лазерная.</p>
+
+<h3 style="margin:14px 0 8px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Характеристики</h3>
+<ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Бренд:</strong> Canon</li><li><strong>Коды:</strong> 3009C002</li><li><strong>Модель:</strong> 057</li><li><strong>Оригинальность:</strong> Оригинал</li><li><strong>Ресурс:</strong> 3 100</li><li><strong>Технология печати:</strong> Лазерная</li><li><strong>Тип:</strong> Картридж</li><li><strong>Цвет:</strong> Чёрный</li></ul>
+
+<div style="text-align:center;margin:10px 0 8px 0;">
+  <div class="ck-alert ck-alert_theme_green">
+    <div style="padding:4px 10px;font-family:inherit;">
+      <span class="ck-alert__title"></span>
+      <p style="margin:0 0 4px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>Просьба отправлять запросы на WhatsApp!</strong></p>
+      <p style="margin:0 0 6px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>+7 707 327-05-01</strong></p>
+      <p style="margin:0;font-size:14px;line-height:1.5;font-family:inherit;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block;padding:6px 12px;border:1px solid #146737;border-radius:6px;color:#146737;text-decoration:none;background:#FFFFFF;font-family:inherit;"><strong>💬 НАПИСАТЬ В WHATSAPP</strong></a></p>
+    </div>
+  </div>
+</div>
+
+<div class="ck-alert ck-alert_theme_orange" style="margin:8px 0 0 0;">
+  <div style="padding:4px 10px;font-family:inherit;">
+    <span class="ck-alert__title"></span>
+    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Оплата</h3>
+    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul>
+    <hr style="border:none;height:1px;background:#E7D6B7;margin:8px 0;" />
+    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Доставка по Алматы и Казахстану</h3>
+    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</li><li><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</li><li><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</li><li><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</li></ul>
+  </div>
+</div>
+
+</div>]]></description>
+<param name="Для бренда">Canon</param>
+<param name="Коды">3009C002</param>
+<param name="Модель">057</param>
+<param name="Оригинальность">Оригинал</param>
+<param name="Ресурс">3 100</param>
+<param name="Технология печати">Лазерная</param>
+<param name="Тип">Картридж</param>
+<param name="Цвет">Чёрный</param>
+<keywords>Canon, Картридж Canon 057 (3009C002) (оригинал), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP10782666" available="true">
@@ -12339,6 +12557,54 @@ URL поставщика                             | https://www.comportal.kz/
 <keywords>HP, Картридж HP 3YM74AE (3YM74AE#BHK) (оригинал), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
+<offer id="CP13842679" available="true">
+<categoryId>101</categoryId>
+<vendorCode>CP13842679</vendorCode>
+<name>Печатающая головка HP 729 DesignJet Printhead Replacement Kit (F9J81A) (оригинал)</name>
+<price>264900</price>
+<picture>https://www.comportal.kz/upload/iblock/b8e/b8e51a269d79b68f51de87e15ee80823.JPG</picture>
+<vendor>HP</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+<div style="font-family:Verdana, Tahoma, Arial, sans-serif;color:#2F2F2F;">
+<h3 style="margin:0 0 10px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Печатающая головка HP 729 DesignJet Printhead Replacement Kit (F9J81A) (оригинал)</h3>
+
+<p style="margin:0 0 10px 0;font-size:14px;line-height:1.5;font-family:inherit;">Оригинальный картридж HP 729 DesignJet Printhead Replacement Kit код — F9J81A.</p>
+
+<h3 style="margin:14px 0 8px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Характеристики</h3>
+<ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Бренд:</strong> HP</li><li><strong>Коды:</strong> F9J81A</li><li><strong>Модель:</strong> 729 DesignJet Printhead Replacement Kit</li><li><strong>Оригинальность:</strong> Оригинал</li><li><strong>Тип:</strong> Картридж</li></ul>
+
+<div style="text-align:center;margin:10px 0 8px 0;">
+  <div class="ck-alert ck-alert_theme_green">
+    <div style="padding:4px 10px;font-family:inherit;">
+      <span class="ck-alert__title"></span>
+      <p style="margin:0 0 4px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>Просьба отправлять запросы на WhatsApp!</strong></p>
+      <p style="margin:0 0 6px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>+7 707 327-05-01</strong></p>
+      <p style="margin:0;font-size:14px;line-height:1.5;font-family:inherit;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block;padding:6px 12px;border:1px solid #146737;border-radius:6px;color:#146737;text-decoration:none;background:#FFFFFF;font-family:inherit;"><strong>💬 НАПИСАТЬ В WHATSAPP</strong></a></p>
+    </div>
+  </div>
+</div>
+
+<div class="ck-alert ck-alert_theme_orange" style="margin:8px 0 0 0;">
+  <div style="padding:4px 10px;font-family:inherit;">
+    <span class="ck-alert__title"></span>
+    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Оплата</h3>
+    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul>
+    <hr style="border:none;height:1px;background:#E7D6B7;margin:8px 0;" />
+    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Доставка по Алматы и Казахстану</h3>
+    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</li><li><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</li><li><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</li><li><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</li></ul>
+  </div>
+</div>
+
+</div>]]></description>
+<param name="Для бренда">HP</param>
+<param name="Коды">F9J81A</param>
+<param name="Модель">729 DesignJet Printhead Replacement Kit</param>
+<param name="Оригинальность">Оригинал</param>
+<param name="Тип">Картридж</param>
+<keywords>HP, Печатающая головка HP 729 DesignJet Printhead Replacement Kit (F9J81A) (оригинал), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+</offer>
+
 <offer id="CP13848726" available="true">
 <categoryId>102</categoryId>
 <vendorCode>CP13848726</vendorCode>
@@ -16383,6 +16649,56 @@ URL поставщика                             | https://www.comportal.kz/
 <keywords>Canon, Тонер Canon C-EXV 64 (5755C002) (оригинал), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
+<offer id="CP13817611" available="true">
+<categoryId>101</categoryId>
+<vendorCode>CP13817611</vendorCode>
+<name>Тонер Canon C-EXV 67 (5746C002) (оригинал)</name>
+<price>74900</price>
+<picture>https://www.comportal.kz/upload/iblock/f9c/3s4oemm7adepcclmkweqj2tyxauu43gr.JPG</picture>
+<vendor>Canon</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+<div style="font-family:Verdana, Tahoma, Arial, sans-serif;color:#2F2F2F;">
+<h3 style="margin:0 0 10px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Тонер Canon C-EXV 67 (5746C002) (оригинал)</h3>
+
+<p style="margin:0 0 10px 0;font-size:14px;line-height:1.5;font-family:inherit;">Оригинальный тонер Canon C-EXV 67 код — 5746C002; ресурс — 25 500.</p>
+
+<h3 style="margin:14px 0 8px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Характеристики</h3>
+<ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Бренд:</strong> Canon</li><li><strong>Дополнительная информация:</strong> черный</li><li><strong>Коды:</strong> 5746C002</li><li><strong>Модель:</strong> C-EXV 67</li><li><strong>Оригинальность:</strong> Оригинал</li><li><strong>Ресурс:</strong> 25 500</li><li><strong>Тип:</strong> Тонер</li></ul>
+
+<div style="text-align:center;margin:10px 0 8px 0;">
+  <div class="ck-alert ck-alert_theme_green">
+    <div style="padding:4px 10px;font-family:inherit;">
+      <span class="ck-alert__title"></span>
+      <p style="margin:0 0 4px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>Просьба отправлять запросы на WhatsApp!</strong></p>
+      <p style="margin:0 0 6px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>+7 707 327-05-01</strong></p>
+      <p style="margin:0;font-size:14px;line-height:1.5;font-family:inherit;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block;padding:6px 12px;border:1px solid #146737;border-radius:6px;color:#146737;text-decoration:none;background:#FFFFFF;font-family:inherit;"><strong>💬 НАПИСАТЬ В WHATSAPP</strong></a></p>
+    </div>
+  </div>
+</div>
+
+<div class="ck-alert ck-alert_theme_orange" style="margin:8px 0 0 0;">
+  <div style="padding:4px 10px;font-family:inherit;">
+    <span class="ck-alert__title"></span>
+    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Оплата</h3>
+    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul>
+    <hr style="border:none;height:1px;background:#E7D6B7;margin:8px 0;" />
+    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Доставка по Алматы и Казахстану</h3>
+    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</li><li><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</li><li><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</li><li><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</li></ul>
+  </div>
+</div>
+
+</div>]]></description>
+<param name="Для бренда">Canon</param>
+<param name="Дополнительная информация">черный</param>
+<param name="Коды">5746C002</param>
+<param name="Модель">C-EXV 67</param>
+<param name="Оригинальность">Оригинал</param>
+<param name="Ресурс">25 500</param>
+<param name="Тип">Тонер</param>
+<keywords>Canon, Тонер Canon C-EXV 67 (5746C002) (оригинал), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+</offer>
+
 <offer id="CP13821643" available="true">
 <categoryId>101</categoryId>
 <vendorCode>CP13821643</vendorCode>
@@ -17875,69 +18191,6 @@ URL поставщика                             | https://www.comportal.kz/
 <keywords>Dell, Монитор Dell U3425WE USB-C (210-BMDW), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
-<offer id="CP13863665" available="true">
-<categoryId>602</categoryId>
-<vendorCode>CP13863665</vendorCode>
-<name>Монитор Dell U4025QW USB-C (210-BMDV)</name>
-<price>984900</price>
-<picture>https://www.comportal.kz/upload/iblock/7f3/osrvrfb5yv4hu51uck129j0yolsr3s37.JPG</picture>
-<vendor>Dell</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-<div style="font-family:Verdana, Tahoma, Arial, sans-serif;color:#2F2F2F;">
-<h3 style="margin:0 0 10px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Монитор Dell U4025QW USB-C (210-BMDV)</h3>
-
-<p style="margin:0 0 10px 0;font-size:14px;line-height:1.5;font-family:inherit;">Монитор. Модельная серия: U4025QW USB-C. Диагональ: 39.7. Максимальное разрешение: 5120x2160. Тип матрицы: IPS. Частота обновления: 120. Время отклика: 8. Порты: 1 x HDMI/1 x DP 1.4/1 x Thunderbolt 4 downstream port/1 x Thunderbolt 4 (140 W)/1 x USB Type-C/4 x USB Type-A/1 x Audio line-out/1 x USB Type-A/2 x USB Type-C. Гарантия: 36 мес.</p>
-
-<h3 style="margin:14px 0 8px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Преимущества модели</h3>
-
-<ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li>Диагональ экрана 39.7</li><li>Гарантия 36 мес</li></ul>
-
-<h3 style="margin:14px 0 8px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Характеристики</h3>
-<ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Время отклика:</strong> 8</li><li><strong>Гарантия:</strong> 36 мес</li><li><strong>Диагональ:</strong> 39.7</li><li><strong>Бренд:</strong> Dell</li><li><strong>Коды:</strong> 210-BMDV</li><li><strong>Контрастность:</strong> 2000:1</li><li><strong>Максимальное разрешение:</strong> 5120x2160</li><li><strong>Модель:</strong> U4025QW USB-C</li><li><strong>Наличие динамиков:</strong> 2</li><li><strong>Порты:</strong> 1 x HDMI/1 x DP 1.4/1 x Thunderbolt 4 downstream port/1 x Thunderbolt 4 (140 W)/1 x USB Type-C/4 x USB Type-A/1 x Audio line-out/1 x USB Type-A/2 x USB Type-C</li><li><strong>Размер Pix:</strong> 140</li><li><strong>Тип:</strong> Монитор</li></ul>
-
-<div style="text-align:center;margin:10px 0 8px 0;">
-  <div class="ck-alert ck-alert_theme_green">
-    <div style="padding:4px 10px;font-family:inherit;">
-      <span class="ck-alert__title"></span>
-      <p style="margin:0 0 4px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>Просьба отправлять запросы на WhatsApp!</strong></p>
-      <p style="margin:0 0 6px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>+7 707 327-05-01</strong></p>
-      <p style="margin:0;font-size:14px;line-height:1.5;font-family:inherit;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block;padding:6px 12px;border:1px solid #146737;border-radius:6px;color:#146737;text-decoration:none;background:#FFFFFF;font-family:inherit;"><strong>💬 НАПИСАТЬ В WHATSAPP</strong></a></p>
-    </div>
-  </div>
-</div>
-
-<div class="ck-alert ck-alert_theme_orange" style="margin:8px 0 0 0;">
-  <div style="padding:4px 10px;font-family:inherit;">
-    <span class="ck-alert__title"></span>
-    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Оплата</h3>
-    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul>
-    <hr style="border:none;height:1px;background:#E7D6B7;margin:8px 0;" />
-    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Доставка по Алматы и Казахстану</h3>
-    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</li><li><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</li><li><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</li><li><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</li></ul>
-  </div>
-</div>
-
-</div>]]></description>
-<param name="Время отклика">8</param>
-<param name="Гарантия">36 мес</param>
-<param name="Диагональ">39.7</param>
-<param name="Для бренда">Dell</param>
-<param name="Коды">210-BMDV</param>
-<param name="Контрастность">2000:1</param>
-<param name="Максимальное разрешение">5120x2160</param>
-<param name="Модель">U4025QW USB-C</param>
-<param name="Наличие динамиков">2</param>
-<param name="Порты">1 x HDMI/1 x DP 1.4/1 x Thunderbolt 4 downstream port/1 x Thunderbolt 4 (140 W)/1 x USB Type-C/4 x USB Type-A/1 x Audio line-out/1 x USB Type-A/2 x USB Type-C</param>
-<param name="Размер Pix">140</param>
-<param name="Тип">Монитор</param>
-<param name="Тип матрицы">IPS</param>
-<param name="Углы обзора (вертикальный/горизонтальный)">178/178</param>
-<param name="Частота обновления">120</param>
-<param name="Яркость">600</param>
-<keywords>Dell, Монитор Dell U4025QW USB-C (210-BMDV), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
-</offer>
-
 <offer id="CP13864728" available="true">
 <categoryId>602</categoryId>
 <vendorCode>CP13864728</vendorCode>
@@ -19275,6 +19528,67 @@ URL поставщика                             | https://www.comportal.kz/
 <keywords>Dell, Монитор Dell UltraSharp 27 4K Thunderbolt Hub Monitor - U2725QE (210-BQTL), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
+<offer id="CP13870727" available="true">
+<categoryId>602</categoryId>
+<vendorCode>CP13870727</vendorCode>
+<name>Монитор Dell Alienware 32 Gaming Monitor - AW3225DM (210-BQWN)</name>
+<price>171900</price>
+<picture>https://www.comportal.kz/upload/iblock/d84/lcjja7244dta3o90dpkjg8ai2yxurbua.JPG</picture>
+<vendor>Dell</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+<div style="font-family:Verdana, Tahoma, Arial, sans-serif;color:#2F2F2F;">
+<h3 style="margin:0 0 10px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Монитор Dell Alienware 32 Gaming Monitor - AW3225DM (210-BQWN)</h3>
+
+<p style="margin:0 0 10px 0;font-size:14px;line-height:1.5;font-family:inherit;">Монитор. Диагональ: 32. Максимальное разрешение: 2560x1440. Тип матрицы: VA. Частота обновления: 180. Время отклика: 1. Порты: 2 HDMI ports/1 DisplayPort 1.4/2 USB Type-A/1 USB Type-B. Гарантия: 36 мес.</p>
+
+<h3 style="margin:14px 0 8px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Преимущества модели</h3>
+
+<ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li>Диагональ экрана 32</li><li>Гарантия 36 мес</li></ul>
+
+<h3 style="margin:14px 0 8px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Характеристики</h3>
+<ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Время отклика:</strong> 1</li><li><strong>Гарантия:</strong> 36 мес</li><li><strong>Диагональ:</strong> 32</li><li><strong>Бренд:</strong> Dell</li><li><strong>Коды:</strong> 210-BQWN</li><li><strong>Контрастность:</strong> 3000:1</li><li><strong>Максимальное разрешение:</strong> 2560x1440</li><li><strong>Модель:</strong> AW3225DM</li><li><strong>Порты:</strong> 2 HDMI ports/1 DisplayPort 1.4/2 USB Type-A/1 USB Type-B</li><li><strong>Тип:</strong> Монитор</li><li><strong>Тип матрицы:</strong> VA</li><li><strong>Цвет:</strong> Чёрный</li></ul>
+
+<div style="text-align:center;margin:10px 0 8px 0;">
+  <div class="ck-alert ck-alert_theme_green">
+    <div style="padding:4px 10px;font-family:inherit;">
+      <span class="ck-alert__title"></span>
+      <p style="margin:0 0 4px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>Просьба отправлять запросы на WhatsApp!</strong></p>
+      <p style="margin:0 0 6px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>+7 707 327-05-01</strong></p>
+      <p style="margin:0;font-size:14px;line-height:1.5;font-family:inherit;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block;padding:6px 12px;border:1px solid #146737;border-radius:6px;color:#146737;text-decoration:none;background:#FFFFFF;font-family:inherit;"><strong>💬 НАПИСАТЬ В WHATSAPP</strong></a></p>
+    </div>
+  </div>
+</div>
+
+<div class="ck-alert ck-alert_theme_orange" style="margin:8px 0 0 0;">
+  <div style="padding:4px 10px;font-family:inherit;">
+    <span class="ck-alert__title"></span>
+    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Оплата</h3>
+    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul>
+    <hr style="border:none;height:1px;background:#E7D6B7;margin:8px 0;" />
+    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Доставка по Алматы и Казахстану</h3>
+    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</li><li><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</li><li><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</li><li><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</li></ul>
+  </div>
+</div>
+
+</div>]]></description>
+<param name="Время отклика">1</param>
+<param name="Гарантия">36 мес</param>
+<param name="Диагональ">32</param>
+<param name="Для бренда">Dell</param>
+<param name="Коды">210-BQWN</param>
+<param name="Контрастность">3000:1</param>
+<param name="Максимальное разрешение">2560x1440</param>
+<param name="Модель">AW3225DM</param>
+<param name="Порты">2 HDMI ports/1 DisplayPort 1.4/2 USB Type-A/1 USB Type-B</param>
+<param name="Тип">Монитор</param>
+<param name="Тип матрицы">VA</param>
+<param name="Цвет">Чёрный</param>
+<param name="Частота обновления">180</param>
+<param name="Яркость">400</param>
+<keywords>Dell, Монитор Dell Alienware 32 Gaming Monitor - AW3225DM (210-BQWN), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+</offer>
+
 <offer id="CP13870728" available="true">
 <categoryId>602</categoryId>
 <vendorCode>CP13870728</vendorCode>
@@ -19514,6 +19828,66 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Частота обновления">100</param>
 <param name="Яркость">350</param>
 <keywords>Dell, Монитор Dell Pro 27 Plus Monitor - P2725D 68.6cm (27.0") (210-BRDL), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+</offer>
+
+<offer id="CP13870733" available="true">
+<categoryId>602</categoryId>
+<vendorCode>CP13870733</vendorCode>
+<name>Монитор Dell Pro 27 Plus 4K USB-C Hub Monitor - P2725QE, 68.6cm (27.0") (210-BRDS)</name>
+<price>258900</price>
+<picture>https://www.comportal.kz/upload/iblock/207/l3nzdtv3uohiqeeeg56byh15sd1nuqvu.JPG</picture>
+<vendor>Dell</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+<div style="font-family:Verdana, Tahoma, Arial, sans-serif;color:#2F2F2F;">
+<h3 style="margin:0 0 10px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Монитор Dell Pro 27 Plus 4K USB-C Hub Monitor - P2725QE, 68.6cm (27.0&quot;) (210-BRDS)</h3>
+
+<p style="margin:0 0 10px 0;font-size:14px;line-height:1.5;font-family:inherit;">Монитор. Диагональ: 27. Максимальное разрешение: 3840x2160. Тип матрицы: IPS. Частота обновления: 100. Время отклика: 5. Порты: 1 HDMI port (HDCP2.3) (supports up to UHD 3840 x 2160 100 Hz FRL as per specified in HDMI 2.1)/1 Display Port 1.4 (HDCP2.3)(Support up to 3840 x 2160 100Hz)/1 USB-C 5Gbps upstream port (DisplayPort 1.</p>
+
+<h3 style="margin:14px 0 8px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Преимущества модели</h3>
+
+<ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li>Диагональ экрана 27</li><li>Гарантия 36 мес</li></ul>
+
+<h3 style="margin:14px 0 8px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Характеристики</h3>
+<ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Время отклика:</strong> 5</li><li><strong>Гарантия:</strong> 36 мес</li><li><strong>Диагональ:</strong> 27</li><li><strong>Бренд:</strong> Dell</li><li><strong>Коды:</strong> 210-BRDS</li><li><strong>Контрастность:</strong> 1500:1</li><li><strong>Максимальное разрешение:</strong> 3840x2160</li><li><strong>Модель:</strong> P2725QE</li><li><strong>Порты:</strong> 1 HDMI port (HDCP2.3) (supports up to UHD 3840 x 2160 100 Hz FRL as per specified in HDMI 2.1)/1 Display Port 1.4 (HDCP2.3)(Support up to 3840 x 2160 100Hz)/1 USB-C 5Gbps upstream port (DisplayPort 1.4 Alternate mode, Power Delivery up to 90W)/1 USB-C 5Gbps downstream port/3 USB 5Gbps Type-A downstream ports/1 RJ45 Ethernet port, 1GbE</li><li><strong>Тип:</strong> Монитор</li><li><strong>Тип матрицы:</strong> IPS</li><li><strong>Частота обновления:</strong> 100</li></ul>
+
+<div style="text-align:center;margin:10px 0 8px 0;">
+  <div class="ck-alert ck-alert_theme_green">
+    <div style="padding:4px 10px;font-family:inherit;">
+      <span class="ck-alert__title"></span>
+      <p style="margin:0 0 4px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>Просьба отправлять запросы на WhatsApp!</strong></p>
+      <p style="margin:0 0 6px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>+7 707 327-05-01</strong></p>
+      <p style="margin:0;font-size:14px;line-height:1.5;font-family:inherit;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block;padding:6px 12px;border:1px solid #146737;border-radius:6px;color:#146737;text-decoration:none;background:#FFFFFF;font-family:inherit;"><strong>💬 НАПИСАТЬ В WHATSAPP</strong></a></p>
+    </div>
+  </div>
+</div>
+
+<div class="ck-alert ck-alert_theme_orange" style="margin:8px 0 0 0;">
+  <div style="padding:4px 10px;font-family:inherit;">
+    <span class="ck-alert__title"></span>
+    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Оплата</h3>
+    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul>
+    <hr style="border:none;height:1px;background:#E7D6B7;margin:8px 0;" />
+    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Доставка по Алматы и Казахстану</h3>
+    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</li><li><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</li><li><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</li><li><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</li></ul>
+  </div>
+</div>
+
+</div>]]></description>
+<param name="Время отклика">5</param>
+<param name="Гарантия">36 мес</param>
+<param name="Диагональ">27</param>
+<param name="Для бренда">Dell</param>
+<param name="Коды">210-BRDS</param>
+<param name="Контрастность">1500:1</param>
+<param name="Максимальное разрешение">3840x2160</param>
+<param name="Модель">P2725QE</param>
+<param name="Порты">1 HDMI port (HDCP2.3) (supports up to UHD 3840 x 2160 100 Hz FRL as per specified in HDMI 2.1)/1 Display Port 1.4 (HDCP2.3)(Support up to 3840 x 2160 100Hz)/1 USB-C 5Gbps upstream port (DisplayPort 1.4 Alternate mode, Power Delivery up to 90W)/1 USB-C 5Gb</param>
+<param name="Тип">Монитор</param>
+<param name="Тип матрицы">IPS</param>
+<param name="Частота обновления">100</param>
+<param name="Яркость">350</param>
+<keywords>Dell, Монитор Dell Pro 27 Plus 4K USB-C Hub Monitor - P2725QE 68.6cm (27.0") (210-BRDS), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP13870734" available="true">
@@ -21238,6 +21612,66 @@ URL поставщика                             | https://www.comportal.kz/
 <keywords>Dell, Монитор Dell AW2725Q (210-BQWV), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
+<offer id="CP13872355" available="true">
+<categoryId>602</categoryId>
+<vendorCode>CP13872355</vendorCode>
+<name>Монитор Dell 24 Plus Monitor – S2425HSM (210-BSZD)</name>
+<price>88900</price>
+<picture>https://www.comportal.kz/upload/iblock/92e/e07uca2o6c83j5nrequ9fwmnqa6wmilq.jpg</picture>
+<vendor>Dell</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+<div style="font-family:Verdana, Tahoma, Arial, sans-serif;color:#2F2F2F;">
+<h3 style="margin:0 0 10px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Монитор Dell 24 Plus Monitor – S2425HSM (210-BSZD)</h3>
+
+<p style="margin:0 0 10px 0;font-size:14px;line-height:1.5;font-family:inherit;">Монитор. Диагональ: 23.8. Максимальное разрешение: 1920x1080. Тип матрицы: IPS. Частота обновления: 100. Время отклика: 4. Порты: 2 x HDMI (HDCP1.4) ( Supports up to FHD 1920 x 1080 100Hz, as per specified in HDMI1.4). Гарантия: 36 мес.</p>
+
+<h3 style="margin:14px 0 8px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Преимущества модели</h3>
+
+<ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li>Диагональ экрана 23.8</li><li>Гарантия 36 мес</li></ul>
+
+<h3 style="margin:14px 0 8px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Характеристики</h3>
+<ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Время отклика:</strong> 4</li><li><strong>Гарантия:</strong> 36 мес</li><li><strong>Диагональ:</strong> 23.8</li><li><strong>Бренд:</strong> Dell</li><li><strong>Коды:</strong> 210-BSZD</li><li><strong>Контрастность:</strong> 1500:1</li><li><strong>Максимальное разрешение:</strong> 1920x1080</li><li><strong>Модель:</strong> S2425HSM</li><li><strong>Порты:</strong> 2 x HDMI (HDCP1.4) ( Supports up to FHD 1920 x 1080 100Hz, as per specified in HDMI1.4)</li><li><strong>Тип:</strong> Монитор</li><li><strong>Тип матрицы:</strong> IPS</li><li><strong>Частота обновления:</strong> 100</li></ul>
+
+<div style="text-align:center;margin:10px 0 8px 0;">
+  <div class="ck-alert ck-alert_theme_green">
+    <div style="padding:4px 10px;font-family:inherit;">
+      <span class="ck-alert__title"></span>
+      <p style="margin:0 0 4px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>Просьба отправлять запросы на WhatsApp!</strong></p>
+      <p style="margin:0 0 6px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>+7 707 327-05-01</strong></p>
+      <p style="margin:0;font-size:14px;line-height:1.5;font-family:inherit;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block;padding:6px 12px;border:1px solid #146737;border-radius:6px;color:#146737;text-decoration:none;background:#FFFFFF;font-family:inherit;"><strong>💬 НАПИСАТЬ В WHATSAPP</strong></a></p>
+    </div>
+  </div>
+</div>
+
+<div class="ck-alert ck-alert_theme_orange" style="margin:8px 0 0 0;">
+  <div style="padding:4px 10px;font-family:inherit;">
+    <span class="ck-alert__title"></span>
+    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Оплата</h3>
+    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul>
+    <hr style="border:none;height:1px;background:#E7D6B7;margin:8px 0;" />
+    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Доставка по Алматы и Казахстану</h3>
+    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</li><li><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</li><li><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</li><li><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</li></ul>
+  </div>
+</div>
+
+</div>]]></description>
+<param name="Время отклика">4</param>
+<param name="Гарантия">36 мес</param>
+<param name="Диагональ">23.8</param>
+<param name="Для бренда">Dell</param>
+<param name="Коды">210-BSZD</param>
+<param name="Контрастность">1500:1</param>
+<param name="Максимальное разрешение">1920x1080</param>
+<param name="Модель">S2425HSM</param>
+<param name="Порты">2 x HDMI (HDCP1.4) ( Supports up to FHD 1920 x 1080 100Hz, as per specified in HDMI1.4)</param>
+<param name="Тип">Монитор</param>
+<param name="Тип матрицы">IPS</param>
+<param name="Частота обновления">100</param>
+<param name="Яркость">250</param>
+<keywords>Dell, Монитор Dell 24 Plus Monitor – S2425HSM (210-BSZD), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+</offer>
+
 <offer id="CP13872356" available="true">
 <categoryId>602</categoryId>
 <vendorCode>CP13872356</vendorCode>
@@ -21457,6 +21891,54 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Модель">S2725HSM</param>
 <param name="Тип">Монитор</param>
 <keywords>Dell, Монитор Dell 27 Plus Monitor – S2725HSM (210-BSZF), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
+</offer>
+
+<offer id="CP13872686" available="true">
+<categoryId>602</categoryId>
+<vendorCode>CP13872686</vendorCode>
+<name>Монитор Dell 27 Plus QHD Monitor - S2725DSM (210-BSVN)</name>
+<price>133900</price>
+<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
+<vendor>Dell</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+<div style="font-family:Verdana, Tahoma, Arial, sans-serif;color:#2F2F2F;">
+<h3 style="margin:0 0 10px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Монитор Dell 27 Plus QHD Monitor - S2725DSM (210-BSVN)</h3>
+
+<p style="margin:0 0 10px 0;font-size:14px;line-height:1.5;font-family:inherit;">Монитор. Диагональ: 27. Гарантия: 36 мес. Для бренда: Dell. Модель: S2725DSM. Коды: 210-BSVN.</p>
+
+<h3 style="margin:14px 0 8px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Характеристики</h3>
+<ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Гарантия:</strong> 36 мес</li><li><strong>Бренд:</strong> Dell</li><li><strong>Коды:</strong> 210-BSVN</li><li><strong>Модель:</strong> S2725DSM</li><li><strong>Тип:</strong> Монитор</li></ul>
+
+<div style="text-align:center;margin:10px 0 8px 0;">
+  <div class="ck-alert ck-alert_theme_green">
+    <div style="padding:4px 10px;font-family:inherit;">
+      <span class="ck-alert__title"></span>
+      <p style="margin:0 0 4px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>Просьба отправлять запросы на WhatsApp!</strong></p>
+      <p style="margin:0 0 6px 0;font-size:14px;line-height:1.5;font-family:inherit;"><strong>+7 707 327-05-01</strong></p>
+      <p style="margin:0;font-size:14px;line-height:1.5;font-family:inherit;"><a href="https://api.whatsapp.com/send/?phone=77073270501&amp;text&amp;type=phone_number&amp;app_absent=0" style="display:inline-block;padding:6px 12px;border:1px solid #146737;border-radius:6px;color:#146737;text-decoration:none;background:#FFFFFF;font-family:inherit;"><strong>💬 НАПИСАТЬ В WHATSAPP</strong></a></p>
+    </div>
+  </div>
+</div>
+
+<div class="ck-alert ck-alert_theme_orange" style="margin:8px 0 0 0;">
+  <div style="padding:4px 10px;font-family:inherit;">
+    <span class="ck-alert__title"></span>
+    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Оплата</h3>
+    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>Безналичный</strong> расчёт для <u>юридических лиц</u></li><li><strong>Удалённая оплата</strong> по <span style="color:#8b0000"><strong>KASPI</strong></span> счёту для <u>физических лиц</u></li></ul>
+    <hr style="border:none;height:1px;background:#E7D6B7;margin:8px 0;" />
+    <h3 style="text-align:left;margin:0 0 6px 0;font-size:20px;line-height:1.3;font-family:inherit;color:#2F2F2F;">Доставка по Алматы и Казахстану</h3>
+    <ul style="margin:0 0 12px 0;padding-left:18px;font-size:14px;line-height:1.5;font-family:inherit;"><li><strong>ДОСТАВКА</strong> в «квадрате» г. Алматы — БЕСПЛАТНО!</li><li><strong>ДОСТАВКА</strong> по Казахстану до 5 кг — 5 000 тг. | 3–7 рабочих дней</li><li><strong>ОТПРАВИМ</strong> товар любой курьерской компанией!</li><li><strong>ОТПРАВИМ</strong> товар автобусом через автовокзал «САЙРАН»</li></ul>
+  </div>
+</div>
+
+</div>]]></description>
+<param name="Гарантия">36 мес</param>
+<param name="Для бренда">Dell</param>
+<param name="Коды">210-BSVN</param>
+<param name="Модель">S2725DSM</param>
+<param name="Тип">Монитор</param>
+<keywords>Dell, Монитор Dell 27 Plus QHD Monitor - S2725DSM (210-BSVN), доставка по Казахстану, отправка в регионы, Казахстан, Алматы, Астана, Шымкент, Караганда, Актобе, Павлодар, Костанай, Атырау, Актау, Усть-Каменогорск, Семей, Тараз</keywords>
 </offer>
 
 <offer id="CP13872763" available="true">
