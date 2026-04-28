@@ -1,18 +1,18 @@
 ПОДРОБНЫЙ ОТЧЁТ PRICE CHECKER
-Сформирован: 27 апреля 2026 г. 09:04:21
-Время сборки Price: 27 апреля 2026 г. 05:02:53
+Сформирован: 28 апреля 2026 г. 09:11:10
+Время сборки Price: 28 апреля 2026 г. 05:12:06
 Итоговый статус: УСПЕШНО
 Причина: Критичных проблем не обнаружено.
 
 ======================================================================
 СВОДКА
 ======================================================================
-Всего товаров в Price: 7122
-В наличии: 6569
-Нет в наличии: 553
+Всего товаров в Price: 7133
+В наличии: 6570
+Нет в наличии: 563
 
 Товары без цены: 237
-С заглушкой фото: 572
+С заглушкой фото: 582
 Без categoryId в Price: 0
 С невалидным categoryId в Price: 0
 Без категории Satu: 0
@@ -26,9 +26,9 @@
 ======================================================================
 СВОДКА ПО ПОСТАВЩИКАМ
 ======================================================================
-AkCent | всего=168 | в наличии=168 | нет в наличии=0 | без цены=0 | заглушка фото=6 | не вошло в final без categoryId=0 | без категории Satu=0
-AlStyle | всего=1998 | в наличии=1445 | нет в наличии=553 | без цены=4 | заглушка фото=9 | не вошло в final без categoryId=0 | без категории Satu=0
-ComPortal | всего=627 | в наличии=627 | нет в наличии=0 | без цены=0 | заглушка фото=109 | не вошло в final без categoryId=0 | без категории Satu=0
+AkCent | всего=166 | в наличии=166 | нет в наличии=0 | без цены=0 | заглушка фото=8 | не вошло в final без categoryId=0 | без категории Satu=0
+AlStyle | всего=2002 | в наличии=1439 | нет в наличии=563 | без цены=4 | заглушка фото=15 | не вошло в final без categoryId=0 | без категории Satu=0
+ComPortal | всего=636 | в наличии=636 | нет в наличии=0 | без цены=0 | заглушка фото=111 | не вошло в final без categoryId=0 | без категории Satu=0
 CopyLine | всего=1220 | в наличии=1220 | нет в наличии=0 | без цены=26 | заглушка фото=0 | не вошло в final без categoryId=0 | без категории Satu=0
 VTT | всего=3109 | в наличии=3109 | нет в наличии=0 | без цены=207 | заглушка фото=448 | не вошло в final без categoryId=0 | без категории Satu=0
 
@@ -289,9 +289,11 @@ VTT | ready_to_ship_no_price | id=VTZ7Y73A | vendorCode=VTZ7Y73A | categoryId=20
 AkCent | placeholder_photo | id=ACC13T913200 | vendorCode=ACC13T913200 | categoryId=102 | price=78900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Картридж Epson C13T913200 (оригинал)
 AkCent | placeholder_photo | id=ACC13T913400 | vendorCode=ACC13T913400 | categoryId=102 | price=78900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Картридж Epson C13T913400 (оригинал)
 AkCent | placeholder_photo | id=ACC13T913500 | vendorCode=ACC13T913500 | categoryId=102 | price=78900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Картридж Epson C13T913500 (оригинал)
-AkCent | placeholder_photo | id=ACC13T913B00 | vendorCode=ACC13T913B00 | categoryId=102 | price=78900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Картридж Epson C13T913B00 (оригинал)
-AkCent | placeholder_photo | id=ACC11CL41411 | vendorCode=ACC11CL41411 | categoryId=301 | price=214900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=МФУ Epson L4360 фабрика печати
+AkCent | placeholder_photo | id=ACC13T913B00 | vendorCode=ACC13T913B00 | categoryId=102 | price=78900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Картридж Epson P5000V (оригинал)
+AkCent | placeholder_photo | id=ACC11CL41411 | vendorCode=ACC11CL41411 | categoryId=102 | price=214900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=МФУ Epson L4360 фабрика печати
 AkCent | placeholder_photo | id=ACC11CJ62404 | vendorCode=ACC11CJ62404 | categoryId=301 | price=302900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=МФУ Epson L6260 фабрика печати, Wi-Fi
+AkCent | placeholder_photo | id=ACC11CG27405 | vendorCode=ACC11CG27405 | categoryId=102 | price=180900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=МФУ Epson M2140 (CIS) фабрика печати
+AkCent | placeholder_photo | id=AC3G632A | vendorCode=AC3G632A | categoryId=301 | price=175900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=МФУ лазерное HP LaserJet Pro 3103fdw белый
 AlStyle | placeholder_photo | id=AS406006 | vendorCode=AS406006 | categoryId=602 | price=3932900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Источник бесперебойного питания CyberPower HSTP3T30KE
 AlStyle | placeholder_photo | id=AS416336 | vendorCode=AS416336 | categoryId=602 | price=166900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Монитор Xiaomi Mini LED Gaming Monitor G Pro 27Qi 2026 27"
 AlStyle | placeholder_photo | id=AS417829 | vendorCode=AS417829 | categoryId=701 | price=702900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Источник бесперебойного питания APC Easy UPS SRVL1KRIRK
@@ -300,6 +302,12 @@ AlStyle | placeholder_photo | id=AS420185 | vendorCode=AS420185 | categoryId=101
 AlStyle | placeholder_photo | id=AS420186 | vendorCode=AS420186 | categoryId=101 | price=60900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Тонер-картридж стандартной емкости Lexmark 77L91M0 (малиновый) (оригинал)
 AlStyle | placeholder_photo | id=AS420187 | vendorCode=AS420187 | categoryId=101 | price=60900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Тонер-картридж стандартной емкости Lexmark 77L91Y0 (жёлтый) (оригинал)
 AlStyle | placeholder_photo | id=AS420712 | vendorCode=AS420712 | categoryId=602 | price=48900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Монитор Xiaomi Monitor A24i 2026
+AlStyle | placeholder_photo | id=AS421040 | vendorCode=AS421040 | categoryId=602 | price=192900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Источник бесперебойного питания APC Easy UPS SRV1KI-E
+AlStyle | placeholder_photo | id=AS421046 | vendorCode=AS421046 | categoryId=701 | price=426900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Источник бесперебойного питания APC Easy UPS SRV3KI-E
+AlStyle | placeholder_photo | id=AS421572 | vendorCode=AS421572 | categoryId=602 | price=648900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Источник бесперебойного питания APC Easy UPS SRV2KRILRK-E
+AlStyle | placeholder_photo | id=AS421589 | vendorCode=AS421589 | categoryId=602 | price=316900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Источник бесперебойного питания APC Easy UPS SRV2KI-E
+AlStyle | placeholder_photo | id=AS421594 | vendorCode=AS421594 | categoryId=701 | price=355900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Источник бесперебойного питания APC Easy UPS SRV2KRIRK-E
+AlStyle | placeholder_photo | id=AS421596 | vendorCode=AS421596 | categoryId=701 | price=439900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Источник бесперебойного питания APC Easy UPS SRV3KRIRK-E
 AlStyle | placeholder_photo | id=AS422208 | vendorCode=AS422208 | categoryId=602 | price=62900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Монитор Xiaomi A27i EU 2026 27"
 ComPortal | placeholder_photo | id=CP13872771 | vendorCode=CP13872771 | categoryId=603 | price=216900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Моноблок AIWA PF2402-D 8-256 (PF2402-D 8-256)
 ComPortal | placeholder_photo | id=CP13872772 | vendorCode=CP13872772 | categoryId=603 | price=234900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Моноблок AIWA PF2402-K 8-512 (PF2402-K 8-512)
@@ -325,6 +333,7 @@ ComPortal | placeholder_photo | id=CP13873031 | vendorCode=CP13873031 | category
 ComPortal | placeholder_photo | id=CP13873258 | vendorCode=CP13873258 | categoryId=604 | price=544900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Компьютер HP Pro Tower 400 G9 (9H762ET#BJA)
 ComPortal | placeholder_photo | id=CP13873310 | vendorCode=CP13873310 | categoryId=604 | price=677900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Компьютер HP Pro SFF 400 G9 (9H7C6ET#BJA)
 ComPortal | placeholder_photo | id=CP13873145 | vendorCode=CP13873145 | categoryId=301 | price=150900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=МФУ Canon i-SENSYS MF3010 (5252B004)
+ComPortal | placeholder_photo | id=CP13872950 | vendorCode=CP13872950 | categoryId=301 | price=787900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=МФУ Canon imageRUNNER C3326i (5965C005)
 ComPortal | placeholder_photo | id=CP10782666 | vendorCode=CP10782666 | categoryId=101 | price=42900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Картридж HP 207A (W2210A) (оригинал)
 ComPortal | placeholder_photo | id=CP10782667 | vendorCode=CP10782667 | categoryId=101 | price=48900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Картридж HP 207A (W2211A) (оригинал)
 ComPortal | placeholder_photo | id=CP10782668 | vendorCode=CP10782668 | categoryId=101 | price=48900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Картридж HP 207A (W2212A) (оригинал)
@@ -346,6 +355,7 @@ ComPortal | placeholder_photo | id=CP13873102 | vendorCode=CP13873102 | category
 ComPortal | placeholder_photo | id=CP13873295 | vendorCode=CP13873295 | categoryId=101 | price=121900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Тонер-картридж HP W9088MC (W9088MC) (оригинал)
 ComPortal | placeholder_photo | id=CP13872599 | vendorCode=CP13872599 | categoryId=602 | price=130900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Монитор HP Series 5 Pro / 524pu (9D9V7AA#ABB)
 ComPortal | placeholder_photo | id=CP13872628 | vendorCode=CP13872628 | categoryId=602 | price=101900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Монитор Dell 27 Plus Monitor – S2725HSM (210-BSZF)
+ComPortal | placeholder_photo | id=CP13872686 | vendorCode=CP13872686 | categoryId=602 | price=133900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Монитор Dell 27 Plus QHD Monitor - S2725DSM (210-BSVN)
 ComPortal | placeholder_photo | id=CP13872763 | vendorCode=CP13872763 | categoryId=602 | price=174900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Монитор Dell AW2725DM (210-BQWQ)
 ComPortal | placeholder_photo | id=CP13873043 | vendorCode=CP13873043 | categoryId=602 | price=556900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Монитор Dell UltraSharp 32 4K Thunderbolt Hub Monitor - U3225QE (210-BQTK)
 ComPortal | placeholder_photo | id=CP13873044 | vendorCode=CP13873044 | categoryId=602 | price=63900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Монитор Dell Pro 24 Monitor - E2425HM, 60.47cm (23.8") (210-BRDN)
@@ -576,17 +586,7 @@ VTT | placeholder_photo | id=VT41006035 | vendorCode=VT41006035 | categoryId=105
 VTT | placeholder_photo | id=VT4100649 | vendorCode=VT4100649 | categoryId=101 | in_stock=true | picture=https://placehold.co/800x800/png?text=No+Photo | name=302LV93020 Бункер отработанного тонера WT-3100 Kyocera FS2100/4100, 4100649 (оригинал)
 VTT | placeholder_photo | id=VT41006510 | vendorCode=VT41006510 | categoryId=101 | price=8900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=WT-860/1902LC0UN0 Бункер отработанного тонера Kyocera TASKalfa 3050ci/3550ci/4550ci (оригинал)
 VTT | placeholder_photo | id=VT410067 | vendorCode=VT410067 | categoryId=202 | in_stock=true | picture=https://placehold.co/800x800/png?text=No+Photo | name=DV-460/302KK93020 Блок проявки Kyocera TASKalfa-180/181/220/221, 410067 (оригинал)
-VTT | placeholder_photo | id=VT4100695 | vendorCode=VT4100695 | categoryId=101 | price=8900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=302M293031/302M293030 Бункер отработанного тонера WT-1110 Kyocera FS1020/1025/1120 (оригинал)
-VTT | placeholder_photo | id=VT416890 | vendorCode=VT416890 | categoryId=101 | in_stock=true | picture=https://placehold.co/800x800/png?text=No+Photo | name=416890/D2426400 Бокс сбора тонера Ricoh MP C2003/C2004/C2503/C2504/C303/C3004/C3503/C3504/C4503 (оригинал)
-VTT | placeholder_photo | id=VT4629756P | vendorCode=VT4629756P | categoryId=101 | price=20900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Картридж Hi-Black (HB-CE343A) для HP CLJ Enterprise MFP M775dn/775f/775z, №651A, M, 16K, ПУ (совместимый)
-VTT | placeholder_photo | id=VT5050604 | vendorCode=VT5050604 | categoryId=105 | in_stock=true | picture=https://placehold.co/800x800/png?text=No+Photo | name=CFRM-0021RS71 Блок барабана (без барабана) Sharp AR-5516/5520, 5050604 (оригинал)
-VTT | placeholder_photo | id=VT53659847 | vendorCode=VT53659847 | categoryId=101 | price=22900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Заправочный комплект Pantum (TN-420X) для M6700/P3010 Bk, 6K, 2 тонера+ 1чип (оригинал)
-VTT | placeholder_photo | id=VT797026754 | vendorCode=VT797026754 | categoryId=101 | price=11900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Тонер-картридж Hi-Black (HB-006R04368) для Xerox C310/C315 (совместимый)
-VTT | placeholder_photo | id=VT797026755 | vendorCode=VT797026755 | categoryId=101 | price=10900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Тонер-картридж Hi-Black (HB-006R04369) для Xerox C310/C315 (совместимый)
-VTT | placeholder_photo | id=VT797026756 | vendorCode=VT797026756 | categoryId=101 | price=10900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Тонер-картридж Hi-Black (HB-006R04370) для Xerox C310/C315 (совместимый)
-VTT | placeholder_photo | id=VT797026757 | vendorCode=VT797026757 | categoryId=101 | price=10900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Тонер-картридж Hi-Black (HB-006R04371) для Xerox C310/C315 (совместимый)
-VTT | placeholder_photo | id=VT888896 | vendorCode=VT888896 | categoryId=102 | price=138900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Картридж PFI-207MBK для Canon iPF680/685/780/785, 300ml матовый (оригинал)
-... показаны первые 300 строк, всего записей: 572
+... показаны первые 300 строк, всего записей: 582
 
 ======================================================================
 ДУБЛИ OFFER ID
@@ -608,9 +608,9 @@ VTT | placeholder_photo | id=VT888896 | vendorCode=VT888896 | categoryId=102 | p
 
 Заглушка фото:
 - VTT: 448
-- ComPortal: 109
-- AlStyle: 9
-- AkCent: 6
+- ComPortal: 111
+- AlStyle: 15
+- AkCent: 8
 
 Не вошло в final без categoryId:
 нет
