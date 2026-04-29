@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<yml_catalog date="2026-04-29 01:48:13">
+<yml_catalog date="2026-04-30 01:40:19">
 <shop><offers>
 <!--FEED_META
 Поставщик                                  | ComPortal
 URL поставщика                             | https://www.comportal.kz/auth/documents/prices/yml-catalog.php
-Время сборки (Алматы)                      | 2026-04-29 01:48:13
-Ближайшая сборка (Алматы)                  | 2026-04-30 00:30:00
-Сколько товаров у поставщика до фильтра    | 1170
-Сколько товаров у поставщика после фильтра | 630
-Сколько товаров есть в наличии (true)      | 630
+Время сборки (Алматы)                      | 2026-04-30 01:40:19
+Ближайшая сборка (Алматы)                  | 2026-05-01 00:30:00
+Сколько товаров у поставщика до фильтра    | 1154
+Сколько товаров у поставщика после фильтра | 619
+Сколько товаров есть в наличии (true)      | 619
 Сколько товаров нет в наличии (false)      | 0
 -->
 
@@ -198,6 +198,23 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Коды">CN055AE#BGX</param>
 <param name="Для бренда">HP</param>
 <param name="Оригинальность">Оригинал</param>
+</offer>
+
+<offer id="CP13873145" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13873145</vendorCode>
+<name>МФУ Canon i-SENSYS MF3010 (5252B004)</name>
+<price>131595</price>
+<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
+<vendor>Canon</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+МФУ. Гарантия: 12 мес. Для бренда: Canon. Модель: i-SENSYS MF3010. Коды: 5252B004.]]></description>
+<param name="Тип">МФУ</param>
+<param name="Гарантия">12 мес</param>
+<param name="Коды">5252B004</param>
+<param name="Модель">i-SENSYS MF3010</param>
+<param name="Для бренда">Canon</param>
 </offer>
 
 <offer id="CP10302301" available="true">
@@ -613,30 +630,20 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Для бренда">APC</param>
 </offer>
 
-<offer id="CP10376754" available="true">
+<offer id="CP10532957" available="true">
 <categoryId></categoryId>
-<vendorCode>CP10376754</vendorCode>
+<vendorCode>CP10532957</vendorCode>
 <name>ИБП APC SRT10KXLI (SRT10KXLI)</name>
-<price>2576412</price>
-<picture>https://www.comportal.kz/upload/iblock/d5b/61942mck6d03fnxm9xnqcj2yfrevqjd9.jpg</picture>
+<price>2399986</price>
+<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
 <vendor>APC</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-ИБП. Мощность: 10 000 VA / 10 000 W. Форм-фактор: Tower. Стабилизатор (AVR): есть. Время работы при 100% нагрузке, мин: 3,3. Выходные соединения: (1) Hard Wire 3-wire (H N + G) + (6) IEC 320 C13 + (4) IEC 320 C19 + (3) IEC Jumpers. Гарантия: 24 мес.]]></description>
+ИБП. Гарантия: 24 мес. Для бренда: APC. Модель: SRT10KXLI. Коды: SRT10KXLI.]]></description>
 <param name="Тип">ИБП</param>
-<param name="Модель">SRT10KXLI</param>
-<param name="Дополнительная информация">On-Line</param>
-<param name="Интерфейс">SmartSlot, USB</param>
-<param name="Выходные соединения">(1) Hard Wire 3-wire (H N + G) + (6) IEC 320 C13 + (4) IEC 320 C19 + (3) IEC Jumpers</param>
-<param name="Мощность (VA)">10 000</param>
-<param name="Мощность (W)">10 000</param>
-<param name="Типовая продолжительность работы при 100% нагрузке, мин">3,3</param>
-<param name="Форм-фактор">Tower</param>
-<param name="Стабилизатор (AVR)">есть</param>
-<param name="ПО">есть</param>
 <param name="Гарантия">24 мес</param>
-<param name="Диапазон входного напряжения">220,240,380,415</param>
 <param name="Коды">SRT10KXLI</param>
+<param name="Модель">SRT10KXLI</param>
 <param name="Для бренда">APC</param>
 </offer>
 
@@ -888,12 +895,12 @@ URL поставщика                             | https://www.comportal.kz/
 <categoryId></categoryId>
 <vendorCode>CP10420608</vendorCode>
 <name>ИБП APC SRT8KRMXLI (SRT8KRMXLI)</name>
-<price>2356908</price>
+<price>2537026</price>
 <picture>https://placehold.co/800x800/png?text=No+Photo</picture>
 <vendor>APC</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-ИБП. Мощность: 8 000 VA / 8 000 W. Форм-фактор: Rackmount. Стабилизатор (AVR): есть. Время работы при 100% нагрузке, мин: 5. Выходные соединения: (4) IEC 320 C19 (Батарейное резервное питание); (6) IEC 320 C13 (Батарейное резервное питание). Гарантия: 24 мес.]]></description>
+ИБП. Мощность: 8 000 VA / 8 000 W. Форм-фактор: Rackmount. Стабилизатор (AVR): есть. Время работы при 100% нагрузке, мин: 5. Выходные соединения: (4) IEC 320 C19 (Батарейное резервное питание); (6) IEC 320 C13 (Батарейное резервное питание). Гарантия: 36 мес.]]></description>
 <param name="Тип">ИБП</param>
 <param name="Модель">SRT8KRMXLI</param>
 <param name="Дополнительная информация">Rack 6U</param>
@@ -905,7 +912,7 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Типовая продолжительность работы при 100% нагрузке, мин">5</param>
 <param name="Форм-фактор">Rackmount</param>
 <param name="Стабилизатор (AVR)">есть</param>
-<param name="Гарантия">24 мес</param>
+<param name="Гарантия">36 мес</param>
 <param name="Диапазон входного напряжения">160 - 275 В</param>
 <param name="Коды">SRT8KRMXLI</param>
 <param name="Для бренда">APC</param>
@@ -1343,23 +1350,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Коды">9452B001</param>
 <param name="Для бренда">Canon</param>
 <param name="Оригинальность">Оригинал</param>
-</offer>
-
-<offer id="CP13870156" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13870156</vendorCode>
-<name>Барабан Canon C-EXV49 CYM (8528B003AA)</name>
-<price>113237</price>
-<picture>https://www.comportal.kz/upload/iblock/7d0/6383ebgrqumlxd9e19zsnil4303ckfg8.jpg</picture>
-<vendor>Canon</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-расходный материал Canon C-EXV49 CYM код — 8528B003AA.]]></description>
-<param name="Тип">Расходный материал</param>
-<param name="Модель">C-EXV49 CYM</param>
-<param name="Дополнительная информация">iR ADV C3330i, 3325i, 3320i Color ресурс 66K</param>
-<param name="Коды">8528B003AA</param>
-<param name="Для бренда">Canon</param>
 </offer>
 
 <offer id="CP10416521" available="true">
@@ -2809,26 +2799,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Оригинальность">Оригинал</param>
 </offer>
 
-<offer id="CP10761112" available="true">
-<categoryId></categoryId>
-<vendorCode>CP10761112</vendorCode>
-<name>Картридж Canon 057 (3009C002) (оригинал)</name>
-<price>58432</price>
-<picture>https://www.comportal.kz/upload/iblock/7d5/0yyz4fxpq1h2fte0j26d1y2c1oohi1p1.jpg</picture>
-<vendor>Canon</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Оригинальный картридж Canon 057 код — 3009C002; цвет — Чёрный; ресурс — 3 100; технология печати — Лазерная.]]></description>
-<param name="Тип">Картридж</param>
-<param name="Модель">057</param>
-<param name="Цвет">Чёрный</param>
-<param name="Технология печати">Лазерная</param>
-<param name="Ресурс">3 100</param>
-<param name="Коды">3009C002</param>
-<param name="Для бренда">Canon</param>
-<param name="Оригинальность">Оригинал</param>
-</offer>
-
 <offer id="CP10834918" available="true">
 <categoryId></categoryId>
 <vendorCode>CP10834918</vendorCode>
@@ -3679,25 +3649,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Модель">729 DesignJet Printhead Replacement Kit</param>
 <param name="Коды">F9J81A</param>
 <param name="Для бренда">HP</param>
-<param name="Оригинальность">Оригинал</param>
-</offer>
-
-<offer id="CP13827515" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13827515</vendorCode>
-<name>Тонер-картридж Canon CRG (3025C002) (оригинал)</name>
-<price>45775</price>
-<picture>https://www.comportal.kz/upload/iblock/a3f/e8ss6tnpevcbgt62q36tui55d1wudmsv.JPG</picture>
-<vendor>Canon</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Оригинальный тонер Canon Тонер-картридж Canon CRG код — 3025C002; ресурс — 2 300.]]></description>
-<param name="Тип">Тонер</param>
-<param name="Модель">Тонер-картридж Canon CRG</param>
-<param name="Дополнительная информация">054 H Y</param>
-<param name="Ресурс">2 300</param>
-<param name="Коды">3025C002</param>
-<param name="Для бренда">Canon</param>
 <param name="Оригинальность">Оригинал</param>
 </offer>
 
@@ -5305,31 +5256,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Для бренда">HP</param>
 </offer>
 
-<offer id="CP13760963" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13760963</vendorCode>
-<name>МФУ HP LaserJet Pro MFP 4103fdw (2Z629A#B19)</name>
-<price>205251</price>
-<picture>https://www.comportal.kz/upload/iblock/dc6/fgc9hg2kndr2vqqt27eysm2q2in9iigc.JPG</picture>
-<vendor>HP</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-МФУ. Формат печати: A4. Разрешение: 1200x1200. Скорость печати ч/б: 40. Порты: USB LAN Bluetooth WiFI. Технология печати: Лазерная. Гарантия: 12 мес.]]></description>
-<param name="Тип">МФУ</param>
-<param name="Модель">LaserJet Pro MFP 4103fdw</param>
-<param name="Гарантия">12 мес</param>
-<param name="Разрешение">1200x1200</param>
-<param name="Формат печати">A4</param>
-<param name="Скорость печати ч/б">40</param>
-<param name="Технология печати">Лазерная</param>
-<param name="Порты">USB LAN Bluetooth WiFI</param>
-<param name="Функция">Принтер-Сканер(АПД-50с.)-Копир</param>
-<param name="Наличие картриджа (тонера) в комплекте">Стартовый</param>
-<param name="Нагрузка">80 000</param>
-<param name="Коды">2Z629A#B19</param>
-<param name="Для бренда">HP</param>
-</offer>
-
 <offer id="CP13871095" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13871095</vendorCode>
@@ -5488,44 +5414,66 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Оригинальность">Оригинал</param>
 </offer>
 
+<offer id="CP13816464" available="true">
+<categoryId></categoryId>
+<vendorCode>CP13816464</vendorCode>
+<name>МФУ HP LaserJet Enterprise M430f (3PZ55A#B19)</name>
+<price>247422</price>
+<picture>https://www.comportal.kz/upload/iblock/2a2/panykxnaffbczzk04kvtfyy00l6956w1.jpg</picture>
+<vendor>HP</vendor>
+<currencyId>KZT</currencyId>
+<description><![CDATA[
+МФУ. Формат печати: A4. Разрешение: 1200x1200. Скорость печати ч/б: 38. Технология печати: Лазерная. Гарантия: 12 мес.]]></description>
+<param name="Тип">МФУ</param>
+<param name="Модель">LaserJet Enterprise M430f</param>
+<param name="Гарантия">12 мес</param>
+<param name="Разрешение">1200x1200</param>
+<param name="Формат печати">A4</param>
+<param name="Скорость печати ч/б">38</param>
+<param name="Технология печати">Лазерная</param>
+<param name="Функция">Принтер-Сканер(АПД-50с.)-Копир-Факс</param>
+<param name="Наличие картриджа (тонера) в комплекте">Стартовый</param>
+<param name="Нагрузка">100 000</param>
+<param name="Коды">3PZ55A#B19</param>
+<param name="Для бренда">HP</param>
+</offer>
+
 <offer id="CP13871540" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13871540</vendorCode>
-<name>Хранилище HPE HPE MSA 2062 16Gb FC SFF (R0Q80B) (оригинал)</name>
+<name>Хранилище HPE HPE MSA 2062 16Gb FC SFF (R0Q80B)</name>
 <price>1843920</price>
 <picture>https://www.comportal.kz/upload/iblock/73e/5rk91hu2phujc5p5xmwhw0a1g9yv1ghp.JPG</picture>
 <vendor>HPE</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж HPE HPE MSA 2062 16Gb FC SFF код — R0Q80B.]]></description>
-<param name="Тип">Картридж</param>
+МФУ. Гарантия: 12 мес. Для бренда: HPE. Модель: HPE MSA 2062 16Gb FC SFF. Коды: R0Q80B.]]></description>
+<param name="Тип">МФУ</param>
 <param name="Модель">HPE MSA 2062 16Gb FC SFF</param>
 <param name="Гарантия">12 мес</param>
 <param name="Интерфейс массива">Fibre Channel</param>
 <param name="Тип корпуса">Rack</param>
 <param name="Коды">R0Q80B</param>
 <param name="Для бренда">HPE</param>
-<param name="Оригинальность">Оригинал</param>
 </offer>
 
 <offer id="CP13871542" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13871542</vendorCode>
-<name>Хранилище HPE HPE MSA 1060 12Gb SAS SFF (R0Q87B) (оригинал)</name>
+<name>Хранилище HPE HPE MSA 1060 12Gb SAS SFF (R0Q87B)</name>
 <price>1100413</price>
 <picture>https://www.comportal.kz/upload/iblock/e7c/v7bfdqmt9woycxcvstlv0zajhllrr5rn.JPG</picture>
 <vendor>HPE</vendor>
 <currencyId>KZT</currencyId>
 <description><![CDATA[
-Оригинальный картридж HPE HPE MSA 1060 12Gb SAS SFF код — R0Q87B.]]></description>
-<param name="Тип">Картридж</param>
+МФУ. Гарантия: 12 мес. Для бренда: HPE. Модель: HPE MSA 1060 12Gb SAS SFF. Коды: R0Q87B.]]></description>
+<param name="Тип">МФУ</param>
 <param name="Модель">HPE MSA 1060 12Gb SAS SFF</param>
 <param name="Гарантия">12 мес</param>
 <param name="Интерфейс массива">SAS</param>
 <param name="Тип корпуса">Rack</param>
 <param name="Коды">R0Q87B</param>
 <param name="Для бренда">HPE</param>
-<param name="Оригинальность">Оригинал</param>
 </offer>
 
 <offer id="CP13771028" available="true">
@@ -6490,23 +6438,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Для бренда">APC</param>
 </offer>
 
-<offer id="CP13872950" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13872950</vendorCode>
-<name>МФУ Canon imageRUNNER C3326i (5965C005)</name>
-<price>721062</price>
-<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
-<vendor>Canon</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-МФУ. Гарантия: 12 мес. Для бренда: Canon. Модель: imageRUNNER C3326i. Коды: 5965C005.]]></description>
-<param name="Тип">МФУ</param>
-<param name="Гарантия">12 мес</param>
-<param name="Коды">5965C005</param>
-<param name="Модель">imageRUNNER C3326i</param>
-<param name="Для бренда">Canon</param>
-</offer>
-
 <offer id="CP13872564" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13872564</vendorCode>
@@ -6726,32 +6657,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Частота обновления">60</param>
 <param name="Коды">210-BHXB</param>
 <param name="Для бренда">Dell</param>
-</offer>
-
-<offer id="CP13834337" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13834337</vendorCode>
-<name>МФУ Canon I-SENSYS MF461DW (5951C020AA)</name>
-<price>232500</price>
-<picture>https://www.comportal.kz/upload/iblock/2d1/73e1mzhrcfztcswpu6qqfhbjj2m0z86t.JPG</picture>
-<vendor>Canon</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-МФУ. Формат печати: A4. Разрешение: 1200x1200. Скорость печати ч/б: 36. Порты: USB LAN WiFI. Технология печати: Лазерная. Гарантия: 12 мес.]]></description>
-<param name="Тип">МФУ</param>
-<param name="Модель">I-SENSYS MF461DW</param>
-<param name="Гарантия">12 мес</param>
-<param name="Разрешение">1200x1200</param>
-<param name="Формат печати">A4</param>
-<param name="Скорость печати ч/б">36</param>
-<param name="Технология печати">Лазерная</param>
-<param name="Порты">USB LAN WiFI</param>
-<param name="Функция">принтер сканер копир</param>
-<param name="Наличие картриджа (тонера) в комплекте">Стартовый</param>
-<param name="Нагрузка">80 000</param>
-<param name="Емкость 4-го лотка">550</param>
-<param name="Коды">5951C020AA</param>
-<param name="Для бренда">Canon</param>
 </offer>
 
 <offer id="CP13834574" available="true">
@@ -8169,33 +8074,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Коды">210-BGLW-N1605PVNB3530EMEA01_UBU</param>
 </offer>
 
-<offer id="CP13861561" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13861561</vendorCode>
-<name>МФУ HP LaserJet 5800dn (6QN29A#B19)</name>
-<price>683945</price>
-<picture>https://www.comportal.kz/upload/iblock/fde/gmr0gb6f6pswy3b4hc6x8zw81jkitp6h.JPG</picture>
-<vendor>HP</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-МФУ. Формат печати: A4. Разрешение: 1200x1200. Скорость печати ч/б: 43. Скорость печати цветной: 43. Порты: USB LAN. Технология печати: Лазерная. Гарантия: 12 мес.]]></description>
-<param name="Тип">МФУ</param>
-<param name="Модель">LaserJet 5800dn</param>
-<param name="Гарантия">12 мес</param>
-<param name="Разрешение">1200x1200</param>
-<param name="Формат печати">A4</param>
-<param name="Скорость печати ч/б">43</param>
-<param name="Технология печати">Лазерная</param>
-<param name="Порты">USB LAN</param>
-<param name="Скорость печати цветной">43</param>
-<param name="Функция">Принтер-Сканер(АПД-100с.)-Копир-Факс</param>
-<param name="Наличие картриджа (тонера) в комплекте">Полный</param>
-<param name="Нагрузка">80 000</param>
-<param name="Жесткий диск">32Gb</param>
-<param name="Коды">6QN29A#B19</param>
-<param name="Для бренда">HP</param>
-</offer>
-
 <offer id="CP13862015" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13862015</vendorCode>
@@ -8479,60 +8357,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Для бренда">Dell</param>
 </offer>
 
-<offer id="CP13866842" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13866842</vendorCode>
-<name>Монитор Dell Pro 24 Plus P2425H (210-BMFF)</name>
-<price>86485</price>
-<picture>https://www.comportal.kz/upload/iblock/7c1/on0ej1inzuczbdngnshv9854xzm137j5.JPG</picture>
-<vendor>Dell</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Монитор. Диагональ: 23.8. Максимальное разрешение: 1920x1080. Тип матрицы: IPS. Частота обновления: 100. Время отклика: 5. Порты: 1x HDMI 1.4/1x DP 1.2/1x VGA/1x USB 3.2 Gen1 Type-B/3x USB 3.2 Gen1 Type-A/1x USB 3.2 Gen1 Type-C. Гарантия: 36 мес.]]></description>
-<param name="Тип">Монитор</param>
-<param name="Модель">P2425H</param>
-<param name="Порты">1x HDMI 1.4/1x DP 1.2/1x VGA/1x USB 3.2 Gen1 Type-B/3x USB 3.2 Gen1 Type-A/1x USB 3.2 Gen1 Type-C</param>
-<param name="Тип матрицы">IPS</param>
-<param name="Гарантия">36 мес</param>
-<param name="Контрастность">1500:1</param>
-<param name="Яркость">250</param>
-<param name="Время отклика">5</param>
-<param name="Максимальное разрешение">1920x1080</param>
-<param name="Углы обзора (вертикальный/горизонтальный)">178/178</param>
-<param name="Размер Pix">92</param>
-<param name="Диагональ">23.8</param>
-<param name="Частота обновления">100</param>
-<param name="Коды">210-BMFF</param>
-<param name="Для бренда">Dell</param>
-</offer>
-
-<offer id="CP13863654" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13863654</vendorCode>
-<name>Монитор Dell Pro 24 Plus P2425H (210-BMFF)</name>
-<price>86481</price>
-<picture>https://www.comportal.kz/upload/iblock/5a8/uhdqh25r1xmk26h8h48wqzdiyuxajhns.JPG</picture>
-<vendor>Dell</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Монитор. Диагональ: 23.8. Максимальное разрешение: 1920x1080. Тип матрицы: IPS. Частота обновления: 100. Время отклика: 5. Порты: 1x HDMI 1.4/1x DP 1.2/1x VGA/1x USB 3.2 Gen1 Type-B/3x USB 3.2 Gen1 Type-A/1x USB 3.2 Gen1 Type-C. Гарантия: 36 мес.]]></description>
-<param name="Тип">Монитор</param>
-<param name="Модель">P2425H</param>
-<param name="Порты">1x HDMI 1.4/1x DP 1.2/1x VGA/1x USB 3.2 Gen1 Type-B/3x USB 3.2 Gen1 Type-A/1x USB 3.2 Gen1 Type-C</param>
-<param name="Тип матрицы">IPS</param>
-<param name="Гарантия">36 мес</param>
-<param name="Контрастность">1500:1</param>
-<param name="Яркость">250</param>
-<param name="Время отклика">5</param>
-<param name="Максимальное разрешение">1920x1080</param>
-<param name="Углы обзора (вертикальный/горизонтальный)">178/178</param>
-<param name="Размер Pix">92</param>
-<param name="Диагональ">23.8</param>
-<param name="Частота обновления">100</param>
-<param name="Коды">210-BMFF</param>
-<param name="Для бренда">Dell</param>
-</offer>
-
 <offer id="CP13866845" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13866845</vendorCode>
@@ -8558,34 +8382,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Диагональ">27</param>
 <param name="Частота обновления">100</param>
 <param name="Коды">210-BMHK</param>
-<param name="Для бренда">Dell</param>
-</offer>
-
-<offer id="CP13866846" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13866846</vendorCode>
-<name>Монитор Dell S2725HS (210-BMHG)</name>
-<price>88197</price>
-<picture>https://www.comportal.kz/upload/iblock/09b/ahaqt7w6l9edik9q442f96gsyiv1x95s.JPG</picture>
-<vendor>Dell</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Монитор. Диагональ: 27. Максимальное разрешение: 1920x1080. Тип матрицы: IPS. Частота обновления: 100. Время отклика: 8. Порты: 2 x HDMI (HDCP 1.4). Гарантия: 36 мес.]]></description>
-<param name="Тип">Монитор</param>
-<param name="Модель">S2725HS</param>
-<param name="Порты">2 x HDMI (HDCP 1.4)</param>
-<param name="Тип матрицы">IPS</param>
-<param name="Гарантия">36 мес</param>
-<param name="Контрастность">1500:1</param>
-<param name="Яркость">300</param>
-<param name="Время отклика">8</param>
-<param name="Максимальное разрешение">1920x1080</param>
-<param name="Наличие динамиков">2</param>
-<param name="Углы обзора (вертикальный/горизонтальный)">178/178</param>
-<param name="Размер Pix">82</param>
-<param name="Диагональ">27</param>
-<param name="Частота обновления">100</param>
-<param name="Коды">210-BMHG</param>
 <param name="Для бренда">Dell</param>
 </offer>
 
@@ -10416,29 +10212,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Для бренда">Canon</param>
 </offer>
 
-<offer id="CP13870348" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13870348</vendorCode>
-<name>Плоттер HP DesignJet T230 24 (5HB07D#B19)</name>
-<price>240303</price>
-<picture>https://www.comportal.kz/upload/iblock/43e/1uap8lkkgs2hcli5v0tkqssr3d5z1ejv.jpg</picture>
-<vendor>HP</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Широкоформатный принтер. Формат печати: A1. Разрешение: 2400x1200. Скорость печати ч/б: 35. Порты: Gigabit Ethernet (1000Base-T), высокоскоростной порт USB 2.0, Wi-Fi 802.11a b/g n, Wi-Fi Direct. Технология печати: Струйная. Гарантия: 12 мес.]]></description>
-<param name="Тип">Широкоформатный принтер</param>
-<param name="Модель">DesignJet T230 24</param>
-<param name="Порты">Gigabit Ethernet (1000Base-T), высокоскоростной порт USB 2.0, Wi-Fi 802.11a b/g n, Wi-Fi Direct</param>
-<param name="Гарантия">12 мес</param>
-<param name="Технология печати">Струйная</param>
-<param name="Разрешение">2400x1200</param>
-<param name="Формат печати">A1</param>
-<param name="Скорость печати ч/б">35</param>
-<param name="Функции">принтер</param>
-<param name="Коды">5HB07D#B19</param>
-<param name="Для бренда">HP</param>
-</offer>
-
 <offer id="CP13870951" available="true">
 <categoryId></categoryId>
 <vendorCode>CP13870951</vendorCode>
@@ -11704,32 +11477,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Жесткий диск">6Gb</param>
 <param name="Коды">6QN36A#B19</param>
 <param name="Для бренда">HP</param>
-</offer>
-
-<offer id="CP13871379" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13871379</vendorCode>
-<name>Монитор Dell 27 Plus 4K USB-C Monitor-S2725QC (210-BQWS)</name>
-<price>186135</price>
-<picture>https://www.comportal.kz/upload/iblock/fd4/a8t1abx0yjf65k1gjjh1qhyvoxdi74zt.JPG</picture>
-<vendor>Dell</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Монитор. Диагональ: 27. Максимальное разрешение: 3840x2160. Тип матрицы: IPS. Частота обновления: 120. Время отклика: 8. Порты: 1 USB-C 5Gbps upstream port (DisplayPort 1.4 Alt Mode, Power Delivery up to 65 W)/2 HDMI ports (HDCP 1.4 & 2.3) (Supports up to UHD 3840 x 2160, 120 Hz, FRL, HDR, VRR as per specified in HDMI 2.1)/USB port/1 USB 5Gbps Type-A downstream port with Battery Charging 1.2/1 USB-C 5Gbps downstream port (Power Delivery up to 15 W)/1 USB 5Gbps Type-A downstream port. Гарантия: 36 мес.]]></description>
-<param name="Тип">Монитор</param>
-<param name="Модель">S2725QC</param>
-<param name="Порты">1 USB-C 5Gbps upstream port (DisplayPort 1.4 Alt Mode, Power Delivery up to 65 W)/2 HDMI ports (HDCP 1.4 &amp; 2.3) (Supports up to UHD 3840 x 2160, 120 Hz, FRL, HDR, VRR as per specified in HDMI 2.1)/USB port/1 USB 5Gbps Type-A downstream port with Battery Charging 1.2/1 USB-C 5Gbps downstream port (Power Delivery up to 15 W)/1 USB 5Gbps Type-A downstream port</param>
-<param name="Тип матрицы">IPS</param>
-<param name="Гарантия">36 мес</param>
-<param name="Контрастность">1500:1</param>
-<param name="Яркость">350</param>
-<param name="Время отклика">8</param>
-<param name="Максимальное разрешение">3840x2160</param>
-<param name="Наличие динамиков">Speakers</param>
-<param name="Диагональ">27</param>
-<param name="Частота обновления">120</param>
-<param name="Коды">210-BQWS</param>
-<param name="Для бренда">Dell</param>
 </offer>
 
 <offer id="CP13871380" available="true">
@@ -14651,23 +14398,6 @@ URL поставщика                             | https://www.comportal.kz/
 <param name="Для бренда">Dell</param>
 <param name="Модель">Pro 14 Plus</param>
 <param name="Коды">210-BPDN_1</param>
-</offer>
-
-<offer id="CP13872682" available="true">
-<categoryId></categoryId>
-<vendorCode>CP13872682</vendorCode>
-<name>Ноутбук ASUS Vivobook 15 / X1504VA-BQ4489W (90NB13Y1-M02790)</name>
-<price>257777</price>
-<picture>https://placehold.co/800x800/png?text=No+Photo</picture>
-<vendor>ASUS</vendor>
-<currencyId>KZT</currencyId>
-<description><![CDATA[
-Ноутбук. Гарантия: 12 мес. Для бренда: ASUS. Модель: Vivobook 15 / X1504VA-BQ4489W. Коды: 90NB13Y1-M02790.]]></description>
-<param name="Тип">Ноутбук</param>
-<param name="Гарантия">12 мес</param>
-<param name="Коды">90NB13Y1-M02790</param>
-<param name="Модель">Vivobook 15 / X1504VA-BQ4489W</param>
-<param name="Для бренда">ASUS</param>
 </offer>
 
 <offer id="CP13872774" available="true">
