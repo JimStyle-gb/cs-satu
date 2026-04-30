@@ -1,18 +1,18 @@
 ПОДРОБНЫЙ ОТЧЁТ PRICE CHECKER
-Сформирован: 29 апреля 2026 г. 09:07:29
-Время сборки Price: 29 апреля 2026 г. 05:13:28
+Сформирован: 30 апреля 2026 г. 09:09:52
+Время сборки Price: 30 апреля 2026 г. 05:13:56
 Итоговый статус: УСПЕШНО
 Причина: Критичных проблем не обнаружено.
 
 ======================================================================
 СВОДКА
 ======================================================================
-Всего товаров в Price: 7124
-В наличии: 6600
-Нет в наличии: 524
+Всего товаров в Price: 7109
+В наличии: 6580
+Нет в наличии: 529
 
 Товары без цены: 237
-С заглушкой фото: 571
+С заглушкой фото: 572
 Без categoryId в Price: 0
 С невалидным categoryId в Price: 0
 Без категории Satu: 0
@@ -27,8 +27,8 @@
 СВОДКА ПО ПОСТАВЩИКАМ
 ======================================================================
 AkCent | всего=165 | в наличии=165 | нет в наличии=0 | без цены=0 | заглушка фото=2 | не вошло в final без categoryId=0 | без категории Satu=0
-AlStyle | всего=2000 | в наличии=1476 | нет в наличии=524 | без цены=4 | заглушка фото=9 | не вошло в final без categoryId=0 | без категории Satu=0
-ComPortal | всего=630 | в наличии=630 | нет в наличии=0 | без цены=0 | заглушка фото=112 | не вошло в final без categoryId=0 | без категории Satu=0
+AlStyle | всего=1996 | в наличии=1467 | нет в наличии=529 | без цены=4 | заглушка фото=10 | не вошло в final без categoryId=0 | без категории Satu=0
+ComPortal | всего=619 | в наличии=619 | нет в наличии=0 | без цены=0 | заглушка фото=112 | не вошло в final без categoryId=0 | без категории Satu=0
 CopyLine | всего=1220 | в наличии=1220 | нет в наличии=0 | без цены=26 | заглушка фото=0 | не вошло в final без categoryId=0 | без категории Satu=0
 VTT | всего=3109 | в наличии=3109 | нет в наличии=0 | без цены=207 | заглушка фото=448 | не вошло в final без categoryId=0 | без категории Satu=0
 
@@ -297,8 +297,11 @@ AlStyle | placeholder_photo | id=AS420187 | vendorCode=AS420187 | categoryId=101
 AlStyle | placeholder_photo | id=AS420712 | vendorCode=AS420712 | categoryId=602 | price=48900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Монитор Xiaomi Monitor A24i 2026
 AlStyle | placeholder_photo | id=AS421596 | vendorCode=AS421596 | categoryId=701 | price=439900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Источник бесперебойного питания APC Easy UPS SRV3KRIRK-E
 AlStyle | placeholder_photo | id=AS422208 | vendorCode=AS422208 | categoryId=602 | price=62900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Монитор Xiaomi A27i EU 2026 27"
+AlStyle | placeholder_photo | id=AS422385 | vendorCode=AS422385 | categoryId=602 | price=309900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Монитор Samsung 34" ViewFinity S6 LS34C650VAIXCI
+ComPortal | placeholder_photo | id=CP13873145 | vendorCode=CP13873145 | categoryId=301 | price=148900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=МФУ Canon i-SENSYS MF3010 (5252B004)
+ComPortal | placeholder_photo | id=CP10532957 | vendorCode=CP10532957 | categoryId=701 | price=2555900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=ИБП APC SRT10KXLI (SRT10KXLI)
 ComPortal | placeholder_photo | id=CP13873256 | vendorCode=CP13873256 | categoryId=101 | price=15900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Картридж Canon 737 (9435B002) (оригинал)
-ComPortal | placeholder_photo | id=CP10420608 | vendorCode=CP10420608 | categoryId=701 | price=2511900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=ИБП APC SRT8KRMXLI (SRT8KRMXLI)
+ComPortal | placeholder_photo | id=CP10420608 | vendorCode=CP10420608 | categoryId=701 | price=2698900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=ИБП APC SRT8KRMXLI (SRT8KRMXLI)
 ComPortal | placeholder_photo | id=CP13873335 | vendorCode=CP13873335 | categoryId=701 | price=1218900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=ИБП APC SRT3000XLI (SRT3000XLI)
 ComPortal | placeholder_photo | id=CP13850386 | vendorCode=CP13850386 | categoryId=101 | price=66900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Печатающая головка HP P2V25A (P2V25A) (оригинал)
 ComPortal | placeholder_photo | id=CP13837247 | vendorCode=CP13837247 | categoryId=101 | price=90900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Картридж HP P2V79A (P2V79A) (оригинал)
@@ -310,7 +313,6 @@ ComPortal | placeholder_photo | id=CP13872560 | vendorCode=CP13872560 | category
 ComPortal | placeholder_photo | id=CP13872561 | vendorCode=CP13872561 | categoryId=101 | price=95900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Тонер Canon C-EXV 64 (5754C002) (оригинал)
 ComPortal | placeholder_photo | id=CP13872562 | vendorCode=CP13872562 | categoryId=101 | price=100900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Тонер Canon C-EXV 64 (5756C002) (оригинал)
 ComPortal | placeholder_photo | id=CP13872563 | vendorCode=CP13872563 | categoryId=101 | price=95900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Тонер Canon C-EXV 64 (5755C002) (оригинал)
-ComPortal | placeholder_photo | id=CP13872950 | vendorCode=CP13872950 | categoryId=301 | price=779900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=МФУ Canon imageRUNNER C3326i (5965C005)
 ComPortal | placeholder_photo | id=CP13872564 | vendorCode=CP13872564 | categoryId=101 | price=66900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Тонер Canon C-EXV 65 (5761C001) (оригинал)
 ComPortal | placeholder_photo | id=CP13872565 | vendorCode=CP13872565 | categoryId=101 | price=94900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Тонер Canon C-EXV 65 (5762C001) (оригинал)
 ComPortal | placeholder_photo | id=CP13872566 | vendorCode=CP13872566 | categoryId=101 | price=94900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Тонер Canon C-EXV 65 (5764C001) (оригинал)
@@ -384,7 +386,6 @@ ComPortal | placeholder_photo | id=CP13873003 | vendorCode=CP13873003 | category
 ComPortal | placeholder_photo | id=CP13873004 | vendorCode=CP13873004 | categoryId=604 | price=2068900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Компьютер Dell Tower Plus EBT2250 (210-BPDZ_EBT2250_ARL_128)
 ComPortal | placeholder_photo | id=CP13873102 | vendorCode=CP13873102 | categoryId=101 | price=95900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Тонер Canon C-EXV 1005 (6726C002) (оригинал)
 ComPortal | placeholder_photo | id=CP13872879 | vendorCode=CP13872879 | categoryId=601 | price=753900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Ноутбук Dell Pro 14 Plus (210-BPDN_1)
-ComPortal | placeholder_photo | id=CP13872682 | vendorCode=CP13872682 | categoryId=601 | price=288900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Ноутбук ASUS Vivobook 15 / X1504VA-BQ4489W (90NB13Y1-M02790)
 ComPortal | placeholder_photo | id=CP13872774 | vendorCode=CP13872774 | categoryId=603 | price=229900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Моноблок AIWA PF2402-D-8-512 (PF2402-D 8-512 white)
 ComPortal | placeholder_photo | id=CP13873246 | vendorCode=CP13873246 | categoryId=601 | price=631900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Ноутбук Dell Pro 16 PC16250 (BTO120_PC16250_EMEA_210-BQHB)
 ComPortal | placeholder_photo | id=CP13872917 | vendorCode=CP13872917 | categoryId=601 | price=631900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Ноутбук Dell Pro 16 PC16250 (BTO120_PC16250_EMEA_210-BQHB)
@@ -585,8 +586,7 @@ VTT | placeholder_photo | id=VT797026755 | vendorCode=VT797026755 | categoryId=1
 VTT | placeholder_photo | id=VT797026756 | vendorCode=VT797026756 | categoryId=101 | price=10900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Тонер-картридж Hi-Black (HB-006R04370) для Xerox C310/C315 (совместимый)
 VTT | placeholder_photo | id=VT797026757 | vendorCode=VT797026757 | categoryId=101 | price=10900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Тонер-картридж Hi-Black (HB-006R04371) для Xerox C310/C315 (совместимый)
 VTT | placeholder_photo | id=VT888896 | vendorCode=VT888896 | categoryId=102 | price=138900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=Картридж PFI-207MBK для Canon iPF680/685/780/785, 300ml матовый (оригинал)
-VTT | placeholder_photo | id=VT8JM70A | vendorCode=VT8JM70A | categoryId=202 | price=60900 | picture=https://placehold.co/800x800/png?text=No+Photo | name=8JM70A/8JM70-67001 Блок проявки HP CLJ Managed E78223/E78228/E78323/E78325/E78330 (оригинал)
-... показаны первые 300 строк, всего записей: 571
+... показаны первые 300 строк, всего записей: 572
 
 ======================================================================
 ДУБЛИ OFFER ID
@@ -609,7 +609,7 @@ VTT | placeholder_photo | id=VT8JM70A | vendorCode=VT8JM70A | categoryId=202 | p
 Заглушка фото:
 - VTT: 448
 - ComPortal: 112
-- AlStyle: 9
+- AlStyle: 10
 - AkCent: 2
 
 Не вошло в final без categoryId:
